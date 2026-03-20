@@ -14,15 +14,29 @@ export default function CustomCursor() {
   const [hovered,  setHovered]  = useState(false);
   const [clicking, setClicking] = useState(false);
   const [visible,  setVisible]  = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Skip on mobile/touch devices — saves significant CPU
+    const mobile = window.matchMedia('(max-width: 767.98px)').matches
+      || 'ontouchstart' in window
+      || navigator.maxTouchPoints > 0;
+    if (mobile) {
+      setIsMobile(true);
+      return;
+    }
+
+    // Apply will-change for GPU layer promotion
+    if (dotRef.current)  dotRef.current.style.willChange  = 'transform';
+    if (ringRef.current) ringRef.current.style.willChange = 'transform';
+
     // ── RAF loop for smooth ring lag ──────────────────────
     let rafId;
     const lerp = (a, b, t) => a + (b - a) * t;
 
     const tick = () => {
-      ring.current.x = lerp(ring.current.x, mouse.current.x, 0.12);
-      ring.current.y = lerp(ring.current.y, mouse.current.y, 0.12);
+      ring.current.x = lerp(ring.current.x, mouse.current.x, 0.22);
+      ring.current.y = lerp(ring.current.y, mouse.current.y, 0.22);
 
       if (dotRef.current) {
         dotRef.current.style.transform =
@@ -36,10 +50,14 @@ export default function CustomCursor() {
     };
     rafId = requestAnimationFrame(tick);
 
-    // ── Move ──────────────────────────────────────────────
+    // ── Move (passive: true = browser doesn't wait for preventDefault) ──
+    const isVisible = { current: false };
     const onMove = (e) => {
       mouse.current = { x: e.clientX, y: e.clientY };
-      if (!visible) setVisible(true);
+      if (!isVisible.current) {
+        isVisible.current = true;
+        setVisible(true);
+      }
     };
 
     // ── Hover detection ───────────────────────────────────
@@ -57,28 +75,32 @@ export default function CustomCursor() {
     const onUp   = () => setClicking(false);
 
     // ── Leave / enter window ──────────────────────────────
-    const onLeave = () => setVisible(false);
-    const onEnter = () => setVisible(true);
+    const onLeave = () => { isVisible.current = false; setVisible(false); };
+    const onEnter = () => { isVisible.current = true;  setVisible(true);  };
 
-    window.addEventListener('mousemove',   onMove);
-    window.addEventListener('mouseover',   onOver);
-    window.addEventListener('mouseout',    onOut);
-    window.addEventListener('mousedown',   onDown);
-    window.addEventListener('mouseup',     onUp);
+    // passive: true on mousemove/over/out prevents blocking scroll
+    window.addEventListener('mousemove',    onMove, { passive: true });
+    window.addEventListener('mouseover',    onOver, { passive: true });
+    window.addEventListener('mouseout',     onOut,  { passive: true });
+    window.addEventListener('mousedown',    onDown);
+    window.addEventListener('mouseup',      onUp);
     document.addEventListener('mouseleave', onLeave);
     document.addEventListener('mouseenter', onEnter);
 
     return () => {
       cancelAnimationFrame(rafId);
-      window.removeEventListener('mousemove',   onMove);
-      window.removeEventListener('mouseover',   onOver);
-      window.removeEventListener('mouseout',    onOut);
-      window.removeEventListener('mousedown',   onDown);
-      window.removeEventListener('mouseup',     onUp);
+      window.removeEventListener('mousemove',    onMove);
+      window.removeEventListener('mouseover',    onOver);
+      window.removeEventListener('mouseout',     onOut);
+      window.removeEventListener('mousedown',    onDown);
+      window.removeEventListener('mouseup',      onUp);
       document.removeEventListener('mouseleave', onLeave);
       document.removeEventListener('mouseenter', onEnter);
     };
-  }, [visible]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // mount once — do NOT add 'visible' here or listeners re-register on every cursor enter/leave
+  // Don't render on mobile
+  if (isMobile) return null;
 
   return (
     <>

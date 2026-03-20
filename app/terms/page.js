@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 
 const LAST_UPDATED = 'March 3, 2026';
 const EFFECTIVE_DATE = 'March 3, 2026';
-const COMPANY = 'Ojiva AI Inc.';
+const COMPANY = 'Ojiva AI';
 const EMAIL_LEGAL = 'ojiva.tech@gmail.com';
 const ADDRESS = '183, 2nd Floor, G Block, Opposite Reliance Trends, Sahakara Nagar Main Rd, Byatarayanapura, Bengaluru, Karnataka 560092, India';
 
@@ -159,11 +159,11 @@ const SECTIONS = [
     title: '14. Governing Law & Disputes',
     blocks: [
       { type: 'heading', text: 'Governing Law' },
-      { type: 'para', text: 'These Terms are governed by and construed in accordance with the laws of the State of California, USA, without regard to conflict of law principles.' },
+      { type: 'para', text: 'These Terms are governed by and construed in accordance with the laws of India, without regard to conflict of law principles. The courts in Bengaluru, Karnataka shall have exclusive jurisdiction.' },
       { type: 'heading', text: 'Dispute Resolution' },
       { type: 'para', text: 'Before initiating formal proceedings, both parties agree to attempt good-faith negotiation for at least 30 days after written notice of a dispute.' },
       { type: 'heading', text: 'Arbitration' },
-      { type: 'para', text: 'Any dispute not resolved by negotiation shall be submitted to binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. Arbitration shall take place in San Francisco, California.' },
+      { type: 'para', text: 'Any dispute not resolved by negotiation shall be submitted to binding arbitration under the Arbitration and Conciliation Act, 1996 of India. Arbitration shall take place in Bengaluru, Karnataka.' },
       { type: 'heading', text: 'Class Action Waiver' },
       { type: 'caps', text: 'YOU AGREE THAT ANY DISPUTE RESOLUTION PROCEEDINGS WILL BE CONDUCTED ONLY ON AN INDIVIDUAL BASIS. YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION AGAINST OJIVA AI.' },
     ],

@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
 
 const LAST_UPDATED = 'March 3, 2026';
 const EFFECTIVE_DATE = 'March 3, 2026';
-const COMPANY = 'Ojiva AI Inc.';
+const COMPANY = 'Ojiva AI';
 const EMAIL_PRIVACY = 'ojiva.tech@gmail.com';
 const EMAIL_DPO = 'ojiva.tech@gmail.com';
 const ADDRESS = '183, 2nd Floor, G Block, Opposite Reliance Trends, Sahakara Nagar Main Rd, Byatarayanapura, Bengaluru, Karnataka 560092, India';
@@ -138,7 +138,7 @@ const SECTIONS = [
     id: 'international',
     title: '9. International Data Transfers',
     blocks: [
-      { type: 'para', text: 'Ojiva AI is headquartered in the United States. If you access our Services from outside the US, your personal data may be transferred to and processed in the United States or other countries where our service providers operate.' },
+      { type: 'para', text: 'Ojiva AI is headquartered in Bengaluru, India. If you access our Services from outside India, your personal data may be transferred to and processed in India or other countries where our service providers operate.' },
       { type: 'para', text: 'For transfers from the European Economic Area (EEA), United Kingdom, or Switzerland, we rely on Standard Contractual Clauses (SCCs), adequacy decisions issued by the relevant data protection authority, or Binding Corporate Rules where applicable.' },
     ],
   },
