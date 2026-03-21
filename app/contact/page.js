@@ -1,5 +1,5 @@
 import { buildMetadata } from '@/lib/metadata';
-import ContactForm from './ContactForm';
+import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata = buildMetadata({
   title: 'Contact Ojiva AI — Book a Free Demo',

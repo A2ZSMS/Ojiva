@@ -1,5 +1,5 @@
 import { buildMetadata } from '@/lib/metadata';
-import DemoBooking from './DemoBooking';
+import DemoBooking from '@/components/book-demo/DemoBooking';
 
 export const metadata = buildMetadata({
   title: 'Book a Free Demo — Ojiva AI | 30-Minute Personalised Walkthrough',

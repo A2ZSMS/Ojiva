@@ -2,12 +2,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/tailwind.css';
 import '../styles/globals.css';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 import BootstrapClient from './BootstrapClient';
-import CustomCursor from '@/components/CustomCursor';
-import ScrollProgress from '@/components/ScrollProgress';
-import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/Analytics';
+import CustomCursor from '@/components/layout/CustomCursor';
+import ScrollProgress from '@/components/layout/ScrollProgress';
+import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
 
 
 export const metadata = {

@@ -1,9 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import CTA from '@/components/CTA';
-import SectionHeading from '@/components/SectionHeading';
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
-import ChatbotPageClient from './ChatbotPageClient';
+import ChatbotPageClient from '@/components/services/whatsapp-chatbot/ChatbotPageClient';
 
 export const metadata = buildMetadata({
   title: 'WhatsApp Chatbot India — AI-Powered WhatsApp Automation | Ojiva AI',
