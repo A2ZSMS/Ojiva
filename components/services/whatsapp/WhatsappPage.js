@@ -19,7 +19,7 @@ export default function WhatsappPageContent() {
       <Industries />
       <ExploreServices />
       <FadeUp>
-        <CTA title="Start Conversations That Convert on WhatsApp" subtitle="Join 500+ businesses using Ojiva AI WhatsApp API. Official Meta BSP, Green Tick support, and live in 48 hours." primaryLabel="Get WhatsApp API →" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
+        <CTA title="Start Conversations That Convert on WhatsApp" subtitle="Join 500+ businesses using Ojiva AI WhatsApp API. Official Meta BSP, Green Tick support, and live in 48 hours." primaryLabel="Get WhatsApp API" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
       </FadeUp>
     </>
   );

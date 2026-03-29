@@ -13,11 +13,11 @@ export default function Hero() {
           <div className="row align-items-center g-5">
             <div className="col-12 col-lg-6">
               <HeroEntrance index={0}>
-                <div className="service-badge voice-badge">📞 AI Voice Automation</div>
+                <div className="service-badge voice-badge">📞 Bulk Voice Call</div>
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="voice-hero-heading" className="service-hero-title">
-                  Automate Every <span className="sh-accent sh-accent-voice">Customer Call</span><br />with AI Voice
+                  Automate Every <span className="sh-accent sh-accent-voice">Customer Call</span><br />with Bulk Voice Call
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>

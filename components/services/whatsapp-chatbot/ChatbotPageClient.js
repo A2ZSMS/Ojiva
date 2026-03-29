@@ -28,7 +28,7 @@ export default function ChatbotPageClient({ faqs }) {
         <CTA
           title="Ready to Build Your WhatsApp Chatbot?"
           subtitle="Join 500+ businesses automating WhatsApp conversations, qualifying leads, and driving sales 24/7."
-          primaryLabel="Build Your Chatbot →"
+          primaryLabel="Build Your Chatbot"
           primaryHref="/contact"
           secondaryLabel="Book a Demo"
           secondaryHref="/book-demo"

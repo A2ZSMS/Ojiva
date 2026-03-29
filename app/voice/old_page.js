@@ -255,7 +255,7 @@ export default function VoicePage() {
           <div className="row align-items-center g-5">
             <div className="col-12 col-lg-5">
               <SlideLeft>
-                <SectionHeading tag="Developer First" title="Trigger AI Voice Calls from Any System" subtitle="Our Voice API lets you initiate calls, manage IVR flows, and receive transcripts programmatically." />
+                <SectionHeading tag="Developer First" title="Trigger Bulk Voice Call from Any System" subtitle="Our Voice API lets you initiate calls, manage IVR flows, and receive transcripts programmatically." />
                 <ul className="feature-deep-list mt-4">
                   {['REST API for outbound call triggers', 'Webhook for call events & transcripts', 'TwiML-compatible call flow scripting', 'SDK for Node.js, Python, PHP, Java', 'Sandbox with virtual test number'].map((pt) => (
                     <li key={pt}><span className="check-icon">✓</span>{pt}</li>

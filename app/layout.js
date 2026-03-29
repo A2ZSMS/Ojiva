@@ -5,8 +5,6 @@ import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import BootstrapClient from './BootstrapClient';
-import CustomCursor from '@/components/layout/CustomCursor';
-import ScrollProgress from '@/components/layout/ScrollProgress';
 import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
 
 
@@ -110,8 +108,6 @@ export default function RootLayout({ children }) {
         {/* GTM no-script fallback (activates when GTM_CONTAINER_ID is set) */}
         <GTMNoScript />
 
-        <ScrollProgress />
-        <CustomCursor />
         <a href="#main-content" className="visually-hidden-focusable">
           Skip to main content
         </a>
@@ -122,6 +118,16 @@ export default function RootLayout({ children }) {
 
         {/* All tracking scripts — GA4, GTM, etc. */}
         <Analytics />
+
+        {/* Intercom live chat */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.intercomSettings = { api_base: "https://api-iam.intercom.io", app_id: "a5mrjdl9" };
+              (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/a5mrjdl9';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+            `,
+          }}
+        />
       </body>
     </html>
   );

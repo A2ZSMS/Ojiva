@@ -32,7 +32,7 @@ import { faqSchema } from '@/lib/metadata';
 const HOME_FAQS = [
   {
     q: 'What is Ojiva AI?',
-    a: 'Ojiva AI is India\'s #1 AI-powered communication platform that enables businesses to send Bulk SMS, automate WhatsApp Business API conversations, launch RCS campaigns, and deploy AI Voice Calls at enterprise scale — all from a single dashboard with end-to-end encryption.',
+    a: 'Ojiva AI is India\'s #1 AI-powered communication platform that enables businesses to send Bulk SMS, automate WhatsApp Business API conversations, launch RCS campaigns, and deploy Bulk Voice Call at enterprise scale — all from a single dashboard with end-to-end encryption.',
   },
   {
     q: 'What services does Ojiva AI offer?',
@@ -40,7 +40,7 @@ const HOME_FAQS = [
   },
   {
     q: 'Is Ojiva AI free to try?',
-    a: 'Yes! Ojiva AI offers a free 14-day trial with no credit card required. You can explore all features including Bulk SMS, WhatsApp API, RCS Messaging, and AI Voice Calls before choosing a paid plan.',
+    a: 'Yes! Ojiva AI offers a free 14-day trial with no credit card required. You can explore all features including Bulk SMS, WhatsApp API, RCS Messaging, and Bulk Voice Call before choosing a paid plan.',
   },
   {
     q: 'How much does Ojiva AI cost?',
@@ -144,12 +144,6 @@ const CHANNELS = [
   },
 ];
 
-const METRICS = [
-  { value: 10,  suffix: 'M+', label: 'Messages Monthly',      icon: '📨' },
-  { value: 98,  suffix: '%',  label: 'Avg. Delivery Rate',    icon: '✅' },
-  { value: 38,  suffix: '%',  label: 'Conversion Lift',       icon: '📈' },
-  { value: 500, suffix: '+',  label: 'Enterprise Clients',    icon: '🏢' },
-];
 
 const MODULES = [
   {
@@ -310,43 +304,7 @@ export default function HomePage() {
       {/* ══ 1. HERO ══════════════════════════════════════════ */}
       <Hero />
 
-      {/* ══ 2. LOGO MARQUEE STRIP ════════════════════════════ */}
-      <section className="logo-strip" aria-label="Trusted by leading companies">
-        <div className="container">
-          <FadeIn>
-            <p className="logo-strip-label">Trusted by 500+ forward-thinking companies</p>
-          </FadeIn>
-          <div className="logo-strip-track">
-            <div className="logo-strip-inner">
-              {[...INTEGRATIONS, ...INTEGRATIONS].map(({ name, color, letter }, i) => (
-                <div key={`${name}-${i}`} className="logo-strip-item">
-                  <span className="logo-strip-mark" style={{ background: color }}>{letter}</span>
-                  <span>{name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ══ 3. METRICS BAND ══════════════════════════════════ */}
-      <section className="metrics-band section-padding-sm" aria-label="Platform metrics">
-        <div className="container">
-          <StaggerContainer className="metrics-band-grid" staggerDelay={0.1}>
-            {METRICS.map(({ value, suffix, label, icon }) => (
-              <StaggerItem key={label}>
-                <div className="metric-band-item-v2">
-                  <span className="metric-band-icon">{icon}</span>
-                  <div className="metric-band-value-v2">
-                    <AnimatedCounter target={value} suffix={suffix} />
-                  </div>
-                  <div className="metric-band-label-v2">{label}</div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
 
       {/* ══ 4. CORE SERVICES ═════════════════════════════════ */}
       <section className="section-padding pb-section-sm" aria-labelledby="services-heading">
@@ -389,7 +347,7 @@ export default function HomePage() {
                 id: 'voice',
                 icon: '📞',
                 iconBg: '#1B48E0',
-                title: 'Bulk Voice Calls',
+                title: 'Bulk Voice Call',
                 desc: 'Crystal-clear voice campaigns with IVR, auto-retry logic, and detailed analytics for maximum reach.',
               },
               {
@@ -536,41 +494,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══ 10. INTEGRATIONS ══════════════════════════════════ */}
-      <section className="section-padding bg-section" aria-labelledby="integrations-heading">
-        <div className="container">
-          <BlurReveal>
-            <SectionHeading
-              tag="Integrations"
-              title="Plug Into Your Entire Tech Stack"
-              subtitle="200+ native connectors, REST APIs, and webhooks. If it has an API, Ojiva AI connects to it — in minutes, not months."
-              center
-            />
-          </BlurReveal>
-
-          <StaggerContainer className="integrations-grid mt-5" staggerDelay={0.04}>
-            {INTEGRATIONS.map(({ name, color, letter }) => (
-              <StaggerItem key={name}>
-                <TiltCard3D intensity={6} className="integration-chip">
-                  <span className="integration-logo-mark" style={{ background: color }}>
-                    {letter}
-                  </span>
-                  <span className="integration-name">{name}</span>
-                </TiltCard3D>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          <FadeIn delay={0.3}>
-            <p className="integrations-footer">
-              + 190 more &middot;{' '}
-              <Link href="/platform#api" style={{ color: 'var(--primary)', fontWeight: 600 }}>
-                View all integrations →
-              </Link>
-            </p>
-          </FadeIn>
-        </div>
-      </section>
 
       {/* ══ 11. WHY OJIVA AI ══════════════════════════════════ */}
       <section className="section-padding" aria-labelledby="why-heading">
@@ -624,7 +547,7 @@ export default function HomePage() {
       <CTA
         title="Ready to 10× Your Messaging Results?"
         subtitle="Join 500+ companies using Ojiva AI to deliver smarter messages, qualify leads faster, and grow without limits. Free demo — no commitment required."
-        primaryLabel="Book a Free Demo →"
+        primaryLabel="Book a Free Demo"
         primaryHref="/contact"
         secondaryLabel="Explore the Platform"
         secondaryHref="/platform"

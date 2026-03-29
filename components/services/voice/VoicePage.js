@@ -17,7 +17,7 @@ export default function VoicePageContent() {
       <Industries />
       <ExploreServices />
       <FadeUp>
-        <CTA title="Let AI Answer Your Calls — 24×7, in Any Language" subtitle="Join 500+ businesses using Ojiva AI Voice. Deploy your first AI voice bot in 24 hours." primaryLabel="Get Started with Voice AI →" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
+        <CTA title="Let AI Answer Your Calls — 24×7, in Any Language" subtitle="Join 500+ businesses using Ojiva AI Bulk Voice Call. Deploy your first voice bot in 24 hours." primaryLabel="Get Started with Bulk Voice Call" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
       </FadeUp>
     </>
   );

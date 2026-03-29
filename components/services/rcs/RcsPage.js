@@ -19,7 +19,7 @@ export default function RcsPageContent() {
       <Industries />
       <ExploreServices />
       <FadeUp>
-        <CTA title="Upgrade Your SMS to Rich RCS Today" subtitle="Get Google-verified, send carousels and rich cards, and see 3× higher click-through rates." primaryLabel="Start with RCS →" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
+        <CTA title="Upgrade Your SMS to Rich RCS Today" subtitle="Get Google-verified, send carousels and rich cards, and see 3× higher click-through rates." primaryLabel="Start with RCS" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
       </FadeUp>
     </>
   );

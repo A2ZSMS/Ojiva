@@ -27,13 +27,6 @@ const INDUSTRIES = [
   'Other',
 ];
 
-const CONTACT_INFO = [
-  { icon: '📧', label: 'Email',  value: 'ojiva.tech@gmail.com',                                    href: 'mailto:ojiva.tech@gmail.com' },
-  { icon: '📞', label: 'Call',   value: '+91 84310 86185',                                          href: 'tel:+918431086185'           },
-  { icon: '📍', label: 'Office', value: '183, 2nd Floor, G Block\nByatarayanapura, Bengaluru 560092', href: null                        },
-  { icon: '🕑', label: 'Hours',  value: 'Mon – Sat · 10AM – 7PM IST',                               href: null                        },
-];
-
 /* ── Label-above field wrapper ─────────────────────────── */
 function Field({ label, required, optional, children }) {
   return (
@@ -91,6 +84,9 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div className="contact-page-grid">
+        {/* Sidebar left */}
+        <div className="contact-info-col"><ContactSidebar /></div>
+        {/* Form right */}
         <div className="contact-form-col">
           <motion.div className="cfn-success"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -111,7 +107,6 @@ export default function ContactForm() {
             </button>
           </motion.div>
         </div>
-        <div className="contact-info-col"><ContactSidebar /></div>
       </div>
     );
   }
@@ -119,6 +114,11 @@ export default function ContactForm() {
   /* ── Form ── */
   return (
     <div className="contact-page-grid">
+
+      {/* ── Sidebar LEFT ── */}
+      <div className="contact-info-col"><ContactSidebar /></div>
+
+      {/* ── Form RIGHT ── */}
       <div className="contact-form-col">
         <motion.div
           className="cfn-outer"
@@ -231,9 +231,11 @@ export default function ContactForm() {
                       checked={agreed} onChange={e => { setAgreed(e.target.checked); setErrorMsg(''); }} />
                     <span className="cf-consent-box" aria-hidden="true">{agreed ? '✓' : ''}</span>
                     <span className="cf-consent-text">
-                      I accept the{' '}
-                      <a href="/terms" className="cf-consent-link">terms and conditions</a>
-                      {' '}and agree to receive communication about services.
+                      I authorize Ojiva AI to send notifications via SMS/Messages/Promotional/Informational messages and agree to the{' '}
+                      <a href="/terms" className="cf-consent-link">Terms of Service</a>
+                      {' '}and{' '}
+                      <a href="/privacy" className="cf-consent-link">Privacy Policy</a>.{' '}
+                      <span style={{ color: '#dc2626' }}>*</span>
                     </span>
                   </label>
                 </div>
@@ -266,8 +268,6 @@ export default function ContactForm() {
         </motion.div>
       </div>
 
-      {/* Sidebar */}
-      <div className="contact-info-col"><ContactSidebar /></div>
     </div>
   );
 }
@@ -275,36 +275,72 @@ export default function ContactForm() {
 function ContactSidebar() {
   return (
     <div className="contact-info-sidebar">
-      <div className="cf-sidebar-demo-card">
-        <div className="cf-sidebar-demo-icon">🚀</div>
-        <h4>Want a live walkthrough?</h4>
-        <p>Book a free 30-minute personalised demo with our team.</p>
-        <Link href="/book-demo" className="btn-ojiva-primary d-block text-center">
-          Book a Free Demo →
-        </Link>
-      </div>
 
-      <h3 className="contact-info-sidebar-title mt-4">Or reach us directly</h3>
-      <div className="contact-info-list">
-        {CONTACT_INFO.map(({ icon, label, value, href }) => (
-          <div className="contact-info-item" key={label}>
-            <div className="contact-info-icon" aria-hidden="true">{icon}</div>
+      {/* ── Contact Details Card ── */}
+      <div className="cf-info-card">
+        <div className="cf-info-card-header">
+          <div className="cf-info-card-dot" />
+          <span>Contact Information</span>
+        </div>
+
+        <div className="cf-info-list">
+          <a href="mailto:ojiva.tech@gmail.com" className="cf-info-row">
+            <div className="cf-info-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
             <div>
-              <p className="contact-info-label">{label}</p>
-              {href
-                ? <a href={href} className="contact-info-value contact-info-link">{value}</a>
-                : <p className="contact-info-value" style={{ whiteSpace: 'pre-line' }}>{value}</p>
-              }
+              <p className="cf-info-label">Email</p>
+              <p className="cf-info-value">ojiva.tech@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+918431086185" className="cf-info-row">
+            <div className="cf-info-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p className="cf-info-label">Phone</p>
+              <p className="cf-info-value">+91 84310 86185</p>
+            </div>
+          </a>
+
+          <div className="cf-info-row no-link">
+            <div className="cf-info-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p className="cf-info-label">Office</p>
+              <p className="cf-info-value">183, 2nd Floor, G Block<br />Byatarayanapura, Bengaluru 560092</p>
             </div>
           </div>
-        ))}
+
+          <div className="cf-info-row no-link">
+            <div className="cf-info-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p className="cf-info-label">Working Hours</p>
+              <p className="cf-info-value">Mon – Sat · 10 AM – 7 PM IST</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Book demo CTA inside the card */}
+        <div className="cf-info-card-footer">
+          <Link href="/book-demo" className="btn-ojiva-primary d-block text-center">
+            Book a Free Demo →
+          </Link>
+          <p className="cf-info-card-note">30 min · Free · No commitment</p>
+        </div>
       </div>
 
+      {/* ── Trust strip ── */}
       <div className="contact-trust-strip">
         <div className="contact-trust-item"><span>⚡</span> Response within 24 hrs</div>
         <div className="contact-trust-item"><span>🔒</span> Your data stays private</div>
         <div className="contact-trust-item"><span>🤝</span> No commitment required</div>
       </div>
+
     </div>
   );
 }

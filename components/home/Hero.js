@@ -3,7 +3,6 @@
 import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
-import { AnimatedCounter } from '../ui/Animations';
 import {
   RiMessage2Line,
   RiWhatsappLine,
@@ -14,12 +13,6 @@ import {
   RiFlashlightLine,
 } from 'react-icons/ri';
 
-const STATS = [
-  { value: 10,   suffix: 'M+', label: 'Messages Delivered' },
-  { value: 98,   suffix: '%',  label: 'Delivery Rate'       },
-  { value: 99.9, suffix: '%',  label: 'Platform Uptime'     },
-  { value: 3,    suffix: 'B+', label: 'API Calls / Year'    },
-];
 
 const CHANNELS = [
   { label: 'Bulk SMS',       color: '#1B48E0', icon: RiMessage2Line,  stat: '10M+ msgs/day',      bg: 'rgba(27,72,224,0.18)'  },
@@ -192,32 +185,6 @@ export default function Hero() {
               </Link>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              className="hero-stats"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {},
-                visible: { transition: { staggerChildren: 0.08, delayChildren: 0.54 } },
-              }}
-            >
-              {STATS.map(({ value, suffix, label }) => (
-                <motion.div
-                  key={label}
-                  className="hero-stat"
-                  variants={{
-                    hidden:  { opacity: 0, y: 16 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-                  }}
-                >
-                  <div className="hero-stat-value">
-                    <AnimatedCounter target={value} suffix={suffix} />
-                  </div>
-                  <div className="hero-stat-label">{label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
 
           {/* ── RIGHT COLUMN — 3-D Dashboard ── */}
@@ -348,21 +315,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Trusted-by strip */}
-      <div className="hero-trusted">
-        <div className="container">
-          <p className="trusted-label">TRUSTED BY 500+ LEADING BRANDS</p>
-          <div className="trusted-logos">
-            {[
-              'Salesforce', 'HubSpot', 'Shopify', 'Zendesk', 'Stripe',
-              'WhatsApp', 'Twilio', 'Slack', 'Salesforce', 'HubSpot',
-              'Shopify', 'Zendesk', 'Stripe', 'WhatsApp', 'Twilio', 'Slack',
-            ].map((name, i) => (
-              <span key={i} className="trusted-logo-item">{name}</span>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

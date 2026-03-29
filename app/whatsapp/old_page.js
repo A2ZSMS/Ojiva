@@ -335,7 +335,7 @@ export default function WhatsAppPage() {
               { href: '/sms', icon: '📱', title: 'Bulk SMS', desc: 'Transactional, promotional & OTP at scale.', color: '#1B48E0' },
               { href: '/whatsapp-chatbot', icon: '🤖', title: 'WhatsApp Chatbot', desc: 'AI-powered 24/7 customer automation.', color: '#128C7E' },
               { href: '/rcs', icon: '✨', title: 'RCS Messaging', desc: 'Rich cards, carousels & verified sender.', color: '#FF6D42' },
-              { href: '/voice', icon: '📞', title: 'AI Voice Calls', desc: 'IVR, OBD & conversational AI bots.', color: '#7C3AED' },
+              { href: '/voice', icon: '📞', title: 'Bulk Voice Call', desc: 'IVR, OBD & conversational AI bots.', color: '#7C3AED' },
             ].map(({ href, icon, title, desc, color }) => (
               <StaggerGridItem key={href} className="col-12 col-sm-6 col-lg-3">
                 <Link href={href} className="service-cross-card">

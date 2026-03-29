@@ -17,7 +17,7 @@ const SERVICE_LINKS = [
   { href: '/whatsapp',  icon: '💬', label: 'WhatsApp API',   desc: 'Official Meta BSP partner',         color: '#25D366', bg: 'rgba(37,211,102,0.08)' },
   { href: '/whatsapp-chatbot', icon: '🤖', label: 'WhatsApp Chatbot', desc: 'AI-powered conversation bot', color: '#128C7E', bg: 'rgba(18,140,126,0.08)' },
   { href: '/rcs',       icon: '✨', label: 'RCS Messaging',  desc: 'Rich cards & carousels',            color: '#FF6D42', bg: 'rgba(255,109,66,0.08)' },
-  { href: '/voice',     icon: '📞', label: 'AI Voice',       desc: 'IVR, OBD & AI voice bots',          color: '#7C3AED', bg: 'rgba(124,58,237,0.08)' },
+  { href: '/voice',     icon: '📞', label: 'Bulk Voice Call', desc: 'IVR, OBD & AI voice bots',          color: '#7C3AED', bg: 'rgba(124,58,237,0.08)' },
 ];
 
 export default function Navbar() {

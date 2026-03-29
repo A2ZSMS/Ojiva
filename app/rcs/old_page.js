@@ -297,7 +297,7 @@ export default function RCSPage() {
               { href: '/sms', icon: '📱', title: 'Bulk SMS', desc: 'Transactional, promotional & OTP at scale.', color: '#1B48E0' },
               { href: '/whatsapp', icon: '💬', title: 'WhatsApp Business API', desc: 'Official Meta BSP partner. 98% open rate.', color: '#25D366' },
               { href: '/whatsapp-chatbot', icon: '🤖', title: 'WhatsApp Chatbot', desc: 'AI-powered 24/7 customer automation.', color: '#128C7E' },
-              { href: '/voice', icon: '📞', title: 'AI Voice Calls', desc: 'IVR, OBD & conversational AI bots.', color: '#7C3AED' },
+              { href: '/voice', icon: '📞', title: 'Bulk Voice Call', desc: 'IVR, OBD & conversational AI bots.', color: '#7C3AED' },
             ].map(({ href, icon, title, desc, color }) => (
               <StaggerGridItem key={href} className="col-12 col-sm-6 col-lg-3">
                 <Link href={href} className="service-cross-card">

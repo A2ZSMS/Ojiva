@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Ojiva AI — India\'s #1 Bulk SMS, WhatsApp API, RCS & AI Voice Platform',
   description:
-    'Ojiva AI is India\'s leading enterprise communication platform. Send Bulk SMS, automate WhatsApp Business API, launch RCS campaigns & deploy AI Voice Calls at scale. AES-256 encrypted. 10M+ messages monthly. Trusted by 500+ businesses across India.',
+    'Ojiva AI is India\'s leading enterprise communication platform. Send Bulk SMS, automate WhatsApp Business API, launch RCS campaigns & deploy Bulk Voice Call at scale. AES-256 encrypted. 10M+ messages monthly. Trusted by 500+ businesses across India.',
   path: '/',
   keywords: [
     // Primary intent

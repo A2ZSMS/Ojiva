@@ -39,7 +39,7 @@ export function FadeIn({ children, delay = 0, className = '' }) {
   );
 }
 
-/* ─── Slide in from left ─── */
+/* ─── Slide in from left (now fade-up, no horizontal shift) ─── */
 export function SlideLeft({ children, delay = 0, className = '' }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
@@ -48,16 +48,16 @@ export function SlideLeft({ children, delay = 0, className = '' }) {
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, x: -60 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
   );
 }
 
-/* ─── Slide in from right ─── */
+/* ─── Slide in from right (now fade-up, no horizontal shift) ─── */
 export function SlideRight({ children, delay = 0, className = '' }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
@@ -66,9 +66,9 @@ export function SlideRight({ children, delay = 0, className = '' }) {
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, x: 60 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
