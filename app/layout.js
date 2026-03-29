@@ -18,9 +18,16 @@ export const metadata = {
   keywords: BRAND_KEYWORDS.join(', '),
   metadataBase: new URL('https://ojiva.ai'),
   icons: {
-    icon: '/logo.svg',
-    shortcut: '/logo.svg',
-    apple: '/OJIVA%20AI%20MAIN%20LOGO%20WHITE%20PNG.png',
+    icon: [
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
+    other: [
+      { rel: 'manifest', url: '/favicon/site.webmanifest' },
+    ],
   },
   openGraph: {
     siteName: 'Ojiva AI',
