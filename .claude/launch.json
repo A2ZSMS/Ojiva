@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "ojiva-dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeExecutable": "/Applications/Project/ojiva/Ojiva/start-dev.sh",
+      "runtimeArgs": [],
       "port": 3000,
       "autoPort": false
     }

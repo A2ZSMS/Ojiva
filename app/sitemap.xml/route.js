@@ -12,6 +12,7 @@ export async function GET() {
     { loc: `${base}/whatsapp-chatbot/`, priority: '0.9', changefreq: 'weekly', lastmod: today },
     { loc: `${base}/rcs/`,       priority: '0.9', changefreq: 'weekly',  lastmod: today },
     { loc: `${base}/voice/`,     priority: '0.9', changefreq: 'weekly',  lastmod: today },
+    { loc: `${base}/blogs/`,      priority: '0.9', changefreq: 'weekly',  lastmod: today },
     { loc: `${base}/book-demo/`, priority: '0.9', changefreq: 'monthly', lastmod: today },
     { loc: `${base}/about/`,     priority: '0.8', changefreq: 'monthly', lastmod: today },
     { loc: `${base}/support/`,   priority: '0.8', changefreq: 'monthly', lastmod: today },

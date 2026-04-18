@@ -3,13 +3,13 @@
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
-export default function FAQ({ faqs }) {
+export default function FAQ({ faqs, subtitle = 'Everything you need to know about WhatsApp chatbots.' }) {
   return (
     <section className="py-5 bg-section" aria-labelledby="cb-faq">
       <div className="container">
         <FadeUp>
           <div className="text-center mb-5">
-            <SectionHeading tag="FAQ" title="Frequently Asked Questions" subtitle="Everything you need to know about WhatsApp chatbots." center />
+            <SectionHeading tag="FAQ" title="Frequently Asked Questions" subtitle={subtitle} center />
           </div>
         </FadeUp>
         <StaggerContainer className="chatbot-faq-grid" staggerDelay={0.06}>

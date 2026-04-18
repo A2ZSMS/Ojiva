@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Why Bulk SMS is Still India's Most Powerful Marketing Channel in 2026",
+    "componentKey": "Apr01",
+    "slug": "why-bulk-sms-most-powerful-marketing-channel-india-2026",
+    "category": "Bulk SMS",
+    "date": "2026-04-01",
+    "description": "Discover why bulk SMS continues to outperform email and social media with 98% open rates, instant delivery, and unmatched reach across 1.2 billion Indian mobile users.",
+    "image": "/image/bulksms(1).jpeg"
+  },
+  {
+    "id": 2,
+    "title": "WhatsApp Business API vs Regular WhatsApp: What Indian Businesses Need to Know",
+    "componentKey": "Apr02",
+    "slug": "whatsapp-business-api-vs-regular-whatsapp-indian-businesses",
+    "category": "WhatsApp API",
+    "date": "2026-04-05",
+    "description": "Understand the key differences between WhatsApp Business API and the standard app. Learn how API-powered messaging scales customer communication for Indian enterprises.",
+    "image": "/image//whatsapp(1).jpeg"
+  },
+  {
+    "id": 3,
+    "title": "RCS Messaging: The Future of Business Communication in India",
+    "componentKey": "Apr03",
+    "slug": "rcs-messaging-future-business-communication-india",
+    "category": "RCS Messaging",
+    "date": "2026-04-10",
+    "description": "Explore how RCS Business Messaging is replacing plain SMS with rich cards, carousels, and branded experiences — and why forward-thinking Indian businesses are adopting it now.",
+    "image": "/image/rcs(1).jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Bulk Voice Call & IVR Automation: Complete Guide for Indian Businesses in 2026",
+    "componentKey": "Apr04",
+    "slug": "bulk-voice-call-ivr-automation-guide-india-2026",
+    "category": "Voice Call",
+    "date": "2026-04-15",
+    "description": "Learn how bulk voice calls and AI-powered IVR automation are transforming customer communication for Indian businesses. Complete guide with use cases, best practices, and ROI stats.",
+    "image": "/image/voice(1).jpeg"
+  },
+  {
+    "id": 5,
+    "title": "AI-Powered Business Communication Automation: Complete Guide for India 2026",
+    "componentKey": "Apr05",
+    "slug": "ai-powered-business-communication-automation-india-2026",
+    "category": "AI & Automation",
+    "date": "2026-04-20",
+    "description": "Discover how AI-powered communication automation is helping Indian businesses cut costs by 60%, respond 24/7, and scale customer engagement without hiring more staff.",
+    "image": "/image/ai(1).jpeg"
+  }
+]

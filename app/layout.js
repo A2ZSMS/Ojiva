@@ -1,11 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/tailwind.css';
 import '../styles/globals.css';
+import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import BootstrapClient from './BootstrapClient';
 import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+});
 
 
 export const metadata = {
@@ -71,24 +80,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-IN" className={inter.className} suppressHydrationWarning>
       <head>
-        {/* ── Performance: DNS prefetch + preconnect ── */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* ── Performance: DNS prefetch ── */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* ── Google Fonts via <link> (faster than CSS @import) ── */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        />
+        {/* Bootstrap Icons */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+        {/* AOS — Animate On Scroll */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#060c18" />
@@ -126,8 +128,10 @@ export default function RootLayout({ children }) {
         {/* All tracking scripts — GA4, GTM, etc. */}
         <Analytics />
 
-        {/* Intercom live chat */}
-        <script
+        {/* Intercom live chat — deferred until page is interactive */}
+        <Script
+          id="intercom-widget"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.intercomSettings = { api_base: "https://api-iam.intercom.io", app_id: "a5mrjdl9" };

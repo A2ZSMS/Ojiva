@@ -1,5 +1,10 @@
 import HomePage from '@/components/home/HomePage';
 import { buildMetadata } from '@/lib/metadata';
+import { Breadcrumb } from '../public/Schema/BreadCrumb';
+import { FAQ } from '../public/Schema/FaqSchema';
+import { Ojiva_Service } from '../public/Schema/HomeSchema';
+import { Organization } from '../public/Schema/Organization';
+import { Website_Schema } from '../public/Schema/Website';
 
 /* ─────────────────────────────────────────────────────────
    SEO METADATA
@@ -69,5 +74,14 @@ export const metadata = buildMetadata({
    PAGE COMPONENT
 ───────────────────────────────────────────────────────── */
 export default function Page() {
-  return <HomePage />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Organization) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Website_Schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Ojiva_Service) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ) }} />
+      <HomePage />
+    </>
+  );
 }
