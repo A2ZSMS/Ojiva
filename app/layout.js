@@ -11,7 +11,7 @@ import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/c
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '600', '700', '900'],
   variable: '--font-inter',
 });
 

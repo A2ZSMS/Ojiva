@@ -136,7 +136,7 @@ export default function ContactForm() {
             {/* Header */}
             <div className="cfn-head">
               <span className="cfn-tag">Get In Touch</span>
-              <h2 className="cfn-title">How can we help you?</h2>
+              <h1 className="cfn-title">Contact Ojiva AI — Book a Free Demo</h1>
               <p className="cfn-sub">
                 Fill in your details and our team will respond within one business day.{' '}
                 <Link href="/book-demo" className="cfn-demo-link">Book a live demo →</Link>

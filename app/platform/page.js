@@ -2,9 +2,9 @@ import { buildMetadata } from '@/lib/metadata';
 import PlatformPageContent from '@/components/platform/PlatformPage';
 
 export const metadata = buildMetadata({
-  title: 'Platform — AI Messaging, Voice, Leads & Workflow Automation',
+  title: 'Ojiva AI Platform — SMS, WhatsApp & AI Automation Tools',
   description:
-    "Explore Ojiva AI's full platform — AI Messaging Engine, Voice Automation, Lead Intelligence, Workflow Orchestration, and API Integration Layer. Built on a decade of A2ZSMS infrastructure.",
+    "One platform for Bulk SMS, WhatsApp API, RCS, Voice & AI automation. No-code workflows, API integration & real-time analytics for India.",
   path: '/platform',
   keywords: [
     'AI messaging engine',

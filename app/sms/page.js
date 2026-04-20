@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import SmsPageContent from '@/components/services/sms/SmsPage';
 
 export const metadata = buildMetadata({
-  title: 'Bulk SMS Service India — Transactional, Promotional & OTP SMS',
+  title: 'Bulk SMS Gateway India — OTP & Transactional SMS | Ojiva AI',
   description:
-    "Send millions of SMS messages instantly with Ojiva AI — India's #1 bulk SMS platform. Transactional SMS, promotional campaigns, OTP delivery, DLT compliant. 98%+ delivery rate.",
+    "Send bulk SMS in India with 98%+ delivery. OTP in under 3 seconds, DLT compliant. Transactional, promotional & two-way SMS API. 10M+ messages/month.",
   path: '/sms',
   keywords: [
     'bulk SMS service India', 'transactional SMS gateway India', 'promotional SMS platform',

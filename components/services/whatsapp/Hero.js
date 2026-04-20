@@ -17,7 +17,7 @@ export default function Hero() {
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="wa-hero-heading" className="service-hero-title">
-                  Reach Customers on<br /><span className="sh-accent sh-accent-wa">WhatsApp</span><br />at Enterprise Scale
+                  Reach Customers on<br /><span className="sh-accent sh-accent-wa">WhatsApp Business API</span><br />at Enterprise Scale
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>

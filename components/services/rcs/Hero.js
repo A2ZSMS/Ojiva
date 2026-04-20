@@ -17,7 +17,7 @@ export default function Hero() {
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="rcs-hero-heading" className="service-hero-title">
-                  The <span className="sh-accent sh-accent-rcs">Next Generation</span><br />of Business Messaging
+                  <span className="sh-accent sh-accent-rcs">RCS Business Messaging</span><br />Next Generation Platform
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>

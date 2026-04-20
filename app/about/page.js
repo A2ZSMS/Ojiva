@@ -2,9 +2,9 @@ import { buildMetadata, organizationSchema, breadcrumbSchema } from '@/lib/metad
 import AboutPageContent from '@/components/about/AboutPage';
 
 export const metadata = buildMetadata({
-  title: 'About Ojiva AI — Born from A2ZSMS, Built for Enterprise AI',
+  title: 'About Ojiva AI — Enterprise Messaging Built on A2ZSMS',
   description:
-    "Ojiva AI is India's leading AI communication platform and parent company of A2ZSMS. Discover our decade-long journey in enterprise messaging and our vision for AI-driven communication.",
+    "Learn about Ojiva AI, India's enterprise messaging platform built on A2ZSMS' decade of expertise. Serving 500+ businesses with Bulk SMS, WhatsApp API & RCS.",
   path: '/about',
   keywords: [
     'about Ojiva AI',

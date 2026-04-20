@@ -17,7 +17,7 @@ export default function Hero() {
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="sms-hero-heading" className="service-hero-title">
-                  India&apos;s Most<br /><span className="sh-accent sh-accent-sms">Trusted SMS</span><br />Gateway
+                  India&apos;s Most<br /><span className="sh-accent sh-accent-sms">Trusted Bulk SMS</span><br />Gateway
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>

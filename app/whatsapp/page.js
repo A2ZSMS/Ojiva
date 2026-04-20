@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import WhatsappPageContent from '@/components/services/whatsapp/WhatsappPage';
 
 export const metadata = buildMetadata({
-  title: 'WhatsApp Business API India — Official Meta BSP Partner',
+  title: 'WhatsApp Business API India — Official Meta BSP | Ojiva AI',
   description:
-    "Send WhatsApp messages at scale with Ojiva AI — India's trusted WhatsApp Business API provider. Template messages, interactive buttons, catalogs, chatbots. Meta-approved BSP.",
+    "WhatsApp Business API from India's official Meta BSP. 98% open rate, chatbots, interactive buttons & catalogs. 5M+ messages/month.",
   path: '/whatsapp',
   keywords: ['WhatsApp Business API India', 'WhatsApp Business solution provider India', 'WhatsApp chatbot India', 'WhatsApp marketing India', 'Meta BSP India', 'WhatsApp bulk messaging'],
 });

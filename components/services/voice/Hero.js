@@ -17,7 +17,7 @@ export default function Hero() {
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="voice-hero-heading" className="service-hero-title">
-                  Automate Every <span className="sh-accent sh-accent-voice">Customer Call</span><br />with Bulk Voice Call
+                  Bulk Voice Call &amp; IVR <span className="sh-accent sh-accent-voice">Automation</span><br />for India
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>

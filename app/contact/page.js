@@ -2,9 +2,9 @@ import { buildMetadata } from '@/lib/metadata';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata = buildMetadata({
-  title: 'Contact Ojiva AI — Book a Free Demo',
+  title: 'Contact Ojiva AI — Book a Free Demo or Get in Touch',
   description:
-    'Request a demo or talk to our team. Ojiva AI enterprise inquiries, API assistance, and sales requests. Reach us at ojiva.tech@gmail.com or +91 84310 86185.',
+    'Contact Ojiva AI for Bulk SMS, WhatsApp API, RCS & Voice. Book a free demo or get instant support. We respond within 1 hour.',
   path: '/contact',
   keywords: [
     'Ojiva AI contact',

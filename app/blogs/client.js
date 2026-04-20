@@ -63,7 +63,7 @@ export default function BlogList() {
             BLOG
           </span>
           <h1 className="fw-bold mb-3" style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)' }}>
-            Insights &amp; Resources
+            Bulk SMS, WhatsApp &amp; RCS Insights
           </h1>
           <p className="text-muted mx-auto" style={{ maxWidth: '560px', fontSize: '1.05rem' }}>
             Expert articles on Bulk SMS, WhatsApp API, RCS Messaging, and AI Voice Call automation

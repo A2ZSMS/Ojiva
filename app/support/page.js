@@ -2,9 +2,9 @@ import { buildMetadata } from '@/lib/metadata';
 import SupportPage from '@/components/support/SupportPage';
 
 export const metadata = buildMetadata({
-  title: 'Support — Get Help with Ojiva AI Platform',
+  title: 'Support — Ojiva AI Help | Bulk SMS & WhatsApp API',
   description:
-    'Get instant support for Ojiva AI. Browse FAQs, submit a ticket, or chat with our team for help with Bulk SMS, WhatsApp API, RCS Messaging, and AI Voice services.',
+    'Get instant support for Ojiva AI. Browse FAQs for Bulk SMS, WhatsApp API, RCS & Voice. Submit a ticket or chat with our team.',
   path: '/support',
   keywords: [
     'Ojiva AI support', 'bulk SMS help', 'WhatsApp API support India',

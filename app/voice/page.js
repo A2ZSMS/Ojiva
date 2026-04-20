@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import VoicePageContent from '@/components/services/voice/VoicePage';
 
 export const metadata = buildMetadata({
-  title: 'AI Voice Call Automation India — IVR, OBD & Conversational AI',
+  title: 'Bulk Voice Call India — IVR, OBD & AI Automation | Ojiva AI',
   description:
-    'Automate customer calls with Ojiva AI Voice. Outbound dialer, IVR builder, AI voice bots, OBD campaigns, and missed call services. 99.9% call connect rate. Trusted by 500+ enterprises.',
+    'Automate customer calls with IVR, OBD & AI voice bots. 99.9% connect rate, 10M+ calls/month, 10+ languages. Reduce call centre costs by 60%.',
   path: '/voice',
   keywords: [
     'AI voice call automation India', 'outbound calling platform India', 'IVR solution India',

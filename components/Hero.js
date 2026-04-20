@@ -130,12 +130,11 @@ export default function Hero() {
               className="hero-title"
               {...fadeUp(0.1)}
             >
-              <span className="hero-title-top">Powerful Messaging</span>
-              {/* <br /> */}
-              <span className="highlight">Solutions for</span>{' '}
-              <span className="highlight-alt">Enterprise</span>
+              <span className="hero-title-top">Bulk SMS, WhatsApp</span>
+              <span className="highlight"> &amp; RCS</span>{' '}
+              <span className="highlight-alt">Messaging</span>
               <br />
-              <span className="hero-title-bottom">Scale & Security</span>
+              <span className="hero-title-bottom">Platform for India</span>
             </motion.h1>
 
             <motion.p className="hero-description" {...fadeUp(0.22)}>

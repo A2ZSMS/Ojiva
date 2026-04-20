@@ -10,9 +10,9 @@ import { Website_Schema } from '../public/Schema/Website';
    SEO METADATA
 ───────────────────────────────────────────────────────── */
 export const metadata = buildMetadata({
-  title: 'Ojiva AI — India\'s #1 Bulk SMS, WhatsApp API, RCS & AI Voice Platform',
+  title: 'Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India',
   description:
-    'Ojiva AI is India\'s leading enterprise communication platform. Send Bulk SMS, automate WhatsApp Business API, launch RCS campaigns & deploy Bulk Voice Call at scale. AES-256 encrypted. 10M+ messages monthly. Trusted by 500+ businesses across India.',
+    'India\'s #1 enterprise messaging platform. Bulk SMS, WhatsApp Business API, RCS & AI Voice at scale. DLT compliant, 10M+ messages/month. Trusted by 500+ businesses.',
   path: '/',
   keywords: [
     // Primary intent

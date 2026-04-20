@@ -17,9 +17,9 @@ export default function Hero() {
               </HeroEntrance>
               <HeroEntrance index={1}>
                 <h1 id="cb-hero" className="service-hero-title">
-                  Build AI Chatbots That{' '}
-                  <span className="sh-accent-wa">Sell, Support & Scale</span>
-                  <br />on WhatsApp
+                  AI WhatsApp Chatbot{' '}
+                  <span className="sh-accent-wa">Automation</span>
+                  <br />That Sells, Supports &amp; Scales
                 </h1>
               </HeroEntrance>
               <HeroEntrance index={2}>
