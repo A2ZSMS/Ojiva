@@ -10688,27 +10688,30 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(135deg, #060c18 0%, #06101e 60%, #080d1a 100%);
 }
 
-/* CSS-only glow orbs — replaces 439KB hero-bg.png + video */
-.hs-glow {
+/* Background video layer */
+.hs-bg-video-wrap {
   position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(90px);
+  inset: 0;
   z-index: 0;
 }
-.hs-glow-1 {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(27,72,224,0.20) 0%, transparent 70%);
-  top: -150px;
-  left: -200px;
+.hs-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.35;
+  filter: brightness(0.6) saturate(1.1);
 }
-.hs-glow-2 {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, rgba(0,200,248,0.11) 0%, transparent 70%);
-  bottom: -100px;
-  right: -120px;
+.hs-bg-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.35) 100%
+  );
+  pointer-events: none;
 }
 
 /* Container */
