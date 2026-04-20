@@ -81,9 +81,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={inter.className} suppressHydrationWarning>
       <head>
-        {/* ── Performance: DNS prefetch ── */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* ── Performance: preconnect & DNS prefetch ── */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://widget.intercom.io" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://api-iam.intercom.io" />
 
         {/* Bootstrap Icons */}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />

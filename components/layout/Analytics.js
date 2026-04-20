@@ -16,7 +16,8 @@ import Script from 'next/script';
 /* ── Config ──────────────────────────────────────────────
    Only edit values in this block.
    ───────────────────────────────────────────────────────── */
-const GA_MEASUREMENT_ID = 'G-FYZX6KFBEL';
+// GA4 is fired through GTM — no direct script needed
+const GA_MEASUREMENT_ID = '';
 
 // GTM container ID — GTM-K2BDC8PH
 const GTM_CONTAINER_ID = 'GTM-K2BDC8PH';

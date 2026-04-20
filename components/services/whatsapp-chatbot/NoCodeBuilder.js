@@ -26,7 +26,7 @@ export default function NoCodeBuilder() {
           <SlideRight className="service-feature-visual">
             <ScalePop>
               <Image
-                src="/images/chatbot-builder.png"
+                src="/images/chatbot-builder.webp"
                 alt="No-code chatbot flow builder interface"
                 width={600}
                 height={600}
