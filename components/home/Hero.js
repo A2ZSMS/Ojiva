@@ -34,15 +34,15 @@ export default function Hero() {
       </div>
 
       <div className="container hs-container">
+
+        {/* ── Left: headline + badges + CTAs ── */}
         <div className="hs-left">
 
-          {/* Badge */}
           <motion.div className="hs-badge" {...fadeUp(0)}>
             <span className="hs-badge-dot" />
             India&apos;s #1 AI Communication Platform
           </motion.div>
 
-          {/* Headline */}
           <motion.h1 id="hero-heading" className="hs-title" {...fadeUp(0.1)}>
             Powerful Messaging<br />
             <span className="hs-title-cyan">Solutions for</span>{' '}
@@ -50,14 +50,12 @@ export default function Hero() {
             <br />Scale &amp; Security
           </motion.h1>
 
-          {/* Subtitle */}
           <motion.p className="hs-subtitle" {...fadeUp(0.18)}>
             Deliver billions of messages across SMS, WhatsApp, RCS &amp; Voice —
             with end-to-end encryption, AES-256 security, and enterprise compliance
             built into every API call.
           </motion.p>
 
-          {/* Security badges */}
           <motion.div className="hs-sec-badges" {...fadeUp(0.26)}>
             {SECURITY_BADGES.map(({ icon, label }) => (
               <span key={label} className="hs-sec-badge">
@@ -67,8 +65,20 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Channel cards */}
-          <motion.div className="hs-channels" {...fadeUp(0.34)}>
+          <motion.div className="hs-actions" {...fadeUp(0.34)}>
+            <Link href="/contact" className="btn-hs-primary">
+              Get Started Free →
+            </Link>
+            <Link href="/book-demo" className="btn-hs-outline">
+              <span className="hs-play-icon">▶</span> Book a Demo
+            </Link>
+          </motion.div>
+
+        </div>
+
+        {/* ── Right: channel cards ── */}
+        <motion.div className="hs-right" {...fadeUp(0.2)}>
+          <div className="hs-channels">
             {CHANNELS.map(({ icon, label, stat, iconBg, iconColor, statColor }) => (
               <div key={label} className="hs-channel-card">
                 <div className="hs-channel-icon" style={{ background: iconBg }}>
@@ -80,19 +90,9 @@ export default function Hero() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* CTAs */}
-          <motion.div className="hs-actions" {...fadeUp(0.44)}>
-            <Link href="/contact" className="btn-hs-primary">
-              Get Started Free →
-            </Link>
-            <Link href="/book-demo" className="btn-hs-outline">
-              <span className="hs-play-icon">▶</span> Book a Demo
-            </Link>
-          </motion.div>
-
-        </div>
       </div>
     </section>
   );
