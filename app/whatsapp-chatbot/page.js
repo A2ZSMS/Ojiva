@@ -24,7 +24,7 @@ const CHATBOT_FAQS = [
 ];
 
 const chatbotServiceSchema = serviceSchema({ name: 'WhatsApp Chatbot', description: "India's leading WhatsApp chatbot platform — no-code builder, AI NLP, lead qualification, multi-language.", url: '/whatsapp-chatbot', keywords: ['WhatsApp chatbot India', 'WhatsApp AI chatbot'] });
-const chatbotBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://ojiva.ai/' }, { name: 'WhatsApp Chatbot', url: 'https://ojiva.ai/whatsapp-chatbot' }]);
+const chatbotBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'WhatsApp Chatbot', url: 'https://www.ojiva.ai/whatsapp-chatbot' }]);
 
 export default function WhatsAppChatbotPage() {
   return (

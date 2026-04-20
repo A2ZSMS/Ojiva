@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
 export async function GET() {
-  const base = 'https://ojiva.ai';
+  const base = 'https://www.ojiva.ai';
   const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
   const pages = [

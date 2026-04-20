@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 });
 
 const rcsServiceSchema = serviceSchema({ name: 'RCS Business Messaging', description: 'Upgrade from SMS to RCS — rich cards, carousels, suggested replies, branded messages. Google-verified.', url: '/rcs', keywords: ['RCS Business Messaging India', 'Google RCS', 'RCS API India'] });
-const rcsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://ojiva.ai/' }, { name: 'RCS Messaging', url: 'https://ojiva.ai/rcs' }]);
+const rcsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'RCS Messaging', url: 'https://www.ojiva.ai/rcs' }]);
 
 const RCS_FAQS = [
   { q: 'What is RCS Business Messaging?', a: 'RCS (Rich Communication Services) is the next generation of SMS — delivering rich cards, carousels, images, videos, suggested replies, and interactive buttons inside the native Android message app. No app download needed by your customers.' },

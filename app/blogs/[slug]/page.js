@@ -35,11 +35,11 @@ export async function generateMetadata({ params }) {
     title: blog.title,
     description: blog.description,
     keywords: blog.keywords,
-    authors: [{ name: 'Ojiva AI', url: 'https://ojiva.ai/blogs' }],
+    authors: [{ name: 'Ojiva AI', url: 'https://www.ojiva.ai/blogs' }],
     openGraph: {
       title: blog.title,
       description: blog.description,
-      url: `https://ojiva.ai/blogs/${blog.slug}`,
+      url: `https://www.ojiva.ai/blogs/${blog.slug}`,
       siteName: 'Ojiva AI',
       type: 'article',
       images: [{ url: blog.image || '/og-image.jpg', width: 1200, height: 630, alt: blog.title }],
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }) {
       creator: '@OjivaAi',
     },
     robots: { index: true, follow: true },
-    alternates: { canonical: `https://ojiva.ai/blogs/${blog.slug}` },
+    alternates: { canonical: `https://www.ojiva.ai/blogs/${blog.slug}` },
   };
 }
 

@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
 });
 
 const voiceServiceSchema = serviceSchema({ name: 'AI Voice Call Automation', description: 'Automate customer calls — outbound dialer, IVR, AI voice bots. 99.9% connect rate.', url: '/voice', keywords: ['AI voice call India', 'outbound dialer', 'IVR solution', 'voice bot India'] });
-const voiceBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://ojiva.ai/' }, { name: 'AI Voice', url: 'https://ojiva.ai/voice' }]);
+const voiceBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'AI Voice', url: 'https://www.ojiva.ai/voice' }]);
 
 const VOICE_FAQS = [
   { q: 'What is a Bulk Voice Call service?', a: 'Bulk Voice Call lets you send automated voice messages to thousands of customers simultaneously — ideal for alerts, promotions, appointment reminders, and lead nurturing without requiring a human agent for every call.' },

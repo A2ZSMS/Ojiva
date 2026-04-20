@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
 export async function GET() {
-  const content = `# Ojiva AI — https://ojiva.ai
+  const content = `# Ojiva AI — https://www.ojiva.ai
 # India's #1 AI Communication Platform
 
 User-agent: *
@@ -10,7 +10,7 @@ Disallow: /_next/
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://ojiva.ai/sitemap.xml
+Sitemap: https://www.ojiva.ai/sitemap.xml
 
 # Crawl-delay (optional, for polite bots)
 Crawl-delay: 1

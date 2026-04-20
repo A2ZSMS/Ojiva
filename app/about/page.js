@@ -27,12 +27,12 @@ const aboutPageSchema = {
   '@type': 'AboutPage',
   name: 'About Ojiva AI',
   description: "Ojiva AI is India's leading AI communication platform and parent company of A2ZSMS.",
-  url: 'https://ojiva.ai/about',
-  mainEntity: { '@type': 'Organization', name: 'Ojiva AI', url: 'https://ojiva.ai' },
+  url: 'https://www.ojiva.ai/about',
+  mainEntity: { '@type': 'Organization', name: 'Ojiva AI', url: 'https://www.ojiva.ai' },
 };
 const aboutBreadcrumb = breadcrumbSchema([
-  { name: 'Home',  url: 'https://ojiva.ai/' },
-  { name: 'About', url: 'https://ojiva.ai/about' },
+  { name: 'Home',  url: 'https://www.ojiva.ai/' },
+  { name: 'About', url: 'https://www.ojiva.ai/about' },
 ]);
 
 export default function AboutPage() {

@@ -17,14 +17,11 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: {
-    default: 'Ojiva AI — India\'s #1 AI Communication Platform | Bulk SMS, WhatsApp API, RCS & Voice',
-    template: '%s | Ojiva AI',
-  },
+  title: 'Ojiva AI — India\'s #1 AI Communication Platform | Bulk SMS, WhatsApp API, RCS & Voice',
   description:
     'Ojiva AI is India\'s leading AI-powered communication platform for Bulk SMS, WhatsApp Business API, RCS Messaging & AI Voice Call automation. 10M+ messages monthly. Enterprise-grade security with AES-256 & 2FA. Trusted by 500+ businesses.',
   keywords: BRAND_KEYWORDS.join(', '),
-  metadataBase: new URL('https://ojiva.ai'),
+  metadataBase: new URL('https://www.ojiva.ai'),
   icons: {
     icon: [
       { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -41,22 +38,22 @@ export const metadata = {
     siteName: 'Ojiva AI',
     locale: 'en_IN',
     type: 'website',
-    url: 'https://ojiva.ai',
+    url: 'https://www.ojiva.ai',
     title: 'Ojiva AI — India\'s #1 AI Communication Platform',
     description: 'Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.',
-    images: [{ url: 'https://ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: "Ojiva AI — India's #1 AI Communication Platform" }],
+    images: [{ url: 'https://www.ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: "Ojiva AI — India's #1 AI Communication Platform" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ojiva AI — India\'s #1 AI Communication Platform',
     description: 'Bulk SMS, WhatsApp API, RCS & AI Voice automation. Enterprise-grade. Trusted by 500+.',
-    images: ['https://ojiva.ai/og-image.jpg'],
+    images: ['https://www.ojiva.ai/og-image.jpg'],
     creator: '@OjivaAi',
     site: '@OjivaAi',
   },
   alternates: {
-    canonical: 'https://ojiva.ai',
-    languages: { 'en-IN': 'https://ojiva.ai' },
+    canonical: 'https://www.ojiva.ai/',
+    languages: { 'en-IN': 'https://www.ojiva.ai' },
   },
   robots: {
     index: true,

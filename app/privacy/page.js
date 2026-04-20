@@ -1,7 +1,7 @@
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | Ojiva AI',
   description:
     'Ojiva AI Privacy Policy — how we collect, use, store, and protect your personal data in compliance with GDPR, CCPA, and applicable data protection laws.',
   path: '/privacy',
