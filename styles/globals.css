@@ -11689,3 +11689,422 @@ img { max-width: 100%; height: auto; }
   padding-bottom: 0.35rem;
   border-bottom: 2px solid rgba(13, 110, 253, 0.12);
 }
+
+/* ═══════════════════════════════════════
+   SERVICE HERO UI MOCKUPS
+═══════════════════════════════════════ */
+
+/* ── Shared wrap & layout ── */
+.shv-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── Panel (SMS / Voice) ── */
+.shv-panel {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+.shv-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+}
+.shv-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.02em;
+}
+.shv-live {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4ade80;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.shv-live::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: shvPulse 1.5s ease-in-out infinite;
+}
+.shv-live--sm { font-size: 0.6rem; padding: 0.15rem 0.5rem; border: 1px solid #4ade80; border-radius: 50px; }
+.shv-live--sm::before { display: none; }
+.shv-panel-body { padding: 1rem 1.25rem; }
+
+/* ── SMS rows ── */
+.shv-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.55rem;
+}
+.shv-camp-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  min-width: 120px;
+}
+.shv-tag {
+  font-size: 0.58rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.45);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  min-width: 34px;
+  text-align: center;
+}
+.shv-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.shv-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+.shv-pct {
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: right;
+}
+
+/* ── Stats strip ── */
+.shv-stats {
+  display: flex;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.75rem 0;
+}
+.shv-stat {
+  flex: 1;
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.shv-stat:last-child { border-right: none; }
+.shv-stat-n { display: block; font-size: 0.88rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.2rem; }
+.shv-stat-l { font-size: 0.6rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* ── SMS message bubble ── */
+.shv-msg {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+}
+.shv-msg-top { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+.shv-sender { font-size: 0.63rem; font-weight: 800; color: #00c8f8; letter-spacing: 0.07em; }
+.shv-ts { font-size: 0.6rem; color: rgba(255,255,255,0.35); }
+.shv-msg-txt { font-size: 0.73rem; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0; }
+
+/* ── Compliance tags ── */
+.shv-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.7rem; }
+.shv-mini-tag {
+  font-size: 0.6rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+/* ── Phone frame (WA / Chatbot / RCS) ── */
+.shv-phone {
+  background: #0d1117;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 4px 16px rgba(0,0,0,0.3);
+  max-width: 340px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── WhatsApp header ── */
+.shv-wa-head {
+  background: #075E54;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.shv-wa-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+}
+.shv-wa-info { flex: 1; min-width: 0; }
+.shv-wa-name {
+  font-size: 0.82rem; font-weight: 700; color: #fff;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.shv-verified {
+  width: 15px; height: 15px;
+  background: #25D366; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.55rem; color: #fff; font-weight: 900; flex-shrink: 0;
+}
+.shv-verified--cb { background: #128C7E; }
+.shv-wa-sub { font-size: 0.62rem; color: rgba(255,255,255,0.65); margin-top: 1px; }
+
+/* ── Chat body ── */
+.shv-chat {
+  background: #111b21;
+  padding: 0.875rem 0.75rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  min-height: 200px;
+}
+.shv-bub {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  max-width: 85%;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.85);
+  position: relative;
+}
+.shv-bub--in {
+  background: #202c33;
+  border-radius: 0 10px 10px 10px;
+  align-self: flex-start;
+}
+.shv-bub--bot { background: #1a2d2a; }
+.shv-bub--out {
+  background: #005c4b;
+  border-radius: 10px 0 10px 10px;
+  align-self: flex-end;
+}
+.shv-bub--rich { display: flex; flex-direction: column; gap: 0.3rem; }
+.shv-rich-title { font-weight: 700; font-size: 0.75rem; color: #fff; }
+.shv-rich-row { font-size: 0.68rem; color: rgba(255,255,255,0.65); }
+.shv-rich-row strong { color: rgba(255,255,255,0.9); }
+
+/* ── WhatsApp buttons ── */
+.shv-wa-btns { display: flex; gap: 0.35rem; margin-top: 0.4rem; }
+.shv-wa-btn {
+  flex: 1;
+  background: rgba(0,200,248,0.1);
+  border: 1px solid rgba(0,200,248,0.25);
+  border-radius: 7px;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.64rem;
+  font-weight: 600;
+  color: #00c8f8;
+  cursor: default;
+  text-align: center;
+}
+
+/* ── Typing indicator ── */
+.shv-typing {
+  display: flex; align-items: center; gap: 3px;
+  padding: 0.45rem 0.65rem;
+  background: #202c33;
+  border-radius: 0 10px 10px 10px;
+  align-self: flex-start;
+  width: 46px;
+}
+.shv-typing span {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  animation: shvTyping 1s ease-in-out infinite;
+}
+.shv-typing span:nth-child(2) { animation-delay: 0.2s; }
+.shv-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes shvTyping {
+  0%,100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+
+/* ── Quick replies (chatbot) ── */
+.shv-qr-list {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding: 0 0.75rem 0.875rem;
+  background: #111b21;
+}
+.shv-qr {
+  background: rgba(18,140,126,0.12);
+  border: 1px solid rgba(18,140,126,0.3);
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #25D366;
+  text-align: center;
+  cursor: default;
+}
+
+/* ── Chatbot header accent ── */
+.shv-cb-head { background: #1a4040; }
+.shv-cb-avatar { background: rgba(37,211,102,0.2); font-size: 1rem; }
+
+/* ── RCS header ── */
+.shv-rcs-head {
+  background: #1a2636;
+  padding: 0.75rem 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.shv-rcs-check {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg,#00c8f8,#1B48E0);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; color: #fff; flex-shrink: 0;
+}
+.shv-rcs-brand { font-size: 0.8rem; font-weight: 700; color: #fff; }
+.shv-rcs-sub { font-size: 0.61rem; color: rgba(255,255,255,0.5); margin-top: 1px; }
+.shv-rcs-body { padding: 0.75rem; }
+
+/* ── RCS card ── */
+.shv-rcs-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.shv-rcs-img {
+  height: 110px;
+  position: relative;
+  overflow: hidden;
+}
+.shv-rcs-img-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,109,66,0.35) 0%, rgba(27,72,224,0.25) 100%);
+}
+.shv-rcs-img-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end; padding: 0.625rem;
+  z-index: 1;
+}
+.shv-rcs-badge {
+  background: rgba(255,109,66,0.9);
+  border-radius: 50px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+}
+.shv-rcs-content { padding: 0.75rem; }
+.shv-rcs-title { font-size: 0.8rem; font-weight: 700; color: #fff; margin: 0 0 0.25rem; }
+.shv-rcs-desc { font-size: 0.68rem; color: rgba(255,255,255,0.5); margin: 0 0 0.625rem; line-height: 1.4; }
+.shv-rcs-actions { display: flex; gap: 0.4rem; }
+.shv-rcs-btn {
+  flex: 1; border-radius: 8px; padding: 0.35rem 0.4rem;
+  font-size: 0.65rem; font-weight: 700; cursor: default; text-align: center;
+}
+.shv-rcs-btn--primary { background: #FF6D42; border: none; color: #fff; }
+.shv-rcs-btn--outline {
+  background: transparent;
+  border: 1px solid rgba(255,109,66,0.4);
+  color: #FF6D42;
+}
+.shv-dots { display: flex; gap: 4px; justify-content: center; margin-top: 0.625rem; }
+.shv-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.15); }
+.shv-dot--active { background: #FF6D42; width: 16px; border-radius: 3px; }
+
+/* ── Voice call card ── */
+.shv-call-card {
+  background: rgba(124,58,237,0.1);
+  border: 1px solid rgba(124,58,237,0.22);
+  border-radius: 14px;
+  padding: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+.shv-call-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+.shv-call-label { font-size: 0.72rem; font-weight: 700; color: #a78bfa; }
+.shv-call-status {
+  font-size: 0.65rem; color: #4ade80; font-weight: 600;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.shv-pulse-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: #4ade80;
+  animation: shvPulse 1.2s ease-in-out infinite;
+}
+@keyframes shvPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.75)} }
+
+/* ── Waveform ── */
+.shv-waveform {
+  display: flex; align-items: center; gap: 2px;
+  height: 40px; margin: 0.4rem 0;
+}
+.shv-wbar {
+  flex: 1;
+  background: linear-gradient(to top, #7C3AED, #c4b5fd);
+  border-radius: 2px;
+  animation: shvWave 0.9s ease-in-out infinite;
+}
+@keyframes shvWave {
+  0%,100%{ transform: scaleY(0.35); }
+  50%{ transform: scaleY(1); }
+}
+.shv-call-meta {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  font-size: 0.63rem; color: rgba(255,255,255,0.45);
+}
+.shv-call-meta strong { color: rgba(255,255,255,0.85); }
+
+/* ── Voice stats grid ── */
+.shv-voice-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.5rem; }
+.shv-vs {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+}
+.shv-vs-n { display: block; font-size: 0.9rem; font-weight: 800; line-height: 1; margin-bottom: 0.2rem; }
+.shv-vs-l { font-size: 0.58rem; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* ── Floating metric badge ── */
+.shv-float {
+  position: absolute;
+  background: rgba(6,12,24,0.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 0.55rem 0.85rem;
+  display: flex; flex-direction: column; align-items: center;
+  min-width: 78px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+.shv-float--tr { top: -14px; right: -14px; }
+.shv-float--bl { bottom: -14px; left: -14px; }
+.shv-float-n { font-size: 1.1rem; font-weight: 800; color: #fff; line-height: 1; }
+.shv-float-l { font-size: 0.58rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.15rem; white-space: nowrap; }
+
+/* ── Responsive ── */
+@media (max-width: 991.98px) {
+  .shv-phone, .shv-panel { max-width: 100%; }
+  .shv-float { display: none; }
+  .shv-voice-stats { grid-template-columns: repeat(3,1fr); }
+}
+@media (max-width: 480px) {
+  .shv-voice-stats { grid-template-columns: repeat(2,1fr); }
+  .shv-row { gap: 0.4rem; }
+  .shv-camp-name { min-width: 90px; font-size: 0.67rem; }
+}

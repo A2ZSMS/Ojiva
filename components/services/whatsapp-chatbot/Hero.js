@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { HeroEntrance, FloatingElement } from '@/components/ui/Animations';
 import { METRICS } from './data';
+import { ChatbotHeroVisual } from '@/components/services/shared/HeroVisuals';
 
 export default function Hero() {
   return (
@@ -48,16 +48,9 @@ export default function Hero() {
             {/* Hero Image */}
             <div className="col-12 col-lg-6">
               <HeroEntrance index={2}>
-                <FloatingElement amplitude={8} duration={5}>
+                <FloatingElement amplitude={6} duration={6}>
                   <div className="service-visual-wrap">
-                    <Image
-                      src="/images/chatbot-hero.png"
-                      alt="WhatsApp AI Chatbot interface with smart conversation automation"
-                      width={600}
-                      height={600}
-                      priority
-                      className="cb-hero-image"
-                    />
+                    <ChatbotHeroVisual />
                   </div>
                 </FloatingElement>
               </HeroEntrance>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { HeroEntrance, FloatingElement } from '@/components/ui/Animations';
 import { METRICS } from './data';
+import { WhatsappHeroVisual } from '@/components/services/shared/HeroVisuals';
 
 export default function Hero() {
   return (
@@ -44,9 +44,9 @@ export default function Hero() {
             </div>
             <div className="col-12 col-lg-6">
               <HeroEntrance index={2}>
-                <FloatingElement amplitude={8} duration={5}>
+                <FloatingElement amplitude={6} duration={6}>
                   <div className="service-visual-wrap">
-                    <Image src="/images/whatsapp-hero.png" alt="WhatsApp Business API platform showing template messages and chatbot interface" width={600} height={600} priority className="cb-hero-image" />
+                    <WhatsappHeroVisual />
                   </div>
                 </FloatingElement>
               </HeroEntrance>
