@@ -179,7 +179,7 @@ export default function Footer() {
             <div className="footer-contact-block">
               <a
                 className="footer-contact-item"
-                href="https://maps.google.com"
+                href="https://maps.google.com/maps?q=183,+2nd+Floor,+G+Block,+Sahakara+Nagar,+Bengaluru,+Karnataka+560092,+India"
                 target="_blank"
                 rel="noopener noreferrer"
               >

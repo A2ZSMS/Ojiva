@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="about-brand-card about-brand-ojiva">
                 <div className="about-brand-card-header">
                   <Image
-                    src="/OJIVA%20AI%20MAIN%20LOGO%20WHITE%20PNG.png"
+                    src="/ojiva-logo-white.png"
                     alt="Ojiva AI"
                     width={130}
                     height={44}

@@ -6,18 +6,17 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const NAV_LINKS = [
-  { href: '/about',   label: 'About Us'   },
-  { href: '/blogs',   label: 'Blog'       },
-  { href: '/support', label: 'Support'    },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/about',   label: 'About Us' },
+  { href: '/blogs',   label: 'Blog'     },
+  { href: '/support', label: 'Support'  },
 ];
 
 const SERVICE_LINKS = [
-  { href: '/sms',              icon: '📱', label: 'Bulk SMS',         desc: 'Transactional, promotional & OTP',   color: '#1B48E0', bg: 'rgba(27,72,224,0.08)' },
-  { href: '/whatsapp',         icon: '💬', label: 'WhatsApp API',     desc: 'Official Meta BSP partner',          color: '#25D366', bg: 'rgba(37,211,102,0.08)' },
-  { href: '/whatsapp-chatbot', icon: '🤖', label: 'WhatsApp Chatbot', desc: 'AI-powered conversation bot',        color: '#128C7E', bg: 'rgba(18,140,126,0.08)' },
-  { href: '/rcs',              icon: '✨', label: 'RCS Messaging',    desc: 'Rich cards & carousels',             color: '#FF6D42', bg: 'rgba(255,109,66,0.08)' },
-  { href: '/voice',            icon: '📞', label: 'Bulk Voice Call',  desc: 'IVR, OBD & AI voice bots',           color: '#7C3AED', bg: 'rgba(124,58,237,0.08)' },
+  { href: '/sms',              icon: 'bi-chat-dots-fill',  label: 'Bulk SMS',         desc: 'Transactional, promotional & OTP',  color: '#1B48E0', bg: 'rgba(27,72,224,0.09)'  },
+  { href: '/whatsapp',         icon: 'bi-whatsapp',        label: 'WhatsApp API',     desc: 'Official Meta BSP partner',         color: '#25D366', bg: 'rgba(37,211,102,0.09)' },
+  { href: '/whatsapp-chatbot', icon: 'bi-robot',           label: 'WhatsApp Chatbot', desc: 'AI-powered conversation bot',       color: '#128C7E', bg: 'rgba(18,140,126,0.09)' },
+  { href: '/rcs',              icon: 'bi-stars',           label: 'RCS Messaging',    desc: 'Rich cards & carousels',            color: '#FF6D42', bg: 'rgba(255,109,66,0.09)'  },
+  { href: '/voice',            icon: 'bi-telephone-fill',  label: 'Bulk Voice Call',  desc: 'IVR, OBD & AI voice bots',          color: '#7C3AED', bg: 'rgba(124,58,237,0.09)'  },
 ];
 
 
@@ -26,6 +25,9 @@ export default function Navbar() {
   const [scrolled,      setScrolled]      = useState(false);
   const [menuOpen,      setMenuOpen]      = useState(false);
   const [servicesOpen,  setServicesOpen]  = useState(false);
+
+  // Only home page gets transparent navbar — all other pages stay white
+  const isLightPage = pathname !== '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -42,14 +44,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg ojiva-nav${scrolled ? ' scrolled' : ''}`}
+      className={`navbar navbar-expand-lg ojiva-nav${scrolled ? ' scrolled' : ''}${menuOpen ? ' menu-open' : ''}${isLightPage ? ' light-page' : ''}`}
       aria-label="Main navigation"
     >
       <div className="container">
         {/* Logo */}
         <Link className="navbar-brand" href="/" aria-label="Ojiva AI Home">
           <Image
-            src="/ojiva-logo-optimized.png"
+            src={scrolled || isLightPage ? "/ojiva-logo-optimized.png" : "/ojiva-logo-white.png"}
             alt="Ojiva AI"
             width={180}
             height={106}
@@ -75,7 +77,7 @@ export default function Navbar() {
           className={`collapse navbar-collapse${menuOpen ? ' show' : ''}`}
           id="ojiva-nav-menu"
         >
-          <ul className="navbar-nav mx-auto gap-1">
+          <ul className="navbar-nav mx-auto gap-2">
 
             {/* Home */}
             <li className="nav-item">
@@ -85,7 +87,6 @@ export default function Navbar() {
                 aria-current={pathname === '/' ? 'page' : undefined}
               >
                 Home
-                {pathname === '/' && <span className="nav-active-dot" />}
               </Link>
             </li>
 
@@ -93,7 +94,7 @@ export default function Navbar() {
             <li className="nav-item nav-dropdown-item">
               <button
                 className={`nav-link nav-dropdown-trigger${isServiceActive ? ' active' : ''}`}
-                onClick={() => setServicesOpen(prev => !prev)}
+                onClick={() => { if (window.innerWidth <= 991) setServicesOpen(prev => !prev); }}
                 aria-haspopup="true"
                 aria-expanded={servicesOpen}
               >
@@ -103,20 +104,33 @@ export default function Navbar() {
               </button>
 
               <div className={`nav-dropdown${servicesOpen ? ' mobile-open' : ''}`}>
-                {SERVICE_LINKS.map(({ href, icon, label, desc, color, bg }) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className={`nav-dropdown-link${pathname === href ? ' active' : ''}`}
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    <span className="nav-dd-icon-wrap" style={{ background: bg, color }}>{icon}</span>
-                    <span className="nav-dd-text">
-                      <span className="nav-dd-label">{label}</span>
-                      <span className="nav-dd-desc">{desc}</span>
-                    </span>
+                <div className="nav-dd-header">
+                  <span className="nav-dd-tag">Our Services</span>
+                </div>
+                <div className="nav-dd-body">
+                  {SERVICE_LINKS.map(({ href, icon, label, desc, color, bg }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`nav-dropdown-link${pathname === href ? ' active' : ''}`}
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      <span className="nav-dd-icon-wrap" style={{ background: bg, color }}>
+                        <i className={`bi ${icon}`} />
+                      </span>
+                      <span className="nav-dd-text">
+                        <span className="nav-dd-label">{label}</span>
+                        <span className="nav-dd-desc">{desc}</span>
+                      </span>
+                      <i className="bi bi-arrow-right-short nav-dd-arrow" />
+                    </Link>
+                  ))}
+                </div>
+                <div className="nav-dd-footer">
+                  <Link href="/platform" onClick={() => setServicesOpen(false)}>
+                    Explore Platform <i className="bi bi-arrow-right-short" />
                   </Link>
-                ))}
+                </div>
               </div>
             </li>
 

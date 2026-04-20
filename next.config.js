@@ -6,7 +6,6 @@ const nextConfig = {
   compress: true,
   images: {
     unoptimized: true,    // required for static export (no server to optimize images)
-    formats: ['image/avif', 'image/webp'],
   },
 };
 

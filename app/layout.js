@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/tailwind.css';
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -45,7 +44,7 @@ export const metadata = {
     url: 'https://ojiva.ai',
     title: 'Ojiva AI — India\'s #1 AI Communication Platform',
     description: 'Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.',
-    images: [{ url: 'https://ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: 'Ojiva AI Logo' }],
+    images: [{ url: 'https://ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: "Ojiva AI — India's #1 AI Communication Platform" }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -86,11 +85,11 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+        {/* Preload hero background image (above-the-fold LCP) */}
+        <link rel="preload" href="/hero-bg.png" as="image" />
+
         {/* Bootstrap Icons */}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-
-        {/* AOS — Animate On Scroll */}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#060c18" />
