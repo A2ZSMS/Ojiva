@@ -19,21 +19,9 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section className="hs-section" aria-labelledby="hero-heading">
-      {/* ══ Background Video ══ */}
-      <div className="hs-bg-video-wrap" aria-hidden="true">
-        <video
-          className="hs-bg-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/hero-bg.png"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="hs-bg-video-overlay" />
-      </div>
+      {/* CSS-only gradient glows — no image/video, instant render */}
+      <div className="hs-glow hs-glow-1" aria-hidden="true" />
+      <div className="hs-glow hs-glow-2" aria-hidden="true" />
 
       <div className="container hs-container">
 
