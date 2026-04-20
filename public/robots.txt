@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /404
+Disallow: /admin
+
+# Host
+Host: https://ojiva.ai
+
+# Sitemaps
+Sitemap: https://ojiva.ai/sitemap.xml

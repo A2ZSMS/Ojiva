@@ -10775,6 +10775,87 @@ img { max-width: 100%; height: auto; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hs-title-cyan {
+  background: linear-gradient(135deg, #00d4ff 0%, #4d9fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hs-title-purple {
+  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Security badges */
+.hs-sec-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+.hs-sec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  background: rgba(0, 212, 255, 0.08);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a8edff;
+  letter-spacing: 0.01em;
+}
+.hs-sec-badge .bi { font-size: 0.82rem; color: #00d4ff; }
+
+/* Channel cards grid */
+.hs-channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+.hs-channel-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  transition: border-color var(--transition), background var(--transition);
+}
+.hs-channel-card:hover {
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.09);
+}
+.hs-channel-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+.hs-channel-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.hs-channel-stat {
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0.1rem;
+}
 
 .hs-subtitle {
   font-size: 1.05rem;
@@ -10797,7 +10878,7 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(135deg, #1B48E0 0%, #00c8f8 100%);
   color: #fff;
   padding: 1rem 2.5rem;
-  border-radius: 12px;
+  border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
   display: inline-flex;
@@ -10819,7 +10900,7 @@ img { max-width: 100%; height: auto; }
   border: 1.5px solid rgba(255,255,255,0.28);
   backdrop-filter: blur(6px);
   padding: 1rem 2.2rem;
-  border-radius: 12px;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   display: inline-flex;
@@ -10835,43 +10916,6 @@ img { max-width: 100%; height: auto; }
 }
 .hs-play-icon { font-size: 0.7rem; opacity: 0.7; }
 
-/* Stats */
-.hs-stats {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-  background: none;
-  border: none;
-  border-top: 1px solid rgba(255,255,255,0.18);
-  border-radius: 0;
-  padding: 1.5rem 0 0;
-  width: 100%;
-}
-.hs-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  position: relative;
-}
-.hs-stat-sep {
-  display: none;
-}
-.hs-stat-val {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #4d9fff;
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-.hs-stat-lbl {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.55);
-  font-weight: 500;
-  margin-top: 0.35rem;
-  text-transform: capitalize;
-}
 
 /* Responsive */
 @media (max-width: 991px) {
@@ -10879,15 +10923,14 @@ img { max-width: 100%; height: auto; }
   .hs-container { padding-top: 20px; padding-bottom: 20px; }
   .hs-left { align-items: center; text-align: center; }
   .hs-subtitle { text-align: center; }
-  .hs-stats { justify-content: center; gap: 2rem; }
-  .hs-stat { align-items: center; }
+  .hs-sec-badges { justify-content: center; }
+  .hs-channels { max-width: 100%; }
 }
 @media (max-width: 575px) {
   .hs-section { min-height: 80vh; }
   .hs-actions { flex-direction: column; width: 100%; }
   .btn-hs-primary, .btn-hs-outline { justify-content: center; width: 100%; }
-  .hs-stats { gap: 1.5rem; }
-  .hs-stat-val { font-size: 1.6rem; }
+  .hs-channels { grid-template-columns: 1fr; }
 }
 
 /* ═══════════════════════════════════════════════════════════
