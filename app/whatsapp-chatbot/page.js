@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import ChatbotPageClient from '@/components/services/whatsapp-chatbot/ChatbotPageClient';
 
 export const metadata = buildMetadata({
-  title: 'WhatsApp Chatbot India — AI Automation & No-Code | Ojiva AI',
+  title: 'WhatsApp Chatbot India — AI Automation & No-Code Builder',
   description:
     'Build AI WhatsApp chatbots without code. Automate sales, support & leads 24/7 in 20+ languages. 87% queries auto-resolved. Trusted by 500+ businesses in India.',
   path: '/whatsapp-chatbot',

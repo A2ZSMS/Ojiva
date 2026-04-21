@@ -2,7 +2,7 @@ import { buildMetadata } from '@/lib/metadata';
 import BlogList from './client';
 
 export const metadata = buildMetadata({
-  title: 'Blog — Bulk SMS, WhatsApp & RCS Insights India | Ojiva AI',
+  title: 'Blog — Bulk SMS, WhatsApp & RCS Insights India',
   description:
     'Expert insights on Bulk SMS, WhatsApp Business API, RCS & AI Voice for Indian businesses. Tips, trends & best practices from Ojiva AI.',
   path: '/blogs',

@@ -2,7 +2,7 @@ import { buildMetadata } from '@/lib/metadata';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata = buildMetadata({
-  title: 'Contact Ojiva AI — Book a Free Demo or Get in Touch',
+  title: 'Contact Us — Book a Free Demo or Get in Touch',
   description:
     'Contact Ojiva AI for Bulk SMS, WhatsApp API, RCS & Voice. Book a free demo or get instant support. We respond within 1 hour.',
   path: '/contact',

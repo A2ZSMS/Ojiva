@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import WhatsappPageContent from '@/components/services/whatsapp/WhatsappPage';
 
 export const metadata = buildMetadata({
-  title: 'WhatsApp Business API India — Official Meta BSP | Ojiva AI',
+  title: 'WhatsApp Business API India — Official Meta BSP Provider',
   description:
     "WhatsApp Business API from India's official Meta BSP. 98% open rate, chatbots, interactive buttons & catalogs. 5M+ messages/month.",
   path: '/whatsapp',

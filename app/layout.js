@@ -17,7 +17,7 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: 'Ojiva AI — India\'s #1 AI Communication Platform | Bulk SMS, WhatsApp API, RCS & Voice',
+  title: 'India\'s #1 AI Communication Platform — Bulk SMS, WhatsApp API, RCS & Voice',
   description:
     'Ojiva AI is India\'s leading AI-powered communication platform for Bulk SMS, WhatsApp Business API, RCS Messaging & AI Voice Call automation. 10M+ messages monthly. Enterprise-grade security with AES-256 & 2FA. Trusted by 500+ businesses.',
   keywords: BRAND_KEYWORDS.join(', '),

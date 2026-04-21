@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsPageContent from '@/components/services/rcs/RcsPage';
 
 export const metadata = buildMetadata({
-  title: 'RCS Business Messaging India — Google Verified | Ojiva AI',
+  title: 'RCS Business Messaging India — Google Verified Sender',
   description:
     'Upgrade to RCS business messaging in India. Rich cards, carousels & verified brand messages. 3x higher CTR than SMS. Native Android delivery. DLT compliant.',
   path: '/rcs',

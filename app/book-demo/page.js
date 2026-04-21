@@ -2,7 +2,7 @@ import { buildMetadata } from '@/lib/metadata';
 import DemoBooking from '@/components/book-demo/DemoBooking';
 
 export const metadata = buildMetadata({
-  title: 'Book a Free Demo — See Ojiva AI Platform in 30 Minutes',
+  title: 'Book a Free Demo — Live 30-Minute Platform Walkthrough',
   description:
     'Book a free 30-min Ojiva AI demo. Live walkthrough of Bulk SMS, WhatsApp API, RCS & Voice. Personalised for your business. No commitment required.',
   path: '/book-demo',

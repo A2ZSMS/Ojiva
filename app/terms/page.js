@@ -2,7 +2,7 @@ import { buildMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 
 export const metadata = buildMetadata({
-  title: 'Terms of Service | Ojiva AI',
+  title: 'Terms of Service — User Agreement & Legal Terms',
   description:
     'Ojiva AI Terms of Service — the legal agreement governing your use of the Ojiva AI platform, APIs, and communication automation services.',
   path: '/terms',
