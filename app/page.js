@@ -76,11 +76,11 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Organization) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Website_Schema) }} />
+      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Organization) }} /> */}
+      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Website_Schema) }} /> */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Ojiva_Service) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Breadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ) }} />
+      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ) }} /> */}
       <HomePage />
     </>
   );
