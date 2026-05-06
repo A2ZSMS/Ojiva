@@ -17,10 +17,10 @@ import Script from 'next/script';
    Only edit values in this block.
    ───────────────────────────────────────────────────────── */
 // GA4 is fired through GTM — no direct script needed
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-FYZX6KFBEL';
 
-// GTM container ID — GTM-K2BDC8PH
-const GTM_CONTAINER_ID = 'GTM-K2BDC8PH';
+// GTM container ID — GTM-TJ8ZDFS2
+const GTM_CONTAINER_ID = 'GTM-TJ8ZDFS2';
 
 // Paste the content="" value from your Search Console <meta> tag here
 const SEARCH_CONSOLE_VERIFICATION = ''; // leave empty to disable
@@ -53,33 +53,9 @@ export default function Analytics() {
         </>
       )}
 
-      {/* ══════════════════════════════════════════════
-          2. Google Tag Manager (GTM)
-             Strategy "beforeInteractive" loads the GTM
-             snippet as early as possible in <head>,
-             matching Google's placement recommendation.
-             The noscript fallback lives in layout.js
-             immediately after <body> via <GTMNoScript />.
-         ════════════════════════════════════════════ */}
-      {GTM_CONTAINER_ID && (
-        <>
-          {/* GTM <head> script — loads as high in <head> as possible */}
-          <Script id="gtm-head" strategy="beforeInteractive">
-            {`
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),
-                    dl=l!='dataLayer'?'&l='+l:'';
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');
-            `}
-          </Script>
-        </>
-      )}
+      {/* GTM <head> script is placed directly in layout.js <head> for
+          maximum priority. Only the noscript fallback is handled here
+          via GTMNoScript exported below. */}
     </>
   );
 }

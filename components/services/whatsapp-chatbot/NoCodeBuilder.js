@@ -27,10 +27,11 @@ export default function NoCodeBuilder() {
             <ScalePop>
               <Image
                 src="/images/chatbot-builder.webp"
-                alt="No-code chatbot flow builder interface"
+                alt="Ojiva AI no-code WhatsApp chatbot flow builder for India — drag-and-drop interface to create conversational AI bots without coding"
                 width={600}
                 height={600}
                 className="cb-feature-image"
+                loading="lazy"
               />
             </ScalePop>
           </SlideRight>

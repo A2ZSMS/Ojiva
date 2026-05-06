@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsPageContent from '@/components/services/rcs/RcsPage';
 
 export const metadata = buildMetadata({
-  title: 'RCS Business Messaging India — Google Verified Sender',
+  title: 'RCS Business Messaging India — Rich Cards, 3× Higher CTR',
   description:
     'Upgrade to RCS business messaging in India. Rich cards, carousels & verified brand messages. 3x higher CTR than SMS. Native Android delivery. DLT compliant.',
   path: '/rcs',
@@ -14,8 +14,8 @@ export const metadata = buildMetadata({
   ],
 });
 
-const rcsServiceSchema = serviceSchema({ name: 'RCS Business Messaging', description: 'Upgrade from SMS to RCS — rich cards, carousels, suggested replies, branded messages. Google-verified.', url: '/rcs', keywords: ['RCS Business Messaging India', 'Google RCS', 'RCS API India'] });
-const rcsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'RCS Messaging', url: 'https://www.ojiva.ai/rcs' }]);
+const rcsServiceSchema = serviceSchema({ name: 'RCS Business Messaging', description: 'Upgrade from SMS to RCS — rich cards, carousels, suggested replies, branded messages. Google-verified.', url: '/rcs/', keywords: ['RCS Business Messaging India', 'Google RCS', 'RCS API India'] });
+const rcsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'RCS Messaging', url: 'https://www.ojiva.ai/rcs/' }]);
 
 const RCS_FAQS = [
   { q: 'What is RCS Business Messaging?', a: 'RCS (Rich Communication Services) is the next generation of SMS — delivering rich cards, carousels, images, videos, suggested replies, and interactive buttons inside the native Android message app. No app download needed by your customers.' },

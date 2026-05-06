@@ -60,7 +60,7 @@ const SOCIAL = [
   {
     href: 'https://x.com/OjivaAi',
     label: 'X (Twitter)',
-    color: '#000',
+    color: '#1a1a2e',
     icon: (
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
@@ -97,12 +97,11 @@ export default function Footer() {
             <Link href="/" className="footer-logo-link" aria-label="Ojiva AI Home">
               <Image
                 src="/ojiva-logo-white.png"
-                alt="Ojiva AI"
-                width={200}
+                alt="Ojiva AI — AI Communication Platform India (Bulk SMS, WhatsApp Business API, RCS, Voice)"
+                width={65}
                 height={65}
                 className="footer-logo"
                 loading="lazy"
-                style={{ width: 'auto', height: '65px', objectFit: 'contain', objectPosition: 'left center' }}
               />
             </Link>
 
@@ -218,7 +217,7 @@ export default function Footer() {
           <p className="footer-copy mb-0">
             &copy; {year}{' '}
             <strong style={{ color: 'rgba(255,255,255,0.75)' }}>Ojiva AI</strong>.
-            All rights reserved. Made with ❤️ in India.
+            All rights reserved.
           </p>
           <div className="footer-bottom-links">
             <Link href="/privacy" className="footer-copy footer-bottom-link">Privacy Policy</Link>

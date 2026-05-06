@@ -10,6 +10,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import CTA from '@/components/ui/CTA';
 import FeatureDeepDive from './FeatureDeepDive';
 import SecuritySection from './SecuritySection';
+import BlogPreview from './BlogPreview';
 import {
   FadeUp,
   FadeIn,
@@ -222,7 +223,9 @@ const TESTIMONIALS = [
     name: 'Sarah Chen',
     role: 'Head of Growth',
     company: 'FinNova Technologies',
-    avatar: '👩‍💼',
+    initials: 'SC',
+    avatarBg: '#dbeafe',
+    avatarColor: '#1d4ed8',
     result: '+38% Conversions',
     resultColor: '#16a34a',
     stars: 5,
@@ -232,7 +235,9 @@ const TESTIMONIALS = [
     name: 'Marcus Reid',
     role: 'VP of Sales',
     company: 'ProScale SaaS',
-    avatar: '👨‍💼',
+    initials: 'MR',
+    avatarBg: '#ede9fe',
+    avatarColor: '#6d28d9',
     result: '60% Cost Reduction',
     resultColor: '#1B48E0',
     stars: 5,
@@ -242,7 +247,9 @@ const TESTIMONIALS = [
     name: 'Priya Nair',
     role: 'Marketing Director',
     company: 'Nexora Commerce',
-    avatar: '👩‍🎨',
+    initials: 'PN',
+    avatarBg: '#dcfce7',
+    avatarColor: '#15803d',
     result: '12× Campaign Scale',
     resultColor: '#7C3AED',
     stars: 5,
@@ -303,9 +310,28 @@ export default function HomePage() {
       {/* ══ 1. HERO ══════════════════════════════════════════ */}
       <Hero />
 
+      {/* ══ 2b. TRUST / STATS BAR ════════════════════════════ */}
+      <div className="hp-trust-bar" aria-label="Platform statistics">
+        <div className="container">
+          <div className="hp-trust-inner">
+            {[
+              { val: '10M+',  lbl: 'Messages / day' },
+              { val: '500+',  lbl: 'Businesses trust us' },
+              { val: '99.9%', lbl: 'Uptime SLA' },
+              { val: '4',     lbl: 'Channels — one API' },
+              { val: 'AES-256', lbl: 'Encryption standard' },
+            ].map(({ val, lbl }) => (
+              <div key={lbl} className="hp-trust-item">
+                <span className="hp-trust-val">{val}</span>
+                <span className="hp-trust-lbl">{lbl}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ══ 3. CORE SERVICES ═════════════════════════════════ */}
-      <section className="section-padding" aria-labelledby="services-heading">
+      <section className="section-padding hp-sec-svc" aria-labelledby="services-heading">
         <div className="container">
           <BlurReveal>
             <SectionHeading
@@ -316,20 +342,45 @@ export default function HomePage() {
             />
           </BlurReveal>
 
-          <StaggerContainer className="aisensy-svc-grid mt-5" staggerDelay={0.08}>
-            {SERVICES.map(({ id, icon: Icon, iconBg, title, desc, stat, linkOverride }, i) => (
-              <StaggerItem key={`${id}-${i}`}>
-                <Link href={linkOverride || `/${id}`} className="aisensy-svc-card">
-                  <div className="aisensy-svc-icon" style={{ background: `${iconBg}18`, borderColor: `${iconBg}30`, color: iconBg }}>
-                    <Icon size={24} aria-hidden="true" />
+          {/* Top-tier featured services */}
+          <StaggerContainer className="ojv-svc-grid-top mt-5" staggerDelay={0.08}>
+            {SERVICES.slice(0, 2).map(({ id, icon: Icon, iconBg, title, desc, stat, linkOverride }, i) => (
+              <StaggerItem key={`${id}-top`}>
+                <Link href={linkOverride || `/${id}`} className="ojv-svc-card ojv-svc-card--featured">
+                  <div className="ojv-svc-card-accent" style={{ background: `linear-gradient(90deg, ${iconBg}, ${iconBg}99)` }} aria-hidden="true" />
+                  <div className="ojv-svc-icon" style={{ background: `${iconBg}18`, borderColor: `${iconBg}30`, color: iconBg }}>
+                    <Icon size={28} aria-hidden="true" />
                   </div>
-                  <h3 className="aisensy-svc-title">{title}</h3>
-                  <p className="aisensy-svc-desc">{desc}</p>
-                  <div className="aisensy-svc-footer">
-                    <span className="aisensy-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
+                  <h3 className="ojv-svc-title">{title}</h3>
+                  <p className="ojv-svc-desc">{desc}</p>
+                  <div className="ojv-svc-footer">
+                    <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
                       {stat}
                     </span>
-                    <span className="aisensy-svc-link" style={{ color: iconBg }}>
+                    <span className="ojv-svc-link" style={{ color: iconBg }}>
+                      Learn more →
+                    </span>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* Supporting services grid */}
+          <StaggerContainer className="ojv-svc-grid mt-4" staggerDelay={0.07}>
+            {SERVICES.slice(2).map(({ id, icon: Icon, iconBg, title, desc, stat, linkOverride }, i) => (
+              <StaggerItem key={`${id}-${i}`}>
+                <Link href={linkOverride || `/${id}`} className="ojv-svc-card">
+                  <div className="ojv-svc-icon" style={{ background: `${iconBg}18`, borderColor: `${iconBg}30`, color: iconBg }}>
+                    <Icon size={24} aria-hidden="true" />
+                  </div>
+                  <h3 className="ojv-svc-title">{title}</h3>
+                  <p className="ojv-svc-desc">{desc}</p>
+                  <div className="ojv-svc-footer">
+                    <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
+                      {stat}
+                    </span>
+                    <span className="ojv-svc-link" style={{ color: iconBg }}>
                       Learn more →
                     </span>
                   </div>
@@ -344,7 +395,7 @@ export default function HomePage() {
       <SecuritySection />
 
       {/* ══ 5. HOW IT WORKS ══════════════════════════════════ */}
-      <section className="section-padding bg-section" aria-labelledby="how-heading">
+      <section className="section-padding hp-sec-hiw" aria-labelledby="how-heading">
         <div className="container">
           <ClipReveal direction="left">
             <SectionHeading
@@ -355,17 +406,20 @@ export default function HomePage() {
             />
           </ClipReveal>
 
-          <div className="aisensy-how-grid mt-5">
+          <div className="ojv-timeline mt-5">
+            {/* Connecting line */}
+            <div className="ojv-timeline-line" aria-hidden="true" />
             {HOW_IT_WORKS.map(({ step, title, desc, icon: Icon }, i) => (
               <RotateIn key={step} delay={i * 0.12}>
-                <div className="aisensy-how-card">
-                  <div className="aisensy-how-step">{step}</div>
-                  <div className="aisensy-how-icon"><Icon size={28} aria-hidden="true" /></div>
-                  <h3 className="aisensy-how-title">{title}</h3>
-                  <p className="aisensy-how-desc">{desc}</p>
-                  {i < HOW_IT_WORKS.length - 1 && (
-                    <div className="aisensy-how-connector" aria-hidden="true" />
-                  )}
+                <div className="ojv-timeline-step">
+                  <div className="ojv-timeline-node">
+                    <span className="ojv-timeline-num">{step}</span>
+                    <div className="ojv-timeline-icon"><Icon size={20} aria-hidden="true" /></div>
+                  </div>
+                  <div className="ojv-timeline-body">
+                    <h3 className="ojv-timeline-title">{title}</h3>
+                    <p className="ojv-timeline-desc">{desc}</p>
+                  </div>
                 </div>
               </RotateIn>
             ))}
@@ -377,7 +431,7 @@ export default function HomePage() {
       <FeatureDeepDive />
 
       {/* ══ 7. PLATFORM CAPABILITIES ══════════════════════════ */}
-      <section className="section-padding" aria-labelledby="modules-heading">
+      <section className="section-padding hp-sec-platform" aria-labelledby="modules-heading">
         <div className="container">
           <ScrollScale>
             <SectionHeading
@@ -416,7 +470,7 @@ export default function HomePage() {
       </section>
 
       {/* ══ 8. TESTIMONIALS ═══════════════════════════════════ */}
-      <section className="section-padding bg-section" aria-labelledby="testimonials-heading">
+      <section className="section-padding" style={{ background: '#f8fafc' }} aria-labelledby="testimonials-heading">
         <div className="container">
           <ParallaxSection speed={0.1}>
             <SectionHeading
@@ -428,24 +482,31 @@ export default function HomePage() {
           </ParallaxSection>
 
           <StaggerContainer className="row g-4 mt-4" staggerDelay={0.1}>
-            {TESTIMONIALS.map(({ quote, name, role, company, avatar, result, resultColor, stars }) => (
+            {TESTIMONIALS.map(({ quote, name, role, company, initials, avatarBg, avatarColor, result, resultColor, stars }) => (
               <StaggerItem key={name} className="col-12 col-md-4">
-                <div className="aisensy-testi-card h-100">
-                  <div className="aisensy-testi-top">
-                    <div className="aisensy-testi-stars">{'★'.repeat(stars)}</div>
+                <div className="ojv-testi-card h-100">
+                  {/* Big quote mark */}
+                  <div className="ojv-testi-quote-mark" aria-hidden="true">&ldquo;</div>
+                  <div className="ojv-testi-top">
+                    <div className="ojv-testi-stars">{'★'.repeat(stars)}</div>
                     <div
-                      className="aisensy-testi-result"
-                      style={{ color: resultColor, background: `${resultColor}12` }}
+                      className="ojv-testi-result"
+                      style={{ color: resultColor, background: `${resultColor}20` }}
                     >
                       {result}
                     </div>
                   </div>
-                  <p className="aisensy-testi-quote">&ldquo;{quote}&rdquo;</p>
-                  <div className="aisensy-testi-author">
-                    <span className="aisensy-testi-avatar">{avatar}</span>
+                  <p className="ojv-testi-quote">{quote}</p>
+                  <div className="ojv-testi-author">
+                    <span
+                      className="ojv-testi-avatar"
+                      style={{ background: avatarBg, color: avatarColor }}
+                    >
+                      {initials}
+                    </span>
                     <div>
-                      <p className="aisensy-testi-name">{name}</p>
-                      <p className="aisensy-testi-meta">{role} · {company}</p>
+                      <p className="ojv-testi-name">{name}</p>
+                      <p className="ojv-testi-meta">{role} · {company}</p>
                     </div>
                   </div>
                 </div>
@@ -456,7 +517,7 @@ export default function HomePage() {
       </section>
 
       {/* ══ 9. WHY OJIVA AI ═══════════════════════════════════ */}
-      <section className="section-padding" aria-labelledby="why-heading">
+      <section className="section-padding hp-sec-why" aria-labelledby="why-heading">
         <div className="container">
           <div className="row align-items-center g-5">
             <SlideLeft className="col-12 col-lg-5">
@@ -496,6 +557,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ══ 10. BLOG PREVIEW ═════════════════════════════════ */}
+      <BlogPreview />
 
       {/* ══ FAQ Schema (JSON-LD) ══════════════════════════════ */}
       <script

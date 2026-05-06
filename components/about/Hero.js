@@ -25,7 +25,7 @@ export default function Hero() {
             </p>
             </HeroEntrance>
             <HeroEntrance index={3}>
-            <div className="d-flex flex-wrap gap-3 mt-4">
+            <div className="about-hero-btns mt-4">
               <Link href="/contact" className="btn-hero-primary">
                 Talk to Us
               </Link>
@@ -42,12 +42,13 @@ export default function Hero() {
               <div className="about-brand-card about-brand-ojiva">
                 <div className="about-brand-card-header">
                   <Image
-                    src="/ojiva-logo-white.png"
-                    alt="Ojiva AI"
+                    src="/ojiva-logo-optimized.png"
+                    alt="About Ojiva AI — India's leading enterprise AI communication platform headquartered in Bengaluru"
                     width={130}
                     height={44}
                     style={{ width: 'auto', height: '38px', objectFit: 'contain' }}
                     unoptimized
+                    loading="lazy"
                   />
                   <span className="about-brand-badge">Parent Company</span>
                 </div>

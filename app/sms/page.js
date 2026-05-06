@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import SmsPageContent from '@/components/services/sms/SmsPage';
 
 export const metadata = buildMetadata({
-  title: 'Bulk SMS Gateway India — OTP & Transactional SMS Service',
+  title: 'Bulk SMS Service India — Transactional, OTP & Promotional',
   description:
     "Send bulk SMS in India with 98%+ delivery. OTP in under 3 seconds, DLT compliant. Transactional, promotional & two-way SMS API. 10M+ messages/month.",
   path: '/sms',
@@ -14,8 +14,8 @@ export const metadata = buildMetadata({
   ],
 });
 
-const smsServiceSchema = serviceSchema({ name: 'Bulk SMS Service', description: "India's #1 bulk SMS platform — transactional, promotional, OTP. DLT compliant, 98%+ delivery.", url: '/sms', keywords: ['bulk SMS India', 'transactional SMS', 'OTP SMS', 'SMS API'] });
-const smsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'Bulk SMS', url: 'https://www.ojiva.ai/sms' }]);
+const smsServiceSchema = serviceSchema({ name: 'Bulk SMS Service', description: "India's #1 bulk SMS platform — transactional, promotional, OTP. DLT compliant, 98%+ delivery.", url: '/sms/', keywords: ['bulk SMS India', 'transactional SMS', 'OTP SMS', 'SMS API'] });
+const smsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'Bulk SMS', url: 'https://www.ojiva.ai/sms/' }]);
 
 const SMS_FAQS = [
   { q: 'What is Promotional SMS?', a: 'Promotional SMS are bulk text messages sent to a large audience to promote products, services, or offers. Ojiva AI helps you run affordable, high-reach SMS campaigns — ideal for flash sales, exclusive deals, and event promotions.' },

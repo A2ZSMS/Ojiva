@@ -16,7 +16,7 @@ export default function Hero() {
               <span className="platform-hero-accent">automate communication</span>{' '}
               at scale
             </h1>
-            <p className="page-hero-subtitle" style={{ color: 'rgba(255,255,255,0.9)' }}>
+            <p className="page-hero-subtitle">
               Five deeply integrated AI modules that work as one unified intelligence
               engine — from first message to closed deal.
             </p>

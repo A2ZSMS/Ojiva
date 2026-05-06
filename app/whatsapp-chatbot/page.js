@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import ChatbotPageClient from '@/components/services/whatsapp-chatbot/ChatbotPageClient';
 
 export const metadata = buildMetadata({
-  title: 'WhatsApp Chatbot India — AI Automation & No-Code Builder',
+  title: 'WhatsApp Chatbot India — AI-Powered & No-Code Builder',
   description:
     'Build AI WhatsApp chatbots without code. Automate sales, support & leads 24/7 in 20+ languages. 87% queries auto-resolved. Trusted by 500+ businesses in India.',
   path: '/whatsapp-chatbot',
@@ -23,8 +23,8 @@ const CHATBOT_FAQS = [
   { q: 'How many languages?', a: 'Supports 20+ languages including Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam — with auto-detection.' },
 ];
 
-const chatbotServiceSchema = serviceSchema({ name: 'WhatsApp Chatbot', description: "India's leading WhatsApp chatbot platform — no-code builder, AI NLP, lead qualification, multi-language.", url: '/whatsapp-chatbot', keywords: ['WhatsApp chatbot India', 'WhatsApp AI chatbot'] });
-const chatbotBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'WhatsApp Chatbot', url: 'https://www.ojiva.ai/whatsapp-chatbot' }]);
+const chatbotServiceSchema = serviceSchema({ name: 'WhatsApp Chatbot', description: "India's leading WhatsApp chatbot platform — no-code builder, AI NLP, lead qualification, multi-language.", url: '/whatsapp-chatbot/', keywords: ['WhatsApp chatbot India', 'WhatsApp AI chatbot'] });
+const chatbotBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'WhatsApp Chatbot', url: 'https://www.ojiva.ai/whatsapp-chatbot/' }]);
 
 export default function WhatsAppChatbotPage() {
   return (

@@ -1,4 +1,4 @@
-import { buildMetadata } from '@/lib/metadata';
+import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 import Link from 'next/link';
 
 export const metadata = buildMetadata({
@@ -7,6 +7,11 @@ export const metadata = buildMetadata({
     'Ojiva AI Terms of Service — the legal agreement governing your use of the Ojiva AI platform, APIs, and communication automation services.',
   path: '/terms',
 });
+
+const breadcrumb = breadcrumbSchema([
+  { name: 'Home',             url: 'https://www.ojiva.ai/' },
+  { name: 'Terms of Service', url: 'https://www.ojiva.ai/terms/' },
+]);
 
 const LAST_UPDATED = 'March 3, 2026';
 const EFFECTIVE_DATE = 'March 3, 2026';
@@ -215,6 +220,7 @@ function TermsBlock({ block }) {
 export default function TermsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <section className="page-hero" aria-labelledby="terms-hero-heading">
         <div className="container">
           <div className="col-12 col-lg-8">

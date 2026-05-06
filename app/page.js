@@ -1,18 +1,20 @@
 import HomePage from '@/components/home/HomePage';
-import { buildMetadata } from '@/lib/metadata';
-import { Breadcrumb } from '../public/Schema/BreadCrumb';
-import { FAQ } from '../public/Schema/FaqSchema';
-import { Ojiva_Service } from '../public/Schema/HomeSchema';
-import { Organization } from '../public/Schema/Organization';
-import { Website_Schema } from '../public/Schema/Website';
+import {
+  buildMetadata,
+  organizationSchema,
+  websiteSchema,
+  softwareAppSchema,
+  breadcrumbSchema,
+  faqSchema,
+} from '@/lib/metadata';
 
 /* ─────────────────────────────────────────────────────────
    SEO METADATA
 ───────────────────────────────────────────────────────── */
 export const metadata = buildMetadata({
-  title: 'Bulk SMS, WhatsApp API & RCS Communication Platform India',
+  title: 'Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India',
   description:
-    'India\'s #1 enterprise messaging platform. Bulk SMS, WhatsApp Business API, RCS & AI Voice at scale. DLT compliant, 10M+ messages/month. Trusted by 500+ businesses.',
+    'India\'s #1 AI messaging platform. Bulk SMS, WhatsApp Business API, RCS & AI Voice at scale. DLT compliant, 10M+ messages/month. Trusted by 500+ businesses.',
   path: '/',
   keywords: [
     // Primary intent
@@ -71,16 +73,46 @@ export const metadata = buildMetadata({
 });
 
 /* ─────────────────────────────────────────────────────────
+   PAGE-LEVEL JSON-LD
+───────────────────────────────────────────────────────── */
+const homeBreadcrumb = breadcrumbSchema([
+  { name: 'Home', url: 'https://www.ojiva.ai/' },
+]);
+
+const HOME_FAQS = faqSchema([
+  {
+    q: 'What is Ojiva AI and what services does it offer?',
+    a: "Ojiva AI is India's leading AI-powered business communication platform offering Bulk SMS, WhatsApp Business API, RCS Messaging, and AI Voice Call automation. Trusted by 500+ businesses across India for enterprise-grade messaging at scale.",
+  },
+  {
+    q: 'Why is WhatsApp Business API the best tool for customer communication?',
+    a: 'With over 500 million WhatsApp users in India, it offers businesses a direct and personal channel with 98% open rates. Ojiva AI, an official Meta BSP, enables bulk messaging, chatbot automation, interactive buttons, and real-time customer support — all in one platform.',
+  },
+  {
+    q: 'How can I send personalized bulk SMS campaigns with Ojiva AI?',
+    a: "Ojiva AI's bulk SMS platform lets you send personalized transactional, promotional, and OTP messages at scale. Include customer names, order details, and dynamic fields for a personal touch — fully DLT compliant with 98%+ delivery rates.",
+  },
+  {
+    q: 'Is Ojiva AI compliant with TRAI DLT regulations?',
+    a: 'Absolutely. Ojiva AI is fully TRAI DLT registered and compliant with all Indian telecom regulations. Every SMS route, sender ID, and template is properly registered — ensuring maximum deliverability and zero legal risk for your business.',
+  },
+  {
+    q: 'How do I get started with Ojiva AI?',
+    a: 'Getting started is simple — sign up on ojiva.ai, choose your service (SMS, WhatsApp, RCS, or Voice), and go live in under 24-48 hours. Our dedicated onboarding team guides you through every step, from setup to your first campaign.',
+  },
+]);
+
+/* ─────────────────────────────────────────────────────────
    PAGE COMPONENT
 ───────────────────────────────────────────────────────── */
 export default function Page() {
   return (
     <>
-      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Organization) }} /> */}
-      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Website_Schema) }} /> */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Ojiva_Service) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Breadcrumb) }} />
-      {/* <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ) }} /> */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQS) }} />
       <HomePage />
     </>
   );

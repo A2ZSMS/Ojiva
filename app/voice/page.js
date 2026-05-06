@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import VoicePageContent from '@/components/services/voice/VoicePage';
 
 export const metadata = buildMetadata({
-  title: 'Bulk Voice Call India — IVR, OBD & AI Voice Automation',
+  title: 'Bulk Voice Call Service India — IVR & AI Automation',
   description:
     'Automate customer calls with IVR, OBD & AI voice bots. 99.9% connect rate, 10M+ calls/month, 10+ languages. Reduce call centre costs by 60%.',
   path: '/voice',
@@ -14,8 +14,8 @@ export const metadata = buildMetadata({
   ],
 });
 
-const voiceServiceSchema = serviceSchema({ name: 'AI Voice Call Automation', description: 'Automate customer calls — outbound dialer, IVR, AI voice bots. 99.9% connect rate.', url: '/voice', keywords: ['AI voice call India', 'outbound dialer', 'IVR solution', 'voice bot India'] });
-const voiceBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'AI Voice', url: 'https://www.ojiva.ai/voice' }]);
+const voiceServiceSchema = serviceSchema({ name: 'AI Voice Call Automation', description: 'Automate customer calls — outbound dialer, IVR, AI voice bots. 99.9% connect rate.', url: '/voice/', keywords: ['AI voice call India', 'outbound dialer', 'IVR solution', 'voice bot India'] });
+const voiceBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'AI Voice', url: 'https://www.ojiva.ai/voice/' }]);
 
 const VOICE_FAQS = [
   { q: 'What is a Bulk Voice Call service?', a: 'Bulk Voice Call lets you send automated voice messages to thousands of customers simultaneously — ideal for alerts, promotions, appointment reminders, and lead nurturing without requiring a human agent for every call.' },

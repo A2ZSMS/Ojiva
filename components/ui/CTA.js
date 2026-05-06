@@ -13,19 +13,7 @@ export default function CTA({
   secondaryHref = '/platform',
 }) {
   return (
-    <section className="cta-section cta-section-v2" aria-labelledby="cta-heading">
-      {/* Animated background orbs */}
-      <div className="cta-orb cta-orb-1" aria-hidden="true" />
-      <div className="cta-orb cta-orb-2" aria-hidden="true" />
-      <div className="cta-orb cta-orb-3" aria-hidden="true" />
-
-      {/* Animated grid overlay */}
-      <div className="cta-grid-overlay" aria-hidden="true" />
-
-      {/* Animated ring */}
-      <div className="cta-ring cta-ring-1" aria-hidden="true" />
-      <div className="cta-ring cta-ring-2" aria-hidden="true" />
-
+    <section className="cta-section-v2" aria-labelledby="cta-heading">
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="row justify-content-center text-center">
           <div className="col-12 col-lg-8">
@@ -52,9 +40,9 @@ export default function CTA({
             <FadeUp delay={0.3}>
               <div className="cta-actions">
                 <motion.div
-                  whileHover={{ scale: 1.04 }}
+                  whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.18 }}
+                  transition={{ duration: 0.15 }}
                   className="cta-btn-wrap"
                 >
                   <Link href={primaryHref} className="btn-cta-primary">
@@ -64,9 +52,9 @@ export default function CTA({
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.03 }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.18 }}
+                  transition={{ duration: 0.15 }}
                 >
                   <Link href={secondaryHref} className="btn-cta-ghost">
                     {secondaryLabel}

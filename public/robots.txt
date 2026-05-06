@@ -5,10 +5,11 @@ Allow: /
 # *
 User-agent: *
 Disallow: /404
-Disallow: /admin
+Disallow: /admin/
+Disallow: /whatsapp-api-service/
 
 # Host
-Host: https://ojiva.ai
+Host: https://www.ojiva.ai
 
 # Sitemaps
-Sitemap: https://ojiva.ai/sitemap.xml
+Sitemap: https://www.ojiva.ai/sitemap.xml

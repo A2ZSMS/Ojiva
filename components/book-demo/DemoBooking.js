@@ -182,7 +182,7 @@ function LeftPanel() {
       <div className="dbp-left-inner">
         {/* Logo */}
         <motion.div {...anim(0)} className="dbp-logo-wrap">
-          <Image src="/ojiva-logo-white.png" alt="Ojiva AI" width={130} height={36} unoptimized />
+          <Image src="/ojiva-logo-white.png" alt="Ojiva AI — Book a Free Demo" width={130} height={130} loading="eager" />
         </motion.div>
 
         {/* Badge */}

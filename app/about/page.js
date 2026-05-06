@@ -2,7 +2,7 @@ import { buildMetadata, organizationSchema, breadcrumbSchema } from '@/lib/metad
 import AboutPageContent from '@/components/about/AboutPage';
 
 export const metadata = buildMetadata({
-  title: 'About Us — Enterprise AI Messaging Platform India',
+  title: 'About Ojiva AI — India\'s #1 Business Messaging Platform',
   description:
     "Learn about Ojiva AI, India's enterprise messaging platform built on A2ZSMS' decade of expertise. Serving 500+ businesses with Bulk SMS, WhatsApp API & RCS.",
   path: '/about',
@@ -27,12 +27,12 @@ const aboutPageSchema = {
   '@type': 'AboutPage',
   name: 'About Ojiva AI',
   description: "Ojiva AI is India's leading AI communication platform and parent company of A2ZSMS.",
-  url: 'https://www.ojiva.ai/about',
-  mainEntity: { '@type': 'Organization', name: 'Ojiva AI', url: 'https://www.ojiva.ai' },
+  url: 'https://www.ojiva.ai/about/',
+  mainEntity: { '@type': 'Organization', name: 'Ojiva AI', url: 'https://www.ojiva.ai/' },
 };
 const aboutBreadcrumb = breadcrumbSchema([
   { name: 'Home',  url: 'https://www.ojiva.ai/' },
-  { name: 'About', url: 'https://www.ojiva.ai/about' },
+  { name: 'About', url: 'https://www.ojiva.ai/about/' },
 ]);
 
 export default function AboutPage() {

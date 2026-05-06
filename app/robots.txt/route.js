@@ -8,6 +8,8 @@ User-agent: *
 Allow: /
 Disallow: /_next/
 Disallow: /api/
+# Ad / pay-per-click landing page — keep out of organic index
+Disallow: /whatsapp-api-service/
 
 # Sitemaps
 Sitemap: https://www.ojiva.ai/sitemap.xml
@@ -21,6 +23,7 @@ Allow: /
 Allow: /*.js
 Allow: /*.css
 Disallow: /_next/static/media/
+Disallow: /whatsapp-api-service/
 
 # Bing-specific
 User-agent: Bingbot

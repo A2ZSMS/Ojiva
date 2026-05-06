@@ -10,6 +10,7 @@ import UseCases from './UseCases';
 import HowItWorks from './HowItWorks';
 import FAQ from './FAQ';
 import ExploreServices from './ExploreServices';
+import RelatedServices from '@/components/ui/RelatedServices';
 
 export default function ChatbotPageClient({ faqs }) {
   return (
@@ -22,6 +23,7 @@ export default function ChatbotPageClient({ faqs }) {
       <HowItWorks />
       <FAQ faqs={faqs} />
       <ExploreServices />
+      <RelatedServices currentPath="/whatsapp-chatbot" />
 
       {/* ══ CTA ══ */}
       <FadeUp>

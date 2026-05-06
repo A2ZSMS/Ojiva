@@ -1,11 +1,16 @@
-import { buildMetadata } from '@/lib/metadata';
+import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Privacy Policy — Data Protection & GDPR Compliance',
+  title: 'Privacy Policy — Data Protection, GDPR & DPDP Compliance',
   description:
     'Ojiva AI Privacy Policy — how we collect, use, store, and protect your personal data in compliance with GDPR, CCPA, and applicable data protection laws.',
   path: '/privacy',
 });
+
+const breadcrumb = breadcrumbSchema([
+  { name: 'Home',           url: 'https://www.ojiva.ai/' },
+  { name: 'Privacy Policy', url: 'https://www.ojiva.ai/privacy/' },
+]);
 
 const LAST_UPDATED = 'March 3, 2026';
 const EFFECTIVE_DATE = 'March 3, 2026';
@@ -197,6 +202,7 @@ function PolicyBlock({ block }) {
 export default function PrivacyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <section className="page-hero" aria-labelledby="privacy-hero-heading">
         <div className="container">
           <div className="col-12 col-lg-8">

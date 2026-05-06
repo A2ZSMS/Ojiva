@@ -9,8 +9,8 @@ export const metadata = buildMetadata({
   keywords: ['WhatsApp Business API India', 'WhatsApp Business solution provider India', 'WhatsApp chatbot India', 'WhatsApp marketing India', 'Meta BSP India', 'WhatsApp bulk messaging'],
 });
 
-const waServiceSchema = serviceSchema({ name: 'WhatsApp Business API', description: "India's trusted WhatsApp Business API provider — template messages, interactive buttons, catalogs, chatbots. Meta-approved BSP.", url: '/whatsapp', keywords: ['WhatsApp Business API India', 'WhatsApp chatbot', 'Meta BSP India'] });
-const waBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'WhatsApp Business', url: 'https://www.ojiva.ai/whatsapp' }]);
+const waServiceSchema = serviceSchema({ name: 'WhatsApp Business API', description: "India's trusted WhatsApp Business API provider — template messages, interactive buttons, catalogs, chatbots. Meta-approved BSP.", url: '/whatsapp/', keywords: ['WhatsApp Business API India', 'WhatsApp chatbot', 'Meta BSP India'] });
+const waBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'WhatsApp Business', url: 'https://www.ojiva.ai/whatsapp/' }]);
 
 const WHATSAPP_FAQS = [
   { q: 'What is WhatsApp Business API?', a: 'WhatsApp Business API is a cloud-hosted solution that enables businesses to manage WhatsApp messaging at scale. Ojiva AI, an official Meta BSP, provides seamless integration — no server maintenance required.' },

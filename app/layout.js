@@ -1,23 +1,31 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, EB_Garamond } from 'next/font/google';
 import Script from 'next/script';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import LayoutShell from '@/components/layout/LayoutShell';
 import BootstrapClient from './BootstrapClient';
 import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '600', '700', '900'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['700'],
+  variable: '--font-eb-garamond',
 });
 
 
 export const metadata = {
-  title: 'India\'s #1 AI Communication Platform — Bulk SMS, WhatsApp API, RCS & Voice',
+  title: {
+    default: 'Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India',
+  },
   description:
     'Ojiva AI is India\'s leading AI-powered communication platform for Bulk SMS, WhatsApp Business API, RCS Messaging & AI Voice Call automation. 10M+ messages monthly. Enterprise-grade security with AES-256 & 2FA. Trusted by 500+ businesses.',
   keywords: BRAND_KEYWORDS.join(', '),
@@ -38,7 +46,7 @@ export const metadata = {
     siteName: 'Ojiva AI',
     locale: 'en_IN',
     type: 'website',
-    url: 'https://www.ojiva.ai',
+    url: 'https://www.ojiva.ai/',
     title: 'Ojiva AI — India\'s #1 AI Communication Platform',
     description: 'Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.',
     images: [{ url: 'https://www.ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: "Ojiva AI — India's #1 AI Communication Platform" }],
@@ -53,7 +61,7 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://www.ojiva.ai/',
-    languages: { 'en-IN': 'https://www.ojiva.ai' },
+    languages: { 'en-IN': 'https://www.ojiva.ai/' },
   },
   robots: {
     index: true,
@@ -76,8 +84,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={inter.className} suppressHydrationWarning>
+    <html lang="en-IN" className={`${inter.variable} ${ebGaramond.variable}`} suppressHydrationWarning>
       <head>
+        {/* ── Google Tag Manager — as high in <head> as possible ── */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TJ8ZDFS2');` }} />
+
         {/* ── Performance: preconnect & DNS prefetch ── */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
@@ -85,8 +96,22 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://api-iam.intercom.io" />
 
-        {/* Bootstrap Icons */}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        {/* Bootstrap Icons — preload (warms cache without render-block) then
+            swap to a stylesheet via a tiny inline script. Falls back to plain
+            <link> when JS is disabled. Saves ~150-300ms on first paint. */}
+        <link
+          rel="preload"
+          href="/icons/bootstrap-icons.min.css"
+          as="style"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/icons/bootstrap-icons.min.css';document.head.appendChild(l);})();`,
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="/icons/bootstrap-icons.min.css" />
+        </noscript>
 
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#060c18" />
@@ -116,9 +141,9 @@ export default function RootLayout({ children }) {
         <a href="#main-content" className="visually-hidden-focusable">
           Skip to main content
         </a>
-        <Navbar />
-        <main id="main-content" style={{ overflowX: 'hidden' }}>{children}</main>
-        <Footer />
+        <LayoutShell>
+          <main id="main-content" style={{ overflowX: 'hidden' }}>{children}</main>
+        </LayoutShell>
         <BootstrapClient />
 
         {/* All tracking scripts — GA4, GTM, etc. */}
