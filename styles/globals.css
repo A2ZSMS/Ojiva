@@ -2598,54 +2598,68 @@ nav.ojiva-nav.nav--fixed:not(.scrolled) .navbar-collapse.show {
   padding: 0.75rem 1rem 1rem;
   border-top-color: rgba(255,255,255,0.10);
 }
-/* Dark-bg mobile: dropdown item labels must be light */
+/* Services dropdown item labels — dark text on white panel */
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dd-label {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: #111827 !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dd-desc {
-  color: rgba(255, 255, 255, 0.83) !important;
+  color: #6b7280 !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dropdown-link:hover .nav-dd-label {
-  color: #60a5fa !important;
+  color: var(--primary) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dropdown {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: #ffffff !important;
+  border-color: var(--border) !important;
+  border-top-color: var(--primary) !important;
+  box-shadow: 0 24px 64px rgba(8,12,20,0.13), 0 8px 24px rgba(8,12,20,0.07) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dropdown-link:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(27,72,224,0.05) !important;
+}
+nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dd-header {
+  border-bottom-color: var(--border) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dd-arrow {
-  color: rgba(255,255,255,0.83) !important;
+  color: #6b7280 !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-dropdown-link:hover .nav-dd-arrow {
-  color: #60a5fa !important;
+  color: var(--primary) !important;
 }
-/* Solutions mega menu — same dark-bg fixes */
+/* Solutions mega menu — dark text on white panel */
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card-label {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: #111827 !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card-desc {
-  color: rgba(255, 255, 255, 0.83) !important;
+  color: #6b7280 !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card:hover .nav-mega-card-label {
-  color: #60a5fa !important;
+  color: var(--primary) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.10) !important;
+  background: #f8fafc !important;
+  border-color: var(--border) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card:hover,
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-card.active {
-  background: rgba(255, 255, 255, 0.10) !important;
-  border-color: rgba(96, 165, 250, 0.4) !important;
+  background: rgba(27,72,224,0.05) !important;
+  border-color: rgba(27,72,224,0.25) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega-col-head {
-  color: rgba(255, 255, 255, 0.80) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.10) !important;
+  color: #374151 !important;
+  border-bottom-color: var(--border) !important;
 }
 nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega .nav-dd-footer {
-  background: transparent !important;
-  border-top-color: rgba(255,255,255,0.10) !important;
+  background: #f8fafc !important;
+  border-top-color: var(--border) !important;
+}
+/* Solutions mega-menu — solid white panel on homepage */
+nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega {
+  background: #ffffff !important;
+  border-top-color: #e2e8f4 !important;
+  box-shadow: rgba(50,50,93,0.10) 0 30px 60px -20px, rgba(0,0,0,0.05) 0 18px 36px -18px !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 /* ── Logo ── */
