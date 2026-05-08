@@ -305,9 +305,8 @@ export default function WhatsAppApiLanding() {
             />
           </Link>
           <div className="lp-header-right">
-            <a href="tel:+918431086185" className="lp-header-phone"></a>
             <a href="#lead-form" className="lp-header-cta">
-              Get Free Demo →
+              Get Free Access →
             </a>
           </div>
         </div>

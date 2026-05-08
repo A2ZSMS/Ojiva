@@ -16858,8 +16858,17 @@ input:focus, textarea:focus, select:focus {
   background: #edf9f3;
 }
 .lp-section--dark {
-  background: #d6f5e7;
+  background: linear-gradient(160deg, #05150e 0%, #072b1a 50%, #062210 100%);
 }
+/* All text inside dark section → light colours */
+.lp-section--dark .lp-section-h2,
+.lp-section--dark .lp-section-h2--light { color: #ffffff !important; }
+.lp-section--dark .lp-section-p         { color: rgba(148,163,184,0.85) !important; }
+.lp-section--dark .lp-step-title        { color: #f0fdf4 !important; }
+.lp-section--dark .lp-step-desc         { color: rgba(148,163,184,0.80) !important; }
+.lp-section--dark .lp-step-num          { background: rgba(37,211,102,0.15); color: #25d366; border-color: rgba(37,211,102,0.30); }
+.lp-section--dark .lp-step-arrow        { color: rgba(37,211,102,0.50); }
+.lp-section--dark .lp-step              { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
 .lp-section-label {
   display: inline-block;
   font-size: 0.7rem;
@@ -17280,7 +17289,7 @@ input:focus, textarea:focus, select:focus {
 .lp-final {
   position: relative;
   padding: 5.5rem 0;
-  background: linear-gradient(160deg, #d4f5e2 0%, #eafaf1 35%, #ffffff 65%, #e8f8f0 100%);
+  background: linear-gradient(160deg, #041a0d 0%, #062b14 40%, #073d1c 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -17288,28 +17297,28 @@ input:focus, textarea:focus, select:focus {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(37,211,102,0.06) 0%, transparent 55%),
-    radial-gradient(circle at 80% 50%, rgba(37,211,102,0.04) 0%, transparent 55%);
+    radial-gradient(circle at 20% 50%, rgba(37,211,102,0.12) 0%, transparent 55%),
+    radial-gradient(circle at 80% 50%, rgba(27,72,224,0.08) 0%, transparent 55%);
   pointer-events: none;
 }
 .lp-final-h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 900;
-  color: #1a2b33 !important;
+  color: #ffffff !important;
   letter-spacing: -0.04em;
   margin: 0 0 0.75rem;
   position: relative;
 }
 .lp-final-sub {
   font-size: 1rem;
-  color: #1a2b33;
+  color: rgba(203,244,220,0.88);
   margin: 0 0 2.25rem;
   position: relative;
 }
 .lp-final-reassure {
   margin-top: 1.25rem;
   font-size: 0.78rem;
-  color: #1a2b33;
+  color: rgba(203,244,220,0.60);
   position: relative;
 }
 .lp-final-actions {
