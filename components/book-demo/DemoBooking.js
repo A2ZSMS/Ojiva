@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -281,6 +282,7 @@ function StepBar({ current }) {
 
 /* ── Form ───────────────────────────────────────────── */
 function DemoForm() {
+  const router = useRouter();
   const [step,     setStep]  = useState(1);
   const [form,     setForm]  = useState({ name: '', email: '', phone: '', company: '' });
   const [size,     setSize]  = useState('');
@@ -293,13 +295,15 @@ function DemoForm() {
   const [err,      setErr]   = useState('');
 
   const ch = (e) => setForm(p => ({ ...p, [e.target.name]: e.target.value }));
-  const s1ok = !!(form.name.trim() && isValidEmail(form.email) && form.company.trim());
+  const phoneDigits = form.phone.replace(/\D/g, '');
+  const s1ok = !!(form.name.trim() && isValidEmail(form.email) && form.company.trim() && phoneDigits.length >= 10);
   const s2ok = !!(size && volume);
   const ok   = s1ok && s2ok && agreed;
 
   async function submit(e) {
     e.preventDefault();
     if (!agreed) { setErr('Please agree to the privacy policy.'); return; }
+    if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
     setSt('loading'); setErr('');
     try {
       const fd = new FormData();
@@ -336,7 +340,7 @@ function DemoForm() {
             message:   msg      || 'No message',
           }),
         }).catch(() => {});
-        setSt('success');
+        router.push('/thank-you');
       } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
   }

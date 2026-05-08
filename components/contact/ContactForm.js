@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -43,6 +44,7 @@ function Field({ label, required, optional, children }) {
 }
 
 export default function ContactForm() {
+  const router = useRouter();
   const [status,   setStatus]   = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [agreed,   setAgreed]   = useState(false);
@@ -62,6 +64,12 @@ export default function ContactForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    // ── Client-side validation ──
+    if (!form.name.trim())  { setErrorMsg('Please enter your full name.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
+    const digits = form.phone.replace(/\D/g, '');
+    if (!digits || digits.length < 10) { setErrorMsg('Please enter a valid 10-digit phone number.'); return; }
+    if (selected.length === 0) { setErrorMsg('Please select at least one service.'); return; }
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
     setStatus('loading'); setErrorMsg('');
     try {
@@ -89,9 +97,7 @@ export default function ContactForm() {
             message:  form.message,
           }),
         }).catch(() => {});
-        setStatus('success');
-        setForm({ name: '', email: '', phone: '', company: '', industry: '', message: '' });
-        setSelected([]); setAgreed(false);
+        router.push('/thank-you');
       } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }
   }
