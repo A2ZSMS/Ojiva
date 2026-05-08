@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const ACCESS_KEY = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
+const MAKE_HOOK  = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
 
 /* ── Data ──────────────────────────────────────────── */
 const BENEFITS = [
@@ -317,8 +318,26 @@ function DemoForm() {
       fd.append('privacy_consent', 'Agreed');
       const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
       const d   = await res.json();
-      if (d.success) setSt('success');
-      else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
+      if (d.success) {
+        // Fire Make.com webhook in parallel (non-blocking)
+        fetch(MAKE_HOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            source:    'book-demo',
+            name:      form.name,
+            email:     form.email,
+            phone:     form.phone || 'Not provided',
+            company:   form.company,
+            size:      size     || 'Not specified',
+            volume:    volume   || 'Not specified',
+            channels:  channels.join(', ') || 'Not specified',
+            time:      time     || 'Not specified',
+            message:   msg      || 'No message',
+          }),
+        }).catch(() => {});
+        setSt('success');
+      } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
   }
 

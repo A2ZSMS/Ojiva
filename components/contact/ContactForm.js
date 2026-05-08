@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const ACCESS_KEY = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
+const MAKE_HOOK  = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
 
 const SERVICES = [
   { id: 'sms',      icon: '📱', label: 'Bulk SMS'       },
@@ -73,6 +74,21 @@ export default function ContactForm() {
       const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
       const data = await res.json();
       if (data.success) {
+        // Fire Make.com webhook in parallel (non-blocking)
+        fetch(MAKE_HOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            source:   'contact-us',
+            name:     form.name,
+            email:    form.email,
+            phone:    form.phone,
+            company:  form.company,
+            industry: form.industry,
+            services: selected.join(', ') || 'Not specified',
+            message:  form.message,
+          }),
+        }).catch(() => {});
         setStatus('success');
         setForm({ name: '', email: '', phone: '', company: '', industry: '', message: '' });
         setSelected([]); setAgreed(false);
