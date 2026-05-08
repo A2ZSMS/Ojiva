@@ -24,44 +24,51 @@ const ebGaramond = EB_Garamond({
 
 export const metadata = {
   title: {
-    default: 'Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India',
+    default: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
   },
   description:
-    'Ojiva AI is India\'s leading AI-powered communication platform for Bulk SMS, WhatsApp Business API, RCS Messaging & AI Voice Call automation. 10M+ messages monthly. Enterprise-grade security with AES-256 & 2FA. Trusted by 500+ businesses.',
-  keywords: BRAND_KEYWORDS.join(', '),
-  metadataBase: new URL('https://www.ojiva.ai'),
+    "A2ZSMS is the top WhatsApp Business API provider in Bangalore. Get free WhatsApp API setup, bulk messaging, automation, and the best WhatsApp marketing services in 2026.",
+  keywords: BRAND_KEYWORDS.join(", "),
+  metadataBase: new URL("https://www.ojiva.ai"),
   icons: {
     icon: [
-      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon.ico", sizes: "any" },
     ],
-    shortcut: '/favicon/favicon.ico',
-    apple: '/favicon/apple-touch-icon.png',
-    other: [
-      { rel: 'manifest', url: '/favicon/site.webmanifest' },
-    ],
+    shortcut: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
+    other: [{ rel: "manifest", url: "/favicon/site.webmanifest" }],
   },
   openGraph: {
-    siteName: 'Ojiva AI',
-    locale: 'en_IN',
-    type: 'website',
-    url: 'https://www.ojiva.ai/',
-    title: 'Ojiva AI — India\'s #1 AI Communication Platform',
-    description: 'Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.',
-    images: [{ url: 'https://www.ojiva.ai/og-image.jpg', width: 1200, height: 630, alt: "Ojiva AI — India's #1 AI Communication Platform" }],
+    siteName: "Ojiva AI",
+    locale: "en_IN",
+    type: "website",
+    url: "https://www.ojiva.ai/",
+    title: "Ojiva AI — India's #1 AI Communication Platform",
+    description:
+      "Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.",
+    images: [
+      {
+        url: "https://www.ojiva.ai/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ojiva AI — India's #1 AI Communication Platform",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Ojiva AI — India\'s #1 AI Communication Platform',
-    description: 'Bulk SMS, WhatsApp API, RCS & AI Voice automation. Enterprise-grade. Trusted by 500+.',
-    images: ['https://www.ojiva.ai/og-image.jpg'],
-    creator: '@OjivaAi',
-    site: '@OjivaAi',
+    card: "summary_large_image",
+    title: "Ojiva AI — India's #1 AI Communication Platform",
+    description:
+      "Bulk SMS, WhatsApp API, RCS & AI Voice automation. Enterprise-grade. Trusted by 500+.",
+    images: ["https://www.ojiva.ai/og-image.jpg"],
+    creator: "@OjivaAi",
+    site: "@OjivaAi",
   },
   alternates: {
-    canonical: 'https://www.ojiva.ai/',
-    languages: { 'en-IN': 'https://www.ojiva.ai/' },
+    canonical: "https://www.ojiva.ai/",
+    languages: { "en-IN": "https://www.ojiva.ai/" },
   },
   robots: {
     index: true,
@@ -69,9 +76,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   // Google Search Console verification (auto-populated from Analytics.js config)

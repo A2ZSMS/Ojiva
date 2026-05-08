@@ -176,15 +176,15 @@ const INDUSTRIES = [
 ];
 
 const COMPARE_ROWS = [
-  { feature: 'Official Meta BSP', ojiva: true, wati: true, interakt: true, others: false },
-  { feature: 'India-Based Support (IST)', ojiva: true, wati: false, interakt: false, others: false },
-  { feature: '48-Hour Go-Live', ojiva: true, wati: false, interakt: false, others: false },
-  { feature: 'No DLT Registration Needed', ojiva: true, wati: true, interakt: true, others: true },
-  { feature: 'No Per-Agent Fees', ojiva: true, wati: false, interakt: false, others: false },
-  { feature: 'Transparent Meta Rate Card', ojiva: true, wati: false, interakt: false, others: false },
-  { feature: 'Bulk Broadcast Campaigns', ojiva: true, wati: true, interakt: true, others: false },
-  { feature: 'No-code Chatbot Builder', ojiva: true, wati: true, interakt: false, others: false },
-  { feature: 'Dedicated Onboarding Specialist', ojiva: true, wati: false, interakt: false, others: false },
+  { feature: 'Official Meta BSP',             ojiva: true,  wati: true,  interakt: true,  aisensy: true  },
+  { feature: 'India-Based Support (IST)',      ojiva: true,  wati: false, interakt: true,  aisensy: true  },
+  { feature: '48-Hour Go-Live',               ojiva: true,  wati: false, interakt: false, aisensy: false },
+  { feature: 'No DLT Registration Needed',    ojiva: true,  wati: true,  interakt: true,  aisensy: true  },
+  { feature: 'No Per-Agent Fees',             ojiva: true,  wati: false, interakt: false, aisensy: false },
+  { feature: 'Transparent Meta Rate Card',    ojiva: true,  wati: false, interakt: false, aisensy: false },
+  { feature: 'Bulk Broadcast Campaigns',      ojiva: true,  wati: true,  interakt: true,  aisensy: true  },
+  { feature: 'No-code Chatbot Builder',       ojiva: true,  wati: true,  interakt: true,  aisensy: true  },
+  { feature: 'Dedicated Onboarding Specialist', ojiva: true, wati: false, interakt: false, aisensy: false },
 ];
 
 const HOW_STEPS = [
@@ -195,8 +195,8 @@ const HOW_STEPS = [
   },
   {
     num: '02', icon: 'bi-key',
-    title: 'Get your API + sandbox — same day',
-    desc: 'Receive API credentials, sandbox access for testing, and your dedicated onboarding specialist\'s WhatsApp number. Start integrating immediately.',
+    title: 'Get your WhatsApp API — same day',
+    desc: 'Receive your official WhatsApp API credentials and your dedicated onboarding specialist\'s WhatsApp number. Start integrating immediately.',
   },
   {
     num: '03', icon: 'bi-rocket-takeoff',
@@ -290,18 +290,25 @@ function CheckIcon({ yes }) {
 export default function WhatsAppApiLanding() {
   return (
     <div className="lp-page">
-
       {/* ── Sticky Header ── */}
       <header className="lp-header">
         <div className="lp-header-inner">
           <Link href="/" aria-label="Ojiva AI Home">
-            <Image src="/ojiva-logo-optimized.png" alt="Ojiva AI" width={110} height={32} priority unoptimized style={{ height: 'auto' }} />
+            <Image
+              src="/ojiva-logo-optimized.png"
+              alt="Ojiva AI"
+              width={90}
+              height={26}
+              priority
+              unoptimized
+              style={{ height: "auto" }}
+            />
           </Link>
           <div className="lp-header-right">
-            <a href="tel:+918431086185" className="lp-header-phone">
-              <i className="bi bi-telephone-fill" /> +91-843-108-6185
+            <a href="tel:+918431086185" className="lp-header-phone"></a>
+            <a href="#lead-form" className="lp-header-cta">
+              Get Free Demo →
             </a>
-            <a href="#lead-form" className="lp-header-cta">Get Free Access →</a>
           </div>
         </div>
       </header>
@@ -315,7 +322,6 @@ export default function WhatsAppApiLanding() {
         </div>
         <div className="lp-container">
           <div className="lp-hero-grid">
-
             {/* Left */}
             <div className="lp-hero-left">
               <div className="lp-bsp-badge">
@@ -323,22 +329,45 @@ export default function WhatsAppApiLanding() {
                 Official Meta Business Partner · India
               </div>
               <h1 className="lp-hero-h1">
-                WhatsApp API for<br />
-                <span className="lp-hero-highlight">Indian Businesses</span><br />
-                — Live in 48 Hours
+                Official WhatsApp Business API Provider
+                <br />
+                <span className="lp-hero-highlight">Automate Sales &</span>
+                <br />
+                Support Instantly
               </h1>
               <p className="lp-hero-desc">
-                Indians open WhatsApp <strong style={{ color: '#fff' }}>23× every day</strong>. Your emails get deleted. Your SMS get ignored.
-                Send bulk messages, automate replies, and close deals on the channel your customers actually use.
+                Stop losing leads to slow replies. Get Official WhatsApp
+                Business API with AI Chatbot, Multi-Agent Support, and CRM
+                Integration all in one platform.
               </p>
 
               <div className="lp-hero-facts">
                 {[
-                  { icon: 'bi-check-circle-fill', text: '98% open rate vs 18% email', color: '#22c55e' },
-                  { icon: 'bi-check-circle-fill', text: 'No DLT registration needed', color: '#22c55e' },
-                  { icon: 'bi-check-circle-fill', text: 'Zero setup fees — ever', color: '#22c55e' },
-                  { icon: 'bi-check-circle-fill', text: 'India-based support team (IST)', color: '#22c55e' },
-                  { icon: 'bi-check-circle-fill', text: '500+ businesses already live', color: '#22c55e' },
+                  {
+                    icon: "bi-check-circle-fill",
+                    text: "98% open rate vs 18% email",
+                    color: "#22c55e",
+                  },
+                  {
+                    icon: "bi-check-circle-fill",
+                    text: "No DLT registration needed",
+                    color: "#22c55e",
+                  },
+                  {
+                    icon: "bi-check-circle-fill",
+                    text: "Zero setup fees — ever",
+                    color: "#22c55e",
+                  },
+                  {
+                    icon: "bi-check-circle-fill",
+                    text: "India-based support team (IST)",
+                    color: "#22c55e",
+                  },
+                  {
+                    icon: "bi-check-circle-fill",
+                    text: "500+ businesses already live",
+                    color: "#22c55e",
+                  },
                 ].map(({ icon, text, color }) => (
                   <div key={text} className="lp-hero-fact">
                     <i className={`bi ${icon}`} style={{ color }} />
@@ -348,17 +377,37 @@ export default function WhatsAppApiLanding() {
               </div>
 
               <div className="lp-hero-proof">
-                <div className="lp-proof-stars">★★★★★ <span>4.9/5</span></div>
+                <div className="lp-proof-stars">
+                  ★★★★★ <span>4.9/5</span>
+                </div>
                 <span className="lp-proof-divider" />
-                <span className="lp-proof-text">500+ businesses across India trust Ojiva AI</span>
+                <span className="lp-proof-text">
+                  500+ businesses across India trust Ojiva AI
+                </span>
               </div>
 
               <div className="lp-badges">
                 {[
-                  { icon: 'bi-patch-check-fill', label: 'Meta Verified Partner', color: '#22c55e' },
-                  { icon: 'bi-shield-lock-fill', label: 'AES-256 Encrypted', color: '#3b82f6' },
-                  { icon: 'bi-clock-fill', label: '48-Hr Go-Live', color: '#a855f7' },
-                  { icon: 'bi-headset', label: 'IST Support Hours', color: '#f59e0b' },
+                  {
+                    icon: "bi-patch-check-fill",
+                    label: "Meta Verified Partner",
+                    color: "#22c55e",
+                  },
+                  {
+                    icon: "bi-shield-lock-fill",
+                    label: "AES-256 Encrypted",
+                    color: "#3b82f6",
+                  },
+                  {
+                    icon: "bi-clock-fill",
+                    label: "48-Hr Go-Live",
+                    color: "#a855f7",
+                  },
+                  {
+                    icon: "bi-headset",
+                    label: "IST Support Hours",
+                    color: "#f59e0b",
+                  },
                 ].map(({ icon, label, color }) => (
                   <div key={label} className="lp-badge">
                     <i className={`bi ${icon}`} style={{ color }} />
@@ -367,7 +416,7 @@ export default function WhatsAppApiLanding() {
                 ))}
               </div>
 
-              <a href="/book-demo" className="lp-demo-btn">
+              <a href="#lead-form" className="lp-demo-btn">
                 <i className="bi bi-camera-video" /> Watch a 3-Min Demo — Free
               </a>
             </div>
@@ -376,72 +425,61 @@ export default function WhatsAppApiLanding() {
             <div className="lp-hero-right" id="lead-form">
               <div className="lp-form-wrapper">
                 <div className="lp-form-badge">
-                  <i className="bi bi-lightning-charge-fill" style={{ color: '#22c55e' }} />
+                  <i
+                    className="bi bi-lightning-charge-fill"
+                    style={{ color: "#22c55e" }}
+                  />
                   <span>Free setup · No DLT needed · No credit card</span>
                 </div>
                 <LandingLeadForm source="whatsapp-api-service" />
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* Stats bar */}
-        <div className="lp-hero-stats">
-          <div className="lp-container">
-            <div className="lp-stats-row">
-              {[
-                { val: '10M+', lbl: 'Messages / Day' },
-                { val: '500+', lbl: 'Businesses' },
-                { val: '98%', lbl: 'Open Rate' },
-                { val: '48 hrs', lbl: 'Go-Live Time' },
-                { val: '99.9%', lbl: 'Uptime SLA' },
-                { val: 'IST', lbl: 'Support Hours' },
-              ].map(({ val, lbl }) => (
-                <div key={lbl} className="lp-stat">
-                  <span className="lp-stat-val">{val}</span>
-                  <span className="lp-stat-lbl">{lbl}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* ══ PROBLEM ══ */}
       <section className="lp-section lp-section--light">
         <div className="lp-container lp-container--narrow">
-          <div className="lp-section-label">The Problem</div>
-          <h2 className="lp-section-h2">Your customers live on WhatsApp. Your marketing doesn't.</h2>
-          <p className="lp-section-p">
-            500M+ Indians are active on WhatsApp daily. Email open rates hover at 18%. SMS barely reach 45%.
-            Every day you're not on WhatsApp is revenue you're leaving on the table.
-          </p>
-          <div className="lp-compare">
+          <div className="lp-section-label">Why WhatsApp</div>
+          <h2 className="lp-section-h2">Stop Losing Leads to Channels Nobody Reads</h2>
+          <p className="lp-section-p">See why 500M+ Indians are on WhatsApp and why smart businesses are switching.</p>
+
+          {/* Bar chart comparison */}
+          <div className="lp-bars">
             {[
-              { ch: 'Email', rate: '18%', note: 'Avg. open rate', icon: '📧', best: false },
-              { ch: 'SMS', rate: '45%', note: 'Avg. open rate', icon: '📱', best: false },
-              { ch: 'WhatsApp', rate: '98%', note: 'Avg. open rate', icon: '💬', best: true },
-            ].map(({ ch, rate, note, icon, best }) => (
-              <div key={ch} className={`lp-compare-card${best ? ' lp-compare-card--best' : ''}`}>
-                <div className="lp-compare-icon">{icon}</div>
-                <div className="lp-compare-ch">{ch}</div>
-                <div className="lp-compare-rate">{rate}</div>
-                <div className="lp-compare-note">{note}</div>
-                {best && <div className="lp-compare-crown">🏆 5× better than email</div>}
+              { ch: "Email", rate: "18%", pct: 18, color: "#ef4444", bg: "rgba(239,68,68,0.08)", icon: "📧" },
+              { ch: "SMS",   rate: "45%", pct: 45, color: "#f59e0b", bg: "rgba(245,158,11,0.08)", icon: "📱" },
+              { ch: "WhatsApp", rate: "98%", pct: 98, color: "#25d366", bg: "rgba(37,211,102,0.08)", icon: "💬", best: true },
+            ].map(({ ch, rate, pct, color, bg, icon, best }) => (
+              <div key={ch} className={`lp-bar-row${best ? " lp-bar-row--best" : ""}`} style={{ background: bg }}>
+                <div className="lp-bar-meta">
+                  <span className="lp-bar-icon">{icon}</span>
+                  <span className="lp-bar-ch">{ch}</span>
+                  {best && <span className="lp-bar-badge">Best</span>}
+                </div>
+                <div className="lp-bar-track">
+                  <div className="lp-bar-fill" style={{ width: `${pct}%`, background: color }} />
+                </div>
+                <span className="lp-bar-rate" style={{ color }}>{rate}</span>
+                <span className="lp-bar-note">avg. open rate</span>
               </div>
             ))}
           </div>
-          <div className="lp-problem-stats">
+
+          {/* Stats grid */}
+          <div className="lp-pstats">
             {[
-              { num: '500M+', label: 'Indians on WhatsApp daily' },
-              { num: '23×', label: 'average daily opens per user' },
-              { num: '70%', label: 'messages read within 5 minutes' },
-              { num: '4–8×', label: 'higher CTR than email links' },
-            ].map(({ num, label }) => (
-              <div key={label} className="lp-problem-stat">
-                <span className="lp-problem-stat-num">{num}</span>
-                <span className="lp-problem-stat-label">{label}</span>
+              { num: "500M+", label: "Indians on WhatsApp daily",     icon: "bi-people-fill",      color: "#25d366" },
+              { num: "23×",   label: "Average daily opens per user",  icon: "bi-eye-fill",         color: "#1B48E0" },
+              { num: "70%",   label: "Messages read within 5 minutes",icon: "bi-lightning-charge-fill", color: "#f59e0b" },
+              { num: "4–8×",  label: "Higher CTR than email links",   icon: "bi-graph-up-arrow",   color: "#7C3AED" },
+            ].map(({ num, label, icon, color }) => (
+              <div key={label} className="lp-pstat">
+                <i className={`bi ${icon} lp-pstat-icon`} style={{ color }} />
+                <span className="lp-pstat-num" style={{ color }}>{num}</span>
+                <span className="lp-pstat-label">{label}</span>
               </div>
             ))}
           </div>
@@ -452,25 +490,40 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section">
         <div className="lp-container">
           <div className="lp-section-label">Message Types</div>
-          <h2 className="lp-section-h2">6 types of messages your business can send today</h2>
-          <p className="lp-section-p">From OTPs to full product catalogues — the WhatsApp Business API handles every communication your business needs.</p>
+          <h2 className="lp-section-h2">
+            6 types of messages your business can send today
+          </h2>
+          <p className="lp-section-p">
+            From OTPs to full product catalogues — the WhatsApp Business API
+            handles every communication your business needs.
+          </p>
           <div className="lp-msgtypes">
             {MESSAGE_TYPES.map(({ icon, title, desc, example, color, bg }) => (
               <div key={title} className="lp-msgtype-card">
-                <div className="lp-msgtype-icon" style={{ background: bg, color }}>
+                <div
+                  className="lp-msgtype-icon"
+                  style={{ background: bg, color }}
+                >
                   <i className={`bi ${icon}`} />
                 </div>
                 <h3 className="lp-msgtype-title">{title}</h3>
                 <p className="lp-msgtype-desc">{desc}</p>
-                <div className="lp-msgtype-bubble" style={{ borderLeftColor: color }}>
-                  <span className="lp-msgtype-bubble-label">Example message</span>
+                <div
+                  className="lp-msgtype-bubble"
+                  style={{ borderLeftColor: color }}
+                >
+                  <span className="lp-msgtype-bubble-label">
+                    Example message
+                  </span>
                   <p className="lp-msgtype-bubble-text">{example}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <a href="#lead-form" className="lp-btn-primary">Send Your First WhatsApp Campaign →</a>
+          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+            <a href="#lead-form" className="lp-btn-primary">
+              Send Your First WhatsApp Campaign →
+            </a>
           </div>
         </div>
       </section>
@@ -479,12 +532,20 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section lp-section--light">
         <div className="lp-container">
           <div className="lp-section-label">What You Get</div>
-          <h2 className="lp-section-h2">Everything your business needs to win on WhatsApp</h2>
-          <p className="lp-section-p">Not just API access — a complete WhatsApp growth stack built for Indian businesses.</p>
+          <h2 className="lp-section-h2">
+            Everything your business needs to win on WhatsApp
+          </h2>
+          <p className="lp-section-p">
+            Not just API access — a complete WhatsApp growth stack built for
+            Indian businesses.
+          </p>
           <div className="lp-features">
             {BENEFITS.map(({ icon, title, desc, color, bg }) => (
               <div key={title} className="lp-feature-card">
-                <div className="lp-feature-icon" style={{ background: bg, color }}>
+                <div
+                  className="lp-feature-icon"
+                  style={{ background: bg, color }}
+                >
                   <i className={`bi ${icon}`} />
                 </div>
                 <h3 className="lp-feature-title">{title}</h3>
@@ -500,24 +561,38 @@ export default function WhatsAppApiLanding() {
         <div className="lp-container">
           <div className="lp-section-label">Industry Use Cases</div>
           <h2 className="lp-section-h2">Built for every industry in India</h2>
-          <p className="lp-section-p">From healthcare to logistics — see how Indian businesses in your sector are using WhatsApp to drive real results.</p>
+          <p className="lp-section-p">
+            From healthcare to logistics — see how Indian businesses in your
+            sector are using WhatsApp to drive real results.
+          </p>
           <div className="lp-industries">
             {INDUSTRIES.map(({ icon, label, stat, statLabel, uses, color }) => (
-              <div key={label} className="lp-industry-card" style={{ '--lp-ind-color': color }}>
+              <div
+                key={label}
+                className="lp-industry-card"
+                style={{ "--lp-ind-color": color }}
+              >
                 <div className="lp-industry-top">
-                  <div className="lp-industry-icon" style={{ background: color + '15', color }}>
+                  <div
+                    className="lp-industry-icon"
+                    style={{ background: color + "15", color }}
+                  >
                     <i className={`bi ${icon}`} />
                   </div>
                   <div>
                     <h3 className="lp-industry-title">{label}</h3>
                     <div className="lp-industry-stat">
-                      <span className="lp-industry-stat-num" style={{ color }}>{stat}</span>
-                      <span className="lp-industry-stat-label">{statLabel}</span>
+                      <span className="lp-industry-stat-num" style={{ color }}>
+                        {stat}
+                      </span>
+                      <span className="lp-industry-stat-label">
+                        {statLabel}
+                      </span>
                     </div>
                   </div>
                 </div>
                 <ul className="lp-industry-uses">
-                  {uses.map(u => (
+                  {uses.map((u) => (
                     <li key={u}>
                       <i className="bi bi-check2" style={{ color }} />
                       {u}
@@ -527,73 +602,52 @@ export default function WhatsAppApiLanding() {
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <a href="#lead-form" className="lp-btn-primary">See a Demo for Your Industry →</a>
+          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+            <a href="#lead-form" className="lp-btn-primary">
+              See a Demo for Your Industry →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ══ COMPETITOR COMPARISON ══ */}
-      <section className="lp-section lp-section--light">
-        <div className="lp-container lp-container--narrow">
-          <div className="lp-section-label">Why Ojiva AI</div>
-          <h2 className="lp-section-h2">How we compare to WATI, Interakt & others</h2>
-          <p className="lp-section-p">
-            Tired of global platforms with US-timezone support and 7-day onboarding? Here's what makes us different.
-          </p>
-          <div className="lp-compare-table-wrap">
-            <table className="lp-compare-table">
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th className="lp-ct-ojiva">Ojiva AI</th>
-                  <th>WATI</th>
-                  <th>Interakt</th>
-                  <th>Others</th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARE_ROWS.map(({ feature, ojiva, wati, interakt, others }) => (
-                  <tr key={feature}>
-                    <td>{feature}</td>
-                    <td className="lp-ct-ojiva"><CheckIcon yes={ojiva} /></td>
-                    <td><CheckIcon yes={wati} /></td>
-                    <td><CheckIcon yes={interakt} /></td>
-                    <td><CheckIcon yes={others} /></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '1.75rem' }}>
-            <a href="#lead-form" className="lp-btn-primary">Switch to Ojiva AI — Free Setup →</a>
-          </div>
-        </div>
-      </section>
 
       {/* ══ HOW IT WORKS ══ */}
       <section className="lp-section lp-section--dark">
         <div className="lp-container lp-container--narrow">
-          <div className="lp-section-label lp-section-label--light">How It Works</div>
-          <h2 className="lp-section-h2 lp-section-h2--light">From sign-up to first WhatsApp campaign in 48 hours</h2>
-          <p className="lp-section-p" style={{ color: 'rgba(148,163,184,0.85)', margin: '0 auto 2.5rem' }}>
-            Most providers take 7–10 days. Our India-based onboarding team gets you live in 2.
+          <div className="lp-section-label lp-section-label--light">
+            How It Works
+          </div>
+          <h2 className="lp-section-h2 lp-section-h2--light">
+            From sign-up to first WhatsApp campaign in 48 hours
+          </h2>
+          <p
+            className="lp-section-p"
+            style={{ color: "rgba(148,163,184,0.85)", margin: "0 auto 2.5rem" }}
+          >
+            Most providers take 7–10 days. Our India-based onboarding team gets
+            you live in 2.
           </p>
           <div className="lp-steps">
             {HOW_STEPS.map(({ num, icon, title, desc }, i) => (
               <div key={num} className="lp-step">
                 <div className="lp-step-num">{num}</div>
-                <div className="lp-step-icon"><i className={`bi ${icon}`} /></div>
+                <div className="lp-step-icon">
+                  <i className={`bi ${icon}`} />
+                </div>
                 <div className="lp-step-body">
                   <h3 className="lp-step-title">{title}</h3>
                   <p className="lp-step-desc">{desc}</p>
                 </div>
-                {i < HOW_STEPS.length - 1 && <div className="lp-step-arrow">→</div>}
+                {i < HOW_STEPS.length - 1 && (
+                  <div className="lp-step-arrow">→</div>
+                )}
               </div>
             ))}
           </div>
           <div className="lp-hiw-cta">
-            <a href="#lead-form" className="lp-btn-primary">Start Now — It's Free →</a>
+            <a href="#lead-form" className="lp-btn-primary">
+              Start Now — It's Free →
+            </a>
           </div>
         </div>
       </section>
@@ -603,20 +657,33 @@ export default function WhatsAppApiLanding() {
         <div className="lp-container">
           <div className="lp-midform-grid">
             <div className="lp-midform-left">
-              <div className="lp-section-label" style={{ marginBottom: '1rem' }}>Get Started Now</div>
-              <h2 className="lp-midform-h2">Ready to send your first WhatsApp campaign?</h2>
-              <p className="lp-midform-sub">Join 500+ Indian businesses already using Ojiva AI. Free setup, no DLT, live in 48 hours.</p>
+              <div
+                className="lp-section-label"
+                style={{ marginBottom: "1rem" }}
+              >
+                Get Started Now
+              </div>
+              <h2 className="lp-midform-h2">
+                Ready to send your first WhatsApp campaign?
+              </h2>
+              <p className="lp-midform-sub">
+                Join 500+ Indian businesses already using Ojiva AI. Free setup,
+                no DLT, live in 48 hours.
+              </p>
               <div className="lp-midform-perks">
                 {[
-                  'Official Meta Business Service Provider',
-                  '48-hour go-live — fastest in India',
-                  'India-based support team (IST)',
-                  'No setup fees, no DLT registration',
-                  'Dedicated onboarding specialist',
-                  'Cancel anytime — no lock-in',
-                ].map(p => (
+                  "Official Meta Business Service Provider",
+                  "48-hour go-live — fastest in India",
+                  "India-based support team (IST)",
+                  "No setup fees, no DLT registration",
+                  "Dedicated onboarding specialist",
+                  "Cancel anytime — no lock-in",
+                ].map((p) => (
                   <div key={p} className="lp-midform-perk">
-                    <i className="bi bi-check-circle-fill" style={{ color: '#22c55e' }} />
+                    <i
+                      className="bi bi-check-circle-fill"
+                      style={{ color: "#22c55e" }}
+                    />
                     <span>{p}</span>
                   </div>
                 ))}
@@ -625,7 +692,10 @@ export default function WhatsAppApiLanding() {
             <div className="lp-midform-right">
               <div className="lp-form-wrapper lp-form-wrapper--light">
                 <div className="lp-form-badge lp-form-badge--dark">
-                  <i className="bi bi-lightning-charge-fill" style={{ color: '#22c55e' }} />
+                  <i
+                    className="bi bi-lightning-charge-fill"
+                    style={{ color: "#22c55e" }}
+                  />
                   <span>Free setup · No DLT needed · No credit card</span>
                 </div>
                 <LandingLeadForm source="whatsapp-api-service-mid" />
@@ -639,25 +709,58 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section lp-section--light">
         <div className="lp-container">
           <div className="lp-section-label">Customer Stories</div>
-          <h2 className="lp-section-h2">Indian businesses already winning on WhatsApp</h2>
-          <p className="lp-section-p">Real results. Real ROI. No vague case studies — just numbers from businesses like yours.</p>
+          <h2 className="lp-section-h2">
+            Indian businesses already winning on WhatsApp
+          </h2>
+          <p className="lp-section-p">
+            Real results. Real ROI. No vague case studies — just numbers from
+            businesses like yours.
+          </p>
           <div className="lp-testis">
-            {TESTIMONIALS.map(({ quote, name, role, company, initials, avatarBg, avatarColor, result, resultColor, stars }) => (
-              <div key={name} className="lp-testi">
-                <div className="lp-testi-top">
-                  <span className="lp-stars">{'★'.repeat(stars)}</span>
-                  <span className="lp-testi-tag" style={{ color: resultColor, background: resultColor + '18' }}>{result}</span>
-                </div>
-                <p className="lp-testi-q">&ldquo;{quote}&rdquo;</p>
-                <div className="lp-testi-who">
-                  <span className="lp-avatar" style={{ background: avatarBg, color: avatarColor }}>{initials}</span>
-                  <div>
-                    <div className="lp-testi-name">{name}</div>
-                    <div className="lp-testi-role">{role} · {company}</div>
+            {TESTIMONIALS.map(
+              ({
+                quote,
+                name,
+                role,
+                company,
+                initials,
+                avatarBg,
+                avatarColor,
+                result,
+                resultColor,
+                stars,
+              }) => (
+                <div key={name} className="lp-testi">
+                  <div className="lp-testi-top">
+                    <span className="lp-stars">{"★".repeat(stars)}</span>
+                    <span
+                      className="lp-testi-tag"
+                      style={{
+                        color: resultColor,
+                        background: resultColor + "18",
+                      }}
+                    >
+                      {result}
+                    </span>
+                  </div>
+                  <p className="lp-testi-q">&ldquo;{quote}&rdquo;</p>
+                  <div className="lp-testi-who">
+                    <span
+                      className="lp-avatar"
+                      style={{ background: avatarBg, color: avatarColor }}
+                    >
+                      {initials}
+                    </span>
+                    <div>
+                      <div className="lp-testi-name">{name}</div>
+                      <div className="lp-testi-role">
+                        {role} · {company}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -666,8 +769,13 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section lp-section--light">
         <div className="lp-container lp-container--narrow">
           <div className="lp-section-label">Integrations</div>
-          <h2 className="lp-section-h2">Connects with the tools you already use</h2>
-          <p className="lp-section-p">Native integrations with India's most popular e-commerce, CRM, and payment platforms — plus a REST API and Webhooks for custom setups.</p>
+          <h2 className="lp-section-h2">
+            Connects with the tools you already use
+          </h2>
+          <p className="lp-section-p">
+            Native integrations with India's most popular e-commerce, CRM, and
+            payment platforms — plus a REST API and Webhooks for custom setups.
+          </p>
           <div className="lp-integrations">
             {INTEGRATIONS.map(({ name, icon }) => (
               <div key={name} className="lp-integration-chip">
@@ -676,7 +784,10 @@ export default function WhatsAppApiLanding() {
               </div>
             ))}
           </div>
-          <p className="lp-integ-note">Don't see your tool? We support any platform via REST API &amp; Webhooks.</p>
+          <p className="lp-integ-note">
+            Don't see your tool? We support any platform via REST API &amp;
+            Webhooks.
+          </p>
         </div>
       </section>
 
@@ -684,12 +795,21 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section">
         <div className="lp-container">
           <div className="lp-section-label">Security & Compliance</div>
-          <h2 className="lp-section-h2">Enterprise-grade security. 100% compliant.</h2>
-          <p className="lp-section-p">When you send 10 million messages a day, security isn't optional. Every layer of Ojiva AI's infrastructure is built for compliance and data protection.</p>
+          <h2 className="lp-section-h2">
+            Enterprise-grade security. 100% compliant.
+          </h2>
+          <p className="lp-section-p">
+            When you send 10 million messages a day, security isn't optional.
+            Every layer of Ojiva AI's infrastructure is built for compliance and
+            data protection.
+          </p>
           <div className="lp-trust-grid">
             {TRUST_ITEMS.map(({ icon, title, desc, color }) => (
               <div key={title} className="lp-trust-card">
-                <div className="lp-trust-icon" style={{ background: color + '15', color }}>
+                <div
+                  className="lp-trust-icon"
+                  style={{ background: color + "15", color }}
+                >
                   <i className={`bi ${icon}`} />
                 </div>
                 <h3 className="lp-trust-title">{title}</h3>
@@ -704,17 +824,25 @@ export default function WhatsAppApiLanding() {
       <section className="lp-section lp-section--light">
         <div className="lp-container lp-container--narrow">
           <div className="lp-section-label">FAQ</div>
-          <h2 className="lp-section-h2">Everything you need to know before signing up</h2>
-          <p className="lp-section-p">Straight answers to the questions every Indian business asks us.</p>
+          <h2 className="lp-section-h2">
+            Everything you need to know before signing up
+          </h2>
+          <p className="lp-section-p">
+            Straight answers to the questions every Indian business asks us.
+          </p>
           <div className="lp-faqs">
-            {FAQS.map(({ q, a }) => <FaqItem key={q} q={q} a={a} />)}
+            {FAQS.map(({ q, a }) => (
+              <FaqItem key={q} q={q} a={a} />
+            ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <p style={{ color: '#64748b', marginBottom: '0.75rem' }}>Still have questions? Our team replies in minutes.</p>
+          {/* <div style={{ textAlign: "center", marginTop: "2rem" }}>
+            <p style={{ color: "#64748b", marginBottom: "0.75rem" }}>
+              Still have questions? Our team replies in minutes.
+            </p>
             <a href="tel:+918431086185" className="lp-btn-outline">
               <i className="bi bi-telephone-fill" /> Call +91-843-108-6185
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -722,21 +850,31 @@ export default function WhatsAppApiLanding() {
       <section className="lp-final">
         <div className="lp-final-bg" aria-hidden="true" />
         <div className="lp-container lp-container--narrow">
-          <h2 className="lp-final-h2">Your competitors are already on WhatsApp.</h2>
+          <h2 className="lp-final-h2">
+            Your competitors are already on WhatsApp.
+          </h2>
           <p className="lp-final-sub">
-            500M+ Indians check WhatsApp 23× a day. Every day you wait is leads your competitor is closing.
-            Get your official WhatsApp Business API live in 48 hours — for free.
+            500M+ Indians check WhatsApp 23× a day. Every day you wait is leads
+            your competitor is closing. Get your official WhatsApp Business API
+            live in 48 hours — for free.
           </p>
           <div className="lp-final-actions">
-            <a href="#lead-form" className="lp-btn-primary lp-btn-primary--white">Get Free WhatsApp API Access →</a>
-            <Link href="/book-demo" className="lp-btn-ghost">See a Live Demo First</Link>
+            <a
+              href="#lead-form"
+              className="lp-btn-primary lp-btn-primary--white"
+            >
+              Get Free WhatsApp API Access →
+            </a>
+            <a href="#lead-form" className="lp-btn-ghost">
+              See a Live Demo First
+            </a>
           </div>
           <div className="lp-final-trust">
             {[
-              { icon: 'bi-patch-check-fill', label: 'Official Meta BSP' },
-              { icon: 'bi-lock-fill', label: 'No credit card' },
-              { icon: 'bi-clock-fill', label: 'Live in 48 hours' },
-              { icon: 'bi-shield-check', label: 'No DLT required' },
+              { icon: "bi-patch-check-fill", label: "Official Meta BSP" },
+              { icon: "bi-lock-fill", label: "No credit card" },
+              { icon: "bi-clock-fill", label: "Live in 48 hours" },
+              { icon: "bi-shield-check", label: "No DLT required" },
             ].map(({ icon, label }) => (
               <span key={label} className="lp-final-trust-item">
                 <i className={`bi ${icon}`} /> {label}
@@ -749,10 +887,13 @@ export default function WhatsAppApiLanding() {
       {/* ── Footer ── */}
       <footer className="lp-foot">
         <div className="lp-container">
-          <p>© {new Date().getFullYear()} Ojiva AI · <Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link></p>
+          <p>
+            © {new Date().getFullYear()} Ojiva AI ·{" "}
+            <Link href="/privacy">Privacy Policy</Link> ·{" "}
+            <Link href="/terms">Terms of Service</Link>
+          </p>
         </div>
       </footer>
-
     </div>
   );
 }

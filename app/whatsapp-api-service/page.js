@@ -2,7 +2,7 @@ import WhatsAppApiLanding from '@/components/landing/WhatsAppApiLanding';
 
 // Google Ads landing page — intentionally excluded from organic search
 export const metadata = {
-  title: 'WhatsApp Business API India — Go Live in 48 Hours',
+  title: "WhatsApp Business API Provider in Bangalore",
   robots: {
     index: false,
     follow: false,

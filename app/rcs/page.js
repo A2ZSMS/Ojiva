@@ -2,15 +2,23 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsPageContent from '@/components/services/rcs/RcsPage';
 
 export const metadata = buildMetadata({
-  title: 'RCS Business Messaging India — Rich Cards, 3× Higher CTR',
+  title: "Best RCS Messaging Provider in Bangalore",
   description:
-    'Upgrade to RCS business messaging in India. Rich cards, carousels & verified brand messages. 3x higher CTR than SMS. Native Android delivery. DLT compliant.',
-  path: '/rcs',
+    "Top RCS messaging provider in Bangalore. Reliable business RCS services for enterprises, campaigns, and customer engagement.",
+  path: "/rcs",
   keywords: [
-    'RCS Business Messaging India', 'RCS messaging platform India', 'RCS vs SMS India',
-    'rich communication services India', 'Google RCS business', 'RCS API India',
-    'branded messaging India', 'RCS chatbot India', 'next-gen SMS India',
-    'RCS rich cards', 'RCS carousel messages', 'verified business sender India',
+    "RCS Business Messaging India",
+    "RCS messaging platform India",
+    "RCS vs SMS India",
+    "rich communication services India",
+    "Google RCS business",
+    "RCS API India",
+    "branded messaging India",
+    "RCS chatbot India",
+    "next-gen SMS India",
+    "RCS rich cards",
+    "RCS carousel messages",
+    "verified business sender India",
   ],
 });
 

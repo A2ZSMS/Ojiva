@@ -2,15 +2,23 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import VoicePageContent from '@/components/services/voice/VoicePage';
 
 export const metadata = buildMetadata({
-  title: 'Bulk Voice Call Service India — IVR & AI Automation',
+  title: "Best Bulk Voice Call Service Provider in Bangalore | India",
   description:
-    'Automate customer calls with IVR, OBD & AI voice bots. 99.9% connect rate, 10M+ calls/month, 10+ languages. Reduce call centre costs by 60%.',
-  path: '/voice',
+    "Top Bulk Voice Call service provider in Bangalore, India. Reliable promotional, transactional, and business voice call solutions for enterprises and marketing campaigns.",
+  path: "/voice",
   keywords: [
-    'AI voice call automation India', 'outbound calling platform India', 'IVR solution India',
-    'OBD outbound dialer India', 'voice bot India', 'automated voice call India',
-    'missed call service India', 'voice broadcasting India', 'AI phone bot India',
-    'cloud telephony India', 'conversational AI voice India', 'enterprise voice API India',
+    "AI voice call automation India",
+    "outbound calling platform India",
+    "IVR solution India",
+    "OBD outbound dialer India",
+    "voice bot India",
+    "automated voice call India",
+    "missed call service India",
+    "voice broadcasting India",
+    "AI phone bot India",
+    "cloud telephony India",
+    "conversational AI voice India",
+    "enterprise voice API India",
   ],
 });
 

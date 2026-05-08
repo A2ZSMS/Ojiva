@@ -2,15 +2,23 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import SmsPageContent from '@/components/services/sms/SmsPage';
 
 export const metadata = buildMetadata({
-  title: 'Bulk SMS Service India — Transactional, OTP & Promotional',
+  title: "Best Bulk SMS Service Provider in Bangalore",
   description:
-    "Send bulk SMS in India with 98%+ delivery. OTP in under 3 seconds, DLT compliant. Transactional, promotional & two-way SMS API. 10M+ messages/month.",
-  path: '/sms',
+    "Top Bulk SMS service provider in Bangalore. Reliable business SMS solutions for OTP, promotional, transactional, and marketing campaigns.",
+  path: "/sms",
   keywords: [
-    'bulk SMS service India', 'transactional SMS gateway India', 'promotional SMS platform',
-    'OTP SMS service India', 'best SMS API provider India', 'DLT registered SMS gateway',
-    'SMS marketing software', 'enterprise bulk SMS India', 'automated SMS campaigns',
-    'two-way SMS India', 'SMS OTP API', 'low cost bulk SMS India',
+    "bulk SMS service India",
+    "transactional SMS gateway India",
+    "promotional SMS platform",
+    "OTP SMS service India",
+    "best SMS API provider India",
+    "DLT registered SMS gateway",
+    "SMS marketing software",
+    "enterprise bulk SMS India",
+    "automated SMS campaigns",
+    "two-way SMS India",
+    "SMS OTP API",
+    "low cost bulk SMS India",
   ],
 });
 

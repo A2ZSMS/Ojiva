@@ -2,11 +2,18 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import WhatsappPageContent from '@/components/services/whatsapp/WhatsappPage';
 
 export const metadata = buildMetadata({
-  title: 'WhatsApp Business API India — Official Meta BSP Provider',
+  title: "WhatsApp Business API Provider in Bangalore",
   description:
-    "WhatsApp Business API from India's official Meta BSP. 98% open rate, chatbots, interactive buttons & catalogs. 5M+ messages/month.",
-  path: '/whatsapp',
-  keywords: ['WhatsApp Business API India', 'WhatsApp Business solution provider India', 'WhatsApp chatbot India', 'WhatsApp marketing India', 'Meta BSP India', 'WhatsApp bulk messaging'],
+    "A2ZSMS is the top WhatsApp Business API provider in Bangalore. Get free WhatsApp API setup, bulk messaging, automation, and the best WhatsApp marketing services in 2026.",
+  path: "/whatsapp",
+  keywords: [
+    "WhatsApp Business API India",
+    "WhatsApp Business solution provider India",
+    "WhatsApp chatbot India",
+    "WhatsApp marketing India",
+    "Meta BSP India",
+    "WhatsApp bulk messaging",
+  ],
 });
 
 const waServiceSchema = serviceSchema({ name: 'WhatsApp Business API', description: "India's trusted WhatsApp Business API provider — template messages, interactive buttons, catalogs, chatbots. Meta-approved BSP.", url: '/whatsapp/', keywords: ['WhatsApp Business API India', 'WhatsApp chatbot', 'Meta BSP India'] });
