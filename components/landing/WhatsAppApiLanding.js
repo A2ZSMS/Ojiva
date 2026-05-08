@@ -304,11 +304,6 @@ export default function WhatsAppApiLanding() {
               style={{ height: "auto" }}
             />
           </Link>
-          <div className="lp-header-right">
-            <a href="#lead-form" className="lp-header-cta">
-              Get Free Access →
-            </a>
-          </div>
         </div>
       </header>
 
