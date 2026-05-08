@@ -16858,17 +16858,17 @@ input:focus, textarea:focus, select:focus {
   background: #edf9f3;
 }
 .lp-section--dark {
-  background: linear-gradient(160deg, #05150e 0%, #072b1a 50%, #062210 100%);
+  background: #edf9f3;
 }
-/* All text inside dark section → light colours */
+/* Text inside mint section → dark colours */
 .lp-section--dark .lp-section-h2,
-.lp-section--dark .lp-section-h2--light { color: #ffffff !important; }
-.lp-section--dark .lp-section-p         { color: rgba(148,163,184,0.85) !important; }
-.lp-section--dark .lp-step-title        { color: #f0fdf4 !important; }
-.lp-section--dark .lp-step-desc         { color: rgba(148,163,184,0.80) !important; }
-.lp-section--dark .lp-step-num          { background: rgba(37,211,102,0.15); color: #25d366; border-color: rgba(37,211,102,0.30); }
-.lp-section--dark .lp-step-arrow        { color: rgba(37,211,102,0.50); }
-.lp-section--dark .lp-step              { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
+.lp-section--dark .lp-section-h2--light { color: #0f172a !important; }
+.lp-section--dark .lp-section-p         { color: #4a5568 !important; }
+.lp-section--dark .lp-step-title        { color: #1a2b33 !important; }
+.lp-section--dark .lp-step-desc         { color: #4a5568 !important; }
+.lp-section--dark .lp-step-num          { background: rgba(27,72,224,0.10); color: #1B48E0; border-color: rgba(27,72,224,0.25); }
+.lp-section--dark .lp-step-arrow        { color: rgba(27,72,224,0.40); }
+.lp-section--dark .lp-step              { background: #ffffff; border-color: rgba(27,72,224,0.10); }
 .lp-section-label {
   display: inline-block;
   font-size: 0.7rem;
@@ -17289,7 +17289,7 @@ input:focus, textarea:focus, select:focus {
 .lp-final {
   position: relative;
   padding: 5.5rem 0;
-  background: linear-gradient(160deg, #041a0d 0%, #062b14 40%, #073d1c 100%);
+  background: #ffffff;
   text-align: center;
   overflow: hidden;
 }
@@ -17297,28 +17297,28 @@ input:focus, textarea:focus, select:focus {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(37,211,102,0.12) 0%, transparent 55%),
-    radial-gradient(circle at 80% 50%, rgba(27,72,224,0.08) 0%, transparent 55%);
+    radial-gradient(circle at 20% 50%, rgba(27,72,224,0.04) 0%, transparent 55%),
+    radial-gradient(circle at 80% 50%, rgba(37,211,102,0.04) 0%, transparent 55%);
   pointer-events: none;
 }
 .lp-final-h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 900;
-  color: #ffffff !important;
+  color: #0f172a !important;
   letter-spacing: -0.04em;
   margin: 0 0 0.75rem;
   position: relative;
 }
 .lp-final-sub {
   font-size: 1rem;
-  color: rgba(203,244,220,0.88);
+  color: #4a5568;
   margin: 0 0 2.25rem;
   position: relative;
 }
 .lp-final-reassure {
   margin-top: 1.25rem;
   font-size: 0.78rem;
-  color: rgba(203,244,220,0.60);
+  color: #64748b;
   position: relative;
 }
 .lp-final-actions {
@@ -17946,7 +17946,7 @@ input:focus, textarea:focus, select:focus {
 /* ── Mid-page lead form section ── */
 .lp-midform-section {
   padding: 5rem 0;
-  background: linear-gradient(160deg, #06091f 0%, #0d1235 45%, #111a4a 100%);
+  background: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -17955,8 +17955,8 @@ input:focus, textarea:focus, select:focus {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 10% 30%, rgba(37,211,102,0.10) 0%, transparent 50%),
-    radial-gradient(circle at 85% 65%, rgba(27,72,224,0.18) 0%, transparent 50%);
+    radial-gradient(circle at 10% 30%, rgba(27,72,224,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 85% 65%, rgba(37,211,102,0.04) 0%, transparent 50%);
   pointer-events: none;
 }
 .lp-midform-grid {
@@ -17973,9 +17973,9 @@ input:focus, textarea:focus, select:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(37,211,102,0.12);
-  border: 1px solid rgba(37,211,102,0.30);
-  color: #4ade80;
+  background: rgba(27,72,224,0.07);
+  border: 1px solid rgba(27,72,224,0.20);
+  color: #1B48E0;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -17989,19 +17989,19 @@ input:focus, textarea:focus, select:focus {
 .lp-midform-h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 900;
-  color: #ffffff !important;
+  color: #0f172a !important;
   letter-spacing: -0.04em;
   line-height: 1.15;
   margin: 0 0 1rem;
 }
 .lp-midform-h2-accent {
-  color: #4ade80 !important;
+  color: #1B48E0 !important;
 }
 
 /* Subtitle */
 .lp-midform-sub {
   font-size: 1rem;
-  color: rgba(203,244,220,0.80);
+  color: #4a5568;
   line-height: 1.7;
   margin: 0 0 2rem;
 }
@@ -18011,7 +18011,7 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   gap: 0;
   margin-bottom: 1.75rem;
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -18021,20 +18021,20 @@ input:focus, textarea:focus, select:focus {
   flex-direction: column;
   align-items: center;
   padding: 0.85rem 0.5rem;
-  background: rgba(255,255,255,0.05);
-  border-right: 1px solid rgba(255,255,255,0.08);
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
 }
 .lp-midform-stat:last-child { border-right: none; }
 .lp-midform-stat-val {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #4ade80;
+  color: #1B48E0;
   letter-spacing: -0.03em;
   line-height: 1;
 }
 .lp-midform-stat-lbl {
   font-size: 0.72rem;
-  color: rgba(203,244,220,0.65);
+  color: #64748b;
   margin-top: 0.25rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -18052,21 +18052,21 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   gap: 0.65rem;
   font-size: 0.9rem;
-  color: rgba(203,244,220,0.85);
+  color: #374151;
 }
 .lp-midform-perk .bi { font-size: 0.82rem; flex-shrink: 0; }
 
 /* Mini testimonial */
 .lp-midform-quote {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-left: 3px solid #25d366;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #1B48E0;
   border-radius: 0 10px 10px 0;
   padding: 1rem 1.1rem;
 }
 .lp-midform-quote-text {
   font-size: 0.88rem;
-  color: rgba(203,244,220,0.88);
+  color: #374151;
   line-height: 1.6;
   font-style: italic;
   margin: 0 0 0.85rem;
@@ -18079,7 +18079,7 @@ input:focus, textarea:focus, select:focus {
 .lp-midform-quote-avatar {
   width: 32px; height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1d4ed8, #4ade80);
+  background: linear-gradient(135deg, #1B48E0, #25d366);
   color: #fff;
   font-size: 0.68rem;
   font-weight: 800;
@@ -18089,12 +18089,12 @@ input:focus, textarea:focus, select:focus {
 .lp-midform-quote-name {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   margin: 0;
 }
 .lp-midform-quote-role {
   font-size: 0.75rem;
-  color: rgba(203,244,220,0.55);
+  color: #64748b;
   margin: 0;
 }
 
@@ -18327,10 +18327,10 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   gap: 0.45rem;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.88);
+  color: #374151;
   font-weight: 500;
 }
-.lp-final-trust-item .bi { font-size: 0.88rem; color: rgba(255,255,255,0.80); }
+.lp-final-trust-item .bi { font-size: 0.88rem; color: #1B48E0; }
 
 /* ── Outline button (used below FAQ) ── */
 .lp-btn-outline {
