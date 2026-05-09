@@ -23,41 +23,13 @@ const GA_MEASUREMENT_ID = 'G-FYZX6KFBEL';
 const GTM_CONTAINER_ID = 'GTM-TJ8ZDFS2';
 
 // Paste the content="" value from your Search Console <meta> tag here
-const SEARCH_CONSOLE_VERIFICATION = ''; // leave empty to disable
+const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjlL168rxdI9k4RwGcjLI';
 /* ─────────────────────────────────────────────────────── */
 
 export default function Analytics() {
-  return (
-    <>
-      {/* ══════════════════════════════════════════════
-          1. Google Analytics 4 (GA4)
-             Strategy "afterInteractive" loads after
-             hydration so it never blocks rendering.
-         ════════════════════════════════════════════ */}
-      {GA_MEASUREMENT_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-              });
-            `}
-          </Script>
-        </>
-      )}
-
-      {/* GTM <head> script is placed directly in layout.js <head> for
-          maximum priority. Only the noscript fallback is handled here
-          via GTMNoScript exported below. */}
-    </>
-  );
+  // GA4 + GTM scripts are placed directly in <head> in layout.js
+  // for maximum priority and GSC ownership verification compliance.
+  return null;
 }
 
 /**

@@ -96,6 +96,10 @@ export default function RootLayout({ children }) {
         {/* ── Google Tag Manager — as high in <head> as possible ── */}
         <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TJ8ZDFS2');` }} />
 
+        {/* ── Google Analytics 4 — in <head> so GSC can verify ownership ── */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYZX6KFBEL" />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FYZX6KFBEL',{page_path:window.location.pathname});` }} />
+
         {/* ── Performance: preconnect & DNS prefetch ── */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
