@@ -1,5 +1,3 @@
-'use client';
-
 const INDUSTRIES = [
   {
     icon: 'bi-bag-heart-fill',

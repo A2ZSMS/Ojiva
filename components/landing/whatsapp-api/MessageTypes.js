@@ -1,5 +1,3 @@
-'use client';
-
 const MESSAGE_TYPES = [
   {
     icon: 'bi-key-fill',

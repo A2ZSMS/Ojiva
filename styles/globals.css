@@ -10,18 +10,6 @@
    - Reduce or kill animations for prefers-reduced-motion users
 ═══════════════════════════════════════════════════════════ */
 
-/* Cursor elements — always on GPU */
-.cursor-dot,
-.cursor-ring {
-  will-change: transform;
-  contain: strict;
-}
-
-/* Scroll progress bar */
-.scroll-progress-bar {
-  will-change: transform;
-  contain: strict;
-}
 
 /* Infinite marquee / logo strip — GPU layer + paint containment */
 .logo-strip-inner,
@@ -5089,51 +5077,6 @@ a.nav-cta:hover {
   letter-spacing: -0.01em;
 }
 
-/* ═══════════════════════════════════════
-   CUSTOM CURSOR
-═══════════════════════════════════════ */
-.cursor-dot {
-  position: fixed;
-  top: 0; left: 0;
-  width: 8px; height: 8px;
-  background: var(--primary);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
-  will-change: transform;
-}
-.cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  width: 36px; height: 36px;
-  border: 2px solid rgba(27,72,224,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  will-change: transform;
-}
-.cursor-dot--hover { width: 12px; height: 12px; background: var(--accent); }
-.cursor-ring--hover {
-  width: 56px; height: 56px;
-  border-color: rgba(0,200,248,0.5);
-  box-shadow: 0 0 20px rgba(0,200,248,0.2);
-}
-.cursor-dot--click {
-  width: 6px; height: 6px;
-  background: #fff;
-  box-shadow: 0 0 0 3px var(--primary);
-}
-.cursor-ring--click {
-  width: 28px; height: 28px;
-  border-color: var(--primary);
-  box-shadow: 0 0 24px rgba(27,72,224,0.4);
-}
-@media (hover: none) {
-  .cursor-dot, .cursor-ring { display: none !important; }
-  *, a, button, input, textarea, select, label { cursor: auto !important; }
-}
 
 /* ═══════════════════════════════════════
    UTILITIES
@@ -10547,8 +10490,7 @@ a.nav-cta:hover {
 .tilt3d-wrap,
 .logo-strip-inner,
 .cfn-blob,
-.hero-float-chip,
-.scroll-progress-bar {
+.hero-float-chip {
   will-change: transform;
 }
 .hero-dashboard {
@@ -11635,11 +11577,6 @@ a.nav-cta:hover {
   animation-delay: 0.4s;
 }
 
-@keyframes typing-bounce {
-  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
-  30%           { transform: translateY(-6px); opacity: 1; }
-}
-
 /* ── Text gradient helper ── */
 .text-grad {
   background: var(--logo-gradient);
@@ -11928,33 +11865,10 @@ a.nav-cta:hover {
 }
 
 
-/* ── Custom cursor ── */
+/* ── Custom cursor (removed — no cursor component active) ── */
 @media (min-width: 768px) {
-  .custom-cursor-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    mix-blend-mode: difference;
-    transition: width 0.15s, height 0.15s;
-  }
-  
-  .custom-cursor-ring {
-    position: fixed;
-    top: -12px;
-    left: -12px;
-    width: 32px;
-    height: 32px;
-    border: 2px solid rgba(27,72,224,0.3);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transition: width 0.2s, height 0.2s, border-color 0.2s;
+  .custom-cursor-ring-UNUSED {
+    display: none;
   }
 }
 
@@ -12225,17 +12139,6 @@ a.nav-cta:hover {
    NEW SMOOTH SCROLL ANIMATIONS
 ═══════════════════════════════════════ */
 
-/* ── Scroll Progress Bar ── */
-.scroll-progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--primary));
-  transform-origin: 0%;
-  z-index: 9999;
-}
 
 /* ── TypeWriter cursor ── */
 .typewriter-cursor {
@@ -13287,6 +13190,10 @@ a.nav-cta:hover {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center;
   z-index: 0; pointer-events: none;
+}
+@media (max-width: 991px) {
+  /* Don't download/play the 10MB hero video on mobile/tablet */
+  .hs-bg-video { display: none; }
 }
 
 /* ── Overlay — stronger on left, almost transparent on right ── */

@@ -1,5 +1,3 @@
-'use client';
-
 const HOW_STEPS = [
   {
     num: '01', icon: 'bi-send',

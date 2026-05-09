@@ -1,5 +1,3 @@
-'use client';
-
 const INTEGRATIONS = [
   { name: 'Shopify', icon: 'bi-shop' },
   { name: 'WooCommerce', icon: 'bi-wordpress' },

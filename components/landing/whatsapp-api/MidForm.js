@@ -1,5 +1,3 @@
-'use client';
-
 import LandingLeadForm from '../LandingLeadForm';
 
 export default function MidForm() {

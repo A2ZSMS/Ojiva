@@ -1,5 +1,3 @@
-'use client';
-
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import { faqSchema } from '@/lib/metadata';
 

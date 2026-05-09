@@ -1,5 +1,3 @@
-'use client';
-
 const TESTIMONIALS = [
   {
     quote: 'Switched from WATI — onboarding was 10× faster and the India support team actually picks up. Lead response time dropped from 4 hours to under 60 seconds.',

@@ -10,17 +10,18 @@ import Image from 'next/image';
    MIN_SHOW  → how long (ms) the loader stays visible
    FADE_OUT  → how long (ms) the fade-out takes
 ═══════════════════════════════════════════════════════════ */
-const ENABLED  = true;
-const MIN_SHOW = 900;   // ms
-const FADE_OUT = 400;   // ms
+const MIN_SHOW = 400;   // ms — reduced from 900
+const FADE_OUT = 250;   // ms — reduced from 400
 
 export default function PageLoader() {
   const timerRef = useRef(null);
-  const [show,   setShow]   = useState(ENABLED);
+  // Skip loader on repeat visits within the same browser session
+  const shouldShow = typeof window !== 'undefined' && !sessionStorage.getItem('ojiva_loaded');
+  const [show,   setShow]   = useState(shouldShow);
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    if (!ENABLED) return;
+    if (!shouldShow) return;
 
     // Start fade-out after MIN_SHOW ms
     timerRef.current = setTimeout(() => {
@@ -28,6 +29,7 @@ export default function PageLoader() {
       // Fully unmount after fade completes
       timerRef.current = setTimeout(() => {
         setShow(false);
+        sessionStorage.setItem('ojiva_loaded', '1');
       }, FADE_OUT);
     }, MIN_SHOW);
 

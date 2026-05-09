@@ -1,9 +1,6 @@
 import HomePage from '@/components/home/HomePage';
 import {
   buildMetadata,
-  organizationSchema,
-  websiteSchema,
-  softwareAppSchema,
   breadcrumbSchema,
   faqSchema,
 } from '@/lib/metadata';
@@ -108,9 +105,6 @@ const HOME_FAQS = faqSchema([
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQS) }} />
       <HomePage />

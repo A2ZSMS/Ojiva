@@ -1,5 +1,3 @@
-'use client';
-
 export default function FinalCTA() {
   return (
     <section className="lp-final">

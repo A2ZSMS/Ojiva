@@ -1,5 +1,3 @@
-'use client';
-
 const TRUST_ITEMS = [
   { icon: 'bi-patch-check-fill', title: 'Official Meta BSP', desc: 'Authorised Meta Business Service Provider. Direct API access — not a reseller or aggregator.', color: '#25d366' },
   { icon: 'bi-shield-lock-fill', title: 'AES-256 Encryption', desc: 'All messages and customer data encrypted at rest and in transit. Enterprise-grade security by default.', color: '#1B48E0' },
