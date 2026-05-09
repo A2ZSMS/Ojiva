@@ -1,3 +1,6 @@
+'use client';
+
+import FAQAccordion from '@/components/ui/FAQAccordion';
 import { faqSchema } from '@/lib/metadata';
 
 const HOME_FAQS = [
@@ -35,9 +38,21 @@ const HOME_FAQ_SCHEMA = faqSchema(HOME_FAQS);
 
 export default function FaqSchema() {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQ_SCHEMA) }}
-    />
+    <>
+      {/* Visible FAQ accordion — required for valid FAQPage rich results */}
+      <FAQAccordion
+        faqs={HOME_FAQS}
+        tag="FAQ"
+        title="Frequently asked questions"
+        subtitle="Common questions about Ojiva AI's communication platform."
+        id="home-faq"
+      />
+
+      {/* JSON-LD schema — content matches the visible accordion above */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQ_SCHEMA) }}
+      />
+    </>
   );
 }
