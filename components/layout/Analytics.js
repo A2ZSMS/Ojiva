@@ -23,7 +23,7 @@ const GA_MEASUREMENT_ID = 'G-FYZX6KFBEL';
 const GTM_CONTAINER_ID = 'GTM-TJ8ZDFS2';
 
 // Paste the content="" value from your Search Console <meta> tag here
-const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjlL168rxdI9k4RwGcjLI';
+const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI';
 /* ─────────────────────────────────────────────────────── */
 
 export default function Analytics() {
