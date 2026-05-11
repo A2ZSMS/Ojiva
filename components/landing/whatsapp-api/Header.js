@@ -33,10 +33,6 @@ export default function Header() {
 
         {/* Right side */}
         <div className="lp-header-right">
-          <a href="tel:+918431086185" className="lp-header-phone">
-            <i className="bi bi-telephone-fill" />
-            +91-843-108-6185
-          </a>
           <button
             onClick={scrollToForm}
             className="lp-header-cta"

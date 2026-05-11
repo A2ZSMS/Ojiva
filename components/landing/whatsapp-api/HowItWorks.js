@@ -1,3 +1,11 @@
+'use client';
+
+function scrollToForm(e) {
+  e.preventDefault();
+  const el = document.getElementById('lead-form');
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 const HOW_STEPS = [
   {
     num: '01', icon: 'bi-send',
@@ -51,9 +59,9 @@ export default function HowItWorks() {
           ))}
         </div>
         <div className="lp-hiw-cta">
-          <a href="#lead-form" className="lp-btn-primary">
+          <button onClick={scrollToForm} className="lp-btn-primary" type="button">
             Get WhatsApp API Pricing →
-          </a>
+          </button>
         </div>
       </div>
     </section>
