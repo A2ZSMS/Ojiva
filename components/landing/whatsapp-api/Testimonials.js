@@ -39,7 +39,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="lp-section lp-section--light">
+    <section className="lp-section">
       <div className="lp-container">
         <div className="lp-section-label">Customer Stories</div>
         <h2 className="lp-section-h2">

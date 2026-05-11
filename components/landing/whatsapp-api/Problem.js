@@ -1,6 +1,6 @@
 export default function Problem() {
   return (
-    <section className="lp-section lp-section--light">
+    <section className="lp-section">
       <div className="lp-container lp-container--narrow">
         <div className="lp-section-label">Why WhatsApp</div>
         <h2 className="lp-section-h2">Stop Losing Leads to Channels Nobody Reads</h2>

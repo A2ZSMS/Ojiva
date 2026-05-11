@@ -45,7 +45,7 @@ const INDUSTRIES = [
 
 export default function Industries() {
   return (
-    <section className="lp-section">
+    <section className="lp-section lp-section--light">
       <div className="lp-container">
         <div className="lp-section-label">Industry Use Cases</div>
         <h2 className="lp-section-h2">Built for every industry in India</h2>

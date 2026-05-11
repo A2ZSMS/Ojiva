@@ -39,7 +39,7 @@ const BENEFITS = [
 
 export default function Benefits() {
   return (
-    <section className="lp-section lp-section--light">
+    <section className="lp-section">
       <div className="lp-container">
         <div className="lp-section-label">What You Get</div>
         <h2 className="lp-section-h2">

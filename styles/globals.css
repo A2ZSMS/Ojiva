@@ -16935,20 +16935,22 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 .lp-section--light {
-  background: #edf9f3;
+  background: #f0f4ff;
 }
 .lp-section--dark {
-  background: #edf9f3;
+  background: #0f172a;
 }
-/* Text inside mint section → dark colours */
+/* Text inside dark navy section → light colours */
+.lp-section--dark .lp-section-label     { background: rgba(27,72,224,0.20); border-color: rgba(27,72,224,0.35); color: #93c5fd; }
 .lp-section--dark .lp-section-h2,
-.lp-section--dark .lp-section-h2--light { color: #0f172a !important; }
-.lp-section--dark .lp-section-p         { color: #4a5568 !important; }
-.lp-section--dark .lp-step-title        { color: #1a2b33 !important; }
-.lp-section--dark .lp-step-desc         { color: #4a5568 !important; }
-.lp-section--dark .lp-step-num          { background: rgba(27,72,224,0.10); color: #1B48E0; border-color: rgba(27,72,224,0.25); }
-.lp-section--dark .lp-step-arrow        { color: rgba(27,72,224,0.40); }
-.lp-section--dark .lp-step              { background: #ffffff; border-color: rgba(27,72,224,0.10); }
+.lp-section--dark .lp-section-h2--light { color: #f1f5f9 !important; }
+.lp-section--dark .lp-section-p         { color: #94a3b8 !important; }
+.lp-section--dark .lp-step-title        { color: #e2e8f0 !important; }
+.lp-section--dark .lp-step-desc         { color: #94a3b8 !important; }
+.lp-section--dark .lp-step-num          { background: rgba(27,72,224,0.25); color: #93c5fd; border-color: rgba(27,72,224,0.40); }
+.lp-section--dark .lp-step-arrow        { color: rgba(99,179,237,0.50); }
+.lp-section--dark .lp-step              { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
+.lp-section--dark .lp-hiw-cta          { margin-top: 2.5rem; }
 .lp-section-label {
   display: inline-block;
   font-size: 0.7rem;
