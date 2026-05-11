@@ -17549,6 +17549,23 @@ input:focus, textarea:focus, select:focus {
   color: #1B48E0;
   text-decoration: underline;
 }
+/* ── Trust signals above submit ── */
+.lp2-trust-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+.lp2-trust-signals span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #374151;
+}
+
 .lp2-btn {
   width: 100%;
   padding: 0.9rem 1.5rem;
@@ -18438,6 +18455,38 @@ input:focus, textarea:focus, select:focus {
   .lp-pricing { max-width: 100%; }
 }
 
+
+/* ── Floating WhatsApp click-to-chat button ── */
+.lp-wa-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.7rem 1.1rem 0.7rem 0.85rem;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.lp-wa-float:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+  color: #fff;
+  text-decoration: none;
+}
+.lp-wa-float svg { flex-shrink: 0; }
+@media (max-width: 575px) {
+  .lp-wa-float-label { display: none; }
+  .lp-wa-float { padding: 0.75rem; border-radius: 50%; }
+}
 
 /* ══════════════════════════════════════════════════════════════════════════════
    INDUSTRY SOLUTIONS LANDING PAGE — ind-lp-*

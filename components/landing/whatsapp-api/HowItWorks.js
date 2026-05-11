@@ -52,7 +52,7 @@ export default function HowItWorks() {
         </div>
         <div className="lp-hiw-cta">
           <a href="#lead-form" className="lp-btn-primary">
-            Start Now — It's Free →
+            Get WhatsApp API Pricing →
           </a>
         </div>
       </div>

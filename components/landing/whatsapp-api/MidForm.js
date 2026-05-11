@@ -76,7 +76,7 @@ export default function MidForm() {
             <div className="lp-form-wrapper lp-form-wrapper--light">
               <div className="lp-form-badge lp-form-badge--dark">
                 <i className="bi bi-lightning-charge-fill" style={{ color: "#22c55e" }} />
-                <span>Free setup · No DLT needed · No credit card</span>
+                <span>Instant Setup · No DLT needed · No lock-in</span>
               </div>
               <LandingLeadForm source="whatsapp-api-service-mid" />
             </div>

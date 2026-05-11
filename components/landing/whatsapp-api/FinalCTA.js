@@ -9,14 +9,14 @@ export default function FinalCTA() {
         <p className="lp-final-sub">
           500M+ Indians check WhatsApp 23× a day. Every day you wait is leads
           your competitor is closing. Get your official WhatsApp Business API
-          live in 48 hours — for free.
+          live in 48 hours — with zero lock-in.
         </p>
         <div className="lp-final-actions">
           <a
             href="#lead-form"
             className="lp-btn-primary lp-btn-primary--white"
           >
-            Get Free WhatsApp API Access →
+            Get WhatsApp API Pricing →
           </a>
           <a href="#lead-form" className="lp-btn-ghost">
             See a Live Demo First
@@ -25,7 +25,7 @@ export default function FinalCTA() {
         <div className="lp-final-trust">
           {[
             { icon: "bi-patch-check-fill", label: "Official Meta BSP" },
-            { icon: "bi-lock-fill", label: "No credit card" },
+            { icon: "bi-lock-fill", label: "No lock-in" },
             { icon: "bi-clock-fill", label: "Live in 48 hours" },
             { icon: "bi-shield-check", label: "No DLT required" },
           ].map(({ icon, label }) => (

@@ -26,8 +26,8 @@ const RULES = {
               : '',
   phone:   v => {
     const d = v.replace(/[\s\-().+]/g, '');
-    if (!d)                        return 'Phone number is required.';
-    if (!/^\d{10,13}$/.test(d))   return 'Enter a valid 10-digit phone number.';
+    if (!d)                              return 'Phone number is required.';
+    if (!/^[6-9][0-9]{9}$/.test(d))    return 'Enter a valid 10-digit Indian mobile number (starting with 6–9).';
     return '';
   },
   company: v => !v.trim()                                       ? 'Company name is required.'
@@ -50,9 +50,9 @@ const EMPTY_ERRORS = { name: '', email: '', phone: '', company: '', volume: '', 
 /* ─── Component ───────────────────────────────────────────── */
 export default function LandingLeadForm({
   source       = 'whatsapp-api',
-  title        = 'Get Free WhatsApp API Access',
-  subtitle     = 'Setup in 48 hours. No credit card required.',
-  submitLabel  = 'Start Free Trial →',
+  title        = 'Get WhatsApp API Access for Your Business',
+  subtitle     = 'Setup in 48 hours. No lock-in. Pay-as-you-go.',
+  submitLabel  = 'Get WhatsApp API Pricing →',
   thankYouUrl  = THANK_YOU,
 }) {
   const router = useRouter();
@@ -275,6 +275,13 @@ export default function LandingLeadForm({
           {touched.agree && errors.agree && <span className="lp2-error"><i className="bi bi-exclamation-circle" /> {errors.agree}</span>}
         </div>
 
+      </div>
+
+      {/* Trust signals above submit */}
+      <div className="lp2-trust-signals">
+        <span><i className="bi bi-patch-check-fill" style={{ color: '#22c55e' }} /> Official Meta BSP</span>
+        <span><i className="bi bi-people-fill" style={{ color: '#3b82f6' }} /> 500+ businesses onboarded</span>
+        <span><i className="bi bi-clock-fill" style={{ color: '#a855f7' }} /> Setup in 24–48 hours</span>
       </div>
 
       <button type="submit" className="lp2-btn" disabled={submitting}>

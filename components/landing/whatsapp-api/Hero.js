@@ -45,7 +45,7 @@ export default function Hero() {
                 },
                 {
                   icon: "bi-check-circle-fill",
-                  text: "Zero setup fees — ever",
+                  text: "Pay-as-you-go — no setup fees",
                   color: "#22c55e",
                 },
                 {
@@ -107,7 +107,7 @@ export default function Hero() {
             </div>
 
             <a href="#lead-form" className="lp-demo-btn">
-              <i className="bi bi-camera-video" /> Watch a 3-Min Demo — Free
+              <i className="bi bi-camera-video" /> Watch a 3-Min Demo
             </a>
           </div>
 
@@ -119,7 +119,7 @@ export default function Hero() {
                   className="bi bi-lightning-charge-fill"
                   style={{ color: "#22c55e" }}
                 />
-                <span>Free setup · No DLT needed · No credit card</span>
+                <span>Instant Setup · No DLT needed · No lock-in</span>
               </div>
               <LandingLeadForm source="whatsapp-api-service" />
             </div>
