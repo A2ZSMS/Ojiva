@@ -1,12 +1,11 @@
 # *
 User-agent: *
 Allow: /
-
-# *
-User-agent: *
 Disallow: /404
 Disallow: /admin/
 Disallow: /whatsapp-api-service/
+Disallow: /whatsapp-api/
+Disallow: /thank-you/
 
 # Host
 Host: https://www.ojiva.ai

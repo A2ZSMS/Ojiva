@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import VoicePageContent from '@/components/services/voice/VoicePage';
 
 export const metadata = buildMetadata({
-  title: "Best Bulk Voice Call Service Provider in Bangalore | India",
+  title: "Bulk Voice Call & IVR Service India — AI Auto Dialer",
   description:
-    "Top Bulk Voice Call service provider in Bangalore, India. Reliable promotional, transactional, and business voice call solutions for enterprises and marketing campaigns.",
+    "India's top bulk voice call & IVR service. AI voice bots, outbound dialer, 10M+ calls/day. 99.9% connect rate. Trusted by 500+ businesses.",
   path: "/voice",
   keywords: [
     "AI voice call automation India",

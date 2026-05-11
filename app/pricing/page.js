@@ -9,7 +9,7 @@ import {
 export const metadata = buildMetadata({
   title: 'Bulk SMS, WhatsApp API & RCS Pricing Plans India',
   description:
-    'Transparent pricing for Bulk SMS from ₹0.15/msg, WhatsApp Business API, RCS Messaging & AI Voice. No hidden fees. Free 14-day trial. Pay-as-you-go & enterprise plans.',
+    'Transparent pricing for Bulk SMS, WhatsApp API, RCS & AI Voice. No hidden fees. Pay-as-you-go plans. Free 14-day trial for all channels.',
   path: '/pricing',
   keywords: [
     'bulk SMS pricing India',

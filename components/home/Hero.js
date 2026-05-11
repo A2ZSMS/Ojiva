@@ -1,7 +1,9 @@
 'use client';
 
+import { Fragment, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import GalaxyCanvas from '@/components/home/galaxy/GalaxyCanvas';
 
 /* ── SVG Icons ───────────────────────────────────────────── */
 const SmsIcon = () => (
@@ -81,11 +83,19 @@ const fade = (delay = 0, y = 20) => ({
 
 /* ── Component ────────────────────────────────────────────── */
 export default function Hero() {
+  // Only render video on desktop — prevents 10 MB download on mobile/tablet
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    setIsDesktop(window.matchMedia('(min-width: 992px)').matches);
+  }, []);
+
   return (
     <section className="hs-section" aria-labelledby="hero-heading">
 
-      {/* Background video */}
-      <video className="hs-bg-video" src="/hero-video.mp4" autoPlay muted loop playsInline preload="none" aria-hidden="true" />
+      {/* Background video — desktop only (992px+) */}
+      {isDesktop && (
+        <video className="hs-bg-video" src="/hero-video.mp4" autoPlay muted loop playsInline preload="none" aria-hidden="true" />
+      )}
       <div className="hs-bg-overlay" aria-hidden="true" />
       <div className="hs-grid-bg"   aria-hidden="true" />
 
@@ -165,135 +175,28 @@ export default function Hero() {
             {/* Stats */}
             <motion.div className="hs-stats" {...fade(0.36)}>
               {STATS.map(({ value, label }, i) => (
-                <>
-                  <div key={label} className="hs-stat">
+                <Fragment key={label}>
+                  <div className="hs-stat">
                     <span className="hs-stat-val">{value}</span>
                     <span className="hs-stat-lbl">{label}</span>
                   </div>
-                  {i < STATS.length - 1 && <span key={`sep-${i}`} className="hs-stat-sep" />}
-                </>
+                  {i < STATS.length - 1 && <span className="hs-stat-sep" />}
+                </Fragment>
               ))}
             </motion.div>
 
           </div>
 
-          {/* ══ RIGHT COLUMN — Dashboard ═════════════════ */}
+          {/* ══ RIGHT COLUMN — Galaxy (desktop only) ════ */}
           <motion.div
-            className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end"
-            initial={{ opacity: 0, x: 36 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.70, delay: 0.20, ease: [0.22, 1, 0.36, 1] }}
+            className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.80, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            style={{ position: 'relative', zIndex: 4 }}
           >
-            <div className="hs-db-outer">
-
-              {/* ── Floating toast — top right ── */}
-              <motion.div
-                className="hs-db-toast"
-                initial={{ opacity: 0, y: -14, scale: 0.90 }}
-                animate={{ opacity: 1, y: 0,   scale: 1    }}
-                transition={{ duration: 0.50, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <span className="hs-db-toast-icon">🎯</span>
-                <div className="hs-db-toast-body">
-                  <div className="hs-db-toast-title">Campaign Live!</div>
-                  <div className="hs-db-toast-sub">4.82L msgs · 98.7% delivered</div>
-                </div>
-                <span className="hs-db-toast-time">now</span>
-              </motion.div>
-
-              {/* ── Floating mini card — bottom left ── */}
-              <motion.div
-                className="hs-db-mini-card"
-                initial={{ opacity: 0, x: -20, scale: 0.90 }}
-                animate={{ opacity: 1, x: 0,   scale: 1    }}
-                transition={{ duration: 0.50, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <span className="hs-db-mini-dot" />
-                <div className="hs-db-mini-body">
-                  <div className="hs-db-mini-val">3,200<span className="hs-db-mini-unit">/s</span></div>
-                  <div className="hs-db-mini-lbl">OTPs sending</div>
-                </div>
-              </motion.div>
-
-              {/* ── Main dashboard card ── */}
-              <div className="hs-db-card">
-
-                {/* Browser chrome */}
-                <div className="hs-db-bar">
-                  <div className="hs-db-dots">
-                    <span className="hs-db-dot" style={{ background: '#ff5f57' }} />
-                    <span className="hs-db-dot" style={{ background: '#febc2e' }} />
-                    <span className="hs-db-dot" style={{ background: '#28c840' }} />
-                  </div>
-                  <span className="hs-db-url">app.ojiva.ai / dashboard</span>
-                  <span className="hs-db-live"><span className="hs-db-live-dot" />LIVE</span>
-                </div>
-
-                {/* Tab bar */}
-                <div className="hs-db-tabs">
-                  <span className="hs-db-tab hs-db-tab--active">Overview</span>
-                  <span className="hs-db-tab">Campaigns</span>
-                  <span className="hs-db-tab">Analytics</span>
-                  <span className="hs-db-tabs-spacer" />
-                  <span className="hs-db-tabs-refresh">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                      <polyline points="23 4 23 10 17 10"/>
-                      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-                    </svg>
-                  </span>
-                </div>
-
-                {/* Metrics strip */}
-                <div className="hs-db-metrics">
-                  {METRICS.map(({ val, lbl, color, trend }, i) => (
-                    <>
-                      <div key={lbl} className="hs-db-metric">
-                        <span className="hs-db-metric-val" style={{ color }}>{val}</span>
-                        <span className="hs-db-metric-lbl">{lbl}</span>
-                        <span className="hs-db-metric-trend" style={{ color }}>{trend}</span>
-                      </div>
-                      {i < METRICS.length - 1 && <span key={`ms${i}`} className="hs-db-metric-sep" />}
-                    </>
-                  ))}
-                </div>
-
-                {/* Channel cards 2×2 */}
-                <div className="hs-db-channels">
-                  {CHANNELS.map(({ Icon, label, stat, statLbl, color, glow, bar, badge }) => (
-                    <div key={label} className="hs-db-ch" style={{ '--ch-c': color, '--ch-g': glow }}>
-                      {badge && <span className="hs-db-ch-badge">{badge}</span>}
-                      <div className="hs-db-ch-top">
-                        <div className="hs-db-ch-icon"><Icon /></div>
-                        <div className="hs-db-ch-label">{label}</div>
-                      </div>
-                      <div className="hs-db-ch-stat">{stat}</div>
-                      <div className="hs-db-ch-slbl">{statLbl}</div>
-                      <div className="hs-db-ch-bar">
-                        <div className="hs-db-ch-bar-fill" style={{ width: `${bar}%` }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Activity feed */}
-                <div className="hs-db-feed">
-                  <div className="hs-db-feed-hdr">
-                    <span className="hs-db-feed-pulse" />
-                    Recent Activity
-                  </div>
-                  {FEED.map(({ color, type, msg, time }) => (
-                    <div key={type} className="hs-db-feed-row">
-                      <span className="hs-db-feed-dot" style={{ background: color, color }} />
-                      <div className="hs-db-feed-content">
-                        <span className="hs-db-feed-type" style={{ color }}>{type}</span>
-                        <span className="hs-db-feed-msg">{msg}</span>
-                      </div>
-                      <span className="hs-db-feed-time">{time}</span>
-                    </div>
-                  ))}
-                </div>
-
-              </div>
+            <div className="hs-galaxy-outer">
+              <GalaxyCanvas />
             </div>
           </motion.div>
 

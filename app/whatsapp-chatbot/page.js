@@ -4,7 +4,7 @@ import ChatbotPageClient from '@/components/services/whatsapp-chatbot/ChatbotPag
 export const metadata = buildMetadata({
   title: 'WhatsApp Chatbot India — AI-Powered & No-Code Builder',
   description:
-    'Build AI WhatsApp chatbots without code. Automate sales, support & leads 24/7 in 20+ languages. 87% queries auto-resolved. Trusted by 500+ businesses in India.',
+    'Build WhatsApp chatbots with no-code or AI NLP. Automate sales, support & leads 24/7, multi-language. 87% queries auto-resolved. India #1 platform.',
   path: '/whatsapp-chatbot',
   keywords: [
     'WhatsApp chatbot India', 'WhatsApp AI chatbot', 'WhatsApp automation India',

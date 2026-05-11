@@ -474,11 +474,13 @@ export default function IndustryPageLayout({ industry }) {
                       style={{ borderColor: `${meta.color}35`, boxShadow: `0 20px 60px ${meta.color}18, 0 4px 20px rgba(0,0,0,0.10)` }}
                     >
                       <img
-                        src={`/solutions/${imgPrefix}${idx + 1}.png`}
+                        src={`/solutions/${imgPrefix}${idx + 1}.webp`}
                         alt={`${name} ${cf.label} — ${cf.use}`}
                         className="ind-lp-feat-img"
                         loading={idx === 0 ? 'eager' : 'lazy'}
                         decoding="async"
+                        width="600"
+                        height="400"
                       />
                     </div>
                   </SlideRight>

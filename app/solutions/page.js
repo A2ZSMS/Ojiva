@@ -5,7 +5,7 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Business Messaging Solutions India — SMS, WhatsApp & RCS',
   description:
-    'Ojiva AI delivers industry-specific CPaaS solutions for Banking, Healthcare, E-commerce, Education, Logistics and more — using Bulk SMS, WhatsApp API, RCS & AI Voice.',
+    'Industry-specific messaging solutions for Banking, Healthcare, E-commerce & 10+ more. Bulk SMS, WhatsApp API, RCS & AI Voice for every business.',
   path: '/solutions',
   keywords: [
     'CPaaS solutions India',

@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsPageContent from '@/components/services/rcs/RcsPage';
 
 export const metadata = buildMetadata({
-  title: "Best RCS Messaging Provider in Bangalore",
+  title: "RCS Business Messaging India — Rich Cards & Verified",
   description:
-    "Top RCS messaging provider in Bangalore. Reliable business RCS services for enterprises, campaigns, and customer engagement.",
+    "India's best RCS messaging provider. Google-verified sender, rich cards & interactive buttons. 94% read rate. Upgrade from SMS to RCS today.",
   path: "/rcs",
   keywords: [
     "RCS Business Messaging India",

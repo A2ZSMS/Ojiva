@@ -67,6 +67,9 @@ function getRuleForPath(loc) {
 // Paths to completely skip from the sitemap
 const EXCLUDED_PATH_PREFIXES = [
   '/whatsapp-api-service',
+  '/whatsapp-api',   // Google Ads landing page — noindex
+  '/home2',          // Deleted experimental route
+  '/thank-you',      // noindex conversion page
   '/robots.txt',
 ];
 
@@ -84,6 +87,12 @@ module.exports = {
     '/admin/*',
     '/whatsapp-api-service',
     '/whatsapp-api-service/*',
+    '/whatsapp-api',           // Google Ads landing page
+    '/whatsapp-api/*',
+    '/home2',                  // Deleted experimental route
+    '/home2/*',
+    '/thank-you',              // noindex conversion page
+    '/thank-you/*',
     '/robots.txt',
   ],
 
@@ -122,14 +131,17 @@ module.exports = {
 
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', allow: '/' },
       {
         userAgent: '*',
+        allow: '/',
         disallow: [
           '/404',
           '/admin/',
           // Ad / pay-per-click landing pages — keep out of organic index
           '/whatsapp-api-service/',
+          '/whatsapp-api/',
+          // Conversion / utility pages — no organic value
+          '/thank-you/',
         ],
       },
     ],

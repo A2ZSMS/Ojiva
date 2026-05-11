@@ -96,7 +96,7 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Link href="/" className="footer-logo-link" aria-label="Ojiva AI Home">
               <Image
-                src="/ojiva-logo-white.png"
+                src="/ojiva-logo-white.webp"
                 alt="Ojiva AI — AI Communication Platform India (Bulk SMS, WhatsApp Business API, RCS, Voice)"
                 width={65}
                 height={65}

@@ -1,5 +1,5 @@
 module.exports = {
   plugins: {
-    '@tailwindcss/postcss': {},
+    // Next.js handles autoprefixer internally — no extra PostCSS plugins needed
   },
 };

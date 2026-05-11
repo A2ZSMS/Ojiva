@@ -1,0 +1,597 @@
+/* ══════════════════════════════════════════════════════════════
+   GALAXY HERO  (gx-*)
+   Self-contained — lives in components/home/galaxy/
+   Imported by GalaxyCanvas.js for the Hero right column.
+══════════════════════════════════════════════════════════════ */
+
+/* ── Base section ── */
+.gx-hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #050b18;          /* background-color transitions cleanly */
+  background-image: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  transition: background-color 0.9s ease;
+}
+
+/* Ambient galaxy glow — always present */
+.gx-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 75% at 72% 48%,
+      rgba(27,72,224,0.22) 0%, rgba(0,200,248,0.08) 50%, transparent 68%),
+    radial-gradient(ellipse 30% 40% at 72% 48%,
+      rgba(0,200,248,0.14) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Phase-reactive overlay — changes on tap */
+.gx-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* ── Phase backgrounds ── tap cycles these ── */
+/* Phase 1 — Cyan spark */
+.gx-hero.gx-phase-1 { background-color: #031a28; }
+.gx-hero.gx-phase-1::after {
+  opacity: 1;
+  background: radial-gradient(ellipse 110% 90% at 68% 50%,
+    rgba(0,200,248,0.38) 0%, rgba(27,72,224,0.22) 35%, transparent 62%);
+}
+/* Phase 2 — Violet surge */
+.gx-hero.gx-phase-2 { background-color: #0e0420; }
+.gx-hero.gx-phase-2::after {
+  opacity: 1;
+  background: radial-gradient(ellipse 110% 90% at 68% 50%,
+    rgba(139,92,246,0.40) 0%, rgba(27,72,224,0.20) 35%, transparent 62%);
+}
+/* Phase 3 — Emerald pulse */
+.gx-hero.gx-phase-3 { background-color: #021d10; }
+.gx-hero.gx-phase-3::after {
+  opacity: 1;
+  background: radial-gradient(ellipse 110% 90% at 68% 50%,
+    rgba(16,185,129,0.34) 0%, rgba(0,200,248,0.16) 35%, transparent 62%);
+}
+
+/* ── Star field ── */
+.gx-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.gx-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  animation: gx-twinkle var(--dur, 4s) ease-in-out infinite;
+  animation-delay: var(--dly, 0s);
+}
+@keyframes gx-twinkle {
+  0%, 100% { opacity: 0;   transform: scale(0.4); }
+  50%       { opacity: 0.8; transform: scale(1); }
+}
+
+/* ── Layout ── */
+.gx-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}
+
+/* ── Left text column ── */
+.gx-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,200,248,0.10);
+  border: 1px solid rgba(0,200,248,0.28);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #00c8f8;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.gx-badge-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #00c8f8;
+  flex-shrink: 0;
+  animation: gx-dot 2s ease-in-out infinite;
+}
+@keyframes gx-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.6)} }
+
+.gx-h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  margin-bottom: 20px;
+}
+.gx-h1-grad {
+  background: linear-gradient(100deg, #00c8f8 0%, #3a7bd5 55%, #1B48E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.gx-desc {
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 420px;
+}
+
+.gx-ctas {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.gx-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1B48E0 0%, #00c8f8 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(27,72,224,0.50), 0 0 0 0 rgba(0,200,248,0);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gx-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(27,72,224,0.60), 0 0 24px rgba(0,200,248,0.18);
+  color: #fff;
+}
+.gx-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.80);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 10px;
+  padding: 12px 24px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.gx-btn-ghost:hover {
+  color: #fff;
+  border-color: rgba(0,200,248,0.55);
+  background: rgba(0,200,248,0.07);
+}
+
+.gx-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+.gx-trust-sep { color: rgba(255,255,255,0.2); }
+.gx-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255,255,255,0.58);
+}
+.gx-trust-item i { font-size: 0.7rem; }
+
+/* ── Galaxy right panel ── */
+.gx-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fixed-size galaxy canvas */
+.gx-canvas {
+  position: relative;
+  width: 580px;
+  height: 580px;
+  flex-shrink: 0;
+}
+
+/* ── Orbit ring paths ── */
+.gx-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.gx-ring-inner {
+  width: 296px; height: 296px;
+  border: 1px dashed rgba(27,72,224,0.40);
+  box-shadow: 0 0 12px rgba(27,72,224,0.08) inset;
+}
+.gx-ring-mid {
+  width: 440px; height: 440px;
+  border: 1px dashed rgba(0,200,248,0.28);
+}
+.gx-ring-outer {
+  width: 580px; height: 580px;
+  border: 1px dashed rgba(139,92,246,0.20);
+}
+
+/* ── Center logo button ── */
+.gx-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  outline: none;
+}
+
+/* Large ambient glow blob — centered on the logo */
+.gx-center-glow {
+  position: absolute;
+  width: 220px; height: 220px;
+  top: 50%; left: 50%;
+  margin-top: -110px; margin-left: -110px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(0,200,248,0.30) 0%,
+    rgba(27,72,224,0.28) 40%,
+    transparent 70%);
+  animation: gx-glow 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes gx-glow {
+  0%,100% { transform: scale(1);    opacity: 0.75; }
+  50%      { transform: scale(1.30); opacity: 1; }
+}
+
+/* Expanding pulse ring */
+.gx-center-pulse {
+  position: absolute;
+  width: 116px; height: 116px;
+  top: 50%; left: 50%;
+  margin-top: -58px; margin-left: -58px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,200,248,0.55);
+  animation: gx-center-pulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+/* Second pulse ring — offset delay */
+.gx-center-pulse2 {
+  position: absolute;
+  width: 116px; height: 116px;
+  top: 50%; left: 50%;
+  margin-top: -58px; margin-left: -58px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(27,72,224,0.45);
+  animation: gx-center-pulse 2.4s ease-out infinite;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+@keyframes gx-center-pulse {
+  0%   { transform: scale(0.85); opacity: 1; }
+  100% { transform: scale(2.6);  opacity: 0; }
+}
+
+/* Logo circle */
+.gx-logo-wrap {
+  position: relative;
+  z-index: 2;
+  width: 108px; height: 108px;
+  border-radius: 50%;
+  background: linear-gradient(145deg,
+    rgba(27,72,224,0.28) 0%,
+    rgba(0,200,248,0.18) 100%);
+  border: 2px solid rgba(0,200,248,0.50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow:
+    0 0 0 6px rgba(27,72,224,0.10),
+    0 0 32px rgba(0,200,248,0.38),
+    0 0 64px rgba(27,72,224,0.22),
+    inset 0 0 24px rgba(0,200,248,0.08);
+}
+.gx-center:hover .gx-logo-wrap {
+  transform: scale(1.07);
+  box-shadow:
+    0 0 0 10px rgba(27,72,224,0.12),
+    0 0 48px rgba(0,200,248,0.55),
+    0 0 80px rgba(27,72,224,0.30),
+    inset 0 0 30px rgba(0,200,248,0.12);
+}
+.gx-center-blasted .gx-logo-wrap {
+  animation: gx-blast-logo 0.65s cubic-bezier(0.17,0.67,0.29,1.3);
+}
+@keyframes gx-blast-logo {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0   rgba(0,200,248,1); }
+  20%  { transform: scale(1.7);  box-shadow: 0 0 0 24px rgba(0,200,248,0.5); }
+  50%  { transform: scale(0.88); box-shadow: 0 0 0 48px rgba(0,200,248,0); }
+  100% { transform: scale(1);    box-shadow: 0 0 32px rgba(0,200,248,0.38); }
+}
+
+.gx-center-logo {
+  width: 62px; height: 62px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 8px rgba(0,200,248,0.65))
+    drop-shadow(0 0 20px rgba(27,72,224,0.40));
+}
+
+.gx-click-hint {
+  position: relative;
+  z-index: 2;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0,200,248,0.55);
+  transition: color 0.2s;
+  animation: gx-hint-blink 3s ease-in-out infinite;
+}
+@keyframes gx-hint-blink { 0%,100%{opacity:0.5} 50%{opacity:1} }
+.gx-center:hover .gx-click-hint { color: rgba(0,200,248,0.90); }
+
+/* ── Shockwave on blast ── */
+.gx-shockwave {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  animation: gx-sw 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.gx-sw-1 {
+  width: 100px; height: 100px;
+  border: 3px solid rgba(0,200,248,1);
+  animation-delay: 0s;
+}
+.gx-sw-2 {
+  width: 100px; height: 100px;
+  border: 2px solid rgba(27,72,224,0.75);
+  animation-delay: 0.22s;
+}
+.gx-sw-3 {
+  width: 100px; height: 100px;
+  border: 1.5px solid rgba(139,92,246,0.60);
+  animation-delay: 0.44s;
+}
+@keyframes gx-sw {
+  0%   { transform: translate(-50%,-50%) scale(0);   opacity: 1; }
+  100% { transform: translate(-50%,-50%) scale(9.5); opacity: 0; }
+}
+
+/* ── Blast stat messages ── */
+.gx-blast-msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(5,12,32,0.90);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0,200,248,0.30);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 15px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 15;
+  animation: gx-msg-out 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  letter-spacing: 0.03em;
+  box-shadow: 0 0 16px rgba(0,200,248,0.20);
+}
+@keyframes gx-msg-out {
+  0%   { transform: translate(-50%,-50%) scale(0.5); opacity: 0; }
+  18%  { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+  72%  {
+    opacity: 1;
+    transform: translate(
+      calc(-50% + var(--tx)), calc(-50% + var(--ty))
+    ) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--tx) * 1.12), calc(-50% + var(--ty) * 1.12)
+    ) scale(0.88);
+  }
+}
+
+/* ── Service orbit nodes ── */
+.gx-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 8;
+  cursor: pointer;
+  will-change: transform;
+}
+.gx-node-body {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.gx-node-ico {
+  width: 50px; height: 50px;
+  border-radius: 15px;
+  background: rgba(8, 16, 40, 0.88);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.22rem;
+  color: var(--clr, #fff);
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s, border-color 0.25s;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.40),
+    0 0 12px color-mix(in srgb, var(--clr, #fff) 25%, transparent);
+}
+.gx-node:hover .gx-node-ico {
+  transform: scale(1.25);
+  background: rgba(255,255,255,0.10);
+  border-color: var(--clr, #fff);
+  box-shadow:
+    0 0 24px color-mix(in srgb, var(--clr, #fff) 55%, transparent),
+    0 6px 20px rgba(0,0,0,0.45);
+}
+
+.gx-node-label {
+  font-size: 0.63rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.78);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.90);
+}
+.gx-node:hover .gx-node-label { color: var(--clr, #fff); }
+
+/* Hover tooltip */
+.gx-node-tip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(5,10,28,0.97);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px;
+  padding: 8px 14px;
+  min-width: 120px;
+  text-align: center;
+  pointer-events: none;
+  backdrop-filter: blur(18px);
+  animation: gx-tip-in 0.15s ease;
+  z-index: 20;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+.gx-node-tip strong { display: block; font-size: 0.72rem; color: #fff; font-weight: 700; margin-bottom: 2px; }
+.gx-node-tip span   { font-size: 0.65rem; color: var(--clr, #00c8f8); font-weight: 600; }
+@keyframes gx-tip-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(5px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   GALAXY CANVAS WRAP — used when embedded in another hero
+   (.gx-canvas-wrap replaces the full .gx-right panel)
+══════════════════════════════════════════════════════════════ */
+.gx-canvas-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 580px;
+  height: 580px;
+  flex-shrink: 0;
+}
+
+/* Localised glow that shifts color on tap (no full-bg change) */
+.gx-canvas-glow-overlay {
+  position: absolute;
+  inset: -60px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle,
+    rgba(27,72,224,0.18) 0%,
+    rgba(0,200,248,0.08) 45%,
+    transparent 70%);
+  transition: background 0.75s ease, opacity 0.75s ease;
+}
+.gx-canvas-wrap.gx-phase-1 .gx-canvas-glow-overlay {
+  background: radial-gradient(circle,
+    rgba(0,200,248,0.38) 0%,
+    rgba(27,72,224,0.18) 40%,
+    transparent 68%);
+}
+.gx-canvas-wrap.gx-phase-2 .gx-canvas-glow-overlay {
+  background: radial-gradient(circle,
+    rgba(139,92,246,0.42) 0%,
+    rgba(27,72,224,0.18) 40%,
+    transparent 68%);
+}
+.gx-canvas-wrap.gx-phase-3 .gx-canvas-glow-overlay {
+  background: radial-gradient(circle,
+    rgba(16,185,129,0.36) 0%,
+    rgba(0,200,248,0.14) 40%,
+    transparent 68%);
+}
+/* Canvas inside wrap needs position so it's above the overlay */
+.gx-canvas-wrap > .gx-canvas {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .gx-canvas { transform: scale(0.83); transform-origin: center; }
+  .gx-h1 { font-size: 2.5rem; }
+}
+@media (max-width: 991px) {
+  .gx-wrap { grid-template-columns: 1fr; text-align: center; }
+  .gx-desc { margin: 0 auto 32px; }
+  .gx-ctas { justify-content: center; }
+  .gx-trust { justify-content: center; }
+  .gx-badge { margin-left: auto; margin-right: auto; }
+  .gx-right { margin-top: 8px; }
+  .gx-canvas { transform: scale(0.72); }
+  .gx-ring-outer { display: none; }
+  .gx-h1 { font-size: 2.2rem; }
+}
+@media (max-width: 600px) {
+  .gx-canvas { transform: scale(0.60); }
+  .gx-ring-mid { display: none; }
+  .gx-h1 { font-size: 1.9rem; }
+  .gx-hero { padding: 60px 0; }
+}

@@ -15,13 +15,15 @@ const FADE_OUT = 250;   // ms — reduced from 400
 
 export default function PageLoader() {
   const timerRef = useRef(null);
-  // Skip loader on repeat visits within the same browser session
-  const shouldShow = typeof window !== 'undefined' && !sessionStorage.getItem('ojiva_loaded');
-  const [show,   setShow]   = useState(shouldShow);
+  // Always start hidden (SSR) — client useEffect decides whether to show
+  const [show,   setShow]   = useState(false);
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    if (!shouldShow) return;
+    // Only show on first visit in this session
+    if (sessionStorage.getItem('ojiva_loaded')) return;
+
+    setShow(true);
 
     // Start fade-out after MIN_SHOW ms
     timerRef.current = setTimeout(() => {
@@ -53,7 +55,7 @@ export default function PageLoader() {
         <div className="pg-loader-logo-wrap">
           <div className="pg-loader-ring" />
           <Image
-            src="/ojiva-logo-white.png"
+            src="/ojiva-logo-white.webp"
             alt="Ojiva AI"
             width={70}
             height={70}

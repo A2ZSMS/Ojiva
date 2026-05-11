@@ -27,7 +27,7 @@ export const metadata = {
     default: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
   },
   description:
-    "A2ZSMS is the top WhatsApp Business API provider in Bangalore. Get free WhatsApp API setup, bulk messaging, automation, and the best WhatsApp marketing services in 2026.",
+    "India's #1 CPaaS — WhatsApp API, Bulk SMS, RCS & AI Voice. 98% open rates, 99.9% uptime, 48-hr go-live. Trusted by 500+ businesses.",
   keywords: BRAND_KEYWORDS.join(", "),
   metadataBase: new URL("https://www.ojiva.ai"),
   icons: {

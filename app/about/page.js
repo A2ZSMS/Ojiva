@@ -4,7 +4,7 @@ import AboutPageContent from '@/components/about/AboutPage';
 export const metadata = buildMetadata({
   title: 'About Ojiva AI — India\'s #1 Business Messaging Platform',
   description:
-    "Learn about Ojiva AI, India's enterprise messaging platform built on A2ZSMS' decade of expertise. Serving 500+ businesses with Bulk SMS, WhatsApp API & RCS.",
+    "Ojiva AI is India's leading AI communication platform powering 500+ businesses with Bulk SMS, WhatsApp API, RCS & AI Voice. Based in Bengaluru.",
   path: '/about',
   keywords: [
     'about Ojiva AI',

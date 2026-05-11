@@ -4,7 +4,7 @@ import RcsMessagingLanding from '@/components/landing/RcsMessagingLanding';
 export const metadata = buildMetadata({
   title: 'RCS Messaging India — Rich Business Messages, 3× Higher CTR',
   description:
-    'Upgrade from SMS to RCS messaging in India. Google-verified brand identity, rich cards, interactive buttons & carousels. 94% read rate, 3× higher CTR. DLT compliant. Try free.',
+    "India's best RCS messaging platform. Google-verified brand, rich cards & interactive buttons. 94% read rate, 3× higher CTR. Try free.",
   path: '/rcs-messaging',
   keywords: [
     'RCS messaging India',

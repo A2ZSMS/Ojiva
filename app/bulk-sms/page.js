@@ -4,7 +4,7 @@ import BulkSmsLanding from '@/components/landing/BulkSmsLanding';
 export const metadata = buildMetadata({
   title: 'Bulk SMS Service India — 10M+ Messages/Day, 99% Delivery',
   description:
-    'Best bulk SMS service provider in India. Send promotional, transactional & OTP SMS at scale — DLT compliant, 99% delivery, sub-3s OTP. 500+ businesses trust Ojiva AI. Free trial.',
+    'Best bulk SMS service in India — OTP, transactional & promotional. DLT compliant, 99% delivery, sub-3s OTP. 500+ businesses trust Ojiva AI.',
   path: '/bulk-sms',
   keywords: [
     'bulk SMS service India',

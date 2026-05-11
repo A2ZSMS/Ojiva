@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import SmsPageContent from '@/components/services/sms/SmsPage';
 
 export const metadata = buildMetadata({
-  title: "Best Bulk SMS Service Provider in Bangalore",
+  title: "Bulk SMS Service India — OTP, Promo & Transactional",
   description:
-    "Top Bulk SMS service provider in Bangalore. Reliable business SMS solutions for OTP, promotional, transactional, and marketing campaigns.",
+    "Best bulk SMS provider in India for OTP, transactional & promotional campaigns. DLT compliant, 99% delivery, 10M+ messages/day. Free trial.",
   path: "/sms",
   keywords: [
     "bulk SMS service India",
