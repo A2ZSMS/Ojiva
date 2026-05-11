@@ -16694,12 +16694,23 @@ input:focus, textarea:focus, select:focus {
 .lp-hero-right { position: sticky; top: 80px; }
 .lp-form-wrapper {
   background: #ffffff;
-  border: 1px solid rgba(26,43,51,0.12);
-  border-top: 3px solid #25d366;
+  border: 1px solid rgba(26,43,51,0.09);
   border-radius: 20px;
   padding: 1.75rem;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 32px rgba(37,211,102,0.1), 0 2px 12px rgba(26,43,51,0.08);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(26,43,51,0.06), 0 12px 40px rgba(37,211,102,0.08), 0 0 0 1px rgba(37,211,102,0.05);
+}
+/* Animated gradient top border */
+.lp-form-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, #25d366 0%, #1B48E0 50%, #25d366 100%);
+  background-size: 200% 100%;
+  animation: lp2-progress-shimmer 4s linear infinite;
+  border-radius: 20px 20px 0 0;
 }
 .lp-form-badge {
   display: inline-flex;
@@ -17447,169 +17458,413 @@ input:focus, textarea:focus, select:focus {
 }
 .lp-btn-ghost:hover { background: rgba(26,43,51,0.12); color: #1a2b33; }
 
-/* ══ LP2 Form (a2zsms-style) ══ */
+/* ══ LP2 Form — Rich Animated Version ══ */
+
+/* ── Keyframes ── */
+@keyframes lp2-slide-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes lp2-check-pop {
+  0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+  60%  { transform: scale(1.3) rotate(6deg);  opacity: 1; }
+  100% { transform: scale(1)   rotate(0);     opacity: 1; }
+}
+@keyframes lp2-progress-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes lp2-btn-pulse {
+  0%,100% { box-shadow: 0 4px 18px rgba(37,211,102,0.45); }
+  50%     { box-shadow: 0 6px 36px rgba(37,211,102,0.80), 0 0 60px rgba(37,211,102,0.18); }
+}
+@keyframes lp2-live-blink {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%     { opacity: 0.4; transform: scale(1.5); }
+}
+@keyframes lp2-shimmer-sweep {
+  0%   { left: -70%; }
+  100% { left: 110%; }
+}
+@keyframes lp2-error-shake {
+  0%,100% { transform: translateX(0); }
+  25%     { transform: translateX(-4px); }
+  75%     { transform: translateX(4px); }
+}
+
+/* ── Form base ── */
 .lp2-form {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
+
+/* Staggered field entrance — fields start hidden, animate in when .lp2-form--visible */
+.lp2-field--anim {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.lp2-form--visible .lp2-field--anim {
+  animation: lp2-slide-up 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* ── Progress bar ── */
+.lp2-progress-track {
+  position: relative;
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.lp2-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #25d366 0%, #16a34a 40%, #22d3ee 100%);
+  background-size: 200% 100%;
+  border-radius: 99px;
+  transition: width 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: lp2-progress-shimmer 2.5s linear infinite;
+}
+.lp2-progress-label {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+/* ── Live badge ── */
+.lp2-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 50px;
+  padding: 0.22rem 0.7rem;
+  width: fit-content;
+  margin-top: 0.55rem;
+}
+.lp2-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: lp2-live-blink 1.6s ease-in-out infinite;
+}
+
+/* ── Form header ── */
 .lp2-form-head {
   margin-bottom: 1.4rem;
 }
 .lp2-form-title {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  color: #1a2b33;
+  color: #0f172a;
   font-family: var(--font-eb-garamond), 'EB Garamond', Georgia, serif;
-  margin: 0 0 0.3rem;
+  margin: 0 0 0.28rem;
   letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 .lp2-form-sub {
   font-size: 0.8rem;
-  color: #1a2b33;
+  color: #64748b;
   margin: 0;
 }
+
+/* ── Fields grid ── */
 .lp2-fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.9rem 1rem;
+  gap: 0.85rem 1rem;
   margin-bottom: 1rem;
 }
 .lp2-field {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.28rem;
 }
-.lp2-field--full {
-  grid-column: 1 / -1;
-}
+.lp2-field--full { grid-column: 1 / -1; }
+
 .lp2-label {
-  font-size: 0.8rem;
+  font-size: 0.73rem;
   font-weight: 700;
-  color: #1a2b33;
+  color: #374151;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
-.lp2-req {
-  color: #ef4444;
+.lp2-optional {
+  font-weight: 400;
+  color: #94a3b8;
+  text-transform: none;
+  letter-spacing: 0;
 }
+.lp2-req { color: #ef4444; }
+
+/* ── Input wrap — focus ring lives here ── */
 .lp2-input-wrap {
   position: relative;
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
 }
+.lp2-input-wrap--focused {
+  box-shadow: 0 0 0 3px rgba(27,72,224,0.14), 0 2px 6px rgba(27,72,224,0.06);
+}
+.lp2-input-wrap--ok {
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.14);
+}
+.lp2-input-wrap--error {
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.12);
+}
+
+/* ── Icons ── */
 .lp2-icon {
   position: absolute;
   left: 0.85rem;
   font-size: 0.9rem;
-  color: #4a5568;
+  color: #94a3b8;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
+  transition: color 0.2s;
 }
+.lp2-icon--active { color: #1B48E0; }
+.lp2-icon--ok     { color: #22c55e; }
+
+/* ── Valid checkmark ── */
+.lp2-valid-icon {
+  position: absolute;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  color: #22c55e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 2;
+  animation: lp2-check-pop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.lp2-valid-icon--select { right: 2.2rem; } /* don't overlap select arrow */
+
+/* ── Inputs ── */
 .lp2-input {
   width: 100%;
-  padding: 0.7rem 0.9rem 0.7rem 2.4rem;
-  font-size: 0.88rem;
-  color: #1a2b33;
-  background: #ffffff;
+  padding: 0.72rem 2.2rem 0.72rem 2.5rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background: #f8faff;
   border: 1.5px solid #e2e8f0;
   border-radius: 10px;
   outline: none;
   font-family: inherit;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 }
 .lp2-input::placeholder { color: #94a3b8; }
 .lp2-input:focus {
-  border-color: #25d366;
-  box-shadow: 0 0 0 3px rgba(37,211,102,0.12);
+  background: #ffffff;
+  border-color: #1B48E0;
 }
-.lp2-input--error { border-color: #ef4444 !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.10) !important; }
-.lp2-input--ok   { border-color: #22c55e !important; }
-.lp2-select { appearance: none; cursor: pointer; }
-.lp2-select option { color: #1a2b33; }
+.lp2-input--focused { border-color: #1B48E0; background: #ffffff; }
+.lp2-input--error   { border-color: #ef4444 !important; background: #fff5f5 !important; }
+.lp2-input--ok      { border-color: #22c55e !important; background: #f0fdf4 !important; }
+
+/* Select — custom arrow */
+.lp2-select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+}
+.lp2-select option { color: #0f172a; background: #ffffff; }
+
+/* Textarea */
 .lp2-textarea {
-  padding: 0.7rem 0.9rem;
+  padding: 0.72rem 0.9rem;
   resize: vertical;
-  min-height: 80px;
+  min-height: 78px;
   border-radius: 10px;
+  background: #f8faff;
+  line-height: 1.5;
 }
+.lp2-textarea:focus {
+  background: #ffffff;
+  border-color: #1B48E0;
+  box-shadow: 0 0 0 3px rgba(27,72,224,0.12);
+}
+
+/* ── Error message ── */
 .lp2-error {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   color: #ef4444;
   margin-top: 0.1rem;
+  animation: lp2-slide-up 0.22s ease both;
 }
+
+/* ── Custom checkbox ── */
 .lp2-check-label {
   display: flex;
   align-items: flex-start;
-  gap: 0.55rem;
+  gap: 0.6rem;
   cursor: pointer;
+  user-select: none;
+}
+.lp2-check-box {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 5px;
+  margin-top: 1px;
+  background: #f8faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  overflow: hidden;
+}
+.lp2-check-box--checked {
+  background: #25d366;
+  border-color: #25d366;
+  transform: scale(1.1);
+  animation: lp2-check-pop 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.lp2-check-mark {
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
 }
 .lp2-check-input {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  accent-color: #25d366;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   cursor: pointer;
+  margin: 0;
+  z-index: 1;
 }
 .lp2-check-text {
-  font-size: 0.78rem;
-  color: #1a2b33;
+  font-size: 0.77rem;
+  color: #374151;
   line-height: 1.55;
 }
-.lp2-check-text a {
-  color: #1B48E0;
-  text-decoration: underline;
-}
-/* ── Trust signals above submit ── */
+.lp2-check-text a { color: #1B48E0; text-decoration: underline; }
+
+/* ── Trust signals ── */
 .lp2-trust-signals {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem 1rem;
+  gap: 0.35rem 0.8rem;
   justify-content: center;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
+  padding: 0.6rem 0.75rem;
+  background: #f8faff;
+  border-radius: 10px;
+  border: 1px solid #e8efff;
 }
 .lp2-trust-signals span {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.72rem;
+  font-size: 0.71rem;
   font-weight: 600;
   color: #374151;
 }
 
+/* ── Submit button ── */
 .lp2-btn {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  padding: 0.9rem 1.5rem;
-  background: #25d366;
-  color: #0a2e1b;
+  padding: 0.95rem 1.5rem;
+  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 800;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
   letter-spacing: -0.01em;
   margin-bottom: 0.75rem;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-.lp2-btn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+/* Shimmer sweep on the button */
+.lp2-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.30), transparent);
+  transform: skewX(-18deg);
+  animation: lp2-shimmer-sweep 3.5s ease-in-out infinite;
+}
+.lp2-btn-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+.lp2-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+}
+.lp2-btn:hover:not(:disabled) .lp2-btn-arrow {
+  transform: translateX(3px);
+}
+/* Pulse when all fields are valid */
+.lp2-btn--ready {
+  animation: lp2-btn-pulse 2s ease-in-out infinite;
+}
 .lp2-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* Loading spinner */
+.lp2-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
 .lp2-api-error {
   font-size: 0.78rem;
   color: #ef4444;
   margin: 0 0 0.5rem;
   text-align: center;
+  animation: lp2-error-shake 0.35s ease both;
 }
 .lp2-privacy {
   font-size: 0.7rem;
-  color: #374151;
+  color: #64748b;
   text-align: center;
   margin: 0;
 }
+
 @media (max-width: 540px) {
   .lp2-fields { grid-template-columns: 1fr; }
   .lp2-field--full { grid-column: 1; }
+  .lp2-form-title { font-size: 1.15rem; }
 }
 
 /* ── Minimal footer ── */
