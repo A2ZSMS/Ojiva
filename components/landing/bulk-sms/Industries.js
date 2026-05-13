@@ -1,32 +1,35 @@
 const INDUSTRIES = [
-  { icon: '🛒', title: 'E-Commerce & Retail',    desc: 'Order confirmations, delivery updates, cart abandonment, flash sale alerts, and return notifications.' },
-  { icon: '🏦', title: 'Finance & Banking',       desc: 'OTPs, transaction alerts, payment reminders, KYC updates, and loan application status.' },
-  { icon: '🏥', title: 'Healthcare',              desc: 'Appointment reminders, prescription alerts, lab test results, doctor availability, and health tips.' },
-  { icon: '🎓', title: 'Education & EdTech',      desc: 'Fee reminders, exam schedules, result notifications, admission updates, and class alerts.' },
-  { icon: '🚚', title: 'Logistics & Delivery',    desc: 'Shipment tracking, delivery confirmations, delay alerts, and pick-up notifications.' },
-  { icon: '🏗️', title: 'Real Estate',             desc: 'Lead nurturing, property updates, site visit reminders, payment due alerts, and new launch alerts.' },
+  { icon: '🛒', title: 'E-Commerce & Retail',    desc: 'Order confirmations, cart recovery, flash sale alerts, delivery updates.' },
+  { icon: '🎓', title: 'Education',               desc: 'Fee reminders, exam schedules, results, admissions, and class alerts.' },
+  { icon: '🏗️', title: 'Real Estate',             desc: 'Lead follow-ups, site visit reminders, payment dues, new launches.' },
+  { icon: '🏦', title: 'Banking & Finance',        desc: 'OTPs, transaction alerts, payment reminders, loan status updates.' },
+  { icon: '🎮', title: 'Gaming & Entertainment',  desc: 'Event alerts, new content, offers, tournament invites, score updates.' },
+  { icon: '🚚', title: 'Logistics',               desc: 'Shipment tracking, delivery confirmations, delay alerts, pick-ups.' },
+  { icon: '🏥', title: 'Healthcare',               desc: 'Appointment reminders, lab results, doctor availability, health tips.' },
+  { icon: '🛡️', title: 'Insurance',               desc: 'Premium due alerts, policy renewals, claim updates, and KYC messages.' },
+  { icon: '✈️', title: 'Tours & Travel',           desc: 'Booking confirmations, itinerary updates, check-in reminders, offers.' },
 ];
 
 export default function Industries() {
   return (
-    <section className="slp-section slp-section--alt">
+    <section className="bs2-section bs2-section--light">
       <div className="container">
         <div className="text-center mb-5">
-          <p className="slp-eyebrow" style={{ color: '#22d3ee' }}>Industries</p>
-          <h2 className="slp-section-title">Built for Every Indian Business</h2>
-          <p className="slp-section-desc">
-            From fintech to healthcare, logistics to e-commerce — Ojiva AI powers bulk SMS
-            campaigns across every major industry vertical in India.
+          <p className="bs2-eyebrow">INDUSTRIES</p>
+          <h2 className="bs2-section-title">Bulk SMS for Every Industry</h2>
+          <p className="bs2-section-desc">
+            Ojiva AI powers bulk SMS communication across every major industry
+            vertical in India — from startups to enterprise.
           </p>
         </div>
 
-        <div className="slp-industry-grid">
+        <div className="bs2-industry-grid">
           {INDUSTRIES.map(({ icon, title, desc }) => (
-            <div key={title} className="slp-industry-card">
-              <div className="slp-industry-icon">{icon}</div>
+            <div key={title} className="bs2-industry-card">
+              <div className="bs2-industry-icon">{icon}</div>
               <div>
-                <div className="slp-industry-title">{title}</div>
-                <p className="slp-industry-desc">{desc}</p>
+                <div className="bs2-industry-title">{title}</div>
+                <p className="bs2-industry-desc">{desc}</p>
               </div>
             </div>
           ))}

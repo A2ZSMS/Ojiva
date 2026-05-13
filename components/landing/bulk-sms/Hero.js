@@ -1,55 +1,69 @@
 import LandingLeadForm from '../LandingLeadForm';
 
+const BULLETS = [
+  '100% DLT compliant & TRAI registered',
+  '98% open rate — best in class',
+  'Instant delivery for OTP & critical alerts',
+  'Promotional SMS for mass marketing campaigns',
+  'AI-integrated bulk messaging workflows',
+];
+
+const STATS = [
+  { val: '100%',  lbl: 'DLT Compliant' },
+  { val: '98.2%', lbl: 'Open Rate'     },
+  { val: '24/7',  lbl: 'Support'       },
+];
+
 export default function Hero() {
   return (
-    <section className="slp-hero">
-      <div className="slp-hero-grid" aria-hidden="true" />
-      <div className="slp-orb slp-orb--1" aria-hidden="true" />
-      <div className="slp-orb slp-orb--2" aria-hidden="true" />
-
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+    <section className="bs2-hero">
+      <div className="container">
         <div className="row align-items-center g-4 g-xl-5">
 
-          {/* Left — copy */}
+          {/* ── Left copy ── */}
           <div className="col-12 col-lg-6">
-            <div className="slp-badge">
-              <span className="slp-badge-dot" />
+            <div className="bs2-hero-badge">
+              <span className="bs2-hero-badge-dot" />
               India&apos;s #1 Bulk SMS Provider — DLT Registered
             </div>
 
-            <h1 className="slp-hero-h1">
-              Send Bulk SMS to{' '}
-              <span className="slp-hero-highlight">1.2 Billion</span>{' '}
-              Indian Mobiles
+            <h1 className="bs2-hero-h1">
+              Bulk SMS Service Provider in India —{' '}
+              <span className="bs2-hero-highlight">Fast &amp; Reliable SMS Gateway</span>
             </h1>
 
-            <p className="slp-hero-desc">
-              India&apos;s most trusted bulk SMS service provider — 99% delivery rate,
-              sub-3 second OTP, DLT compliant, 10M+ messages every day. Trusted by 500+ businesses.
+            <p className="bs2-hero-desc">
+              Enterprise-grade Transactional &amp; Promotional Bulk SMS Service
+              delivering 10M+ messages daily. Sub-3 second OTP delivery, 99%
+              delivery rate, and full TRAI DLT compliance.
             </p>
 
-            <div className="slp-trust-pills">
-              {['DLT Registered', '99% Delivery', 'AES-256 Encrypted', '48-Hr Go-Live', '24/7 Support'].map(p => (
-                <span key={p} className="slp-trust-pill">
-                  <i className="bi bi-check-circle-fill" /> {p}
-                </span>
+            <ul className="bs2-hero-bullets">
+              {BULLETS.map(b => (
+                <li key={b}>
+                  <span className="bs2-check">✓</span> {b}
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <div className="slp-proof">
-              <span className="slp-proof-stars">★★★★★</span>
-              <span>Trusted by <strong style={{ color: '#e2e8f0' }}>500+ businesses</strong> across India</span>
+            <div className="bs2-hero-stats">
+              {STATS.map(({ val, lbl }) => (
+                <div key={lbl} className="bs2-hero-stat">
+                  <span className="bs2-hero-stat-val">{val}</span>
+                  <span className="bs2-hero-stat-lbl">{lbl}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* ── Right form ── */}
           <div className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
-            <div className="slp-form-card" style={{ width: '100%', maxWidth: '420px' }}>
+            <div className="bs2-form-card">
               <LandingLeadForm
                 source="bulk-sms"
-                title="Get Free Bulk SMS Trial"
+                title="Claim Your Free Demo &amp; Pricing"
                 subtitle="Go live in 48 hours. No credit card required."
-                submitLabel="Start Free Trial →"
+                submitLabel="Get Free Demo →"
                 thankYouUrl="/book-demo"
               />
             </div>

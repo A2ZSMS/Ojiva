@@ -1,42 +1,67 @@
+import Link from 'next/link';
+
 const STEPS = [
   {
     num: '01',
-    title: 'Sign Up & Get Verified',
-    desc: 'Fill the form and our team completes your DLT sender ID registration and entity verification within 48 hours.',
+    icon: 'bi-person-plus-fill',
+    title: 'Sign Up',
+    desc: 'Create your free Ojiva AI account in 2 minutes. No credit card required.',
+    color: '#1B48E0',
   },
   {
     num: '02',
-    title: 'Upload Contacts or Connect API',
-    desc: 'Import your customer list via CSV, Excel, or connect directly to your CRM, e-commerce, or custom app via REST API.',
+    icon: 'bi-shield-check-fill',
+    title: 'DLT Registration',
+    desc: 'Our team handles TRAI DLT entity registration, sender ID, and template approvals for you.',
+    color: '#16a34a',
   },
   {
     num: '03',
-    title: 'Launch & Track Campaigns',
-    desc: 'Create your message, schedule or send instantly, and monitor live delivery rates, CTR, and campaign ROI from your dashboard.',
+    icon: 'bi-people-fill',
+    title: 'Upload Contacts',
+    desc: 'Import your customer list via CSV/Excel or connect via REST API to your CRM or app.',
+    color: '#7c3aed',
+  },
+  {
+    num: '04',
+    icon: 'bi-send-fill',
+    title: 'Go Live!',
+    desc: 'Send your first campaign, track real-time delivery, and watch your engagement soar.',
+    color: '#d97706',
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="slp-section slp-section--dark">
+    <section className="bs2-section bs2-section--white">
       <div className="container">
         <div className="text-center mb-5">
-          <p className="slp-eyebrow" style={{ color: '#60a5fa' }}>Get Started</p>
-          <h2 className="slp-section-title">Go Live in 48 Hours — Here&apos;s How</h2>
-          <p className="slp-section-desc">
-            No complex setup. No long contracts. Our team handles everything so you can start
-            sending bulk SMS in India as fast as possible.
+          <p className="bs2-eyebrow">GET STARTED</p>
+          <h2 className="bs2-section-title">Get Started in 4 Easy Steps</h2>
+          <p className="bs2-section-desc">
+            We handle the complexity — DLT registration, sender IDs, template
+            approvals — so you can start sending bulk SMS in India within 48 hours.
           </p>
         </div>
 
-        <div className="slp-steps-grid">
-          {STEPS.map(({ num, title, desc }) => (
-            <div key={num} className="slp-step">
-              <div className="slp-step-num">{num}</div>
-              <div className="slp-step-title">{title}</div>
-              <p className="slp-step-desc">{desc}</p>
+        <div className="bs2-steps-grid">
+          {STEPS.map(({ num, icon, title, desc, color }, idx) => (
+            <div key={num} className="bs2-step">
+              {idx < STEPS.length - 1 && <div className="bs2-step-connector" />}
+              <div className="bs2-step-icon-wrap" style={{ background: `${color}14`, border: `2px solid ${color}30` }}>
+                <i className={`bi ${icon}`} style={{ color, fontSize: '1.4rem' }} />
+              </div>
+              <div className="bs2-step-num" style={{ color }}>{num}</div>
+              <div className="bs2-step-title">{title}</div>
+              <p className="bs2-step-desc">{desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-5">
+          <Link href="/contact" className="bs2-btn-primary">
+            Start Your Journey <i className="bi bi-arrow-right ms-2" />
+          </Link>
         </div>
       </div>
     </section>
