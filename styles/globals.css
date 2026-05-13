@@ -20920,111 +20920,81 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ══════════════════════════════════════════════════════════
-   LLF — Landing Lead Form Card (self-contained)
-   Used on: all landing pages + service pages
+   LLF — Landing Lead Form Card
+   High-conversion design: countdown · scarcity · icon-inputs
    ══════════════════════════════════════════════════════════ */
 
 /* ── Card wrapper ── */
 .llf-card {
   background: #ffffff;
-  border: 1px solid rgba(27,72,224,0.08);
-  border-radius: 20px;
-  padding: 1.75rem 1.75rem 1.5rem;
-  position: relative;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow:
-    0 2px 8px rgba(26,43,51,0.06),
-    0 12px 40px rgba(27,72,224,0.09),
-    0 0 0 1px rgba(27,72,224,0.04);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
   width: 100%;
 }
-/* Animated gradient top border */
-.llf-card::before {
-  content: '';
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, #25d366 0%, #1B48E0 50%, #00c8f8 100%);
-  background-size: 200% 100%;
-  animation: llf-shimmer 4s linear infinite;
-  border-radius: 20px 20px 0 0;
-}
-@keyframes llf-shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
-}
 
-/* ── Top badge ── */
-.llf-top-badge {
-  display: inline-flex;
+/* ── 1. Countdown bar ── */
+.llf-countdown-bar {
+  display: flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #374151;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-radius: 50px;
-  padding: 0.22rem 0.7rem;
-  margin-bottom: 0.85rem;
-}
-
-/* ── Progress bar ── */
-.llf-progress-track {
-  position: relative;
-  height: 4px;
-  background: #e2e8f0;
-  border-radius: 99px;
-  overflow: visible;
-  margin-bottom: 1.1rem;
-}
-.llf-progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #1B48E0 0%, #00c8f8 100%);
-  border-radius: 99px;
-  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  min-width: 0;
-}
-.llf-progress-pct {
-  position: absolute;
-  right: 0;
-  top: -18px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: #1B48E0;
-}
-
-/* ── Title / subtitle ── */
-.llf-title {
-  font-size: 1.18rem;
-  font-weight: 800;
-  color: #0f172a;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.3rem;
-}
-.llf-sub {
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1rem;
+  background: #064e3b;
+  color: #d1fae5;
   font-size: 0.8rem;
-  color: #64748b;
-  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+.llf-countdown-label { opacity: 0.85; }
+.llf-countdown-timer {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(255,255,255,0.12);
+  border-radius: 6px;
+  padding: 0.15rem 0.55rem;
+  letter-spacing: 0.05em;
 }
 
-/* ── Live badge ── */
-.llf-live-badge {
-  display: inline-flex;
+/* ── 2. Scarcity strip ── */
+.llf-scarcity {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #166534;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-radius: 50px;
-  padding: 0.2rem 0.65rem;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  background: #fffbeb;
+  border-bottom: 1px solid #fde68a;
+  font-size: 0.78rem;
+  color: #92400e;
+  line-height: 1.4;
 }
-.llf-live-dot {
-  width: 6px;
-  height: 6px;
+.llf-scarcity-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  flex-shrink: 0;
+  animation: llf-pulse 1.8s ease-in-out infinite;
+}
+@keyframes llf-pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* ── 3. Response time ── */
+.llf-response-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.25rem;
+  background: #f0fdf4;
+  border-bottom: 1px solid #bbf7d0;
+  font-size: 0.76rem;
+  color: #166534;
+}
+.llf-response-dot {
+  width: 7px; height: 7px;
   border-radius: 50%;
   background: #22c55e;
   flex-shrink: 0;
@@ -21032,98 +21002,277 @@ input:focus, textarea:focus, select:focus {
 }
 @keyframes llf-blink {
   0%,100% { opacity: 1; }
-  50%     { opacity: 0.3; }
+  50%      { opacity: 0.3; }
 }
 
-/* ── Bootstrap form-floating overrides (scoped to .llf-card) ── */
-.llf-card .form-floating > label {
-  font-size: 0.82rem;
+/* ── 4. Head + form body ── */
+.llf-head { padding: 1.25rem 1.5rem 0; }
+.llf-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.28rem;
+}
+.llf-sub {
+  font-size: 0.78rem;
   color: #64748b;
+  margin: 0;
 }
-.llf-card .form-floating > .form-control:focus ~ label,
-.llf-card .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.llf-card .form-floating > .form-select ~ label {
-  font-size: 0.72rem;
-  color: #1B48E0;
+
+/* ── 5. Progress bar ── */
+.llf-progress-track {
+  position: relative;
+  height: 3px;
+  background: #e2e8f0;
+  margin: 0.85rem 1.5rem 0;
 }
-.llf-card .form-floating > .form-control,
-.llf-card .form-floating > .form-select {
-  font-size: 0.87rem;
-  border-color: #cbd5e1;
-  background-color: #f8fafc;
-  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+.llf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a 0%, #22c55e 100%);
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.llf-card .form-floating > .form-control:focus,
-.llf-card .form-floating > .form-select:focus {
+.llf-progress-pct {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* ── 6. Form ── */
+.llf-form {
+  padding: 0.9rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Field wrapper */
+.llf-field { display: flex; flex-direction: column; gap: 0.25rem; }
+.llf-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #374151;
+}
+.llf-req { color: #ef4444; }
+.llf-err {
+  font-size: 0.7rem;
+  color: #ef4444;
+  margin-top: 0.15rem;
+}
+
+/* Two-column row */
+.llf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+/* Icon input */
+.llf-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.llf-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  pointer-events: none;
+  z-index: 1;
+}
+.llf-input,
+.llf-select {
+  width: 100%;
+  padding: 0.6rem 0.75rem 0.6rem 2.25rem;
+  font-size: 0.85rem;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.llf-input::placeholder { color: #94a3b8; }
+.llf-input:focus,
+.llf-select:focus {
   border-color: #1B48E0;
   box-shadow: 0 0 0 3px rgba(27,72,224,0.10);
-  background-color: #ffffff;
+  background: #ffffff;
 }
-.llf-card .form-floating > .form-control.is-valid,
-.llf-card .form-floating > .form-select.is-valid {
-  border-color: #22c55e;
-  background-color: #f0fdf4;
-}
-.llf-card .form-floating > .form-control.is-invalid,
-.llf-card .form-floating > .form-select.is-invalid {
+.llf-input-wrap.has-err .llf-input,
+.llf-input-wrap.has-err .llf-select {
   border-color: #ef4444;
-  background-color: #fff5f5;
+  background: #fff5f5;
 }
+.llf-input-wrap.has-ok .llf-input,
+.llf-input-wrap.has-ok .llf-select {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+.llf-ok-icon {
+  position: absolute;
+  right: 0.65rem;
+  color: #22c55e;
+  font-size: 0.78rem;
+  pointer-events: none;
+}
+
+/* Select arrow — add padding for native arrow */
+.llf-select { padding-right: 2rem; cursor: pointer; }
 
 /* Textarea */
 .llf-textarea {
-  height: 80px !important;
-  min-height: 80px;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.85rem;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
   resize: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  font-family: inherit;
+}
+.llf-textarea::placeholder { color: #94a3b8; }
+.llf-textarea:focus {
+  border-color: #1B48E0;
+  box-shadow: 0 0 0 3px rgba(27,72,224,0.10);
+  background: #ffffff;
 }
 
-/* ── Trust row ── */
-.llf-trust {
+/* Checkbox */
+.llf-check-row { display: flex; flex-direction: column; gap: 0.25rem; }
+.llf-check-label {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.9rem;
-  font-size: 0.71rem;
-  color: #475569;
-  font-weight: 500;
+  align-items: flex-start;
+  gap: 0.55rem;
+  cursor: pointer;
 }
-.llf-trust span { display: flex; align-items: center; gap: 0.25rem; }
+.llf-check-box {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  border-radius: 4px;
+  border: 2px solid #cbd5e1;
+  background: #f8fafc;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+  transition: border-color 0.18s, background 0.18s;
+}
+.llf-check-box.checked {
+  background: #1B48E0;
+  border-color: #1B48E0;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.llf-check-input {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+.llf-check-text {
+  font-size: 0.74rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+.llf-check-text a { color: #1B48E0; text-decoration: underline; }
 
-/* ── Submit button ── */
+/* ── 7. Submit button (green — matches reference) ── */
 .llf-submit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   width: 100%;
-  padding: 0.82rem 1.5rem;
-  font-size: 0.95rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(135deg, #1B48E0 0%, #0d2fa0 100%);
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.18s, box-shadow 0.18s, opacity 0.18s;
-  box-shadow: 0 4px 18px rgba(27,72,224,0.32);
+  transition: transform 0.18s, box-shadow 0.18s;
+  box-shadow: 0 4px 18px rgba(22,163,74,0.38);
   letter-spacing: 0.01em;
 }
 .llf-submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(27,72,224,0.44);
+  box-shadow: 0 8px 28px rgba(22,163,74,0.50);
 }
 .llf-submit-btn:active:not(:disabled) { transform: translateY(0); }
-.llf-submit-btn:disabled { opacity: 0.72; cursor: not-allowed; }
+.llf-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
 
-/* ── Privacy note ── */
+/* API error */
+.llf-api-err {
+  font-size: 0.78rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+.llf-api-err a { color: #dc2626; font-weight: 600; }
+
+/* ── 8. Privacy + trust badges + activity (below form, inside card) ── */
 .llf-privacy {
   font-size: 0.7rem;
   color: #94a3b8;
   text-align: center;
-  margin: 0.55rem 0 0;
+  padding: 0.6rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 }
 
-/* ── Checkbox link colour ── */
-.llf-card .form-check-label a { color: #1B48E0; }
+.llf-trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.6rem 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 500;
+}
+.llf-trust-badges span { display: flex; align-items: center; gap: 0.28rem; }
+
+.llf-activity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.5rem 0.85rem;
+  font-size: 0.74rem;
+  color: #64748b;
+  border-top: 1px solid #f1f5f9;
+  background: #fafafa;
+}
+.llf-activity-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: llf-blink 1.6s ease-in-out infinite;
+}
+.llf-activity-ago { color: #94a3b8; }
+
+@media (max-width: 480px) {
+  .llf-row { grid-template-columns: 1fr; }
+  .llf-form { padding: 0.75rem 1.1rem 0; }
+  .llf-head { padding: 1rem 1.1rem 0; }
+  .llf-progress-track { margin: 0.75rem 1.1rem 0; }
+  .llf-trust-badges { gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+  .llf-activity, .llf-trust-badges { padding-left: 1.1rem; padding-right: 1.1rem; }
+}
 
 /* ── Service page form section ── */
 .svc-form-section {
