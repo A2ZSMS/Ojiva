@@ -1,4 +1,4 @@
-import { buildMetadata, organizationSchema, breadcrumbSchema } from '@/lib/metadata';
+import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 import AboutPageContent from '@/components/about/AboutPage';
 
 export const metadata = buildMetadata({
@@ -38,7 +38,7 @@ const aboutBreadcrumb = breadcrumbSchema([
 export default function AboutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      {/* organizationSchema is already injected globally via app/layout.js */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumb) }} />
       <AboutPageContent />

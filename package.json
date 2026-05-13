@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt",
+    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt",
     "start": "next start",
     "lint": "eslint"
   },

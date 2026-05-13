@@ -75,6 +75,7 @@ const EXCLUDED_PATH_PREFIXES = [
 
 module.exports = {
   siteUrl: 'https://www.ojiva.ai',
+  outDir: './out',           // write sitemaps directly into the static export output
   generateRobotsTxt: true,
   sitemapSize: 5000,
   // Default priority/changefreq — overridden by transform per URL
@@ -145,8 +146,6 @@ module.exports = {
         ],
       },
     ],
-    additionalSitemaps: [
-      'https://www.ojiva.ai/sitemap.xml',
-    ],
+    additionalSitemaps: [],
   },
 };
