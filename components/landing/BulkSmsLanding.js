@@ -1,23 +1,32 @@
-import Hero           from './bulk-sms/Hero';
-import StatsBar       from './bulk-sms/StatsBar';
-import SmsTypes       from './bulk-sms/SmsTypes';
-import ProblemSolution from './bulk-sms/ProblemSolution';
-import MetricsRow     from './bulk-sms/MetricsRow';
-import ComparisonTable from './bulk-sms/ComparisonTable';
-import FullFeatures   from './bulk-sms/FullFeatures';
-import HowItWorks     from './bulk-sms/HowItWorks';
-import Industries     from './bulk-sms/Industries';
-import Integrations   from './bulk-sms/Integrations';
-import Testimonials   from './bulk-sms/Testimonials';
-import FAQ            from './bulk-sms/FAQ';
-import FinalCTA       from './bulk-sms/FinalCTA';
+import dynamic from 'next/dynamic';
+import Hero     from './bulk-sms/Hero';
+import StatsBar from './bulk-sms/StatsBar';
+import SmsTypes from './bulk-sms/SmsTypes';
+
+/* ── Lazy-loaded below-the-fold sections ─────────────────────
+   Dynamic imports split each section into its own JS chunk so
+   the browser only downloads them when needed, improving FCP.
+   ─────────────────────────────────────────────────────────── */
+const ProblemSolution = dynamic(() => import('./bulk-sms/ProblemSolution'));
+const MetricsRow      = dynamic(() => import('./bulk-sms/MetricsRow'));
+const ComparisonTable = dynamic(() => import('./bulk-sms/ComparisonTable'));
+const FullFeatures    = dynamic(() => import('./bulk-sms/FullFeatures'));
+const HowItWorks      = dynamic(() => import('./bulk-sms/HowItWorks'));
+const Industries      = dynamic(() => import('./bulk-sms/Industries'));
+const Integrations    = dynamic(() => import('./bulk-sms/Integrations'));
+const Testimonials    = dynamic(() => import('./bulk-sms/Testimonials'));
+const FAQ             = dynamic(() => import('./bulk-sms/FAQ'));
+const FinalCTA        = dynamic(() => import('./bulk-sms/FinalCTA'));
 
 export default function BulkSmsLanding({ faqs }) {
   return (
     <>
+      {/* Above-the-fold: rendered immediately for fast FCP */}
       <Hero />
       <StatsBar />
       <SmsTypes />
+
+      {/* Below-the-fold: lazy-loaded after initial paint */}
       <ProblemSolution />
       <MetricsRow />
       <ComparisonTable />

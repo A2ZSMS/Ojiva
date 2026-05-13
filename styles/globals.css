@@ -20502,11 +20502,11 @@ input:focus, textarea:focus, select:focus {
 }
 .bs2-form-card {
   width: 100%;
-  max-width: 430px;
+  max-width: 440px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 32px rgba(27,72,224,0.1), 0 1px 4px rgba(0,0,0,0.06);
-  overflow: hidden;
+  padding: 1.75rem 1.75rem 1.5rem;
 }
 
 /* ── Stats bar ──────────────────────────────────────────────────────────── */
@@ -20939,3 +20939,169 @@ input:focus, textarea:focus, select:focus {
   .bs2-hero-stats        { width: 100%; }
   .bs2-hero-stat         { flex: 1; padding: 0.7rem 0.9rem; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   LLF — Landing Lead Form (Bootstrap-based)
+   Uses Bootstrap form-floating, form-control, is-valid/invalid
+   ══════════════════════════════════════════════════════════ */
+
+/* Progress bar */
+.llf-progress-track {
+  position: relative;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  overflow: visible;
+}
+.llf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1B48E0 0%, #00c8f8 100%);
+  border-radius: 99px;
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-width: 0;
+}
+.llf-progress-pct {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #1B48E0;
+}
+
+/* Title / subtitle */
+.llf-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.llf-sub {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Live badge */
+.llf-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 50px;
+  padding: 0.2rem 0.65rem;
+}
+.llf-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: llf-blink 1.6s ease-in-out infinite;
+}
+@keyframes llf-blink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0.3; }
+}
+
+/* Override Bootstrap form-floating label size for compactness */
+.form-floating > label {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  font-size: 0.72rem;
+  color: #1B48E0;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  font-size: 0.88rem;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+  border-color: #1B48E0;
+  box-shadow: 0 0 0 3px rgba(27,72,224,0.12);
+  background-color: #ffffff;
+}
+.form-floating > .form-control.is-valid,
+.form-floating > .form-select.is-valid {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+.form-floating > .form-control.is-invalid,
+.form-floating > .form-select.is-invalid {
+  border-color: #ef4444;
+  background-color: #fff5f5;
+}
+
+/* Textarea height fix inside form-floating */
+.llf-textarea {
+  height: 80px !important;
+  min-height: 80px;
+  resize: none;
+}
+
+/* Optional label */
+.llf-opt-label .text-secondary { font-size: 0.72rem; }
+
+/* Trust signals row */
+.llf-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.72rem;
+  color: #475569;
+  font-weight: 500;
+}
+.llf-trust span { display: flex; align-items: center; gap: 0.28rem; }
+
+/* Submit button */
+.llf-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1B48E0 0%, #0d2fa0 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s, opacity 0.18s;
+  box-shadow: 0 4px 18px rgba(27,72,224,0.35);
+  letter-spacing: 0.01em;
+}
+.llf-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(27,72,224,0.45);
+}
+.llf-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+.llf-submit-btn:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+/* Privacy note */
+.llf-privacy {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0.6rem 0 0;
+}
+
+/* Form check link colours */
+.form-check-label a { color: #1B48E0; }
