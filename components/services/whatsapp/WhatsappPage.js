@@ -1,5 +1,4 @@
-import CTA from '@/components/ui/CTA';
-import { FadeUp } from '@/components/ui/Animations';
+import ServiceLeadForm from '@/components/ui/ServiceLeadForm';
 import FAQ from '@/components/services/whatsapp-chatbot/FAQ';
 import RelatedServices from '@/components/ui/RelatedServices';
 import Hero from './Hero';
@@ -22,9 +21,25 @@ export default function WhatsappPageContent({ faqs }) {
       <ExploreServices />
       {faqs && <FAQ faqs={faqs} subtitle="Everything you need to know about WhatsApp Business API." />}
       <RelatedServices currentPath="/whatsapp" />
-      <FadeUp>
-        <CTA title="Start Conversations That Convert on WhatsApp" subtitle="Join 500+ businesses using Ojiva AI WhatsApp API. Official Meta BSP, Green Tick support, and live in 48 hours." primaryLabel="Get WhatsApp API" primaryHref="/contact" secondaryLabel="Talk to Sales" secondaryHref="/contact" />
-      </FadeUp>
+      <ServiceLeadForm
+        source="whatsapp-service"
+        eyebrow="WHATSAPP BUSINESS API"
+        heading="Start Conversations That Convert"
+        headingHighlight="That Convert"
+        description="Official Meta BSP. Go live in 48 hours with WhatsApp Business API — AI chatbot, multi-agent inbox, CRM integration, and full India support included."
+        perks={[
+          'Official Meta Business Service Provider',
+          'Green Tick verification support',
+          'AI chatbot + multi-agent inbox included',
+          'No DLT registration needed',
+          'Dedicated onboarding specialist (IST hours)',
+        ]}
+        stats={[{ val: '98%', lbl: 'Open Rate' }, { val: '500+', lbl: 'Businesses' }, { val: '48hr', lbl: 'Go-Live' }]}
+        formTitle="Get WhatsApp API Access"
+        formSubtitle="No credit card. No DLT needed. Setup in 48 hours."
+        formBadge="Official Meta BSP · No DLT needed · No lock-in"
+        submitLabel="Get WhatsApp API →"
+      />
     </>
   );
 }

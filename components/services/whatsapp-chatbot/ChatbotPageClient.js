@@ -1,7 +1,6 @@
 'use client';
 
-import CTA from '@/components/ui/CTA';
-import { FadeUp } from '@/components/ui/Animations';
+import ServiceLeadForm from '@/components/ui/ServiceLeadForm';
 import Hero from './Hero';
 import Capabilities from './Capabilities';
 import NoCodeBuilder from './NoCodeBuilder';
@@ -24,18 +23,25 @@ export default function ChatbotPageClient({ faqs }) {
       <FAQ faqs={faqs} />
       <ExploreServices />
       <RelatedServices currentPath="/whatsapp-chatbot" />
-
-      {/* ══ CTA ══ */}
-      <FadeUp>
-        <CTA
-          title="Ready to Build Your WhatsApp Chatbot?"
-          subtitle="Join 500+ businesses automating WhatsApp conversations, qualifying leads, and driving sales 24/7."
-          primaryLabel="Build Your Chatbot"
-          primaryHref="/contact"
-          secondaryLabel="Book a Demo"
-          secondaryHref="/book-demo"
-        />
-      </FadeUp>
+      <ServiceLeadForm
+        source="whatsapp-chatbot-service"
+        eyebrow="WHATSAPP CHATBOT"
+        heading="Build Your WhatsApp Chatbot Today"
+        headingHighlight="Today"
+        description="No-code builder + AI NLP — deploy a 24/7 WhatsApp chatbot that qualifies leads, answers support queries, and drives sales without any human intervention."
+        perks={[
+          'No-code visual flow builder — no developers needed',
+          'AI NLP for natural, human-like conversations',
+          '87% of queries auto-resolved without human agents',
+          'Multi-language support for Indian customers',
+          'CRM integration — HubSpot, Salesforce, Zoho',
+        ]}
+        stats={[{ val: '87%', lbl: 'Auto-Resolved' }, { val: '24×7', lbl: 'Always On' }, { val: '48hr', lbl: 'Deployment' }]}
+        formTitle="Build Your WhatsApp Chatbot"
+        formSubtitle="No-code deployment. Live in 48 hours."
+        formBadge="No-Code · AI NLP · No lock-in"
+        submitLabel="Get Chatbot Access →"
+      />
     </>
   );
 }

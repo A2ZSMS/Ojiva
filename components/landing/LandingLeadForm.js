@@ -53,6 +53,7 @@ export default function LandingLeadForm({
   source      = 'whatsapp-api',
   title       = 'Get WhatsApp API Access for Your Business',
   subtitle    = 'Setup in 48 hours. No lock-in. Pay-as-you-go.',
+  badge       = 'Instant Setup · No lock-in · No credit card',
   submitLabel = 'Get WhatsApp API Pricing →',
   thankYouUrl = THANK_YOU,
 }) {
@@ -110,7 +111,7 @@ export default function LandingLeadForm({
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: WEB3_KEY,
-            subject:    `Bulk SMS Lead — ojiva.ai/${source}`,
+            subject:    `Lead — ojiva.ai/${source}`,
             from_name:  'Ojiva AI Landing Page',
             redirect:   'false',
             ...payload,
@@ -139,222 +140,154 @@ export default function LandingLeadForm({
   };
 
   /* Bootstrap validation class helpers */
-  const fieldClass = (k) => {
-    if (!touched[k]) return 'form-control';
-    return errors[k] ? 'form-control is-invalid' : 'form-control is-valid';
-  };
-  const selectClass = (k) => {
-    if (!touched[k]) return 'form-select';
-    return errors[k] ? 'form-select is-invalid' : 'form-select is-valid';
-  };
+  const fieldClass  = (k) => `form-control${touched[k] ? (errors[k] ? ' is-invalid' : ' is-valid') : ''}`;
+  const selectClass = (k) => `form-select${touched[k] ? (errors[k] ? ' is-invalid' : ' is-valid') : ''}`;
 
   /* ── Render ── */
   return (
-    <form onSubmit={handleSubmit} noValidate>
+    <div className="llf-card">
 
       {/* ── Progress bar ── */}
-      <div className="llf-progress-track mb-3">
+      <div className="llf-progress-track">
         <div className="llf-progress-fill" style={{ width: `${completePct}%` }} />
-        {completePct > 0 && (
-          <span className="llf-progress-pct">{completePct}%</span>
-        )}
+        {completePct > 0 && <span className="llf-progress-pct">{completePct}%</span>}
       </div>
 
-      {/* ── Form header ── */}
-      <h3 className="llf-title mb-1">{title}</h3>
-      <p className="llf-sub mb-2">{subtitle}</p>
-      <div className="llf-live-badge mb-3">
+      {/* ── Badge ── */}
+      <div className="llf-top-badge">
+        <i className="bi bi-lightning-charge-fill" style={{ color: '#22c55e' }} />
+        <span>{badge}</span>
+      </div>
+
+      {/* ── Header ── */}
+      <h3 className="llf-title">{title}</h3>
+      <p className="llf-sub">{subtitle}</p>
+      <div className="llf-live-badge">
         <span className="llf-live-dot" />
-        <span>47 businesses got access this month</span>
+        <span>47 businesses joined this month</span>
       </div>
 
-      {/* ── Row 1: Name ── */}
-      <div className="form-floating mb-3">
-        <input
-          id="llf-name"
-          type="text"
-          className={fieldClass('name')}
-          placeholder="Full Name"
-          value={form.name}
-          onChange={handleChange('name')}
-          onBlur={handleBlur('name')}
-          autoComplete="name"
-          disabled={submitting}
-        />
-        <label htmlFor="llf-name">
-          Full Name <span className="text-danger">*</span>
-        </label>
-        {touched.name && errors.name && (
-          <div className="invalid-feedback">{errors.name}</div>
-        )}
-      </div>
+      {/* ── Form ── */}
+      <form onSubmit={handleSubmit} noValidate className="mt-3">
 
-      {/* ── Row 2: Email + Phone ── */}
-      <div className="row g-2 mb-3">
-        <div className="col-12 col-sm-6">
-          <div className="form-floating">
-            <input
-              id="llf-email"
-              type="email"
-              className={fieldClass('email')}
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange('email')}
-              onBlur={handleBlur('email')}
-              autoComplete="email"
-              disabled={submitting}
-            />
-            <label htmlFor="llf-email">
-              Business Email <span className="text-danger">*</span>
-            </label>
-            {touched.email && errors.email && (
-              <div className="invalid-feedback">{errors.email}</div>
-            )}
+        {/* Full Name */}
+        <div className="form-floating mb-3">
+          <input id="llf-name" type="text" className={fieldClass('name')}
+            placeholder="Full Name" value={form.name}
+            onChange={handleChange('name')} onBlur={handleBlur('name')}
+            autoComplete="name" disabled={submitting} />
+          <label htmlFor="llf-name">Full Name <span className="text-danger">*</span></label>
+          {touched.name && errors.name && <div className="invalid-feedback">{errors.name}</div>}
+        </div>
+
+        {/* Email + Phone */}
+        <div className="row g-2 mb-3">
+          <div className="col-12 col-sm-6">
+            <div className="form-floating">
+              <input id="llf-email" type="email" className={fieldClass('email')}
+                placeholder="Email" value={form.email}
+                onChange={handleChange('email')} onBlur={handleBlur('email')}
+                autoComplete="email" disabled={submitting} />
+              <label htmlFor="llf-email">Business Email <span className="text-danger">*</span></label>
+              {touched.email && errors.email && <div className="invalid-feedback">{errors.email}</div>}
+            </div>
+          </div>
+          <div className="col-12 col-sm-6">
+            <div className="form-floating">
+              <input id="llf-phone" type="tel" className={fieldClass('phone')}
+                placeholder="Phone" value={form.phone}
+                onChange={handleChange('phone')} onBlur={handleBlur('phone')}
+                autoComplete="tel" disabled={submitting} />
+              <label htmlFor="llf-phone">Phone Number <span className="text-danger">*</span></label>
+              {touched.phone && errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
+            </div>
           </div>
         </div>
-        <div className="col-12 col-sm-6">
-          <div className="form-floating">
-            <input
-              id="llf-phone"
-              type="tel"
-              className={fieldClass('phone')}
-              placeholder="Phone"
-              value={form.phone}
-              onChange={handleChange('phone')}
-              onBlur={handleBlur('phone')}
-              autoComplete="tel"
-              disabled={submitting}
-            />
-            <label htmlFor="llf-phone">
-              Phone Number <span className="text-danger">*</span>
-            </label>
-            {touched.phone && errors.phone && (
-              <div className="invalid-feedback">{errors.phone}</div>
-            )}
+
+        {/* Company + Volume */}
+        <div className="row g-2 mb-3">
+          <div className="col-12 col-sm-6">
+            <div className="form-floating">
+              <input id="llf-company" type="text" className={fieldClass('company')}
+                placeholder="Company" value={form.company}
+                onChange={handleChange('company')} onBlur={handleBlur('company')}
+                autoComplete="organization" disabled={submitting} />
+              <label htmlFor="llf-company">Company Name <span className="text-danger">*</span></label>
+              {touched.company && errors.company && <div className="invalid-feedback">{errors.company}</div>}
+            </div>
+          </div>
+          <div className="col-12 col-sm-6">
+            <div className="form-floating">
+              <select id="llf-volume" className={selectClass('volume')}
+                value={form.volume}
+                onChange={handleChange('volume')} onBlur={handleBlur('volume')}
+                disabled={submitting}>
+                {VOLUMES.map(v => <option key={v.value} value={v.value}>{v.label}</option>)}
+              </select>
+              <label htmlFor="llf-volume">Monthly Volume <span className="text-danger">*</span></label>
+              {touched.volume && errors.volume && <div className="invalid-feedback">{errors.volume}</div>}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* ── Row 3: Company + Volume ── */}
-      <div className="row g-2 mb-3">
-        <div className="col-12 col-sm-6">
-          <div className="form-floating">
-            <input
-              id="llf-company"
-              type="text"
-              className={fieldClass('company')}
-              placeholder="Company"
-              value={form.company}
-              onChange={handleChange('company')}
-              onBlur={handleBlur('company')}
-              autoComplete="organization"
-              disabled={submitting}
-            />
-            <label htmlFor="llf-company">
-              Company Name <span className="text-danger">*</span>
-            </label>
-            {touched.company && errors.company && (
-              <div className="invalid-feedback">{errors.company}</div>
-            )}
-          </div>
-        </div>
-        <div className="col-12 col-sm-6">
-          <div className="form-floating">
-            <select
-              id="llf-volume"
-              className={selectClass('volume')}
-              value={form.volume}
-              onChange={handleChange('volume')}
-              onBlur={handleBlur('volume')}
-              disabled={submitting}
-            >
-              {VOLUMES.map(v => (
-                <option key={v.value} value={v.value}>{v.label}</option>
-              ))}
-            </select>
-            <label htmlFor="llf-volume">
-              Monthly Volume <span className="text-danger">*</span>
-            </label>
-            {touched.volume && errors.volume && (
-              <div className="invalid-feedback">{errors.volume}</div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Requirement (optional) ── */}
-      <div className="form-floating mb-3">
-        <textarea
-          id="llf-req"
-          className="form-control llf-textarea"
-          placeholder="Your requirement"
-          value={form.requirement}
-          onChange={handleChange('requirement')}
-          disabled={submitting}
-        />
-        <label htmlFor="llf-req" className="llf-opt-label">
-          Your Requirement <span className="text-secondary fw-normal">(optional)</span>
-        </label>
-      </div>
-
-      {/* ── Checkbox ── */}
-      <div className="mb-3">
-        <div className="form-check">
-          <input
-            id="llf-agree"
-            type="checkbox"
-            className={`form-check-input${touched.agree ? (errors.agree ? ' is-invalid' : ' is-valid') : ''}`}
-            checked={form.agree}
-            onChange={handleChange('agree')}
-            onBlur={handleBlur('agree')}
-            disabled={submitting}
-          />
-          <label className="form-check-label small text-secondary" htmlFor="llf-agree">
-            I accept the{' '}
-            <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-            {' '}and{' '}
-            <a href="/terms" target="_blank" rel="noopener">Terms of Service</a>
-            , and agree to be contacted by Ojiva AI.{' '}
-            <span className="text-danger">*</span>
+        {/* Requirement */}
+        <div className="form-floating mb-3">
+          <textarea id="llf-req" className="form-control llf-textarea"
+            placeholder="Your requirement" value={form.requirement}
+            onChange={handleChange('requirement')} disabled={submitting} />
+          <label htmlFor="llf-req">
+            Your Requirement <span className="text-secondary fw-normal small">(optional)</span>
           </label>
-          {touched.agree && errors.agree && (
-            <div className="invalid-feedback d-block">{errors.agree}</div>
-          )}
         </div>
-      </div>
 
-      {/* ── Trust signals ── */}
-      <div className="llf-trust mb-3">
-        <span><i className="bi bi-patch-check-fill text-success" /> Official Meta BSP</span>
-        <span><i className="bi bi-people-fill text-primary" /> 500+ businesses</span>
-        <span><i className="bi bi-clock-fill" style={{ color: '#a855f7' }} /> 24–48 hr setup</span>
-      </div>
-
-      {/* ── Submit ── */}
-      <button
-        type="submit"
-        className="llf-submit-btn"
-        disabled={submitting}
-      >
-        {submitting
-          ? <><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" />Submitting…</>
-          : <>{submitLabel}</>
-        }
-      </button>
-
-      {apiError && (
-        <div className="alert alert-danger py-2 mt-2 small">
-          <i className="bi bi-exclamation-triangle me-1" />
-          {apiError}{' '}
-          <a href="tel:+918431086185" className="alert-link">Call us</a>.
+        {/* Agree */}
+        <div className="mb-3">
+          <div className="form-check">
+            <input id="llf-agree" type="checkbox"
+              className={`form-check-input${touched.agree ? (errors.agree ? ' is-invalid' : ' is-valid') : ''}`}
+              checked={form.agree}
+              onChange={handleChange('agree')} onBlur={handleBlur('agree')}
+              disabled={submitting} />
+            <label className="form-check-label small text-secondary" htmlFor="llf-agree">
+              I accept the{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              {' '}and{' '}
+              <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+              . <span className="text-danger">*</span>
+            </label>
+            {touched.agree && errors.agree && <div className="invalid-feedback d-block">{errors.agree}</div>}
+          </div>
         </div>
-      )}
 
-      <p className="llf-privacy">
-        <i className="bi bi-lock-fill me-1" />
-        We never share your details. 100% secure.
-      </p>
+        {/* Trust row */}
+        <div className="llf-trust mb-3">
+          <span><i className="bi bi-patch-check-fill text-success" /> Official Meta BSP</span>
+          <span><i className="bi bi-people-fill text-primary" /> 500+ businesses</span>
+          <span><i className="bi bi-clock-fill" style={{ color: '#a855f7' }} /> 48-hr setup</span>
+        </div>
 
-    </form>
+        {/* Submit */}
+        <button type="submit" className="llf-submit-btn" disabled={submitting}>
+          {submitting
+            ? <><span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" />Submitting…</>
+            : submitLabel
+          }
+        </button>
+
+        {apiError && (
+          <div className="alert alert-danger py-2 mt-2 small">
+            <i className="bi bi-exclamation-triangle me-1" />
+            {apiError}{' '}
+            <a href="tel:+918431086185" className="alert-link">Call us</a>.
+          </div>
+        )}
+
+        <p className="llf-privacy">
+          <i className="bi bi-lock-fill me-1" />
+          We never share your details. 100% secure.
+        </p>
+
+      </form>
+    </div>
   );
 }
