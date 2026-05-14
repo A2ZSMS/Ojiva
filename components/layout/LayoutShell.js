@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import PageLoader from './PageLoader';
 
-const AD_ROUTES = ['/whatsapp-api-service'];
+const AD_ROUTES = ['/whatsapp-api-service', '/bulk-sms', '/rcs-messaging'];
 
 export default function LayoutShell({ children }) {
   const pathname = usePathname();

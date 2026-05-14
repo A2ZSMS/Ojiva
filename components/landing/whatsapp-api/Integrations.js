@@ -16,7 +16,7 @@ const INTEGRATIONS = [
 export default function Integrations() {
   return (
     <section className="lp-section lp-section--light">
-      <div className="lp-container lp-container--narrow">
+      <div className="container">
         <div className="lp-section-label">Integrations</div>
         <h2 className="lp-section-h2">
           Connects with the tools you already use

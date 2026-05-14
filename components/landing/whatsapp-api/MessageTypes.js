@@ -46,7 +46,7 @@ const MESSAGE_TYPES = [
 export default function MessageTypes() {
   return (
     <section className="lp-section lp-section--light">
-      <div className="lp-container">
+      <div className="container">
         <div className="lp-section-label">Message Types</div>
         <h2 className="lp-section-h2">
           6 types of messages your business can send today

@@ -53,7 +53,7 @@ function FaqItem({ q, a }) {
 export default function FAQ() {
   return (
     <section className="lp-section lp-section--light">
-      <div className="lp-container lp-container--narrow">
+      <div className="container">
         <div className="lp-section-label">FAQ</div>
         <h2 className="lp-section-h2">
           Everything you need to know before signing up

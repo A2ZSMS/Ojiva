@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="lp-foot">
-      <div className="lp-container">
+      <div className="container">
         <p>
           © {new Date().getFullYear()} Ojiva AI ·{" "}
           <Link href="/privacy">Privacy Policy</Link> ·{" "}

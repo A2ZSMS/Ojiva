@@ -40,7 +40,7 @@ const BENEFITS = [
 export default function Benefits() {
   return (
     <section className="lp-section">
-      <div className="lp-container">
+      <div className="container">
         <div className="lp-section-label">What You Get</div>
         <h2 className="lp-section-h2">
           Everything your business needs to win on WhatsApp

@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import GalaxyCanvas from '@/components/home/galaxy/GalaxyCanvas';
@@ -52,13 +52,6 @@ const FEED = [
   { color: '#34d399', type: 'WhatsApp',  msg: '4.82L OTP delivered · 3s avg',    time: 'just now' },
   { color: '#60a5fa', type: 'Bulk SMS',  msg: '1.2M recipients · 99.1% success', time: '2m ago'   },
   { color: '#22d3ee', type: 'RCS Promo', msg: 'Flash sale · 94% read, 12% CTR',  time: '5m ago'   },
-];
-
-const STATS = [
-  { value: '10M+',  label: 'Messages / Day' },
-  { value: '500+',  label: 'Businesses'      },
-  { value: '99.9%', label: 'Uptime SLA'      },
-  { value: '48 hr', label: 'Go-Live Time'    },
 ];
 
 const TRUST_PILLS = [
@@ -172,18 +165,6 @@ export default function Hero() {
               <span className="hs-proof-score">4.9 / 5</span>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div className="hs-stats" {...fade(0.36)}>
-              {STATS.map(({ value, label }, i) => (
-                <Fragment key={label}>
-                  <div className="hs-stat">
-                    <span className="hs-stat-val">{value}</span>
-                    <span className="hs-stat-lbl">{label}</span>
-                  </div>
-                  {i < STATS.length - 1 && <span className="hs-stat-sep" />}
-                </Fragment>
-              ))}
-            </motion.div>
 
           </div>
 

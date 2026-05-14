@@ -111,7 +111,7 @@ export default function ThankYouPage() {
 
       {/* Footer */}
       <footer className="lp-foot">
-        <div className="lp-container">
+        <div className="container">
           <p>
             © {new Date().getFullYear()} Ojiva AI ·{' '}
             <Link href="/privacy">Privacy Policy</Link> ·{' '}

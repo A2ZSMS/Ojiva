@@ -2,7 +2,7 @@ export default function FinalCTA() {
   return (
     <section className="lp-final">
       <div className="lp-final-bg" aria-hidden="true" />
-      <div className="lp-container lp-container--narrow">
+      <div className="container">
         <h2 className="lp-final-h2">
           Your competitors are already on WhatsApp.
         </h2>

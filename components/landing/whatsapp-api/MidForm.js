@@ -3,7 +3,7 @@ import LandingLeadForm from '../LandingLeadForm';
 export default function MidForm() {
   return (
     <section className="lp-midform-section">
-      <div className="lp-container">
+      <div className="container">
         <div className="lp-midform-grid">
 
           {/* LEFT — content */}

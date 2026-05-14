@@ -46,13 +46,13 @@ export default function Hero() {
 
           {/* Right — form */}
           <div className="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
-            <div className="slp-form-card" style={{ width: '100%', maxWidth: '420px' }}>
+            <div className="slp-form-card">
               <LandingLeadForm
                 source="rcs-messaging"
-                title="Get Free RCS Access"
-                subtitle="Google verification handled by us. Go live in 48 hrs."
-                submitLabel="Get Free RCS Access →"
-                thankYouUrl="/book-demo"
+                title="Book a Demo & Get Pricing"
+                subtitle="30 seconds · Our expert contacts you within 2 hours"
+                submitLabel="Book My Demo & Get Pricing →"
+                thankYouUrl="/thank-you"
               />
             </div>
           </div>

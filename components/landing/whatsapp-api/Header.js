@@ -11,7 +11,7 @@ function scrollToForm(e) {
 export default function Header() {
   return (
     <header className="lp-header">
-      <div className="lp-header-inner">
+      <div className="container lp-header-inner">
 
         {/* Logo — scrolls to form instead of leaving the page */}
         <button

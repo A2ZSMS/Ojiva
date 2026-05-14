@@ -1,7 +1,9 @@
 import dynamic from 'next/dynamic';
+import Header   from './whatsapp-api/Header';
 import Hero     from './bulk-sms/Hero';
 import StatsBar from './bulk-sms/StatsBar';
 import SmsTypes from './bulk-sms/SmsTypes';
+import Footer   from './whatsapp-api/Footer';
 
 /* ── Lazy-loaded below-the-fold sections ─────────────────────
    Dynamic imports split each section into its own JS chunk so
@@ -21,6 +23,7 @@ const FinalCTA        = dynamic(() => import('./bulk-sms/FinalCTA'));
 export default function BulkSmsLanding({ faqs }) {
   return (
     <>
+      <Header />
       {/* Above-the-fold: rendered immediately for fast FCP */}
       <Hero />
       <StatsBar />
@@ -37,6 +40,7 @@ export default function BulkSmsLanding({ faqs }) {
       <Testimonials />
       <FAQ faqs={faqs} />
       <FinalCTA />
+      <Footer />
     </>
   );
 }

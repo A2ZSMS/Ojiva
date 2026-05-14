@@ -61,10 +61,10 @@ export default function Hero() {
             <div className="bs2-form-card">
               <LandingLeadForm
                 source="bulk-sms"
-                title="Claim Your Free Demo &amp; Pricing"
-                subtitle="Go live in 48 hours. No credit card required."
-                submitLabel="Get Free Demo →"
-                thankYouUrl="/book-demo"
+                title="Book a Demo & Get Pricing"
+                subtitle="30 seconds · Our expert contacts you within 2 hours"
+                submitLabel="Book My Demo & Get Pricing →"
+                thankYouUrl="/thank-you"
               />
             </div>
           </div>

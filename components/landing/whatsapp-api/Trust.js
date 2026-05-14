@@ -10,7 +10,7 @@ const TRUST_ITEMS = [
 export default function Trust() {
   return (
     <section className="lp-section">
-      <div className="lp-container">
+      <div className="container">
         <div className="lp-section-label">Security & Compliance</div>
         <h2 className="lp-section-h2">
           Enterprise-grade security. 100% compliant.

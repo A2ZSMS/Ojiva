@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="lp-hero-orb lp-hero-orb--2" />
         <div className="lp-hero-orb lp-hero-orb--3" />
       </div>
-      <div className="lp-container">
+      <div className="container">
         <div className="lp-hero-grid">
           {/* Left */}
           <div className="lp-hero-left">

@@ -27,7 +27,7 @@ const HOW_STEPS = [
 export default function HowItWorks() {
   return (
     <section className="lp-section lp-section--dark">
-      <div className="lp-container lp-container--narrow">
+      <div className="container">
         <div className="lp-section-label lp-section-label--light">
           How It Works
         </div>

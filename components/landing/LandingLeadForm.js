@@ -9,17 +9,16 @@ const MAKE_HOOK = 'https://hook.eu1.make.com/oaum1wrp22fic8clfnz1y3aejoxo954e';
 const THANK_YOU = '/whatsapp-api-service/thank-you';
 
 const SERVICES = [
-  { value: '',              label: 'Select a service' },
-  { value: 'whatsapp-api',  label: 'WhatsApp Business API' },
-  { value: 'bulk-sms',      label: 'Bulk SMS' },
-  { value: 'rcs',           label: 'RCS Messaging' },
-  { value: 'otp-sms',       label: 'OTP / Transactional SMS' },
-  { value: 'voice',         label: 'AI Voice Calls' },
-  { value: 'chatbot',       label: 'WhatsApp Chatbot' },
-  { value: 'all',           label: 'All Channels' },
+  { value: '',             label: 'Select a service' },
+  { value: 'whatsapp-api', label: 'WhatsApp Business API' },
+  { value: 'bulk-sms',     label: 'Bulk SMS' },
+  { value: 'rcs',          label: 'RCS Messaging' },
+  { value: 'otp-sms',      label: 'OTP / Transactional SMS' },
+  { value: 'voice',        label: 'AI Voice Calls' },
+  { value: 'chatbot',      label: 'WhatsApp Chatbot' },
+  { value: 'all',          label: 'All Channels' },
 ];
 
-/* Recent demo activity — cycles every few seconds */
 const ACTIVITY = [
   { name: 'Priya', city: 'Mumbai',    ago: '4 min ago'  },
   { name: 'Rahul', city: 'Delhi',     ago: '9 min ago'  },
@@ -28,7 +27,7 @@ const ACTIVITY = [
   { name: 'Kavya', city: 'Chennai',   ago: '23 min ago' },
 ];
 
-/* ─── Validators ──────────────────────────────────────────── */
+/* ─── Validators ───────────────────────────────────────────── */
 const RULES = {
   name:    v => !v.trim()  ? 'Required.' : v.trim().length < 2 ? 'Enter full name.' : '',
   email:   v => !v.trim()  ? 'Required.' : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? 'Invalid email.' : '',
@@ -49,23 +48,23 @@ function validateAll(f) {
   return e;
 }
 
-const REQUIRED = ['name', 'email', 'phone', 'company', 'service'];
+const REQUIRED  = ['name', 'email', 'phone', 'company', 'service'];
 const EMPTY_ERR = { name:'', email:'', phone:'', company:'', service:'', agree:'' };
 
-/* ─── Countdown (resets to 24 h on mount) ──────────────────── */
+/* ─── Countdown ─────────────────────────────────────────────── */
 function useCountdown() {
-  const [secs, setSecs] = useState(23 * 3600 + 47 * 60 + 2);
+  const [secs, setSecs] = useState(23 * 3600 + 44 * 60 + 6);
   useEffect(() => {
     const t = setInterval(() => setSecs(s => (s > 0 ? s - 1 : 0)), 1000);
     return () => clearInterval(t);
   }, []);
-  const h  = String(Math.floor(secs / 3600)).padStart(2, '0');
-  const m  = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
-  const s  = String(secs % 60).padStart(2, '0');
+  const h = String(Math.floor(secs / 3600)).padStart(2, '0');
+  const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+  const s = String(secs % 60).padStart(2, '0');
   return `${h}:${m}:${s}`;
 }
 
-/* ─── Activity feed (cycles entries) ───────────────────────── */
+/* ─── Activity feed ─────────────────────────────────────────── */
 function useActivity() {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
@@ -75,46 +74,32 @@ function useActivity() {
   return ACTIVITY[idx];
 }
 
-/* ─── Input with left icon ─────────────────────────────────── */
-function Field({ label, required, error, children }) {
+/* ─── Reusable input/select with left icon ───────────────────── */
+function IField({ icon, error, valid, ...props }) {
   return (
-    <div className="llf-field">
-      {label && (
-        <label className="llf-label">
-          {label}{required && <span className="llf-req"> *</span>}
-        </label>
-      )}
-      {children}
-      {error && <span className="llf-err">{error}</span>}
+    <div className={`llf-iw${error ? ' err' : valid ? ' ok' : ''}`}>
+      <i className={`bi ${icon} llf-ii`} />
+      <input className="llf-fi" {...props} />
+      {valid && <i className="bi bi-check-lg llf-ok" />}
     </div>
   );
 }
 
-function Input({ icon, error, valid, ...props }) {
+function ISelect({ icon, error, valid, children, ...props }) {
   return (
-    <div className={`llf-input-wrap${error ? ' has-err' : valid ? ' has-ok' : ''}`}>
-      {icon && <i className={`bi ${icon} llf-input-icon`} />}
-      <input className="llf-input" {...props} />
-      {valid && <i className="bi bi-check-lg llf-ok-icon" />}
+    <div className={`llf-iw${error ? ' err' : valid ? ' ok' : ''}`}>
+      <i className={`bi ${icon} llf-ii`} />
+      <select className="llf-fs" {...props}>{children}</select>
     </div>
   );
 }
 
-function Select({ icon, error, valid, children, ...props }) {
-  return (
-    <div className={`llf-input-wrap${error ? ' has-err' : valid ? ' has-ok' : ''}`}>
-      {icon && <i className={`bi ${icon} llf-input-icon`} />}
-      <select className="llf-select" {...props}>{children}</select>
-    </div>
-  );
-}
-
-/* ─── Component ───────────────────────────────────────────── */
+/* ─── Component ──────────────────────────────────────────────── */
 export default function LandingLeadForm({
   source      = 'whatsapp-api',
-  title       = 'Claim Your Free Demo & Pricing',
-  subtitle    = 'Takes 30 seconds · No credit card · Our expert calls you back',
-  submitLabel = 'Get My Free Demo & Pricing →',
+  title       = 'Book a Demo & Get Pricing',
+  subtitle    = '30 seconds · Expert contacts you within 2 hours',
+  submitLabel = 'Book My Demo & Get Pricing →',
   thankYouUrl = THANK_YOU,
   spotsLeft   = 3,
 }) {
@@ -122,7 +107,7 @@ export default function LandingLeadForm({
   const countdown = useCountdown();
   const activity  = useActivity();
 
-  const [form,       setForm]       = useState({ name:'', email:'', phone:'', company:'', service:'', requirement:'', agree:false });
+  const [form,       setForm]       = useState({ name:'', email:'', phone:'', company:'', service:'', message:'', agree:false });
   const [errors,     setErrors]     = useState(EMPTY_ERR);
   const [touched,    setTouched]    = useState({});
   const [submitting, setSubmitting] = useState(false);
@@ -145,20 +130,19 @@ export default function LandingLeadForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const allT = { name:true, email:true, phone:true, company:true, service:true, agree:true };
-    setTouched(allT);
+    setTouched({ name:true, email:true, phone:true, company:true, service:true, agree:true });
     const errs = validateAll(form);
     setErrors(errs);
     if (Object.values(errs).some(Boolean)) return;
     setSubmitting(true); setApiError('');
 
     const payload = {
-      name:        form.name.trim(),
-      email:       form.email.trim().toLowerCase(),
-      phone:       form.phone.trim(),
-      company:     form.company.trim(),
-      service:     form.service,
-      requirement: form.requirement.trim(),
+      name:    form.name.trim(),
+      email:   form.email.trim().toLowerCase(),
+      phone:   form.phone.trim(),
+      company: form.company.trim(),
+      service: form.service,
+      message: form.message.trim(),
       source,
       submitted_at: new Date().toISOString(),
     };
@@ -166,23 +150,12 @@ export default function LandingLeadForm({
     try {
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3_KEY,
-            subject:    `Lead — ojiva.ai/${source}`,
-            from_name:  'Ojiva AI Landing Page',
-            redirect:   'false',
-            ...payload,
-          }),
-        }).then(r => r.json()),
-        fetch(MAKE_HOOK, {
           method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify(payload),
-        }),
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body:    JSON.stringify({ access_key: WEB3_KEY, subject: `Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload }),
+        }).then(r => r.json()),
+        fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
-
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
         router.push(thankYouUrl);
       } else {
@@ -195,114 +168,121 @@ export default function LandingLeadForm({
     }
   };
 
-  const isTouched = (k) => !!touched[k];
-  const isErr     = (k) => isTouched(k) && !!errors[k];
-  const isOk      = (k) => isTouched(k) && !errors[k] && !!form[k];
+  const isErr = k => !!touched[k] && !!errors[k];
+  const isOk  = k => !!touched[k] && !errors[k] && !!form[k];
 
   return (
     <div className="llf-card">
 
-      {/* ── 1. Countdown timer ── */}
-      <div className="llf-countdown-bar">
-        <span className="llf-countdown-label">
-          <i className="bi bi-clock-fill me-1" /> Offer expires in
-        </span>
-        <span className="llf-countdown-timer">{countdown}</span>
+      {/* ── 1. Dark green countdown bar ── */}
+      <div className="llf-bar-countdown">
+        <i className="bi bi-clock-fill" />
+        <span className="llf-bar-label">Offer expires in</span>
+        <span className="llf-bar-timer">{countdown}</span>
       </div>
 
-      {/* ── 2. Scarcity strip ── */}
-      <div className="llf-scarcity">
-        <span className="llf-scarcity-dot" />
-        Only <strong>{spotsLeft} free setup spots left this month</strong> — grab yours before they&apos;re gone 🔥
+      {/* ── 2. Amber scarcity strip ── */}
+      <div className="llf-bar-scarcity">
+        <span className="llf-dot llf-dot--amber" />
+        Only <strong>{spotsLeft} setup slots available this month</strong> — secure yours before they&apos;re gone
       </div>
 
-      {/* ── 3. Response time ── */}
-      <div className="llf-response-time">
-        <span className="llf-response-dot" />
-        Average response time: <strong>under 2 hours</strong>
+      {/* ── 3. Green response strip ── */}
+      <div className="llf-bar-response">
+        <span className="llf-dot llf-dot--green" />
+        Average response time:&nbsp;<strong>under 2 hours</strong>
       </div>
 
       {/* ── 4. Title ── */}
-      <div className="llf-head">
+      <div className="llf-body-head">
         <h3 className="llf-title">{title}</h3>
         <p className="llf-sub">{subtitle}</p>
+        {completePct > 0 && (
+          <div className="llf-prog">
+            <div className="llf-prog-fill" style={{ width: `${completePct}%` }} />
+            <span className="llf-prog-pct">{completePct}% complete</span>
+          </div>
+        )}
       </div>
 
-      {/* ── 5. Progress bar ── */}
-      {completePct > 0 && (
-        <div className="llf-progress-track">
-          <div className="llf-progress-fill" style={{ width: `${completePct}%` }} />
-          <span className="llf-progress-pct">{completePct}% complete</span>
-        </div>
-      )}
-
-      {/* ── 6. Fields ── */}
+      {/* ── 5. Form ── */}
       <form onSubmit={handleSubmit} noValidate className="llf-form">
 
         {/* Full Name */}
-        <Field label="Full Name" required error={isErr('name') ? errors.name : ''}>
-          <Input icon="bi-person" placeholder="Your Full Name"
-            type="text" autoComplete="name" disabled={submitting}
-            value={form.name} onChange={handleChange('name')} onBlur={handleBlur('name')}
+        <div className="llf-field">
+          <label className="llf-label">Full Name <span className="llf-req">*</span></label>
+          <IField icon="bi-person" placeholder="Your Full Name" type="text" autoComplete="name"
+            disabled={submitting} value={form.name}
+            onChange={handleChange('name')} onBlur={handleBlur('name')}
             error={isErr('name')} valid={isOk('name')} />
-        </Field>
+          {isErr('name') && <span className="llf-err">{errors.name}</span>}
+        </div>
 
         {/* Email + Phone */}
         <div className="llf-row">
-          <Field label="Email" required error={isErr('email') ? errors.email : ''}>
-            <Input icon="bi-envelope" placeholder="you@company.com"
-              type="email" autoComplete="email" disabled={submitting}
-              value={form.email} onChange={handleChange('email')} onBlur={handleBlur('email')}
+          <div className="llf-field">
+            <label className="llf-label">Email <span className="llf-req">*</span></label>
+            <IField icon="bi-envelope" placeholder="you@company.com" type="email" autoComplete="email"
+              disabled={submitting} value={form.email}
+              onChange={handleChange('email')} onBlur={handleBlur('email')}
               error={isErr('email')} valid={isOk('email')} />
-          </Field>
-          <Field label="Phone" required error={isErr('phone') ? errors.phone : ''}>
-            <Input icon="bi-telephone" placeholder="10-digit Indian mobile"
-              type="tel" autoComplete="tel" disabled={submitting}
-              value={form.phone} onChange={handleChange('phone')} onBlur={handleBlur('phone')}
+            {isErr('email') && <span className="llf-err">{errors.email}</span>}
+          </div>
+          <div className="llf-field">
+            <label className="llf-label">Phone <span className="llf-req">*</span></label>
+            <IField icon="bi-telephone" placeholder="10-digit Indian mobile" type="tel" autoComplete="tel"
+              disabled={submitting} value={form.phone}
+              onChange={handleChange('phone')} onBlur={handleBlur('phone')}
               error={isErr('phone')} valid={isOk('phone')} />
-          </Field>
+            {isErr('phone') && <span className="llf-err">{errors.phone}</span>}
+          </div>
         </div>
 
         {/* Company + Service */}
         <div className="llf-row">
-          <Field label="Company Name" required error={isErr('company') ? errors.company : ''}>
-            <Input icon="bi-building" placeholder="Your Company Name"
-              type="text" autoComplete="organization" disabled={submitting}
-              value={form.company} onChange={handleChange('company')} onBlur={handleBlur('company')}
+          <div className="llf-field">
+            <label className="llf-label">Company Name <span className="llf-req">*</span></label>
+            <IField icon="bi-building" placeholder="Your Company Name" type="text" autoComplete="organization"
+              disabled={submitting} value={form.company}
+              onChange={handleChange('company')} onBlur={handleBlur('company')}
               error={isErr('company')} valid={isOk('company')} />
-          </Field>
-          <Field label="Service" required error={isErr('service') ? errors.service : ''}>
-            <Select icon="bi-grid" disabled={submitting}
+            {isErr('company') && <span className="llf-err">{errors.company}</span>}
+          </div>
+          <div className="llf-field">
+            <label className="llf-label">Service <span className="llf-req">*</span></label>
+            <ISelect icon="bi-grid" disabled={submitting}
               value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')}
               error={isErr('service')} valid={isOk('service')}>
               {SERVICES.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
-            </Select>
-          </Field>
+            </ISelect>
+            {isErr('service') && <span className="llf-err">{errors.service}</span>}
+          </div>
         </div>
 
-        {/* Requirement */}
-        <Field label="Your Requirement">
-          <textarea className="llf-textarea"
-            placeholder="Tell us about your use case, current volume, or any specific requirements…"
-            rows={3} disabled={submitting}
-            value={form.requirement} onChange={handleChange('requirement')} />
-        </Field>
+        {/* Message */}
+        <div className="llf-field">
+          <label className="llf-label">Message</label>
+          <textarea className="llf-ta"
+            placeholder="Tell us about your requirements…"
+            rows={2} disabled={submitting}
+            value={form.message} onChange={handleChange('message')} />
+        </div>
 
-        {/* Privacy checkbox */}
-        <div className="llf-check-row">
-          <label className={`llf-check-label${form.agree ? ' checked' : ''}`}>
-            <input type="checkbox" className="llf-check-input"
+        {/* Checkbox */}
+        <div className="llf-ck-row">
+          <label className="llf-ck-label">
+            <input type="checkbox" className="llf-ck-input"
               checked={form.agree} onChange={handleChange('agree')} onBlur={handleBlur('agree')}
               disabled={submitting} />
-            <span className={`llf-check-box${form.agree ? ' checked' : ''}`}>
+            <span className={`llf-ck-box${form.agree ? ' on' : ''}`}>
               {form.agree && <i className="bi bi-check-lg" />}
             </span>
-            <span className="llf-check-text">
+            <span className="llf-ck-text">
               I accept the{' '}
               <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
               {' '}and{' '}
               <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-              , and agree to be contacted by Ojiva AI regarding my enquiry.{' '}
+              , and agree to be contacted by Ojiva AI.{' '}
               <span className="llf-req">*</span>
             </span>
           </label>
@@ -310,42 +290,40 @@ export default function LandingLeadForm({
         </div>
 
         {/* Submit */}
-        <button type="submit" className="llf-submit-btn" disabled={submitting}>
+        <button type="submit" className="llf-submit" disabled={submitting}>
           {submitting
             ? <><span className="spinner-border spinner-border-sm me-2" role="status" />Submitting…</>
-            : submitLabel
-          }
+            : submitLabel}
         </button>
 
         {apiError && (
           <div className="llf-api-err">
-            <i className="bi bi-exclamation-triangle me-1" />
-            {apiError}{' '}
+            <i className="bi bi-exclamation-triangle me-1" />{apiError}{' '}
             <a href="tel:+918431086185">Call us</a>.
           </div>
         )}
 
       </form>
 
-      {/* ── 7. Privacy note ── */}
+      {/* ── 6. Privacy note ── */}
       <p className="llf-privacy">
-        <i className="bi bi-shield-lock-fill me-1" />
+        <i className="bi bi-shield-lock-fill" />
         We never share your details. Your information is 100% secure.
       </p>
 
-      {/* ── 8. Trust badges ── */}
-      <div className="llf-trust-badges">
+      {/* ── 7. Trust badges ── */}
+      <div className="llf-trust">
         <span><i className="bi bi-shield-check" /> 256-bit SSL</span>
-        <span><i className="bi bi-patch-check-fill text-success" /> Meta Partner</span>
-        <span><i className="bi bi-lightning-charge-fill text-warning" /> Reply in 2 hrs</span>
+        <span><i className="bi bi-patch-check-fill" style={{ color:'#22c55e' }} /> Meta Partner</span>
+        <span><i className="bi bi-lightning-charge-fill" style={{ color:'#f59e0b' }} /> Reply in 2 hrs</span>
       </div>
 
-      {/* ── 9. Activity feed ── */}
-      <div className="llf-activity">
-        <span className="llf-activity-dot" />
+      {/* ── 8. Activity feed ── */}
+      <div className="llf-act">
+        <span className="llf-dot llf-dot--green" />
         <span>
-          <strong>{activity.name}</strong> from {activity.city} just got a free demo ·{' '}
-          <span className="llf-activity-ago">{activity.ago}</span>
+          <strong>{activity.name}</strong> from {activity.city} just booked a demo ·{' '}
+          <span className="llf-act-ago">{activity.ago}</span>
         </span>
       </div>
 
