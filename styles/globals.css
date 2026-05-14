@@ -21277,21 +21277,21 @@ input:focus, textarea:focus, select:focus {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #00c8f8;
+  color: #00c8f8 !important;
   margin-bottom: 0.75rem;
 }
 .svc-form-h2 {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
-  color: #f1f5f9;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: #f1f5f9 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
   margin-bottom: 0.9rem;
 }
-.svc-form-h2 span { color: #00c8f8; }
+.svc-form-h2 span { color: #00c8f8 !important; }
 .svc-form-sub {
   font-size: 1rem;
-  color: rgba(148,163,184,0.9);
+  color: rgba(148,163,184,0.9) !important;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -21306,9 +21306,9 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.88rem;
-  color: #cbd5e1;
+  color: #cbd5e1 !important;
 }
-.svc-form-perk i { color: #4ade80; font-size: 0.95rem; flex-shrink: 0; }
+.svc-form-perk i { color: #4ade80 !important; font-size: 0.95rem; flex-shrink: 0; }
 .svc-form-stats {
   display: flex;
   gap: 1.5rem;
@@ -21318,12 +21318,12 @@ input:focus, textarea:focus, select:focus {
 .svc-form-stat-val {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: #f1f5f9 !important;
   line-height: 1;
 }
 .svc-form-stat-lbl {
   font-size: 0.72rem;
-  color: rgba(148,163,184,0.8);
+  color: rgba(148,163,184,0.8) !important;
   font-weight: 500;
 }
 

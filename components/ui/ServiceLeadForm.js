@@ -1,6 +1,5 @@
 import LandingLeadForm from '@/components/landing/LandingLeadForm';
-
-const SERVICE_HOOK = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
+import { MAKE_HOOK_SERVICE, THANK_YOU_SERVICE } from '@/lib/formConfig';
 
 /**
  * ServiceLeadForm — reusable inline lead capture section for service pages.
@@ -89,8 +88,8 @@ export default function ServiceLeadForm({
               subtitle={formSubtitle}
               badge={formBadge}
               submitLabel={submitLabel}
-              thankYouUrl={thankYouUrl || '/thank-you'}
-              makeHook={SERVICE_HOOK}
+              thankYouUrl={thankYouUrl || THANK_YOU_SERVICE}
+              makeHook={MAKE_HOOK_SERVICE}
             />
           </div>
 

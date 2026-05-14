@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const ACCESS_KEY = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
-const MAKE_HOOK  = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+const ACCESS_KEY = WEB3_ACCESS_KEY;
+const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 import { motion, AnimatePresence } from 'framer-motion';
 
 const SLA_PLANS = [

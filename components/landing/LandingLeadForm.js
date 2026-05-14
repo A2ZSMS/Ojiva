@@ -2,11 +2,12 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
 
 /* ─── Config ──────────────────────────────────────────────── */
-const WEB3_KEY  = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
-const MAKE_HOOK = 'https://hook.eu1.make.com/oaum1wrp22fic8clfnz1y3aejoxo954e';
-const THANK_YOU = '/whatsapp-api-service/thank-you';
+const WEB3_KEY  = WEB3_ACCESS_KEY;
+const MAKE_HOOK = MAKE_HOOK_LANDING;
+const THANK_YOU = THANK_YOU_LANDING;
 
 const DEFAULT_SERVICES = [
   { value: '',               label: 'Select a service' },
