@@ -8,19 +8,24 @@ function scrollToForm(e) {
 
 const HOW_STEPS = [
   {
-    num: '01', icon: 'bi-send',
-    title: 'Fill the form — 2 minutes',
-    desc: 'Tell us your business name, phone number, and monthly volume. Our India-based team reviews your application within a few hours — no waiting days.',
+    num: '01', icon: 'bi-pencil-square',
+    title: 'Sign Up',
+    desc: 'Fill out the form or chat with us on WhatsApp. Tell us your business name, phone number, and messaging volume. Our India-based team reviews your application within a few hours.',
   },
   {
-    num: '02', icon: 'bi-key',
-    title: 'Get your WhatsApp API — same day',
-    desc: 'Receive your official WhatsApp API credentials and your dedicated onboarding specialist\'s WhatsApp number. Start integrating immediately.',
+    num: '02', icon: 'bi-shield-check',
+    title: 'Get Verified',
+    desc: 'We handle your WhatsApp Business API setup and Green Tick verification. Meta Business Account creation, phone number registration — all done for you, no technical knowledge needed.',
   },
   {
-    num: '03', icon: 'bi-rocket-takeoff',
-    title: 'Go live in 48 hours',
-    desc: 'Your Meta Business Account gets verified, your phone number registered, and your first templates approved. Most competitors take 7–10 days. We do it in 2.',
+    num: '03', icon: 'bi-plug',
+    title: 'Integrate',
+    desc: 'Connect your CRM, website, or business systems via API in minutes. Our team provides full technical support and pre-built integrations for 80+ popular tools.',
+  },
+  {
+    num: '04', icon: 'bi-rocket-takeoff',
+    title: 'Go Live',
+    desc: 'Start sending bulk messages, launch your AI chatbot, and automate customer communication. Most clients go live within 24–48 hours of signing up.',
   },
 ];
 

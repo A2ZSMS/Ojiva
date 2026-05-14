@@ -78,7 +78,22 @@ export default function MidForm() {
                 <i className="bi bi-lightning-charge-fill" style={{ color: "#22c55e" }} />
                 <span>Instant Setup · No DLT needed · No lock-in</span>
               </div>
-              <LandingLeadForm source="whatsapp-api-service-mid" />
+              <LandingLeadForm
+                source="whatsapp-api-service-mid"
+                title="Claim Your Free Demo & Pricing"
+                subtitle="Takes 30 seconds · No credit card · Our expert calls you back"
+                submitLabel="Get My Free Demo & Pricing →"
+                scarcityText={<>Only <strong>3 free setup spots left this month</strong> — grab yours before they&apos;re gone 🔥</>}
+                messageLabel="Your Requirement"
+                services={[
+                  { value: '',               label: 'Select a service' },
+                  { value: 'whatsapp-api',   label: 'WhatsApp Business API' },
+                  { value: 'chatbot',        label: 'WhatsApp Chatbot' },
+                  { value: 'api-chatbot',    label: 'API + Chatbot Combo' },
+                  { value: 'bulk-messaging', label: 'Bulk Messaging Only' },
+                  { value: 'other',          label: 'Other' },
+                ]}
+              />
             </div>
           </div>
 

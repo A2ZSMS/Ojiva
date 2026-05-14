@@ -8,15 +8,13 @@ const WEB3_KEY  = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
 const MAKE_HOOK = 'https://hook.eu1.make.com/oaum1wrp22fic8clfnz1y3aejoxo954e';
 const THANK_YOU = '/whatsapp-api-service/thank-you';
 
-const SERVICES = [
-  { value: '',             label: 'Select a service' },
-  { value: 'whatsapp-api', label: 'WhatsApp Business API' },
-  { value: 'bulk-sms',     label: 'Bulk SMS' },
-  { value: 'rcs',          label: 'RCS Messaging' },
-  { value: 'otp-sms',      label: 'OTP / Transactional SMS' },
-  { value: 'voice',        label: 'AI Voice Calls' },
-  { value: 'chatbot',      label: 'WhatsApp Chatbot' },
-  { value: 'all',          label: 'All Channels' },
+const DEFAULT_SERVICES = [
+  { value: '',               label: 'Select a service' },
+  { value: 'whatsapp-api',   label: 'WhatsApp Business API' },
+  { value: 'chatbot',        label: 'WhatsApp Chatbot' },
+  { value: 'api-chatbot',    label: 'API + Chatbot Combo' },
+  { value: 'bulk-messaging', label: 'Bulk Messaging Only' },
+  { value: 'other',          label: 'Other' },
 ];
 
 const ACTIVITY = [
@@ -96,12 +94,16 @@ function ISelect({ icon, error, valid, children, ...props }) {
 
 /* ─── Component ──────────────────────────────────────────────── */
 export default function LandingLeadForm({
-  source      = 'whatsapp-api',
-  title       = 'Book a Demo & Get Pricing',
-  subtitle    = '30 seconds · Expert contacts you within 2 hours',
-  submitLabel = 'Book My Demo & Get Pricing →',
-  thankYouUrl = THANK_YOU,
-  spotsLeft   = 3,
+  source        = 'whatsapp-api',
+  title         = 'Book a Demo & Get Pricing',
+  subtitle      = '30 seconds · Expert contacts you within 2 hours',
+  submitLabel   = 'Book My Demo & Get Pricing →',
+  thankYouUrl   = THANK_YOU,
+  spotsLeft     = 3,
+  services      = DEFAULT_SERVICES,
+  messageLabel  = 'Message',
+  scarcityText  = null,
+  agreeBrand    = 'Ojiva AI',
 }) {
   const router    = useRouter();
   const countdown = useCountdown();
@@ -184,7 +186,10 @@ export default function LandingLeadForm({
       {/* ── 2. Amber scarcity strip ── */}
       <div className="llf-bar-scarcity">
         <span className="llf-dot llf-dot--amber" />
-        Only <strong>{spotsLeft} setup slots available this month</strong> — secure yours before they&apos;re gone
+        {scarcityText
+          ? scarcityText
+          : <>Only <strong>{spotsLeft} setup slots available this month</strong> — secure yours before they&apos;re gone</>
+        }
       </div>
 
       {/* ── 3. Green response strip ── */}
@@ -253,7 +258,7 @@ export default function LandingLeadForm({
             <ISelect icon="bi-grid" disabled={submitting}
               value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')}
               error={isErr('service')} valid={isOk('service')}>
-              {SERVICES.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
+              {services.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
             </ISelect>
             {isErr('service') && <span className="llf-err">{errors.service}</span>}
           </div>
@@ -261,7 +266,7 @@ export default function LandingLeadForm({
 
         {/* Message */}
         <div className="llf-field">
-          <label className="llf-label">Message</label>
+          <label className="llf-label">{messageLabel}</label>
           <textarea className="llf-ta"
             placeholder="Tell us about your requirements…"
             rows={2} disabled={submitting}
@@ -282,7 +287,7 @@ export default function LandingLeadForm({
               <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
               {' '}and{' '}
               <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-              , and agree to be contacted by Ojiva AI.{' '}
+              , and agree to be contacted by {agreeBrand}.{' '}
               <span className="llf-req">*</span>
             </span>
           </label>

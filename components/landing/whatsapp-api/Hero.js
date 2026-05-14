@@ -106,9 +106,7 @@ export default function Hero() {
               ))}
             </div>
 
-            <a href="#lead-form" className="lp-demo-btn">
-              <i className="bi bi-camera-video" /> Watch a 3-Min Demo
-            </a>
+
           </div>
 
           {/* Right — Form */}

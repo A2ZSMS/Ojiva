@@ -4,36 +4,36 @@ import { useState } from 'react';
 
 const FAQS = [
   {
-    q: 'Is WhatsApp Business API different from the free WhatsApp Business app?',
-    a: 'Yes — completely different products. The free app supports 1 device and manual messaging only. The WhatsApp Business API (also called Cloud API) enables automated bulk messaging, chatbots, multi-agent shared inbox, and CRM integration at any scale. Ojiva AI gives you full API access with a verified business phone number.',
+    q: 'What is WhatsApp Business API?',
+    a: 'WhatsApp Business API is the official enterprise solution from Meta that enables businesses to send bulk messages, automate responses, integrate with CRMs, and manage multi-agent support at scale. Unlike the free WhatsApp Business App, the API supports high-volume messaging, chatbots, and full business system integration.',
   },
   {
-    q: 'Do I need TRAI DLT registration for WhatsApp messaging in India?',
-    a: 'No — this is a common misconception. DLT registration is required for SMS in India, not WhatsApp. WhatsApp operates under Meta\'s own compliance framework. You need a Meta Business Account and approved message templates — both of which Ojiva AI handles for you during onboarding.',
+    q: 'What is the difference between WhatsApp Business App and WhatsApp Business API?',
+    a: 'The WhatsApp Business App is designed for small businesses with manual messaging on a single device. The WhatsApp Business API is built for scale — it supports bulk messaging to thousands of contacts, AI chatbot automation, multi-agent shared inbox, CRM integration, and Green Tick verification. The API is what growing Indian businesses need.',
   },
   {
-    q: 'How is Ojiva AI different from WATI, Interakt, or AiSensy?',
-    a: 'Three key differences: (1) India-based support team available in IST hours — not US-timezone ticketing. (2) 48-hour go-live vs the 7–10 days competitors typically take. (3) Fully transparent pricing — we show you Meta\'s base rate plus our margin, with no hidden per-agent or per-seat fees. We\'re built specifically for the Indian SMB and enterprise market.',
+    q: 'How long does WhatsApp Business API setup take?',
+    a: 'We typically complete the full setup within 24–48 hours. This includes Meta Business verification, phone number registration, and template approval. Most competitors take 7–10 days — our India-based onboarding team moves faster because we handle everything for you.',
   },
   {
-    q: 'What\'s the actual cost per WhatsApp message in India?',
-    a: 'Meta charges a base rate per conversation (not per message) — currently ₹0.58–₹0.86 per 24-hour conversation window depending on message type (utility, marketing, authentication). Ojiva AI adds a transparent platform fee on top. We\'ll share your exact custom rate card during onboarding based on your monthly volume. No surprises.',
+    q: 'Can I send promotional messages on WhatsApp Business API?',
+    a: 'Yes. The WhatsApp Business API fully supports marketing messages including offers, product launches, flash sales, and re-engagement campaigns. All marketing templates require Meta approval, which our team handles for you. You can send to opted-in contacts without any risk of getting banned.',
   },
   {
-    q: 'Can I use my existing business phone number?',
-    a: 'Yes, if it\'s not already registered on WhatsApp. You\'ll need to port it to the WhatsApp Business API — our team handles the entire verification process. If you\'d prefer a new dedicated number, we can provision one for you.',
+    q: 'What are the messaging limits on WhatsApp Business API?',
+    a: 'WhatsApp uses a tier-based messaging system. You start at 1,000 unique contacts per day and scale to unlimited as your quality rating improves. Our team guides you through the tier upgrade process so you can scale messaging volume as your business grows.',
   },
   {
-    q: 'How long does Meta template approval take?',
-    a: 'Meta typically approves templates in 1–24 hours. Our team writes and submits templates that follow Meta\'s best practices, so we have a very high first-submission approval rate. For urgent campaigns, we prioritize template review in our onboarding queue.',
+    q: 'Do I need a new phone number for WhatsApp Business API?',
+    a: 'You can use your existing business number or get a new dedicated number. The number must not be currently registered on WhatsApp. Our team handles the entire verification and porting process — you do not need to do anything technical.',
   },
   {
-    q: 'Can I send bulk promotional messages on WhatsApp without getting banned?',
-    a: 'Yes — with a verified WhatsApp Business API account and approved message templates. Bulk messaging on the API is fully permitted by Meta for marketing purposes, as long as you send to opted-in contacts and follow template guidelines. Ojiva AI\'s compliance team guides you through the process to ensure your account stays healthy.',
+    q: 'What support do you provide after setup?',
+    a: 'You get a dedicated account manager, 24/7 technical support via WhatsApp, email, and phone, help with template creation and approval, campaign strategy guidance, and full API integration assistance. Our India-based support team is available in IST hours — not US-timezone ticketing.',
   },
   {
-    q: 'What kind of businesses use WhatsApp Business API?',
-    a: 'Businesses of all sizes — from funded startups to enterprises with 10M+ customers. E-commerce brands for order updates and cart recovery, healthcare clinics for appointment reminders, banks and NBFCs for OTP and alerts, EdTechs for admission follow-ups, logistics companies for shipment tracking, and real estate developers for property launches.',
+    q: 'What are the pricing details for WhatsApp Business API?',
+    a: 'There is a one-time setup fee plus a monthly platform fee. Per-message charges follow Meta\'s conversation-based pricing model — currently ₹0.58–₹0.86 per 24-hour conversation window depending on message type. Setup starts from ₹2,999 only. Contact us for a customised quote based on your monthly volume.',
   },
 ];
 
@@ -66,14 +66,6 @@ export default function FAQ() {
             <FaqItem key={q} q={q} a={a} />
           ))}
         </div>
-        {/* <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          <p style={{ color: "#64748b", marginBottom: "0.75rem" }}>
-            Still have questions? Our team replies in minutes.
-          </p>
-          <a href="tel:+918431086185" className="lp-btn-outline">
-            <i className="bi bi-telephone-fill" /> Call +91-843-108-6185
-          </a>
-        </div> */}
       </div>
     </section>
   );
