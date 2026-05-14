@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+
+const ACCESS_KEY = 'b5a4d0e7-4c4c-4ff4-b11b-8026740ac809';
+const MAKE_HOOK  = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const SLA_PLANS = [
@@ -24,14 +27,41 @@ function TicketForm() {
 
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setTicketId(`OJV-${Math.floor(10000 + Math.random() * 90000)}`);
-      setSubmitted(true);
-    }, 1800);
+    const tid = `OJV-${Math.floor(10000 + Math.random() * 90000)}`;
+    const payload = {
+      access_key: ACCESS_KEY,
+      subject:    `Support Ticket [${form.priority.toUpperCase()}] — ${form.subject}`,
+      from_name:  'Ojiva AI Support',
+      redirect:   'false',
+      name:       form.name,
+      email:      form.email,
+      subject_detail: form.subject,
+      priority:   form.priority,
+      message:    form.message,
+      ticket_id:  tid,
+      source:     'support-page',
+      submitted_at: new Date().toISOString(),
+    };
+    try {
+      await Promise.allSettled([
+        fetch('https://api.web3forms.com/submit', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body:    JSON.stringify(payload),
+        }),
+        fetch(MAKE_HOOK, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload),
+        }),
+      ]);
+    } catch { /* silent — still show success to user */ }
+    setTicketId(tid);
+    setLoading(false);
+    setSubmitted(true);
   };
 
   if (submitted) {
