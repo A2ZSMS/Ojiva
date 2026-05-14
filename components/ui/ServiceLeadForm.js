@@ -1,5 +1,7 @@
 import LandingLeadForm from '@/components/landing/LandingLeadForm';
 
+const SERVICE_HOOK = 'https://hook.eu1.make.com/k7g2w86wl5lgio3rb478xlnu42r74t4s';
+
 /**
  * ServiceLeadForm — reusable inline lead capture section for service pages.
  * Replaces the generic <CTA> buttons-to-/contact pattern.
@@ -20,7 +22,7 @@ import LandingLeadForm from '@/components/landing/LandingLeadForm';
  */
 export default function ServiceLeadForm({
   source          = 'service',
-  eyebrow         = 'GET STARTED FREE',
+  eyebrow         = 'GET STARTED',
   heading         = 'Ready to Go Live?',
   headingHighlight = '',
   description     = 'Join 500+ businesses across India using Ojiva AI. Our team handles everything from onboarding to DLT registration — so you go live fast.',
@@ -36,10 +38,10 @@ export default function ServiceLeadForm({
     { val: '500+', lbl: 'Businesses' },
     { val: '48hr', lbl: 'Go-Live' },
   ],
-  formTitle       = 'Get Free Access & Pricing',
-  formSubtitle    = 'No credit card required. Setup in 48 hours.',
+  formTitle       = 'Book a Demo & Get Pricing',
+  formSubtitle    = '30 seconds · Our expert contacts you within 2 hours',
   formBadge       = 'Instant Setup · No lock-in · No credit card',
-  submitLabel     = 'Get Started Free →',
+  submitLabel     = 'Book My Demo & Get Pricing →',
   thankYouUrl,
 }) {
   return (
@@ -87,7 +89,8 @@ export default function ServiceLeadForm({
               subtitle={formSubtitle}
               badge={formBadge}
               submitLabel={submitLabel}
-              thankYouUrl={thankYouUrl || '/book-demo'}
+              thankYouUrl={thankYouUrl || '/thank-you'}
+              makeHook={SERVICE_HOOK}
             />
           </div>
 

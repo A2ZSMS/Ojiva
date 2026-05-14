@@ -104,6 +104,7 @@ export default function LandingLeadForm({
   messageLabel  = 'Message',
   scarcityText  = null,
   agreeBrand    = 'Ojiva AI',
+  makeHook      = MAKE_HOOK,
 }) {
   const router    = useRouter();
   const countdown = useCountdown();
@@ -156,7 +157,7 @@ export default function LandingLeadForm({
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body:    JSON.stringify({ access_key: WEB3_KEY, subject: `Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload }),
         }).then(r => r.json()),
-        fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
+        fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
         router.push(thankYouUrl);
