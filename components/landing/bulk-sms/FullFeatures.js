@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ScrollToFormLink from './ScrollToFormLink';
 
 const FEATURES = [
   { icon: 'bi-megaphone-fill',     title: 'Mass Promotional SMS',        desc: 'Reach millions with flash sales, seasonal offers, and loyalty campaigns in one click.' },
@@ -73,9 +73,9 @@ export default function FullFeatures() {
                 </div>
               </div>
             </div>
-            <Link href="/contact" className="bs2-btn-primary mt-4 d-inline-flex">
+            <ScrollToFormLink className="bs2-btn-primary mt-4 d-inline-flex">
               Start Free Trial <i className="bi bi-arrow-right ms-2" />
-            </Link>
+            </ScrollToFormLink>
           </div>
         </div>
       </div>

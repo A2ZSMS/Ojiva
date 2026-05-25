@@ -102,20 +102,27 @@ export default function LandingLeadForm({
   thankYouUrl   = THANK_YOU,
   spotsLeft     = 3,
   services      = DEFAULT_SERVICES,
+  serviceLabel  = 'Service',
   messageLabel  = 'Message',
+  volumeOptions = null,
+  volumeLabel   = 'Monthly SMS Requirement',
   scarcityText  = null,
   agreeBrand    = 'Ojiva AI',
   makeHook      = MAKE_HOOK,
+  accentColor   = null,  /* When set, overrides the default green of the countdown bar + submit button */
 }) {
   const router    = useRouter();
   const countdown = useCountdown();
   const activity  = useActivity();
 
-  const [form,       setForm]       = useState({ name:'', email:'', phone:'', company:'', service:'', message:'', agree:false });
-  const [errors,     setErrors]     = useState(EMPTY_ERR);
-  const [touched,    setTouched]    = useState({});
-  const [submitting, setSubmitting] = useState(false);
-  const [apiError,   setApiError]   = useState('');
+  const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'', agree:false });
+  const [volume,       setVolume]       = useState('');
+  const [volumeErr,    setVolumeErr]    = useState('');
+  const [volumeTouched, setVolumeTouched] = useState(false);
+  const [errors,       setErrors]       = useState(EMPTY_ERR);
+  const [touched,      setTouched]      = useState({});
+  const [submitting,   setSubmitting]   = useState(false);
+  const [apiError,     setApiError]     = useState('');
 
   const completePct = Math.round(
     (REQUIRED.filter(k => form[k] && !RULES[k](form[k])).length / REQUIRED.length) * 100
@@ -137,7 +144,16 @@ export default function LandingLeadForm({
     setTouched({ name:true, email:true, phone:true, company:true, service:true, agree:true });
     const errs = validateAll(form);
     setErrors(errs);
-    if (Object.values(errs).some(Boolean)) return;
+
+    /* ── Volume dropdown validation (only when volumeOptions provided) ── */
+    let volErr = '';
+    if (volumeOptions) {
+      setVolumeTouched(true);
+      if (!volume) volErr = 'Please select monthly volume.';
+      setVolumeErr(volErr);
+    }
+
+    if (Object.values(errs).some(Boolean) || volErr) return;
     setSubmitting(true); setApiError('');
 
     const payload = {
@@ -147,6 +163,7 @@ export default function LandingLeadForm({
       company: form.company.trim(),
       service: form.service,
       message: form.message.trim(),
+      ...(volumeOptions ? { monthly_volume: volume } : {}),
       source,
       submitted_at: new Date().toISOString(),
     };
@@ -178,8 +195,11 @@ export default function LandingLeadForm({
   return (
     <div className="llf-card">
 
-      {/* ── 1. Dark green countdown bar ── */}
-      <div className="llf-bar-countdown">
+      {/* ── 1. Dark countdown bar (green default; override via accentColor) ── */}
+      <div
+        className="llf-bar-countdown"
+        style={accentColor ? { background: `linear-gradient(135deg, ${accentColor} 0%, ${accentColor}dd 100%)` } : undefined}
+      >
         <i className="bi bi-clock-fill" />
         <span className="llf-bar-label">Offer expires in</span>
         <span className="llf-bar-timer">{countdown}</span>
@@ -256,7 +276,7 @@ export default function LandingLeadForm({
             {isErr('company') && <span className="llf-err">{errors.company}</span>}
           </div>
           <div className="llf-field">
-            <label className="llf-label">Service <span className="llf-req">*</span></label>
+            <label className="llf-label">{serviceLabel} <span className="llf-req">*</span></label>
             <ISelect icon="bi-grid" disabled={submitting}
               value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')}
               error={isErr('service')} valid={isOk('service')}>
@@ -265,6 +285,28 @@ export default function LandingLeadForm({
             {isErr('service') && <span className="llf-err">{errors.service}</span>}
           </div>
         </div>
+
+        {/* Monthly Volume (optional — only when volumeOptions prop provided) */}
+        {volumeOptions && (
+          <div className="llf-field">
+            <label className="llf-label">{volumeLabel} <span className="llf-req">*</span></label>
+            <ISelect icon="bi-graph-up-arrow" disabled={submitting}
+              value={volume}
+              onChange={(e) => {
+                setVolume(e.target.value);
+                if (volumeTouched) setVolumeErr(e.target.value ? '' : 'Please select monthly volume.');
+              }}
+              onBlur={() => {
+                setVolumeTouched(true);
+                setVolumeErr(volume ? '' : 'Please select monthly volume.');
+              }}
+              error={volumeTouched && !!volumeErr}
+              valid={volumeTouched && !volumeErr && !!volume}>
+              {volumeOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </ISelect>
+            {volumeTouched && volumeErr && <span className="llf-err">{volumeErr}</span>}
+          </div>
+        )}
 
         {/* Message */}
         <div className="llf-field">
@@ -297,7 +339,16 @@ export default function LandingLeadForm({
         </div>
 
         {/* Submit */}
-        <button type="submit" className="llf-submit" disabled={submitting}>
+        <button
+          type="submit"
+          className="llf-submit"
+          disabled={submitting}
+          style={accentColor ? {
+            background: `linear-gradient(135deg, ${accentColor} 0%, ${accentColor}dd 100%)`,
+            borderColor: accentColor,
+            boxShadow: `0 10px 28px ${accentColor}55`,
+          } : undefined}
+        >
           {submitting
             ? <><span className="spinner-border spinner-border-sm me-2" role="status" />Submitting…</>
             : submitLabel}
