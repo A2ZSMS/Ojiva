@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
@@ -183,54 +182,6 @@ export default function DemoForm() {
         router.push('/thank-you');
       } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
-  }
-
-  /* ── Success ─ */
-  if (status === 'success') {
-    return (
-      <motion.div className="dbp-success"
-        initial={{ opacity: 0, scale: 0.92, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-      >
-        <div className="dbp-success-icon-wrap">
-          <div className="dbp-success-ring r1" /><div className="dbp-success-ring r2" />
-          <motion.div className="dbp-success-icon"
-            initial={{ scale: 0 }} animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.4, ease: 'backOut' }}>
-            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.42 }}>✓</motion.span>
-          </motion.div>
-        </div>
-        <motion.h2 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.48 }}>
-          You&apos;re booked! 🎉
-        </motion.h2>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.58 }}>
-          We&apos;ll reach out to <strong>{form.email}</strong> within one business day to confirm your slot.
-        </motion.p>
-        <motion.div className="dbp-success-recap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.68 }}>
-          {[
-            ['👤', `${form.name} · ${form.company}`],
-            size          ? ['🏢', `${size} employees`] : null,
-            volume        ? ['📨', `${volume} msgs/month`] : null,
-            channels.length > 0 ? ['📡', channels.join(', ')] : null,
-          ].filter(Boolean).map(([icon, txt], i) => (
-            <div key={i} className="dbp-success-row"><span>{icon}</span><span>{txt}</span></div>
-          ))}
-        </motion.div>
-        <motion.div className="dbp-success-next" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.78 }}>
-          {['Check your inbox for a confirmation email', "We'll call to lock in the perfect time", 'Prepare for your personalised 30-min demo'].map((t, i) => (
-            <div key={i} className="dbp-success-step">
-              <span className="dbp-success-num">{i + 1}</span>
-              <span>{t}</span>
-            </div>
-          ))}
-        </motion.div>
-        <motion.div className="dbp-success-ctas" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.88 }}>
-          <Link href="/"         className="btn-ojiva-outline">← Home</Link>
-          <Link href="/platform" className="btn-ojiva-primary">Explore Platform →</Link>
-        </motion.div>
-      </motion.div>
-    );
   }
 
   return (

@@ -67,13 +67,13 @@ export default function ThankYouPage() {
 
           {/* CTAs */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            <Link href="/book-demo" style={{
+            <Link href="/platform" style={{
               background: 'linear-gradient(135deg,#2563eb,#7c3aed)',
               color: '#fff', padding: '0.85rem 2rem', borderRadius: '10px',
               fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none',
               display: 'block',
             }}>
-              📅 Book a Live Demo
+              Explore Platform →
             </Link>
             <Link href="/" style={{
               color: 'rgba(148,163,184,0.75)', fontSize: '0.85rem',
