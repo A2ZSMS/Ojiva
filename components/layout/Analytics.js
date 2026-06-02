@@ -2,34 +2,53 @@
  * Analytics.js
  * ─────────────────────────────────────────────────────────
  * Centralised tracking scripts for Ojiva AI.
- * Add / remove trackers here — never touch layout.js again.
+ * Edit IDs in this file only — never touch layout.js for analytics.
  *
  * Current integrations:
  *  ✅  Google Analytics 4  (GA4)       — G-FYZX6KFBEL
- *  ✅  Google Tag Manager (GTM)        — GTM-K2BDC8PH
- *  🔲  Google Search Console           — add verification meta tag when ready
+ *  ✅  Google Tag Manager (GTM)        — GTM-TJ8ZDFS2  (inline in layout.js <head>)
+ *  ✅  Google Search Console           — vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI
+ *
+ * ⚠️  DO NOT REMOVE OR COMMENT OUT these scripts — they track all site traffic.
+ *     If you think there are duplicate hits, check inside GTM container first.
  * ─────────────────────────────────────────────────────────
  */
 
 import Script from 'next/script';
 
-/* ── Config ──────────────────────────────────────────────
-   Only edit values in this block.
-   ───────────────────────────────────────────────────────── */
-// GA4 is fired through GTM — no direct script needed
-const GA_MEASUREMENT_ID = 'G-FYZX6KFBEL';
-
-// GTM container ID — GTM-TJ8ZDFS2
-const GTM_CONTAINER_ID = 'GTM-TJ8ZDFS2';
-
-// Paste the content="" value from your Search Console <meta> tag here
+/* ── Config — only edit values here ─────────────────────── */
+const GA_MEASUREMENT_ID          = 'G-FYZX6KFBEL';
+const GTM_CONTAINER_ID           = 'GTM-TJ8ZDFS2';
 const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI';
 /* ─────────────────────────────────────────────────────── */
 
+/**
+ * Analytics — renders GA4 tracking scripts via Next.js Script (afterInteractive).
+ * Already placed in layout.js <body>. DO NOT delete this component or its usage.
+ */
 export default function Analytics() {
-  // GA4 + GTM scripts are placed directly in <head> in layout.js
-  // for maximum priority and GSC ownership verification compliance.
-  return null;
+  return (
+    <>
+      {/* ── Google Analytics 4 ── */}
+      <Script
+        id="ga4-script"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="ga4-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer=window.dataLayer||[];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js',new Date());
+            gtag('config','${GA_MEASUREMENT_ID}',{page_path:window.location.pathname});
+          `,
+        }}
+      />
+    </>
+  );
 }
 
 /**
