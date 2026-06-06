@@ -64,5 +64,45 @@
     "description": "Best RCS messaging provider in Karnataka. Verified sender branding, rich cards, carousels & interactive RCS Business Messaging for Bengaluru, Mysuru & Mangaluru brands.",
     "keywords": "best RCS messaging provider Karnataka, RCS messaging Bengaluru, RCS Business Messaging Karnataka, RCS service Mysuru, RCS provider Mangaluru, Google verified sender Karnataka, RCS API Karnataka, Ojiva AI RCS Karnataka",
     "image": "/image/may18(1).png"
-  }
+  },
+  {
+    "id": 7,
+    "title": "Bulk SMS in India 2026: The Complete DLT & Campaign Guide",
+    "componentKey": "Jun01",
+    "slug": "bulk-sms-in-india",
+    "category": "Bulk SMS",
+    "date": "2026-06-01",
+    "description": "Send bulk SMS in India in 2026 the right way DLT registration, promotional vs transactional rules, real INR pricing, and how to launch your first campaign.",
+    "image": "/image/jun1(1).png"
+  },
+   {
+     "id": 8,
+     "title": "WhatsApp Business API Pricing in India 2026: Cost Breakdown",
+     "componentKey": "Jun02",
+     "slug": "whatsapp-business-api-pricing-india",
+     "category": "WhatsApp API",
+     "date": "2026-06-01",
+     "description": "WhatsApp Business API pricing in India for 2026: Meta's new per-message rates, GST, BSP markups and hidden fees, with real cost examples before you budget.",
+     "image": "/image/jun2(1).png"
+   },
+   {
+     "id": 9,
+     "title": "Best Bulk SMS Service Providers in India",
+     "componentKey": "Jun03",
+     "slug": "best-bulk-sms-providers-india",
+     "category": "Bulk SMS",
+     "date": "2026-06-03",
+     "description": "The best bulk SMS service provider in India for 2026 — promotional, transactional and OTP SMS with high delivery, real INR pricing and full DLT compliance.",
+     "image": "/image/jun3(1).png"
+   },
+   {
+     "id": 10,
+     "title": "What Is RCS Messaging? A 2026 Guide for Indian Businesses",
+     "componentKey": "Jun04",
+     "slug": "what-is-rcs-messaging",
+     "category": "RCS Messaging",
+     "date": "2026-06-04",
+     "description": "What is RCS messaging? A 2026 guide for Indian businesses — how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and how to get started.",
+     "image": "/image/jun4(1).png"
+   }
 ]

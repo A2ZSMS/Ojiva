@@ -2652,7 +2652,7 @@ nav.ojiva-nav.nav--fixed:not(.scrolled) .nav-mega {
 
 /* ── Logo ── */
 nav.ojiva-nav .navbar-brand img.nav-logo {
-  height: 62px;
+  height: 88px;
   width: auto;
   display: block;
   object-fit: contain;
