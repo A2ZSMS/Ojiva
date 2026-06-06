@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, OMNLY_PROXY_URL } from '@/lib/formConfig';
 
 /* ─── Config ──────────────────────────────────────────────── */
 const WEB3_KEY  = WEB3_ACCESS_KEY;
@@ -178,6 +178,12 @@ export default function LandingLeadForm({
         fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
+        // Fire WhatsApp confirmation — non-blocking
+        fetch(OMNLY_PROXY_URL, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ name: payload.name, phone: payload.phone }),
+        }).catch(() => {});
         router.push(thankYouUrl);
       } else {
         setApiError('Something went wrong. Please try again or call us.');
