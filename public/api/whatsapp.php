@@ -11,7 +11,7 @@
  */
 
 /* ── CORS — allow only your domain ─────────────────────────────── */
-$allowed_origins = ['https://www.ojiva.ai', 'https://ojiva.ai'];
+$allowed_origins = ['https://www.ojiva.ai', 'https://ojiva.ai', 'http://localhost:3000', 'http://localhost:3001'];
 $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
 if (in_array($origin, $allowed_origins)) {
     header('Access-Control-Allow-Origin: ' . $origin);
