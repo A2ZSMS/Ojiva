@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 /* ── Constants ─────────────────────────────────────────── */
 const CATEGORIES = ['All', 'Bulk SMS', 'WhatsApp API', 'RCS Messaging', 'Voice Call', 'AI & Automation'];
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 10;
 
 const CAT_STYLE = {
   'Bulk SMS':        { color: '#1d4ed8', bg: 'rgba(29,78,216,0.10)',   dot: '#3b82f6', border: 'rgba(29,78,216,0.20)' },
@@ -305,7 +305,7 @@ export default function BlogList() {
           {/* Grid */}
           <div className="row g-4">
             {loading
-              ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
+              ? Array.from({ length: 9 }).map((_, i) => <SkeletonCard key={i} />)
               : gridPosts.length > 0
                 ? gridPosts.map(blog => (
                     <div className="col-lg-4 col-md-6" key={blog.id}>
