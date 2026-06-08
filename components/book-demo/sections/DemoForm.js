@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL, OMNLY_PROXY_SECRET } from '@/lib/formConfig';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -145,48 +145,39 @@ export default function DemoForm() {
     if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
     setSt('loading'); setErr('');
     try {
-      const fd = new FormData();
-      fd.append('access_key',           ACCESS_KEY);
-      fd.append('name',                 form.name);
-      fd.append('email',                form.email);
-      fd.append('phone',                form.phone || 'Not provided');
-      fd.append('company',              form.company);
-      fd.append('company_size',         size              || 'Not specified');
-      fd.append('monthly_volume',       volume            || 'Not specified');
-      fd.append('channels_of_interest', channels.join(', ') || 'Not specified');
-      fd.append('preferred_time',       time              || 'Not specified');
-      fd.append('message',              msg               || 'No message');
-      fd.append('subject', `🎯 Demo — ${form.name} (${form.company})`);
-      fd.append('botcheck', '');
-      fd.append('privacy_consent', 'Agreed');
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      const d   = await res.json();
-      if (d.success) {
-        // Fire Make.com webhook in parallel (non-blocking)
-        fetch(MAKE_HOOK, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            source:    'book-demo',
-            name:      form.name,
-            email:     form.email,
-            phone:     form.phone || 'Not provided',
-            company:   form.company,
-            size:      size     || 'Not specified',
-            volume:    volume   || 'Not specified',
-            channels:  channels.join(', ') || 'Not specified',
-            time:      time     || 'Not specified',
-            message:   msg      || 'No message',
-          }),
-        }).catch(() => {});
-        // Fire WhatsApp confirmation — non-blocking
-        fetch(OMNLY_PROXY_URL, {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ name: form.name, phone: form.phone }),
-        }).catch(() => {});
-        router.push('/thank-you');
-      } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
+      // ── WA TEST MODE ──
+      // const fd = new FormData();
+      // fd.append('access_key',           ACCESS_KEY);
+      // fd.append('name',                 form.name);
+      // fd.append('email',                form.email);
+      // fd.append('phone',                form.phone || 'Not provided');
+      // fd.append('company',              form.company);
+      // fd.append('company_size',         size              || 'Not specified');
+      // fd.append('monthly_volume',       volume            || 'Not specified');
+      // fd.append('channels_of_interest', channels.join(', ') || 'Not specified');
+      // fd.append('preferred_time',       time              || 'Not specified');
+      // fd.append('message',              msg               || 'No message');
+      // fd.append('subject', `🎯 Demo — ${form.name} (${form.company})`);
+      // fd.append('botcheck', '');
+      // fd.append('privacy_consent', 'Agreed');
+      // const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+      // const d   = await res.json();
+      // if (d.success) {
+      //   fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ source: 'book-demo', name: form.name, email: form.email,
+      //       phone: form.phone || 'Not provided', company: form.company,
+      //       size: size || 'Not specified', volume: volume || 'Not specified',
+      //       channels: channels.join(', ') || 'Not specified',
+      //       time: time || 'Not specified', message: msg || 'No message',
+      //     }),
+      //   }).catch(() => {});
+      fetch(OMNLY_PROXY_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Proxy-Token': OMNLY_PROXY_SECRET },
+        body:    JSON.stringify({ name: form.name, phone: form.phone }),
+      }).catch(() => {});
+      router.push('/thank-you');
+      // } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
   }
 
