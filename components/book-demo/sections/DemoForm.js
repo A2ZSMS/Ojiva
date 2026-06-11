@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL, OMNLY_PROXY_SECRET } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL } from '@/lib/formConfig';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -172,7 +172,7 @@ export default function DemoForm() {
         }).catch(() => {});
         fetch(OMNLY_PROXY_URL, {
           method:  'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Proxy-Token': OMNLY_PROXY_SECRET },
+          headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify({ name: form.name, phone: form.phone }),
         }).catch(() => {});
         router.push('/thank-you');

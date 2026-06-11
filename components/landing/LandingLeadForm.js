@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, OMNLY_PROXY_URL, OMNLY_PROXY_SECRET } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, OMNLY_PROXY_URL } from '@/lib/formConfig';
 
 /* ─── Config ──────────────────────────────────────────────── */
 const WEB3_KEY  = WEB3_ACCESS_KEY;
@@ -180,7 +180,7 @@ export default function LandingLeadForm({
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
         fetch(OMNLY_PROXY_URL, {
           method:  'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Proxy-Token': OMNLY_PROXY_SECRET },
+          headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify({ name: payload.name, phone: payload.phone }),
         }).catch(() => {});
         router.push(thankYouUrl);
