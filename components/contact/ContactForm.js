@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -89,11 +90,7 @@ export default function ContactForm() {
             services: selected.join(', ') || 'Not specified', message: form.message,
           }),
         }).catch(() => {});
-        fetch(OMNLY_PROXY_URL, {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ name: form.name, phone: form.phone }),
-        }).catch(() => {});
+        sendWhatsApp(form.name, form.phone).catch(() => {});
         router.push('/thank-you');
       } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }

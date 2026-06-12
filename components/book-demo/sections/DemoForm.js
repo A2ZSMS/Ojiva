@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, OMNLY_PROXY_URL } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -170,11 +171,7 @@ export default function DemoForm() {
             time: time || 'Not specified', message: msg || 'No message',
           }),
         }).catch(() => {});
-        fetch(OMNLY_PROXY_URL, {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ name: form.name, phone: form.phone }),
-        }).catch(() => {});
+        sendWhatsApp(form.name, form.phone).catch(() => {});
         router.push('/thank-you');
       } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
