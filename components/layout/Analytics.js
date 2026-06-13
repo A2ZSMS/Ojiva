@@ -8,6 +8,7 @@
  *  ✅  Google Analytics 4  (GA4)       — G-FYZX6KFBEL
  *  ✅  Google Tag Manager (GTM)        — GTM-TJ8ZDFS2  (inline in layout.js <head>)
  *  ✅  Google Search Console           — vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI
+ *  ✅  Meta Pixel                      — 1051828620576144
  *
  * ⚠️  DO NOT REMOVE OR COMMENT OUT these scripts — they track all site traffic.
  *     If you think there are duplicate hits, check inside GTM container first.
@@ -17,13 +18,14 @@
 import Script from 'next/script';
 
 /* ── Config — only edit values here ─────────────────────── */
-const GA_MEASUREMENT_ID          = 'G-FYZX6KFBEL';
-const GTM_CONTAINER_ID           = 'GTM-TJ8ZDFS2';
+const GA_MEASUREMENT_ID           = 'G-FYZX6KFBEL';
+const GTM_CONTAINER_ID            = 'GTM-TJ8ZDFS2';
 const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI';
+const META_PIXEL_ID               = '1051828620576144';
 /* ─────────────────────────────────────────────────────── */
 
 /**
- * Analytics — renders GA4 tracking scripts via Next.js Script (afterInteractive).
+ * Analytics — renders GA4 + Meta Pixel scripts via Next.js Script (afterInteractive).
  * Already placed in layout.js <body>. DO NOT delete this component or its usage.
  */
 export default function Analytics() {
@@ -47,6 +49,36 @@ export default function Analytics() {
           `,
         }}
       />
+
+      {/* ── Meta Pixel ── */}
+      <Script
+        id="meta-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${META_PIXEL_ID}');
+            fbq('track', 'PageView');
+          `,
+        }}
+      />
+      <noscript>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          alt=""
+        />
+      </noscript>
     </>
   );
 }
