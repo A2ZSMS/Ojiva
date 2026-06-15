@@ -13,6 +13,12 @@ import Jun01 from "@/components/blogs/Jun2026/Jun01";
 import Jun02 from "@/components/blogs/Jun2026/Jun02";
 import Jun03 from "@/components/blogs/Jun2026/Jun03";
 import Jun04 from "@/components/blogs/Jun2026/Jun04";
+import Jun08 from "@/components/blogs/Jun2026/Jun08";
+import Jun10 from "@/components/blogs/Jun2026/Jun10";
+import Jun12 from "@/components/blogs/Jun2026/Jun12";
+import Jun13 from "@/components/blogs/Jun2026/Jun13";
+
+
 
 
 // Add new blog component imports here as you publish more blogs
@@ -29,6 +35,10 @@ const BlogComponents = {
   Jun02,
   Jun03,
   Jun04,
+  Jun08,
+  Jun10,
+  Jun12,
+  Jun13,
   // Add new entries here matching the componentKey in blog.json
 };
 

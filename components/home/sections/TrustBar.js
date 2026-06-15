@@ -1,5 +1,4 @@
 const TRUST_STATS = [
-  { val: '10M+',  lbl: 'Messages / day' },
   { val: '500+',  lbl: 'Businesses trust us' },
   { val: '99.9%', lbl: 'Uptime SLA' },
   { val: '4',     lbl: 'Channels — one API' },

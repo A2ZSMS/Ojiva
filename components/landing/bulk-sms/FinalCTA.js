@@ -103,7 +103,7 @@ export default function FinalCTA() {
               }}
             >
               <span style={{ color: '#e2e8f0' }}>
-                Join 500+ Indian businesses delivering 10M+ messages every day with Ojiva AI.
+                Join 500+ Indian businesses delivering messages every day with Ojiva AI.
                 Fill the form and our expert will contact you within 2 hours with custom pricing.
               </span>
             </p>

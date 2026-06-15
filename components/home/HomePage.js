@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 
 // Above-fold — loaded immediately (affect LCP)
 import Hero    from './Hero';
-import TrustBar from './sections/TrustBar';
 
 // Below-fold — code-split, loaded only when needed
 const Services             = dynamic(() => import('./sections/Services'));
@@ -25,9 +24,6 @@ export default function HomePage() {
     <>
       {/* ══ 1. HERO ══════════════════════════════════════════ */}
       <Hero />
-
-      {/* ══ 2. TRUST / STATS BAR ═════════════════════════════ */}
-      <TrustBar />
 
       {/* ══ 3. CORE SERVICES ═════════════════════════════════ */}
       <Services />

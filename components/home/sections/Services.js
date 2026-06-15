@@ -33,7 +33,6 @@ const SERVICES = [
     iconBg: '#0EA5E9',
     title: 'Bulk SMS Service',
     desc: 'Lightning-fast promotional and transactional SMS campaigns with 99.9% delivery rates across all networks.',
-    stat: '10M+ msgs/day',
   },
   {
     id: 'voice',
@@ -87,9 +86,11 @@ export default function Services() {
                 <h3 className="ojv-svc-title">{title}</h3>
                 <p className="ojv-svc-desc">{desc}</p>
                 <div className="ojv-svc-footer">
-                  <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
-                    {stat}
-                  </span>
+                  {stat && (
+                    <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
+                      {stat}
+                    </span>
+                  )}
                   <span className="ojv-svc-link" style={{ color: iconBg }}>
                     Learn more →
                   </span>
@@ -110,9 +111,11 @@ export default function Services() {
                 <h3 className="ojv-svc-title">{title}</h3>
                 <p className="ojv-svc-desc">{desc}</p>
                 <div className="ojv-svc-footer">
-                  <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
-                    {stat}
-                  </span>
+                  {stat && (
+                    <span className="ojv-svc-stat" style={{ color: iconBg, background: `${iconBg}12` }}>
+                      {stat}
+                    </span>
+                  )}
                   <span className="ojv-svc-link" style={{ color: iconBg }}>
                     Learn more →
                   </span>

@@ -75,34 +75,74 @@
     "description": "Send bulk SMS in India in 2026 the right way DLT registration, promotional vs transactional rules, real INR pricing, and how to launch your first campaign.",
     "image": "/image/jun1(1).png"
   },
-   {
-     "id": 8,
-     "title": "WhatsApp Business API Pricing in India 2026: Cost Breakdown",
-     "componentKey": "Jun02",
-     "slug": "whatsapp-business-api-pricing-india",
-     "category": "WhatsApp API",
-     "date": "2026-06-01",
-     "description": "WhatsApp Business API pricing in India for 2026: Meta's new per-message rates, GST, BSP markups and hidden fees, with real cost examples before you budget.",
-     "image": "/image/jun2(1).png"
-   },
-   {
-     "id": 9,
-     "title": "Best Bulk SMS Service Providers in India",
-     "componentKey": "Jun03",
-     "slug": "best-bulk-sms-providers-india",
-     "category": "Bulk SMS",
-     "date": "2026-06-03",
-     "description": "The best bulk SMS service provider in India for 2026 — promotional, transactional and OTP SMS with high delivery, real INR pricing and full DLT compliance.",
-     "image": "/image/jun3(1).png"
-   },
-   {
-     "id": 10,
-     "title": "What Is RCS Messaging? A 2026 Guide for Indian Businesses",
-     "componentKey": "Jun04",
-     "slug": "what-is-rcs-messaging",
-     "category": "RCS Messaging",
-     "date": "2026-06-04",
-     "description": "What is RCS messaging? A 2026 guide for Indian businesses — how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and how to get started.",
-     "image": "/image/jun4(1).png"
-   }
+  {
+    "id": 8,
+    "title": "WhatsApp Business API Pricing in India 2026: Cost Breakdown",
+    "componentKey": "Jun02",
+    "slug": "whatsapp-business-api-pricing-india",
+    "category": "WhatsApp API",
+    "date": "2026-06-01",
+    "description": "WhatsApp Business API pricing in India for 2026: Meta's new per-message rates, GST, BSP markups and hidden fees, with real cost examples before you budget.",
+    "image": "/image/jun2(1).png"
+  },
+  {
+    "id": 9,
+    "title": "Best Bulk SMS Service Providers in India",
+    "componentKey": "Jun03",
+    "slug": "best-bulk-sms-providers-india",
+    "category": "Bulk SMS",
+    "date": "2026-06-03",
+    "description": "The best bulk SMS service provider in India for 2026 — promotional, transactional and OTP SMS with high delivery, real INR pricing and full DLT compliance.",
+    "image": "/image/jun3(1).png"
+  },
+  {
+    "id": 10,
+    "title": "What Is RCS Messaging? A 2026 Guide for Indian Businesses",
+    "componentKey": "Jun04",
+    "slug": "what-is-rcs-messaging",
+    "category": "RCS Messaging",
+    "date": "2026-06-04",
+    "description": "What is RCS messaging? A 2026 guide for Indian businesses — how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and how to get started.",
+    "image": "/image/jun4(1).png"
+  },
+  {
+    "id": 11,
+    "title": "AI Voice Agent vs IVR in 2026: Cost, ROI & Verdict",
+    "componentKey": "Jun08",
+    "slug": "ai-voice-agent-vs-ivr",
+    "category": "Voice Call",
+    "date": "2026-06-08",
+    "description": "AI voice agent vs IVR in 2026: real India costs (₹2–6/min), 60–80% autonomous resolution vs 10–30% for IVR, plus a clear verdict on which to pick.",
+    "image": "/image/jun8(1).png"
+  },
+  {
+    "id": 12,
+    "title": "WhatsApp Business App vs API: Which Do You Need?",
+    "componentKey": "Jun10",
+    "slug": "whatsapp-business-app-vs-api",
+    "category": "WhatsApp API",
+    "date": "2026-06-10",
+    "description": "WhatsApp Business App vs API in 2026: free app limits (256 broadcast, no automation) vs API features, real India pricing, and exactly when to upgrade.",
+    "image": "/image/jun10(1).png"
+  },
+  {
+    "id": 13,
+    "title": "DLT Registration for Bulk SMS in India: 2026 Guide",
+    "componentKey": "Jun12",
+    "slug": "dlt-registration-bulk-sms-india",
+    "category": "Bulk SMS",
+    "date": "2026-06-12",
+    "description": "DLT registration for bulk SMS in India (2026): step-by-step entity, header and template registration, the ~₹5,900 fee, 3–7 day timeline and scrubbing traps.",
+    "image": "/image/jun12(1).png"
+  },
+  {
+    "id": 14,
+    "title": "How to Choose a WhatsApp BSP in India: 2026 Checklist",
+    "componentKey": "Jun13",
+    "slug": "best-whatsapp-bsp-india",
+    "category": "WhatsApp API",
+    "date": "2026-06-13",
+    "description": "How to choose a WhatsApp BSP in India in 2026 — a buyer's checklist covering pricing transparency, markup %, support SLA, India hours and integrations.",
+    "image": "/image/jun13(1).png"
+  }
 ]

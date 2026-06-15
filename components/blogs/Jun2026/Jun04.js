@@ -1,34 +1,5 @@
 import React from "react";
 
-/* ============================================================
-   SEO / GEO META — wire into your <head> / Helmet system
-   ------------------------------------------------------------
-   PRIMARY KEYWORD : what is rcs messaging
-   SECONDARY       : rcs messaging india, rcs business messaging,
-                     rcs vs sms, rcs vs whatsapp, rich communication services
-   INTENT          : Informational (beginner explainer)
-   META TITLE (56) : What Is RCS Messaging? A 2026 Guide for Indian Businesses
-   META DESC (150) : What is RCS messaging? A 2026 guide for Indian businesses —
-                     how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and
-                     how to get started.
-   URL SLUG        : /blog/what-is-rcs-messaging/
-   PUBLISHED       : 2026-06-04   |   UPDATED : 2026-06-04
-   COMPONENT KEY   : Jun05  (set file name, const, export & blog JSON to match)
-
-   SCHEMA (add as <script type="application/ld+json">, replace bracketed values):
-   ARTICLE:
-   {"@context":"https://schema.org","@type":"Article",
-    "headline":"What Is RCS Messaging? A 2026 Guide for Indian Businesses",
-    "description":"What is RCS messaging? A 2026 guide for Indian businesses — how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and how to get started.",
-    "image":"https://ojiva.ai/Images/Jun05(1).jpeg",
-    "author":{"@type":"Person","name":"Ananth","url":"https://ojiva.ai/author/ananth/"},
-    "publisher":{"@type":"Organization","name":"Ojiva AI Technologies","logo":{"@type":"ImageObject","url":"https://ojiva.ai/Images/logo.png"}},
-    "datePublished":"2026-06-04","dateModified":"2026-06-04",
-    "mainEntityOfPage":"https://ojiva.ai/blog/what-is-rcs-messaging/"}
-   FAQPAGE: build from the FAQ Q&As at the bottom of this file.
-   BREADCRUMBLIST: Home > Blog > What Is RCS Messaging
-   ============================================================ */
-
 const Jun04 = () => {
   return (
     <>

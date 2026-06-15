@@ -4,7 +4,7 @@ import SmsPageContent from '@/components/services/sms/SmsPage';
 export const metadata = buildMetadata({
   title: "Bulk SMS Service India — OTP, Promo & Transactional",
   description:
-    "Best bulk SMS provider in India for OTP, transactional & promotional campaigns. DLT compliant, 99% delivery, 10M+ messages/day. Free trial.",
+    "Best bulk SMS provider in India for OTP, transactional & promotional campaigns. DLT compliant, 99% delivery. Free trial.",
   path: "/sms",
   keywords: [
     "bulk SMS service India",

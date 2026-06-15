@@ -4,7 +4,7 @@ import VoicePageContent from '@/components/services/voice/VoicePage';
 export const metadata = buildMetadata({
   title: "Bulk Voice Call & IVR Service India — AI Auto Dialer",
   description:
-    "India's top bulk voice call & IVR service. AI voice bots, outbound dialer, 10M+ calls/day. 99.9% connect rate. Trusted by 500+ businesses.",
+    "India's top bulk voice call & IVR service. AI voice bots, outbound dialer. 99.9% connect rate. Trusted by 500+ businesses.",
   path: "/voice",
   keywords: [
     "AI voice call automation India",

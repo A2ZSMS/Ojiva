@@ -83,10 +83,6 @@ function ChannelMockup({ channel, use, indColor }) {
         </div>
         <div className="ind-lp-sms-stats">
           <div className="ind-lp-sms-stat">
-            <span style={{ color: meta.color }}>10M+</span>
-            <span>Msgs/day</span>
-          </div>
-          <div className="ind-lp-sms-stat">
             <span style={{ color: meta.color }}>99.9%</span>
             <span>Uptime SLA</span>
           </div>
@@ -301,9 +297,6 @@ export default function IndustryPageLayout({ industry }) {
                         <strong style={{ color }}>500+</strong><span>Businesses</span>
                       </div>
                       <div className="ind-lp-hero-stat">
-                        <strong style={{ color }}>10M+</strong><span>Msgs/day</span>
-                      </div>
-                      <div className="ind-lp-hero-stat">
                         <strong style={{ color }}>99.9%</strong><span>Uptime</span>
                       </div>
                     </div>
@@ -356,10 +349,6 @@ export default function IndustryPageLayout({ industry }) {
               <div className="col-12 col-lg-5">
                 <FadeUp>
                   <div className="ind-lp-intro-stats">
-                    <div className="ind-lp-intro-stat" style={{ '--ind-color': color }}>
-                      <span className="ind-lp-intro-stat-num" style={{ color }}>10M+</span>
-                      <span className="ind-lp-intro-stat-label">Messages / Day</span>
-                    </div>
                     <div className="ind-lp-intro-stat" style={{ '--ind-color': color }}>
                       <span className="ind-lp-intro-stat-num" style={{ color }}>500+</span>
                       <span className="ind-lp-intro-stat-label">Businesses Served</span>

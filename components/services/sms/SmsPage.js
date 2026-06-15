@@ -34,7 +34,7 @@ export default function SmsPageContent({ faqs }) {
           'Sub-3 second OTP delivery',
           'Dedicated support team (IST hours)',
         ]}
-        stats={[{ val: '10M+', lbl: 'Messages/Day' }, { val: '99%', lbl: 'Delivery Rate' }, { val: '24hr', lbl: 'Go-Live' }]}
+        stats={[{ val: '99%', lbl: 'Delivery Rate' }, { val: '24hr', lbl: 'Go-Live' }]}
         formTitle="Get Bulk SMS Access & Pricing"
         formSubtitle="No credit card. DLT handled by us. Live in 24 hours."
         formBadge="DLT Compliant · 99% Delivery · No lock-in"

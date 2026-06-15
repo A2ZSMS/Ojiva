@@ -25,7 +25,6 @@ export const HOW_STEPS = [
 
 export const METRICS = [
   { value: '99.9%', label: 'Call Connect Rate' },
-  { value: '10M+', label: 'Calls Monthly' },
   { value: '24×7', label: 'AI Availability' },
   { value: '10+', label: 'Languages' },
 ];

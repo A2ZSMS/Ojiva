@@ -1,6 +1,5 @@
 export const METRICS = [
   { value: '3B+', label: 'API calls processed' },
-  { value: '10M+', label: 'Messages sent monthly' },
   { value: '99.9%', label: 'Platform uptime SLA' },
   { value: '150+', label: 'Enterprise clients' },
 ];

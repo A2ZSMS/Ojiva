@@ -27,7 +27,6 @@ export default function MidForm() {
             {/* Stats row */}
             <div className="lp-midform-stats">
               {[
-                { val: "10M+", lbl: "Messages/Day" },
                 { val: "98%",  lbl: "Open Rate" },
                 { val: "48hr", lbl: "Go-Live" },
               ].map(({ val, lbl }) => (

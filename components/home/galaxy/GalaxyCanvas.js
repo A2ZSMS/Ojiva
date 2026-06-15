@@ -16,7 +16,7 @@ const SERVICES = [
     color: '#25d366', radius: 148, startAngle:   0, speed: 0.28,
   },
   {
-    id: 'sms',   icon: 'bi-chat-text',         label: 'Bulk SMS',     stat: '10M+ / Day',
+    id: 'sms',   icon: 'bi-chat-text',         label: 'Bulk SMS',
     color: '#3b82f6', radius: 148, startAngle: 180, speed: 0.28,
   },
   {
@@ -41,7 +41,6 @@ const SERVICES = [
 const BLAST_MSGS = [
   { text: '98% Open Rate',    tx:  220, ty: -80  },
   { text: '500+ Businesses',  tx: -230, ty: -70  },
-  { text: '10M+ Msgs / Day',  tx:  180, ty:  130 },
   { text: '48hr Go-Live',     tx: -170, ty:  140 },
   { text: '99.9% Uptime',     tx:   60, ty: -200 },
   { text: 'Zero Setup Fees',  tx:  -80, ty:  190 },
@@ -185,7 +184,7 @@ export default function GalaxyCanvas() {
               {hoveredId === s.id && (
                 <div className="gx-node-tip" style={{ '--clr': s.color }}>
                   <strong>{s.label}</strong>
-                  <span>{s.stat}</span>
+                  {s.stat && <span>{s.stat}</span>}
                 </div>
               )}
             </div>

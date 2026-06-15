@@ -1,38 +1,5 @@
 import React from "react";
 
-/* ============================================================
-   SEO / GEO META — wire into your <head> / Helmet system
-   ------------------------------------------------------------
-   NOTE: Retitled from the "10 Best…" listicle to a single-company
-   SERVICE-style page, because the content now features only Ojiva
-   (no competitors) and is modeled on two single-company service
-   pages. A "10 Best" title with one company is an intent mismatch
-   and won't rank for the listicle SERP. Update your blog JSON to
-   match: title + slug below, componentKey "Jun04".
-
-   PRIMARY KEYWORD : best bulk sms service provider in india
-   META TITLE (57) : Best Bulk SMS Service Provider in India (2026) | Ojiva AI
-   META DESC (156) : Looking for the best bulk SMS service provider in India?
-                     Send promotional, transactional & OTP SMS with high delivery,
-                     real INR pricing and full DLT compliance. Get started.
-   URL SLUG        : /blog/best-bulk-sms-service-provider-india/
-   PUBLISHED       : 2026-06-04   |   UPDATED : 2026-06-04
-
-   SCHEMA (add as <script type="application/ld+json">, replace bracketed values):
-   ARTICLE:
-   {"@context":"https://schema.org","@type":"Article",
-    "headline":"Best Bulk SMS Service Provider in India (2026)",
-    "description":"Send promotional, transactional and OTP SMS in India with high delivery, real INR pricing and full DLT compliance.",
-    "image":"https://ojiva.ai/Images/Jun04(1).jpeg",
-    "author":{"@type":"Person","name":"[Author Name]","jobTitle":"[Role]","url":"https://ojiva.ai/author/[author-slug]/"},
-    "reviewedBy":{"@type":"Person","name":"[Reviewer Name]"},
-    "publisher":{"@type":"Organization","name":"Ojiva AI Technologies","logo":{"@type":"ImageObject","url":"https://ojiva.ai/Images/logo.png"}},
-    "datePublished":"2026-06-04","dateModified":"2026-06-04",
-    "mainEntityOfPage":"https://ojiva.ai/blog/best-bulk-sms-service-provider-india/"}
-   FAQPAGE: build from the FAQ Q&As at the bottom of this file.
-   BREADCRUMBLIST: Home > Blog > Best Bulk SMS Service Provider in India
-   ============================================================ */
-
 const Jun03 = () => {
   return (
     <>

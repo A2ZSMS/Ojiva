@@ -23,7 +23,6 @@ export const INDUSTRIES = [
 ];
 
 export const METRICS = [
-  { value: '10M+', label: 'SMS / Month' },
   { value: '98.4%', label: 'Delivery Rate' },
   { value: '<3s', label: 'OTP Speed' },
   { value: '500+', label: 'Enterprises' },

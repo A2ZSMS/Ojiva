@@ -33,7 +33,6 @@ export default function ServiceLeadForm({
     'Pay-as-you-go pricing — scales with you',
   ],
   stats           = [
-    { val: '10M+', lbl: 'Messages/Day' },
     { val: '500+', lbl: 'Businesses' },
     { val: '48hr', lbl: 'Go-Live' },
   ],

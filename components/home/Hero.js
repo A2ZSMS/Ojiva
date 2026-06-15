@@ -37,7 +37,7 @@ const ArrowRight = () => (
 /* ── Data ─────────────────────────────────────────────────── */
 const CHANNELS = [
   { Icon: WhatsappIcon, label: 'WhatsApp API',  stat: '98%',  statLbl: 'open rate',  color: '#34d399', glow: 'rgba(52,211,153,0.14)',  bar: 98, badge: 'Top Channel' },
-  { Icon: SmsIcon,      label: 'Bulk SMS',       stat: '10M+', statLbl: 'msgs / day', color: '#60a5fa', glow: 'rgba(96,165,250,0.14)',  bar: 82 },
+  { Icon: SmsIcon,      label: 'Bulk SMS',       color: '#60a5fa', glow: 'rgba(96,165,250,0.14)',  bar: 82 },
   { Icon: RcsIcon,      label: 'RCS Messaging',  stat: '94%',  statLbl: 'read rate',  color: '#22d3ee', glow: 'rgba(34,211,238,0.14)',  bar: 94, badge: 'New' },
   { Icon: VoiceIcon,    label: 'AI Voice Call',  stat: 'IVR',  statLbl: 'zero-agent', color: '#818cf8', glow: 'rgba(129,140,248,0.14)', bar: 70 },
 ];

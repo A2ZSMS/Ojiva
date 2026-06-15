@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import BulkSmsLanding from '@/components/landing/BulkSmsLanding';
 
 export const metadata = buildMetadata({
-  title: 'Bulk SMS Service India — 10M+ Messages/Day, 99% Delivery',
+  title: 'Bulk SMS Service India — 99% Delivery',
   description:
     'Best bulk SMS service in India — OTP, transactional & promotional. DLT compliant, 99% delivery, sub-3s OTP. 500+ businesses trust Ojiva AI.',
   path: '/bulk-sms',
