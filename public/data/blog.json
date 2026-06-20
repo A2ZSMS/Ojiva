@@ -1,5 +1,35 @@
 [
   {
+    "id": 17,
+    "title": "How to Grow Your Business with RCS Messaging in India",
+    "componentKey": "Jun19",
+    "slug": "grow-business-with-rcs-india",
+    "category": "RCS Messaging",
+    "date": "2026-06-19",
+    "description": "Grow your business with RCS messaging in India: rich media, carousels, verified branding and interactive campaigns that lift engagement and conversions.",
+    "image": "/image/jun19(1).png"
+  }, 
+  {
+    "id": 16,
+    "title": "WhatsApp API Message Templates for Indian Businesses",
+    "componentKey": "Jun17",
+    "slug": "whatsapp-api-message-templates-india",
+    "category": "WhatsApp API",
+    "date": "2026-06-17",
+    "description": "WhatsApp API message templates for Indian businesses: Utility, Authentication & Marketing examples, the 24-hour rule, naming tips and copy-paste templates.",
+    "image": "/image/jun17(1).png"
+  },
+  {
+    "id": 15,
+    "title": "Best RCS Messaging Provider in Karnataka",
+    "componentKey": "Jun15",
+    "slug": "best-rcs-messaging-provider-karnataka",
+    "category": "RCS Messaging",
+    "date": "2026-06-15",
+    "description": "Best RCS messaging provider in Karnataka for 2026 verified branding, rich media, carousels, industry use cases, pricing and India-based support.",
+    "image": "/image/jun15(1).png"
+  },
+  {
     "id": 14,
     "title": "How to Choose a WhatsApp BSP in India: 2026 Checklist",
     "componentKey": "Jun13",
