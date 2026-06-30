@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
+import { sendToTeleCRM } from '@/lib/telecrm';
 
 /* ─── Config ──────────────────────────────────────────────── */
 const WEB3_KEY  = WEB3_ACCESS_KEY;
@@ -179,7 +179,7 @@ export default function LandingLeadForm({
         fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
-        sendWhatsApp(payload.name, payload.phone).catch(() => {});
+        sendToTeleCRM(payload.name, payload.phone, payload.email, source).catch(() => {});
         router.push(thankYouUrl);
       } else {
         setApiError('Something went wrong. Please try again or call us.');

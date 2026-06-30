@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
+import { sendToTeleCRM } from '@/lib/telecrm';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -171,7 +171,7 @@ export default function DemoForm() {
             time: time || 'Not specified', message: msg || 'No message',
           }),
         }).catch(() => {});
-        sendWhatsApp(form.name, form.phone).catch(() => {});
+        sendToTeleCRM(form.name, form.phone, form.email, 'book-demo').catch(() => {});
         router.push('/thank-you');
       } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
