@@ -147,33 +147,33 @@ export default function DemoForm() {
     setSt('loading'); setErr('');
     try {
       sendToTeleCRM(form.name, form.phone, form.email, 'book-demo').catch(() => {});
-      const fd = new FormData();
-      fd.append('access_key',           ACCESS_KEY);
-      fd.append('name',                 form.name);
-      fd.append('email',                form.email);
-      fd.append('phone',                form.phone || 'Not provided');
-      fd.append('company',              form.company);
-      fd.append('company_size',         size              || 'Not specified');
-      fd.append('monthly_volume',       volume            || 'Not specified');
-      fd.append('channels_of_interest', channels.join(', ') || 'Not specified');
-      fd.append('preferred_time',       time              || 'Not specified');
-      fd.append('message',              msg               || 'No message');
-      fd.append('subject', `🎯 Demo — ${form.name} (${form.company})`);
-      fd.append('botcheck', '');
-      fd.append('privacy_consent', 'Agreed');
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      const d   = await res.json();
-      if (d.success) {
-        fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ source: 'book-demo', name: form.name, email: form.email,
-            phone: form.phone || 'Not provided', company: form.company,
-            size: size || 'Not specified', volume: volume || 'Not specified',
-            channels: channels.join(', ') || 'Not specified',
-            time: time || 'Not specified', message: msg || 'No message',
-          }),
-        }).catch(() => {});
-        router.push('/thank-you');
-      } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
+      // const fd = new FormData();
+      // fd.append('access_key',           ACCESS_KEY);
+      // fd.append('name',                 form.name);
+      // fd.append('email',                form.email);
+      // fd.append('phone',                form.phone || 'Not provided');
+      // fd.append('company',              form.company);
+      // fd.append('company_size',         size              || 'Not specified');
+      // fd.append('monthly_volume',       volume            || 'Not specified');
+      // fd.append('channels_of_interest', channels.join(', ') || 'Not specified');
+      // fd.append('preferred_time',       time              || 'Not specified');
+      // fd.append('message',              msg               || 'No message');
+      // fd.append('subject', `🎯 Demo — ${form.name} (${form.company})`);
+      // fd.append('botcheck', '');
+      // fd.append('privacy_consent', 'Agreed');
+      // const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+      // const d   = await res.json();
+      // if (d.success) {
+      //   fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ source: 'book-demo', name: form.name, email: form.email,
+      //       phone: form.phone || 'Not provided', company: form.company,
+      //       size: size || 'Not specified', volume: volume || 'Not specified',
+      //       channels: channels.join(', ') || 'Not specified',
+      //       time: time || 'Not specified', message: msg || 'No message',
+      //     }),
+      //   }).catch(() => {});
+      router.push('/thank-you');
+      // } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
   }
 

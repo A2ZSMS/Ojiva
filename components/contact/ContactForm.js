@@ -76,23 +76,23 @@ export default function ContactForm() {
     setStatus('loading'); setErrorMsg('');
     try {
       sendToTeleCRM(form.name, form.phone, form.email, 'contact-us').catch(() => {});
-      const fd = new FormData(e.target);
-      fd.append('access_key', ACCESS_KEY);
-      fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
-      fd.append('botcheck', '');
-      fd.append('services', selected.join(', ') || 'Not specified');
-      fd.append('privacy_consent', 'Agreed');
-      const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      const data = await res.json();
-      if (data.success) {
-        fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
-            phone: form.phone, company: form.company, industry: form.industry,
-            services: selected.join(', ') || 'Not specified', message: form.message,
-          }),
-        }).catch(() => {});
-        router.push('/thank-you');
-      } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
+      // const fd = new FormData(e.target);
+      // fd.append('access_key', ACCESS_KEY);
+      // fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
+      // fd.append('botcheck', '');
+      // fd.append('services', selected.join(', ') || 'Not specified');
+      // fd.append('privacy_consent', 'Agreed');
+      // const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+      // const data = await res.json();
+      // if (data.success) {
+      //   fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
+      //       phone: form.phone, company: form.company, industry: form.industry,
+      //       services: selected.join(', ') || 'Not specified', message: form.message,
+      //     }),
+      //   }).catch(() => {});
+      router.push('/thank-you');
+      // } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }
   }
 
