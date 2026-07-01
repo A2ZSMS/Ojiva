@@ -5,9 +5,23 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
-import { sendToTeleCRM } from '@/lib/telecrm';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
+
+const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
+const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
+function fireTeleCRM(name, phone, email) {
+  let p = String(phone || '').replace(/\D/g, '');
+  if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
+  if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
+  if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
+  if (p.length !== 10 || !/^[6-9]/.test(p)) return;
+  fetch(TELECRM_API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
+    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase(), lead_source: 5 } }),
+  }).catch(() => {});
+}
 
 /* ── Data ──────────────────────────────────────────── */
 const CHANNELS = [
@@ -146,7 +160,7 @@ export default function DemoForm() {
     if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
     setSt('loading'); setErr('');
     try {
-      sendToTeleCRM(form.name, form.phone, form.email, 'book-demo').catch(() => {});
+      fireTeleCRM(form.name, form.phone, form.email);
       // const fd = new FormData();
       // fd.append('access_key',           ACCESS_KEY);
       // fd.append('name',                 form.name);

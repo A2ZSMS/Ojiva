@@ -3,7 +3,21 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
-import { sendToTeleCRM } from '@/lib/telecrm';
+
+const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
+const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
+function fireTeleCRM(name, phone, email) {
+  let p = String(phone || '').replace(/\D/g, '');
+  if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
+  if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
+  if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
+  if (p.length !== 10 || !/^[6-9]/.test(p)) return;
+  fetch(TELECRM_API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
+    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase(), lead_source: 5 } }),
+  }).catch(() => {});
+}
 
 /* ─── Config ──────────────────────────────────────────────── */
 const WEB3_KEY  = WEB3_ACCESS_KEY;
@@ -170,7 +184,7 @@ export default function LandingLeadForm({
     };
 
     try {
-      sendToTeleCRM(payload.name, payload.phone, payload.email, source).catch(() => {});
+      fireTeleCRM(payload.name, payload.phone, payload.email);
       // const [w, m] = await Promise.allSettled([
       //   fetch('https://api.web3forms.com/submit', {
       //     method:  'POST',
