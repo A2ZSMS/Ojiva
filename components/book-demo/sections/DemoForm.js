@@ -146,6 +146,7 @@ export default function DemoForm() {
     if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
     setSt('loading'); setErr('');
     try {
+      sendToTeleCRM(form.name, form.phone, form.email, 'book-demo').catch(() => {});
       const fd = new FormData();
       fd.append('access_key',           ACCESS_KEY);
       fd.append('name',                 form.name);
@@ -171,7 +172,6 @@ export default function DemoForm() {
             time: time || 'Not specified', message: msg || 'No message',
           }),
         }).catch(() => {});
-        sendToTeleCRM(form.name, form.phone, form.email, 'book-demo').catch(() => {});
         router.push('/thank-you');
       } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }

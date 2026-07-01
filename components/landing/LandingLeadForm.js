@@ -170,6 +170,7 @@ export default function LandingLeadForm({
     };
 
     try {
+      sendToTeleCRM(payload.name, payload.phone, payload.email, source).catch(() => {});
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {
           method:  'POST',
@@ -179,7 +180,6 @@ export default function LandingLeadForm({
         fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
-        sendToTeleCRM(payload.name, payload.phone, payload.email, source).catch(() => {});
         router.push(thankYouUrl);
       } else {
         setApiError('Something went wrong. Please try again or call us.');

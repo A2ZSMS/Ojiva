@@ -75,6 +75,7 @@ export default function ContactForm() {
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
     setStatus('loading'); setErrorMsg('');
     try {
+      sendToTeleCRM(form.name, form.phone, form.email, 'contact-us').catch(() => {});
       const fd = new FormData(e.target);
       fd.append('access_key', ACCESS_KEY);
       fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
@@ -90,7 +91,6 @@ export default function ContactForm() {
             services: selected.join(', ') || 'Not specified', message: form.message,
           }),
         }).catch(() => {});
-        sendToTeleCRM(form.name, form.phone, form.email, 'contact-us').catch(() => {});
         router.push('/thank-you');
       } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }
