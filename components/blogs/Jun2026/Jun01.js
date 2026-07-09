@@ -164,7 +164,7 @@ const Jun01 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun1(1).png"
+            src="/image/jun1(1).png"
             alt="Bulk SMS in India 2026 DLT campaign guide dashboard"
           />
         </div>
@@ -401,7 +401,7 @@ const Jun01 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun1(2).png"
+            src="/image/jun1(2).png"
             alt="Bulk SMS in India 2026 DLT campaign guide dashboard"
           />
         </div>

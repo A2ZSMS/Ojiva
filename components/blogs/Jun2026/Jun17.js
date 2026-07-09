@@ -166,7 +166,7 @@ const Jan17 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun17(1).png"
+            src="/image/jun17(1).png"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -449,7 +449,7 @@ const Jan17 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun17(2).png"
+            src="/image/jun17(2).png"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -802,7 +802,7 @@ const Jan17 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun17(3).png"
+            src="/image/jun17(3).png"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>

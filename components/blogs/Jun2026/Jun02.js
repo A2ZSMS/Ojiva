@@ -180,7 +180,7 @@ const Jun02 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun2(1).png"
+            src="/image/jun2(1).png"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -406,7 +406,7 @@ const Jun02 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun2(2).png"
+            src="/image/jun2(2).png"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
