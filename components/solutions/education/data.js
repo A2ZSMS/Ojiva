@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-mortarboard-fill',
     color: '#7C3AED',
     eyebrow: 'Education & EdTech Communication',
-    headline: 'WhatsApp & SMS Platform for Schools, Colleges & EdTech Platforms in India',
+    headline: 'WhatsApp & SMS for Schools, Colleges & EdTech in India',
     subtitle:
       'Send admission updates, automate fee reminders, share exam results and enable parent–teacher communication — via WhatsApp Business API and Bulk SMS for Indian education institutions.',
     intro:

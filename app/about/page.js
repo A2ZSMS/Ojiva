@@ -2,7 +2,7 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 import AboutPageContent from '@/components/about/AboutPage';
 
 export const metadata = buildMetadata({
-  title: 'About Ojiva AI — India\'s #1 Business Messaging Platform',
+  title: 'About Ojiva AI — India\'s Business Messaging Platform',
   description:
     "Ojiva AI is India's leading AI communication platform powering 500+ businesses with Bulk SMS, WhatsApp API, RCS & AI Voice. Based in Bengaluru.",
   path: '/about',

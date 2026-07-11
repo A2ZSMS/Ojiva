@@ -10,7 +10,7 @@ import {
 // Per-industry SEO metadata
 export const metadata = buildMetadata({
   title: 'Bulk SMS & WhatsApp API for Insurance Companies India',
-  description: 'Reduce lapsed policies with automated renewal reminders, claim status updates & KYC nudges via WhatsApp API and Bulk SMS for life, health & motor insurers.',
+  description: 'Reduce lapsed policies with automated renewal reminders, claim status updates & KYC nudges via WhatsApp API & Bulk SMS for life, health & motor insurers.',
   path: '/solutions/insurance',
   keywords: [
     `${industryData.name} CPaaS India`,

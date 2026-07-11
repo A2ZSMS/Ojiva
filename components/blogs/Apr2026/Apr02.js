@@ -5,10 +5,10 @@ const Apr02 = () => {
   return (
     <>
       <div className="container aos para-color">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           WhatsApp Business API for Indian Businesses in 2026: The Complete
           Guide by Ojiva AI
-        </h1>
+        </h2>
 
         {/* Section 1 Introduction */}
         <div data-aos="fade-right">
@@ -60,7 +60,7 @@ const Apr02 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/whatsapp(1).jpeg"
@@ -275,7 +275,7 @@ const Apr02 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/whatsapp(2).jpeg"
@@ -570,7 +570,7 @@ const Apr02 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/whatsapp(3).jpeg"

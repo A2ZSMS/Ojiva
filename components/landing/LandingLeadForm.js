@@ -15,8 +15,8 @@ function fireTeleCRM(name, phone, email) {
   fetch(TELECRM_API, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
-    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase(), lead_source: 5 } }),
-  }).catch(() => {});
+    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase() } }),
+  }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
 }
 
 /* ─── Config ──────────────────────────────────────────────── */
@@ -185,20 +185,20 @@ export default function LandingLeadForm({
 
     try {
       fireTeleCRM(payload.name, payload.phone, payload.email);
-      // const [w, m] = await Promise.allSettled([
-      //   fetch('https://api.web3forms.com/submit', {
-      //     method:  'POST',
-      //     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      //     body:    JSON.stringify({ access_key: WEB3_KEY, subject: `Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload }),
-      //   }).then(r => r.json()),
-      //   fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
-      // ]);
-      // if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
-      router.push(thankYouUrl);
-      // } else {
-      //   setApiError('Something went wrong. Please try again or call us.');
-      //   setSubmitting(false);
-      // }
+      const [w, m] = await Promise.allSettled([
+        fetch('https://api.web3forms.com/submit', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body:    JSON.stringify({ access_key: WEB3_KEY, subject: `Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload }),
+        }).then(r => r.json()),
+        fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
+      ]);
+      if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
+        router.push(thankYouUrl);
+      } else {
+        setApiError('Something went wrong. Please try again or call us.');
+        setSubmitting(false);
+      }
     } catch {
       setApiError('Network error. Please try again.');
       setSubmitting(false);

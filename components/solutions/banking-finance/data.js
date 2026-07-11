@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-bank',
     color: '#1B48E0',
     eyebrow: 'Banking & BFSI Communication',
-    headline: 'SMS & WhatsApp Business API for Banks, NBFCs and Fintechs in India',
+    headline: 'SMS & WhatsApp Business API for Banks, NBFCs & Fintechs in India',
     subtitle:
       'OTP delivery, transaction alerts, EMI reminders, loan updates and KYC nudges — sent across SMS, WhatsApp, RCS and Voice with 99.9% uptime and TRAI DLT compliance.',
     intro:

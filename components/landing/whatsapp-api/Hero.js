@@ -19,11 +19,9 @@ export default function Hero() {
               Official Meta Business Partner · India
             </div>
             <h1 className="lp-hero-h1">
-              Official WhatsApp Business API Provider
+              Official WhatsApp Business API
               <br />
-              <span className="lp-hero-highlight">Automate Sales &</span>
-              <br />
-              Support Instantly
+              to <span className="lp-hero-highlight">Automate Sales &amp; Support</span>
             </h1>
             <p className="lp-hero-desc">
               Stop losing leads to slow replies. Get Official WhatsApp

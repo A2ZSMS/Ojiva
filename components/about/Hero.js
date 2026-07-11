@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="about-brand-card about-brand-ojiva">
                 <div className="about-brand-card-header">
                   <Image
-                    src="/ojiva-logo-optimized.png"
+                    src="/ojiva-logo-optimized.webp"
                     alt="About Ojiva AI — India's leading enterprise AI communication platform headquartered in Bengaluru"
                     width={130}
                     height={44}

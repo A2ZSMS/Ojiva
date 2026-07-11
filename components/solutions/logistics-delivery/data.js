@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-truck',
     color: '#f59e0b',
     eyebrow: 'Logistics & Last-Mile Delivery Solutions',
-    headline: 'Real-Time Shipment Tracking & Delivery OTP via WhatsApp & SMS for Logistics in India',
+    headline: 'Shipment Tracking & Delivery OTP for Logistics in India',
     subtitle:
       'Cut RTO rates, send live out-for-delivery alerts, confirm OTP at handover and let customers reschedule via WhatsApp — for 3PLs, e-commerce logistics and hyperlocal delivery fleets.',
     intro:

@@ -10,7 +10,7 @@ import {
 // Per-industry SEO metadata
 export const metadata = buildMetadata({
   title: 'WhatsApp & SMS for Logistics & Last-Mile Delivery India',
-  description: 'Real-time out-for-delivery alerts, delivery OTP, RTO reduction flows & reschedule on WhatsApp. Built for 3PLs, e-commerce logistics and last-mile delivery.',
+  description: 'Real-time out-for-delivery alerts, delivery OTP, RTO reduction flows & reschedule on WhatsApp. Built for 3PLs, e-commerce logistics & last-mile delivery.',
   path: '/solutions/logistics-delivery',
   keywords: [
     `${industryData.name} CPaaS India`,

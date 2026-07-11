@@ -52,7 +52,7 @@ export const metadata = {
       {
         url: "https://www.ojiva.ai/og-image.jpg",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "Ojiva AI — India's #1 AI Communication Platform",
       },
     ],
@@ -98,8 +98,9 @@ export default function RootLayout({ children }) {
 
         {/* ── Performance: preconnect & DNS prefetch ── */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://widget.intercom.io" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://widget.intercom.io" />
         <link rel="dns-prefetch" href="https://api-iam.intercom.io" />
 
         {/* Bootstrap Icons — preload (warms cache without render-block) then

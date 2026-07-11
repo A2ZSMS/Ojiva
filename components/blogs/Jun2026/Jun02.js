@@ -13,7 +13,7 @@ const Jun02 = () => {
         description:
           "WhatsApp Business API pricing in India for 2026 — Meta's new per-message rates, GST, BSP markups and the hidden fees, with real cost examples before you budget.",
         image:
-          "https://www.ojiva.ai/Images/whatsapp-business-api-pricing-india-2026.png",
+          "https://www.ojiva.ai/image/jun2(1).webp",
         author: { "@type": "Organization", name: "Ojiva AI" },
         publisher: {
           "@type": "Organization",
@@ -134,9 +134,9 @@ const Jun02 = () => {
       />
 
       <div className="container aos para-color py-4">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           WhatsApp Business API Pricing in India 2026: Full Cost Breakdown
-        </h1>
+        </h2>
 
         {/* Introduction */}
         <h2 className="">Why Your WhatsApp Bill Never Matches the Quote</h2>
@@ -176,11 +176,11 @@ const Jun02 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun2(1).png"
+            src="/image/jun2(1).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -402,11 +402,11 @@ const Jun02 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun2(2).png"
+            src="/image/jun2(2).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>

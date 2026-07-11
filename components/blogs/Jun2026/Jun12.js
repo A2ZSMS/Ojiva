@@ -5,9 +5,9 @@ const Jun12 = () => {
     <>
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           DLT Registration for Bulk SMS in India: 2026 Step-by-Step Guide
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first */}
         <section className="mb-5">
@@ -74,11 +74,11 @@ const Jun12 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun12(2).png"
+            src="/image/jun12(2).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -500,11 +500,11 @@ const Jun12 = () => {
           </div>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun12(3).png"
+            src="/image/jun12(3).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>

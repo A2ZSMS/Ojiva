@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-heart-pulse-fill',
     color: '#16a34a',
     eyebrow: 'Healthcare Patient Communication',
-    headline: 'Patient Communication Platform — Appointment Reminders, Lab Alerts & OTP for Hospitals in India',
+    headline: 'Patient Communication Platform for Hospitals in India',
     subtitle:
       'Reduce no-shows by 40%, automate "report ready" alerts, send medication reminders and run post-discharge follow-ups — all via SMS, WhatsApp Business API and Voice.',
     intro:

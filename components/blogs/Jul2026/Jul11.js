@@ -15,7 +15,7 @@ const Jul11 = () => {
                 headline: "Best Bulk SMS Service Provider in Karnataka (2026)",
                 description:
                   "Best bulk SMS service provider in Karnataka for 2026 — direct Jio, Airtel, Vi & BSNL routes, DLT & TRAI compliance, SMS API, Kannada Unicode and transparent INR pricing.",
-                image: "https://www.ojiva.ai/image/bulk-sms-karnataka(1).png",
+                image: "https://www.ojiva.ai/image/jul11(1).webp",
                 author: { "@type": "Person", name: "Ananth" },
                 publisher: {
                   "@type": "Organization",
@@ -132,9 +132,9 @@ const Jul11 = () => {
 
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Best Bulk SMS Service Provider in Karnataka (2026)
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first, keyword in first 100 words */}
         <section className="mb-5">
@@ -163,11 +163,11 @@ const Jul11 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul11(1).png"
+            src="/image/jul11(1).webp"
             alt="Best bulk SMS service provider in Karnataka — Ojiva AI bulk SMS gateway platform"
           />
         </div>
@@ -465,11 +465,11 @@ const Jul11 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul11(2).png"
+            src="/image/jul11(2).webp"
             alt="Bulk SMS DLT and TRAI compliance in Karnataka — Ojiva AI compliant SMS platform"
           />
         </div>
@@ -678,11 +678,11 @@ const Jul11 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul11(3).png"
+            src="/image/jul11(3).webp"
             alt="Ojiva AI bulk SMS features — SMS API, sender ID, delivery reports and Kannada Unicode"
           />
         </div>

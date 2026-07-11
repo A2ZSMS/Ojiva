@@ -7,7 +7,7 @@ import {
 } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'OTP SMS Service India — Fast Delivery via SMS & WhatsApp',
+  title: 'OTP SMS India — Fast Delivery via SMS & WhatsApp',
   description:
     'Send OTP in <3 seconds via SMS, WhatsApp or Voice. 99.9% delivery, TRAI DLT compliant, AES-256 encrypted. Trusted by 500+ businesses across India.',
   path: '/otp',

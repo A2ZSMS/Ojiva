@@ -2,7 +2,7 @@ import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 import SupportPage from '@/components/support/SupportPage';
 
 export const metadata = buildMetadata({
-  title: 'Help & Support — Bulk SMS, WhatsApp API & RCS India',
+  title: 'Help & Support — Bulk SMS, WhatsApp & RCS India',
   description:
     'Get instant support for Ojiva AI. Browse FAQs, submit a support ticket or chat with our team for Bulk SMS, WhatsApp API, RCS & AI Voice issues.',
   path: '/support',

@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-shield-check',
     color: '#dc2626',
     eyebrow: 'Insurance Communication Solutions',
-    headline: 'Policy Renewal Reminders, Premium Alerts & Claims Updates via WhatsApp & SMS for Insurers in India',
+    headline: 'WhatsApp & SMS for Insurance Renewals & Claims in India',
     subtitle:
       'Reduce lapsed policies, automate renewal reminders, send claim status updates and speed up e-KYC nudges — across SMS, WhatsApp Business API and Voice for life, health and motor insurers.',
     intro:

@@ -17,7 +17,7 @@ const Jan17 = () => {
                   "WhatsApp API Message Templates for Indian Businesses (2026)",
                 description:
                   "WhatsApp API message templates for Indian businesses: Utility, Authentication & Marketing examples, the 24-hour rule, naming tips and copy-paste templates.",
-                image: "https://www.ojiva.ai/image/whatsapp-templates-1.png",
+                image: "https://www.ojiva.ai/image/jun17(1).webp",
                 author: { "@type": "Person", name: "Ananth" },
                 publisher: {
                   "@type": "Organization",
@@ -134,9 +134,9 @@ const Jan17 = () => {
 
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           WhatsApp API Message Templates for Indian Businesses
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first */}
         <section className="mb-5">
@@ -162,11 +162,11 @@ const Jan17 = () => {
           </p>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun17(1).png"
+            src="/image/jun17(1).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -281,11 +281,11 @@ const Jan17 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/whatsapp-templates-1.png"
+            src="/image/whatsapp(1).jpeg"
             alt="WhatsApp API message templates for Indian businesses — Ojiva AI"
           />
         </div>
@@ -445,11 +445,11 @@ const Jan17 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun17(2).png"
+            src="/image/jun17(2).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -504,11 +504,11 @@ const Jan17 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/whatsapp-templates-2.png"
+            src="/image/whatsapp(2).jpeg"
             alt="WhatsApp template structure: header, body, variables and buttons"
           />
         </div>
@@ -798,11 +798,11 @@ const Jan17 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun17(3).png"
+            src="/image/jun17(3).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>

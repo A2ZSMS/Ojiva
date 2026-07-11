@@ -5,9 +5,9 @@ const Jun15 = () => {
     <>
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Best RCS Messaging Provider in Karnataka
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first */}
         <section className="mb-5">
@@ -38,11 +38,11 @@ const Jun15 = () => {
           </p>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun15(1).png"
+            src="/image/jun15(1).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -417,11 +417,11 @@ const Jun15 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun15(2).png"
+            src="/image/jun15(2).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -678,11 +678,11 @@ const Jun15 = () => {
           </p>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun15(3).png"
+            src="/image/jun15(3).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>

@@ -61,10 +61,10 @@ const Apr06 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/may18(1).png"
+            src="/image/may18(1).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>
@@ -264,10 +264,10 @@ const Apr06 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/may18(2).png"
+            src="/image/may18(2).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>
@@ -465,10 +465,10 @@ const Apr06 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/may18(3).png"
+            src="/image/may18(3).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>

@@ -17,7 +17,7 @@ const Jun19 = () => {
                   "How to Grow Your Business with RCS Messaging in India (2026)",
                 description:
                   "Grow your business with RCS messaging in India: rich media, carousels, verified branding and interactive campaigns that lift engagement and conversions.",
-                image: "https://www.ojiva.ai/image/rcs-growth(1).png",
+                image: "https://www.ojiva.ai/image/jun19(1).webp",
                 author: { "@type": "Person", name: "Ananth" },
                 publisher: {
                   "@type": "Organization",
@@ -126,9 +126,9 @@ const Jun19 = () => {
 
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           How to Grow Your Business with RCS Messaging in India
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first */}
         <section className="mb-5">
@@ -154,11 +154,11 @@ const Jun19 = () => {
           </p>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun19(1).png"
+            src="/image/jun19(1).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -256,11 +256,11 @@ const Jun19 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/rcs-growth(1).png"
+            src="/image/rcs(1).jpeg"
             alt="Grow your business with RCS messaging in India — Ojiva AI"
           />
         </div>
@@ -471,11 +471,11 @@ const Jun19 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun19(2).png"
+            src="/image/jun19(2).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>
@@ -534,11 +534,11 @@ const Jun19 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/rcs-growth(2).png"
+            src="/image/rcs(2).jpeg"
             alt="RCS growth strategy steps for Indian businesses — Ojiva AI"
           />
         </div>
@@ -777,11 +777,11 @@ const Jun19 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun19(3).png"
+            src="/image/jun19(3).webp"
             alt="Best RCS Messaging Provider in Karnataka"
           />
         </div>

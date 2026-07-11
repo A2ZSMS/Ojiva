@@ -10,7 +10,7 @@ import {
 // Per-industry SEO metadata
 export const metadata = buildMetadata({
   title: 'WhatsApp & Bulk SMS for Real Estate Lead Nurturing India',
-  description: 'Deliver brochures instantly, automate site-visit reminders, send EMI alerts & keep buyers warm via WhatsApp API and Bulk SMS for Indian property developers.',
+  description: 'Deliver brochures instantly, automate site-visit reminders, send EMI alerts & keep buyers warm via WhatsApp API & Bulk SMS for Indian property developers.',
   path: '/solutions/real-estate',
   keywords: [
     `${industryData.name} CPaaS India`,

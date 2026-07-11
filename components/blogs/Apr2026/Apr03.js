@@ -5,10 +5,10 @@ const Apr03 = () => {
   return (
     <>
       <div className="container aos para-color">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           RCS Messaging for Indian Businesses in 2026: The Complete Guide to
           Rich Communication Services
-        </h1>
+        </h2>
 
         {/* Introduction - Section 1: fade-right */}
         <div data-aos="fade-right">
@@ -64,7 +64,7 @@ const Apr03 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/rcs(1).jpeg"
@@ -460,7 +460,7 @@ const Apr03 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/rcs(2).jpeg"
@@ -699,7 +699,7 @@ const Apr03 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/rcs(3).jpeg"

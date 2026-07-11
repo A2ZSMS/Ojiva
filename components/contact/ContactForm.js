@@ -16,12 +16,13 @@ function fireTeleCRM(name, phone, email) {
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
   if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
-  if (p.length !== 10 || !/^[6-9]/.test(p)) return;
+  console.log('[TeleCRM] phone in:', phone, '→ cleaned:', p);
+  if (p.length !== 10 || !/^[6-9]/.test(p)) { console.warn('[TeleCRM] invalid phone, skipped'); return; }
   fetch(TELECRM_API, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
-    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase(), lead_source: 5 } }),
-  }).catch(() => {});
+    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase() } }),
+  }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
 }
 
 const SERVICES = [
@@ -90,23 +91,23 @@ export default function ContactForm() {
     setStatus('loading'); setErrorMsg('');
     try {
       fireTeleCRM(form.name, form.phone, form.email);
-      // const fd = new FormData(e.target);
-      // fd.append('access_key', ACCESS_KEY);
-      // fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
-      // fd.append('botcheck', '');
-      // fd.append('services', selected.join(', ') || 'Not specified');
-      // fd.append('privacy_consent', 'Agreed');
-      // const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      // const data = await res.json();
-      // if (data.success) {
-      //   fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
-      //       phone: form.phone, company: form.company, industry: form.industry,
-      //       services: selected.join(', ') || 'Not specified', message: form.message,
-      //     }),
-      //   }).catch(() => {});
-      router.push('/thank-you');
-      // } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
+      const fd = new FormData(e.target);
+      fd.append('access_key', ACCESS_KEY);
+      fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
+      fd.append('botcheck', '');
+      fd.append('services', selected.join(', ') || 'Not specified');
+      fd.append('privacy_consent', 'Agreed');
+      const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+      const data = await res.json();
+      if (data.success) {
+        fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
+            phone: form.phone, company: form.company, industry: form.industry,
+            services: selected.join(', ') || 'Not specified', message: form.message,
+          }),
+        }).catch(() => {});
+        router.push('/thank-you');
+      } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }
   }
 
@@ -166,7 +167,7 @@ export default function ContactForm() {
             {/* Header */}
             <div className="cfn-head">
               <span className="cfn-tag">Get In Touch</span>
-              <h1 className="cfn-title">Contact Ojiva AI — Book a Free Demo</h1>
+              <h2 className="cfn-title">Contact Ojiva AI — Book a Free Demo</h2>
               <p className="cfn-sub">
                 Fill in your details and our team will respond within one business day.{' '}
                 <Link href="/book-demo" className="cfn-demo-link">Book a live demo →</Link>
@@ -314,13 +315,13 @@ function ContactSidebar() {
         </div>
 
         <div className="cf-info-list">
-          <a href="mailto:ojiva.tech@gmail.com" className="cf-info-row">
+          <a href="mailto:support@ojiva.ai" className="cf-info-row">
             <div className="cf-info-icon-wrap">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <div>
               <p className="cf-info-label">Email</p>
-              <p className="cf-info-value">ojiva.tech@gmail.com</p>
+              <p className="cf-info-value">support@ojiva.ai</p>
             </div>
           </a>
 

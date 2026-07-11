@@ -4,9 +4,9 @@ const Jun08 = () => {
     <>
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           How to Choose a WhatsApp BSP in India: 2026 Buyer's Checklist
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first */}
         <section className="mb-5">
@@ -74,11 +74,11 @@ const Jun08 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun8(2).png"
+            src="/image/jun8(2).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -377,11 +377,11 @@ const Jun08 = () => {
           </p>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun8(3).png"
+            src="/image/jun8(3).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>

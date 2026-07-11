@@ -2,9 +2,9 @@ import { buildMetadata, breadcrumbSchema, serviceSchema } from '@/lib/metadata';
 import PlatformPageContent from '@/components/platform/PlatformPage';
 
 export const metadata = buildMetadata({
-  title: 'AI Communication Platform India — SMS, WhatsApp, RCS & Voice',
+  title: 'One Portal — Bulk SMS, WhatsApp API, RCS & Voice',
   description:
-    "One platform for Bulk SMS, WhatsApp API, RCS, Voice & AI automation. No-code workflows, API integration & real-time analytics for India.",
+    "Run Bulk SMS, WhatsApp API, RCS and Voice from one Ojiva AI portal — one login, one contact list, one dashboard and one bill for every channel.",
   path: '/platform',
   keywords: [
     'AI messaging engine',

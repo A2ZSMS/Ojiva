@@ -10,7 +10,7 @@ import {
 // Per-industry SEO metadata
 export const metadata = buildMetadata({
   title: 'WhatsApp & SMS for Schools, Colleges & EdTech India',
-  description: 'Automate fee reminders, admission updates, exam alerts & parent-teacher communication via WhatsApp Business API and Bulk SMS for Indian education institutions.',
+  description: 'Automate fee reminders, admission updates, exam alerts & parent-teacher chat via WhatsApp Business API and Bulk SMS for Indian education institutions.',
   path: '/solutions/education',
   keywords: [
     `${industryData.name} CPaaS India`,

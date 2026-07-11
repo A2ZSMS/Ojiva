@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-airplane-fill',
     color: '#0891b2',
     eyebrow: 'Travel & Hospitality Solutions',
-    headline: 'Booking Confirmations, Check-in Reminders & Hotel Guest Messaging via WhatsApp & SMS in India',
+    headline: 'Hotel & Travel Guest Messaging on WhatsApp & SMS in India',
     subtitle:
       'Send instant booking confirmations, check-in nudges, boarding reminders and post-stay review requests — across SMS, WhatsApp Business API, RCS and Voice for airlines, hotels and OTAs.',
     intro:

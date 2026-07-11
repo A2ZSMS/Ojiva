@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-houses-fill',
     color: '#0ea5e9',
     eyebrow: 'Real Estate & Property Solutions',
-    headline: 'WhatsApp Marketing & SMS Platform for Real Estate Developers & Brokers in India',
+    headline: 'WhatsApp & SMS for Real Estate Developers & Brokers in India',
     subtitle:
       'Deliver brochures instantly, automate site-visit reminders, send EMI alerts and keep buyers warm through the long post-booking cycle — using WhatsApp Business API and Bulk SMS.',
     intro:

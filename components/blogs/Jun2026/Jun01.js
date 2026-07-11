@@ -11,7 +11,7 @@ const Jun01 = () => {
         headline: "Bulk SMS in India 2026: The Complete DLT & Campaign Guide",
         description:
           "Send bulk SMS in India in 2026 the right way — DLT registration, promotional vs transactional rules, real INR pricing, and how to launch your first campaign.",
-        image: "https://www.ojiva.ai/Images/bulk-sms-in-india-2026.png",
+        image: "https://www.ojiva.ai/image/jun1(1).webp",
         author: { "@type": "Organization", name: "Ojiva AI" },
         publisher: {
           "@type": "Organization",
@@ -132,9 +132,9 @@ const Jun01 = () => {
       />
 
       <div className="container aos para-color py-4">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Bulk SMS in India 2026: The Complete DLT &amp; Campaign Guide
-        </h1>
+        </h2>
 
         {/* Introduction */}
         <h2 className="">
@@ -160,11 +160,11 @@ const Jun01 = () => {
         </p>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun1(1).png"
+            src="/image/jun1(1).webp"
             alt="Bulk SMS in India 2026 DLT campaign guide dashboard"
           />
         </div>
@@ -397,11 +397,11 @@ const Jun01 = () => {
         </div>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun1(2).png"
+            src="/image/jun1(2).webp"
             alt="Bulk SMS in India 2026 DLT campaign guide dashboard"
           />
         </div>

@@ -1,7 +1,7 @@
 import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Privacy Policy — Data Protection, GDPR & DPDP Compliance',
+  title: 'Privacy Policy — Data Protection, GDPR & DPDP Act',
   description:
     'Ojiva AI Privacy Policy — how we collect, use and protect your data under GDPR, CCPA & India\'s DPDP Act.',
   path: '/privacy',

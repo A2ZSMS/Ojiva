@@ -2,7 +2,7 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsMessagingLanding from '@/components/landing/RcsMessagingLanding';
 
 export const metadata = buildMetadata({
-  title: 'RCS Messaging India — Rich Business Messages, 3× Higher CTR',
+  title: 'RCS Messaging India — Rich Cards, 3× Higher CTR',
   description:
     "India's best RCS messaging platform. Google-verified brand, rich cards & interactive buttons. 94% read rate, 3× higher CTR. Try free.",
   path: '/rcs-messaging',

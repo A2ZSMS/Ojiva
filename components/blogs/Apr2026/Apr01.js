@@ -5,10 +5,10 @@ const Apr01 = () => {
   return (
     <>
       <div className="container aos para-color">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Best Bulk SMS Service Provider in India: Complete Guide for Businesses
           2026
-        </h1>
+        </h2>
 
         {/* Introduction */}
         <div data-aos="fade-right">
@@ -57,7 +57,7 @@ const Apr01 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/bulksms(1).jpeg"
@@ -299,7 +299,7 @@ const Apr01 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/bulksms(2).jpeg"
@@ -640,7 +640,7 @@ const Apr01 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/bulksms(3).jpeg"

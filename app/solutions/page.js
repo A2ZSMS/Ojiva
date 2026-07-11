@@ -3,7 +3,7 @@ import { INDUSTRIES } from '@/lib/industries';
 import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Business Messaging Solutions India — SMS, WhatsApp & RCS',
+  title: 'Messaging Solutions India — SMS, WhatsApp & RCS',
   description:
     'Industry-specific messaging solutions for Banking, Healthcare, E-commerce & 10+ more. Bulk SMS, WhatsApp API, RCS & AI Voice for every business.',
   path: '/solutions',

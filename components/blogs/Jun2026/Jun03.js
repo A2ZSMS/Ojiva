@@ -5,9 +5,9 @@ const Jun03 = () => {
     <>
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Best Bulk SMS Service Provider in India
-        </h1>
+        </h2>
 
         {/* Introduction */}
         <section className="mb-5">
@@ -66,11 +66,11 @@ const Jun03 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun3(1).png"
+            src="/image/jun3(1).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -313,11 +313,11 @@ const Jun03 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jun3(2).png"
+            src="/image/jun3(2).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>
@@ -514,11 +514,11 @@ const Jun03 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/Image/jun3(3).png"
+            src="/image/jun3(3).webp"
             alt="WhatsApp Business API Pricing in India 2026"
           />
         </div>

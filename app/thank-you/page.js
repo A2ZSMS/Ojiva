@@ -13,7 +13,7 @@ export default function ThankYouPage() {
       {/* Header */}
       <header style={{ padding: '1rem 2rem', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <Link href="/" aria-label="Ojiva AI Home">
-          <Image src="/ojiva-logo-white.png" alt="Ojiva AI" width={130} height={38} priority unoptimized style={{ height: 'auto' }} />
+          <Image src="/ojiva-logo-white.webp" alt="Ojiva AI" width={130} height={38} priority unoptimized style={{ height: 'auto' }} />
         </Link>
       </header>
 

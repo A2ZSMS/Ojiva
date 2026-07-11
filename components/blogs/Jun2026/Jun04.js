@@ -5,9 +5,9 @@ const Jun04 = () => {
     <>
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           What Is RCS Messaging? A 2026 Guide for Indian Businesses
-        </h1>
+        </h2>
 
         {/* Introduction */}
         <section className="mb-5">
@@ -81,10 +81,10 @@ const Jun04 = () => {
         </section>
 
         <div className="mb-3">
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/jun4(1).png"
+            src="/image/jun4(1).webp"
             alt="What is RCS messaging explained for Indian businesses 2026"
           />
         </div>
@@ -341,10 +341,10 @@ const Jun04 = () => {
         </section>
 
         <div className="mb-3">
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/jun4(2).png"
+            src="/image/jun4(2).webp"
             alt="What is RCS messaging explained for Indian businesses 2026"
           />
         </div>
@@ -564,10 +564,10 @@ const Jun04 = () => {
         </section>
 
         <div className="mb-3">
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/jun4(3).png"
+            src="/image/jun4(3).webp"
             alt="What is RCS messaging explained for Indian businesses 2026"
           />
         </div>

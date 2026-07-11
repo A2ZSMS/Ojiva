@@ -20,7 +20,6 @@ const nextConfig = {
     optimizePackageImports: [
       'react-icons',
       'framer-motion',
-      'react-syntax-highlighter',
     ],
   },
   // Long-term cache headers for static assets (effective on Node/Vercel deploys).

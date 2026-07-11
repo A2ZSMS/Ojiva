@@ -14,7 +14,7 @@ const industryData = {
     icon: 'bi-cart-fill',
     color: '#FF6D42',
     eyebrow: 'E-commerce & D2C Solutions',
-    headline: 'WhatsApp & SMS Marketing Platform for E-commerce & D2C Brands in India',
+    headline: 'WhatsApp & SMS Marketing for E-commerce & D2C Brands in India',
     subtitle:
       'Recover abandoned carts, confirm COD orders, send real-time shipping updates and win repeat purchases — with WhatsApp Business API, Bulk SMS and RCS for Indian online stores.',
     intro:

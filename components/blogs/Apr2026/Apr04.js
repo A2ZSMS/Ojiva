@@ -5,10 +5,10 @@ const Apr04 = () => {
   return (
     <>
       <div className="container aos para-color">
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Bulk Voice Call &amp; IVR Automation: Complete Guide for Indian
           Businesses in 2026
-        </h1>
+        </h2>
 
         {/* Introduction - Section 1: fade-right */}
         <div data-aos="fade-right">
@@ -61,7 +61,7 @@ const Apr04 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/voice(1).jpeg"
@@ -356,7 +356,7 @@ const Apr04 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/voice(2).jpeg"
@@ -625,7 +625,7 @@ const Apr04 = () => {
 
         {/* Hero Image */}
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
             src="/image/voice(3).jpeg"

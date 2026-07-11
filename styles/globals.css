@@ -21331,3 +21331,198 @@ input:focus, textarea:focus, select:focus {
   .svc-form-left { padding-right: 0; margin-bottom: 2rem; }
   .svc-form-section { padding: 60px 0; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   PLATFORM — "One portal for every channel" (pf-*)
+   ═══════════════════════════════════════════════════════════ */
+
+/* Hero CTAs */
+.platform-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* ── Portal dashboard mockup ───────────────────────────────── */
+.pf-dash {
+  background: #fff;
+  border: 1px solid #e2e8f4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(50,50,93,0.10) 0 18px 40px -14px, rgba(0,0,0,0.05) 0 8px 16px -8px;
+}
+.pf-dash-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eef2f9;
+  background: #fbfcfe;
+}
+.pf-dash-dot { width: 10px; height: 10px; border-radius: 50%; background: #d7deea; }
+.pf-dash-dot:nth-child(1) { background: #ff6058; }
+.pf-dash-dot:nth-child(2) { background: #ffbd2e; }
+.pf-dash-dot:nth-child(3) { background: #28c840; }
+.pf-dash-url { margin-left: 8px; font-size: 0.72rem; color: #8a97ab; }
+.pf-dash-body { display: grid; grid-template-columns: 132px 1fr; }
+
+.pf-dash-side {
+  border-right: 1px solid #eef2f9;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #fbfcfe;
+}
+.pf-dash-side-brand {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--dark);
+  padding: 4px 8px 10px;
+  letter-spacing: -0.02em;
+}
+.pf-dash-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 9px;
+  border-radius: 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #5b6675;
+}
+.pf-dash-nav-ic {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem;
+  background: var(--ch-soft);
+  flex-shrink: 0;
+}
+.pf-dash-nav.active { background: var(--ch-soft); color: var(--ch); }
+.pf-dash-nav-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pf-dash-main { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+.pf-dash-main-head { display: flex; align-items: center; justify-content: space-between; }
+.pf-dash-main-title { font-size: 0.82rem; font-weight: 700; color: var(--dark); }
+.pf-dash-live { display: flex; align-items: center; gap: 5px; font-size: 0.68rem; font-weight: 600; color: #10b981; }
+.pf-dash-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981; }
+.pf-dash-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.pf-dash-tile { background: #f7f9fd; border-radius: 10px; padding: 9px 10px; }
+.pf-dash-tile-label { display: block; font-size: 0.62rem; color: #8a97ab; margin-bottom: 2px; }
+.pf-dash-tile-value { display: block; font-size: 1.05rem; font-weight: 700; color: var(--dark); letter-spacing: -0.03em; }
+.pf-dash-chart { display: flex; align-items: flex-end; gap: 6px; height: 64px; padding-top: 4px; }
+.pf-dash-chart span { flex: 1; border-radius: 4px 4px 0 0; }
+.pf-dash-legend { display: flex; flex-wrap: wrap; gap: 10px; }
+.pf-dash-legend span { display: flex; align-items: center; gap: 5px; font-size: 0.66rem; color: #5b6675; }
+.pf-dash-legend i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+
+/* ── Channel portal cards ──────────────────────────────────── */
+.pf-portal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.pf-portal-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+}
+.pf-portal-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--ch);
+}
+.pf-portal-card:hover { box-shadow: var(--shadow-md); border-color: var(--ch); transform: translateY(-3px); }
+.pf-portal-head { display: flex; align-items: flex-start; gap: 0.875rem; margin-bottom: 1.25rem; }
+.pf-portal-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--ch-soft);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.pf-portal-title { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin: 0 0 0.2rem; letter-spacing: -0.02em; }
+.pf-portal-tagline { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.45; }
+.pf-portal-caps { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+.pf-portal-cap {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+.pf-portal-link {
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ch);
+  text-decoration: none;
+  align-self: flex-start;
+}
+.pf-portal-link:hover { text-decoration: underline; }
+
+/* ── How it works — steps ──────────────────────────────────── */
+.pf-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.pf-step {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+}
+.pf-step-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(27,72,224,0.08);
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+.pf-step-title { font-size: 1.05rem; font-weight: 600; color: var(--dark); margin: 0 0 0.4rem; }
+.pf-step-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+
+/* ── All-in-one shared tools ───────────────────────────────── */
+.pf-tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.pf-tool-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.pf-tool-card:hover { box-shadow: var(--shadow-md); border-color: rgba(27,72,224,0.18); }
+.pf-tool-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: rgba(27,72,224,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1.1rem;
+}
+.pf-tool-title { font-size: 1.1rem; font-weight: 600; color: var(--dark); margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+.pf-tool-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin: 0; }
+
+/* ── Platform responsive ───────────────────────────────────── */
+@media (max-width: 991px) {
+  .pf-portal-grid { grid-template-columns: 1fr; }
+  .pf-steps { grid-template-columns: repeat(2, 1fr); }
+  .pf-tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .pf-dash { margin-top: 2rem; }
+}
+@media (max-width: 575px) {
+  .pf-steps, .pf-tools-grid { grid-template-columns: 1fr; }
+  .pf-dash-body { grid-template-columns: 104px 1fr; }
+  .pf-portal-card, .pf-tool-card, .pf-step { padding: 1.5rem 1.25rem; }
+}

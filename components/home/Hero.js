@@ -74,6 +74,14 @@ const fade = (delay = 0, y = 20) => ({
   transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
+// LCP-safe entrance for the headline: opacity stays 1 so the text paints on
+// first render (fast LCP even before JS hydrates) — only a subtle slide animates.
+const rise = (delay = 0, y = 14) => ({
+  initial:    { y },
+  animate:    { y: 0 },
+  transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] },
+});
+
 /* ── Component ────────────────────────────────────────────── */
 export default function Hero() {
   // Only render video on desktop — prevents 10 MB download on mobile/tablet
@@ -112,7 +120,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <motion.h1 id="hero-heading" className="hs-title" {...fade(0.08)}>
+            <motion.h1 id="hero-heading" className="hs-title" {...rise(0.05)}>
               Deliver smarter<br />
               messages{' '}
               <span className="hs-title-highlight">at scale.</span>

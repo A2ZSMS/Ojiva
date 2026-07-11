@@ -10,7 +10,7 @@ import {
 // Per-industry SEO metadata
 export const metadata = buildMetadata({
   title: 'WhatsApp & SMS Marketing for E-Commerce & Retail India',
-  description: 'Recover abandoned carts, confirm COD, send shipping updates & win repeat purchases via WhatsApp API and Bulk SMS. Integrates with Shopify, WooCommerce & more.',
+  description: 'Recover abandoned carts, confirm COD, send shipping updates & win repeat purchases via WhatsApp API & Bulk SMS. Integrates with Shopify & WooCommerce.',
   path: '/solutions/ecommerce-retail',
   keywords: [
     `${industryData.name} CPaaS India`,

@@ -16,7 +16,7 @@ const Jul09 = () => {
                 headline: "Best RCS Message Service Provider in India (2026)",
                 description:
                   "Best RCS message service provider in India for 2026 — verified branding, rich cards & carousels, Jio, Airtel & Vi delivery, SMS fallback and INR pricing.",
-                image: "https://www.ojiva.ai/image/rcs-india(1).png",
+                image: "https://www.ojiva.ai/image/jul9(1).webp",
                 author: { "@type": "Person", name: "Ananth" },
                 publisher: {
                   "@type": "Organization",
@@ -133,9 +133,9 @@ const Jul09 = () => {
 
       <div className="container para-color py-4">
         {/* H1 */}
-        <h1 className="text-primary py-4">
+        <h2 className="text-primary py-4">
           Best RCS Message Service Provider in India (2026)
-        </h1>
+        </h2>
 
         {/* Introduction — GEO snippet answer first, keyword in first 100 words */}
         <section className="mb-5">
@@ -165,11 +165,11 @@ const Jul09 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul9(1).png"
+            src="/image/jul9(1).webp"
             alt="Best RCS message service provider in India — Ojiva AI RCS Business Messaging platform"
           />
         </div>
@@ -497,11 +497,11 @@ const Jul09 = () => {
           </div>
         </section>
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul9(2).png"
+            src="/image/jul9(2).webp"
             alt="Best RCS message service provider in India — Ojiva AI RCS Business Messaging platform"
           />
         </div>
@@ -747,11 +747,11 @@ const Jul09 = () => {
         </section>
 
         <div>
-          <img
+          <img loading="lazy" decoding="async"
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul9(3).png"
+            src="/image/jul9(3).webp"
             alt="Ojiva AI RCS messaging features — rich cards, carousels and verified sender profile"
           />
         </div>
