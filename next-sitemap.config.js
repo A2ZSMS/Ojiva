@@ -19,9 +19,10 @@ const PATH_RULES = [
   { path: '/otp/',                  exact: true,  priority: 0.9, changefreq: 'weekly' },
   { path: '/platform/',             exact: true,  priority: 0.9, changefreq: 'weekly' },
 
-  // SEO landing pages — high-volume keyword targeting — 0.9 / weekly
-  { path: '/bulk-sms/',             exact: true,  priority: 0.9, changefreq: 'weekly' },
-  { path: '/rcs-messaging/',        exact: true,  priority: 0.9, changefreq: 'weekly' },
+
+  // Bangalore geo hub + channel spokes — 0.9 / weekly (primary local-SEO targets)
+  { path: '/bangalore/',            exact: true,  priority: 0.9, changefreq: 'weekly' },
+  { path: '/bangalore/',            exact: false, priority: 0.9, changefreq: 'weekly' },
 
   // Solutions hub — 0.8 / weekly
   { path: '/solutions/',            exact: true,  priority: 0.8, changefreq: 'weekly' },
@@ -68,6 +69,8 @@ function getRuleForPath(loc) {
 const EXCLUDED_PATH_PREFIXES = [
   '/whatsapp-api-service',
   '/whatsapp-api',   // Google Ads landing page — noindex
+  '/bulk-sms',       // Ad landing page — canonical points to /sms
+  '/rcs-messaging',  // Ad landing page — canonical points to /rcs
   '/home2',          // Deleted experimental route
   '/thank-you',      // noindex conversion page
   '/robots.txt',
@@ -90,6 +93,10 @@ module.exports = {
     '/whatsapp-api-service/*',
     '/whatsapp-api',           // Google Ads landing page
     '/whatsapp-api/*',
+    '/bulk-sms',               // Ad landing page — canonical → /sms
+    '/bulk-sms/*',
+    '/rcs-messaging',          // Ad landing page — canonical → /rcs
+    '/rcs-messaging/*',
     '/home2',                  // Deleted experimental route
     '/home2/*',
     '/thank-you',              // noindex conversion page

@@ -64,7 +64,7 @@ const Apr04 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/voice(1).jpeg"
+            src="/image/voice(1).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>
@@ -359,7 +359,7 @@ const Apr04 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/voice(2).jpeg"
+            src="/image/voice(2).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>
@@ -628,7 +628,7 @@ const Apr04 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/voice(3).jpeg"
+            src="/image/voice(3).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>
@@ -1103,13 +1103,13 @@ const Apr04 = () => {
           </p>
           <div className="text-center mt-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="btn btn-primary px-4 py-2 fw-semibold me-2"
             >
               Start Free Trial
             </Link>
             <Link
-              href="/voice"
+              href="/voice/"
               className="btn btn-outline-primary px-4 py-2 fw-semibold"
             >
               Explore Voice Platform

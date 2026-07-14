@@ -56,19 +56,14 @@ export default function GalaxyCanvas() {
   const nodesRef  = useRef([]);
   const frameRef  = useRef(null);
   const angleRef  = useRef(0);
-  const visibleRef = useRef(false); // IntersectionObserver flag
 
   const [blasted,   setBlasted]   = useState(false);
   const [bgPhase,   setBgPhase]   = useState(0);
   const [hoveredId, setHoveredId] = useState(null);
 
-  /* ── RAF loop — only runs when visible ── */
+  /* ── RAF loop — fully stops when off-screen (no idle wakeups) ── */
   useEffect(() => {
     const animate = () => {
-      if (!visibleRef.current) {
-        frameRef.current = requestAnimationFrame(animate);
-        return;
-      }
       angleRef.current += 0.35;
       const base = angleRef.current;
       SERVICES.forEach((s, i) => {
@@ -81,23 +76,20 @@ export default function GalaxyCanvas() {
       });
       frameRef.current = requestAnimationFrame(animate);
     };
-    frameRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameRef.current);
-  }, []);
+    const start = () => { if (!frameRef.current) frameRef.current = requestAnimationFrame(animate); };
+    const stop  = () => { if (frameRef.current) { cancelAnimationFrame(frameRef.current); frameRef.current = null; } };
 
-  /* ── IntersectionObserver — pause RAF when off-screen ── */
-  useEffect(() => {
     const el = wrapRef.current;
     if (!el || typeof IntersectionObserver === 'undefined') {
-      visibleRef.current = true; // fallback: always run
-      return;
+      start(); // fallback: always run
+      return stop;
     }
     const obs = new IntersectionObserver(
-      ([entry]) => { visibleRef.current = entry.isIntersecting; },
+      ([entry]) => { entry.isIntersecting ? start() : stop(); },
       { threshold: 0.05 }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => { obs.disconnect(); stop(); };
   }, []);
 
   /* ── Blast handler ── */

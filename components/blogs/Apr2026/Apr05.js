@@ -79,7 +79,7 @@ const Apr05 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/ai(1).jpeg"
+            src="/image/ai(1).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>
@@ -461,7 +461,7 @@ const Apr05 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/ai(2).jpeg"
+            src="/image/ai(2).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>
@@ -768,7 +768,7 @@ const Apr05 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/ai(3).jpeg"
+            src="/image/ai(3).webp"
             alt="AI-Powered Business Communication Automation India 2026 — Ojiva AI"
           />
         </div>

@@ -6,6 +6,7 @@ import {
   AnimatePresence,
 } from 'framer-motion';
 import { useRef } from 'react';
+import { useNetwork } from '@/hooks/useNetwork';
 
 // All framer-motion hooks kept in module graph to prevent Turbopack HMR errors.
 void useMotionValue; void useSpring; void useTransform;
@@ -20,8 +21,10 @@ const EASE = [0.22, 1, 0.36, 1];
 
 /* FadeUp — primary entrance, used for sections & cards */
 export function FadeUp({ children, delay = 0, className = '' }) {
+  const { isSlow } = useNetwork();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
@@ -37,8 +40,10 @@ export function FadeUp({ children, delay = 0, className = '' }) {
 
 /* FadeIn — opacity only, no movement */
 export function FadeIn({ children, delay = 0, className = '' }) {
+  const { isSlow } = useNetwork();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
@@ -54,8 +59,10 @@ export function FadeIn({ children, delay = 0, className = '' }) {
 
 /* SlideLeft — slides in from left */
 export function SlideLeft({ children, delay = 0, className = '' }) {
+  const { isSlow } = useNetwork();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
+  if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
@@ -71,8 +78,10 @@ export function SlideLeft({ children, delay = 0, className = '' }) {
 
 /* SlideRight — slides in from right */
 export function SlideRight({ children, delay = 0, className = '' }) {
+  const { isSlow } = useNetwork();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
+  if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
@@ -88,8 +97,10 @@ export function SlideRight({ children, delay = 0, className = '' }) {
 
 /* StaggerContainer — wraps a list of StaggerItems */
 export function StaggerContainer({ children, className = '', staggerDelay = 0.08 }) {
+  const { isSlow } = useNetwork();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}

@@ -331,7 +331,7 @@ const Jun01 = () => {
             <div className="d-flex gap-3">
               {/* update href to your live DLT blog slug */}
               <Link
-                href="/dlt-registration-bulk-sms-india/"
+                href="/blogs/dlt-registration-bulk-sms-india/"
                 className="btn btn-primary"
               >
                 DLT Registration Guide

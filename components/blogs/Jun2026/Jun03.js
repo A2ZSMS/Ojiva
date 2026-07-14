@@ -209,7 +209,7 @@ const Jun03 = () => {
               <b>Compare value, not the headline rate:</b> A cheap message that
               doesn't arrive costs more than a slightly dearer one that always
               does. For the full breakdown, see our{" "}
-              <a href="/blog/bulk-sms-pricing-india/">
+              <a href="/blogs/bulk-sms-in-india/">
                 bulk SMS pricing guide for India
               </a>
               .
@@ -446,12 +446,12 @@ const Jun03 = () => {
           <p>
             Ojiva AI handles most of this for you, but it's worth understanding
             the process, timelines and fees before you start. Our{" "}
-            <a href="/blog/dlt-registration-sms-india/">
+            <a href="/blogs/dlt-registration-bulk-sms-india/">
               DLT registration guide for SMS in India
             </a>{" "}
             walks through each step. And if you're weighing SMS against richer
             channels, our{" "}
-            <a href="/blog/what-is-rcs-messaging/">
+            <a href="/blogs/what-is-rcs-messaging/">
               guide to RCS messaging for Indian businesses
             </a>{" "}
             explains where each one wins.

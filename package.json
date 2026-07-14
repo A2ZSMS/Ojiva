@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt",
+    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "subset-icons": "node scripts/subset-icons.mjs"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.34.4",
     "next": "16.1.6",

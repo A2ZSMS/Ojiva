@@ -6,6 +6,7 @@ export const metadata = buildMetadata({
   description:
     "India's best RCS messaging platform. Google-verified brand, rich cards & interactive buttons. 94% read rate, 3× higher CTR. Try free.",
   path: '/rcs-messaging',
+  canonicalPath: '/rcs',
   keywords: [
     'RCS messaging India',
     'RCS business messaging India',

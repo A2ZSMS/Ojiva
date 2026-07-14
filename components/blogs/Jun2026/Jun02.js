@@ -317,7 +317,7 @@ const Jun02 = () => {
             Not sure whether you even need the API yet? Read our guide on{" "}
             {/* update href to your live slug for Blog #6 */}
             <Link
-              href="/whatsapp-business-app-vs-api/"
+              href="/blogs/whatsapp-business-app-vs-api/"
               className="text-primary"
             >
               WhatsApp Business App vs API
@@ -522,7 +522,7 @@ const Jun02 = () => {
           <p>
             Choosing a provider? Use our{" "}
             {/* update href to your live slug for Blog #8 */}
-            <Link href="/best-whatsapp-bsp-india/" className="text-primary">
+            <Link href="/blogs/best-whatsapp-bsp-india/" className="text-primary">
               2026 WhatsApp BSP buyer&apos;s checklist
             </Link>{" "}
             to compare on price transparency and support.
@@ -874,7 +874,7 @@ const Jun02 = () => {
               <Link href="/contact/" className="btn btn-light">
                 Get a WhatsApp API Quote
               </Link>
-              <Link href="/whatsapp-api/" className="btn btn-outline-light">
+              <Link href="/whatsapp/" className="btn btn-outline-light">
                 Explore WhatsApp API
               </Link>
             </div>

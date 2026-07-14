@@ -63,7 +63,7 @@ const Apr02 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/whatsapp(1).jpeg"
+            src="/image/whatsapp(1).webp"
             alt="WhatsApp Business API for Indian Businesses 2026 Ojiva AI"
           />
         </div>
@@ -278,7 +278,7 @@ const Apr02 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/whatsapp(2).jpeg"
+            src="/image/whatsapp(2).webp"
             alt="WhatsApp Business API for Indian Businesses 2026 Ojiva AI"
           />
         </div>
@@ -573,7 +573,7 @@ const Apr02 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/whatsapp(3).jpeg"
+            src="/image/whatsapp(3).webp"
             alt="WhatsApp Business API for Indian Businesses 2026 Ojiva AI"
           />
         </div>
@@ -1184,7 +1184,7 @@ const Apr02 = () => {
             leads the WhatsApp Business API is the highest-ROI communication
             investment you can make this year, and Ojiva AI is the right partner
             to make it happen.{" "}
-            <Link href="/whatsapp" className="text-primary fw-semibold">
+            <Link href="/whatsapp/" className="text-primary fw-semibold">
               Get started with Ojiva AI's WhatsApp Business API today.
             </Link>
           </p>

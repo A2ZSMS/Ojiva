@@ -67,7 +67,7 @@ const Apr03 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/rcs(1).jpeg"
+            src="/image/rcs(1).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>
@@ -463,7 +463,7 @@ const Apr03 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/rcs(2).jpeg"
+            src="/image/rcs(2).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>
@@ -702,7 +702,7 @@ const Apr03 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/rcs(3).jpeg"
+            src="/image/rcs(3).webp"
             alt="RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform"
           />
         </div>

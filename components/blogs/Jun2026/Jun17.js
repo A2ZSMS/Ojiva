@@ -285,7 +285,7 @@ const Jan17 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/whatsapp(1).jpeg"
+            src="/image/whatsapp(1).webp"
             alt="WhatsApp API message templates for Indian businesses — Ojiva AI"
           />
         </div>
@@ -508,7 +508,7 @@ const Jan17 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/whatsapp(2).jpeg"
+            src="/image/whatsapp(2).webp"
             alt="WhatsApp template structure: header, body, variables and buttons"
           />
         </div>

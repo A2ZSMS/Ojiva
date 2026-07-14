@@ -21,7 +21,7 @@ const ALL_SERVICES = [
   { href: '/rcs',              name: 'RCS Messaging',    desc: 'Verified sender, rich cards, branded experiences.',      color: '#FF6D42', icon: 'bi-stars' },
   { href: '/voice',            name: 'Bulk Voice Call',  desc: 'IVR, OBD, AI voice bots in multiple languages.',         color: '#7C3AED', icon: 'bi-telephone-fill' },
   { href: '/otp',              name: 'OTP & 2FA',        desc: 'Multi-channel OTP via SMS, WhatsApp and Voice.',         color: '#0ea5e9', icon: 'bi-shield-lock-fill' },
-  { href: '/pricing',          name: 'Pricing',          desc: 'Channel-wise plans for every business size.',            color: '#7c3aed', icon: 'bi-tag-fill' },
+  { href: '/solutions',        name: 'Industry Solutions', desc: 'Messaging playbooks for banking, healthcare, retail & more.', color: '#7c3aed', icon: 'bi-buildings-fill' },
 ];
 
 export default function RelatedServices({

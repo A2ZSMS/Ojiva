@@ -60,7 +60,7 @@ const Apr01 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/bulksms(1).jpeg"
+            src="/image/bulksms(1).webp"
             alt="Best Bulk SMS Service Provider India 2026"
           />
         </div>
@@ -302,7 +302,7 @@ const Apr01 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/bulksms(2).jpeg"
+            src="/image/bulksms(2).webp"
             alt="Best Bulk SMS Service Provider India 2026"
           />
         </div>
@@ -643,7 +643,7 @@ const Apr01 = () => {
           <img loading="lazy" decoding="async"
             width="100%"
             height="auto"
-            src="/image/bulksms(3).jpeg"
+            src="/image/bulksms(3).webp"
             alt="Best Bulk SMS Service Provider India 2026"
           />
         </div>
@@ -1160,7 +1160,7 @@ const Apr01 = () => {
               variants, and compare performance across campaigns over time. Your
               CSM will schedule a post-campaign review call to discuss results
               and recommend improvements. Reach out to our team today via{" "}
-              <Link href="/sms">the Ojiva AI SMS page</Link> to get started.
+              <Link href="/sms/">the Ojiva AI SMS page</Link> to get started.
             </span>
           </div>
         </div>
@@ -1199,7 +1199,7 @@ const Apr01 = () => {
             If you are ready to unlock the full potential of bulk SMS for your
             business whether you are sending a thousand messages a day or a
             hundred million a month the Ojiva AI team is ready to help you get
-            started. <Link href="/sms">Explore Ojiva AI Bulk SMS</Link> and
+            started. <Link href="/sms/">Explore Ojiva AI Bulk SMS</Link> and
             speak to a specialist today. Most clients are live with their first
             campaign within 24 hours of signing up.
           </p>
@@ -1517,7 +1517,7 @@ const Apr01 = () => {
                     complete the API integration and your marketing team can
                     build and test campaigns meaning there is no wasted time
                     while waiting for regulatory approvals.{" "}
-                    <Link href="/sms">Visit the Ojiva AI SMS page</Link> to
+                    <Link href="/sms/">Visit the Ojiva AI SMS page</Link> to
                     speak with a specialist and get started today.
                   </div>
                 </div>

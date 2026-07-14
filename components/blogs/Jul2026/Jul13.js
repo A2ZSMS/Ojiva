@@ -49,7 +49,7 @@ const Jul13 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/jul13(1).png"
+            src="/image/jul13(1).webp"
             alt="WhatsApp Business Cloud API service providers in Bangalore — Ojiva AI WhatsApp Business API platform"
           />
         </div>
@@ -231,7 +231,7 @@ const Jul13 = () => {
               <b>24/7 chatbot automation:</b> As a WhatsApp chatbot development
               company in Bangalore, Ojiva AI builds conversational flows that
               answer instantly, qualify leads and book appointments — see our{" "}
-              <a href="/chatbot/">AI Chatbot</a>.
+              <a href="/whatsapp-chatbot/">AI Chatbot</a>.
             </span>
           </div>
 
@@ -336,7 +336,7 @@ const Jul13 = () => {
             className="mt-1"
             width="100%"
             height="auto"
-            src="/image/jul13(2).png"
+            src="/image/jul13(2).webp"
             alt="WhatsApp Business API compliance in India — opt-in, template approval and DPDP on the Ojiva AI platform"
           />
         </div>
@@ -554,7 +554,7 @@ const Jul13 = () => {
             className="mt-1"
             width="100%"
             height="auto"
-            src="/image/jul13(3).png"
+            src="/image/jul13(3).webp"
             alt="Ojiva AI WhatsApp Business API features — chatbot, CRM integration, templates and delivery reports"
           />
         </div>
@@ -592,7 +592,7 @@ const Jul13 = () => {
             <i className="bi bi-robot text-primary me-3 fs-4"></i>
             <span>
               <b>AI chatbot &amp; team inbox:</b> Automate FAQs and lead
-              qualification with a <a href="/chatbot/">WhatsApp AI chatbot</a>,
+              qualification with a <a href="/whatsapp-chatbot/">WhatsApp AI chatbot</a>,
               then hand off to agents in a shared inbox.
             </span>
           </div>

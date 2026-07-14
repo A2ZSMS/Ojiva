@@ -6,6 +6,7 @@ export const metadata = buildMetadata({
   description:
     'Best bulk SMS service in India — OTP, transactional & promotional. DLT compliant, 99% delivery, sub-3s OTP. 500+ businesses trust Ojiva AI.',
   path: '/bulk-sms',
+  canonicalPath: '/sms',
   keywords: [
     'bulk SMS service India',
     'bulk SMS provider India',

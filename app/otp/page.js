@@ -5,6 +5,8 @@ import {
   serviceSchema,
   faqSchema,
 } from '@/lib/metadata';
+import RelatedGuides from '@/components/ui/RelatedGuides';
+import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: 'OTP SMS India — Fast Delivery via SMS & WhatsApp',
@@ -97,6 +99,8 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
       />
       <OtpPage faqs={OTP_FAQS} />
+      <RelatedGuides slugs={["dlt-registration-bulk-sms-india", "whatsapp-api-message-templates-india", "bulk-sms-in-india"]} />
+      <BangaloreBanner href="/bangalore/" label="all messaging services" />
     </>
   );
 }

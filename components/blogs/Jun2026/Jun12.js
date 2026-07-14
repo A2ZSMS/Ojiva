@@ -752,7 +752,7 @@ const Jun12 = () => {
             <span>
               <b>Add 18% GST:</b> GST applies on SMS spend. A transparent
               provider shows the route rate and GST separately — compare on our{" "}
-              <a href="/blogs/best-bulk-sms-service-provider-india/">
+              <a href="/blogs/best-bulk-sms-providers-india/">
                 bulk SMS provider guide
               </a>
               .
@@ -996,7 +996,7 @@ const Jun12 = () => {
               <b>Use a provider that manages DLT for you:</b> The easiest path
               is a platform that handles entity, header and template mapping and
               flags scrubbing errors. See our{" "}
-              <a href="/blogs/best-bulk-sms-service-provider-india/">
+              <a href="/blogs/best-bulk-sms-providers-india/">
                 guide to the best bulk SMS service provider in India
               </a>{" "}
               for what to look for.

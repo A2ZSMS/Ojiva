@@ -2,16 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const PLATFORM_LINKS = [
-  { href: '/platform#messaging', label: 'AI Messaging' },
-  { href: '/platform#voice', label: 'Bulk Voice Call' },
-  { href: '/platform#leads', label: 'Lead Intelligence' },
-  { href: '/platform#workflow', label: 'Workflow Orchestration' },
-  { href: '/platform#api', label: 'API & Integrations' },
+  { href: '/sms', label: 'Bulk SMS' },
+  { href: '/whatsapp', label: 'WhatsApp Business API' },
+  { href: '/whatsapp-chatbot', label: 'WhatsApp Chatbot' },
+  { href: '/rcs', label: 'RCS Messaging' },
+  { href: '/voice', label: 'Bulk Voice Call & IVR' },
+  { href: '/otp', label: 'OTP & 2FA' },
+  { href: '/platform', label: 'One Platform Portal' },
 ];
 
 const COMPANY_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
+  { href: '/bangalore', label: 'Ojiva AI in Bengaluru' },
   { href: '/support', label: 'Support' },
   { href: '/contact', label: 'Contact Us' },
   { href: '/privacy', label: 'Privacy Policy' },
@@ -20,7 +23,7 @@ const COMPANY_LINKS = [
 
 const RESOURCE_LINKS = [
   { href: '/blogs', label: 'Blog & Guides' },
-  { href: '/about', label: 'About Ojiva AI' },
+  { href: '/solutions', label: 'Industry Solutions' },
   { href: '/book-demo', label: 'Book a Demo' },
   { href: '/contact', label: 'Get a Quote' },
 ];
@@ -134,12 +137,20 @@ export default function Footer() {
               <span className="footer-trust-badge">🇮🇳 DLT Registered</span>
               <span className="footer-trust-badge">⚡ 99.9% Uptime</span>
             </div>
+
+            {/* NAP — must stay byte-identical to the Google Business Profile listing */}
+            <address className="footer-tagline mt-3 mb-0" style={{ fontStyle: 'normal', fontSize: '0.82rem', lineHeight: 1.7 }}>
+              183, 2nd Floor, G Block, Opposite Reliance Trends,<br />
+              Sahakara Nagar, Bengaluru, Karnataka 560092<br />
+              <a href="tel:+918431086185" style={{ color: 'inherit' }}>+91 84310 86185</a> ·{' '}
+              <a href="mailto:info@ojiva.ai" style={{ color: 'inherit' }}>info@ojiva.ai</a>
+            </address>
           </div>
 
-          {/* Platform links */}
+          {/* Services links */}
           <div className="footer-nav-col">
-            <p className="footer-heading">Platform</p>
-            <nav aria-label="Platform links">
+            <p className="footer-heading">Services</p>
+            <nav aria-label="Services links">
               {PLATFORM_LINKS.map(({ href, label }) => (
                 <Link key={href} href={href} className="footer-link">
                   <span className="footer-link-arrow">›</span> {label}

@@ -3,7 +3,12 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import GalaxyCanvas from '@/components/home/galaxy/GalaxyCanvas';
+import dynamic from 'next/dynamic';
+import { useNetwork } from '@/hooks/useNetwork';
+
+// Desktop-only visual — loaded lazily so mobile never downloads/hydrates it
+// (the galaxy is hidden with d-none d-lg-flex, so mobile output is unchanged).
+const GalaxyCanvas = dynamic(() => import('@/components/home/galaxy/GalaxyCanvas'));
 
 /* ── SVG Icons ───────────────────────────────────────────── */
 const SmsIcon = () => (
@@ -86,6 +91,7 @@ const rise = (delay = 0, y = 14) => ({
 export default function Hero() {
   // Only render video on desktop — prevents 10 MB download on mobile/tablet
   const [isDesktop, setIsDesktop] = useState(false);
+  const { isSlow } = useNetwork();
   useEffect(() => {
     setIsDesktop(window.matchMedia('(min-width: 992px)').matches);
   }, []);
@@ -94,7 +100,7 @@ export default function Hero() {
     <section className="hs-section" aria-labelledby="hero-heading">
 
       {/* Background video — desktop only (992px+) */}
-      {isDesktop && (
+      {isDesktop && !isSlow && (
         <video className="hs-bg-video" src="/hero-video.mp4" autoPlay muted loop playsInline preload="none" aria-hidden="true" />
       )}
       <div className="hs-bg-overlay" aria-hidden="true" />
@@ -185,7 +191,7 @@ export default function Hero() {
             style={{ position: 'relative', zIndex: 4 }}
           >
             <div className="hs-galaxy-outer">
-              <GalaxyCanvas />
+              {isDesktop && !isSlow && <GalaxyCanvas />}
             </div>
           </motion.div>
 

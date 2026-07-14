@@ -379,7 +379,7 @@ const Jun04 = () => {
             compliance framework, and you register as a verified business
             sender. A good RCS provider handles the verification and compliance
             setup for you. The process mirrors SMS registration, so our{" "}
-            <a href="/blog/dlt-registration-sms-india/">
+            <a href="/blogs/dlt-registration-bulk-sms-india/">
               DLT registration guide for SMS in India
             </a>{" "}
             walks through the steps, timelines and fees in detail.
@@ -388,7 +388,7 @@ const Jun04 = () => {
           <p>
             If you're still running plain text campaigns and weighing the
             upgrade, our guide to the{" "}
-            <a href="/blog/best-bulk-sms-service-provider-india/">
+            <a href="/blogs/best-bulk-sms-providers-india/">
               best bulk SMS service provider in India
             </a>{" "}
             covers how SMS and RCS work together on one platform.

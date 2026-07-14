@@ -260,7 +260,7 @@ const Jun19 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/rcs(1).jpeg"
+            src="/image/rcs(1).webp"
             alt="Grow your business with RCS messaging in India — Ojiva AI"
           />
         </div>
@@ -538,7 +538,7 @@ const Jun19 = () => {
             className="mt-3"
             width="100%"
             height="auto"
-            src="/image/rcs(2).jpeg"
+            src="/image/rcs(2).webp"
             alt="RCS growth strategy steps for Indian businesses — Ojiva AI"
           />
         </div>

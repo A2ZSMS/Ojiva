@@ -1,4 +1,4 @@
-import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
+import { buildMetadata, breadcrumbSchema, localBusinessSchema } from '@/lib/metadata';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata = buildMetadata({
@@ -55,6 +55,7 @@ export default function ContactPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       {/* ── Hero ── */}
       <section className="page-hero contact-hero-enhanced" aria-labelledby="contact-hero-heading">
         <div className="container">
