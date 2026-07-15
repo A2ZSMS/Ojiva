@@ -1,7 +1,6 @@
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import SmsPageContent from '@/components/services/sms/SmsPage';
 import RelatedGuides from '@/components/ui/RelatedGuides';
-import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: "Bulk SMS Service India — OTP, Promo & Transactional",
@@ -44,7 +43,6 @@ export default function SMSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(SMS_FAQS)) }} />
       <SmsPageContent faqs={SMS_FAQS} />
       <RelatedGuides category="Bulk SMS" />
-      <BangaloreBanner href="/bangalore/bulk-sms/" label="Bulk SMS" />
     </>
   );
 }

@@ -20,10 +20,6 @@ const PATH_RULES = [
   { path: '/platform/',             exact: true,  priority: 0.9, changefreq: 'weekly' },
 
 
-  // Bangalore geo hub + channel spokes — 0.9 / weekly (primary local-SEO targets)
-  { path: '/bangalore/',            exact: true,  priority: 0.9, changefreq: 'weekly' },
-  { path: '/bangalore/',            exact: false, priority: 0.9, changefreq: 'weekly' },
-
   // Solutions hub — 0.8 / weekly
   { path: '/solutions/',            exact: true,  priority: 0.8, changefreq: 'weekly' },
 

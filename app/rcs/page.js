@@ -1,7 +1,6 @@
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import RcsPageContent from '@/components/services/rcs/RcsPage';
 import RelatedGuides from '@/components/ui/RelatedGuides';
-import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: "RCS Business Messaging India — Rich Cards & Verified",
@@ -44,7 +43,6 @@ export default function RCSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(RCS_FAQS)) }} />
       <RcsPageContent faqs={RCS_FAQS} />
       <RelatedGuides category="RCS Messaging" />
-      <BangaloreBanner href="/bangalore/rcs-messaging/" label="RCS messaging" />
     </>
   );
 }

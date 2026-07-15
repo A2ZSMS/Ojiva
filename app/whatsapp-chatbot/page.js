@@ -1,7 +1,6 @@
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import ChatbotPageClient from '@/components/services/whatsapp-chatbot/ChatbotPageClient';
 import RelatedGuides from '@/components/ui/RelatedGuides';
-import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: 'WhatsApp Chatbot India — AI-Powered & No-Code Builder',
@@ -36,7 +35,6 @@ export default function WhatsAppChatbotPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(CHATBOT_FAQS)) }} />
       <ChatbotPageClient faqs={CHATBOT_FAQS} />
       <RelatedGuides slugs={["ai-powered-business-communication-automation-india-2026", "whatsapp-business-app-vs-api", "whatsapp-api-message-templates-india"]} />
-      <BangaloreBanner href="/bangalore/whatsapp-chatbot/" label="WhatsApp chatbots" />
     </>
   );
 }

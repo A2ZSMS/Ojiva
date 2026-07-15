@@ -1,7 +1,6 @@
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import WhatsappPageContent from '@/components/services/whatsapp/WhatsappPage';
 import RelatedGuides from '@/components/ui/RelatedGuides';
-import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: "WhatsApp Business API India — Official Meta BSP",
@@ -40,7 +39,6 @@ export default function WhatsAppPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(WHATSAPP_FAQS)) }} />
       <WhatsappPageContent faqs={WHATSAPP_FAQS} />
       <RelatedGuides category="WhatsApp API" />
-      <BangaloreBanner href="/bangalore/whatsapp-api/" label="WhatsApp Business API" />
     </>
   );
 }

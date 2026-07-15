@@ -14,7 +14,6 @@ const PLATFORM_LINKS = [
 const COMPANY_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
-  { href: '/bangalore', label: 'Ojiva AI in Bengaluru' },
   { href: '/support', label: 'Support' },
   { href: '/contact', label: 'Contact Us' },
   { href: '/privacy', label: 'Privacy Policy' },

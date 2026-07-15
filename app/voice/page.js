@@ -1,7 +1,6 @@
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import VoicePageContent from '@/components/services/voice/VoicePage';
 import RelatedGuides from '@/components/ui/RelatedGuides';
-import BangaloreBanner from '@/components/ui/BangaloreBanner';
 
 export const metadata = buildMetadata({
   title: "Bulk Voice Call & IVR Service India — AI Auto Dialer",
@@ -44,7 +43,6 @@ export default function VoicePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(VOICE_FAQS)) }} />
       <VoicePageContent faqs={VOICE_FAQS} />
       <RelatedGuides category="Voice Call" />
-      <BangaloreBanner href="/bangalore/voice-ivr/" label="voice & IVR services" />
     </>
   );
 }
