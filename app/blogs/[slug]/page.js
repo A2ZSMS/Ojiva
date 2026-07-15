@@ -23,6 +23,7 @@ import Jun19 from "@/components/blogs/Jun2026/Jun19";
 import Jul09 from "@/components/blogs/Jul2026/Jul09";
 import Jul11 from "@/components/blogs/Jul2026/Jul11";
 import Jul13 from "@/components/blogs/Jul2026/Jul13";
+import Jul15 from "@/components/blogs/Jul2026/Jul15";
 
 
 
@@ -51,6 +52,7 @@ const BlogComponents = {
   Jul09,
   Jul11,
   Jul13,
+  Jul15,
 
   // Add new entries here matching the componentKey in blog.json
 };
