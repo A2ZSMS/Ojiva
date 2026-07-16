@@ -1,14 +1,16 @@
-# *
+# Ojiva AI — robots.txt
+# Spec: https://www.rfc-editor.org/rfc/rfc9309
+
 User-agent: *
 Allow: /
+
+# Utility / conversion pages — no organic value
 Disallow: /404
-Disallow: /admin/
-Disallow: /whatsapp-api-service/
-Disallow: /whatsapp-api/
 Disallow: /thank-you/
 
-# Host
-Host: https://www.ojiva.ai
+# Paid ad landing pages — canonicals point to their organic equivalents
+Disallow: /whatsapp-api-service/
+Disallow: /bulk-sms/
+Disallow: /rcs-messaging/
 
-# Sitemaps
 Sitemap: https://www.ojiva.ai/sitemap.xml

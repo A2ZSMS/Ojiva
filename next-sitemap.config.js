@@ -64,10 +64,8 @@ function getRuleForPath(loc) {
 // Paths to completely skip from the sitemap
 const EXCLUDED_PATH_PREFIXES = [
   '/whatsapp-api-service',
-  '/whatsapp-api',   // Google Ads landing page — noindex
   '/bulk-sms',       // Ad landing page — canonical points to /sms
   '/rcs-messaging',  // Ad landing page — canonical points to /rcs
-  '/home2',          // Deleted experimental route
   '/thank-you',      // noindex conversion page
   '/robots.txt',
 ];
@@ -75,7 +73,10 @@ const EXCLUDED_PATH_PREFIXES = [
 module.exports = {
   siteUrl: 'https://www.ojiva.ai',
   outDir: './out',           // write sitemaps directly into the static export output
-  generateRobotsTxt: true,
+  // robots.txt is hand-authored in public/robots.txt so we control it exactly
+  // (next-sitemap always emits a non-standard `Host:` directive which fails
+  // strict validators like SEO Site Checkup and Yandex Webmaster Lite).
+  generateRobotsTxt: false,
   sitemapSize: 5000,
   // Default priority/changefreq — overridden by transform per URL
   priority: 0.7,
@@ -84,17 +85,12 @@ module.exports = {
   // Exclude patterns (these are paths relative to siteUrl)
   exclude: [
     '/404',
-    '/admin/*',
     '/whatsapp-api-service',
     '/whatsapp-api-service/*',
-    '/whatsapp-api',           // Google Ads landing page
-    '/whatsapp-api/*',
     '/bulk-sms',               // Ad landing page — canonical → /sms
     '/bulk-sms/*',
     '/rcs-messaging',          // Ad landing page — canonical → /rcs
     '/rcs-messaging/*',
-    '/home2',                  // Deleted experimental route
-    '/home2/*',
     '/thank-you',              // noindex conversion page
     '/thank-you/*',
     '/robots.txt',
@@ -133,22 +129,4 @@ module.exports = {
     };
   },
 
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: [
-          '/404',
-          '/admin/',
-          // Ad / pay-per-click landing pages — keep out of organic index
-          '/whatsapp-api-service/',
-          '/whatsapp-api/',
-          // Conversion / utility pages — no organic value
-          '/thank-you/',
-        ],
-      },
-    ],
-    additionalSitemaps: [],
-  },
 };
