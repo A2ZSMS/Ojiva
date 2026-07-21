@@ -33,12 +33,12 @@ const USE_CASES = [
 
 export default function UseCases() {
   return (
-    <section className="slp-section slp-section--dark">
+    <section className="slp-section slp-section--dark" style={{ background: 'linear-gradient(180deg, #edf6ff 0%, #e4f1fd 100%)', color: '#1e293b' }}>
       <div className="container">
         <div className="text-center mb-5">
-          <p className="slp-eyebrow" style={{ color: '#34d399' }}>Use Cases</p>
-          <h2 className="slp-section-title">RCS Messaging Across Every Industry</h2>
-          <p className="slp-section-desc">
+          <p className="slp-eyebrow" style={{ color: '#059669' }}>Use Cases</p>
+          <h2 className="slp-section-title" style={{ color: '#0f172a' }}>RCS Messaging Across Every Industry</h2>
+          <p className="slp-section-desc" style={{ color: '#64748b' }}>
             From retail product showcases to verified banking alerts — RCS Business Messaging
             elevates customer communication in every sector.
           </p>
@@ -46,11 +46,11 @@ export default function UseCases() {
 
         <div className="slp-industry-grid">
           {USE_CASES.map(({ icon, title, desc }) => (
-            <div key={title} className="slp-industry-card">
+            <div key={title} className="slp-industry-card" style={{ background: '#ffffff', border: '1px solid #dbe8f6', boxShadow: '0 2px 8px rgba(15,23,42,0.05)' }}>
               <div className="slp-industry-icon">{icon}</div>
               <div>
-                <div className="slp-industry-title">{title}</div>
-                <p className="slp-industry-desc">{desc}</p>
+                <div className="slp-industry-title" style={{ color: '#1e293b' }}>{title}</div>
+                <p className="slp-industry-desc" style={{ color: '#64748b' }}>{desc}</p>
               </div>
             </div>
           ))}

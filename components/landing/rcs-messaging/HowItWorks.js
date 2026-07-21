@@ -23,12 +23,12 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="slp-section slp-section--alt">
+    <section className="slp-section slp-section--alt" style={{ background: '#ffffff', color: '#1e293b' }}>
       <div className="container">
         <div className="text-center mb-5">
-          <p className="slp-eyebrow" style={{ color: '#60a5fa' }}>Get Started</p>
-          <h2 className="slp-section-title">Go Live with RCS in 4 Simple Steps</h2>
-          <p className="slp-section-desc">
+          <p className="slp-eyebrow" style={{ color: '#2563eb' }}>Get Started</p>
+          <h2 className="slp-section-title" style={{ color: '#0f172a' }}>Go Live with RCS in 4 Simple Steps</h2>
+          <p className="slp-section-desc" style={{ color: '#64748b' }}>
             Our team manages brand verification, template setup, and API integration —
             so you can focus on your campaigns.
           </p>
@@ -40,8 +40,8 @@ export default function HowItWorks() {
               <div className="slp-step-num" style={{ background: 'linear-gradient(135deg, #22d3ee, #0ea5e9)', boxShadow: '0 8px 24px rgba(34,211,238,0.25)' }}>
                 {num}
               </div>
-              <div className="slp-step-title">{title}</div>
-              <p className="slp-step-desc">{desc}</p>
+              <div className="slp-step-title" style={{ color: '#1e293b' }}>{title}</div>
+              <p className="slp-step-desc" style={{ color: '#64748b' }}>{desc}</p>
             </div>
           ))}
         </div>
