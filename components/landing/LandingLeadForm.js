@@ -2,7 +2,8 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
@@ -184,6 +185,11 @@ export default function LandingLeadForm({
     };
 
     try {
+      sendWhatsApp(payload.name, payload.phone, source);
+      if (TEST_MODE_WHATSAPP_ONLY) {
+        router.push(thankYouUrl);
+        return;
+      }
       fireTeleCRM(payload.name, payload.phone, payload.email);
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {

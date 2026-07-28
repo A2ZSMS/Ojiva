@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 import { motion, AnimatePresence } from 'framer-motion';
@@ -21,7 +22,7 @@ const TABS = [
 
 /** Ticket submit form */
 function TicketForm() {
-  const [form, setForm]       = useState({ name: '', email: '', subject: '', priority: 'medium', message: '' });
+  const [form, setForm]       = useState({ name: '', email: '', phone: '', subject: '', priority: 'medium', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading]     = useState(false);
   const [ticketId, setTicketId]   = useState('');
@@ -39,6 +40,7 @@ function TicketForm() {
       redirect:   'false',
       name:       form.name,
       email:      form.email,
+      phone:      form.phone,
       subject_detail: form.subject,
       priority:   form.priority,
       message:    form.message,
@@ -47,18 +49,21 @@ function TicketForm() {
       submitted_at: new Date().toISOString(),
     };
     try {
-      await Promise.allSettled([
-        fetch('https://api.web3forms.com/submit', {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body:    JSON.stringify(payload),
-        }),
-        fetch(MAKE_HOOK, {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify(payload),
-        }),
-      ]);
+      sendWhatsApp(form.name, form.phone, 'support-page');
+      if (!TEST_MODE_WHATSAPP_ONLY) {
+        await Promise.allSettled([
+          fetch('https://api.web3forms.com/submit', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body:    JSON.stringify(payload),
+          }),
+          fetch(MAKE_HOOK, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(payload),
+          }),
+        ]);
+      }
     } catch { /* silent — still show success to user */ }
     setTicketId(tid);
     setLoading(false);
@@ -85,7 +90,7 @@ function TicketForm() {
             </div>
           ))}
         </div>
-        <button className="btn-ojiva-outline mt-4" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', priority: 'medium', message: '' }); }}>
+        <button className="btn-ojiva-outline mt-4" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', subject: '', priority: 'medium', message: '' }); }}>
           Submit Another Ticket
         </button>
       </motion.div>
@@ -105,9 +110,9 @@ function TicketForm() {
         </div>
       </div>
       <div className="sp-form-row">
-        <div className="sp-form-group" style={{ flex: 2 }}>
-          <label className="sp-form-label">Subject *</label>
-          <input className="sp-form-input" placeholder="Brief description of the issue" value={form.subject} onChange={e => set('subject', e.target.value)} required />
+        <div className="sp-form-group">
+          <label className="sp-form-label">Phone Number *</label>
+          <input className="sp-form-input" type="tel" placeholder="10-digit mobile number" value={form.phone} onChange={e => set('phone', e.target.value.replace(/\D/g, '').slice(0, 10))} required maxLength={10} inputMode="numeric" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" autoComplete="tel" />
         </div>
         <div className="sp-form-group">
           <label className="sp-form-label">Priority</label>
@@ -117,6 +122,10 @@ function TicketForm() {
             <option value="high">🔴 High — Production Down</option>
           </select>
         </div>
+      </div>
+      <div className="sp-form-group">
+        <label className="sp-form-label">Subject *</label>
+        <input className="sp-form-input" placeholder="Brief description of the issue" value={form.subject} onChange={e => set('subject', e.target.value)} required />
       </div>
       <div className="sp-form-group">
         <label className="sp-form-label">Describe your issue *</label>

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -160,6 +161,11 @@ export default function DemoForm() {
     if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
     setSt('loading'); setErr('');
     try {
+      sendWhatsApp(form.name, form.phone, 'book-demo');
+      if (TEST_MODE_WHATSAPP_ONLY) {
+        router.push('/thank-you');
+        return;
+      }
       fireTeleCRM(form.name, form.phone, form.email);
       const fd = new FormData();
       fd.append('access_key',           ACCESS_KEY);

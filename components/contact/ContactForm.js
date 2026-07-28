@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
+import { sendWhatsApp } from '@/lib/whatsapp';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -90,6 +91,11 @@ export default function ContactForm() {
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
     setStatus('loading'); setErrorMsg('');
     try {
+      sendWhatsApp(form.name, form.phone, 'contact-us');
+      if (TEST_MODE_WHATSAPP_ONLY) {
+        router.push('/thank-you');
+        return;
+      }
       fireTeleCRM(form.name, form.phone, form.email);
       const fd = new FormData(e.target);
       fd.append('access_key', ACCESS_KEY);
