@@ -7,35 +7,36 @@ import BlogLayout from '@/components/blogs/BlogLayout';
 import BlogRenderer from '@/components/blogs/BlogRenderer';
 
 // ── JSON Blog Imports (one per slug in blog.json) ──
-// To add a new blog: drop a JSON file into public/data/blogs/<slug>.json
+// Files are organised as public/data/blogs/YYYY/MM/<slug>.json.
+// To add a new blog: drop a JSON file into the right YYYY/MM folder,
 // then add an import + BlogJson entry here.
-import blog_rcs_vs_sms_key_differences_and_which_is_better_for_business from '../../../public/data/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business.json';
-import blog_best_whatsapp_chatbot_service_provider_in_bangalore from '../../../public/data/blogs/best-whatsapp-chatbot-service-provider-in-bangalore.json';
-import blog_best_rcs_messaging_service_provider_in_bangalore from '../../../public/data/blogs/best-rcs-messaging-service-provider-in-bangalore.json';
-import blog_best_whatsapp_business_api_provider_in_india from '../../../public/data/blogs/best-whatsapp-business-api-provider-in-india.json';
-import blog_whatsapp_business_api_for_real_estate from '../../../public/data/blogs/whatsapp-business-api-for-real-estate.json';
-import blog_best_whatsapp_chatbot_for_business_in_india from '../../../public/data/blogs/best-whatsapp-chatbot-for-business-in-india.json';
-import blog_rcs_marketing_automation_high_converting_campaigns from '../../../public/data/blogs/rcs-marketing-automation-high-converting-campaigns.json';
-import blog_best_whatsapp_api_service_provider_in_bangalore from '../../../public/data/blogs/best-whatsapp-api-service-provider-in-bangalore.json';
-import blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore from '../../../public/data/blogs/best-whatsapp-business-cloud-api-service-provider-in-bangalore.json';
-import blog_best_bulk_sms_service_provider_in_karnataka from '../../../public/data/blogs/best-bulk-sms-service-provider-in-karnataka.json';
-import blog_best_rcs_message_service_provider_in_india from '../../../public/data/blogs/best-rcs-message-service-provider-in-india.json';
-import blog_grow_business_with_rcs_india from '../../../public/data/blogs/grow-business-with-rcs-india.json';
-import blog_whatsapp_api_message_templates_india from '../../../public/data/blogs/whatsapp-api-message-templates-india.json';
-import blog_best_rcs_messaging_provider_karnataka from '../../../public/data/blogs/best-rcs-messaging-provider-karnataka.json';
-import blog_best_whatsapp_bsp_india from '../../../public/data/blogs/best-whatsapp-bsp-india.json';
-import blog_dlt_registration_bulk_sms_india from '../../../public/data/blogs/dlt-registration-bulk-sms-india.json';
-import blog_whatsapp_business_app_vs_api from '../../../public/data/blogs/whatsapp-business-app-vs-api.json';
-import blog_what_is_rcs_messaging from '../../../public/data/blogs/what-is-rcs-messaging.json';
-import blog_best_bulk_sms_providers_india from '../../../public/data/blogs/best-bulk-sms-providers-india.json';
-import blog_whatsapp_business_api_pricing_india from '../../../public/data/blogs/whatsapp-business-api-pricing-india.json';
-import blog_bulk_sms_in_india from '../../../public/data/blogs/bulk-sms-in-india.json';
-import blog_rcs_messaging_provider_karnataka_guide from '../../../public/data/blogs/rcs-messaging-provider-karnataka-guide.json';
-import blog_why_bulk_sms_most_powerful_marketing_channel_india_2026 from '../../../public/data/blogs/why-bulk-sms-most-powerful-marketing-channel-india-2026.json';
-import blog_whatsapp_business_api_vs_regular_whatsapp_indian_businesses from '../../../public/data/blogs/whatsapp-business-api-vs-regular-whatsapp-indian-businesses.json';
-import blog_rcs_messaging_future_business_communication_india from '../../../public/data/blogs/rcs-messaging-future-business-communication-india.json';
-import blog_bulk_voice_call_ivr_automation_guide_india_2026 from '../../../public/data/blogs/bulk-voice-call-ivr-automation-guide-india-2026.json';
-import blog_ai_powered_business_communication_automation_india_2026 from '../../../public/data/blogs/ai-powered-business-communication-automation-india-2026.json';
+import blog_rcs_vs_sms_key_differences_and_which_is_better_for_business from '../../../public/data/blogs/2026/07/rcs-vs-sms-key-differences-and-which-is-better-for-business.json';
+import blog_best_whatsapp_chatbot_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-whatsapp-chatbot-service-provider-in-bangalore.json';
+import blog_best_rcs_messaging_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-rcs-messaging-service-provider-in-bangalore.json';
+import blog_best_whatsapp_business_api_provider_in_india from '../../../public/data/blogs/2026/07/best-whatsapp-business-api-provider-in-india.json';
+import blog_whatsapp_business_api_for_real_estate from '../../../public/data/blogs/2026/07/whatsapp-business-api-for-real-estate.json';
+import blog_best_whatsapp_chatbot_for_business_in_india from '../../../public/data/blogs/2026/07/best-whatsapp-chatbot-for-business-in-india.json';
+import blog_rcs_marketing_automation_high_converting_campaigns from '../../../public/data/blogs/2026/07/rcs-marketing-automation-high-converting-campaigns.json';
+import blog_best_whatsapp_api_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-whatsapp-api-service-provider-in-bangalore.json';
+import blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-whatsapp-business-cloud-api-service-provider-in-bangalore.json';
+import blog_best_bulk_sms_service_provider_in_karnataka from '../../../public/data/blogs/2026/07/best-bulk-sms-service-provider-in-karnataka.json';
+import blog_best_rcs_message_service_provider_in_india from '../../../public/data/blogs/2026/07/best-rcs-message-service-provider-in-india.json';
+import blog_grow_business_with_rcs_india from '../../../public/data/blogs/2026/06/grow-business-with-rcs-india.json';
+import blog_whatsapp_api_message_templates_india from '../../../public/data/blogs/2026/06/whatsapp-api-message-templates-india.json';
+import blog_best_rcs_messaging_provider_karnataka from '../../../public/data/blogs/2026/06/best-rcs-messaging-provider-karnataka.json';
+import blog_best_whatsapp_bsp_india from '../../../public/data/blogs/2026/06/best-whatsapp-bsp-india.json';
+import blog_dlt_registration_bulk_sms_india from '../../../public/data/blogs/2026/06/dlt-registration-bulk-sms-india.json';
+import blog_whatsapp_business_app_vs_api from '../../../public/data/blogs/2026/06/whatsapp-business-app-vs-api.json';
+import blog_what_is_rcs_messaging from '../../../public/data/blogs/2026/06/what-is-rcs-messaging.json';
+import blog_best_bulk_sms_providers_india from '../../../public/data/blogs/2026/06/best-bulk-sms-providers-india.json';
+import blog_whatsapp_business_api_pricing_india from '../../../public/data/blogs/2026/06/whatsapp-business-api-pricing-india.json';
+import blog_bulk_sms_in_india from '../../../public/data/blogs/2026/06/bulk-sms-in-india.json';
+import blog_rcs_messaging_provider_karnataka_guide from '../../../public/data/blogs/2026/05/rcs-messaging-provider-karnataka-guide.json';
+import blog_why_bulk_sms_most_powerful_marketing_channel_india_2026 from '../../../public/data/blogs/2026/04/why-bulk-sms-most-powerful-marketing-channel-india-2026.json';
+import blog_whatsapp_business_api_vs_regular_whatsapp_indian_businesses from '../../../public/data/blogs/2026/04/whatsapp-business-api-vs-regular-whatsapp-indian-businesses.json';
+import blog_rcs_messaging_future_business_communication_india from '../../../public/data/blogs/2026/04/rcs-messaging-future-business-communication-india.json';
+import blog_bulk_voice_call_ivr_automation_guide_india_2026 from '../../../public/data/blogs/2026/04/bulk-voice-call-ivr-automation-guide-india-2026.json';
+import blog_ai_powered_business_communication_automation_india_2026 from '../../../public/data/blogs/2026/04/ai-powered-business-communication-automation-india-2026.json';
 
 // slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
