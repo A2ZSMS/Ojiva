@@ -26,7 +26,6 @@ import blog_best_rcs_messaging_provider_karnataka from '../../../public/data/blo
 import blog_best_whatsapp_bsp_india from '../../../public/data/blogs/best-whatsapp-bsp-india.json';
 import blog_dlt_registration_bulk_sms_india from '../../../public/data/blogs/dlt-registration-bulk-sms-india.json';
 import blog_whatsapp_business_app_vs_api from '../../../public/data/blogs/whatsapp-business-app-vs-api.json';
-import blog_ai_voice_agent_vs_ivr from '../../../public/data/blogs/ai-voice-agent-vs-ivr.json';
 import blog_what_is_rcs_messaging from '../../../public/data/blogs/what-is-rcs-messaging.json';
 import blog_best_bulk_sms_providers_india from '../../../public/data/blogs/best-bulk-sms-providers-india.json';
 import blog_whatsapp_business_api_pricing_india from '../../../public/data/blogs/whatsapp-business-api-pricing-india.json';
@@ -57,7 +56,6 @@ const BlogJson = {
   'best-whatsapp-bsp-india':                                     blog_best_whatsapp_bsp_india,
   'dlt-registration-bulk-sms-india':                             blog_dlt_registration_bulk_sms_india,
   'whatsapp-business-app-vs-api':                                blog_whatsapp_business_app_vs_api,
-  'ai-voice-agent-vs-ivr':                                       blog_ai_voice_agent_vs_ivr,
   'what-is-rcs-messaging':                                       blog_what_is_rcs_messaging,
   'best-bulk-sms-providers-india':                               blog_best_bulk_sms_providers_india,
   'whatsapp-business-api-pricing-india':                         blog_whatsapp_business_api_pricing_india,
