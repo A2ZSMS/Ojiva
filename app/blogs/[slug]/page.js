@@ -2,6 +2,19 @@ import { notFound } from 'next/navigation';
 import blogsData from '../../../public/data/blog.json';
 import meta from '../../../public/data/metadata.json';
 
+// ── JSON-driven blog infrastructure ──────────────────────
+import BlogLayout from '@/components/blogs/BlogLayout';
+import BlogRenderer from '@/components/blogs/BlogRenderer';
+
+// ── JSON Blog Imports (new preferred path — add here after migrating) ──
+import Jul31Json from '../../../public/data/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business.json';
+
+// slug → parsed JSON content. Blogs listed here render via BlogLayout +
+// BlogRenderer instead of the legacy component map below.
+const BlogJson = {
+  'rcs-vs-sms-key-differences-and-which-is-better-for-business': Jul31Json,
+};
+
 // ── Blog Component Imports ───────────────────────────────
 import Apr01 from '@/components/blogs/Apr2026/Apr01';
 import Apr02 from '@/components/blogs/Apr2026/Apr02';
@@ -203,9 +216,10 @@ export default async function BlogPost({ params }) {
 
   if (!blog) return notFound();
 
-  const BlogComponent = BlogComponents[blog.componentKey];
+  const jsonContent = BlogJson[blog.slug];
+  const BlogComponent = jsonContent ? null : BlogComponents[blog.componentKey];
 
-  if (!BlogComponent) {
+  if (!jsonContent && !BlogComponent) {
     return (
       <div className="container py-5 text-center">
         <h2 className="fw-bold">Blog content coming soon</h2>
@@ -261,7 +275,18 @@ export default async function BlogPost({ params }) {
       </section>
 
       {/* ── Blog Content ──────────────────────────────── */}
-      <BlogComponent />
+      {jsonContent ? (
+        <BlogLayout
+          slug={blog.slug}
+          title={blog.title}
+          category={blog.category}
+          toc={jsonContent.toc}
+        >
+          <BlogRenderer content={jsonContent} />
+        </BlogLayout>
+      ) : (
+        <BlogComponent />
+      )}
     </>
   );
 }

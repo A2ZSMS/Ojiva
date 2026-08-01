@@ -1,0 +1,204 @@
+{
+  "slug": "rcs-vs-sms-key-differences-and-which-is-better-for-business",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "rcs-features", "label": "RCS Messaging Features That Go Beyond Plain Text" },
+    { "id": "sms-benefits", "label": "Why SMS Marketing Still Works for Indian Businesses" },
+    { "id": "engagement-rates", "label": "RCS Messaging Engagement Rates Compared to SMS" },
+    { "id": "sms-delivery-reach", "label": "SMS Delivery and Reach Across Every Device" },
+    { "id": "rcs-pricing", "label": "RCS Messaging Pricing for Businesses in India" },
+    { "id": "sms-security-otp", "label": "SMS Security and OTP Verification for Indian Businesses" },
+    { "id": "rcs-use-cases", "label": "RCS Use Cases for Enterprises Across Industries" },
+    { "id": "sms-use-cases", "label": "SMS Use Cases for Enterprises and Daily Operations" },
+    { "id": "choosing-channel", "label": "Choosing a Business Messaging Channel: An Evaluation Checklist" },
+    { "id": "why-ojiva-ai", "label": "Why Ojiva AI Is a Trusted RCS Messaging Service Provider in India" },
+    { "id": "faq", "label": "FAQs" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "Every business messaging conversation in India eventually lands on the same question: should this campaign go out over RCS messaging or plain SMS messaging? Both channels still carry billions of messages a day, but they solve different problems — one leans on rich, interactive experiences, the other on universal reach that works on any handset. This guide walks through how each channel actually performs, what they cost, where they fit for your business messaging strategy, and how to decide without guessing. Already exploring one of these channels? See our <a href=\"/rcs/\">RCS API</a> in action, compare it with our <a href=\"/sms/\">SMS API</a>, or <a href=\"/book-demo/\">book a free demo</a> to see both running side by side." },
+        { "type": "image", "src": "/image/jul31(1).webp", "alt": "RCS vs SMS comparison for business messaging — Ojiva AI conversational platform in India" }
+      ]
+    },
+    {
+      "id": "rcs-features",
+      "heading": "RCS Messaging Features That Go Beyond Plain Text",
+      "blocks": [
+        { "type": "p", "html": "RCS messaging — short for Rich Communication Services, the global messaging standard maintained by the <a href=\"https://www.gsma.com/solutions-and-impact/technologies/networks/rcs/\" target=\"_blank\" rel=\"noopener noreferrer\">GSMA</a> — turns a plain text thread into something closer to a mini app. Instead of a wall of text, customers see rich cards with images, tappable buttons, carousels they can swipe through, and a verified business name instead of a random number. None of this needs a separate app; it shows up right inside the same messaging app your customers already have open, following the framework laid out in <a href=\"https://developers.google.com/business-communications/rcs-business-messaging\" target=\"_blank\" rel=\"noopener noreferrer\">Google's RCS for Business developer documentation</a>." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-card-image", "title": "Rich cards & carousels:", "desc": "product images and swipeable catalogs, right inside the chat thread." },
+          { "icon": "bi-toggles2", "title": "Suggested replies & actions:", "desc": "tap-to-call and quick actions replace typing out a response." },
+          { "icon": "bi-patch-check-fill", "title": "Verified sender identity:", "desc": "your business name, logo and brand colours instead of an unfamiliar number." },
+          { "icon": "bi-eye-fill", "title": "Read receipts & typing indicators:", "desc": "know when a message has actually been seen, not just sent." }
+        ]}
+      ]
+    },
+    {
+      "id": "sms-benefits",
+      "heading": "Why SMS Marketing Still Works for Indian Businesses",
+      "blocks": [
+        { "type": "p", "html": "SMS messaging doesn't need an app, an internet connection or even a smartphone — it's the one channel that reaches almost every mobile number, which is exactly why it still anchors most business messaging strategies in India. For bulk SMS campaigns and time-critical alerts, that universal reach is worth more than any rich media feature." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-reception-4", "title": "Works without a data connection:", "desc": "delivered over the standard mobile network, not Wi-Fi or mobile data." },
+          { "icon": "bi-phone", "title": "Reaches every handset:", "desc": "smartphones and basic feature phones alike, with nothing to install." },
+          { "icon": "bi-lightning-charge-fill", "title": "Near-instant delivery:", "desc": "messages typically land within seconds of being sent." },
+          { "icon": "bi-currency-rupee", "title": "Lower cost per message:", "desc": "a budget-friendly option for high-volume bulk SMS campaigns." }
+        ]}
+      ]
+    },
+    {
+      "id": "engagement-rates",
+      "heading": "RCS Messaging Engagement Rates Compared to SMS",
+      "blocks": [
+        { "type": "p", "html": "Because RCS messaging supports buttons, carousels and native read receipts, it tends to suit conversational messaging use cases — where you want the customer to act inside the thread — better than a plain-text blast. Here's how the two channels compare on the experience they actually deliver, feature by feature:" },
+        { "type": "table",
+          "headers": ["Engagement Factor", "RCS Messaging", "SMS Messaging"],
+          "rows": [
+            ["<b>Message format</b>", "Rich cards, carousels, quick-reply buttons", "Plain text only"],
+            ["<b>Read receipts & typing indicators</b>", "Native, built into the channel", "Not supported"],
+            ["<b>Sender identity</b>", "Verified business name, logo and colours", "Generic shortcode or long number"],
+            ["<b>Media support</b>", "Images, video and PDFs shown inline", "Requires a link-out"],
+            ["<b>In-message actions</b>", "Tap-to-call, add-to-calendar, view-on-map", "None — recipient must act outside the message"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sms-delivery-reach",
+      "heading": "SMS Delivery and Reach Across Every Device",
+      "blocks": [
+        { "type": "p", "html": "SMS delivery doesn't depend on which phone a customer owns or which network they're on at that moment — it's carried by the same underlying mobile network infrastructure across every telecom circle in India. That consistency is what makes SMS messaging the fallback every RCS messaging campaign should have configured behind it." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-globe", "title": "Uniform network reach:", "desc": "delivered the same way across every major Indian carrier." },
+          { "icon": "bi-phone-fill", "title": "No smartphone required:", "desc": "reaches feature phones and smartphones equally." },
+          { "icon": "bi-send-check-fill", "title": "Predictable delivery:", "desc": "consistent performance regardless of the recipient's data connectivity." },
+          { "icon": "bi-wifi-off", "title": "Works with zero data:", "desc": "no Wi-Fi or mobile data needed at either end." }
+        ]},
+        { "type": "image", "src": "/image/jul31(2).webp", "alt": "RCS messaging features for enterprises — rich cards, carousels and read receipts" }
+      ]
+    },
+    {
+      "id": "rcs-pricing",
+      "heading": "RCS Messaging Pricing for Businesses in India",
+      "blocks": [
+        { "type": "p", "html": "If you're comparing RCS messaging pricing in India against plain SMS across a few vendors, look at these five line items rather than a single headline rate — rich media messages are billed differently from plain text, and that difference adds up at volume. An honest RCS messaging service provider in India should walk you through a real INR rate card in the first conversation — true whether you're evaluating Ojiva AI or anyone else. Add 18% GST, billed in INR, and that's the whole picture." },
+        { "type": "table",
+          "headers": ["Cost Component", "What It Covers", "How It's Billed"],
+          "rows": [
+            ["<b>Platform subscription</b>", "Campaign builder, unified inbox, analytics dashboard", "Monthly or annual plan, in INR"],
+            ["<b>RCS message charges</b>", "Rich cards, carousels and media-based messages", "Per delivered message, typically higher than SMS"],
+            ["<b>SMS message charges</b>", "Plain-text transactional and promotional messages", "Per message, billed by segment length"],
+            ["<b>Setup & onboarding</b>", "Channel activation, template design, carrier approvals", "Included with Ojiva AI onboarding"],
+            ["<b>Taxes</b>", "GST on subscription and message charges", "18%, with a GST invoice on every payment"]
+          ]
+        },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-cash-coin", "title": "Ask for cost per engaged customer, not cost per message:", "desc": "<a href=\"/book-demo/\">book a free demo</a> and we'll map real INR pricing to your expected volume across RCS and SMS." }
+        ]}
+      ]
+    },
+    {
+      "id": "sms-security-otp",
+      "heading": "SMS Security and OTP Verification for Indian Businesses",
+      "blocks": [
+        { "type": "p", "html": "SMS security and OTP verification remain closely linked in India, since most banks, e-commerce platforms and government portals still lean on a plain-text one-time password. Getting this right means more than sending a code — it means the sender is verified and the route is compliant. See how <a href=\"/otp/\">OTP verification</a> works end to end on our platform." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-shield-lock-fill", "title": "DLT-registered routes:", "desc": "every template registered and traceable, as required for Indian businesses." },
+          { "icon": "bi-key-fill", "title": "Reliable OTP delivery:", "desc": "one-time passwords sent over the standard network, with no dependency on data." },
+          { "icon": "bi-patch-check-fill", "title": "Verified sender ID:", "desc": "customers see a recognisable, registered business identity, not a random number." },
+          { "icon": "bi-file-earmark-lock2-fill", "title": "TRAI-aligned compliance:", "desc": "routes and content that follow current regulatory requirements." }
+        ]}
+      ]
+    },
+    {
+      "id": "rcs-use-cases",
+      "heading": "RCS Use Cases for Enterprises Across Industries",
+      "blocks": [
+        { "type": "p", "html": "RCS use cases for enterprises tend to cluster around moments where a customer benefits from acting immediately, not just reading — tracking a delivery, picking a slot, or confirming a booking without leaving the chat." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-truck", "title": "Order tracking with a live map:", "desc": "customers see exactly where their delivery is, without opening a separate app." },
+          { "icon": "bi-calendar-check-fill", "title": "Appointment booking with calendar add:", "desc": "a tap adds the confirmed slot straight to the customer's calendar." },
+          { "icon": "bi-cart-check-fill", "title": "Interactive product carousels:", "desc": "retail catalogs customers can browse and buy from inside the thread." },
+          { "icon": "bi-credit-card-2-front-fill", "title": "In-message bill payment:", "desc": "a tap opens a payment action without a link-out." }
+        ]}
+      ]
+    },
+    {
+      "id": "sms-use-cases",
+      "heading": "SMS Use Cases for Enterprises and Daily Operations",
+      "blocks": [
+        { "type": "p", "html": "SMS use cases for enterprises lean toward moments where speed and universal reach matter more than visual polish — a code, a confirmation, a reminder." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-key-fill", "title": "OTP & two-factor verification:", "desc": "the most common SMS use case across Indian banking and e-commerce." },
+          { "icon": "bi-box-seam-fill", "title": "Delivery & order alerts:", "desc": "shipped, out for delivery, delivered — sent the moment status changes." },
+          { "icon": "bi-calendar2-check", "title": "Appointment reminders:", "desc": "cuts down no-shows without needing a smartphone on the recipient's end." },
+          { "icon": "bi-megaphone-fill", "title": "Bulk promotional campaigns:", "desc": "discount codes and offers sent to a full customer list at once." }
+        ]},
+        { "type": "image", "src": "/image/jul31(3).webp", "alt": "RCS messaging features for enterprises — rich cards, carousels and read receipts" }
+      ]
+    },
+    {
+      "id": "choosing-channel",
+      "heading": "Choosing a Business Messaging Channel: An Evaluation Checklist",
+      "blocks": [
+        { "type": "p", "html": "Rather than picking one channel forever, most Indian businesses run this quick checklist per campaign before deciding where a message should go:" },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-1-circle-fill", "title": "Audience device mix:", "desc": "mostly smartphones on RCS-capable networks, or a mix that includes feature phones?" },
+          { "icon": "bi-2-circle-fill", "title": "Message content:", "desc": "does this campaign need images, buttons and carousels, or is a short text alert enough?" },
+          { "icon": "bi-3-circle-fill", "title": "Budget per message:", "desc": "rich media messages typically cost more to send than plain text — does the expected lift justify it?" },
+          { "icon": "bi-4-circle-fill", "title": "Compliance needs:", "desc": "does this message require DLT registration or OTP-grade reliability?" },
+          { "icon": "bi-5-circle-fill", "title": "Interaction style:", "desc": "are you starting a two-way conversation, or sending a one-way notification?" }
+        ]},
+        { "type": "p", "html": "There's rarely one right answer here — most businesses that see real results end up running a business messaging strategy that blends RCS messaging and SMS messaging side by side, RCS for rich campaigns, SMS as the fallback that reaches every handset." }
+      ]
+    },
+    {
+      "id": "why-ojiva-ai",
+      "heading": "Why Ojiva AI Is a Trusted RCS Messaging Service Provider in India",
+      "blocks": [
+        { "type": "p", "html": "Plenty of vendors can send a message. Here's what separates Ojiva AI as a CPaaS India provider built for businesses running RCS and SMS together, not as two separate vendor relationships." },
+        { "type": "icon-list", "items": [
+          { "icon": "bi-diagram-3-fill", "title": "One dashboard for every channel:", "desc": "<a href=\"/rcs/\">RCS</a>, <a href=\"/sms/\">SMS</a>, <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/otp/\">OTP</a>, with automatic fallback between them." },
+          { "icon": "bi-cpu-fill", "title": "A single messaging API:", "desc": "one integration point instead of managing separate connections per channel." },
+          { "icon": "bi-patch-check-fill", "title": "Carrier and Meta-approved delivery:", "desc": "RCS agent verification and DLT-registered SMS routes handled end to end." },
+          { "icon": "bi-cash-coin", "title": "Transparent INR pricing:", "desc": "once your volumes are known, we map out real per-message costs, not vague estimates." },
+          { "icon": "bi-headset", "title": "A Bangalore-based support team:", "desc": "conversational messaging support that runs in your own time zone." }
+        ]}
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "Choosing between RCS messaging and SMS messaging isn't really a decision you make once — it's one you revisit per campaign, based on what the message needs to do and who it needs to reach. Rich, interactive campaigns aimed at smartphone users lean naturally toward RCS; time-critical alerts that must reach every handset lean toward SMS. Most growing businesses in India end up running both, side by side, rather than picking one channel forever." },
+        { "type": "p", "html": "See how this looks for your own campaigns: explore Ojiva AI's <a href=\"/rcs/\">RCS API</a> and <a href=\"/sms/\">SMS API</a>, or <a href=\"/book-demo/\">book a free demo</a> — we'll map out a channel mix and real INR pricing for your expected volumes." }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<em>By Ananth · Published 31 July</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: RCS vs SMS for Business Messaging",
+      "blocks": [
+        { "type": "accordion", "items": [
+          { "q": "What is the difference between RCS messaging and SMS messaging?", "a": "<p>SMS messaging sends plain text over the standard mobile network and works on every phone, smart or basic. RCS messaging runs over data or Wi-Fi and adds rich cards, images, buttons and read receipts, but only on devices and carriers that support it — SMS remains the automatic fallback when they don't.</p>" },
+          { "q": "Is RCS messaging better than SMS for business communication, and how do open rates compare?", "a": "<p>Neither is universally \"better\" — RCS messaging tends to drive stronger engagement for visual, interactive campaigns because recipients can act inside the message itself, while SMS messaging's open rates stay high simply because almost everyone reads a text. The right channel depends on what the message needs to do, not which one wins on paper.</p>" },
+          { "q": "Which is more secure for OTP delivery — RCS or SMS?", "a": "<p>Both can carry one-time passwords securely when sent through a DLT-registered, verified sender. SMS remains the default for OTP because it reaches every device without needing a data connection; RCS messaging increasingly supports OTP too, with built-in autofill on modern phones, but SMS is still the safer universal fallback.</p>" },
+          { "q": "How much does RCS messaging cost for businesses in India?", "a": "<p>Pricing usually includes a platform subscription plus a per-message charge that's typically higher for RCS messaging than plain SMS, since rich cards and media cost more to deliver. Ojiva AI shares an actual INR rate card once we know your expected message volume and mix — book a free demo and we'll walk through it.</p>" },
+          { "q": "Can RCS messaging completely replace SMS marketing?", "a": "<p>Not yet, and not for every business. RCS messaging only works on supporting devices and networks, so campaigns that must reach every customer still need SMS as the fallback. Most businesses run both together rather than retiring SMS marketing entirely.</p>" },
+          { "q": "How does RCS vs SMS delivery rate compare for time-sensitive alerts like e-commerce order notifications?", "a": "<p>SMS messaging typically delivers within seconds regardless of device, which is why it remains the default for order and delivery alerts. RCS messaging can carry the same alert with a tracking map or reorder button built in, but only reaches supporting devices — many businesses send RCS first and fall back to SMS automatically if it isn't delivered.</p>" },
+          { "q": "Does RCS messaging work without an internet connection?", "a": "<p>No. RCS messaging needs a mobile data or Wi-Fi connection to send and receive rich content, unlike SMS messaging, which runs on the standard cellular network and needs neither. That's the main reason SMS still matters for reaching customers in low-connectivity areas.</p>" },
+          { "q": "How do I integrate RCS messaging through an API, and who is the best RCS messaging service provider in India?", "a": "<p>Integration typically happens through a single messaging API that handles agent verification, template approval and message delivery on your behalf. Ojiva AI provides this as a Bangalore-based RCS messaging service provider in India, with SMS fallback built in and a support team in your own time zone.</p>" }
+        ]}
+      ]
+    }
+  ]
+}

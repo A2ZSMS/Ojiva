@@ -156,7 +156,7 @@ export default function RootLayout({ children }) {
           Skip to main content
         </a>
         <LayoutShell>
-          <main id="main-content" style={{ overflowX: 'hidden' }}>{children}</main>
+          <main id="main-content" style={{ overflowX: 'clip' }}>{children}</main>
         </LayoutShell>
         <BootstrapClient />
 

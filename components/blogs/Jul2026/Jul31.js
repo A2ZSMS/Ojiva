@@ -1218,7 +1218,7 @@ const Jul31 = () => {
 
           {/* ── Sidebar: Table of Contents + Related blogs ── */}
           <aside className="col-lg-4">
-            <div>
+            <div style={{ position: 'sticky', top: '90px' }}>
               <nav
                 className="p-4 rounded-4 mb-4"
                 style={{ background: "rgba(27, 72, 224, 0.05)" }}

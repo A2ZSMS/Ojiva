@@ -1132,7 +1132,7 @@ const Jul30 = () => {
 
           {/* ── Sidebar: Table of Contents + Related WhatsApp blog ── */}
           <aside className="col-lg-4">
-            <div>
+            <div style={{ position: 'sticky', top: '90px' }}>
               {/* Table of Contents — active section highlights on scroll */}
               <nav
                 className="p-4 rounded-4 mb-4"
