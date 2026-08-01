@@ -1,0 +1,398 @@
+{
+  "slug": "dlt-registration-bulk-sms-india",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-is-dlt", "label": "What Is DLT Registration?" },
+    { "id": "who-needs", "label": "Who Needs to Register?" },
+    { "id": "three-things", "label": "The 3 Things You Register" },
+    { "id": "step-by-step", "label": "Step-by-Step: How to Complete DLT Registration" },
+    { "id": "fees-timeline", "label": "DLT Registration Fees & Timeline (2026)" },
+    { "id": "header-template-rules", "label": "Header & Template Rules That Trip People Up" },
+    { "id": "silent-blocking", "label": "Silent Blocking: Why Your SMS Fails Scrubbing" },
+    { "id": "ojiva-registration", "label": "How Ojiva AI Handles Your DLT Registration" },
+    { "id": "ojiva-silent", "label": "How Ojiva AI Prevents Silent SMS Failures" },
+    { "id": "ojiva-features", "label": "Ojiva AI's Bulk SMS Platform: What You Get" },
+    { "id": "ojiva-beyond", "label": "One Platform Beyond SMS: WhatsApp, OTP, RCS & Voice" },
+    { "id": "documents", "label": "Documents You Need for DLT Registration" },
+    { "id": "sms-categories", "label": "SMS Categories: Promotional, Transactional & Service" },
+    { "id": "ongoing-costs", "label": "DLT Costs Beyond Registration: What You Pay to Send" },
+    { "id": "otp-priority", "label": "DLT for OTP & High-Priority Messages" },
+    { "id": "dnd-consent", "label": "DND, Consent & Timing Rules You Must Follow" },
+    { "id": "dlt-vs-channels", "label": "DLT vs Other Channels: SMS, WhatsApp, RCS & Voice" },
+    { "id": "penalties", "label": "The Risks of Skipping or Breaking DLT Rules" },
+    { "id": "best-practices", "label": "DLT Compliance Best Practices" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "author", "label": "Author" },
+    { "id": "faq", "label": "Frequently Asked Questions" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>DLT registration</strong> is the TRAI-mandated process that every business must complete before sending commercial SMS in India. Under the TCCCPR 2018, you register three things on a DLT (Distributed Ledger Technology) operator portal — your <strong>entity</strong>, your <strong>sender IDs (headers)</strong> and your <strong>message templates</strong> — so operators can verify and deliver your messages. It costs about <strong>₹5,900 + GST</strong> one-time and takes roughly <strong>3–7 working days</strong>. Skipping it is not an option: unregistered SMS is simply blocked at the operator level. Worse, even registered senders see messages fail \"silently\" when content does not exactly match an approved template. This guide walks the full process step by step, lists the real fees and timelines for 2026, and shows you the scrubbing traps that quietly kill delivery — so your first campaign actually lands. If you would rather have it handled for you, Ojiva AI guides DLT setup as part of onboarding to our <a href='/sms/'>bulk SMS service</a>. But it pays to understand the process either way." }
+      ]
+    },
+    {
+      "id": "what-is-dlt",
+      "heading": "What Is DLT Registration?",
+      "blocks": [
+        { "type": "p", "html": "DLT stands for Distributed Ledger Technology — a blockchain-based system that India's telecom operators use to record and verify who is allowed to send commercial SMS. TRAI introduced it under the Telecom Commercial Communications Customer Preference Regulations (TCCCPR) 2018 to stamp out spam and unsolicited messages. The principle is simple: if your entity, sender ID and exact message content are not on the ledger, the message does not go out." },
+        { "type": "p", "html": "Every commercial SMS is checked in real time against these registered records — a process called scrubbing — before an operator delivers it. That is why DLT registration is the foundation of reliable SMS in India, not an optional formality." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-check", "title": "Mandatory for commercial SMS:", "desc": "Promotional, transactional, service and OTP SMS all require DLT registration. Person-to-person messages do not." },
+            { "icon": "bi-diagram-3-fill", "title": "One ledger, all operators:", "desc": "Jio, Airtel, Vi and BSNL share the same DLT backbone, so you register once and it applies network-wide." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun12(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "who-needs",
+      "heading": "Who Needs to Register?",
+      "blocks": [
+        { "type": "p", "html": "Any business or organisation that sends commercial SMS to Indian mobile numbers needs DLT registration — regardless of size or volume. If you send OTPs, order updates, reminders, alerts or promotions, you are a Principal Entity (PE) in DLT terms and must be on the ledger." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-bank2", "title": "Banks, fintech and NBFCs:", "desc": "OTPs, transaction alerts, EMI and KYC messages." },
+            { "icon": "bi-cart-check-fill", "title": "E-commerce and retail:", "desc": "Order confirmations, delivery updates, offers and cart reminders." },
+            { "icon": "bi-hospital-fill", "title": "Healthcare, education, logistics and services:", "desc": "Appointment, fee, shipment and renewal messages — essentially every business that texts customers." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "three-things",
+      "heading": "The 3 Things You Register: Entity, Header & Template",
+      "blocks": [
+        { "type": "p", "html": "DLT registration is not one form — it is three linked registrations that must agree with each other. Getting the relationship right is what prevents failures later." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-building-fill", "title": "1. Principal Entity (PE):", "desc": "Your business itself — verified with GST/PAN and incorporation documents. This is the paid, one-time registration." },
+            { "icon": "bi-fonts", "title": "2. Header (Sender ID):", "desc": "The 6-character alphanumeric ID customers see, e.g. OJIVAI. Each header is tied to a category (promotional, transactional or service)." },
+            { "icon": "bi-file-earmark-text-fill", "title": "3. Content Template:", "desc": "The exact message text, with variables as {#var#}. Every content variation must be approved before you can send it." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "step-by-step",
+      "heading": "Step-by-Step: How to Complete DLT Registration",
+      "blocks": [
+        { "type": "p", "html": "Here is the full process from zero to your first compliant campaign. Have your GST, PAN and incorporation documents ready before you start — missing paperwork is the number-one cause of delay." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Step 1 — Choose a DLT operator portal:", "desc": "Register on any one of Jio, Vodafone Idea (Vilpower), Airtel (SmartPing) or BSNL. You only need one; the ledger syncs your data across all networks." },
+            { "icon": "bi-2-circle-fill", "title": "Step 2 — Register your Principal Entity (PE):", "desc": "Submit business details, GST/PAN, authorised-signatory and address proof, and pay the ~₹5,900 + GST one-time fee. You receive a unique PE ID, usually in 1–3 working days." },
+            { "icon": "bi-3-circle-fill", "title": "Step 3 — Register your Header (Sender ID):", "desc": "Request a 6-character header under the right category. TRAI now requires the header to indicate the message type, so map promotional, transactional and service traffic to the correct headers. Approval is typically 1–2 days." },
+            { "icon": "bi-4-circle-fill", "title": "Step 4 — Register your Content Templates:", "desc": "Submit each message with fixed text and variables written exactly as {#var#}. Choose the matching category. Each template is usually approved in 1–3 days." },
+            { "icon": "bi-5-circle-fill", "title": "Step 5 — Map to your SMS provider and send:", "desc": "Link your approved entity, headers and templates to your <a href='/sms/'>bulk SMS platform</a>, capture consent for promotional sends, and launch. Messages now pass scrubbing and deliver." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees-timeline",
+      "heading": "DLT Registration Fees & Timeline (2026)",
+      "blocks": [
+        { "type": "p", "html": "Here is the honest cost-and-time picture so you can plan. Fees are one-time; the headline cost is the entity registration, while headers and templates are usually free on most portals." },
+        {
+          "type": "table",
+          "headers": ["Registration step", "Typical fee (2026)", "Timeline"],
+          "rows": [
+            ["<b>Principal Entity (PE)</b>", "~₹5,900 + GST (one-time)", "1–3 working days"],
+            ["<b>Header (Sender ID)</b>", "Usually free", "1–2 working days"],
+            ["<b>Content Template</b>", "Usually free", "1–3 working days each"],
+            ["<b>Total to go live</b>", "~₹5,900 + GST", "~3–7 working days"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-info-circle-fill", "title": "Fees vary by operator:", "desc": "Airtel SmartPing and Jio commonly charge around ₹5,900 + GST for entity registration. Confirm the current fee on your chosen portal before you pay." },
+            { "icon": "bi-hourglass-split", "title": "Plan a buffer:", "desc": "Timelines assume clean documents. A mismatch on GST name or signatory proof can add days, so submit carefully the first time." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "header-template-rules",
+      "heading": "Header & Template Rules That Trip People Up",
+      "blocks": [
+        { "type": "p", "html": "Most DLT pain is not in registering — it is in getting templates approved and keeping sent content matched to them. These are the rules that catch teams out." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-braces", "title": "Variables must be exactly {#var#}:", "desc": "Not [name], not {{otp}}, not %s. Use {#var#} for every dynamic field, or the template is rejected." },
+            { "icon": "bi-type", "title": "Static text must match character-for-character:", "desc": "The fixed parts of a sent message must match the approved template exactly — an extra space, emoji or word breaks the match." },
+            { "icon": "bi-ui-checks", "title": "Category must match content:", "desc": "Marketing wording under a transactional header is rejected. Keep promotional, transactional and service templates under the right header." },
+            { "icon": "bi-link-45deg", "title": "Whitelist your URLs:", "desc": "Links in transactional templates must be whitelisted. A non-whitelisted or shortened URL is a common silent rejection." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "silent-blocking",
+      "heading": "Silent Blocking: Why Your SMS Fails Scrubbing",
+      "blocks": [
+        { "type": "p", "html": "The most frustrating problem in Indian SMS is messages that show as \"failed\" with no obvious reason. This is almost never a network issue — it is DLT scrubbing rejecting a mismatch in real time. Scrubbing checks your PE ID, header, content template ID, the PE-to-telemarketer binding chain and the recipient's DND status on every single message. If any one fails, the message is dropped." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-x-octagon-fill", "title": "Template mismatch:", "desc": "Sent content differs from the approved template — the most common cause. Fix the content or update and re-submit the template." },
+            { "icon": "bi-tags-fill", "title": "Wrong category:", "desc": "Promotional content sent on a transactional route gets scrubbed. Match the message to the right header and template category." },
+            { "icon": "bi-slash-circle-fill", "title": "Header issues:", "desc": "An inactive, blacklisted or mismatched header — or one that does not pair with the template — fails the binding check." },
+            { "icon": "bi-person-x-fill", "title": "DND on promotional:", "desc": "Promotional SMS to numbers on the DND/NCPR list is blocked. Transactional and service messages and OTPs are not affected by DND." },
+            { "icon": "bi-clipboard2-check-fill", "title": "Read your delivery report:", "desc": "A \"failed\" status with a DLT error code points to the exact mismatch. A good provider surfaces these so you can fix the template, not blame the network." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-registration",
+      "heading": "How Ojiva AI Handles Your DLT Registration",
+      "blocks": [
+        { "type": "p", "html": "DLT is three linked records that must agree — and that's exactly where teams stumble. Ojiva AI sets it all up for you as part of onboarding to our <a href='/sms/'>bulk SMS service</a>." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-card-checklist", "title": "Document guidance:", "desc": "We tell you exactly which GST, PAN and authorisation papers you need — so you clear entity approval the first time." },
+            { "icon": "bi-diagram-3-fill", "title": "Entity, header & template setup:", "desc": "We register and map all three, in the correct categories, so they bind cleanly at scrubbing." },
+            { "icon": "bi-ui-checks", "title": "Category mapping done right:", "desc": "Promotional, transactional and service traffic routed to the correct headers — no mismatched rejections." },
+            { "icon": "bi-rocket-takeoff-fill", "title": "Faster go-live:", "desc": "We keep the 3–7 day timeline on track and handle the back-and-forth. <a href='/book-demo/'>Book a demo</a> to get sending." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-silent",
+      "heading": "How Ojiva AI Prevents Silent SMS Failures",
+      "blocks": [
+        { "type": "p", "html": "The worst DLT problem is messages that fail with no clear reason. Ojiva AI's platform catches the mismatch before it costs you a campaign." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-check2-square", "title": "Template-match validation:", "desc": "We check sent content against your approved template — including {#var#} placeholders — so it passes scrubbing." },
+            { "icon": "bi-clipboard2-check-fill", "title": "Readable error codes:", "desc": "When a message fails, we surface the exact DLT reason so you fix the template, not blame the network." },
+            { "icon": "bi-link-45deg", "title": "URL whitelisting help:", "desc": "We flag non-whitelisted or shortened links — a common silent rejection — before you send." },
+            { "icon": "bi-bar-chart-line-fill", "title": "Live delivery reports:", "desc": "Real-time DLRs show what landed and what bounced, so issues are caught in minutes, not campaigns." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun12(3).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "ojiva-features",
+      "heading": "Ojiva AI's Bulk SMS Platform: What You Get",
+      "blocks": [
+        { "type": "p", "html": "Beyond compliance, the platform itself is built to make high-volume SMS simple, fast and measurable." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-calendar-check-fill", "title": "Scheduling & campaigns:", "desc": "Plan, schedule and personalise template campaigns from one dashboard — within the 9am–9pm promo window automatically." },
+            { "icon": "bi-speedometer2", "title": "High-throughput OTP route:", "desc": "A priority path keeps login codes landing in seconds, even during bulk sends." },
+            { "icon": "bi-code-slash", "title": "Simple REST API:", "desc": "Fire SMS from your app, CRM or backend on real events — order placed, payment due, code requested." },
+            { "icon": "bi-files", "title": "Multi-template management:", "desc": "Store and reuse all your approved templates and language variants, so you're never blocked mid-campaign." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-beyond",
+      "heading": "One Platform Beyond SMS: WhatsApp, OTP, RCS & Voice",
+      "blocks": [
+        { "type": "p", "html": "SMS rarely works alone. With Ojiva AI, every channel lives on one platform — so a message that fails on one route has a fallback on another." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-whatsapp", "title": "WhatsApp Business API:", "desc": "Add rich, conversational messaging with no DLT needed — see <a href='/blogs/whatsapp-business-app-vs-api/'>App vs API</a>." },
+            { "icon": "bi-shield-lock-fill", "title": "OTP across channels:", "desc": "<a href='/otp/'>OTP & 2FA</a> over SMS, WhatsApp and voice with automatic fallback, so logins never stall." },
+            { "icon": "bi-telephone-fill", "title": "Voice & RCS:", "desc": "Layer in <a href='/voice/'>voice</a> reminders and branded RCS from the same dashboard and contact data." },
+            { "icon": "bi-grid-1x2-fill", "title": "One dashboard, one team:", "desc": "Manage every channel, report and compliance setting in one place — no juggling vendors." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "heading": "Documents You Need for DLT Registration",
+      "blocks": [
+        { "type": "p", "html": "Missing paperwork is the number-one cause of delay. Have these ready before you start your entity registration and you'll clear approval in the first attempt." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-file-earmark-text-fill", "title": "GST certificate & PAN:", "desc": "Company PAN plus the GST certificate — the name must match exactly across both and your entity application." },
+            { "icon": "bi-building-fill", "title": "Incorporation / business proof:", "desc": "Certificate of Incorporation, partnership deed, or shop & establishment registration, depending on your entity type." },
+            { "icon": "bi-person-badge-fill", "title": "Authorised signatory ID:", "desc": "PAN/Aadhaar of the signatory plus a Letter of Authorisation on company letterhead." },
+            { "icon": "bi-geo-alt-fill", "title": "Address & contact proof:", "desc": "Registered address proof, a company email and (often) a verifiable website or domain." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sms-categories",
+      "heading": "SMS Categories: Promotional, Transactional & Service",
+      "blocks": [
+        { "type": "p", "html": "Every header and template is tied to a category, and the category decides the rules — including whether DND applies. Picking the wrong one is a top reason messages get scrubbed." },
+        {
+          "type": "table",
+          "headers": ["Category", "Used for", "DND applies?"],
+          "rows": [
+            ["<b>Promotional</b>", "Offers, discounts, marketing blasts", "Yes (9am–9pm, opt-in)"],
+            ["<b>Transactional</b>", "Banking OTPs, transaction alerts", "No"],
+            ["<b>Service (implicit)</b>", "Order/delivery updates to existing customers", "No"],
+            ["<b>Service (explicit)</b>", "Promotional-style messages to opted-in users", "Needs consent"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-key-fill", "title": "OTPs sit under transactional/authentication:", "desc": "They're DND-exempt and high priority, which is why login codes still land on numbers that block promotions." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ongoing-costs",
+      "heading": "DLT Costs Beyond Registration: What You Pay to Send",
+      "blocks": [
+        { "type": "p", "html": "The ~₹5,900 + GST entity fee is one-time. Once you're live, your ongoing cost is per-message — and it's worth knowing the parts so a quote can't surprise you." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-cash-stack", "title": "Per-SMS charge:", "desc": "A few paise per SMS, varying by volume, route (promotional vs transactional) and provider. Higher volume lowers the rate." },
+            { "icon": "bi-search", "title": "Scrubbing charge:", "desc": "A nominal per-message fee operators levy for the real-time DLT check — usually bundled into your SMS rate." },
+            { "icon": "bi-arrow-repeat", "title": "No recurring entity fee:", "desc": "Header and template registration are typically free, and you don't re-pay the entity fee — you only pay for messages sent." },
+            { "icon": "bi-receipt", "title": "Add 18% GST:", "desc": "GST applies on SMS spend. A transparent provider shows the route rate and GST separately — compare on our <a href='/blogs/best-bulk-sms-providers-india/'>bulk SMS provider guide</a>." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otp-priority",
+      "heading": "DLT for OTP & High-Priority Messages",
+      "blocks": [
+        { "type": "p", "html": "OTPs are the most delivery-critical SMS you send — and DLT treats them differently from marketing. Getting this right means codes that land in seconds, every time." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-lock-fill", "title": "Use authentication/transactional templates:", "desc": "Register OTP content with the code as {#var#} under the correct category, or it won't pass scrubbing." },
+            { "icon": "bi-person-check-fill", "title": "DND-exempt:", "desc": "OTP and transactional messages reach numbers on the DND/NCPR list — unlike promotional SMS." },
+            { "icon": "bi-speedometer2", "title": "Prioritise a high-throughput route:", "desc": "OTP traffic needs low-latency delivery; a dedicated route keeps codes from queuing behind bulk campaigns." },
+            { "icon": "bi-arrow-left-right", "title": "Plan a fallback:", "desc": "If an SMS OTP fails, a WhatsApp or voice fallback rescues the login — our <a href='/otp/'>OTP & 2FA</a> service spans all three." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dnd-consent",
+      "heading": "DND, Consent & Timing Rules You Must Follow",
+      "blocks": [
+        { "type": "p", "html": "DLT registration gets you delivery; these rules keep you compliant and your entity in good standing. They apply mainly to promotional traffic." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-person-x-fill", "title": "Respect DND/NCPR:", "desc": "Promotional SMS to numbers on the National Customer Preference Register is blocked at scrubbing — clean your lists against it." },
+            { "icon": "bi-clock-fill", "title": "Send promos 9am–9pm only:", "desc": "TRAI restricts promotional sends to daytime hours. Transactional and OTP messages have no time limit." },
+            { "icon": "bi-hand-thumbs-up-fill", "title": "Keep consent proof:", "desc": "Maintain opt-in records for promotional recipients — your defence if a complaint is raised." },
+            { "icon": "bi-box-arrow-right", "title": "Offer a clear opt-out:", "desc": "An easy STOP/unsubscribe protects your sender reputation and your quality of delivery over time." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dlt-vs-channels",
+      "heading": "DLT vs Other Channels: SMS, WhatsApp, RCS & Voice",
+      "blocks": [
+        { "type": "p", "html": "DLT is SMS-specific. If you message across channels, each has its own compliance route — here's the quick map." },
+        {
+          "type": "table",
+          "headers": ["Channel", "Compliance route", "Best for"],
+          "rows": [
+            ["<b>SMS</b>", "DLT (TRAI/TCCCPR)", "OTPs, alerts, universal reach"],
+            ["<b>WhatsApp</b>", "Meta verification + templates", "Rich, conversational, media"],
+            ["<b>RCS</b>", "Google / operator onboarding", "Branded, rich messaging"],
+            ["<b>Voice (OBD/IVR)</b>", "TRAI/TCCCPR & consent", "Reminders, confirmations, calls"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-info-circle-fill", "title": "No DLT for WhatsApp or RCS:", "desc": "See <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a> for how WhatsApp verification works, and add <a href='/voice/'>voice</a> for confirmations." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "penalties",
+      "heading": "The Risks of Skipping or Breaking DLT Rules",
+      "blocks": [
+        { "type": "p", "html": "DLT isn't optional, and non-compliance costs more than a blocked message. Here's what's actually at stake." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-x-octagon-fill", "title": "Messages simply don't deliver:", "desc": "Unregistered SMS is blocked at the operator level — no entity, header and template means no delivery, full stop." },
+            { "icon": "bi-slash-circle-fill", "title": "Header blacklisting:", "desc": "Repeated violations can get your sender ID blacklisted, killing a brand identity customers recognise." },
+            { "icon": "bi-exclamation-triangle-fill", "title": "Entity suspension & penalties:", "desc": "Spam complaints and rule breaches can trigger graded financial penalties and even suspension of your registered entity." },
+            { "icon": "bi-graph-down-arrow", "title": "Reputation damage:", "desc": "A poor sending record drags down delivery for all your future traffic — hard to undo, easy to avoid." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "heading": "DLT Compliance Best Practices",
+      "blocks": [
+        { "type": "p", "html": "Once you are registered, a few habits keep delivery high and your entity in good standing." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-files", "title": "Pre-register template variations:", "desc": "Register every wording you expect to use, including language variants, so you are never blocked mid-campaign." },
+            { "icon": "bi-hand-thumbs-up-fill", "title": "Keep clean consent records:", "desc": "Maintain opt-in proof for promotional sends — it protects your entity if a complaint is raised." },
+            { "icon": "bi-people-fill", "title": "Use a provider that manages DLT for you:", "desc": "The easiest path is a platform that handles entity, header and template mapping and flags scrubbing errors. See our <a href='/blogs/best-bulk-sms-providers-india/'>guide to the best bulk SMS service provider in India</a> for what to look for." },
+            { "icon": "bi-shield-lock-fill", "title": "Remember other channels differ:", "desc": "WhatsApp and RCS do not use DLT — see <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a> for how WhatsApp verification works instead. For login codes, our <a href='/otp/'>OTP & 2FA</a> service spans SMS, WhatsApp and voice." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "DLT registration looks bureaucratic, but it is straightforward once you see it as three linked records — entity, header and template — that must agree. Budget around ₹5,900 + GST and 3–7 working days, write your variables as {#var#}, keep content matched to approved templates, and you will avoid the silent scrubbing failures that frustrate most senders." },
+        { "type": "p", "html": "If you would rather skip the paperwork, Ojiva AI handles DLT entity, header and template setup as part of onboarding to our <a href='/sms/'>bulk SMS service</a>, and flags scrubbing errors before they cost you a campaign. <a href='/book-demo/'>Book a demo</a> to get registered and sending faster." }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<em>By Ananth · Updated 12 June 2026</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: DLT Registration for Bulk SMS",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is DLT registration for bulk SMS in India?", "a": "<p>DLT (Distributed Ledger Technology) registration is a TRAI-mandated process under the TCCCPR 2018. Every business sending commercial SMS in India must register its entity, sender IDs (headers) and message templates on a DLT operator portal before messages will be delivered.</p>" },
+            { "q": "How much does DLT registration cost in India?", "a": "<p>Principal Entity (telemarketer) registration costs around ₹5,900 plus GST as a one-time fee on operator portals such as Airtel SmartPing and Jio. Header and template registration are typically free on most portals.</p>" },
+            { "q": "How long does DLT registration take?", "a": "<p>If your documents are in order, the full process takes about 3–7 working days: entity registration approves in 1–3 days, header registration in 1–2 days after the entity is live, and each template in 1–3 days.</p>" },
+            { "q": "Do I need to register on all four DLT portals?", "a": "<p>No. You register on one operator portal — Jio, Vodafone Idea (Vi), Airtel or BSNL — and the data is shared across all four through the DLT blockchain backbone.</p>" },
+            { "q": "What is a header (sender ID) in DLT?", "a": "<p>A header is the 6-character alphanumeric sender ID customers see as the SMS sender, for example OJIVAI. Each header is registered against a category (promotional, transactional, service) and must match the templates sent under it.</p>" },
+            { "q": "Why are my SMS failing even after DLT registration?", "a": "<p>Almost always a scrubbing mismatch, not a network fault. Common causes are content that does not match the approved template, variables not written as {#var#}, promotional content sent under a transactional header, non-whitelisted URLs, or a header–template mismatch.</p>" },
+            { "q": "How should variables be written in a DLT template?", "a": "<p>Every dynamic field must use the exact placeholder {#var#}. Formats like [name], {{otp}} or %s are rejected. The static (fixed) text must match the approved template character-for-character.</p>" },
+            { "q": "Does WhatsApp or RCS need DLT registration?", "a": "<p>No. DLT is specific to SMS. WhatsApp uses Meta verification and template approval; RCS uses Google/operator onboarding. Only SMS requires DLT entity, header and template registration.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

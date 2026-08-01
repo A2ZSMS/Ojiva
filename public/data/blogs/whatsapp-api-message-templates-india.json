@@ -1,0 +1,369 @@
+{
+  "slug": "whatsapp-api-message-templates-india",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-is-template", "label": "What Is a WhatsApp API Message Template?" },
+    { "id": "how-it-works", "label": "How WhatsApp Template Messaging Works" },
+    { "id": "categories", "label": "WhatsApp Template Categories in India" },
+    { "id": "structure", "label": "Template Structure That Gets Replies" },
+    { "id": "naming-writing", "label": "Naming Rules & Approval-Friendly Writing Tips" },
+    { "id": "why-rejected", "label": "Why WhatsApp Templates Get Rejected" },
+    { "id": "examples", "label": "Copy-Paste WhatsApp Template Examples (India)" },
+    { "id": "industry", "label": "WhatsApp Templates by Industry" },
+    { "id": "compliance", "label": "Security, Consent & Compliance (India 2026)" },
+    { "id": "checklist", "label": "Getting Started: Your Quick Checklist" },
+    { "id": "how-ojiva-helps", "label": "How Ojiva AI Helps You Launch WhatsApp Templates" },
+    { "id": "template-vs-session", "label": "Template Messages vs Session Messages" },
+    { "id": "buttons-ctas", "label": "WhatsApp Template Buttons & CTAs Explained" },
+    { "id": "quality-rating", "label": "Quality Rating & Messaging Limits" },
+    { "id": "measuring-performance", "label": "Measuring WhatsApp Template Performance" },
+    { "id": "crm-integration", "label": "Integrating Templates with Your CRM & Website" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "Frequently Asked Questions" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>A WhatsApp API message template</strong> is a pre-approved message format that lets your business send proactive WhatsApp messages — order updates, OTPs, payment reminders, appointment confirmations and offers — to opted-in customers, even when they aren't actively chatting. You write the message once with placeholders like <strong>{{1}}</strong>, get it approved by Meta, and reuse it for thousands of customers with CTA buttons like Pay Now, Track Order or Call. For Indian businesses in 2026, templates are the difference between fast, consistent, compliant messaging and slow manual follow-ups that lose leads. This guide covers how templates work, the 24-hour rule, the three categories (Utility, Authentication, Marketing), naming and approval rules, why templates get rejected, and a copy-paste library you can customise and submit. New to the API itself? Start with <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a>." },
+        { "type": "image", "src": "/image/jun17(1).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "what-is-template",
+      "heading": "What Is a WhatsApp API Message Template?",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp API message templates are the pre-approved, reusable messages businesses use to start conversations on the WhatsApp Business API. Unlike a normal chat reply, a template can be sent proactively to an opted-in customer at any time — which is exactly what makes WhatsApp work for automation, notifications and campaigns at scale." },
+        { "type": "p", "html": "You only fill in the small details (name, order ID, amount, date) via variables; the structure stays fixed and on-brand. If you're shortlisting a provider, run each one through our <a href='/blogs/best-whatsapp-bsp-india/'>WhatsApp BSP checklist</a>, and see the full <a href='/whatsapp/'>WhatsApp Business API</a> platform." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-arrow-repeat", "title": "Reusable at scale:", "desc": "Write once, send to thousands with variables — no retyping the same message." },
+            { "icon": "bi-patch-check-fill", "title": "Pre-approved & compliant:", "desc": "Meta reviews each template, so your proactive messages stay trusted." },
+            { "icon": "bi-lightning-charge-fill", "title": "Triggered automatically:", "desc": "Fire templates from your CRM on events like new lead, payment due or order shipped." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How WhatsApp Template Messaging Works",
+      "blocks": [
+        { "type": "p", "html": "Template messaging runs on a structured, permission-based workflow: get consent, get templates approved, trigger them on real events, and measure the results. Here's the end-to-end flow." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-person-check-fill", "title": "Customer opt-in:", "desc": "Collect consent via website forms, lead ads, checkout, QR codes or inbound chat — clean opt-in means fewer blocks." },
+            { "icon": "bi-pencil-square", "title": "Template drafting:", "desc": "Write one clear intent per message, add variables (<strong>{{1}}</strong>, <strong>{{2}}</strong>) and a CTA button." },
+            { "icon": "bi-patch-check-fill", "title": "Template approval:", "desc": "Submit to Meta; clear, compliant templates clear faster." },
+            { "icon": "bi-lightning-charge-fill", "title": "Automation triggers:", "desc": "Fire from your CRM on events — new lead, missed call, cart abandonment, payment pending, order shipped." },
+            { "icon": "bi-clock-history", "title": "The 24-hour rule:", "desc": "Inside the customer-initiated window you can reply freely; outside it, a template re-opens the conversation." },
+            { "icon": "bi-bar-chart-line-fill", "title": "Analytics & optimisation:", "desc": "Track delivery, reads, replies, button clicks and conversions, then refine." }
+          ]
+        },
+        { "type": "image", "src": "/image/whatsapp(1).webp", "alt": "WhatsApp API message templates for Indian businesses — Ojiva AI" }
+      ]
+    },
+    {
+      "id": "categories",
+      "heading": "WhatsApp Template Categories in India (Utility, Authentication, Marketing)",
+      "blocks": [
+        { "type": "p", "html": "Every template belongs to one category, and the category decides both how it's reviewed and what it costs. Since India moved to per-message pricing on 1 January 2026, marketing messages cost far more than utility or authentication, so correct categorisation directly affects your bill." },
+        {
+          "type": "table",
+          "headers": ["Category", "What it's for", "Example", "India rate (2026)*"],
+          "rows": [
+            ["Utility", "Order/booking updates, reminders, invoices, alerts", "Hi {{1}}, your order {{2}} is shipped. Delivery: {{3}}.", "~₹0.115 / msg"],
+            ["Authentication", "OTPs and verification (login, signup, reset)", "Your OTP is {{1}} (valid {{2}} min).", "~₹0.115 / msg"],
+            ["Marketing", "Offers, launches, festival deals, re-engagement", "Hi {{1}}, get {{2}}% off on {{3}} till {{4}}.", "~₹0.88 / msg"],
+            ["Service", "Replies within the 24-hour window", "Free-form reply", "Free"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-tags-fill", "title": "Categorise correctly to control cost:", "desc": "An order update is Utility (~₹0.115), not Marketing (~₹0.88). Mislabelling overpays. Rates are Meta base; add 18% GST and any BSP markup. For OTPs, see <a href='/otp/'>OTP & 2FA</a>." },
+            { "icon": "bi-exclamation-triangle-fill", "title": "Don't mix intents:", "desc": "An order update must not carry \"Buy 1 Get 1\" — mixing promo into utility risks rejection and reclassification." }
+          ]
+        },
+        { "type": "p", "html": "<small>*Meta base rates for India, indicative. Add 18% GST and your BSP markup; confirm current rates before budgeting.</small>" }
+      ]
+    },
+    {
+      "id": "structure",
+      "heading": "Template Structure That Gets Replies",
+      "blocks": [
+        { "type": "p", "html": "High-performing templates are built for speed: the customer should understand the message in three seconds and know the next step. The structure is simple — Header → Body → Variables → Buttons." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-type-h1", "title": "Header:", "desc": "A short context line (\"Payment Reminder\", \"Order Shipped\"), or a media header (image/video) for marketing." },
+            { "icon": "bi-card-text", "title": "Body:", "desc": "One purpose, short lines, a clear action — pay, confirm, track, visit or reply." },
+            { "icon": "bi-braces", "title": "Variables:", "desc": "Placeholders like <strong>{{1}}</strong>, <strong>{{2}}</strong> insert name, order ID, amount or date, so one template serves thousands." },
+            { "icon": "bi-ui-radios", "title": "Buttons:", "desc": "One-tap CTAs — Pay Now, Track Order, Call Now, Get Directions, Book Now — lift conversions because customers don't type." }
+          ]
+        },
+        { "type": "p", "html": "<strong>Mini example (full structure):</strong>" },
+        { "type": "p", "html": "<strong>Header:</strong> Payment Reminder" },
+        { "type": "p", "html": "<strong>Body:</strong> Hi {{1}}, your payment of ₹{{2}} is due on {{3}}. Tap below to pay now." },
+        { "type": "p", "html": "<strong>Buttons:</strong> Pay Now | Call Support" },
+        { "type": "image", "src": "/image/jun17(2).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "naming-writing",
+      "heading": "Naming Rules & Approval-Friendly Writing Tips",
+      "blocks": [
+        { "type": "p", "html": "Once you have 20+ templates, naming keeps your team fast and your approvals clean. Organise by industry + purpose, and write for clarity. Recommended format: <strong>industry_purpose_action_v1</strong> — for example, <em>realestate_sitevisit_reminder_v1</em>, <em>payments_due_reminder_v1</em>, <em>auth_login_otp_v1</em>." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "One intent per template:", "desc": "Never mix an update with an offer — keep Utility clean and offers in Marketing." },
+            { "icon": "bi-2-circle-fill", "title": "Simple language:", "desc": "Short lines, minimal punctuation, one clear CTA the customer grasps in 3 seconds." },
+            { "icon": "bi-3-circle-fill", "title": "Use variables naturally:", "desc": "<strong>{{1}}</strong> name, <strong>{{2}}</strong> order ID, <strong>{{3}}</strong> amount/date should read smoothly, with no awkward gaps." },
+            { "icon": "bi-4-circle-fill", "title": "Stay brand-safe and factual:", "desc": "Show your brand name and skip risky claims (\"guaranteed\", \"100% returns\") that trigger rejection." }
+          ]
+        },
+        { "type": "image", "src": "/image/whatsapp(2).webp", "alt": "WhatsApp template structure: header, body, variables and buttons" }
+      ]
+    },
+    {
+      "id": "why-rejected",
+      "heading": "Why WhatsApp Templates Get Rejected (and How to Pass)",
+      "blocks": [
+        { "type": "p", "html": "Most rejections come down to a handful of avoidable issues. Fix these before you submit and approvals usually clear quickly." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-question-circle-fill", "title": "Unclear intent:", "desc": "Vague text like \"Important update\" with no detail. Be specific about what and why." },
+            { "icon": "bi-megaphone-fill", "title": "Promo inside utility:", "desc": "Discounts or offers in a utility template get reclassified or rejected — keep them in Marketing." },
+            { "icon": "bi-shield-exclamation", "title": "Risky or misleading claims:", "desc": "\"Guaranteed returns\", \"100% success\", \"no risk\" — keep it factual." },
+            { "icon": "bi-text-paragraph", "title": "Formatting issues:", "desc": "Broken variables, excessive punctuation or placeholder gaps. Keep it clean and consistent." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "examples",
+      "heading": "Copy-Paste WhatsApp Template Examples (India)",
+      "blocks": [
+        { "type": "p", "html": "Here are ready-to-use templates you can customise and submit. Replace placeholders with real details: <strong>{{1}}</strong> = customer name, <strong>{{2}}</strong> = brand/order ID, <strong>{{3}}</strong> = amount/location, <strong>{{4}}</strong> = date/time." },
+        { "type": "h", "level": 3, "text": "Utility Templates (Updates & Reminders)" },
+        { "type": "p", "html": "<strong>Payment reminder</strong> <span class='text-muted'>(Utility)</span>" },
+        { "type": "p", "html": "Hi {{1}}, this is a reminder from {{2}}. Your payment of ₹{{3}} is due on {{4}}. Tap below to pay now or call us for help." },
+        { "type": "p", "html": "<small>Buttons: Pay Now | Call Support</small>" },
+        { "type": "p", "html": "<strong>Appointment reminder</strong> <span class='text-muted'>(Utility)</span>" },
+        { "type": "p", "html": "Hi {{1}}, your appointment is scheduled on {{2}} at {{3}}. Reply 1 to confirm or 2 to reschedule." },
+        { "type": "p", "html": "<strong>Order shipped</strong> <span class='text-muted'>(Utility)</span>" },
+        { "type": "p", "html": "Hello {{1}}, your order {{2}} has been shipped. Expected delivery: {{3}}. Track your order below." },
+        { "type": "p", "html": "<small>Button: Track Order</small>" },
+        { "type": "h", "level": 3, "text": "Authentication (OTP) Templates" },
+        { "type": "p", "html": "<strong>Login OTP</strong> <span class='text-muted'>(Authentication)</span>" },
+        { "type": "p", "html": "Your OTP for login is {{1}}. Valid for {{2}} minutes. Do not share it with anyone." },
+        { "type": "p", "html": "<strong>Password reset OTP</strong> <span class='text-muted'>(Authentication)</span>" },
+        { "type": "p", "html": "Use OTP {{1}} to reset your password. Expires in {{2}} minutes. If you didn't request this, please ignore." },
+        { "type": "h", "level": 3, "text": "Marketing Templates (Offers & Re-engagement)" },
+        { "type": "p", "html": "<strong>Festival offer</strong> <span class='text-muted'>(Marketing)</span>" },
+        { "type": "p", "html": "Hi {{1}} 👋 Festival offer is live! Get {{2}}% off on {{3}}. Valid till {{4}}. Tap below to claim." },
+        { "type": "p", "html": "<small>Button: Claim Offer</small>" },
+        { "type": "p", "html": "<strong>Re-engagement</strong> <span class='text-muted'>(Marketing)</span>" },
+        { "type": "p", "html": "Hi {{1}}, quick check-in from {{2}}. Do you still need help with {{3}}? Reply YES and we'll share the best options." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-lightbulb-fill", "title": "Start with 5 essentials:", "desc": "OTP, payment reminder, appointment reminder, order update, and one re-engagement message — then expand by industry." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "heading": "WhatsApp Templates by Industry",
+      "blocks": [
+        { "type": "p", "html": "Different industries need different messaging. Start with 8–12 templates per vertical — lead follow-up, reminder, update, payment and feedback — then expand. Here are India use cases with examples." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-house-door-fill", "title": "Real Estate:", "desc": "New-lead follow-up, site-visit confirmation, location sharing, document checklist, post-visit follow-up. See <a href='/solutions/real-estate/'>Real Estate</a>." },
+            { "icon": "bi-cart-check-fill", "title": "E-commerce / D2C:", "desc": "Order confirmation, shipping and delivery updates, COD verification, returns, feedback. See <a href='/solutions/ecommerce-retail/'>E-commerce & Retail</a>." },
+            { "icon": "bi-hospital-fill", "title": "Healthcare:", "desc": "Appointment confirmation, reminders, \"report ready\" alerts, follow-up, review request. See <a href='/solutions/healthcare/'>Healthcare</a>." },
+            { "icon": "bi-mortarboard-fill", "title": "Education:", "desc": "Demo-class reminder, admission follow-up, fee-due reminder, exam schedule, parent notifications. See <a href='/solutions/education/'>Education</a>." },
+            { "icon": "bi-airplane-fill", "title": "Travel & Hospitality:", "desc": "Booking confirmation, payment reminders, itinerary, ticket updates, post-trip feedback. See <a href='/solutions/travel-hospitality/'>Travel & Hospitality</a>." },
+            { "icon": "bi-bank", "title": "Banking & Finance:", "desc": "Transaction alerts, EMI and renewal reminders, KYC nudges, payment receipts. See <a href='/solutions/banking-finance/'>Banking & Finance</a>." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "heading": "Security, Consent & Compliance (India 2026)",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp is permission-based, and good compliance keeps your sender rating healthy and your delivery high. In India, that means clear opt-in, controlled frequency, correct categorisation, and DPDP-aligned data handling." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-person-check-fill", "title": "Collect clear opt-in:", "desc": "Forms, lead ads, checkout, QR or inbound chat — consent reduces blocks and builds trust." },
+            { "icon": "bi-sliders", "title": "Control frequency:", "desc": "Use event triggers, not repeated blasts, so customers don't block you." },
+            { "icon": "bi-tags-fill", "title": "Use the right category:", "desc": "Utility for updates, Authentication for OTPs, Marketing for offers — never mix." },
+            { "icon": "bi-box-arrow-right", "title": "Easy opt-out + DPDP:", "desc": "Offer \"Reply STOP to opt out\", and handle data with consent records and AES-256 encryption." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun17(3).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "checklist",
+      "heading": "Getting Started: Your Quick Checklist",
+      "blocks": [
+        { "type": "p", "html": "Launching is easier when you plan the workflow first, then build templates around high-intent actions." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Define your goal:", "desc": "Lead nurturing, payments, support, reminders or re-engagement." },
+            { "icon": "bi-2-circle-fill", "title": "Plan opt-in points:", "desc": "Website forms, missed-call flow, QR, checkout or lead ads." },
+            { "icon": "bi-3-circle-fill", "title": "Create core templates:", "desc": "OTP, lead follow-up, reminders, order updates, payment messages." },
+            { "icon": "bi-4-circle-fill", "title": "Integrate your CRM:", "desc": "Trigger messages on events (new lead, invoice generated, booking confirmed)." },
+            { "icon": "bi-5-circle-fill", "title": "Track & optimise:", "desc": "Monitor replies, clicks and conversions; refine copy by performance." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-ojiva-helps",
+      "heading": "How Ojiva AI Helps You Launch WhatsApp Templates",
+      "blocks": [
+        { "type": "p", "html": "As an official Meta WhatsApp Business Solution Provider, Ojiva AI gets Indian businesses live faster — with template planning, approval support, automation and India-based help." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-card-checklist", "title": "End-to-end setup:", "desc": "Onboarding, verification, and template drafting and approval, managed for you." },
+            { "icon": "bi-robot", "title": "Automation + chatbot:", "desc": "Trigger templates on real events and pair them with a 24/7 <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a>." },
+            { "icon": "bi-diagram-3-fill", "title": "CRM integration:", "desc": "200+ connectors plus REST API and webhooks to fire templates automatically." },
+            { "icon": "bi-headset", "title": "Support & optimisation:", "desc": "India-based team to improve approval rates, cut blocks and scale — <a href='/book-demo/'>book a demo</a>." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "template-vs-session",
+      "heading": "WhatsApp Template Messages vs Session Messages: What's the Difference",
+      "blocks": [
+        { "type": "p", "html": "A common point of confusion is the difference between template messages and session (free-form) messages. Both are part of WhatsApp Business API, but they follow different rules — and getting this right keeps you compliant and controls your cost." },
+        { "type": "p", "html": "In short: templates are how you start or re-open a conversation; session messages are what you send once the customer is already talking to you." },
+        {
+          "type": "table",
+          "headers": ["Type", "When you can send it", "Format", "Cost"],
+          "rows": [
+            ["Template message", "Anytime, to opted-in contacts (to start or re-open)", "Pre-approved format only", "Paid per message, by category"],
+            ["Session (free-form)", "Only within 24 hrs of the customer's last message", "Free-form text, media, replies", "Free (within the window)"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-send-fill", "title": "Templates start the conversation:", "desc": "Use an approved template to reach a customer proactively or after the 24-hour window closes." },
+            { "icon": "bi-chat-dots-fill", "title": "Session messages continue it:", "desc": "Once a customer replies, you can chat freely (text, media, buttons) for 24 hours — no template needed." },
+            { "icon": "bi-clock-history", "title": "The window resets:", "desc": "Every new customer message restarts the 24-hour window, so timely replies keep messaging free-form." },
+            { "icon": "bi-currency-rupee", "title": "Plan for cost:", "desc": "Templates are billed by category; session replies inside the window are free — design flows that keep conversations active." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buttons-ctas",
+      "heading": "WhatsApp Template Buttons & CTAs Explained",
+      "blocks": [
+        { "type": "p", "html": "Buttons are what turn a template from a notification into a conversion. WhatsApp supports several button types, and choosing the right one for each message lifts response rates because customers act in one tap instead of typing." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-reply-fill", "title": "Quick reply buttons:", "desc": "Pre-set replies like \"Confirm\", \"Reschedule\" or \"Yes\" — ideal for appointments, confirmations and simple choices." },
+            { "icon": "bi-box-arrow-up-right", "title": "Call-to-action (URL) buttons:", "desc": "Send customers to a payment link, tracking page or booking form — great for \"Pay Now\", \"Track Order\" or \"Book Now\"." },
+            { "icon": "bi-telephone-fill", "title": "Call buttons:", "desc": "A one-tap dial button for support or sales — useful for high-value or urgent conversations." },
+            { "icon": "bi-clipboard-check-fill", "title": "Copy-code buttons:", "desc": "Used in authentication templates so customers can copy their OTP in one tap, reducing errors." }
+          ]
+        },
+        { "type": "p", "html": "For multi-step interactions — capturing details, bookings or product choices inside the chat — WhatsApp Flows let you build form-like journeys; pair them with a <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a> for fully automated conversations." }
+      ]
+    },
+    {
+      "id": "quality-rating",
+      "heading": "WhatsApp Quality Rating & Messaging Limits Explained",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp scores every business number with a quality rating based on how customers react to your messages. A healthy rating keeps your messaging limits high; a poor one can throttle how many customers you can reach. For high-volume Indian senders, protecting this rating is as important as the message itself." },
+        { "type": "p", "html": "Your number also sits in a messaging tier that caps how many business-initiated conversations you can start in 24 hours. Good quality and consistent volume unlock higher tiers automatically." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-check", "title": "Quality rating (green / yellow / red):", "desc": "Based on blocks and reports — green keeps you scaling, red can pause your messaging." },
+            { "icon": "bi-bar-chart-steps", "title": "Messaging tiers:", "desc": "Limits step up (1K → 10K → 100K → unlimited business-initiated conversations) as quality and volume grow." },
+            { "icon": "bi-hand-thumbs-down-fill", "title": "What hurts your rating:", "desc": "Too many blocks or reports, irrelevant messaging, weak opt-in, or over-messaging." },
+            { "icon": "bi-graph-up-arrow", "title": "How to protect it:", "desc": "Message only opted-in users, keep content relevant, control frequency, and use the right template category." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measuring-performance",
+      "heading": "Measuring WhatsApp Template Performance",
+      "blocks": [
+        { "type": "p", "html": "Templates are measurable end to end, so you can move from guesswork to optimisation. Track these metrics from launch and refine copy, timing and targeting over time." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-send-check-fill", "title": "Delivery rate:", "desc": "The share of messages successfully delivered — your baseline for list quality and routing health." },
+            { "icon": "bi-eye-fill", "title": "Read rate:", "desc": "How many recipients opened the message — a strong signal of timing and relevance." },
+            { "icon": "bi-hand-index-thumb", "title": "Button / click rate:", "desc": "Taps on CTAs and quick replies — the clearest sign of intent and engagement." },
+            { "icon": "bi-graph-up-arrow", "title": "Conversion & opt-out:", "desc": "Track completed actions (payments, bookings, confirmations) and watch opt-outs to keep messaging welcome." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crm-integration",
+      "heading": "Integrating WhatsApp Templates with Your CRM & Website",
+      "blocks": [
+        { "type": "p", "html": "The real power of templates shows when they fire automatically on customer events — no one typing, no follow-up missed. Connecting WhatsApp to your CRM, store and website turns templates into an always-on workflow." },
+        { "type": "p", "html": "With Ojiva AI's <a href='/platform/'>platform</a>, you can trigger the right template from any event using native connectors, REST API and webhooks." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-diagram-3-fill", "title": "Event-based triggers:", "desc": "Fire a template on new lead, abandoned cart, payment due, booking confirmed or order shipped." },
+            { "icon": "bi-plug-fill", "title": "CRM & store connectors:", "desc": "Connect tools like Shopify, Zoho, Salesforce and HubSpot, or your own app via REST API." },
+            { "icon": "bi-arrow-left-right", "title": "Two-way sync & webhooks:", "desc": "Capture replies and button taps back into your CRM to update records and route leads." },
+            { "icon": "bi-robot", "title": "Add a chatbot for handover:", "desc": "Pair templates with a <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a> for instant qualification, then hand off to an agent." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp API message templates let Indian businesses communicate faster, sell smarter and support customers at scale — without manual, inconsistent follow-ups. Start with a core set (OTP, follow-ups, reminders, updates), keep one intent per category, and optimise using real engagement signals." },
+        { "type": "p", "html": "Want a faster go-live with approvals, automation and best-practice messaging? Explore Ojiva AI's <a href='/whatsapp/'>WhatsApp Business API</a>, and if you're still evaluating providers, run them through our <a href='/blogs/best-whatsapp-bsp-india/'>WhatsApp BSP checklist</a>." },
+        { "type": "p", "html": "<em>By Ananth · Updated 17 June 2026</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: WhatsApp Business API Templates",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is a WhatsApp API message template?", "a": "<p>A WhatsApp API message template is a pre-approved, reusable message format for sending proactive WhatsApp messages such as OTPs, order updates, reminders and offers to opted-in customers, with variables and CTA buttons.</p>" },
+            { "q": "What is the 24-hour conversation rule?", "a": "<p>When a customer messages you, you can reply freely for 24 hours. Outside that window, you must use an approved template to start or re-open the conversation.</p>" },
+            { "q": "What is the difference between Utility, Authentication and Marketing templates?", "a": "<p>Utility templates are operational updates such as orders, payments and appointments. Authentication templates are OTPs and verification. Marketing templates are offers and re-engagement. The category affects both approval and per-message cost.</p>" },
+            { "q": "Why do WhatsApp templates get rejected?", "a": "<p>Common causes are unclear intent, promotional content inside a utility template, risky or misleading claims, and formatting or variable errors. Keep copy simple, factual and single-intent.</p>" },
+            { "q": "How long does WhatsApp template approval take?", "a": "<p>Clear, compliant templates are often approved within a few minutes to 24 hours. Vague or non-compliant templates take longer or get rejected.</p>" },
+            { "q": "Can I edit a WhatsApp template after it's approved?", "a": "<p>You can edit templates, but changes usually require re-approval before the updated version can be sent. Use versioned names such as _v1 and _v2 to stay organised.</p>" },
+            { "q": "How much do WhatsApp template messages cost in India?", "a": "<p>Pricing is per delivered message and varies by category. Marketing messages cost more than utility or authentication, and service replies inside the 24-hour window are free. Add 18% GST and any BSP markup. Contact Ojiva AI for current rates.</p>" },
+            { "q": "Is Ojiva AI a verified WhatsApp BSP?", "a": "<p>Yes. Ojiva AI is an official Meta WhatsApp Business Solution Provider for India, offering the WhatsApp Business API with template planning and approval, a chatbot, CRM integration and India-based support.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

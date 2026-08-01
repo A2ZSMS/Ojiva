@@ -1,0 +1,307 @@
+{
+  "slug": "ai-voice-agent-vs-ivr",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-is-a-bsp", "label": "What Is a WhatsApp BSP?" },
+    { "id": "bsp-vs-tech-provider", "label": "BSP vs Tech Provider" },
+    { "id": "checklist", "label": "The 2026 BSP Buyer's Checklist" },
+    { "id": "pricing-transparency", "label": "Pricing Transparency" },
+    { "id": "red-flags", "label": "Red Flags to Avoid" },
+    { "id": "ojiva-measures-up", "label": "How Ojiva AI Measures Up" },
+    { "id": "why-ojiva-voice", "label": "Why Ojiva AI for Voice Calls" },
+    { "id": "what-to-look-for", "label": "What to Look For in a Provider" },
+    { "id": "omnichannel", "label": "The Omnichannel Advantage" },
+    { "id": "by-industry", "label": "AI Voice Agent vs IVR by Industry" },
+    { "id": "how-it-works", "label": "How an AI Voice Agent Works" },
+    { "id": "myths-debunked", "label": "5 Myths Debunked" },
+    { "id": "metrics", "label": "Metrics That Prove ROI" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "Frequently Asked Questions" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>A WhatsApp BSP (Business Solution Provider)</strong> is a company officially vetted by Meta to give businesses access to the WhatsApp Business API, with tooling for onboarding, automation, analytics and support on top. Choosing the right one in 2026 comes down to seven things: <strong>pricing transparency, per-message markup, support SLA, India business-hours coverage, integrations, official BSP status, and security/compliance.</strong> This checklist walks each one. The stakes are real: your BSP controls your per-message cost, your uptime, and how fast you can launch. A cheap-looking provider with a hidden markup or weekend-only support can cost more than a transparent one. Use the checklist below on every provider you shortlist — and yes, on Ojiva AI too. If you are still deciding between the free app and the API in the first place, start with <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a>." }
+      ]
+    },
+    {
+      "id": "what-is-a-bsp",
+      "heading": "What Is a WhatsApp BSP (Business Solution Provider)?",
+      "blocks": [
+        { "type": "p", "html": "You cannot buy the WhatsApp Business API directly from Meta. Instead, Meta authorises Business Solution Providers to onboard businesses, provision phone numbers, get display names and templates approved, and deliver messages through the platform. The BSP is also where you get the dashboard, chatbot, team inbox and integrations that make the API usable day to day." },
+        { "type": "p", "html": "In short, the BSP is your gateway to WhatsApp — and the quality of that gateway determines your cost, reliability and speed to launch." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Meta-vetted access:", "desc": "Official BSPs are approved by Meta to provide WhatsApp Business API access and handle verification." },
+            { "icon": "bi-tools", "title": "The tooling layer:", "desc": "Dashboard, automation, chatbot, analytics and CRM integrations are the BSP's value on top of raw API access." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun8(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "bsp-vs-tech-provider",
+      "heading": "BSP vs Tech Provider: What's the Difference?",
+      "blocks": [
+        { "type": "p", "html": "In 2026 you will see two labels: \"BSP\" and \"tech provider.\" An official BSP has a direct, vetted partnership with Meta. A tech provider builds software on top of the API and sometimes resells through a BSP. Both can work, but the distinction matters for support and reliability — with an official BSP, there is no extra middle layer between you and the platform." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-link-45deg", "title": "Ask directly:", "desc": "\"Are you an official Meta BSP, or do you resell through one?\" The answer tells you who actually owns your reliability and support." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "heading": "The 2026 WhatsApp BSP Buyer's Checklist",
+      "blocks": [
+        { "type": "p", "html": "Score every shortlisted provider against these seven criteria. Weight them by what matters most for your use case — a high-volume marketer cares most about markup; a bank cares most about compliance and uptime." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Pricing transparency:", "desc": "Can they show Meta's base rate and their own markup separately, in INR, with GST stated? Bundled, vague pricing usually hides a high markup." },
+            { "icon": "bi-2-circle-fill", "title": "Per-message markup:", "desc": "What percentage do they add over Meta rates — and is there a platform fee on top? Compare the all-in cost per marketing and utility message, not the headline." },
+            { "icon": "bi-3-circle-fill", "title": "Support SLA:", "desc": "Is there a written response-time SLA and a named contact, or only email tickets? When a campaign or OTP flow breaks, response time is revenue." },
+            { "icon": "bi-clock-fill", "title": "India business-hours coverage:", "desc": "Is support in your timezone and language? An India-based team beats an overseas helpdesk when you need help at 11 a.m. IST." },
+            { "icon": "bi-diagram-3-fill", "title": "Integrations:", "desc": "Native connectors for your CRM and store — Shopify, Zoho, Salesforce, HubSpot — plus a clean REST API and webhooks. Integration gaps become manual work forever." },
+            { "icon": "bi-shield-lock-fill", "title": "Security & compliance:", "desc": "AES-256 encryption, DPDP Act and GDPR alignment, and recognised standards (SOC 2, ISO 27001). Essential for banking, healthcare and any regulated data." },
+            { "icon": "bi-graph-up-arrow", "title": "Reliability & scale:", "desc": "A real uptime SLA (99.9%+), proven delivery, and the ability to scale messaging tiers as you grow without re-onboarding." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing-transparency",
+      "heading": "Pricing Transparency: How to Read a BSP Quote (2026)",
+      "blocks": [
+        { "type": "p", "html": "Since India moved to per-message pricing on 1 January 2026, a BSP quote should break into three parts: Meta's rate, the BSP's markup, and GST. If a provider cannot show you this breakdown, treat it as a red flag." },
+        {
+          "type": "table",
+          "headers": ["Cost component", "What it is", "Typical (India, 2026)"],
+          "rows": [
+            ["<b>Meta base rate — Marketing</b>", "Set by Meta, per message", "~₹0.8631 / message"],
+            ["<b>Meta base rate — Utility / Auth</b>", "Order updates, OTPs", "~₹0.115 / message"],
+            ["<b>BSP markup</b>", "Provider's per-message or platform fee", "15–35% (or fixed fee)"],
+            ["<b>GST</b>", "Tax on the total", "18%"],
+            ["<b>Service (user-initiated)</b>", "Replies in 24-hr window", "Free"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-calculator-fill", "title": "Compare all-in, not headline:", "desc": "A provider with a low platform fee but a 35% message markup can cost more than one with a small fee and 15% markup. Model your real monthly volume per category." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red-flags",
+      "heading": "Red Flags to Avoid",
+      "blocks": [
+        { "type": "p", "html": "These warning signs separate a partner you can scale on from one you will regret." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-eye-slash-fill", "title": "Opaque pricing:", "desc": "Won't separate Meta rate from markup, or quotes only \"per conversation\" under the old model." },
+            { "icon": "bi-headset", "title": "No real support:", "desc": "Ticket-only support, no SLA, no India-hours coverage, no named contact for enterprise accounts." },
+            { "icon": "bi-plug", "title": "Integration gaps:", "desc": "No native connector for your CRM or store, and a thin or undocumented API." },
+            { "icon": "bi-exclamation-triangle-fill", "title": "Vague on BSP status or compliance:", "desc": "Can't confirm official Meta BSP status, or dodges questions on DPDP, encryption and data handling." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-measures-up",
+      "heading": "How Ojiva AI Measures Up",
+      "blocks": [
+        { "type": "p", "html": "In the interest of practising what this checklist preaches, here is how Ojiva AI maps to it — so you can score us the same way you score anyone else." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Official Meta BSP:", "desc": "Ojiva AI is an official Meta WhatsApp Business Solution Provider for India — see our <a href='/whatsapp/'>WhatsApp Business API</a> page." },
+            { "icon": "bi-shield-lock-fill", "title": "Security & compliance:", "desc": "AES-256 encryption, DPDP Act and GDPR alignment, SOC 2 and ISO 27001 practices, and DLT-registered SMS on the same platform." },
+            { "icon": "bi-diagram-3-fill", "title": "Integrations:", "desc": "200+ native connectors plus REST API and webhooks, with a built-in <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a> and multi-agent inbox." },
+            { "icon": "bi-clock-fill", "title": "India support & go-live:", "desc": "India-based support (Mon–Sat, business hours IST), a 99.9% uptime SLA, and a typical 48-hour go-live." },
+            { "icon": "bi-grid-1x2-fill", "title": "One stack, many channels:", "desc": "WhatsApp sits alongside <a href='/sms/'>SMS</a>, <a href='/rcs/'>RCS</a>, <a href='/voice/'>voice</a> and <a href='/otp/'>OTP</a>, so you can add channels without a new vendor." },
+            { "icon": "bi-currency-rupee", "title": "[Ojiva: state your exact markup % or platform fee here for full pricing transparency.]", "desc": "Publishing the number is the strongest possible signal on the very first checklist item." }
+          ]
+        },
+        { "type": "p", "html": "We will not claim to be the single best BSP for every business — the right choice depends on your use case and volume. But on this checklist, Ojiva AI is built to score well across all seven criteria. <a href='/book-demo/'>Book a demo</a> and bring this checklist with you." },
+        { "type": "image", "src": "/image/jun8(3).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "why-ojiva-voice",
+      "heading": "Why Ojiva AI for Voice Calls",
+      "blocks": [
+        { "type": "p", "html": "Most vendors sell you either an IVR or an AI bot, and you discover the gaps later. Ojiva AI runs both on one platform, so you start where you are and migrate at your pace — without changing vendors, numbers or integrations." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-stack", "title": "IVR, OBD and AI voice bots together:", "desc": "Ojiva AI's <a href='/voice/'>Bulk Voice Call service</a> covers interactive voice response, outbound dialing and conversational AI agents on a single platform — keep a thin IVR layer and let the AI handle the conversational 80%." },
+            { "icon": "bi-translate", "title": "Built for India's languages:", "desc": "Hindi, English and major regional languages including Tamil, Telugu, Kannada and Marathi, with mid-call switching based on how your customer speaks." },
+            { "icon": "bi-diagram-2-fill", "title": "Connected to your systems:", "desc": "The agent reads and writes to your CRM, order or ticketing tool, so it resolves calls instead of just routing them — and hands off to a human with full context when needed." },
+            { "icon": "bi-shield-check", "title": "Compliant by design:", "desc": "TRAI/TCCCPR-aligned voice routing, consent capture and opt-out, plus AES-256 encryption and India data handling under the DPDP Act, 2023." },
+            { "icon": "bi-chat-dots-fill", "title": "One platform, every channel:", "desc": "Voice works alongside <a href='/otp/'>OTP & 2FA</a>, <a href='/whatsapp/'>WhatsApp Business API</a>, RCS and SMS — so a dropped call always has a fallback and your messaging stays consistent." },
+            { "icon": "bi-rocket-takeoff-fill", "title": "Fast go-live, expert help:", "desc": "A focused use case launches in days, and our team maps your highest-ROI call flow first rather than boiling the ocean." },
+            { "icon": "bi-patch-check-fill", "title": "[Ojiva: insert one verified proof point — e.g. clients served, calls handled per month, or average resolution rate.]", "desc": "A number you can prove is your strongest trust signal here." }
+          ]
+        },
+        { "type": "p", "html": "Want to see it on your own call flow? <a href='/book-demo/'>Book a demo</a> and we will show IVR, OBD and an AI voice agent side by side." }
+      ]
+    },
+    {
+      "id": "what-to-look-for",
+      "heading": "What to Look For in an AI Voice Agent Provider",
+      "blocks": [
+        { "type": "p", "html": "Not all \"AI voice\" is equal. Before you sign, check the vendor against this list — gaps here are where projects quietly fail." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-check2-circle", "title": "True multilingual, not just English:", "desc": "Native Hindi and regional support with mid-call switching — essential for a pan-India audience." },
+            { "icon": "bi-check2-circle", "title": "Low latency & barge-in:", "desc": "Sub-second replies and the ability to interrupt. Anything slower feels like a bot and drives callers to mash zero." },
+            { "icon": "bi-check2-circle", "title": "Deep integrations:", "desc": "CRM, order and ticketing connectivity so the agent resolves, not just talks. Ask for read <em>and</em> write access." },
+            { "icon": "bi-check2-circle", "title": "Clean human handoff:", "desc": "Context-preserving transfer so customers never repeat themselves on escalation." },
+            { "icon": "bi-check2-circle", "title": "Compliance & data handling:", "desc": "TRAI/TCCCPR routing, consent and opt-out, DPDP-aligned storage and encryption." },
+            { "icon": "bi-check2-circle", "title": "Live analytics & omnichannel:", "desc": "Resolution, cost and CSAT you can see, plus SMS/WhatsApp fallback on one platform — exactly what Ojiva AI's <a href='/platform/'>platform</a> provides." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omnichannel",
+      "heading": "Voice Alone Isn't Enough: The Omnichannel Advantage",
+      "blocks": [
+        { "type": "p", "html": "A call rarely lives in isolation. The customer who didn't pick up needs a WhatsApp nudge; the one who confirmed an order wants an SMS receipt. Treating voice as a standalone channel leaves money on the table — and an IVR has no way to bridge the gap." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-arrow-left-right", "title": "Fallback that recovers revenue:", "desc": "When a voice call drops or goes unanswered, an automatic <a href='/whatsapp/'>WhatsApp</a> or SMS follow-up keeps the conversation alive instead of becoming a lost order." },
+            { "icon": "bi-link-45deg", "title": "Right message, right channel:", "desc": "Use voice for urgent or complex queries, <a href='/otp/'>OTP</a> for verification, and WhatsApp/RCS for receipts and links — see <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a> for the trade-offs." },
+            { "icon": "bi-people-fill", "title": "One context across channels:", "desc": "When voice, WhatsApp and SMS share the same customer history, the AI agent never makes the caller start over — the single biggest CX win an IVR can't offer." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "by-industry",
+      "heading": "AI Voice Agent vs IVR by Industry in India",
+      "blocks": [
+        { "type": "p", "html": "The right choice shifts by sector. The more your calls are repetitive, high-volume and multilingual, the more an AI voice agent out-earns a menu tree. Here is how it plays out across the industries that call most in India." },
+        {
+          "type": "table",
+          "headers": ["Industry", "Highest-volume calls", "Better fit"],
+          "rows": [
+            ["<b>Banking & NBFC</b>", "Balance, EMI & payment reminders, OTP confirmation", "AI voice agent (with thin IVR for compliance scripts)"],
+            ["<b>E-commerce & D2C</b>", "Order status, returns, COD confirmation", "AI voice agent"],
+            ["<b>Healthcare</b>", "Appointment booking, reminders, report status", "AI voice agent"],
+            ["<b>Education & EdTech</b>", "Admission queries, fee reminders, results-day spikes", "AI voice agent"],
+            ["<b>Real estate</b>", "Lead qualification, site-visit booking, follow-ups", "AI voice agent"],
+            ["<b>Logistics</b>", "Delivery scheduling, address confirmation, NDR calls", "AI voice agent"],
+            ["<b>Govt / utility helpline</b>", "Pure routing to one of a few fixed departments", "Simple IVR (or hybrid)"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-bank", "title": "Regulated sectors lean hybrid:", "desc": "Banking and insurance keep a scripted IVR layer for mandated wording, then let the AI agent handle the conversational 80% — collections, reminders and status. Pair it with <a href='/otp/'>OTP & 2FA</a> for secure verification." },
+            { "icon": "bi-cart-check-fill", "title": "High-spike sectors gain most:", "desc": "E-commerce, EdTech and ticketing face festive, results-day and sale-day surges that no agent roster can match — AI voice handles unlimited concurrency at near-zero marginal cost." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How an AI Voice Agent Works (And Why It Doesn't Sound Robotic)",
+      "blocks": [
+        { "type": "p", "html": "An AI voice agent is not one model — it is a fast pipeline of three stages wrapped around your business data. Understanding it explains why modern agents feel natural and why they resolve, rather than just route." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Speech-to-text (it listens):", "desc": "The caller's speech is transcribed in real time, tuned for Indian accents and Hinglish code-switching — not just clean studio English." },
+            { "icon": "bi-2-circle-fill", "title": "LLM understands intent (it thinks):", "desc": "A language model works out what the caller actually wants and checks your CRM or order system, so it answers with real data instead of a canned prompt." },
+            { "icon": "bi-3-circle-fill", "title": "Text-to-speech (it speaks):", "desc": "Neural voices reply in a natural human tone — the reason today's agents no longer sound like the flat IVR recordings of a decade ago." },
+            { "icon": "bi-lightning-charge-fill", "title": "Sub-second latency & barge-in:", "desc": "The full loop runs fast enough to feel live, and callers can interrupt mid-sentence — exactly like a real conversation, impossible on a menu tree." }
+          ]
+        },
+        { "type": "p", "html": "The result: the caller never hears \"press 1.\" They state the problem, the agent resolves it against your live systems, and only genuine edge cases reach a human — with full context attached." }
+      ]
+    },
+    {
+      "id": "myths-debunked",
+      "heading": "5 Myths About Replacing IVR with AI Voice — Debunked",
+      "blocks": [
+        { "type": "p", "html": "Most hesitation around dropping the menu tree comes from outdated assumptions. Here are the five we hear most from Indian businesses, and the reality in 2026." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-x-circle-fill", "title": "\"It sounds robotic.\"", "desc": "Outdated. Neural voices are natural and conversational — most callers cannot tell in routine support calls. The robotic memory is of old IVR recordings." },
+            { "icon": "bi-x-circle-fill", "title": "\"Customers hate bots.\"", "desc": "They hate menus and hold queues — the very things IVR creates (~67% abandon them). Callers reward a fast, correct answer, whoever gives it." },
+            { "icon": "bi-x-circle-fill", "title": "\"It can't handle Indian accents or Hinglish.\"", "desc": "Modern agents are trained on Hindi, English and regional languages and switch mid-call — a rigid IVR menu cannot do this at all." },
+            { "icon": "bi-x-circle-fill", "title": "\"It's only for big enterprises.\"", "desc": "At ₹2–6 per minute and pay-as-you-go, a single high-volume flow can go live in days — accessible to SMBs, not just large contact centres." },
+            { "icon": "bi-x-circle-fill", "title": "\"It removes human control.\"", "desc": "The opposite. You set the handoff rules; the agent escalates complex calls to your team with full context, so humans handle the 20% that truly needs them." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "heading": "The Metrics That Prove ROI After You Switch",
+      "blocks": [
+        { "type": "p", "html": "Run the AI agent and the IVR side by side, then let these numbers decide. Track them on your own call data — a proven internal figure beats any industry stat." },
+        {
+          "type": "table",
+          "headers": ["Metric", "What it tells you", "Goal"],
+          "rows": [
+            ["<b>Containment / resolution rate</b>", "% of calls finished without a human", "Up (target 60–80%)"],
+            ["<b>Cost per resolved contact</b>", "True cost once agent time is counted", "Down (toward ₹12–25)"],
+            ["<b>Abandonment rate</b>", "Callers who hang up before resolution", "Down (from the ~67% IVR norm)"],
+            ["<b>Average handle time (AHT)</b>", "How long a call takes end to end", "Down"],
+            ["<b>First-contact resolution (FCR)</b>", "Solved on the first call, no callback", "Up"],
+            ["<b>CSAT</b>", "Customer satisfaction post-call", "Up or flat"],
+            ["<b>Escalation rate</b>", "% handed to a human agent", "Stable & clean"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-graph-up-arrow", "title": "Watch the pair that matters most:", "desc": "Containment rate up and cost per resolved contact down together is the signal your switch is paying back — usually visible within the first month." },
+            { "icon": "bi-clipboard-data-fill", "title": "Don't ignore CSAT:", "desc": "If resolution rises but satisfaction dips, tighten the handoff rule. A good agent improves both at once. Ojiva AI's <a href='/platform/'>platform</a> reports these live so you measure, not guess." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "The \"best\" WhatsApp BSP in India is not a universal title — it is the provider that scores highest on the criteria that matter for your business. Insist on transparent INR pricing with the markup shown, a written support SLA with India-hours coverage, the integrations you actually need, official Meta BSP status, and real security and compliance. Run every shortlisted provider through this checklist and the decision makes itself." },
+        { "type": "p", "html": "Ready to evaluate one? Start with Ojiva AI's <a href='/whatsapp/'>WhatsApp Business API</a>, and if you also send text messages, pair it with our <a href='/blogs/dlt-registration-bulk-sms-india/'>DLT-compliant bulk SMS</a> on the same platform." },
+        { "type": "p", "html": "<em>By Ananth · Updated 08 June 2026</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: Choosing a WhatsApp BSP in India",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is a WhatsApp BSP?", "a": "<p>A WhatsApp Business Solution Provider (BSP) is a company officially vetted by Meta to give businesses access to the WhatsApp Business API, along with tooling for onboarding, automation, analytics, compliance and support.</p>" },
+            { "q": "How do I choose the best WhatsApp BSP in India?", "a": "<p>Score each provider on pricing transparency, per-message markup, support SLA and India business-hours coverage, CRM and e-commerce integrations, official Meta BSP status, security and DPDP compliance, and delivery reliability. The best BSP is the one that scores well on the criteria that matter most for your use case.</p>" },
+            { "q": "What is a typical WhatsApp BSP markup in India?", "a": "<p>Most BSPs add a 15–35% per-message markup over Meta's base rates, or charge a fixed monthly platform fee, plus 18% GST. A transparent BSP shows the Meta rate and its own markup separately rather than bundling them.</p>" },
+            { "q": "What is the difference between a BSP and a tech provider?", "a": "<p>An official BSP has a direct, vetted partnership with Meta to provide WhatsApp Business API access. A tech provider builds tools on top of the API, sometimes reselling through a BSP. For reliability and direct support, an official BSP is usually the safer choice.</p>" },
+            { "q": "How do I verify a WhatsApp BSP is official?", "a": "<p>Check Meta's public Business Partner directory, confirm the provider verifies your business in Meta Business Manager, and ask for proof of official BSP status before signing.</p>" },
+            { "q": "Does a WhatsApp BSP handle DLT registration?", "a": "<p>WhatsApp does not use DLT — that is for SMS. A good full-stack provider will, however, handle DLT for any SMS you send alongside WhatsApp, and manage Meta verification and template approval for WhatsApp.</p>" },
+            { "q": "Is Ojiva AI a verified WhatsApp BSP?", "a": "<p>Yes. Ojiva AI is an official Meta WhatsApp Business Solution Provider for India, offering the WhatsApp Business API with a chatbot, multi-agent inbox, CRM integrations, India-based support and DLT-registered SMS on the same platform.</p>" },
+            { "q": "How quickly can a BSP get me live on the WhatsApp API?", "a": "<p>With documents ready, a good BSP can verify your business and get your display name and first templates approved within a few business days. Ojiva AI targets a 48-hour go-live for standard setups.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

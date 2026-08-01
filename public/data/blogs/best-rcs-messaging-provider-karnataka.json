@@ -1,0 +1,349 @@
+{
+  "slug": "best-rcs-messaging-provider-karnataka",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "why-karnataka-switching", "label": "Why Karnataka Businesses Are Switching to RCS" },
+    { "id": "what-is-rcs", "label": "What Is RCS Business Messaging?" },
+    { "id": "ojiva-rcs-solutions", "label": "Ojiva AI's RCS Messaging Solutions" },
+    { "id": "advanced-features", "label": "Advanced RCS Features" },
+    { "id": "use-cases-by-industry", "label": "RCS Use Cases by Industry" },
+    { "id": "api-integration", "label": "Seamless RCS API Integration" },
+    { "id": "pricing", "label": "RCS Messaging Pricing" },
+    { "id": "why-trust-ojiva", "label": "Why Karnataka Brands Trust Ojiva AI" },
+    { "id": "how-to-launch", "label": "How to Launch RCS (Step by Step)" },
+    { "id": "how-ojiva-measures-up", "label": "How Ojiva AI Measures Up" },
+    { "id": "rcs-vs-whatsapp-vs-sms", "label": "RCS vs WhatsApp vs SMS" },
+    { "id": "omnichannel-strategy", "label": "Building an Omnichannel Strategy" },
+    { "id": "compliance-consent", "label": "RCS Compliance and Customer Consent" },
+    { "id": "measuring-performance", "label": "Measuring RCS Campaign Performance" },
+    { "id": "common-mistakes", "label": "Common RCS Mistakes to Avoid" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "author", "label": "Author" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>RCS Business Messaging (Rich Communication Services)</strong> is the upgrade to SMS that turns a plain text into a branded, interactive message — your verified business name and logo, images, product carousels and tappable buttons, delivered right inside the customer's native Android Messages app with no extra app to install. For a Karnataka business choosing an RCS provider in 2026, the decision comes down to seven things: <strong>verified sender setup, rich-media and carousel support, reliable delivery across Jio, Airtel and Vi, automatic SMS fallback, transparent INR pricing, DPDP-aligned data handling, and India-based support.</strong> This guide explains what RCS is, why brands across Bengaluru, Mysuru, Mangaluru and Hubballi are switching, the use cases that actually convert, and how to launch — and shows where Ojiva AI fits. If you want the national picture first, see <a href='/blogs/rcs-messaging-future-business-communication-india/'>RCS Business Messaging in India</a>." },
+        { "type": "image", "src": "/image/jun15(1).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "why-karnataka-switching",
+      "heading": "Why Karnataka Businesses Are Switching to RCS Messaging",
+      "blocks": [
+        { "type": "p", "html": "Karnataka is one of India's most digitally active states, and its businesses feel the limits of plain SMS every day: no branding, no media, no interactivity, and rising competition in a crowded inbox. RCS Business Messaging fixes that — it keeps the universal, app-free reach of SMS but adds a verified brand identity and an app-like experience inside the messaging app customers already use." },
+        { "type": "p", "html": "From the technology corridors of Bengaluru to the retail and services hubs of Mysuru, Mangaluru, Hubballi and Belagavi, companies are adopting RCS for promotions, order updates, appointment reminders and support — on a smartphone base that is overwhelmingly Android, exactly where RCS shines. With Jio, Airtel and Vi all backing the channel and Apple adding RCS support in iOS 18, the reach keeps widening." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-geo-alt-fill", "title": "Built for an Android-first market:", "desc": "India's smartphone base is overwhelmingly Android — the devices where RCS is natively supported in the default inbox." },
+            { "icon": "bi-broadcast", "title": "Carrier-backed reach:", "desc": "Jio, Airtel and Vi all support RCS, so verified messages land natively across networks in Karnataka." },
+            { "icon": "bi-patch-check-fill", "title": "Verified brand identity:", "desc": "Your business name and logo appear on every message, cutting through spam fatigue and building instant trust." },
+            { "icon": "bi-arrow-repeat", "title": "SMS fallback built in:", "desc": "If a device isn't RCS-ready, the message falls back to <a href='/sms/'>SMS</a> automatically — you never lose reach." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-is-rcs",
+      "heading": "What Is RCS Business Messaging?",
+      "blocks": [
+        { "type": "p", "html": "RCS (Rich Communication Services) is the modern messaging standard built into the default Messages app on Android, and now on iOS 18. Unlike plain SMS, RCS supports branded sender profiles, high-resolution images and video, product carousels, suggested replies and action buttons — without asking the customer to download anything. For businesses, that means a richer, measurable, two-way channel that still reaches the phone's native inbox." },
+        { "type": "p", "html": "The simplest way to see the difference is side by side:" },
+        {
+          "type": "table",
+          "headers": ["Feature", "SMS", "RCS Business Messaging"],
+          "rows": [
+            ["<b>Branding</b>", "Generic sender ID", "Verified business name + logo"],
+            ["<b>Media</b>", "Text only (160 chars)", "Images, video, GIFs, carousels"],
+            ["<b>Interactivity</b>", "None", "Buttons, quick replies, guided journeys"],
+            ["<b>Delivery insight</b>", "Sent only", "Sent, delivered and read signals"],
+            ["<b>Works offline</b>", "Yes (no internet)", "Needs data (with SMS fallback)"],
+            ["<b>Best for</b>", "Universal reach, OTPs", "Engagement, promotions, support"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-images", "title": "Rich media in the inbox:", "desc": "Show products, offers and confirmations with images and video instead of plain text." },
+            { "icon": "bi-collection", "title": "Carousels that sell:", "desc": "Swipeable cards let customers browse a catalogue or offers without leaving the chat." },
+            { "icon": "bi-hand-index-thumb", "title": "Tappable actions:", "desc": "\"Buy Now\", \"Book\", \"Track Order\" and \"Call\" buttons move customers from message to action in one tap." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-rcs-solutions",
+      "heading": "Ojiva AI's RCS Messaging Solutions for Karnataka Businesses",
+      "blocks": [
+        { "type": "p", "html": "Ojiva AI delivers end-to-end RCS Business Messaging for Karnataka — from verified sender registration and template design to campaign execution and analytics. You get the full rich-media toolkit (branded profiles, images, video, carousels and action buttons) on reliable infrastructure, with SMS fallback so no message is ever lost." },
+        { "type": "p", "html": "Whether you're a Bengaluru D2C brand, a Mysuru hospital network or a Hubballi education institute, Ojiva AI tailors RCS to your goals — promotions, transactional updates, onboarding flows and post-purchase engagement — all from one dashboard." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Verified RCS sender", "desc": "with your business name and logo for trusted, branded messaging." },
+            { "icon": "bi-images", "title": "Full rich-media support", "desc": "including images, video, GIFs and interactive cards." },
+            { "icon": "bi-collection", "title": "Product carousels and guided journeys", "desc": "for catalogues, offers and multi-option campaigns." },
+            { "icon": "bi-arrow-repeat", "title": "Automatic SMS fallback", "desc": "so every customer is reached, even on a non-RCS device." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-features",
+      "heading": "Advanced RCS Features for Karnataka Companies",
+      "blocks": [
+        { "type": "p", "html": "RCS turns one-way broadcasts into interactive experiences. These are the features Karnataka brands use most to move customers from message to action." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-collection", "title": "Product carousels:", "desc": "Scrollable cards for catalogues, offers and multi-option campaigns inside a single message." },
+            { "icon": "bi-hand-index-thumb", "title": "Smart action buttons:", "desc": "\"Buy Now\", \"Call Support\", \"Track Order\" and \"Book Now\" that trigger the next step instantly." },
+            { "icon": "bi-camera-video", "title": "Rich multimedia:", "desc": "High-resolution images, GIFs and video to showcase products and explain offers clearly." },
+            { "icon": "bi-patch-check-fill", "title": "Verified business profile:", "desc": "Brand name, logo and verified badge that build trust and reduce spam concerns." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-cases-by-industry",
+      "heading": "RCS Use Cases by Industry in Karnataka",
+      "blocks": [
+        { "type": "p", "html": "RCS is delivering value across Karnataka's biggest sectors. Here's where it fits — and the Ojiva AI solution page for each." },
+        {
+          "type": "table",
+          "headers": ["Industry", "How Karnataka businesses use RCS", "Solution"],
+          "rows": [
+            ["<b>Retail & E-commerce</b>", "Product carousels, abandoned-cart nudges, COD confirmation and order tracking", "<a href='/solutions/ecommerce-retail/'>E-commerce & Retail</a>"],
+            ["<b>Healthcare</b>", "Appointment reminders, \"report ready\" alerts and medication nudges with one-tap booking", "<a href='/solutions/healthcare/'>Healthcare</a>"],
+            ["<b>Education</b>", "Admission updates, fee reminders and exam/result notifications with quick replies", "<a href='/solutions/education/'>Education</a>"],
+            ["<b>Real Estate</b>", "Rich brochures, site-visit reminders and EMI alerts with tap-to-call", "<a href='/solutions/real-estate/'>Real Estate</a>"],
+            ["<b>Banking & Finance</b>", "Branded transaction alerts, EMI and renewal reminders with verified identity", "<a href='/solutions/banking-finance/'>Banking & Finance</a>"],
+            ["<b>Logistics & Delivery</b>", "Live out-for-delivery alerts and tap-to-track inside the message", "<a href='/solutions/logistics-delivery/'>Logistics & Delivery</a>"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-geo-alt-fill", "title": "Local-first:", "desc": "Whether you serve Bengaluru, Mysuru, Mangaluru or Hubballi, RCS reaches customers in the inbox they already check." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun15(2).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "api-integration",
+      "heading": "Seamless RCS API Integration for Karnataka Businesses",
+      "blocks": [
+        { "type": "p", "html": "Ojiva AI's RCS API lets your team embed rich messaging directly into existing apps and workflows — no friction. It supports automation, real-time messaging, CRM integration and personalised journeys, with clear documentation and secure authentication." },
+        { "type": "p", "html": "From campaign triggering and delivery tracking to handling user taps and replies, developers can deploy RCS quickly and reliably — and it sits on the same <a href='/platform/'>platform</a> as your other channels." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-code-slash", "title": "Developer-friendly REST API", "desc": "with clear documentation and examples." },
+            { "icon": "bi-diagram-3-fill", "title": "Connects to your stack:", "desc": "CRM, ERP, e-commerce and marketing automation tools." },
+            { "icon": "bi-lightning-charge-fill", "title": "Automated, event-driven flows", "desc": "for real-time customer interactions." },
+            { "icon": "bi-headset", "title": "Backed by a dedicated India-based", "desc": "technical support team." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "RCS Messaging Pricing in Karnataka",
+      "blocks": [
+        { "type": "p", "html": "Ojiva AI keeps RCS pricing flexible and transparent — startups, SMEs and enterprises pay for what they use, with no hidden charges. RCS carries a higher per-message rate than plain SMS because it delivers far more (media, interactivity, verified identity), but for high-intent campaigns it typically returns more value per rupee." },
+        { "type": "p", "html": "A few things shape your effective cost:" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-currency-rupee", "title": "[Ojiva: insert your current RCS per-message rate / starting plan here.]", "desc": "Publishing a clear INR rate is the strongest possible trust signal on pricing." },
+            { "icon": "bi-collection", "title": "Message type and richness:", "desc": "Basic messages vs rich cards and carousels can be priced differently." },
+            { "icon": "bi-graph-up-arrow", "title": "Volume:", "desc": "Per-message rates improve as your monthly volume grows." },
+            { "icon": "bi-arrow-repeat", "title": "Fallback usage:", "desc": "Messages that fall back to SMS are billed at SMS rates, not RCS." }
+          ]
+        },
+        { "type": "p", "html": "Want a quote for your volume? <a href='/contact/'>Talk to our team</a> or <a href='/book-demo/'>book a demo</a>." }
+      ]
+    },
+    {
+      "id": "why-trust-ojiva",
+      "heading": "Why Karnataka Brands Trust Ojiva AI for RCS",
+      "blocks": [
+        { "type": "p", "html": "Reliability is everything in business messaging. Ojiva AI runs RCS on stable, secure infrastructure with verified sender identity and continuous monitoring, so time-sensitive alerts, promotions and support messages land without delay." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-graph-up-arrow", "title": "High-uptime infrastructure", "desc": "with a 99.9% uptime SLA." },
+            { "icon": "bi-shield-lock-fill", "title": "Secure routing", "desc": "and DPDP-aligned data handling." },
+            { "icon": "bi-patch-check-fill", "title": "Verified sender identity", "desc": "for trusted, branded communication." },
+            { "icon": "bi-headset", "title": "India-based support", "desc": "(Mon–Sat, IST) for fast resolution and ongoing optimisation." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-to-launch",
+      "heading": "How to Launch RCS in Karnataka (Step by Step)",
+      "blocks": [
+        { "type": "p", "html": "Getting live on RCS is straightforward when your provider handles the heavy lifting. Here's the path with Ojiva AI." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Verify your brand:", "desc": "We register your business and set up your verified RCS sender — name, logo and brand colour." },
+            { "icon": "bi-2-circle-fill", "title": "Design your messages:", "desc": "We build your first rich templates — carousels, buttons and media — for your top use case." },
+            { "icon": "bi-3-circle-fill", "title": "Connect your systems:", "desc": "We integrate your CRM or store so messages trigger automatically." },
+            { "icon": "bi-4-circle-fill", "title": "Launch and measure:", "desc": "Go live, then track delivery, reads and taps to optimise — with SMS fallback covering every non-RCS device." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-ojiva-measures-up",
+      "heading": "How Ojiva AI Measures Up",
+      "blocks": [
+        { "type": "p", "html": "RCS is only as good as the partner running it. Here's how Ojiva AI maps to what a Karnataka business should expect from an RCS provider." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Verified RCS & Meta Business Partner:", "desc": "Branded, verified messaging customers can trust." },
+            { "icon": "bi-grid-1x2-fill", "title": "One stack, many channels:", "desc": "RCS alongside <a href='/sms/'>SMS</a>, <a href='/whatsapp/'>WhatsApp</a>, <a href='/voice/'>voice</a> and <a href='/otp/'>OTP</a> — add channels without a new vendor." },
+            { "icon": "bi-shield-check", "title": "Compliance built in:", "desc": "DPDP-aligned data handling, consent and opt-out, AES-256 encryption." },
+            { "icon": "bi-clock-fill", "title": "India support & fast go-live:", "desc": "India-based team, 99.9% uptime SLA, quick onboarding." }
+          ]
+        },
+        { "type": "p", "html": "We won't claim to be the only RCS provider for every business — the right fit depends on your volume and use case. But for Karnataka brands that want verified, rich, reliable messaging with local support, Ojiva AI is built to deliver. <a href='/book-demo/'>Book a demo</a> and see it on your own use case." },
+        { "type": "image", "src": "/image/jun15(3).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+      ]
+    },
+    {
+      "id": "rcs-vs-whatsapp-vs-sms",
+      "heading": "RCS vs WhatsApp vs SMS: Choosing the Right Channel in Karnataka",
+      "blocks": [
+        { "type": "p", "html": "RCS isn't a replacement for every channel — it's the rich, native-inbox option that sits between plain SMS and WhatsApp. The smartest Karnataka brands don't pick one; they match the channel to the job. Here's how the three compare." },
+        {
+          "type": "table",
+          "headers": ["Channel", "Strengths", "Best for"],
+          "rows": [
+            ["<b>SMS</b>", "Universal reach, works offline, DLT-compliant, no app", "OTPs, critical alerts, reaching every phone"],
+            ["<b>WhatsApp</b>", "Two-way conversations, app familiarity, chatbots", "Support, conversational commerce, opted-in engagement"],
+            ["<b>RCS</b>", "Verified branding + rich media in the native inbox, no app", "Promotions, catalogues, order updates, interactive campaigns"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-signpost-split-fill", "title": "Match channel to intent:", "desc": "SMS for guaranteed delivery, WhatsApp for conversation, RCS for branded, interactive reach." },
+            { "icon": "bi-arrow-repeat", "title": "RCS + SMS together:", "desc": "Send rich RCS first, fall back to SMS automatically when a device isn't supported — best reach with best experience." },
+            { "icon": "bi-people-fill", "title": "WhatsApp for two-way, RCS for broadcast:", "desc": "RCS shines for high-volume branded campaigns; WhatsApp for ongoing conversations." },
+            { "icon": "bi-grid-1x2-fill", "title": "One platform, all three:", "desc": "With Ojiva AI you run <a href='/sms/'>SMS</a>, <a href='/whatsapp/'>WhatsApp</a> and RCS from a single dashboard — no extra vendor." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omnichannel-strategy",
+      "heading": "Building an Omnichannel Messaging Strategy in Karnataka",
+      "blocks": [
+        { "type": "p", "html": "Single-channel messaging leaves engagement on the table. An omnichannel approach — RCS, WhatsApp, SMS and voice working together — meets each customer on the channel that converts them, with one unified profile and one set of analytics." },
+        { "type": "p", "html": "For Karnataka businesses, that means launching a campaign on RCS for rich engagement, falling back to SMS for guaranteed delivery, following up on WhatsApp for conversation, and using voice for time-sensitive confirmations — all orchestrated from Ojiva AI's platform." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-diagram-3-fill", "title": "Unified orchestration:", "desc": "Trigger the right message on the right channel based on customer behaviour and delivery status." },
+            { "icon": "bi-arrow-repeat", "title": "Smart fallback cascade:", "desc": "RCS to SMS keeps every message delivered without manual effort." },
+            { "icon": "bi-telephone-fill", "title": "Add voice when it counts:", "desc": "Pair messaging with <a href='/voice/'>bulk voice call</a> for OTPs, reminders and confirmations." },
+            { "icon": "bi-bar-chart-line-fill", "title": "One view of performance:", "desc": "See delivery, reads and conversions across every channel in one place — see the <a href='/platform/'>platform</a>." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance-consent",
+      "heading": "RCS Compliance and Customer Consent in India",
+      "blocks": [
+        { "type": "p", "html": "RCS is a permission-based channel, and getting compliance right protects both your brand reputation and your sender rating. In India, that means verified-sender registration, clear customer opt-in, easy opt-out, and DPDP-aligned data handling — the standards that keep your messaging trusted in 2026." },
+        { "type": "p", "html": "Because RCS falls back to SMS, your SMS layer must also stay DLT-compliant under TRAI rules. Ojiva AI builds consent and compliance into the workflow so you're covered end to end." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Verified sender:", "desc": "A verified business identity so customers know the message is genuinely from you." },
+            { "icon": "bi-check2-square", "title": "Explicit opt-in:", "desc": "Collect and store consent before messaging — the foundation of a healthy sender reputation." },
+            { "icon": "bi-box-arrow-right", "title": "Easy opt-out:", "desc": "Honour unsubscribe requests automatically to stay compliant and keep customer trust." },
+            { "icon": "bi-shield-lock-fill", "title": "DPDP-aligned data handling:", "desc": "Secure storage, consent records and AES-256 encryption as standard, with DLT-compliant SMS fallback." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measuring-performance",
+      "heading": "Measuring RCS Campaign Performance in Karnataka",
+      "blocks": [
+        { "type": "p", "html": "One of RCS's biggest advantages over plain SMS is measurability. You don't just know a message was sent — you see whether it was delivered, read, and acted on. That turns guesswork into optimisation." },
+        { "type": "p", "html": "Track these metrics from launch and refine your campaigns over time." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-send-check-fill", "title": "Delivery rate:", "desc": "The share of messages successfully delivered — your baseline for reach and routing health." },
+            { "icon": "bi-eye-fill", "title": "Read rate:", "desc": "How many recipients actually opened the message — a signal plain SMS can't give you." },
+            { "icon": "bi-hand-index-thumb", "title": "Click / tap rate:", "desc": "Taps on buttons, carousels and links — the clearest sign of engagement and intent." },
+            { "icon": "bi-graph-up-arrow", "title": "Conversion & opt-out:", "desc": "Track the actions that matter (purchases, bookings) and watch opt-outs to keep messaging relevant." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-mistakes",
+      "heading": "Common RCS Mistakes Karnataka Businesses Should Avoid",
+      "blocks": [
+        { "type": "p", "html": "RCS rewards brands that use it well — and quietly underperforms for those who treat it like an SMS blast. Avoid these common mistakes to get the most from the channel." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-megaphone-fill", "title": "Treating RCS like bulk SMS:", "desc": "Plain, untargeted blasts waste RCS's rich, interactive strengths — design for engagement, not just reach." },
+            { "icon": "bi-arrow-repeat", "title": "No SMS fallback plan:", "desc": "Without fallback, messages to non-RCS devices simply don't land — always pair RCS with <a href='/sms/'>SMS</a>." },
+            { "icon": "bi-images", "title": "Poor media quality:", "desc": "Low-resolution images or cluttered carousels hurt trust — use clean, high-quality visuals that match your brand." },
+            { "icon": "bi-exclamation-triangle-fill", "title": "Ignoring consent and frequency:", "desc": "Over-messaging or skipping opt-in damages your sender rating — respect consent and cadence." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "RCS is the clear next step beyond SMS for Karnataka businesses — richer messages, verified identity, interactivity and better engagement, without asking customers to install anything. From product carousels and order tracking to appointment reminders and support, the use cases are broad and the upside is real." },
+        { "type": "p", "html": "Choosing the right provider is what turns that potential into results. With verified sender setup, full rich-media support, reliable delivery across Jio, Airtel and Vi, automatic SMS fallback, transparent INR pricing and India-based support, Ojiva AI is the partner Karnataka brands can scale on. Start with <a href='/rcs/'>RCS Business Messaging</a>, and if you also send text and chat, pair it with <a href='/sms/'>bulk SMS</a> and <a href='/whatsapp/'>WhatsApp</a> on the same platform." }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<em>By Ananth · Updated 15 June 2026</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: RCS Messaging in Karnataka",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is RCS Business Messaging?", "a": "<p>RCS (Rich Communication Services) is the upgrade to SMS built into the native Messages app on Android and iOS 18. It adds verified branding, images, video, carousels and tappable buttons, turning plain texts into interactive, app-like experiences with no app download required.</p>" },
+            { "q": "Is RCS available on all phones in Karnataka?", "a": "<p>RCS works on most modern Android phones across Jio, Airtel and Vi, and on iPhones running iOS 18 where the carrier has enabled it. For any device that isn't RCS-ready, Ojiva AI automatically falls back to SMS, so every customer is still reached.</p>" },
+            { "q": "How is RCS different from SMS and WhatsApp?", "a": "<p>SMS is universal and works offline but is text-only with no branding. WhatsApp is rich and conversational but needs the WhatsApp app. RCS brings rich, branded, interactive messaging into the phone's default inbox with no extra app, and falls back to SMS when a device isn't supported.</p>" },
+            { "q": "How much does RCS messaging cost in Karnataka?", "a": "<p>RCS costs more per message than plain SMS because it carries media, interactivity and verified identity, but it usually delivers more value per rupee on high-intent campaigns. Pricing depends on message type, volume and fallback usage. Contact Ojiva AI for a rate based on your volume.</p>" },
+            { "q": "How do I get a verified RCS sender for my business in Karnataka?", "a": "<p>Your provider registers your brand and submits it for verified-sender approval, including business name, logo and brand colour. Ojiva AI manages this end to end, so you launch with a verified, trusted identity.</p>" },
+            { "q": "Which industries in Karnataka benefit most from RCS?", "a": "<p>Retail and e-commerce, healthcare, education, real estate, banking and logistics see the strongest results, using RCS for carousels, order tracking, appointment reminders, brochures, transaction alerts and live delivery updates.</p>" },
+            { "q": "Does RCS work without internet?", "a": "<p>No. RCS needs a data connection, which is why automatic SMS fallback matters: if a customer is offline or on a non-RCS device, the message is delivered as SMS so it still gets through.</p>" },
+            { "q": "Is Ojiva AI an RCS provider in Karnataka?", "a": "<p>Yes. Ojiva AI provides verified RCS Business Messaging for Karnataka businesses, with rich media, carousels, API integration, automatic SMS fallback, transparent pricing and India-based support — alongside SMS, WhatsApp, voice and OTP on one platform.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

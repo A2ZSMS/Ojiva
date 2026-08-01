@@ -1,0 +1,202 @@
+{
+  "slug": "bulk-sms-in-india",
+  "toc": [
+    { "id": "introduction", "label": "Why Bulk SMS Still Wins" },
+    { "id": "sms-routes", "label": "The Three SMS Routes" },
+    { "id": "dlt-registration", "label": "DLT Registration" },
+    { "id": "pricing", "label": "Bulk SMS Pricing 2026" },
+    { "id": "launch-playbook", "label": "Launch Playbook" },
+    { "id": "troubleshooting", "label": "Troubleshooting" },
+    { "id": "industry-use-cases", "label": "Industry Use Cases" },
+    { "id": "faq", "label": "Frequently Asked Questions" },
+    { "id": "messaging-stack", "label": "Build Your Messaging Stack" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "why-ojiva", "label": "Choose Ojiva AI" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": "Why Bulk SMS Still Wins for Indian Businesses in 2026",
+      "blocks": [
+        { "type": "p", "html": "A business loads up its contact list, writes a clean offer, hits send to 50,000 customers—and almost nothing arrives. No error, no bounce, no obvious reason. The campaign just quietly fails. Nine times out of ten this is not a gateway problem; it is a compliance problem. In India, every commercial SMS passes through a regulatory filter before it reaches a phone, and if your business is not registered correctly, the message is blocked at the operator level and silently dropped. This guide walks you through everything you need to send bulk SMS in India in 2026—what bulk SMS actually is, the three message routes, the full DLT registration process, real pricing in rupees, and a step-by-step playbook for launching your first campaign without burning budget on undelivered messages. Bulk SMS remains the most reliable business messaging channel in the country: every phone can receive it, no app or internet required, with open rates that sit far above email and reach that extends from a flagship device in Bengaluru to a basic feature phone in a tier-3 town." },
+        { "type": "image", "src": "/image/jun1(1).webp", "alt": "Bulk SMS in India 2026 DLT campaign guide dashboard" }
+      ]
+    },
+    {
+      "id": "sms-routes",
+      "heading": "The Three SMS Routes: Promotional, Transactional & Service",
+      "blocks": [
+        { "type": "p", "html": "Before you send a single message, you have to know which category it falls into. This one decision controls when your message can be delivered, whether it reaches Do-Not-Disturb (DND) numbers, and whether you need consent. Get the category wrong and your message is blocked—or worse, your sender ID gets flagged. An OTP or a genuine order update is transactional or service and can reach any number around the clock. A festival discount is promotional and will only land on non-DND numbers during approved daytime hours." },
+        { "type": "p", "html": "Disguising a promotional message as transactional to dodge those rules is the fastest way to get your header suspended—TRAI treats misclassification seriously. Here is how the three routes compare for Indian businesses in 2026:" },
+        {
+          "type": "table",
+          "headers": ["Category", "Use case", "DND numbers", "Delivery window", "Consent"],
+          "rows": [
+            ["Promotional", "Offers, discounts, marketing", "Blocked to DND", "Daytime only (operators commonly enforce ~10 AM–9 PM)", "Required"],
+            ["Transactional", "OTPs, bank alerts, payment confirmations", "Delivered (DND-exempt)", "24/7", "Customer-initiated"],
+            ["Service", "Order updates, reminders, account notices", "Service-explicit needs consent", "Generally daytime; varies", "Explicit needs opt-in"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dlt-registration",
+      "heading": "DLT Registration: The Step-by-Step Process That Decides If Your SMS Arrives",
+      "blocks": [
+        { "type": "p", "html": "DLT (Distributed Ledger Technology) registration is mandatory for every business sending commercial SMS in India, and skipping it is the single biggest reason campaigns fail. DLT is a blockchain-based registry the Telecom Regulatory Authority of India (TRAI) introduced under the TCCCPR 2018 regulations to kill spam. Every business (a “Principal Entity”), every sender ID, every template, and every consent record is logged on the ledger and checked in real time as your message is sent—a process called scrubbing." },
+        { "type": "p", "html": "The four operator-managed DLT portals are Jio, Airtel (SmartPing), Vodafone Idea (Vi), and BSNL. You register once and your headers and templates sync across all of them. The impact is not subtle: a common pattern across Indian businesses is promotional delivery sitting below 30%, discovering they were never DLT-registered, completing the process, and delivery jumping past 95%. Compliance directly drives deliverability." },
+        { "type": "h", "level": 3, "text": "The Four DLT Registration Steps" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle", "title": "Principal Entity (PE) Registration:", "desc": "Your business's KYC for the messaging ecosystem. Submit business PAN, GST certificate, a Letter of Authorisation on company letterhead, and ID proof of the authorised signatory. Cost is a one-time ~₹5,000 + GST (some portals list ~₹5,900), approved in 1–3 working days. The #1 delay is a company-name mismatch across PAN, GST, and incorporation documents—make them match exactly first." },
+            { "icon": "bi-2-circle", "title": "Sender ID (Header) Approval:", "desc": "A header is the 6-character alphanumeric name customers see as the sender, such as HDFCBK or SHOPCL. Each header is mapped to a category; transactional headers start with a letter and are DND-exempt. In 2026 TRAI rejects generic, unrelated headers—yours must clearly relate to your brand. Approval usually takes 1–2 days once your entity is live." },
+            { "icon": "bi-3-circle", "title": "Template Registration:", "desc": "Every distinct message must be pre-registered as a content template and approved before use. Mark every variable explicitly, include your brand name, avoid special characters the portal rejects, and ensure the message you send matches the approved template exactly—even a small deviation triggers a mismatch and silent blocking. Approval typically takes 1–3 days." },
+            { "icon": "bi-4-circle", "title": "Consent & URL Whitelisting:", "desc": "For promotional messaging, maintain genuine opt-in consent records. Two traps catch businesses out in 2026: no URL shorteners (every link must be a full, whitelisted URL, or it is silently blocked), and keeping consent logs current to avoid sends to non-consented or DND numbers." }
+          ]
+        },
+        { "type": "h", "level": 4, "text": "Want the full DLT walkthrough?" },
+        { "type": "p", "html": "A clean submission gets you fully live in roughly 3–7 working days; document mismatches add a 3–7 day revision cycle each time. For the complete portal-by-portal walkthrough with screenshots, read our dedicated DLT registration guide—or let Ojiva AI handle the entire registration for you. <a href='/blogs/dlt-registration-bulk-sms-india/'>DLT Registration Guide</a> · <a href='/bulk-sms/'>Explore Bulk SMS</a>" }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "Bulk SMS Pricing in India 2026: What You Actually Pay",
+      "blocks": [
+        { "type": "p", "html": "Bulk SMS remains the cheapest business messaging channel in India. Per-SMS rates typically start from around ₹0.11–₹0.20 per message, depending on volume, route, and whether the SMS is transactional or promotional. Transactional and OTP routes are usually priced slightly higher because of their priority delivery and DND-exempt status." },
+        { "type": "p", "html": "The headline rate is only part of the story—three things move your effective cost, and the cheapest quoted rate is often the most expensive in practice if half your messages never arrive." },
+        { "type": "h", "level": 3, "text": "The Three Levers That Move Your SMS Cost" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-graph-up", "title": "Volume Tier:", "desc": "Higher monthly volume earns lower per-SMS rates. Most providers offer tiered pricing, so consolidating your sends with one partner usually beats spreading volume thin." },
+            { "icon": "bi-textarea-t", "title": "Message Length:", "desc": "A single SMS is 160 characters. Longer messages split into multiple billed segments, so tight, well-written copy directly lowers cost." },
+            { "icon": "bi-diagram-3", "title": "Route Quality:", "desc": "Direct operator connectivity costs more than grey routes but delivers reliably and compliantly. Cheap grey routes are a false economy—you pay for messages that get blocked." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun1(2).webp", "alt": "Bulk SMS in India 2026 DLT campaign guide dashboard" }
+      ]
+    },
+    {
+      "id": "launch-playbook",
+      "heading": "Launch Playbook: How to Run Your First Bulk SMS Campaign in India",
+      "blocks": [
+        { "type": "p", "html": "Once your DLT registration is in place, launching a campaign is straightforward—provided you follow the sequence. The most common mistake is rushing to send before headers and templates are fully approved, which guarantees a failed first campaign." },
+        { "type": "p", "html": "Here is the seven-step process Ojiva AI uses with clients to take a campaign from list to delivered:" },
+        { "type": "h", "level": 3, "text": "Seven Steps to a High-Delivery Campaign" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle", "title": "Pick the right category.", "desc": "Decide whether each message is promotional, transactional, or service—this drives everything else." },
+            { "icon": "bi-2-circle", "title": "Complete DLT registration.", "desc": "Entity, header, then templates. Do not send anything until all three are approved." },
+            { "icon": "bi-3-circle", "title": "Get your sender ID live.", "desc": "Use a recognisable, brand-related 6-character header." },
+            { "icon": "bi-4-circle", "title": "Register your templates.", "desc": "Pre-approve every message variant with variables marked correctly." },
+            { "icon": "bi-5-circle", "title": "Clean and segment your list.", "desc": "Remove duplicates and unconsented numbers; segment so each message is relevant." },
+            { "icon": "bi-6-circle", "title": "Schedule inside the permitted window.", "desc": "Send promotional campaigns during approved daytime hours to non-DND numbers; transactional can go 24/7." },
+            { "icon": "bi-7-circle", "title": "Read your delivery reports.", "desc": "Track delivered, failed, and DND-blocked rates—and use them to fix templates and routing, not just to admire the dashboard." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "heading": "Troubleshooting: Why Bulk SMS Fails to Deliver (and How to Fix It)",
+      "blocks": [
+        { "type": "p", "html": "Almost every “the SMS did not arrive” problem in India traces back to the compliance layer, not the gateway. Fix these first before you blame your provider or your list." },
+        { "type": "p", "html": "Here are the five most common causes of failed delivery and the exact fix for each:" },
+        { "type": "h", "level": 3, "text": "Five Delivery Killers & Their Fixes" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-exclamation", "title": "Not DLT-registered:", "desc": "Register the entity, header, and templates. Without this, every message is blocked at the operator level." },
+            { "icon": "bi-file-text", "title": "Template mismatch:", "desc": "The sent text must match the approved template character-for-character. Re-check variables and spacing." },
+            { "icon": "bi-person-x", "title": "Promotional message to DND numbers:", "desc": "Only transactional and service messages reach DND. Clean your promotional list against the registry." },
+            { "icon": "bi-link-45deg", "title": "Non-whitelisted URL:", "desc": "Use full, registered links only—no shorteners—or the message is silently blocked." },
+            { "icon": "bi-tags", "title": "Wrong category:", "desc": "An OTP sent on a promotional header gets time-restricted and DND-blocked. Match the category to the content." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry-use-cases",
+      "heading": "Industry Use Cases: How Indian Businesses Use Bulk SMS in 2026",
+      "blocks": [
+        { "type": "p", "html": "Bulk SMS is the channel businesses reach for when a message absolutely has to arrive. Because it works on every handset without an app, it remains the backbone of transactional communication across sectors— even as WhatsApp and RCS grow as engagement layers on top." },
+        { "type": "p", "html": "Here is where bulk SMS delivers the most value, industry by industry:" },
+        { "type": "h", "level": 3, "text": "Sector-Specific Bulk SMS Applications" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shop", "title": "E-commerce & Retail:", "desc": "Order confirmations, OTPs, shipping and delivery updates, COD confirmation, and abandoned-cart nudges—the high-priority messages a customer expects instantly, where SMS guarantees reach." },
+            { "icon": "bi-bank", "title": "Banking & Fintech:", "desc": "Transaction alerts, secure OTPs, payment reminders, and fraud notifications via DND-exempt transactional routes, delivered 24/7 to any number." },
+            { "icon": "bi-hospital", "title": "Healthcare:", "desc": "Appointment reminders, report-ready alerts, and medication reminders that reduce no-shows—reliable even for patients on basic phones." },
+            { "icon": "bi-mortarboard", "title": "Education:", "desc": "Fee reminders, exam and result notifications, attendance alerts, and parent communication, where SMS reaches every guardian regardless of device." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: Bulk SMS & DLT in India",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "Is bulk SMS legal in India?", "a": "<p>Yes. Bulk SMS is legal provided you complete DLT registration under TRAI's TCCCPR 2018 rules, use approved sender IDs and templates, respect DND for promotional messages, and obtain consent where required.</p>" },
+            { "q": "How much does DLT registration cost in 2026?", "a": "<p>A one-time entity registration fee of approximately ₹5,000 + GST, standardised across the Jio, Airtel, Vi, and BSNL portals. Some portals list it as around ₹5,900.</p>" },
+            { "q": "How long does DLT registration take?", "a": "<p>With correct documents, roughly 3–7 working days end to end—about 1–3 days for the entity, 1–2 days for headers, and 1–3 days per template. Document mismatches add revision cycles.</p>" },
+            { "q": "What is the difference between promotional and transactional SMS?", "a": "<p>Promotional messages are marketing content—they only reach non-DND numbers during approved daytime hours and need consent. Transactional messages (OTPs, bank alerts) are service-critical, reach any number 24/7, and are DND-exempt when correctly classified.</p>" },
+            { "q": "Can I send promotional SMS to DND numbers?", "a": "<p>No. Promotional content is blocked to numbers on the Do-Not-Disturb registry. Only genuine transactional and service messages reach DND numbers.</p>" },
+            { "q": "Why are my SMS not delivered even after registration?", "a": "<p>The most common cause is a template mismatch—the message sent must exactly match the approved template. Other causes are non-whitelisted URLs, wrong message category, and DND blocking for promotional content.</p>" },
+            { "q": "What happens if I send SMS without DLT registration?", "a": "<p>The messages are blocked at the operator level and never delivered. You may still be billed for submission, and repeated attempts can get your activity flagged for spam.</p>" },
+            { "q": "How much does bulk SMS cost in India in 2026?", "a": "<p>Per-SMS rates typically start from around ₹0.11–₹0.20, depending on volume, route, and whether the message is transactional or promotional. Longer messages split into multiple billed 160-character segments.</p>" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging-stack",
+      "heading": "Build Your Full Messaging Stack: Bulk SMS, WhatsApp & RCS",
+      "blocks": [
+        { "type": "p", "html": "Bulk SMS is the reliable foundation—but the strongest 2026 strategy layers it with richer channels for engagement while keeping SMS as the guaranteed-delivery fallback. Explore how the channels work together:" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-chat-square-text", "title": "Bulk SMS Services:", "desc": "Reach every customer on any handset with DLT-compliant bulk SMS, direct operator routing, and real-time delivery reports—ideal for OTPs, alerts, and transactional notifications. <a href='https://www.ojiva.ai/sms/'>SMS Solutions</a>" },
+            { "icon": "bi-whatsapp", "title": "WhatsApp Business API:", "desc": "Add rich, two-way conversations, catalogs, and chatbots on the channel 500+ million Indians use daily—perfect for engagement, support, and conversational commerce. <a href='https://www.ojiva.ai/whatsapp/'>Explore WhatsApp API</a>" },
+            { "icon": "bi-broadcast", "title": "RCS Messaging:", "desc": "Upgrade SMS to rich, branded, interactive messages with carousels, images, and action buttons inside the native Messages app—with SMS fallback for guaranteed reach. <a href='https://www.ojiva.ai/rcs/'>Learn About RCS</a>" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Send Bulk SMS That Actually Arrives",
+      "blocks": [
+        { "type": "p", "html": "The hard part of bulk SMS in India is not the sending—it is the compliance layer underneath it. Get DLT registration, sender IDs, templates, and consent right, and you move from a sub-30% delivery rate to consistently above 95%. Get them wrong, and even a perfectly written campaign disappears silently before it reaches a single phone." },
+        { "type": "p", "html": "For Indian businesses in 2026, bulk SMS is still the channel you trust with the message that has to land—the OTP, the delivery confirmation, the time-sensitive alert. Pair it with WhatsApp and RCS for engagement, and you have a messaging stack that covers every customer on every device." },
+        { "type": "p", "html": "Ojiva AI handles the entire stack—DLT registration support, sender ID and template management, direct operator routing, and real-time delivery reports—so your messages land the first time, every time." },
+        { "type": "h", "level": 4, "text": "Ready to Launch Bulk SMS That Delivers?" },
+        { "type": "p", "html": "Partner with Ojiva AI for DLT-compliant bulk SMS in India— registration support, brand-verified sender IDs, direct operator routing, and transparent per-SMS pricing. Reach every customer, on every handset, with messages that actually arrive. <a href='/contact/'>Book a Free Bulk SMS Demo</a> · <a href='https://www.ojiva.ai/sms/'>Explore Bulk SMS</a>" }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Choose Ojiva AI for DLT-Compliant Bulk SMS",
+      "blocks": [
+        { "type": "p", "html": "Indian businesses trust Ojiva AI for bulk SMS that clears DLT scrubbing and reaches the inbox. From entity, header, and template registration through direct operator routing and delivery reporting, we make sure every campaign is compliant, fast, and measurable." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-check", "title": "DLT Compliance:", "desc": "Entity, header & template registration handled end to end." },
+            { "icon": "bi-lightning-charge-fill", "title": "Direct Operator Routing:", "desc": "High-deliverability routes, not cheap grey routes." },
+            { "icon": "bi-bar-chart", "title": "Real-Time Reports:", "desc": "Track delivered, failed & DND-blocked rates live." },
+            { "icon": "bi-headset", "title": "Expert Support:", "desc": "Guidance from registration to your first delivered campaign." }
+          ]
+        },
+        { "type": "p", "html": "<a href='/contact/'>Get Started with Bulk SMS</a> · <a href='https://www.ojiva.ai/blogs/'>Learn More About Solutions</a>" },
+        { "type": "p", "html": "<em>Sources: TRAI — TCCCPR 2018 (trai.gov.in); operator DLT portals (Jio, Airtel SmartPing, Vi, BSNL). Rates and timelines verified against current operator portals as of mid-2026; confirm current fees before registering.</em>" }
+      ]
+    }
+  ]
+}

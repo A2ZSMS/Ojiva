@@ -1,0 +1,411 @@
+{
+  "slug": "whatsapp-business-api-for-real-estate",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "capture-leads", "label": "Capture Property Leads" },
+    { "id": "listings-search-filters", "label": "Listings, Search & Filters" },
+    { "id": "manual-vs-automated", "label": "Manual vs Automated" },
+    { "id": "crm-integration", "label": "WhatsApp CRM Integration" },
+    { "id": "booking-payments", "label": "Site Visits & Payments" },
+    { "id": "pricing", "label": "Pricing in India" },
+    { "id": "how-to-launch", "label": "How to Launch" },
+    { "id": "why-ojiva", "label": "Why Ojiva AI" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "\"Is this flat still available?\" \"Can I get the price list?\" \"Can someone show me the site tomorrow?\" Property buyers ask these questions constantly, and every hour an agent takes to reply is an hour a competitor might answer first. That's the gap a <strong>WhatsApp Business API for Real Estate</strong> setup closes it turns the app your buyers already check all day into an automated front desk that shares listings, answers enquiries and books site visits without anyone standing by a phone. This guide covers how it works, what it costs, and how to launch one for your agency. Already using the <a href=\"/whatsapp/\">WhatsApp Business API</a>? Pair it with our <a href=\"/whatsapp-chatbot/\">AI chatbot</a>, or if you're still comparing providers, read our guide to the <a href=\"https://www.ojiva.ai/blogs/best-whatsapp-chatbot-for-business-in-india/\">Best WhatsApp Chatbot for Business in India</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/jul23(1).webp",
+          "alt": "WhatsApp Business API for Real Estate — Ojiva AI chatbot replying to property enquiries instantly"
+        }
+      ]
+    },
+    {
+      "id": "capture-leads",
+      "heading": "How WhatsApp Automation Helps Real Estate Agents Capture Property Leads",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most enquiries arrive outside office hours — evenings, weekends, the exact moments no one's at a desk to answer. WhatsApp automation for real estate closes that gap by handling the first reply itself, so a buyer never has to wait until Monday morning to hear back."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Instant replies, day or night:",
+              "desc": "The bot answers the moment someone messages — sharing price, location and availability before the buyer even thinks to call a competitor."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "24/7 lead capture without extra staff:",
+              "desc": "Weekends, festival holidays, late-night browsing — the chatbot keeps qualifying enquiries even when your office is closed."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Separates browsers from serious buyers:",
+              "desc": "A few qualifying questions — budget, location, timeline — let the bot flag hot leads for your sales team instead of passing on every enquiry raw."
+            },
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "More conversations turn into site visits:",
+              "desc": "Faster responses keep a buyer's interest warm instead of letting it cool off while they wait for a callback."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listings-search-filters",
+      "heading": "Auto-Sharing Listings and Keyword Search Inside a Property Chatbot",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Once your inventory is loaded, a real estate WhatsApp chatbot does the repetitive part of property search for you — no agent has to manually forward the same brochure fifty times a week."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-images",
+              "title": "Upload once, share instantly:",
+              "desc": "Photos, floor plans, price and location go out automatically the moment a buyer asks — no re-typing the same details for every enquiry."
+            },
+            {
+              "icon": "bi-search",
+              "title": "Keyword-based property search:",
+              "desc": "A buyer can type something like \"2BHK in Whitefield under 80 lakhs\" and the bot pulls up matching listings on its own."
+            },
+            {
+              "icon": "bi-sliders",
+              "title": "In-chat filters:",
+              "desc": "Location, budget, property type or amenities — buyers narrow results right inside the chat instead of scrolling through a whole portfolio."
+            },
+            {
+              "icon": "bi-speedometer2",
+              "title": "Faster search, fewer drop-offs:",
+              "desc": "The quicker a buyer finds a matching property, the less likely they are to give up and try another agency instead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manual-vs-automated",
+      "heading": "Manual Enquiry Handling vs a WhatsApp Chatbot for Real Estate",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "It helps to see the difference side by side. Here's what changes when property enquiries move from phone calls and scattered chats to an automated WhatsApp workflow."
+        },
+        {
+          "type": "table",
+          "headers": ["Factor", "Manual Process", "WhatsApp Chatbot for Real Estate"],
+          "rows": [
+            ["Response time", "Hours, or missed entirely during busy periods", "Instant, even outside office hours"],
+            ["Availability", "Limited to staff hours and working days", "24/7, including weekends and holidays"],
+            ["Sharing property details", "Agent forwards photos and PDFs one by one", "Listing images, price and location sent instantly"],
+            ["Lead follow-up", "Relies on an agent's memory or personal notes", "Automatic reminders, logged in your CRM"],
+            ["Data storage", "Scattered across calls, notebooks and spreadsheets", "Every conversation stored and searchable in one place"],
+            ["Handling enquiry spikes", "Overwhelms staff during launches and campaigns", "Handles unlimited simultaneous conversations"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-lightbulb-fill",
+              "title": "The pattern is consistent:",
+              "desc": "Automation doesn't replace your sales team — it removes the repetitive first-contact work so they can spend their day closing, not repeating themselves."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/jul23(2).webp",
+          "alt": "Manual property enquiry handling vs WhatsApp automation for real estate teams — Ojiva AI comparison"
+        }
+      ]
+    },
+    {
+      "id": "crm-integration",
+      "heading": "WhatsApp CRM Integration for Real Estate: Turn Chats Into Tracked Leads",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A great chat means nothing if the details vanish once the conversation ends. WhatsApp CRM integration for real estate businesses makes sure every enquiry becomes a record your team can act on, not just a message someone remembers reading."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cloud-arrow-up-fill",
+              "title": "Instant lead capture from every chat:",
+              "desc": "No manual data-entry — a new enquiry becomes a CRM record the second it arrives."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Auto-sync client details:",
+              "desc": "Name, contact number, budget and preferences flow straight into Zoho, HubSpot, Salesforce or your own real estate CRM."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Centralized conversation history:",
+              "desc": "Any agent can pick up a lead mid-conversation with full context, instead of starting from zero."
+            },
+            {
+              "icon": "bi-list-check",
+              "title": "Lead tracking and status updates:",
+              "desc": "See exactly which stage every buyer is at — enquired, site visit booked, negotiating, closed — without chasing anyone for an update."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Personalized property suggestions:",
+              "desc": "Once preferences are logged, the bot can recommend new matching listings automatically as they're added to your portfolio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "booking-payments",
+      "heading": "Booking Site Visits and Payments Through Property WhatsApp Marketing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Getting a buyer interested is only half the job — converting that interest into a booked site visit or a confirmed payment is where deals are actually won or lost. This is where WhatsApp marketing for property booking earns its keep."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-reply-fill",
+              "title": "Instant auto-reply to new enquiries:",
+              "desc": "The bot responds the moment a buyer reaches out, before interest has a chance to fade."
+            },
+            {
+              "icon": "bi-image-fill",
+              "title": "Photos, price and availability, shared fast:",
+              "desc": "No back and forth chasing an agent for basic details a bot can send in seconds."
+            },
+            {
+              "icon": "bi-calendar2-check-fill",
+              "title": "Site-visit scheduling and reminders:",
+              "desc": "Buyers pick a slot inside the chat, and automatic reminders cut down on no-shows."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Secure booking confirmations:",
+              "desc": "Once a visit or a token payment is confirmed, the buyer gets a clear written record — no relying on a verbal promise."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Multi-agent support:",
+              "desc": "Busy launch weekends get shared across your whole team inbox, so no enquiry sits unanswered because one agent is on a call."
+            },
+            {
+              "icon": "bi-currency-rupee",
+              "title": "Payment links inside the chat:",
+              "desc": "Booking amounts or token payments can be collected without the buyer ever leaving WhatsApp."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/jul23(3).webp",
+          "alt": "Manual property enquiry handling vs WhatsApp automation for real estate teams — Ojiva AI comparison"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What a Real Estate WhatsApp Chatbot Costs in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Pricing usually confuses people because there are two separate bills. Your provider charges a platform fee for the chatbot, builder and dashboard. Meta separately charges per template message sent — and replies inside the 24-hour customer service window, which covers most day-to-day enquiry handling, cost nothing on the Meta side. Add 18% GST, billed in INR, and that's the full picture."
+        },
+        {
+          "type": "table",
+          "headers": ["Cost component", "What it covers", "How it's billed"],
+          "rows": [
+            ["Platform subscription", "Chatbot, listing search, team inbox, analytics", "Monthly or annual plan, in INR"],
+            ["Meta message charges", "Marketing, utility and authentication templates", "Per delivered message, by category"],
+            ["Service conversations", "Bot replies within the 24-hour customer window", "Free"],
+            ["Setup & onboarding", "API activation, flow design, template approvals", "Included with Ojiva AI onboarding"],
+            ["Taxes", "GST on platform and message charges", "18%, with GST invoice on every payment"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cash-coin",
+              "title": "Judge it on cost per booked site visit, not per message:",
+              "desc": "If a bot handles a few hundred enquiries a month and even a handful convert into visits, it's already earning back its subscription. Ask any provider for a plain rate card before you commit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-to-launch",
+      "heading": "How to Launch a WhatsApp Chatbot for Your Real Estate Business",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "You don't need a developer or a long project timeline. With Ojiva AI, most real estate businesses go from \"we should automate this\" to a live chatbot within 48 hours."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Share your business details:",
+              "desc": "Agency name, website, the number you want buyers to chat with, and roughly how many listings you manage."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Get verified on the WhatsApp Business API:",
+              "desc": "We guide you through Meta business verification and activate your number on the <a href=\"/whatsapp/\">WhatsApp Business Platform</a>, badge application included."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Design your property enquiry flows:",
+              "desc": "Set up listing search, budget filters and site-visit booking, and let AI handle anything a buyer types outside the flow."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Connect your CRM and listings:",
+              "desc": "Sync leads to Zoho, HubSpot, Salesforce or a custom system through our <a href=\"/platform/\">platform</a>'s connectors and APIs."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Launch and refine:",
+              "desc": "Go live, then use analytics to see which questions the bot struggles with and improve those flows over time."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Prefer to see it running first? Explore the <a href=\"/whatsapp-chatbot/\">Ojiva AI WhatsApp chatbot</a> or <a href=\"/book-demo/\">book a free demo</a> — we'll build a sample property enquiry flow for your listings on the call."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Choosing the Right WhatsApp API Provider for Real Estate",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Plenty of tools can send an automated reply. Here's what real estate teams get with Ojiva AI that's easy to overlook when comparing providers on price alone."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-robot",
+              "title": "Real AI, not just a menu builder:",
+              "desc": "Our chatbot understands typed questions like \"3BHK near the metro,\" not only button taps — and it enriches your CRM as it goes."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Official Meta BSP onboarding:",
+              "desc": "API access, business verification and template approvals handled end to end, live in about 48 hours."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Speaks your buyer's language:",
+              "desc": "Hindi, Tamil, Telugu, Kannada and more, detected automatically — no separate flow to build per language."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "One dashboard, every channel:",
+              "desc": "Pair the chatbot with <a href=\"/sms/\">bulk SMS</a>, <a href=\"/rcs/\">RCS</a>, <a href=\"/voice/\">voice</a> and <a href=\"/otp/\">OTP</a>, with smart fallback so no buyer goes unreached."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Enterprise-grade security:",
+              "desc": "AES-256 encryption, DPDP-aligned data handling and a 99.9% uptime SLA — solid enough for large developers, simple enough for a boutique brokerage."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Transparent pricing, local support:",
+              "desc": "Plain INR rate cards and an India-based team on Monday–Saturday IST hours — not a ticket queue in another timezone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A real estate WhatsApp chatbot comes down to three honest questions: does it reply the moment a buyer messages, does every enquiry land in your CRM automatically, and can your provider show you plain pricing without a sales pitch? Get those right, and property enquiries stop being a scramble of missed calls and scattered notes — they become a tracked, automated pipeline that books site visits while your team focuses on closing."
+        },
+        {
+          "type": "p",
+          "html": "See it with your own listings: explore the <a href=\"/whatsapp-chatbot/\">Ojiva AI WhatsApp chatbot</a>, pair it with the <a href=\"/whatsapp/\">WhatsApp Business API</a>, and <a href=\"/book-demo/\">book a free demo</a> — we'll walk you through flows, CRM integration and real pricing for your portfolio."
+        },
+        {
+          "type": "p",
+          "html": "<em>By Ananth · Published 23 July</em>"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: WhatsApp Business API for Real Estate",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What does a WhatsApp chatbot do for a real estate business?",
+              "a": "<p>It handles the repetitive front-desk work — answering property questions, sharing listings and photos, booking site visits and capturing buyer details — instantly and around the clock, so your agents only step in once a lead is qualified.</p>"
+            },
+            {
+              "q": "Can buyers search properties using keywords on WhatsApp?",
+              "a": "<p>Yes. A buyer can type something like \"2BHK in Whitefield under 80 lakhs\" and the chatbot matches it against your listed inventory automatically, without an agent manually searching or forwarding options.</p>"
+            },
+            {
+              "q": "How does WhatsApp CRM integration help a real estate team?",
+              "a": "<p>Every chat becomes a CRM record automatically — contact details, budget, preferences and conversation history sync to Zoho, HubSpot, Salesforce or your own system, so no lead depends on one agent's memory or personal notes.</p>"
+            },
+            {
+              "q": "Can the chatbot book site visits and send payment links?",
+              "a": "<p>Yes. Buyers can pick a site-visit slot inside the chat and get automatic reminders to cut down no-shows, and token or booking payments can be collected through a secure payment link without ever leaving WhatsApp.</p>"
+            },
+            {
+              "q": "How much does a WhatsApp chatbot cost for a real estate business in India?",
+              "a": "<p>There's a platform subscription for the chatbot and dashboard, plus Meta's per-message charges for templates you send. Replies inside the 24-hour customer service window — most day-to-day enquiry handling — are free. 18% GST applies, billed in INR, with a plain rate card shared upfront.</p>"
+            },
+            {
+              "q": "Do I need the WhatsApp Business API, or can I use the free app?",
+              "a": "<p>Automation at scale needs the WhatsApp Business API, not the free consumer app. As an official Meta BSP, Ojiva AI handles API access, business verification and template approvals as part of onboarding, so you're not dealing with Meta's paperwork directly.</p>"
+            },
+            {
+              "q": "Will the bot hand off to a human agent when needed?",
+              "a": "<p>Yes. When a query needs judgment — a negotiation, a complaint, or the buyer simply asking for a person — the chat routes to your team inbox with the full conversation history attached, so the buyer never has to repeat themselves.</p>"
+            },
+            {
+              "q": "How long does it take to launch a real estate WhatsApp chatbot?",
+              "a": "<p>Most agencies go live within 48 hours. Share your business details, complete Meta verification with our guided help, and our team sets up your listing search, booking flow and template approvals. Book a free demo and we'll build a sample flow on the call.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

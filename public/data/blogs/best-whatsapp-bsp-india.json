@@ -1,0 +1,359 @@
+{
+  "slug": "best-whatsapp-bsp-india",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-is-bsp", "label": "What Is a WhatsApp BSP" },
+    { "id": "bsp-vs-tech-provider", "label": "BSP vs Tech Provider" },
+    { "id": "buyers-checklist", "label": "The 2026 Buyer's Checklist" },
+    { "id": "pricing-transparency", "label": "Pricing Transparency" },
+    { "id": "red-flags", "label": "Red Flags to Avoid" },
+    { "id": "ojiva-onboarding", "label": "How Ojiva AI Gets You Live" },
+    { "id": "ojiva-costs", "label": "How Ojiva AI Keeps Costs Down" },
+    { "id": "ojiva-automation", "label": "Automation Ojiva Builds For You" },
+    { "id": "ojiva-ongoing-care", "label": "Ongoing Care" },
+    { "id": "questions-to-ask", "label": "Questions to Ask Every BSP" },
+    { "id": "pricing-models", "label": "BSP Pricing Models" },
+    { "id": "hidden-costs", "label": "Hidden Costs" },
+    { "id": "features-beyond-api", "label": "Features Beyond API Access" },
+    { "id": "industry-fit", "label": "Criteria by Industry" },
+    { "id": "self-serve-vs-managed", "label": "Self-Serve vs Managed" },
+    { "id": "proof-of-concept", "label": "Run a Proof-of-Concept" },
+    { "id": "ojiva-measures-up", "label": "How Ojiva AI Measures Up" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>A WhatsApp BSP (Business Solution Provider)</strong> is a company officially vetted by Meta to give businesses access to the WhatsApp Business API, with tooling for onboarding, automation, analytics and support on top. Choosing the right one in 2026 comes down to seven things: <strong>pricing transparency, per-message markup, support SLA, India business-hours coverage, integrations, official BSP status, and security/compliance.</strong> This checklist walks each one. The stakes are real: your BSP controls your per-message cost, your uptime, and how fast you can launch. A cheap-looking provider with a hidden markup or weekend-only support can cost more than a transparent one. Use the checklist below on every provider you shortlist — and yes, on Ojiva AI too. If you are still deciding between the free app and the API in the first place, start with <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a>." }
+      ]
+    },
+    {
+      "id": "what-is-bsp",
+      "heading": "What Is a WhatsApp BSP (Business Solution Provider)?",
+      "blocks": [
+        { "type": "p", "html": "You cannot buy the WhatsApp Business API directly from Meta. Instead, Meta authorises Business Solution Providers to onboard businesses, provision phone numbers, get display names and templates approved, and deliver messages through the platform. The BSP is also where you get the dashboard, chatbot, team inbox and integrations that make the API usable day to day." },
+        { "type": "p", "html": "In short, the BSP is your gateway to WhatsApp — and the quality of that gateway determines your cost, reliability and speed to launch." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Meta-vetted access:", "desc": "Official BSPs are approved by Meta to provide WhatsApp Business API access and handle verification." },
+            { "icon": "bi-tools", "title": "The tooling layer:", "desc": "Dashboard, automation, chatbot, analytics and CRM integrations are the BSP's value on top of raw API access." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun13(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "bsp-vs-tech-provider",
+      "heading": "BSP vs Tech Provider: What's the Difference?",
+      "blocks": [
+        { "type": "p", "html": "In 2026 you will see two labels: \"BSP\" and \"tech provider.\" An official BSP has a direct, vetted partnership with Meta. A tech provider builds software on top of the API and sometimes resells through a BSP. Both can work, but the distinction matters for support and reliability — with an official BSP, there is no extra middle layer between you and the platform." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-link-45deg", "title": "Ask directly:", "desc": "\"Are you an official Meta BSP, or do you resell through one?\" The answer tells you who actually owns your reliability and support." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buyers-checklist",
+      "heading": "The 2026 WhatsApp BSP Buyer's Checklist",
+      "blocks": [
+        { "type": "p", "html": "Score every shortlisted provider against these seven criteria. Weight them by what matters most for your use case — a high-volume marketer cares most about markup; a bank cares most about compliance and uptime." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Pricing transparency:", "desc": "Can they show Meta's base rate and their own markup separately, in INR, with GST stated? Bundled, vague pricing usually hides a high markup." },
+            { "icon": "bi-2-circle-fill", "title": "Per-message markup:", "desc": "What percentage do they add over Meta rates — and is there a platform fee on top? Compare the all-in cost per marketing and utility message, not the headline." },
+            { "icon": "bi-3-circle-fill", "title": "Support SLA:", "desc": "Is there a written response-time SLA and a named contact, or only email tickets? When a campaign or OTP flow breaks, response time is revenue." },
+            { "icon": "bi-clock-fill", "title": "India business-hours coverage:", "desc": "Is support in your timezone and language? An India-based team beats an overseas helpdesk when you need help at 11 a.m. IST." },
+            { "icon": "bi-diagram-3-fill", "title": "Integrations:", "desc": "Native connectors for your CRM and store — Shopify, Zoho, Salesforce, HubSpot — plus a clean REST API and webhooks. Integration gaps become manual work forever." },
+            { "icon": "bi-shield-lock-fill", "title": "Security & compliance:", "desc": "AES-256 encryption, DPDP Act and GDPR alignment, and recognised standards (SOC 2, ISO 27001). Essential for banking, healthcare and any regulated data." },
+            { "icon": "bi-graph-up-arrow", "title": "Reliability & scale:", "desc": "A real uptime SLA (99.9%+), proven delivery, and the ability to scale messaging tiers as you grow without re-onboarding." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing-transparency",
+      "heading": "Pricing Transparency: How to Read a BSP Quote (2026)",
+      "blocks": [
+        { "type": "p", "html": "Since India moved to per-message pricing on 1 January 2026, a BSP quote should break into three parts: Meta's rate, the BSP's markup, and GST. If a provider cannot show you this breakdown, treat it as a red flag." },
+        {
+          "type": "table",
+          "headers": ["Cost component", "What it is", "Typical (India, 2026)"],
+          "rows": [
+            ["<b>Meta base rate — Marketing</b>", "Set by Meta, per message", "~₹0.8631 / message"],
+            ["<b>Meta base rate — Utility / Auth</b>", "Order updates, OTPs", "~₹0.115 / message"],
+            ["<b>BSP markup</b>", "Provider's per-message or platform fee", "15–35% (or fixed fee)"],
+            ["<b>GST</b>", "Tax on the total", "18%"],
+            ["<b>Service (user-initiated)</b>", "Replies in 24-hr window", "Free"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-calculator-fill", "title": "Compare all-in, not headline:", "desc": "A provider with a low platform fee but a 35% message markup can cost more than one with a small fee and 15% markup. Model your real monthly volume per category." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red-flags",
+      "heading": "Red Flags to Avoid",
+      "blocks": [
+        { "type": "p", "html": "These warning signs separate a partner you can scale on from one you will regret." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-eye-slash-fill", "title": "Opaque pricing:", "desc": "Won't separate Meta rate from markup, or quotes only \"per conversation\" under the old model." },
+            { "icon": "bi-headset", "title": "No real support:", "desc": "Ticket-only support, no SLA, no India-hours coverage, no named contact for enterprise accounts." },
+            { "icon": "bi-plug", "title": "Integration gaps:", "desc": "No native connector for your CRM or store, and a thin or undocumented API." },
+            { "icon": "bi-exclamation-triangle-fill", "title": "Vague on BSP status or compliance:", "desc": "Can't confirm official Meta BSP status, or dodges questions on DPDP, encryption and data handling." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-onboarding",
+      "heading": "How Ojiva AI Gets You Live (Done-For-You)",
+      "blocks": [
+        { "type": "p", "html": "We don't hand you a dashboard and wish you luck. Ojiva AI runs the full onboarding so a standard setup goes live in about 48 hours." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-card-checklist", "title": "We handle verification:", "desc": "Meta Business Manager setup, number provisioning and business verification — managed end to end." },
+            { "icon": "bi-file-earmark-check-fill", "title": "Templates drafted & approved:", "desc": "We write your display name and first templates in the right categories and shepherd them through Meta review." },
+            { "icon": "bi-patch-check-fill", "title": "Green-tick application:", "desc": "We submit your verified-badge request so you launch with trust built in." },
+            { "icon": "bi-diagram-3-fill", "title": "Integration mapped first:", "desc": "We connect your CRM or store and test one live flow before you go live — see <a href='/whatsapp/'>WhatsApp Business API</a>." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-costs",
+      "heading": "How Ojiva AI Keeps Your WhatsApp Costs Down",
+      "blocks": [
+        { "type": "p", "html": "On a per-message model, small choices add up fast. We're built to cut your effective cost, not just quote a low headline." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-percent", "title": "Markup shown separately:", "desc": "You see Meta's rate (~₹0.8631 marketing, ~₹0.115 utility/auth) and our markup as distinct lines — no bundling." },
+            { "icon": "bi-chat-dots-fill", "title": "Maximise the free window:", "desc": "We design flows that keep replies inside the 24-hour service window, where messages are free." },
+            { "icon": "bi-tags-fill", "title": "Correct category tagging:", "desc": "We keep utility and authentication messages off the pricier marketing rate, so you don't overpay by mislabelling." },
+            { "icon": "bi-graph-down-arrow", "title": "Volume-based rates:", "desc": "Pricing that improves as you scale — with no surprise overage or seat fees." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-automation",
+      "heading": "Automation Ojiva Builds For You: Chatbot, Flows & Inbox",
+      "blocks": [
+        { "type": "p", "html": "The tooling is where a BSP earns its keep. Ojiva AI gives you the automation that turns WhatsApp from a chat app into a revenue channel." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-robot", "title": "24/7 AI chatbot:", "desc": "A <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a> answers FAQs, shares order status and captures leads while you sleep." },
+            { "icon": "bi-people-fill", "title": "Multi-agent inbox:", "desc": "Your team works one number with routing, assignment and analytics — nothing falls through the cracks." },
+            { "icon": "bi-megaphone-fill", "title": "Campaigns & broadcasts:", "desc": "Schedule segmented template campaigns — abandoned-cart, renewals, re-engagement — from one dashboard." },
+            { "icon": "bi-diagram-3-fill", "title": "200+ integrations:", "desc": "Trigger messages from Shopify, Zoho, Salesforce, HubSpot or your own app via REST API and webhooks." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-ongoing-care",
+      "heading": "Ongoing Care: Quality, Compliance & India Support",
+      "blocks": [
+        { "type": "p", "html": "Go-live is the start, not the finish. Ojiva AI keeps your number healthy and your messaging compliant long after launch." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shield-check", "title": "Quality-rating monitoring:", "desc": "We watch blocks and spam reports and keep your rating green, so your messaging limit scales up, not down." },
+            { "icon": "bi-arrow-repeat", "title": "Template upkeep:", "desc": "We manage re-approvals and new templates as your campaigns evolve — you're never blocked mid-launch." },
+            { "icon": "bi-lock-fill", "title": "Compliance built in:", "desc": "Consent capture, opt-out, AES-256 encryption and DPDP alignment as standard." },
+            { "icon": "bi-headset", "title": "India-based support:", "desc": "A real team in your timezone (Mon–Sat, IST) with a 99.9% uptime SLA. <a href='/book-demo/'>Book a demo</a> to start." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions-to-ask",
+      "heading": "Questions to Ask Every BSP Before You Sign",
+      "blocks": [
+        { "type": "p", "html": "The checklist tells you what to score; these are the exact questions that surface the truth in a sales call. Vague answers are an answer." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-percent", "title": "\"What's your exact markup, and is there a platform fee?\"", "desc": "You want a number in INR, separate from Meta's rate — not \"competitive pricing\"." },
+            { "icon": "bi-file-earmark-ruled-fill", "title": "\"What's your uptime and support SLA in writing?\"", "desc": "Ask for the document, the response time, and a named contact for your account." },
+            { "icon": "bi-hdd-network-fill", "title": "\"Where is my data stored, and which standards do you hold?\"", "desc": "DPDP alignment, data residency, SOC 2 / ISO 27001 — essential for regulated data." },
+            { "icon": "bi-box-arrow-right", "title": "\"Can I keep my number and leave cleanly?\"", "desc": "Confirm number portability and the exit process before you're locked in." },
+            { "icon": "bi-file-earmark-check-fill", "title": "\"Who drafts templates, and how fast do they get approved?\"", "desc": "Approval speed decides how quickly you can launch and iterate." }
+          ]
+        },
+        { "type": "image", "src": "/image/jun13(3).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "pricing-models",
+      "heading": "BSP Pricing Models: Per-Message, Platform Fee or Hybrid?",
+      "blocks": [
+        { "type": "p", "html": "Beyond the per-message rate, BSPs package pricing in three ways. Match the model to your volume pattern or you'll overpay." },
+        {
+          "type": "table",
+          "headers": ["Model", "How you're billed", "Best for"],
+          "rows": [
+            ["<b>Per-message markup</b>", "15–35% over Meta's rate, pay-as-you-go", "Low or variable volume"],
+            ["<b>Flat platform fee</b>", "Fixed monthly fee + Meta pass-through", "High, predictable volume"],
+            ["<b>Hybrid</b>", "Smaller fee + reduced markup", "Mixed / scaling businesses"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-calculator-fill", "title": "Model your real mix:", "desc": "A flat fee only wins above a certain volume. Plug your monthly marketing vs utility split into each model before deciding." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hidden-costs",
+      "heading": "Hidden Costs to Watch in a BSP Contract",
+      "blocks": [
+        { "type": "p", "html": "The headline rate is rarely the whole bill. These line items quietly inflate cost — ask about each before signing." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-receipt-cutoff", "title": "Setup & onboarding fees:", "desc": "Some charge a one-time fee to get you live. Fair if disclosed — a red flag if buried." },
+            { "icon": "bi-person-plus-fill", "title": "Per-agent seat fees:", "desc": "A low platform fee can hide a charge for every inbox user — costly as your team grows." },
+            { "icon": "bi-lock-fill", "title": "Minimum monthly commitment:", "desc": "A floor you pay even in slow months — check it against your lowest-volume season." },
+            { "icon": "bi-graph-up-arrow", "title": "Overage & add-on charges:", "desc": "Extra fees for going over a tier, for the chatbot, or for premium support — confirm what's included vs billed separately." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "features-beyond-api",
+      "heading": "BSP Features That Matter Beyond API Access",
+      "blocks": [
+        { "type": "p", "html": "Every BSP resells the same Meta API — the difference is the tooling on top. These are the features that decide your day-to-day experience." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-robot", "title": "No-code chatbot builder:", "desc": "Build and edit <a href='/whatsapp-chatbot/'>WhatsApp chatbot</a> flows without a developer — the difference between launching this week or next quarter." },
+            { "icon": "bi-ui-checks-grid", "title": "Broadcast & segmentation:", "desc": "Target opt-in audiences by behaviour or tags, not one giant list — better delivery, lower spend." },
+            { "icon": "bi-bar-chart-line-fill", "title": "Analytics & click tracking:", "desc": "Delivery, read and click rates per template, so you optimise instead of guess." },
+            { "icon": "bi-files", "title": "Template & quality management:", "desc": "Easy template submission, reuse and quality-rating visibility in one place." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industry-fit",
+      "heading": "Which Criteria Matter Most for Your Industry",
+      "blocks": [
+        { "type": "p", "html": "All seven criteria matter, but the weighting shifts by sector. Lead with the column that fits you." },
+        {
+          "type": "table",
+          "headers": ["Industry", "Top priorities", "Why"],
+          "rows": [
+            ["<b>Banking / NBFC</b>", "Compliance, uptime, security", "Regulated OTPs & alerts, zero tolerance for downtime"],
+            ["<b>E-commerce / D2C</b>", "Markup, integrations, campaign tools", "High marketing volume, store-triggered messages"],
+            ["<b>Healthcare</b>", "DPDP / data handling, reliability", "Sensitive personal data, critical reminders"],
+            ["<b>SaaS / startups</b>", "API depth, self-serve, scale", "Developer-led setup, fast iteration"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-bullseye", "title": "Weight, don't ignore:", "desc": "A bank still needs fair pricing; a D2C brand still needs compliance — just score your top column heaviest." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self-serve-vs-managed",
+      "heading": "Self-Serve vs Managed Onboarding: Which Fits You?",
+      "blocks": [
+        { "type": "p", "html": "BSPs onboard you one of two ways. Pick based on your team's bandwidth and technical depth, not just price." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-person-gear", "title": "Self-serve:", "desc": "You set up numbers, templates and flows from a dashboard. Fast and cheap if you have the in-house skill and time." },
+            { "icon": "bi-people-fill", "title": "Managed / white-glove:", "desc": "The BSP handles verification, templates and integration for you. Best when you want to launch without a project on your plate." },
+            { "icon": "bi-signpost-2-fill", "title": "The middle path wins for most:", "desc": "A managed launch, then self-serve for ongoing campaigns — confirm the BSP supports both." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "proof-of-concept",
+      "heading": "Run a Proof-of-Concept Before You Commit",
+      "blocks": [
+        { "type": "p", "html": "Don't sign a year's contract off a demo. A short pilot tells you what a sales deck can't. Test these four things." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-send-check-fill", "title": "Real deliverability:", "desc": "Send to a sample list and check delivery and read rates against what was promised." },
+            { "icon": "bi-stopwatch-fill", "title": "Support response time:", "desc": "Raise a real ticket during the trial and time the reply — this is your future experience." },
+            { "icon": "bi-hourglass-split", "title": "Template approval speed:", "desc": "Submit a few templates and measure how fast they clear — it caps how quickly you can launch." },
+            { "icon": "bi-plug-fill", "title": "One live integration:", "desc": "Wire up your CRM or store and fire a test event end to end before you commit." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ojiva-measures-up",
+      "heading": "How Ojiva AI Measures Up",
+      "blocks": [
+        { "type": "p", "html": "In the interest of practising what this checklist preaches, here is how Ojiva AI maps to it — so you can score us the same way you score anyone else." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Official Meta BSP:", "desc": "Ojiva AI is an official Meta WhatsApp Business Solution Provider for India — see our <a href='/whatsapp/'>WhatsApp Business API</a> page." },
+            { "icon": "bi-shield-lock-fill", "title": "Security & compliance:", "desc": "AES-256 encryption, DPDP Act and GDPR alignment, SOC 2 and ISO 27001 practices, and DLT-registered SMS on the same platform." },
+            { "icon": "bi-diagram-3-fill", "title": "Integrations:", "desc": "200+ native connectors plus REST API and webhooks, with a built-in <a href='/whatsapp-chatbot/'>WhatsApp AI chatbot</a> and multi-agent inbox." },
+            { "icon": "bi-clock-fill", "title": "India support & go-live:", "desc": "India-based support (Mon–Sat, business hours IST), a 99.9% uptime SLA, and a typical 48-hour go-live." },
+            { "icon": "bi-grid-1x2-fill", "title": "One stack, many channels:", "desc": "WhatsApp sits alongside <a href='/sms/'>SMS</a>, <a href='/rcs/'>RCS</a>, <a href='/voice/'>voice</a> and <a href='/otp/'>OTP</a>, so you can add channels without a new vendor." },
+            { "icon": "bi-currency-rupee", "title": "[Ojiva: state your exact markup % or platform fee here for full pricing transparency.]", "desc": "Publishing the number is the strongest possible signal on the very first checklist item." }
+          ]
+        },
+        { "type": "p", "html": "We will not claim to be the single best BSP for every business — the right choice depends on your use case and volume. But on this checklist, Ojiva AI is built to score well across all seven criteria. <a href='/book-demo/'>Book a demo</a> and bring this checklist with you." }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "The \"best\" WhatsApp BSP in India is not a universal title — it is the provider that scores highest on the criteria that matter for your business. Insist on transparent INR pricing with the markup shown, a written support SLA with India-hours coverage, the integrations you actually need, official Meta BSP status, and real security and compliance. Run every shortlisted provider through this checklist and the decision makes itself." },
+        { "type": "p", "html": "Ready to evaluate one? Start with Ojiva AI's <a href='/whatsapp/'>WhatsApp Business API</a>, and if you also send text messages, pair it with our <a href='/blogs/dlt-registration-bulk-sms-india/'>DLT-compliant bulk SMS</a> on the same platform." },
+        { "type": "p", "html": "<em>By Ananth · Updated 13 June 2026</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: Choosing a WhatsApp BSP in India",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is a WhatsApp BSP?", "a": "<p>A WhatsApp Business Solution Provider (BSP) is a company officially vetted by Meta to give businesses access to the WhatsApp Business API, along with tooling for onboarding, automation, analytics, compliance and support.</p>" },
+            { "q": "How do I choose the best WhatsApp BSP in India?", "a": "<p>Score each provider on pricing transparency, per-message markup, support SLA and India business-hours coverage, CRM and e-commerce integrations, official Meta BSP status, security and DPDP compliance, and delivery reliability. The best BSP is the one that scores well on the criteria that matter most for your use case.</p>" },
+            { "q": "What is a typical WhatsApp BSP markup in India?", "a": "<p>Most BSPs add a 15–35% per-message markup over Meta's base rates, or charge a fixed monthly platform fee, plus 18% GST. A transparent BSP shows the Meta rate and its own markup separately rather than bundling them.</p>" },
+            { "q": "What is the difference between a BSP and a tech provider?", "a": "<p>An official BSP has a direct, vetted partnership with Meta to provide WhatsApp Business API access. A tech provider builds tools on top of the API, sometimes reselling through a BSP. For reliability and direct support, an official BSP is usually the safer choice.</p>" },
+            { "q": "How do I verify a WhatsApp BSP is official?", "a": "<p>Check Meta's public Business Partner directory, confirm the provider verifies your business in Meta Business Manager, and ask for proof of official BSP status before signing.</p>" },
+            { "q": "Does a WhatsApp BSP handle DLT registration?", "a": "<p>WhatsApp does not use DLT — that is for SMS. A good full-stack provider will, however, handle DLT for any SMS you send alongside WhatsApp, and manage Meta verification and template approval for WhatsApp.</p>" },
+            { "q": "Is Ojiva AI a verified WhatsApp BSP?", "a": "<p>Yes. Ojiva AI is an official Meta WhatsApp Business Solution Provider for India, offering the WhatsApp Business API with a chatbot, multi-agent inbox, CRM integrations, India-based support and DLT-registered SMS on the same platform.</p>" },
+            { "q": "How quickly can a BSP get me live on the WhatsApp API?", "a": "<p>With documents ready, a good BSP can verify your business and get your display name and first templates approved within a few business days. Ojiva AI targets a 48-hour go-live for standard setups.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

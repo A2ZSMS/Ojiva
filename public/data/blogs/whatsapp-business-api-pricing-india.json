@@ -1,0 +1,193 @@
+{
+  "slug": "whatsapp-business-api-pricing-india",
+  "toc": [
+    { "id": "introduction", "label": "Why Your WhatsApp Bill Never Matches the Quote" },
+    { "id": "how-it-works", "label": "How It Works in 2026: Per-Message, Not Per-Conversation" },
+    { "id": "rate-card", "label": "Meta's 2026 India Rate Card" },
+    { "id": "service-window", "label": "The 24-Hour Service Window" },
+    { "id": "hidden-costs", "label": "The Costs Meta Doesn't Show You" },
+    { "id": "cost-examples", "label": "Real Cost Examples" },
+    { "id": "reduce-bill", "label": "How to Reduce Your WhatsApp API Bill" },
+    { "id": "india-vs-world", "label": "India vs the World" },
+    { "id": "faq", "label": "Frequently Asked Questions" },
+    { "id": "messaging-stack", "label": "Build Your Full Messaging Stack" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "final-cta", "label": "Choose Ojiva AI" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": "Why Your WhatsApp Bill Never Matches the Quote",
+      "blocks": [
+        { "type": "p", "html": "You budget a WhatsApp campaign at one number, the invoice lands at nearly double, and nobody can tell you why. It is the most common complaint about WhatsApp Business API pricing in India&mdash;not that it is expensive, but that the real cost is buried under categories, platform fees, markups, and tax that no one explained up front. This guide breaks down every rupee. You will see Meta's 2026 India rate card, what changed on 1 January 2026, the costs your provider does not put on the homepage, and three real cost examples so you can budget accurately before you commit. The short version: India is one of the cheapest WhatsApp markets in the world&mdash;but only if you understand the full cost stack." }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How It Works in 2026: Per-Message, Not Per-Conversation",
+      "blocks": [
+        { "type": "p", "html": "The first thing to understand is that WhatsApp Business API pricing is now per-message, not per-conversation. Until mid-2025, Meta charged per 24-hour &ldquo;conversation&rdquo; regardless of how many messages you sent inside it. That model is gone. In 2026 you pay for each template message delivered, priced by message category and by the recipient's country code&mdash;not your business location. That last detail matters: if you message a customer in Mumbai, you pay India's rate even if your company is registered abroad. And because India is one of the cheapest WhatsApp markets in the world, adoption here is booming across fintech, e-commerce, logistics, and BFSI." },
+        { "type": "image", "src": "/image/jun2(1).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "rate-card",
+      "heading": "Meta's 2026 India Rate Card: The Four Message Categories",
+      "blocks": [
+        { "type": "p", "html": "There are four message categories, each with its own per-message rate. Marketing is roughly 7&ndash;8&times; the cost of utility and authentication, so your category mix&mdash;not just your volume&mdash; decides your bill. A business sending mostly OTPs and order updates pays a fraction of what an aggressive promotional sender pays for the same message count." },
+        {
+          "type": "table",
+          "headers": ["Category", "What it's for", "India rate (Meta, 2026)", "Notes"],
+          "rows": [
+            ["Marketing", "Offers, promotions, re-engagement", "₹0.8631 / message (~$0.0107)", "The expensive one"],
+            ["Utility", "Order updates, payment reminders, receipts", "~₹0.115 / message", "Free if sent inside an open service window"],
+            ["Authentication", "OTPs, verification codes", "~₹0.115 / message", "Similar to utility"],
+            ["Service", "Replies to customer-initiated chats", "Free", "Within the 24-hour window"]
+          ]
+        },
+        { "type": "h", "level": 3, "text": "What Changed on 1 January 2026" },
+        { "type": "p", "html": "Meta raised India's marketing rate by roughly 10% on 1 January 2026&mdash;from &#8377;0.7846 to &#8377;0.8631 per marketing message&mdash;citing sustained high demand. Utility and authentication rates stayed broadly stable at around &#8377;0.115. If your 2025 budget assumed the old marketing rate, every promotional campaign now costs about a tenth more before you add anything else." }
+      ]
+    },
+    {
+      "id": "service-window",
+      "heading": "The 24-Hour Service Window: How to Message for Free",
+      "blocks": [
+        { "type": "p", "html": "When a customer messages your business first, a 24-hour customer service window opens. Inside it you can send unlimited free-form replies&mdash;text, images, files, even utility templates&mdash;at no per-message charge. Every new message from the customer resets the 24-hour timer, so an active support thread can stay free for days." },
+        { "type": "p", "html": "For support-heavy businesses, routing conversations through this window is the single biggest lever for cutting WhatsApp costs. A few rules to remember:" },
+        { "type": "h", "level": 3, "text": "Service Window Rules" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-clock-history", "title": "It resets on every customer reply.", "desc": "Each inbound message restarts the 24-hour clock, so long threads can remain free." },
+            { "icon": "bi-slash-circle", "title": "No marketing or authentication templates inside it.", "desc": "Meta reserves the window for genuine support, not upselling." },
+            { "icon": "bi-info-circle", "title": "The &ldquo;1,000 free&rdquo; allowance is service-only now.", "desc": "The free-marketing allowance some older guides mention has been rolled back." }
+          ]
+        },
+        { "type": "p", "html": "Not sure whether you even need the API yet? Read our guide on <a href='/blogs/whatsapp-business-app-vs-api/' class='text-primary'>WhatsApp Business App vs API</a> before you budget." }
+      ]
+    },
+    {
+      "id": "hidden-costs",
+      "heading": "The Costs Meta Doesn't Show You: BSP Fees, Markup & GST",
+      "blocks": [
+        { "type": "p", "html": "Meta's rate card is only the base layer. Your actual bill has three more components stacked on top&mdash;and this is exactly where a campaign budgeted at one number arrives at nearly double." },
+        { "type": "h", "level": 3, "text": "The Three Layers on Top of Meta's Rate" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-credit-card", "title": "BSP platform fees:", "desc": "You access the API through a Business Solution Provider (BSP) like Ojiva AI. Most charge a monthly platform subscription, commonly &#8377;999&ndash;&#8377;5,000/month, covering the dashboard, broadcasts, automation, team inbox, and template management." },
+            { "icon": "bi-percent", "title": "Per-message markup:", "desc": "Many Indian BSPs add a 10&ndash;30% markup over Meta's base rate, so a &#8377;0.8631 marketing message can effectively cost &#8377;1.00&ndash;&#8377;1.15. Always ask whether a quoted rate is Meta's rate or Meta-plus-markup." },
+            { "icon": "bi-receipt", "title": "18% GST:", "desc": "GST applies on both Meta's charges and your BSP's platform fees. Meta's charges are treated as imported (OIDAR) services, and depending on your setup you may handle the reverse-charge mechanism yourself&mdash;confirm with your provider and accountant." }
+          ]
+        },
+        { "type": "html", "content": "<div class='mt-4 p-4 bg-light rounded'><h4 class='text-primary mb-3'>Want pricing without the surprises?</h4><p class='mb-3'>Ojiva AI offers WhatsApp Business API with transparent, pass-through pricing&mdash;Meta's rates without surprise markups&mdash;plus broadcasts, automation, and a shared team inbox.</p><div class='d-flex gap-3'><a href='https://www.ojiva.ai/whatsapp/' class='btn btn-primary'>Explore WhatsApp API</a><a href='https://www.ojiva.ai/contact/' class='btn btn-outline-primary'>Get a Price Quote</a></div></div>" },
+        { "type": "image", "src": "/image/jun2(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+      ]
+    },
+    {
+      "id": "cost-examples",
+      "heading": "Real Cost Examples for Indian Businesses",
+      "blocks": [
+        { "type": "p", "html": "Approximate Meta-only charges (before BSP markup and GST), to show how category mix drives the bill. In all three, marketing volume is what runs up the cost&mdash;shifting eligible messages to utility/service categories and the free service window cuts spend dramatically." },
+        { "type": "h", "level": 3, "text": "Three Business Profiles" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-shop-window", "title": "Small business (support + OTPs):", "desc": "2,000 utility/auth (&times; &#8377;0.115 &asymp; &#8377;230) + 500 marketing (&times; &#8377;0.8631 &asymp; &#8377;432) = ~&#8377;662 Meta + ~&#8377;1,500 platform + 18% GST &asymp; <strong>&#8377;2,550/month all-in</strong>." },
+            { "icon": "bi-bag-heart", "title": "Growing D2C brand (active marketing):", "desc": "Four monthly blasts to 25,000 opted-in customers = 100,000 marketing &times; &#8377;0.8631 &asymp; &#8377;86,310, plus 18% GST &asymp; <strong>&#8377;1,01,846 in Meta charges alone</strong>, before platform fees and markup." },
+            { "icon": "bi-building", "title": "High-volume sender:", "desc": "500,000 marketing messages/month &times; &#8377;0.8631 &asymp; <strong>&#8377;4.31 lakh in Meta charges alone</strong>, plus GST and BSP fees." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reduce-bill",
+      "heading": "How to Reduce Your WhatsApp API Bill: Five Levers",
+      "blocks": [
+        { "type": "p", "html": "Per-message billing creates clear optimisation levers that the old conversation model did not. Each of these reduces real spend, not just theoretical waste." },
+        { "type": "h", "level": 3, "text": "Five Ways to Cut Your WhatsApp Spend" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle", "title": "Audit your category mix.", "desc": "Send as utility/authentication anything that legitimately qualifies&mdash;they are ~7&ndash;8&times; cheaper than marketing." },
+            { "icon": "bi-2-circle", "title": "Use the 24-hour window.", "desc": "Handle support and follow-ups inside the free service window with automation." },
+            { "icon": "bi-3-circle", "title": "Stop blasting your whole list.", "desc": "The most expensive habit is broadcasting marketing to everyone weekly. Segment and target." },
+            { "icon": "bi-4-circle", "title": "Negotiate the markup.", "desc": "Ask your BSP for the exact per-message rate over Meta's base and push for transparent pass-through pricing." },
+            { "icon": "bi-5-circle", "title": "Bill in INR.", "desc": "Set up your WhatsApp Business Account with INR billing to avoid currency friction. Note: existing USD-billed accounts cannot be converted&mdash;you would need a new account." }
+          ]
+        },
+        { "type": "p", "html": "Choosing a provider? Use our <a href='/blogs/best-whatsapp-bsp-india/' class='text-primary'>2026 WhatsApp BSP buyer's checklist</a> to compare on price transparency and support." }
+      ]
+    },
+    {
+      "id": "india-vs-world",
+      "heading": "India vs the World: Why India Is the Cheapest Market",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp pricing varies wildly by country, and India sits near the bottom&mdash;which is great news for Indian businesses. A marketing message that costs about $0.0107 in India costs roughly $0.0255 in the US and far more in parts of Europe, where marketing rates can run several times higher." },
+        { "type": "p", "html": "If your audience is India-first, you are operating in one of the most cost-effective business messaging markets on the planet. Get your category mix right and use the free service window, and the channel becomes more efficient as you scale, not less." }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: WhatsApp API Pricing in India",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "How much does WhatsApp Business API cost in India in 2026?", "a": "<p>Meta's per-message rates are about &#8377;0.8631 for marketing, ~&#8377;0.115 for utility, and ~&#8377;0.115 for authentication; service messages within the 24-hour window are free. On top of Meta's rates you pay your BSP platform fee, any per-message markup, and 18% GST.</p>" },
+            { "q": "Is WhatsApp Business API pricing per message or per conversation in 2026?", "a": "<p>Per message. Meta moved from per-conversation to per-template-message pricing, so you pay for each template message delivered, by category and recipient country.</p>" },
+            { "q": "Why did WhatsApp pricing increase in India in January 2026?", "a": "<p>Meta raised India's marketing message rate by roughly 10%, from &#8377;0.7846 to &#8377;0.8631, effective 1 January 2026, citing sustained high demand. Utility and authentication rates stayed broadly stable.</p>" },
+            { "q": "Are WhatsApp service messages really free?", "a": "<p>Yes. Replies to customer-initiated chats are free within the 24-hour customer service window. You cannot send marketing or authentication templates inside that window.</p>" },
+            { "q": "Does GST apply to WhatsApp Business API charges?", "a": "<p>Yes, 18% GST applies to both Meta's charges and your BSP platform fees. Meta's charges are treated as imported OIDAR services; confirm reverse-charge handling with your BSP.</p>" },
+            { "q": "What is the minimum realistic monthly cost?", "a": "<p>For a small team sending a couple of thousand utility or authentication messages and a few hundred marketing messages, expect roughly &#8377;2,000 to &#8377;2,500 per month all-in, including platform fee, Meta charges, and GST.</p>" },
+            { "q": "Do BSPs add markup on top of Meta's rates?", "a": "<p>Many do, commonly 10 to 30% per message. Always ask whether a quoted rate is Meta's base rate or Meta-plus-markup before budgeting.</p>" },
+            { "q": "Which WhatsApp message category is cheapest?", "a": "<p>Service is free within the 24-hour window; utility and authentication (~&#8377;0.115) are far cheaper than marketing (~&#8377;0.8631). Mapping each message to the correct, cheapest valid category is the easiest way to cut cost.</p>" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging-stack",
+      "heading": "Build Your Full Messaging Stack: WhatsApp, Bulk SMS & RCS",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp is the highest-converting channel for most Indian SMBs&mdash;but the strongest 2026 strategy pairs it with bulk SMS for guaranteed delivery and RCS for rich native messaging. Explore how the channels work together:" },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-whatsapp", "title": "WhatsApp Business API", "desc": "Transparent, pass-through WhatsApp API pricing with broadcasts, automation, chatbots, and a shared team inbox&mdash;built for Indian businesses billing in INR. <a href='https://www.ojiva.ai/whatsapp/' class='text-primary'>Explore WhatsApp API</a>" },
+            { "icon": "bi-chat-square-text", "title": "Bulk SMS Services", "desc": "Reach every customer on any handset with DLT-compliant bulk SMS and direct operator routing&mdash;ideal for OTPs, alerts, and guaranteed-delivery fallback. <a href='https://www.ojiva.ai/sms/' class='text-primary'>SMS Solutions</a>" },
+            { "icon": "bi-broadcast", "title": "RCS Messaging", "desc": "Rich, branded, interactive messages with carousels, images, and action buttons inside the native Messages app&mdash;with SMS fallback for complete reach. <a href='https://www.ojiva.ai/rcs/' class='text-primary'>Learn About RCS</a>" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Budget WhatsApp the Right Way",
+      "blocks": [
+        { "type": "p", "html": "WhatsApp Business API is one of the cheapest, highest-converting channels available to Indian businesses in 2026&mdash;but only if you understand the full cost stack: Meta's per-message rates, the BSP platform fee, the markup, and 18% GST." },
+        { "type": "p", "html": "Get your category mix right and use the free 24-hour service window, and the channel gets more efficient as you scale, not less. The businesses that overspend are the ones blasting marketing to their whole list every week; the ones that win route support through the free window and reserve marketing for segmented, high-intent audiences." },
+        { "type": "html", "content": "<div class='mt-5 p-4 bg-primary text-white rounded'><h4 class='mb-3'>Want WhatsApp API Pricing Without Surprises?</h4><p class='mb-4'>Ojiva AI offers WhatsApp Business API with transparent, pass-through pricing&mdash;Meta's rates without surprise markups&mdash;plus broadcasts, automation, and a shared team inbox. Get a clear quote before you commit a single rupee.</p><div class='d-flex gap-3'><a href='/contact/' class='btn btn-light'>Get a WhatsApp API Quote</a><a href='/whatsapp/' class='btn btn-outline-light'>Explore WhatsApp API</a></div></div>" }
+      ]
+    },
+    {
+      "id": "final-cta",
+      "heading": "Choose Ojiva AI for Transparent WhatsApp API Pricing",
+      "blocks": [
+        { "type": "p", "html": "Indian businesses trust Ojiva AI for WhatsApp Business API that is priced honestly&mdash;Meta's rates passed through without hidden markups, billed in INR, with the automation and support to keep your cost per result low." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-cash-coin", "title": "Pass-Through Pricing", "desc": "Meta's rates with no surprise per-message markup" },
+            { "icon": "bi-currency-rupee", "title": "INR Billing", "desc": "Local billing, no currency-conversion friction" },
+            { "icon": "bi-robot", "title": "Automation Built In", "desc": "Chatbots &amp; the free service window to cut cost per result" },
+            { "icon": "bi-headset", "title": "Expert Support", "desc": "Guidance on category mix and budget optimisation" }
+          ]
+        },
+        { "type": "p", "html": "<a href='/contact/' class='btn btn-primary me-3'>Get a WhatsApp API Quote</a> <a href='https://www.ojiva.ai/whatsapp/' class='btn btn-outline-primary'>Learn More About Solutions</a>" },
+        { "type": "p", "html": "<span class='text-muted small'>Sources: Meta WhatsApp Business Platform pricing documentation (2026 rate card); Indian BSP pricing disclosures. Rates verified against Meta's India rate card as of mid-2026&mdash;always confirm current rates before forecasting.</span>" }
+      ]
+    }
+  ]
+}

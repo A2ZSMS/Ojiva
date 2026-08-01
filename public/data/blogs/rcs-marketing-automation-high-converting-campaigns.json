@@ -1,0 +1,192 @@
+{
+  "slug": "rcs-marketing-automation-high-converting-campaigns",
+  "toc": [
+    { "id": "what-is-rcs-marketing", "label": "What Is RCS Marketing" },
+    { "id": "rcs-features", "label": "Core RCS Features" },
+    { "id": "build-campaigns", "label": "Build High-Converting Campaigns" },
+    { "id": "use-cases", "label": "Top RCS Use Cases" },
+    { "id": "pricing", "label": "RCS Messaging Pricing" },
+    { "id": "how-to-get", "label": "Get Started with Ojiva AI" },
+    { "id": "why-ojiva", "label": "Why Ojiva AI" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        { "type": "p", "html": "<strong>RCS marketing automation</strong> turns your customer's default messaging inbox into your highest-converting channel — no app download, no new number to save. Rich Communication Services (RCS) upgrades plain SMS into branded, interactive conversations with a verified sender name, images, product carousels and one-tap buttons, delivered straight into the native messaging app. With open rates above 90% and click-through rates up to 7x higher than plain text, RCS business messaging is fast becoming the core of every serious mobile marketing strategy. This guide explains what RCS marketing is, the RCS features that make automation work, how to build high-converting RCS campaigns, and what RCS messaging pricing really looks like. For full coverage, pair it with <a href='/sms/'>bulk SMS</a> fallback and the <a href='/whatsapp/'>WhatsApp Business API</a> — and if you're comparing channels, read <a href='/blogs/best-whatsapp-api-service-provider-in-bangalore/'>Best WhatsApp API Service Provider in Bangalore</a> next." },
+        { "type": "image", "src": "/image/jul17(1).webp", "alt": "RCS marketing automation — Ojiva AI RCS business messaging campaign with rich cards and carousels" }
+      ]
+    },
+    {
+      "id": "what-is-rcs-marketing",
+      "heading": "What Is RCS Marketing and How Is It Different from SMS?",
+      "blocks": [
+        { "type": "p", "html": "RCS marketing uses <a href='https://www.gsma.com/solutions-and-impact/technologies/networks/rcs/' target='_blank' rel='noopener noreferrer'>Rich Communication Services</a> — the upgraded messaging standard built into Android and now supported on iPhone — to send rich, interactive, app-like messages through the phone's native inbox. Where SMS marketing stops at 160 plain-text characters, <a href='/rcs/'>RCS Business Messaging</a> gives you a verified brand profile, high-resolution media, quick replies and tappable buttons, all without asking the customer to install anything. With 1.5 billion+ monthly active users worldwide, the reach is already there. Here's the plain difference between the two channels." },
+        {
+          "type": "table",
+          "headers": ["Factor", "SMS", "RCS Business Messaging"],
+          "rows": [
+            ["Message length", "160 characters, plain text only", "Up to 3,072 characters per message"],
+            ["Rich media", "None (links only)", "Images, video, GIFs and audio up to 100 MB"],
+            ["Branding", "Sender ID or long code", "Verified profile with logo, name and brand colours"],
+            ["Interactivity", "Reply by typing", "Quick replies, buttons, carousels and webviews"],
+            ["Analytics", "Delivery reports only", "Read receipts, button clicks and carousel swipes"],
+            ["Best fit", "OTPs, alerts and guaranteed reach", "Marketing campaigns and conversational commerce"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-phone-fill", "title": "Why RCS is taking off now:", "desc": "Apple's decision to support RCS on iPhone removed the last big gap in coverage, and verified sender profiles cut through the spam problem that makes people ignore unknown SMS numbers. Users now spend up to 45 seconds inside a rich RCS message — far longer than a glance at a text." },
+            { "icon": "bi-graph-up-arrow", "title": "India is leading RCS adoption:", "desc": "Around 27% of Indian smartphone users already chat with brands over RCS, and message volumes in India are projected to grow nearly sevenfold over the coming years. For businesses here, RCS messaging is an early-mover advantage, not a wait-and-watch channel." },
+            { "icon": "bi-diagram-3-fill", "title": "One channel isn't the whole story:", "desc": "The strongest setups run <a href='/rcs/'>RCS</a> for rich campaigns, the <a href='/whatsapp/'>WhatsApp Business API</a> for two-way conversations, and <a href='/sms/'>bulk SMS</a> as guaranteed fallback — full coverage from one provider." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rcs-features",
+      "heading": "Core RCS Features That Make Marketing Automation Work",
+      "blocks": [
+        { "type": "p", "html": "RCS isn't just a prettier SMS. Each feature below is an automation trigger — a tap, a swipe or a read receipt your platform can react to instantly. That's what turns rich media messaging into a high-converting, self-running campaign engine instead of a one-way blast." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-hand-index-thumb-fill", "title": "Interactive buttons & quick replies:", "desc": "Customers tap instead of type — \"Buy Now\", \"Track Order\", \"Talk to Agent\". Every tap can trigger the next automated flow, so intent is captured in one touch instead of a typed keyword." },
+            { "icon": "bi-images", "title": "Rich cards & product carousels:", "desc": "A swipeable carousel is a mini storefront inside the inbox — multiple products, each with an image, description and its own call-to-action button. Perfect for launches, seasonal offers and interactive messaging campaigns." },
+            { "icon": "bi-patch-check-fill", "title": "Verified business profile:", "desc": "Your logo, brand name and verification badge appear on every message. Customers instantly know it's really you — which is why verified RCS senders see far fewer ignored messages than anonymous SMS headers." },
+            { "icon": "bi-window-fullscreen", "title": "Webviews for in-chat shopping:", "desc": "Open a catalogue, cart or payment page inside the conversation itself. The customer browses and buys without ever switching apps — the heart of conversational commerce." },
+            { "icon": "bi-bar-chart-fill", "title": "Read receipts & real-time analytics:", "desc": "Track reads, button clicks and carousel swipes per message — not just deliveries. That data feeds straight back into your automation to time follow-ups and improve every RCS campaign." }
+          ]
+        },
+        { "type": "image", "src": "/image/jul17(2).webp", "alt": "RCS features for marketing automation — interactive buttons, rich cards and carousels by Ojiva AI" }
+      ]
+    },
+    {
+      "id": "build-campaigns",
+      "heading": "How to Build High-Converting RCS Campaigns, Step by Step",
+      "blocks": [
+        { "type": "p", "html": "A high-converting RCS campaign is planned like a conversation, not a broadcast. Whether it's your first RCS marketing campaign or you're moving budget across from SMS marketing, the same five steps apply." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Define the goal and segment an opted-in audience:", "desc": "Pick one objective — sales, reactivation, feedback — and message only customers who've agreed to hear from you. Segment by purchase history, location and behaviour so every rich card feels relevant." },
+            { "icon": "bi-lightning-charge-fill", "title": "Set up event-based triggers and post-purchase flows:", "desc": "Let real events fire the messages — order placed, cart abandoned, delivery out, payment due. Post-purchase flows like order confirmations get opened at several times the rate of bulk email, so automate them first." },
+            { "icon": "bi-arrow-left-right", "title": "Integrate your CRM for personalization:", "desc": "Connect RCS to Zoho, HubSpot, Salesforce or your custom CRM so every message uses the customer's name, last purchase and preferences — and every tap flows back into the customer record." },
+            { "icon": "bi-phone-vibrate-fill", "title": "Test on both Android and iPhone:", "desc": "RCS renders slightly differently across devices. Keep card descriptions tight, lead with one clear action button, and preview on both platforms before you hit send." },
+            { "icon": "bi-5-circle-fill", "title": "Measure, learn, optimize:", "desc": "Use read receipts and click data to refine creative, timing and audience — then let the automation re-run the improved version. That's the loop that compounds into high-converting campaigns." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Top RCS Business Messaging Use Cases Across Industries",
+      "blocks": [
+        { "type": "p", "html": "RCS pays back fastest wherever a rich, tappable message beats a plain text or an ignored email. These are the use cases delivering results right now." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-cart-check-fill", "title": "E-commerce & Retail — carousels and cart recovery:", "desc": "Around 70% of online carts are abandoned. An RCS abandoned-cart reminder shows the product image with a one-tap checkout button, recovering sales a plain SMS never could. Add carousel promotions and back-in-stock alerts for the full funnel. See <a href='/solutions/ecommerce-retail/'>E-commerce & Retail</a>." },
+            { "icon": "bi-tags-fill", "title": "Personalized offers with rich cards:", "desc": "Send tailored deals based on past purchases and browsing behaviour — image, offer and \"Redeem Now\" button in one card, redeemable without leaving the inbox." },
+            { "icon": "bi-hospital-fill", "title": "Healthcare — appointment confirmations:", "desc": "Clinics send reminders with Confirm, Cancel and Reschedule buttons, cutting no-shows without a single phone call. See <a href='/solutions/healthcare/'>Healthcare</a>." },
+            { "icon": "bi-bank", "title": "Banking & Finance — trusted alerts:", "desc": "Verified-sender transaction alerts, EMI reminders and payment nudges customers actually trust, because the badge proves who's messaging. Pair with <a href='/otp/'>OTP</a> on SMS for authentication. See <a href='/solutions/banking-finance/'>Banking & Finance</a>." },
+            { "icon": "bi-mortarboard-fill", "title": "Education — admissions and updates:", "desc": "Course brochures as rich cards, fee reminders with a pay button, and event invites parents can RSVP to in one tap. See <a href='/solutions/education/'>Education</a>." },
+            { "icon": "bi-star-fill", "title": "Surveys, feedback and support follow-ups:", "desc": "Star-rating prompts and quick-reply buttons inside the chat lift response rates dramatically — and a support follow-up with a how-to video closes the loop after every resolved ticket." }
+          ]
+        },
+        { "type": "image", "src": "/image/jul17(3).webp", "alt": "RCS business messaging use cases — abandoned cart recovery and appointment reminders with Ojiva AI" }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "RCS Messaging Pricing in India: What to Expect",
+      "blocks": [
+        { "type": "p", "html": "So how much does RCS messaging cost? Like SMS, RCS is billed per delivered message, but rates depend on the message type and the operator. Basic text-only RCS messages are usually priced close to SMS, while rich messages — cards, carousels, media and buttons — carry a premium that their higher click-through rates comfortably justify. A provider platform fee and 18% GST apply on top, billed in INR. As always: ask for a plain rate card before you sign." },
+        {
+          "type": "table",
+          "headers": ["Message type", "What you get", "Pricing approach"],
+          "rows": [
+            ["Basic RCS message", "Text up to 3,072 characters, verified sender", "Priced close to standard SMS rates"],
+            ["Rich / single message", "Image or video card with buttons", "Premium per delivered message"],
+            ["Carousel message", "Swipeable multi-product cards", "Billed as a rich message"],
+            ["SMS fallback", "Auto-delivery as SMS on non-RCS handsets", "Standard SMS rate when triggered"],
+            ["Platform fee & GST", "Dashboard, APIs, support and reporting", "Provider fee + 18% GST, billed in INR"]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-cash-coin", "title": "Judge cost per conversion, not cost per message:", "desc": "A rich RCS message costs more than an SMS but converts several times better — so the channel that looks pricier per message is often the cheapest per sale. A good RCS service provider shows you both numbers and gives you a GST invoice on every payment." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-to-get",
+      "heading": "How to Get Started with RCS Business Messaging with Ojiva AI",
+      "blocks": [
+        { "type": "p", "html": "Businesses searching for an RCS service provider ask the same three things — how does verification work, what does it cost, and how hard is the integration? RCS runs on <a href='https://developers.google.com/business-communications/rcs-business-messaging' target='_blank' rel='noopener noreferrer'>Google's RCS Business Messaging</a> framework with operator approval, and Ojiva AI handles that entire journey in one guided process. Most brands go live within days." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-1-circle-fill", "title": "Register your verified sender:", "desc": "Share your brand details; we set up your RCS agent — logo, brand name, colours and verification — and take it through Google and operator approval." },
+            { "icon": "bi-2-circle-fill", "title": "Get templates and creatives approved:", "desc": "We draft your rich cards, carousels and message templates so campaigns clear review the first time and launch day stays on schedule." },
+            { "icon": "bi-3-circle-fill", "title": "Integrate or go no-code:", "desc": "Developers connect through the RCS API and webhooks; marketing teams launch straight from the visual campaign panel — no code needed." },
+            { "icon": "bi-4-circle-fill", "title": "Switch on smart SMS fallback:", "desc": "Handsets without RCS automatically receive an <a href='/sms/'>SMS</a> version, so every campaign reaches 100% of your list with zero extra work." },
+            { "icon": "bi-5-circle-fill", "title": "Launch, automate and improve:", "desc": "Go live, wire up your event-based triggers, and use read and click data to sharpen creative and timing for a lower cost per conversion." }
+          ]
+        },
+        { "type": "p", "html": "Search less, launch faster — explore <a href='/rcs/'>RCS Business Messaging</a> or <a href='/book-demo/'>book a free demo</a> today." }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Ojiva AI Is the Best RCS Service Provider for Marketing Automation",
+      "blocks": [
+        { "type": "p", "html": "Run Ojiva AI through the same checklist above and here's what you get — one platform, one team to hold accountable." },
+        {
+          "type": "icon-list",
+          "items": [
+            { "icon": "bi-patch-check-fill", "title": "Verified sender setup done for you:", "desc": "RCS agent creation, branding and Google/operator approvals handled end to end, so your first campaign isn't stuck in review." },
+            { "icon": "bi-images", "title": "Rich creative and template support:", "desc": "Cards, carousels and webview journeys designed and approved with you — RCS marketing that looks the part from message one." },
+            { "icon": "bi-robot", "title": "Automation, chatbot and CRM integration:", "desc": "Event-based triggers, an <a href='/whatsapp-chatbot/'>AI chatbot</a> for instant replies, and native connectors for Zoho, HubSpot and Salesforce — the full marketing automation stack." },
+            { "icon": "bi-arrow-repeat", "title": "Smart SMS fallback built in:", "desc": "Non-RCS handsets get an automatic <a href='/sms/'>bulk SMS</a> copy, so rich messaging never costs you reach." },
+            { "icon": "bi-currency-rupee", "title": "Transparent INR pricing:", "desc": "Clear per-message-type rate cards, INR billing and a GST invoice on every payment — no hidden fees." },
+            { "icon": "bi-headset", "title": "One platform, local support:", "desc": "<a href='/rcs/'>RCS</a>, <a href='/whatsapp/'>WhatsApp Business API</a>, <a href='/sms/'>bulk SMS</a>, voice and <a href='/otp/'>OTP</a> together, backed by an India-based team on Monday–Saturday IST hours." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "blocks": [
+        { "type": "p", "html": "RCS marketing automation is what happens when the reach of SMS meets the richness of an app — verified branding, carousels, one-tap actions and real analytics, all inside the inbox your customers already check every day. The playbook is simple: start with an opted-in audience, automate the post-purchase and abandoned-cart flows first, personalize through your CRM, and judge the channel on cost per conversion rather than cost per message." },
+        { "type": "p", "html": "Want to see it with your own customers? Explore Ojiva AI's <a href='/rcs/'>RCS Business Messaging</a>, add <a href='/sms/'>bulk SMS</a> or the <a href='/whatsapp/'>WhatsApp Business API</a> for full coverage, and <a href='/book-demo/'>book a demo</a> — we'll walk you through verification, templates and real pricing for your volume." },
+        { "type": "p", "html": "<em>By Ananth · Published 17 July</em>" }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: RCS Marketing Automation",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            { "q": "What is RCS marketing automation?", "a": "<p>RCS marketing automation combines Rich Communication Services — branded, interactive messages in the phone's native inbox — with automated triggers like order events, cart abandonment and button taps. Instead of one-way SMS blasts, campaigns run themselves: the right rich card, to the right customer, at the exact moment an event happens.</p>" },
+            { "q": "How is RCS different from SMS marketing?", "a": "<p>SMS is limited to 160 plain-text characters with delivery reports only. RCS supports up to 3,072 characters, rich media up to 100 MB, a verified sender profile, quick-reply buttons, carousels and read receipts. That's why RCS campaigns see open rates above 90% and click-through rates up to 7x higher than SMS.</p>" },
+            { "q": "Do customers need to download an app to receive RCS messages?", "a": "<p>No. RCS messages arrive in the phone's default messaging app — Google Messages on Android and the built-in Messages app on supported iPhones. There's nothing to install and no new number to save, which is exactly why RCS business messaging reaches customers other channels miss.</p>" },
+            { "q": "Does RCS messaging work on iPhone?", "a": "<p>Yes. Apple now supports RCS on iPhone, which triggered a massive jump in global RCS traffic. Rendering can differ slightly between iPhone and Android, so a good RCS service provider tests campaigns on both — and Ojiva AI adds automatic SMS fallback for any handset that doesn't support RCS yet.</p>" },
+            { "q": "How much does RCS messaging cost in India?", "a": "<p>RCS is billed per delivered message, in INR. Basic text-only messages are priced close to SMS, while rich messages with cards, carousels and buttons carry a premium. A provider platform fee and 18% GST apply on top. Judge the channel on cost per conversion — rich messages convert several times better, so they usually win on the numbers that matter.</p>" },
+            { "q": "What are the best RCS use cases for e-commerce?", "a": "<p>The highest-ROI e-commerce use cases are abandoned-cart recovery with a one-tap checkout button, product carousels for launches and offers, back-in-stock and price-drop alerts, order and delivery updates, and post-purchase review requests with star-rating buttons — all automated through event-based triggers.</p>" },
+            { "q": "Can I automate abandoned cart recovery with RCS?", "a": "<p>Yes — it's one of the strongest RCS marketing automation flows. When a customer leaves items in the cart, the trigger fires a rich card showing the product image, price and a one-tap \"Complete Purchase\" button. With around 70% of carts abandoned, even a small recovery rate pays for the channel many times over.</p>" },
+            { "q": "How do I start RCS business messaging with Ojiva AI?", "a": "<p>Share your brand details and we handle the rest — verified sender registration through Google's RCS Business Messaging framework, operator approval, template and creative design, RCS API or no-code integration, and smart SMS fallback. Most businesses go live within days. Book a free demo to see real campaigns and pricing for your volume.</p>" }
+          ]
+        }
+      ]
+    }
+  ]
+}
