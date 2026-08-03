@@ -26,7 +26,7 @@ export default function NoCodeBuilder() {
           <SlideRight className="service-feature-visual">
             <ScalePop>
               <Image
-                src="/images/chatbot-builder.webp"
+                src="/image/chatbot-builder.webp"
                 alt="Ojiva AI no-code WhatsApp chatbot flow builder for India — drag-and-drop interface to create conversational AI bots without coding"
                 width={600}
                 height={600}

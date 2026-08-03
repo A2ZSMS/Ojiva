@@ -1,5 +1,3 @@
-import React from "react";
-
 // Renders a single block based on its `type`.
 // Each block gets a unique key from the caller.
 const renderBlock = (block, blockIdx, sectionId) => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './whatsapp-api/Header';
 import Hero from './whatsapp-api/Hero';
 import Problem from './whatsapp-api/Problem';

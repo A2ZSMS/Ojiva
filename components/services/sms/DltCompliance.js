@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { SlideLeft, SlideRight } from '@/components/ui/Animations';
 import { DLT_STATS, DELIVERY_ROUTES } from './data';
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, SlideLeft, SlideRight } from '@/components/ui/Animations';
 import { BSP_STATS, CHATBOT_LOG } from './data';

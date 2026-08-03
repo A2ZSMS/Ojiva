@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { SlideLeft, SlideRight, ScalePop } from '@/components/ui/Animations';
 
