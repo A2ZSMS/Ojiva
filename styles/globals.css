@@ -1745,6 +1745,11 @@ p {
   background: #f8fafc;
 }
 
+/* Center incomplete last row (e.g. 7 or 10 cards → 1 orphan) so the
+   lone card sits in the middle instead of hanging left. Full rows are
+   unaffected because there's no free space to distribute. */
+.blg-content-section .row.g-4 { justify-content: center; }
+
 /* Results bar */
 .blg-results-bar {
   display: flex;
