@@ -22,7 +22,8 @@ const TABS = [
 
 /** Ticket submit form */
 function TicketForm() {
-  const [form, setForm]       = useState({ name: '', email: '', phone: '', subject: '', priority: 'medium', message: '' });
+  const [form, setForm]       = useState({ name: '', email: '', phone: '', company: '', subject: '', priority: 'medium', message: '' });
+  const [errorMsg, setErrorMsg] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading]     = useState(false);
   const [ticketId, setTicketId]   = useState('');
@@ -31,6 +32,14 @@ function TicketForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // ── Client-side validation ──
+    if (form.name.trim().length < 2) { setErrorMsg('Please enter your full name (at least 2 characters).'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
+    if (!/^[6-9][0-9]{9}$/.test(form.phone)) { setErrorMsg('Please enter a valid 10-digit Indian mobile number.'); return; }
+    if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
+    if (!form.subject.trim()) { setErrorMsg('Please add a subject.'); return; }
+    if (!form.message.trim()) { setErrorMsg('Please describe your issue.'); return; }
+    setErrorMsg('');
     setLoading(true);
     const tid = `OJV-${Math.floor(10000 + Math.random() * 90000)}`;
     const payload = {
@@ -41,6 +50,7 @@ function TicketForm() {
       name:       form.name,
       email:      form.email,
       phone:      form.phone,
+      company:    form.company,
       subject_detail: form.subject,
       priority:   form.priority,
       message:    form.message,
@@ -90,7 +100,7 @@ function TicketForm() {
             </div>
           ))}
         </div>
-        <button className="btn-ojiva-outline mt-4" onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', subject: '', priority: 'medium', message: '' }); }}>
+        <button className="btn-ojiva-outline mt-4" onClick={() => { setSubmitted(false); setErrorMsg(''); setForm({ name: '', email: '', phone: '', company: '', subject: '', priority: 'medium', message: '' }); }}>
           Submit Another Ticket
         </button>
       </motion.div>
@@ -115,6 +125,16 @@ function TicketForm() {
           <input className="sp-form-input" type="tel" placeholder="10-digit mobile number" value={form.phone} onChange={e => set('phone', e.target.value.replace(/\D/g, '').slice(0, 10))} required maxLength={10} inputMode="numeric" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" autoComplete="tel" />
         </div>
         <div className="sp-form-group">
+          <label className="sp-form-label">Company Name *</label>
+          <input className="sp-form-input" placeholder="Your company" value={form.company} onChange={e => set('company', e.target.value)} required autoComplete="organization" />
+        </div>
+      </div>
+      <div className="sp-form-row">
+        <div className="sp-form-group" style={{ flex: 2 }}>
+          <label className="sp-form-label">Subject *</label>
+          <input className="sp-form-input" placeholder="Brief description of the issue" value={form.subject} onChange={e => set('subject', e.target.value)} required />
+        </div>
+        <div className="sp-form-group">
           <label className="sp-form-label">Priority</label>
           <select className="sp-form-input" value={form.priority} onChange={e => set('priority', e.target.value)}>
             <option value="low">🟢 Low</option>
@@ -124,13 +144,14 @@ function TicketForm() {
         </div>
       </div>
       <div className="sp-form-group">
-        <label className="sp-form-label">Subject *</label>
-        <input className="sp-form-input" placeholder="Brief description of the issue" value={form.subject} onChange={e => set('subject', e.target.value)} required />
-      </div>
-      <div className="sp-form-group">
         <label className="sp-form-label">Describe your issue *</label>
         <textarea className="sp-form-input sp-form-textarea" placeholder="Please include any error messages, steps to reproduce, and your account ID…" rows={5} value={form.message} onChange={e => set('message', e.target.value)} required />
       </div>
+      {errorMsg && (
+        <div className="sp-form-error" role="alert" style={{ padding: '10px 14px', background: '#fef2f2', border: '1px solid #fecaca', color: '#dc2626', borderRadius: 8, marginBottom: 12 }}>
+          ⚠️ {errorMsg}
+        </div>
+      )}
       <div className="sp-form-footer">
         <span className="sp-form-note">🔒 Your data is encrypted end-to-end.</span>
         <motion.button

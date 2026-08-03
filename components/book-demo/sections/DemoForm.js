@@ -151,14 +151,21 @@ export default function DemoForm() {
 
   const ch = (e) => setForm(p => ({ ...p, [e.target.name]: e.target.value }));
   const phoneDigits = form.phone.replace(/\D/g, '');
-  const s1ok = !!(form.name.trim() && isValidEmail(form.email) && form.company.trim() && phoneDigits.length >= 10);
+  const s1ok = !!(
+    form.name.trim().length >= 2 &&
+    isValidEmail(form.email) &&
+    form.company.trim().length >= 2 &&
+    /^[6-9][0-9]{9}$/.test(phoneDigits)
+  );
   const s2ok = !!(size && volume);
   const ok   = s1ok && s2ok && agreed;
 
   async function submit(e) {
     e.preventDefault();
     if (!agreed) { setErr('Please agree to the privacy policy.'); return; }
-    if (phoneDigits.length < 10) { setErr('Please enter a valid 10-digit phone number.'); return; }
+    if (form.name.trim().length < 2) { setErr('Please enter your full name (at least 2 characters).'); return; }
+    if (form.company.trim().length < 2) { setErr('Please enter your company name.'); return; }
+    if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) { setErr('Please enter a valid 10-digit Indian mobile number.'); return; }
     setSt('loading'); setErr('');
     try {
       sendWhatsApp(form.name, form.phone, 'book-demo');
@@ -236,7 +243,7 @@ export default function DemoForm() {
                   <FLInput id="d-company" name="company" label="Company Name" value={form.company} onChange={ch} required autoComplete="organization" />
                 </div>
                 <div className="col-12 col-sm-6">
-                  <FLInput id="d-phone"   name="phone"   label="Phone Number" value={form.phone}   onChange={ch} type="tel" autoComplete="tel" optional />
+                  <FLInput id="d-phone"   name="phone"   label="Phone Number" value={form.phone}   onChange={ch} type="tel" autoComplete="tel" required />
                 </div>
               </div>
               <button type="button"

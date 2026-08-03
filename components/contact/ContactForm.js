@@ -83,10 +83,11 @@ export default function ContactForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     // ── Client-side validation ──
-    if (!form.name.trim())  { setErrorMsg('Please enter your full name.'); return; }
+    if (form.name.trim().length < 2)  { setErrorMsg('Please enter your full name (at least 2 characters).'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
     const digits = form.phone.replace(/\D/g, '');
     if (!digits || digits.length < 10) { setErrorMsg('Please enter a valid 10-digit phone number.'); return; }
+    if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
     if (selected.length === 0) { setErrorMsg('Please select at least one service.'); return; }
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
     setStatus('loading'); setErrorMsg('');
@@ -194,10 +195,10 @@ export default function ContactForm() {
                   </Field>
                 </div>
                 <div className="col-12 col-md-6">
-                  <Field label="Company" optional>
+                  <Field label="Company" required>
                     <input name="company" type="text" className="cfn-input"
                       placeholder="Company name"
-                      value={form.company} onChange={handleChange} autoComplete="organization" />
+                      value={form.company} onChange={handleChange} required autoComplete="organization" />
                   </Field>
                 </div>
 
