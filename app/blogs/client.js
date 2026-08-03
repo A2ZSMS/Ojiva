@@ -5,7 +5,12 @@ import Link from 'next/link';
 
 /* ── Constants ─────────────────────────────────────────── */
 const CATEGORIES = ['All', 'Bulk SMS', 'WhatsApp API', 'RCS Messaging', 'Voice Call', 'AI & Automation'];
-const POSTS_PER_PAGE = 10;
+
+// Page 1 shows 10 posts (1 featured hero + 9-card grid = 3×3).
+// Every following page shows 9 posts (3×3 grid, no featured), so the
+// grid stays clean without a lonely orphan card on the last row.
+const POSTS_PAGE_ONE = 10;
+const POSTS_PER_PAGE = 9;
 
 const CAT_STYLE = {
   'Bulk SMS':        { color: '#1d4ed8', bg: 'rgba(29,78,216,0.10)',   dot: '#3b82f6', border: 'rgba(29,78,216,0.20)' },
@@ -205,14 +210,20 @@ export default function BlogList() {
     [blogsData, selectedCategory]
   );
 
-  const totalPages = useMemo(() =>
-    Math.ceil(filteredBlogs.length / POSTS_PER_PAGE),
-    [filteredBlogs.length]
-  );
+  // Page 1 shows POSTS_PAGE_ONE (10), subsequent pages POSTS_PER_PAGE (9)
+  const totalPages = useMemo(() => {
+    if (filteredBlogs.length <= POSTS_PAGE_ONE) return 1;
+    return 1 + Math.ceil((filteredBlogs.length - POSTS_PAGE_ONE) / POSTS_PER_PAGE);
+  }, [filteredBlogs.length]);
+
+  const pageStart = useMemo(() => (
+    currentPage === 1 ? 0 : POSTS_PAGE_ONE + (currentPage - 2) * POSTS_PER_PAGE
+  ), [currentPage]);
+  const pageSize = currentPage === 1 ? POSTS_PAGE_ONE : POSTS_PER_PAGE;
 
   const currentBlogs = useMemo(() =>
-    filteredBlogs.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE),
-    [filteredBlogs, currentPage]
+    filteredBlogs.slice(pageStart, pageStart + pageSize),
+    [filteredBlogs, pageStart, pageSize]
   );
 
   const handleCategory = useCallback((cat) => {
@@ -230,8 +241,8 @@ export default function BlogList() {
   const featuredPost   = isFeaturedMode && currentBlogs.length > 0 ? currentBlogs[0] : null;
   const gridPosts      = featuredPost ? currentBlogs.slice(1) : currentBlogs;
 
-  const from = (currentPage - 1) * POSTS_PER_PAGE + 1;
-  const to   = Math.min(currentPage * POSTS_PER_PAGE, filteredBlogs.length);
+  const from = pageStart + 1;
+  const to   = Math.min(pageStart + pageSize, filteredBlogs.length);
 
   return (
     <>
