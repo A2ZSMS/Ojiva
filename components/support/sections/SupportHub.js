@@ -9,6 +9,22 @@ const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 import { motion, AnimatePresence } from 'framer-motion';
 
+// ── TeleCRM (inline per project convention; matches ContactForm/DemoForm/LandingLeadForm) ──
+const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
+const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
+function fireTeleCRM(name, phone, email) {
+  let p = String(phone || '').replace(/\D/g, '');
+  if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
+  if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
+  if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
+  if (p.length !== 10 || !/^[6-9]/.test(p)) return;
+  fetch(TELECRM_API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
+    body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase() } }),
+  }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
+}
+
 const SLA_PLANS = [
   { plan: 'Starter',    icon: '🌱', color: '#64748b', response: '24 hrs',  uptime: '99.5%',  channels: 'Email only',           onboarding: 'Self-serve', engineer: 'Shared pool', highlight: false },
   { plan: 'Growth',     icon: '📈', color: '#2563eb', response: '4 hrs',   uptime: '99.9%',  channels: 'Email + Chat',         onboarding: 'Guided',     engineer: 'Shared',      highlight: false },
@@ -61,6 +77,7 @@ function TicketForm() {
     try {
       sendWhatsApp(form.name, form.phone, 'support-page');
       if (!TEST_MODE_WHATSAPP_ONLY) {
+        fireTeleCRM(form.name, form.phone, form.email);
         await Promise.allSettled([
           fetch('https://api.web3forms.com/submit', {
             method:  'POST',
