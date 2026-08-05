@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/validate-blogs.mjs",
     "build": "next build",
     "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt && find out -name '*.map' -type f -delete",
     "start": "next start",
     "lint": "eslint",
+    "validate:blogs": "node scripts/validate-blogs.mjs",
     "subset-icons": "node scripts/subset-icons.mjs"
   },
   "dependencies": {

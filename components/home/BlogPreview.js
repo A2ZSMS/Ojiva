@@ -2,14 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-const CAT_COLOR = {
-  'Bulk SMS':        '#3b82f6',
-  'WhatsApp API':    '#22c55e',
-  'RCS Messaging':   '#f97316',
-  'Voice Call':      '#a78bfa',
-  'AI & Automation': '#22d3ee',
-};
+import { BLOG_CATEGORIES as CAT_COLOR, DEFAULT_CATEGORY_COLOR } from '@/lib/blogCategories';
 
 const formatDate = (str) =>
   new Date(str).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -27,7 +20,7 @@ export default function BlogPreview() {
   if (posts.length === 0) return null;
 
   const [featured, ...rest] = posts;
-  const color = CAT_COLOR[featured.category] || '#3b82f6';
+  const color = CAT_COLOR[featured.category] || DEFAULT_CATEGORY_COLOR;
 
   return (
     <section className="section-padding hp-sec-blog" aria-labelledby="blog-preview-heading">
@@ -91,7 +84,7 @@ export default function BlogPreview() {
           {/* ── Thumbnails grid ── */}
           <div className="hp-blog-grid">
             {rest.map((post) => {
-              const c = CAT_COLOR[post.category] || '#3b82f6';
+              const c = CAT_COLOR[post.category] || DEFAULT_CATEGORY_COLOR;
               return (
                 <Link key={post.id} href={`/blogs/${post.slug}`} className="hp-blog-thumb text-decoration-none">
                   <div className="hp-blog-thumb-img">

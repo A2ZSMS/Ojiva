@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import blogsData from '../../../public/data/blog.json';
 import meta from '../../../public/data/metadata.json';
+import { BLOG_CATEGORIES as CAT_COLOR, DEFAULT_CATEGORY_COLOR } from '@/lib/blogCategories';
 
 // ── JSON-driven blog infrastructure ──────────────────────
 import BlogLayout from '@/components/blogs/BlogLayout';
@@ -37,45 +38,58 @@ import blog_whatsapp_business_api_vs_regular_whatsapp_indian_businesses from '..
 import blog_rcs_messaging_future_business_communication_india from '../../../public/data/blogs/2026/04/rcs-messaging-future-business-communication-india.json';
 import blog_bulk_voice_call_ivr_automation_guide_india_2026 from '../../../public/data/blogs/2026/04/bulk-voice-call-ivr-automation-guide-india-2026.json';
 import blog_ai_powered_business_communication_automation_india_2026 from '../../../public/data/blogs/2026/04/ai-powered-business-communication-automation-india-2026.json';
+import blog_Aug05 from "../../../public/data/blogs/2026/08/Aug05.json";
 
 // slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
-  'rcs-vs-sms-key-differences-and-which-is-better-for-business': blog_rcs_vs_sms_key_differences_and_which_is_better_for_business,
-  'best-whatsapp-chatbot-service-provider-in-bangalore':         blog_best_whatsapp_chatbot_service_provider_in_bangalore,
-  'best-rcs-messaging-service-provider-in-bangalore':            blog_best_rcs_messaging_service_provider_in_bangalore,
-  'best-whatsapp-business-api-provider-in-india':                blog_best_whatsapp_business_api_provider_in_india,
-  'whatsapp-business-api-for-real-estate':                       blog_whatsapp_business_api_for_real_estate,
-  'best-whatsapp-chatbot-for-business-in-india':                 blog_best_whatsapp_chatbot_for_business_in_india,
-  'rcs-marketing-automation-high-converting-campaigns':          blog_rcs_marketing_automation_high_converting_campaigns,
-  'best-whatsapp-api-service-provider-in-bangalore':             blog_best_whatsapp_api_service_provider_in_bangalore,
-  'best-whatsapp-business-cloud-api-service-provider-in-bangalore': blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore,
-  'best-bulk-sms-service-provider-in-karnataka':                 blog_best_bulk_sms_service_provider_in_karnataka,
-  'best-rcs-message-service-provider-in-india':                  blog_best_rcs_message_service_provider_in_india,
-  'grow-business-with-rcs-india':                                blog_grow_business_with_rcs_india,
-  'whatsapp-api-message-templates-india':                        blog_whatsapp_api_message_templates_india,
-  'best-rcs-messaging-provider-karnataka':                       blog_best_rcs_messaging_provider_karnataka,
-  'best-whatsapp-bsp-india':                                     blog_best_whatsapp_bsp_india,
-  'dlt-registration-bulk-sms-india':                             blog_dlt_registration_bulk_sms_india,
-  'whatsapp-business-app-vs-api':                                blog_whatsapp_business_app_vs_api,
-  'what-is-rcs-messaging':                                       blog_what_is_rcs_messaging,
-  'best-bulk-sms-providers-india':                               blog_best_bulk_sms_providers_india,
-  'whatsapp-business-api-pricing-india':                         blog_whatsapp_business_api_pricing_india,
-  'bulk-sms-in-india':                                           blog_bulk_sms_in_india,
-  'rcs-messaging-provider-karnataka-guide':                      blog_rcs_messaging_provider_karnataka_guide,
-  'why-bulk-sms-most-powerful-marketing-channel-india-2026':     blog_why_bulk_sms_most_powerful_marketing_channel_india_2026,
-  'whatsapp-business-api-vs-regular-whatsapp-indian-businesses': blog_whatsapp_business_api_vs_regular_whatsapp_indian_businesses,
-  'rcs-messaging-future-business-communication-india':           blog_rcs_messaging_future_business_communication_india,
-  'bulk-voice-call-ivr-automation-guide-india-2026':             blog_bulk_voice_call_ivr_automation_guide_india_2026,
-  'ai-powered-business-communication-automation-india-2026':     blog_ai_powered_business_communication_automation_india_2026,
-};
-
-// ── Category → accent colour ─────────────────────────────
-const CAT_COLOR = {
-  'Bulk SMS':        '#1B48E0',
-  'WhatsApp API':    '#25d366',
-  'RCS Messaging':   '#7c3aed',
-  'Voice Call':      '#f59e0b',
-  'AI & Automation': '#00c8f8',
+  "rcs-vs-sms-key-differences-and-which-is-better-for-business":
+    blog_rcs_vs_sms_key_differences_and_which_is_better_for_business,
+  "best-whatsapp-chatbot-service-provider-in-bangalore":
+    blog_best_whatsapp_chatbot_service_provider_in_bangalore,
+  "best-rcs-messaging-service-provider-in-bangalore":
+    blog_best_rcs_messaging_service_provider_in_bangalore,
+  "best-whatsapp-business-api-provider-in-india":
+    blog_best_whatsapp_business_api_provider_in_india,
+  "whatsapp-business-api-for-real-estate":
+    blog_whatsapp_business_api_for_real_estate,
+  "best-whatsapp-chatbot-for-business-in-india":
+    blog_best_whatsapp_chatbot_for_business_in_india,
+  "rcs-marketing-automation-high-converting-campaigns":
+    blog_rcs_marketing_automation_high_converting_campaigns,
+  "best-whatsapp-api-service-provider-in-bangalore":
+    blog_best_whatsapp_api_service_provider_in_bangalore,
+  "best-whatsapp-business-cloud-api-service-provider-in-bangalore":
+    blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore,
+  "best-bulk-sms-service-provider-in-karnataka":
+    blog_best_bulk_sms_service_provider_in_karnataka,
+  "best-rcs-message-service-provider-in-india":
+    blog_best_rcs_message_service_provider_in_india,
+  "grow-business-with-rcs-india": blog_grow_business_with_rcs_india,
+  "whatsapp-api-message-templates-india":
+    blog_whatsapp_api_message_templates_india,
+  "best-rcs-messaging-provider-karnataka":
+    blog_best_rcs_messaging_provider_karnataka,
+  "best-whatsapp-bsp-india": blog_best_whatsapp_bsp_india,
+  "dlt-registration-bulk-sms-india": blog_dlt_registration_bulk_sms_india,
+  "whatsapp-business-app-vs-api": blog_whatsapp_business_app_vs_api,
+  "what-is-rcs-messaging": blog_what_is_rcs_messaging,
+  "best-bulk-sms-providers-india": blog_best_bulk_sms_providers_india,
+  "whatsapp-business-api-pricing-india":
+    blog_whatsapp_business_api_pricing_india,
+  "bulk-sms-in-india": blog_bulk_sms_in_india,
+  "rcs-messaging-provider-karnataka-guide":
+    blog_rcs_messaging_provider_karnataka_guide,
+  "why-bulk-sms-most-powerful-marketing-channel-india-2026":
+    blog_why_bulk_sms_most_powerful_marketing_channel_india_2026,
+  "whatsapp-business-api-vs-regular-whatsapp-indian-businesses":
+    blog_whatsapp_business_api_vs_regular_whatsapp_indian_businesses,
+  "rcs-messaging-future-business-communication-india":
+    blog_rcs_messaging_future_business_communication_india,
+  "bulk-voice-call-ivr-automation-guide-india-2026":
+    blog_bulk_voice_call_ivr_automation_guide_india_2026,
+  "ai-powered-business-communication-automation-india-2026":
+    blog_ai_powered_business_communication_automation_india_2026,
+  "best-whatsapp-business-api-provider-hyderabad": blog_Aug05,
 };
 
 // ── Date formatter ───────────────────────────────────────
@@ -213,7 +227,7 @@ export default async function BlogPost({ params }) {
     );
   }
 
-  const catColor = CAT_COLOR[blog.category] || '#1B48E0';
+  const catColor = CAT_COLOR[blog.category] || DEFAULT_CATEGORY_COLOR;
 
   return (
     <>
