@@ -86,7 +86,7 @@ export default function ContactForm() {
     if (form.name.trim().length < 2)  { setErrorMsg('Please enter your full name (at least 2 characters).'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
     const digits = form.phone.replace(/\D/g, '');
-    if (!digits || digits.length < 10) { setErrorMsg('Please enter a valid 10-digit phone number.'); return; }
+    if (!/^[6-9][0-9]{9}$/.test(digits)) { setErrorMsg('Please enter a valid 10-digit Indian mobile number.'); return; }
     if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
     if (selected.length === 0) { setErrorMsg('Please select at least one service.'); return; }
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
