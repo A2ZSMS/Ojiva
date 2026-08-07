@@ -39,6 +39,7 @@ import blog_rcs_messaging_future_business_communication_india from '../../../pub
 import blog_bulk_voice_call_ivr_automation_guide_india_2026 from '../../../public/data/blogs/2026/04/bulk-voice-call-ivr-automation-guide-india-2026.json';
 import blog_ai_powered_business_communication_automation_india_2026 from '../../../public/data/blogs/2026/04/ai-powered-business-communication-automation-india-2026.json';
 import blog_Aug05 from "../../../public/data/blogs/2026/08/Aug05.json";
+import blog_whatsapp_business_api_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug07.json";
 
 // slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
@@ -90,6 +91,8 @@ const BlogJson = {
   "ai-powered-business-communication-automation-india-2026":
     blog_ai_powered_business_communication_automation_india_2026,
   "best-whatsapp-business-api-provider-hyderabad": blog_Aug05,
+  "whatsapp-business-api-for-travel-agencies":
+    blog_whatsapp_business_api_for_travel_agencies,
 };
 
 // ── Date formatter ───────────────────────────────────────
