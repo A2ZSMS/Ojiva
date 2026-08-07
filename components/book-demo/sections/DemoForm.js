@@ -178,7 +178,7 @@ export default function DemoForm() {
       fd.append('access_key',           ACCESS_KEY);
       fd.append('name',                 form.name);
       fd.append('email',                form.email);
-      fd.append('phone',                form.phone || 'Not provided');
+      fd.append('phone',                form.phone);
       fd.append('company',              form.company);
       fd.append('company_size',         size              || 'Not specified');
       fd.append('monthly_volume',       volume            || 'Not specified');
@@ -188,19 +188,24 @@ export default function DemoForm() {
       fd.append('subject', `Demo — ${form.name} (${form.company})`);
       fd.append('botcheck', '');
       fd.append('privacy_consent', 'Agreed');
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      const d   = await res.json();
-      if (d.success) {
+      // Fire Web3Forms and Make.com in parallel — a Web3Forms outage must not
+      // silently skip Make.com. Redirect to thank-you if either succeeds.
+      const [w, m] = await Promise.allSettled([
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd }).then(r => r.json()),
         fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ source: 'book-demo', name: form.name, email: form.email,
-            phone: form.phone || 'Not provided', company: form.company,
+            phone: form.phone, company: form.company,
             size: size || 'Not specified', volume: volume || 'Not specified',
             channels: channels.join(', ') || 'Not specified',
             time: time || 'Not specified', message: msg || 'No message',
           }),
-        }).catch(() => {});
+        }),
+      ]);
+      if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
         router.push('/thank-you');
-      } else { setSt('error'); setErr(d.message || 'Something went wrong.'); }
+      } else {
+        setSt('error'); setErr('Something went wrong. Please try again or contact us directly.');
+      }
     } catch { setSt('error'); setErr('Network error. Please try again.'); }
   }
 

@@ -104,17 +104,23 @@ export default function ContactForm() {
       fd.append('botcheck', '');
       fd.append('services', selected.join(', ') || 'Not specified');
       fd.append('privacy_consent', 'Agreed');
-      const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
-      const data = await res.json();
-      if (data.success) {
+      // Fire Web3Forms and Make.com in parallel — a Web3Forms outage must not
+      // silently skip Make.com. Redirect to thank-you if either succeeds.
+      const [w, m] = await Promise.allSettled([
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd }).then(r => r.json()),
         fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
             phone: form.phone, company: form.company, industry: form.industry,
             services: selected.join(', ') || 'Not specified', message: form.message,
           }),
-        }).catch(() => {});
+        }),
+      ]);
+      if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
         router.push('/thank-you');
-      } else { setStatus('error'); setErrorMsg(data.message || 'Something went wrong.'); }
+      } else {
+        setStatus('error');
+        setErrorMsg('Something went wrong. Please try again or contact us directly.');
+      }
     } catch { setStatus('error'); setErrorMsg('Network error. Please try again.'); }
   }
 
