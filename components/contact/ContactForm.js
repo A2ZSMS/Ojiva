@@ -20,7 +20,7 @@ function fireTeleCRM(name, phone, email) {
   console.log('[TeleCRM] phone in:', phone, '→ cleaned:', p);
   if (p.length !== 10 || !/^[6-9]/.test(p)) { console.warn('[TeleCRM] invalid phone, skipped'); return; }
   fetch(TELECRM_API, {
-    method: 'POST',
+    method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
     body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase() } }),
   }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));

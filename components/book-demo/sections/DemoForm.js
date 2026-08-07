@@ -18,7 +18,7 @@ function fireTeleCRM(name, phone, email) {
   if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
   if (p.length !== 10 || !/^[6-9]/.test(p)) return;
   fetch(TELECRM_API, {
-    method: 'POST',
+    method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
     body: JSON.stringify({ fields: { name: String(name || '').trim() || 'Unknown', phone: p, email: String(email || '').trim().toLowerCase() } }),
   }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
@@ -164,6 +164,7 @@ export default function DemoForm() {
     e.preventDefault();
     if (!agreed) { setErr('Please agree to the privacy policy.'); return; }
     if (form.name.trim().length < 2) { setErr('Please enter your full name (at least 2 characters).'); return; }
+    if (!isValidEmail(form.email)) { setErr('Please enter a valid email address.'); return; }
     if (form.company.trim().length < 2) { setErr('Please enter your company name.'); return; }
     if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) { setErr('Please enter a valid 10-digit Indian mobile number.'); return; }
     setSt('loading'); setErr('');
