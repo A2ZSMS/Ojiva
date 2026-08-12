@@ -1,0 +1,409 @@
+{
+  "slug": "whatsapp-business-api-setup",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "how-it-works", "label": "How Setup Works" },
+    { "id": "requirements", "label": "What You Need First" },
+    { "id": "setup-steps", "label": "Step-by-Step Process" },
+    { "id": "verification", "label": "Verification & Display Name" },
+    { "id": "compliance", "label": "Compliance & Best Practices" },
+    { "id": "troubleshooting", "label": "Fixing Common Issues" },
+    { "id": "pricing", "label": "Pricing in India" },
+    { "id": "use-cases", "label": "What You Can Do" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A WhatsApp Business API setup connects your business number to Meta's official messaging platform through a verified partner, so you can automate replies, run a shared team inbox, and send approved campaigns at scale — none of which the free app can do. You never apply to Meta directly; a Meta Business Solution Provider (a Meta BSP) like Ojiva AI provisions everything and gets your account approved. This guide walks the whole process end to end: what you need before you begin, the exact onboarding steps, how verification and display-name approval work, what it typically costs in India, and how to fix the issues that trip people up. Still weighing the free app against the platform? Start with our <a href=\"/blogs/whatsapp-business-app-vs-api/\">WhatsApp Business App vs API guide</a>. Ready to move ahead? Everything below assumes you want the <a href=\"/whatsapp/\">WhatsApp Business API</a> live and working — we are an official Meta BSP for India."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug12(1).webp",
+          "alt": "WhatsApp Business API setup process with Ojiva AI as a Meta BSP"
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How WhatsApp API Onboarding Works Through a Meta Partner",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The WhatsApp API is not the app you use to message friends. It's a programmable business layer with no interface of its own — a provider connects your number to it and gives you the dashboard on top. Because Ojiva AI runs on Meta's official Cloud API as a Meta BSP, your messaging sits on genuine infrastructure rather than an unofficial workaround that risks bans."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "A verified business layer:",
+              "desc": "Your number links to a Meta-reviewed WhatsApp Business Account (WABA) that holds your profile, display name and message templates in one place."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Conversations that scale:",
+              "desc": "Unlike a single phone, the platform handles thousands of simultaneous chats without an inbox freezing or enquiries getting buried."
+            },
+            {
+              "icon": "bi-envelope-paper-fill",
+              "title": "Templates and sessions:",
+              "desc": "Pre-approved message templates reach customers outside an active chat, while replies inside the 24-hour service window can be free-form and instant."
+            },
+            {
+              "icon": "bi-robot",
+              "title": "Automation from day one:",
+              "desc": "With the connection live, WhatsApp automation, a chatbot and CRM triggers run on top — the reason most businesses move to the API in the first place."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For the underlying specifics, Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform documentation</a> covers how the Cloud API handles messages, templates and business accounts in full."
+        }
+      ]
+    },
+    {
+      "id": "requirements",
+      "heading": "What You Need Before You Begin: A Requirements Checklist",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most delays come from missing paperwork, not the technical work. Getting the WhatsApp Business API requirements ready before you start is what turns a multi-week wait into a few working days. Line up these five things first."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building",
+              "title": "A Meta Business Manager:",
+              "desc": "A Business Manager account with admin access — this is where your business is verified and your WABA is created."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "A dedicated phone number:",
+              "desc": "One that is not currently active on any personal WhatsApp or the free Business App. It can be a new number or a freed-up existing one."
+            },
+            {
+              "icon": "bi-globe",
+              "title": "A live business website:",
+              "desc": "Ideally on a domain that matches your legal name — this supports both business and display-name approval."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Business documents:",
+              "desc": "GST or registration papers proving the legal entity and address, with details that match everywhere exactly."
+            },
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "A payment method:",
+              "desc": "A card or billing setup for Meta's per-conversation charges once you start sending outside the free service window."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "setup-steps",
+      "heading": "The Step-by-Step Process to Get Your Account Live",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "With the checklist ready, learning how to set up WhatsApp Business API for your business is straightforward. Ojiva AI's embedded signup walks you through these six steps, and most of the wait is simply Meta's review."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Create your Ojiva AI account:",
+              "desc": "Sign in and open Channels & Numbers to begin the WhatsApp Business Account setup."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Connect your Facebook business portfolio:",
+              "desc": "Authorise your business through the embedded signup pop-up so the two accounts link securely."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Create or select your WABA:",
+              "desc": "Choose an existing WhatsApp Business Account or spin up a fresh one for this number."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Add and verify your number:",
+              "desc": "Register the phone number and confirm it with the SMS or call code — the moment your number officially joins the platform."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Set your display name:",
+              "desc": "Enter the public name customers will see, aligned with your website and brand."
+            },
+            {
+              "icon": "bi-6-circle-fill",
+              "title": "Submit and go live:",
+              "desc": "Send it for review — Meta typically approves within about a day, after which you can start sending."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/aug12(2).webp",
+          "alt": "Six steps to set up a WhatsApp Business Account with Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "verification",
+      "heading": "Registering Your Number and Getting Your Display Name Approved",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Two approvals decide whether you go live cleanly: business verification and the display name. Knowing how to register a number for the platform correctly — and how the name is judged — is what keeps this stage short."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Business verification:",
+              "desc": "Meta checks your legal name and address against your documents, so every detail must match your Business Manager exactly."
+            },
+            {
+              "icon": "bi-type",
+              "title": "Display-name rules:",
+              "desc": "The name must reflect your real brand and echo your website — generic or promo-style names are the most common cause of rejection."
+            },
+            {
+              "icon": "bi-award-fill",
+              "title": "The green tick:",
+              "desc": "Once verified, you can apply for the official badge that tells customers the account is a confirmed business, not a lookalike number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "heading": "Staying Compliant: Opt-Ins, Quality Rating and Message Templates",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A live account only stays healthy if you play by Meta's rules from the first send. These four habits protect your number and keep your delivery strong."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-check2-square",
+              "title": "Collect explicit opt-ins:",
+              "desc": "Only message people who have clearly agreed to hear from you — a consent checkbox at signup or checkout is the safest route."
+            },
+            {
+              "icon": "bi-traffic-light-fill",
+              "title": "Watch your quality rating:",
+              "desc": "Meta grades each number green, yellow or red based on how customers react. Staying green keeps your limits climbing."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Master message templates:",
+              "desc": "Outbound marketing and utility messages must use pre-approved templates in the correct category — miscategorising them risks rejection."
+            },
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "Respect messaging tiers:",
+              "desc": "New numbers begin at a lower daily limit and expand as you send consistently to opted-in users with good quality."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "heading": "Fixing the Most Common Onboarding Problems",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Almost every hold-up falls into one of these buckets. Here's what each one means and how to clear it fast."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Display name rejected:",
+              "desc": "If your WhatsApp Business API display name is rejected, align it exactly with your website and legal brand, drop any promotional wording, and resubmit — most pass on the second try."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Business verification failed:",
+              "desc": "This almost always means a mismatch — the name or address on your documents does not match your Business Manager. Fix the detail and re-submit."
+            },
+            {
+              "icon": "bi-speedometer2",
+              "title": "Stuck at a low messaging limit:",
+              "desc": "Warm the number up gradually and keep quality green — the WhatsApp Business API messaging limits rise on their own as trust builds."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Review taking too long:",
+              "desc": "Usually a pending piece of Business Manager information. Complete every requested field and the queue clears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What the WhatsApp Business Platform Costs in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Pricing confuses people because there are two separate bills. Your provider charges a platform fee for the dashboard, chatbot and support. Meta separately charges per conversation by category, while replies inside the 24-hour customer service window — which cover most everyday queries — cost nothing extra. Add 18% GST, billed in INR, and that's the full picture of the cost of the WhatsApp Business API in India."
+        },
+        {
+          "type": "table",
+          "headers": ["Cost Component", "What It Covers", "How It's Billed"],
+          "rows": [
+            [
+              "Platform subscription",
+              "Chatbot, broadcast, catalog, team inbox, analytics",
+              "Monthly or annual plan, in INR"
+            ],
+            [
+              "Meta conversation charges",
+              "Marketing, utility and authentication conversations",
+              "Per conversation, by category, set by Meta"
+            ],
+            [
+              "Service-window replies",
+              "Business replies within the 24-hour service window",
+              "Free"
+            ],
+            [
+              "Setup & onboarding",
+              "Verification, number activation, template approvals",
+              "Included with Ojiva AI onboarding"
+            ],
+            [
+              "Taxes",
+              "GST on platform and Meta charges",
+              "18%, with a GST invoice on every payment"
+            ]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cash-coin",
+              "title": "Judge cost per outcome, not per message:",
+              "desc": "A number that handles hundreds of enquiries a month usually pays for itself quickly. Ask any provider for a plain rate card before you commit — and see how markups vary in our <a href=\"/blogs/best-whatsapp-bsp-india/\">WhatsApp BSP buyer's checklist</a>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "What Your Business Can Do Once the Account Is Active",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The setup is a means to an end. Once your number is live, the same connection powers three kinds of messaging that actually move revenue and lighten your team's load."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Promotional:",
+              "desc": "Personalised offers, back-in-stock alerts and abandoned-cart nudges sent to opted-in customers as template campaigns."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Transactional:",
+              "desc": "Order confirmations, delivery updates and <a href=\"/otp/\">OTP & 2FA</a> codes delivered instantly through approved templates."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support:",
+              "desc": "A <a href=\"/whatsapp-chatbot/\">WhatsApp chatbot</a> triages routine questions around the clock and hands off to a human agent only when it is actually needed."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/aug12(3).webp",
+          "alt": "Promotional, transactional and support messaging on the WhatsApp Business Platform"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Get Your Number Live Faster With Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Done in the right order, the whole thing is far less daunting than it looks: prepare your Business Manager, documents and number, submit through an official partner, keep your name and details consistent, and protect your quality rating from the first send. The businesses that stall are almost always the ones that skipped the checklist — not the ones that found the technical steps hard."
+        },
+        {
+          "type": "p",
+          "html": "When you're ready, Ojiva AI provisions everything as an official Meta BSP — verification, number activation, templates, a chatbot, a shared inbox and CRM integrations, all in one place. Explore the <a href=\"/whatsapp/\">WhatsApp Business API</a>, pair it with the <a href=\"/whatsapp-chatbot/\">Ojiva AI WhatsApp chatbot</a>, or <a href=\"/book-demo/\">book a free demo</a> and we'll map your first flow on the call."
+        },
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 12 August</em>"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions: Getting Started on the Platform",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is the WhatsApp Business API and how is it set up?",
+              "a": "<p>The WhatsApp Business API is a Meta-verified messaging layer for medium and large businesses, with no chat app of its own. It's set up through an official Meta Business Solution Provider (BSP) like Ojiva AI, which connects your number to automation, a shared inbox and your business systems, and handles Meta verification, display-name approval and template review on your behalf.</p>"
+            },
+            {
+              "q": "How long does WhatsApp Business API verification take?",
+              "a": "<p>Once your documents are in order, Meta usually reviews a display name within about a day, though business verification can take longer if details need re-checking. A partner that pre-checks your information before submission helps avoid the back-and-forth that causes most delays.</p>"
+            },
+            {
+              "q": "Can I use my existing phone number for the setup?",
+              "a": "<p>Yes, but a number can run on either the free Business App or the API, not both at once. If the number is already active in the app, it must be removed there first, so many businesses plan the switch carefully or start onboarding on a fresh number.</p>"
+            },
+            {
+              "q": "Do I need DLT registration for the WhatsApp Business API?",
+              "a": "<p>No. DLT registration applies to SMS in India. WhatsApp relies on Meta's own business verification, display-name approval and message-template review instead. If you also send SMS, that separate channel still needs DLT — see our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">DLT registration guide</a>.</p>"
+            },
+            {
+              "q": "Why was my display name rejected and how do I fix it?",
+              "a": "<p>A display name is usually rejected when it doesn't clearly match your real brand or the branding on your website. Align the name exactly with your website and legal entity, remove generic or promotional wording, and resubmit — most names pass on the second attempt once they match.</p>"
+            },
+            {
+              "q": "Is there a licence fee for the WhatsApp Business API?",
+              "a": "<p>There's no software licence fee for API access. You pay Meta per conversation by category, plus your provider's platform fee, with 18% GST on top. Replies inside the 24-hour customer service window are not charged, so most support conversations cost nothing extra.</p>"
+            },
+            {
+              "q": "What is a WABA and do I need a Meta Business Manager?",
+              "a": "<p>A WABA is your WhatsApp Business Account — the container that holds your number, display name and templates. Yes, you need a Meta Business Manager with admin access, because that's where your business is verified and your WABA lives.</p>"
+            },
+            {
+              "q": "How do I increase my WhatsApp messaging limit?",
+              "a": "<p>New numbers start at a lower messaging tier and expand as you send consistently to opted-in users while keeping your quality rating green. Warming the number up gradually, sending relevant template messages and avoiding blocks and reports is what moves you up the tiers.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

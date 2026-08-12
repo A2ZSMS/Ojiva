@@ -328,5 +328,16 @@
     "description": "Ojiva AI is a trusted RCS Messaging Provider in India offering verified sender branding, DLT-compliant delivery, transparent INR pricing, and dedicated support.",
     "image": "/image/aug10(1).webp",
     "keywords": "RCS Messaging Provider in India, RCS Business Messaging explained, RCS messaging platform features, Google RCS verification and agent setup, RCS messaging pricing India, DLT and TRAI compliance for RCS, RCS messaging use cases, RCS chatbot for business, RCS API integration, RCS onboarding process, how to compare RCS messaging vendors, RCS messaging, RCS API, Rich Communication Services, business messaging, RCS platform, CPaaS, verified sender, RCS Business Messaging, how much does RCS messaging cost in India"
+  },
+  {
+    "id": 32,
+    "title": "WhatsApp Business API Setup: Step-by-Step Guide",
+    "componentKey": "Aug12",
+    "slug": "whatsapp-business-api-setup",
+    "category": "WhatsApp API",
+    "date": "2026-08-12",
+    "description": "Set up the WhatsApp Business API with Ojiva AI, an official Meta BSP — requirements, onboarding, number verification, display-name approval and compliance.",
+    "image": "/image/aug12(1).webp",
+    "keywords": "WhatsApp Business API setup, WhatsApp Business API requirements, how to set up WhatsApp Business API, WhatsApp API onboarding, WhatsApp Business Account setup, WABA setup, WhatsApp Business API India, WhatsApp Business API display name rejected, WhatsApp Business verification failed, how to register a number for WhatsApp Business API, WhatsApp Business API messaging limits, cost of WhatsApp Business API in India, WhatsApp API, WhatsApp Business, WABA, Meta BSP, message templates, WhatsApp automation, WhatsApp Business Platform"
   }
 ]
