@@ -1,0 +1,434 @@
+{
+  "slug": "whatsapp-template-message-types",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "how-templates-work", "label": "How Templates Work" },
+    { "id": "utility-templates", "label": "Utility Templates" },
+    { "id": "marketing-templates", "label": "Marketing Templates" },
+    { "id": "authentication-templates", "label": "Authentication Templates" },
+    { "id": "pricing", "label": "Pricing in India" },
+    { "id": "approval-tips", "label": "Getting Approved Faster" },
+    { "id": "rejections", "label": "Fixing Rejections" },
+    { "id": "creation", "label": "Creating a Template" },
+    { "id": "use-cases", "label": "Putting Templates to Work" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every message a business sends on WhatsApp outside an open chat has to travel as a pre-approved template, and the WhatsApp template message types you pick decide how fast Meta clears them and what each send costs. There are three categories in all utility, marketing and authentication and each is built for a different job. This guide breaks down what every category does, when to reach for it, real examples you can adapt, what these message templates cost in India, and how to get them approved without the back-and-forth. Still getting set up? Start with our <a href=\"/blogs/whatsapp-business-api-setup/\">WhatsApp Business API setup guide</a>. Everything below assumes your number is already live on the <a href=\"/whatsapp/\">WhatsApp Business API</a> — and Ojiva AI is an official Meta BSP for India that handles template approval on your behalf."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug14(1).webp",
+          "alt": "The three WhatsApp template message types explained by Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "how-templates-work",
+      "heading": "How WhatsApp Message Templates Reach Your Customers",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A template is simply a message format you submit to Meta for review before you are allowed to send it to anyone outside an active conversation. Once approved, it becomes reusable — you can drop in a customer's name, an order number or a code and send it at scale. Understanding what message templates are, and how the service window works, is what stops the whole system feeling like a black box."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Pre-approved formats:",
+              "desc": "Each format is reviewed by Meta and filed under a category before it can go out — this is why the same wording can pass in one category and fail in another."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "The 24-hour service window:",
+              "desc": "Inside an open chat you can reply in free-form text; a template is what lets you start a new conversation or re-open one that has gone quiet."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Variables and media:",
+              "desc": "Placeholders such as {{1}} personalise every message, and many formats support images, quick-reply buttons and call-to-action links."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Category is the deciding factor:",
+              "desc": "Every format sits in one of three WhatsApp template categories, and choosing the wrong one is the single fastest route to a rejection."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For the underlying rules, Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/message-templates/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp message templates documentation</a> covers how categories, variables and approval are handled in full."
+        }
+      ]
+    },
+    {
+      "id": "utility-templates",
+      "heading": "Utility Templates for Order and Account Updates",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Utility templates carry the transactional, expected messages customers actually want — the update that follows something they already did with you. There is no room for promotion here; the moment an offer slips in, the format belongs in a different category. These are among the cheaper messages to send and tend to move through review smoothly."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Order and delivery updates:",
+              "desc": "Confirmations, dispatch alerts and tracking links tied to a purchase the customer has already made."
+            },
+            {
+              "icon": "bi-cash-stack",
+              "title": "Payment and billing reminders:",
+              "desc": "Due-date nudges, invoice receipts and subscription-renewal notices that share information rather than sell."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Appointment notifications:",
+              "desc": "Booking confirmations and reminders for clinics, salons and services where a missed slot costs money."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Example:</strong> <em>Hi {{1}}, your order #{{2}} is confirmed and will arrive by {{3}}. Track it any time using the link below.</em> Keep the tone informational and the details specific — that is exactly what a clean utility format looks like."
+        }
+      ]
+    },
+    {
+      "id": "marketing-templates",
+      "heading": "Marketing Templates for Offers and Campaigns",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Marketing templates are the promotional workhorse of WhatsApp marketing — the category you use to announce a sale, launch a product, recover an abandoned cart or win back a quiet customer. They give you the most creative room, with space for images, video, buttons and rich personalisation, but Meta reviews them more strictly and charges the premium rate. Send them only to people who have opted in, and time your broadcast so it lands when customers are receptive."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tags-fill",
+              "title": "Offers and seasonal sales:",
+              "desc": "Discount announcements and festive promotions sent as a broadcast to a segmented, opted-in list."
+            },
+            {
+              "icon": "bi-stars",
+              "title": "Launches and back-in-stock alerts:",
+              "desc": "New-arrival reveals and restock notifications that pair a product image with a single clear call to action."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Cart recovery and re-engagement:",
+              "desc": "Gentle nudges for a left-behind basket or a customer who has not bought in a while."
+            }
+          ]
+        },
+
+        {
+          "type": "p",
+          "html": "<strong>Example:</strong> <em>Hey {{1}}, enjoy {{2}}% off {{3}} this week only — tap below to shop before it ends.</em> Lead with the value to the customer, add one visual and one button, and skip the shouty capitals that trigger a review flag."
+        },
+          {
+          "type": "image",
+          "src": "/image/aug14(3).webp",
+          "alt": "Broadcast, automation and support powered by approved WhatsApp templates"
+        }
+      ]
+    },
+    {
+      "id": "authentication-templates",
+      "heading": "Authentication Templates for OTPs and Login Codes",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Authentication templates exist for one job: delivering the codes that verify a person. A WhatsApp OTP template is what carries the one-time password at signup, the login code, the password-reset confirmation. The format rules here are the strictest of the three, yet these messages usually clear review fastest and sit at the lower end of the cost scale, which is why so many businesses move their verification off SMS and onto WhatsApp."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Signup and login codes:",
+              "desc": "One-time passwords that confirm a new account or a fresh login attempt in seconds."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "Password resets:",
+              "desc": "Secure verification codes for customers changing or recovering account credentials."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Transaction confirmations:",
+              "desc": "Codes that authorise a payment or a sensitive account action before it goes through."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "<strong>Example:</strong> <em>{{1}} is your verification code. It expires in {{2}} minutes. Do not share this code with anyone.</em> Always state the expiry and never bolt marketing onto a code — see how the flow runs end to end on our <a href=\"/otp/\">OTP &amp; 2FA</a> page."
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What WhatsApp Templates Cost in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Pricing on WhatsApp is charged per conversation, and the category of your template is what sets the rate. Marketing conversations carry the premium rate, utility and authentication sit lower, and free-form replies inside the 24-hour service window — which cover most everyday support — are not charged at all. Add 18% GST on top, billed in INR, and that is the whole picture of WhatsApp template message pricing in India."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Template category",
+            "Best used for",
+            "Where it sits on cost"
+          ],
+          "rows": [
+            [
+              "Marketing",
+              "Offers, launches, cart recovery, re-engagement broadcasts",
+              "Premium per-conversation rate"
+            ],
+            [
+              "Utility",
+              "Order, delivery, payment and account updates",
+              "Lower per-conversation rate"
+            ],
+            [
+              "Authentication",
+              "OTPs, login codes and password resets",
+              "Lower per-conversation rate"
+            ],
+            [
+              "Service window",
+              "Free-form replies to customers within 24 hours",
+              "No template charge"
+            ]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "Rates are set by Meta and change periodically:",
+              "desc": "The exact per-conversation price depends on the category and the country, and Meta revises the rate card from time to time — so judge cost per outcome, not per message, and ask Ojiva AI for the current rate card before you commit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "approval-tips",
+      "heading": "How to Get Your Templates Approved Faster",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most delays are avoidable. Once you know the format guidelines Meta looks for, getting a template approved fast comes down to a few disciplined habits that apply across every category."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-ui-checks",
+              "title": "Match the content to the category:",
+              "desc": "File transactional wording as utility and promotional wording as marketing — miscategorisation is the leading reason a clear-looking message still fails."
+            },
+            {
+              "icon": "bi-input-cursor-text",
+              "title": "Give your variables context:",
+              "desc": "Show Meta a realistic sample value for every {{1}} placeholder so reviewers can see what the finished message says."
+            },
+            {
+              "icon": "bi-fonts",
+              "title": "Write clean, specific copy:",
+              "desc": "Skip block capitals, avoid link shorteners and keep grammar tidy — spammy formatting reads as a red flag."
+            },
+            {
+              "icon": "bi-image-fill",
+              "title": "Use media with purpose:",
+              "desc": "In marketing formats a single relevant image or button lifts engagement; padding a message with extras only slows the review."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rejections",
+      "heading": "Why Templates Get Rejected and How to Fix Them",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "When Meta declines a submission, the reason almost always falls into one of these buckets. Knowing what each one means is how you cut the rejection rate and resubmit with confidence."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Promotion inside a utility format:",
+              "desc": "An offer or discount line in a transactional message is the classic mismatch — move it into the marketing category and resubmit."
+            },
+            {
+              "icon": "bi-question-circle-fill",
+              "title": "Vague or empty variables:",
+              "desc": "Placeholders with no sample value confuse reviewers; add a realistic example for each and the format usually clears."
+            },
+            {
+              "icon": "bi-type-uppercase",
+              "title": "Spammy language or shortened links:",
+              "desc": "Excess capitals, aggressive wording and URL shorteners trip filters — clean copy and full-domain links fix most of these."
+            },
+            {
+              "icon": "bi-signpost-2-fill",
+              "title": "Wrong category selected:",
+              "desc": "The safest correction is to re-file the message under the category its content actually belongs to before you try again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creation",
+      "heading": "Creating a Template Step by Step With Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Building one is quicker than it sounds. Learning how to create a WhatsApp template message inside Ojiva AI takes five steps, and most of the wait is simply Meta's review."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Choose the category:",
+              "desc": "Pick utility, marketing or authentication first, because it shapes every rule that follows."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Name it and set the language:",
+              "desc": "Give the format a clear internal name and select the language you will send it in."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Write the content and add variables:",
+              "desc": "Draft the message and drop in {{1}} placeholders for the details that change per customer."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Add media and buttons:",
+              "desc": "Attach an image, a quick reply or a call-to-action button where the category allows it."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Submit for approval:",
+              "desc": "Send it to Meta for review — Ojiva AI's template generator can also suggest ready-to-submit variations to speed this up."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/aug14(2).webp",
+          "alt": "Creating a WhatsApp Business message template step by step in Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Putting Your Templates to Work Once They Are Live",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Approval is the start, not the finish. With formats cleared across all three categories, the same number can run the everyday messaging that lightens your team's load and moves revenue."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Run broadcast campaigns:",
+              "desc": "Send segmented offers and back-in-stock alerts to opted-in customers as marketing broadcasts."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Automate transactional journeys:",
+              "desc": "Trigger order updates and OTP codes automatically from your store or CRM the moment an event happens."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Blend templates with support:",
+              "desc": "Let an <a href=\"/whatsapp-chatbot/\">Ojiva AI WhatsApp chatbot</a> open a conversation with a template, then handle the free-form reply inside the service window."
+            }
+          ]
+        }
+      
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Send Smarter by Choosing the Right Category",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The whole system gets simple once the categories click into place: utility for the updates customers expect, marketing for the campaigns that grow revenue, and authentication for the codes that keep accounts secure. Match each message to the category its content truly belongs in, write clean copy, and your approval rate and your delivery both stay healthy."
+        },
+        {
+          "type": "p",
+          "html": "When you are ready to build and send, Ojiva AI provisions everything as an official Meta BSP — template approval, broadcasts, a chatbot, a shared inbox and CRM integrations in one place. Explore the <a href=\"/whatsapp/\">WhatsApp Business API</a>, pair it with the <a href=\"/whatsapp-chatbot/\">Ojiva AI WhatsApp chatbot</a>, or <a href=\"/book-demo/\">book a free demo</a> and we will map your first template flow on the call."
+        },
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 12 August</em>"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions About WhatsApp Templates",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What are the types of WhatsApp template messages?",
+              "a": "<p>There are three: utility, marketing and authentication. Utility templates carry transactional updates like order and payment notifications, marketing templates carry promotions and campaigns, and authentication templates deliver OTPs and verification codes. Every business-initiated message on WhatsApp is filed under one of these three categories.</p>"
+            },
+            {
+              "q": "What is a WhatsApp utility template?",
+              "a": "<p>A utility template is a transactional message tied to something the customer has already done with you — an order confirmation, a delivery update, a payment reminder or an appointment alert. It shares information the customer expects and must contain no promotional wording, or Meta will reclassify or reject it.</p>"
+            },
+            {
+              "q": "Which WhatsApp template type is the cheapest?",
+              "a": "<p>Utility and authentication templates sit at the lower end of the per-conversation rate, while marketing templates carry the premium rate. Free-form replies inside the 24-hour service window are not charged at all, so most everyday support conversations cost nothing extra.</p>"
+            },
+            {
+              "q": "Can I add promotional content to a utility template?",
+              "a": "<p>No. Any offer, discount or upsell inside a utility format is the most common reason a template is rejected. Move promotional wording into the marketing category, keep the utility message purely informational, and both will clear review.</p>"
+            },
+            {
+              "q": "Why do WhatsApp templates get rejected by Meta?",
+              "a": "<p>The usual causes are a mismatch between content and category, vague variables with no sample values, spammy capitals or shortened links, and poor formatting. Fixing the specific issue — most often the category — and resubmitting clears the majority of rejections.</p>"
+            },
+            {
+              "q": "How do I create a WhatsApp template message?",
+              "a": "<p>Inside Ojiva AI you choose the category, name the template and set its language, write the content with {{1}} variables, add any media or buttons the category allows, and submit it to Meta for approval. Our template generator can also suggest ready-to-submit variations to speed the process up.</p>"
+            },
+            {
+              "q": "How much do WhatsApp templates cost in India?",
+              "a": "<p>You pay Meta per conversation by category — marketing at the premium rate, utility and authentication lower — plus your provider's platform fee and 18% GST. Meta sets and periodically revises these rates, so ask Ojiva AI for the current rate card before you plan volumes.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

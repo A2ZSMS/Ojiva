@@ -339,5 +339,16 @@
     "description": "Set up the WhatsApp Business API with Ojiva AI, an official Meta BSP — requirements, onboarding, number verification, display-name approval and compliance.",
     "image": "/image/aug12(1).webp",
     "keywords": "WhatsApp Business API setup, WhatsApp Business API requirements, how to set up WhatsApp Business API, WhatsApp API onboarding, WhatsApp Business Account setup, WABA setup, WhatsApp Business API India, WhatsApp Business API display name rejected, WhatsApp Business verification failed, how to register a number for WhatsApp Business API, WhatsApp Business API messaging limits, cost of WhatsApp Business API in India, WhatsApp API, WhatsApp Business, WABA, Meta BSP, message templates, WhatsApp automation, WhatsApp Business Platform"
+  },
+  {
+    "id": 33,
+    "title": "WhatsApp Template Message Types You Can Use",
+    "componentKey": "WhatsappTemplateTypes",
+    "slug": "whatsapp-template-message-types",
+    "category": "WhatsApp API",
+    "date": "2026-08-14",
+    "description": "Discover the three WhatsApp template message types utility, marketing and authentication with examples, pricing and approval tips from Ojiva AI.",
+    "image": "/image/aug14(1).webp",
+    "keywords": "WhatsApp template message types, WhatsApp template messages, WhatsApp message templates, WhatsApp template categories, utility template WhatsApp, marketing template WhatsApp, authentication template WhatsApp, WhatsApp OTP template, WhatsApp template approval, WhatsApp template pricing, WhatsApp template pricing in India, why WhatsApp templates get rejected, how to create a WhatsApp template message, WhatsApp Business message template, WhatsApp broadcast templates, WhatsApp templates, WhatsApp marketing, message templates, WhatsApp OTP, WhatsApp broadcast, Meta template approval"
   }
 ]

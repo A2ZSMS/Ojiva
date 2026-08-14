@@ -1,5 +1,16 @@
 [
   {
+  "id": 33,
+  "title": "WhatsApp Template Message Types You Can Use",
+  "componentKey": "WhatsappTemplateTypes",
+  "slug": "whatsapp-template-message-types",
+  "category": "WhatsApp API",
+  "date": "2026-08-14",
+  "description": "Discover the three WhatsApp template message types utility, marketing and authentication with examples, pricing and approval tips from Ojiva AI.",
+  "image": "/image/aug14(1).webp",
+  "keywords": "WhatsApp template message types, WhatsApp template messages, WhatsApp message templates, WhatsApp template categories, utility template WhatsApp, marketing template WhatsApp, authentication template WhatsApp, WhatsApp OTP template, WhatsApp template approval, WhatsApp template pricing, WhatsApp template pricing in India, why WhatsApp templates get rejected, how to create a WhatsApp template message, WhatsApp Business message template, WhatsApp broadcast templates, WhatsApp templates, WhatsApp marketing, message templates, WhatsApp OTP, WhatsApp broadcast, Meta template approval"
+},
+  {
     "id": 32,
     "title": "WhatsApp Business API Setup: Step-by-Step Guide",
     "componentKey": "Aug12",

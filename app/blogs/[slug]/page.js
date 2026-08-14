@@ -42,6 +42,7 @@ import blog_Aug05 from "../../../public/data/blogs/2026/08/Aug05.json";
 import blog_whatsapp_business_api_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug07.json";
 import blog_Aug10 from "../../../public/data/blogs/2026/08/Aug10.json";
 import blog_whatsapp_business_api_setup from "../../../public/data/blogs/2026/08/Aug12.json";
+import blog_whatsapp_template_message_types from "../../../public/data/blogs/2026/08/Aug14.json";
 
 // slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
@@ -97,6 +98,7 @@ const BlogJson = {
     blog_whatsapp_business_api_for_travel_agencies,
   "rcs-messaging-provider-in-india": blog_Aug10,
   "whatsapp-business-api-setup": blog_whatsapp_business_api_setup,
+  "whatsapp-template-message-types": blog_whatsapp_template_message_types,
 };
 
 // ── Date formatter ───────────────────────────────────────
