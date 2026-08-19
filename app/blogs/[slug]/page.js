@@ -44,6 +44,7 @@ import blog_Aug10 from "../../../public/data/blogs/2026/08/Aug10.json";
 import blog_whatsapp_business_api_setup from "../../../public/data/blogs/2026/08/Aug12.json";
 import blog_whatsapp_template_message_types from "../../../public/data/blogs/2026/08/Aug14.json";
 import blog_Aug17 from "../../../public/data/blogs/2026/08/Aug17.json";
+import blog_Aug19 from "../../../public/data/blogs/2026/08/Aug19.json";
 
 // slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
@@ -101,6 +102,7 @@ const BlogJson = {
   "whatsapp-business-api-setup": blog_whatsapp_business_api_setup,
   "whatsapp-template-message-types": blog_whatsapp_template_message_types,
   "rcs-messaging-for-real-estate": blog_Aug17,
+  "rcs-messaging-provider-hyderabad": blog_Aug19,
 };
 
 // ── Date formatter ───────────────────────────────────────
