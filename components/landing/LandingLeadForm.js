@@ -7,7 +7,7 @@ import { sendWhatsApp } from '@/lib/whatsapp';
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
@@ -18,9 +18,28 @@ function fireTeleCRM({ name, phone, email, company, service, source }) {
     phone:   p,
     email:   String(email || '').trim().toLowerCase(),
   };
-  if (company) fields.company = String(company).trim();
-  if (service) fields.service = String(service).trim();
-  if (source)  fields.source  = String(source).trim();
+  if (company) {
+    const v = String(company).trim();
+    fields.companyName  = v;
+    fields.company_name = v;
+    fields.company      = v;
+  }
+  if (service) {
+    const v = String(service).trim();
+    fields.serviceInterested  = v;
+    fields.service_interested = v;
+    fields.service            = v;
+  }
+  if (source) {
+    const v = String(source).trim();
+    fields.source = v;
+    fields.Source = v;
+  }
+  if (message) {
+    const v = String(message).trim();
+    fields.remark = v;
+    fields.Remark = v;
+  }
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
@@ -205,6 +224,7 @@ export default function LandingLeadForm({
         company: payload.company,
         service: payload.service || 'Not specified',
         source:  source,
+        message: payload.message,
       });
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {
