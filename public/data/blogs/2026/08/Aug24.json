@@ -1,0 +1,564 @@
+{
+  "slug": "whatsapp-flows-guide",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "what-are",
+      "label": "What In-Chat Forms Do"
+    },
+    {
+      "id": "components",
+      "label": "Interactive Components"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How the Journey Runs"
+    },
+    {
+      "id": "lead-qualification",
+      "label": "Qualifying Leads"
+    },
+    {
+      "id": "booking",
+      "label": "Booking in Chat"
+    },
+    {
+      "id": "completion",
+      "label": "Lifting Form Completion"
+    },
+    {
+      "id": "security",
+      "label": "Keeping Data Secure"
+    },
+    {
+      "id": "crm",
+      "label": "Connecting Your CRM"
+    },
+    {
+      "id": "pricing",
+      "label": "Cost in India"
+    },
+    {
+      "id": "build",
+      "label": "Building Without Code"
+    },
+    {
+      "id": "use-cases",
+      "label": "Where Businesses Use Them"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>WhatsApp Flows let a business turn an ordinary chat into a guided, multi-step form customers choose options, enter details and finish a task like booking, registration or an application without ever leaving the conversation.</strong> For years the pattern was the same: a customer taps a link, gets thrown onto an external landing page or a long web form, and quietly abandons it halfway. Every redirect and every extra field is another chance to lose them. Keeping the whole exchange inside the chat window strips that friction out, and it is why so many teams are rebuilding their sign-up and booking journeys this way."
+        },
+        {
+          "type": "p",
+          "html": "This guide walks through what these interactive forms are, the components that make them work, how a full journey runs end to end, what they cost in India, and how to build one without touching code. Everything below assumes your number is already live on the <a href=\"/whatsapp/\">WhatsApp Business API</a> — and Ojiva AI is an official Meta Business Solution Provider for India that sets up and manages these journeys on your behalf."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug24(1).webp",
+          "alt": "WhatsApp Flows explained by Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "what-are",
+      "heading": "What In-Chat Forms Do That Landing Pages Cannot",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An in-chat form is exactly what it sounds like: a structured, screen-like experience that opens inside the chat instead of sending the customer somewhere else. Where a plain conversation is back-and-forth text, WhatsApp forms present clean fields, dropdowns and buttons that feel closer to a lightweight app. The customer stays in a place they already trust and use every day, which is the whole reason completion holds up so well."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-window-stack",
+              "title": "Everything stays in one place:",
+              "desc": "Customers finish sign-ups, bookings and applications inside the chat, with no jump to an external page."
+            },
+            {
+              "icon": "bi-ui-radios",
+              "title": "Structured over free text:",
+              "desc": "Guided screens replace long typed answers, so people move faster and hand you cleaner data."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Familiar and trusted:",
+              "desc": "The experience runs where daily conversations already happen, which lowers hesitation at the point of action."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Built for conversational commerce:",
+              "desc": "From product selection to customer onboarding, the same format carries a person smoothly from interest to a completed action."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/flows/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform documentation</a> details how these interactive forms are defined and published."
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "heading": "The Interactive Components Behind Each Screen",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Each screen is assembled from a small set of interactive message components, and knowing what is on offer helps you design a journey that feels effortless. These are the building blocks that turn a static message into something a customer can actually act on."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-input-cursor-text",
+              "title": "Text and number inputs:",
+              "desc": "Capture names, addresses and other details with fields that check the format as the customer types."
+            },
+            {
+              "icon": "bi-menu-button-wide-fill",
+              "title": "Dropdowns and multi-select:",
+              "desc": "Let people choose from a defined list so answers stay consistent and easy to route."
+            },
+            {
+              "icon": "bi-calendar-date-fill",
+              "title": "Date and time pickers:",
+              "desc": "Offer calendar and slot selectors that make scheduling a single tap rather than a typed guess."
+            },
+            {
+              "icon": "bi-check2-square",
+              "title": "Buttons and confirmation screens:",
+              "desc": "Move customers forward with clear choices and show a summary before anything is submitted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How a Guided Conversation Runs End to End",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A complete journey follows a predictable path from the first tap to the final action. Because it runs on the WhatsApp Business Platform and connects to your automation behind the scenes, the customer sees one smooth conversation while the work happens quietly in the background. These conversational customer journeys are what replace the old scatter of forms and follow-up calls."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "The customer starts the chat:",
+              "desc": "An entry point — a click-to-WhatsApp ad, a QR code, a website widget or a broadcast — opens the conversation."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "The chatbot serves the right screen:",
+              "desc": "A WhatsApp chatbot reads the intent and opens the matching interactive form inside the same window."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "The customer works through the steps:",
+              "desc": "They pick options and fill fields, with later screens adapting to earlier answers through conditional logic."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Responses are processed in real time:",
+              "desc": "Submitted details sync to your connected systems the moment the customer finishes."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Follow-up actions fire automatically:",
+              "desc": "Confirmations, lead routing and nurture sequences trigger without anyone lifting a finger."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lead-qualification",
+      "heading": "Qualifying Leads Before They Reach Sales",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "One of the highest-value uses is sorting real prospects from noise before a salesperson is ever involved. A short guided sequence gathers the details that decide priority, so your team spends its time on people who are genuinely ready to buy. Think of it as lead generation and screening rolled into a single conversation — WhatsApp lead qualification automation doing the first pass for you."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Capture intent up front:",
+              "desc": "Ask for requirement, budget and timeline so every enquiry arrives already scored."
+            },
+            {
+              "icon": "bi-sort-down",
+              "title": "Route by answer:",
+              "desc": "Send enterprise enquiries to one team and smaller orders to another, automatically."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Cut manual screening:",
+              "desc": "Reps skip the qualifying call and open each conversation already knowing what the customer needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "heading": "Letting Customers Book Appointments in Chat",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "For any business that runs on scheduled time — clinics, salons, consultants, service teams — appointment booking automation removes the phone tag entirely. The customer picks a date, a slot and a service in a few taps, and the booking lands in your calendar without a single email. Building a booking journey is mostly a matter of wiring the calendar screen to your scheduling tool."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-calendar2-week-fill",
+              "title": "Show real availability:",
+              "desc": "Present open dates and time slots so customers only ever pick what you can actually honour."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Collect the essentials:",
+              "desc": "Gather contact details and service type alongside the slot, all in the same short sequence."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Confirm and remind:",
+              "desc": "Fire an instant confirmation and a later reminder to cut down on no-shows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "completion",
+      "heading": "Why Guided Journeys Lift Form Completion",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Drop-off is almost always a friction problem. Every redirect, every page load and every empty field gives a customer a reason to quit. Keeping the journey inside the chat removes those moments, which is why the WhatsApp form completion rate tends to hold up far better than on a traditional web form. The table below shows where the difference comes from — not with invented numbers, but with the experience itself."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "What the customer hits",
+            "Traditional web form",
+            "In-chat guided form"
+          ],
+          "rows": [
+            [
+              "Getting started",
+              "Tap a link, wait for a new page to load",
+              "The form opens instantly in the current chat"
+            ],
+            [
+              "Leaving the app",
+              "Redirected out to a browser tab",
+              "Never leaves the conversation"
+            ],
+            [
+              "Filling details",
+              "One long page of empty fields",
+              "Short, one-question-at-a-time screens"
+            ],
+            [
+              "Trust at the moment of action",
+              "An unfamiliar page or domain",
+              "The messaging app they already use daily"
+            ],
+            [
+              "After submitting",
+              "Often no clear confirmation",
+              "Instant in-chat confirmation and next step"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The takeaway is simple: fewer steps in a familiar setting mean more people reach the end. Treat that as a WhatsApp marketing advantage, not just a form tweak."
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "How Encryption Protects the Data Customers Share",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "When a journey needs to talk to your own systems in real time — checking availability, pulling a quote — the data moving between the customer and your endpoint is encrypted, not sent in the clear. This is where WhatsApp Business encryption matters. Meta requires you to generate a key pair and upload the public key, which Meta then signs, and the request and response payloads are encrypted between the app and your server. It is a genuine security model, and worth understanding rather than glossing over."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "A signed key pair:",
+              "desc": "You generate keys and upload the public one, which Meta signs before any encrypted exchange begins."
+            },
+            {
+              "icon": "bi-lock-fill",
+              "title": "Encrypted payloads:",
+              "desc": "Incoming requests are decrypted on your endpoint and responses re-encrypted before they return to the customer."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Sensitive data stays protected:",
+              "desc": "The model exists specifically so details like contact and payment information are not exposed in transit."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The exact contract is laid out in Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/flows/guides/implementingyourflowendpoint\" target=\"_blank\" rel=\"noopener noreferrer\">endpoint implementation documentation</a>, which covers key upload, request signing and payload encryption in full."
+        }
+      ]
+    },
+    {
+      "id": "crm",
+      "heading": "Syncing Every Response With Your CRM",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A finished form is only useful if the data lands where your team already works. With WhatsApp CRM integration, every answer moves straight into your customer records, ticketing tool or spreadsheet the instant it is submitted — no copy-paste, no lag. This is what turns a pleasant chat experience into real WhatsApp automation and clean customer onboarding."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Push leads into your CRM:",
+              "desc": "New enquiries appear as records automatically, tagged and ready for follow-up."
+            },
+            {
+              "icon": "bi-ticket-detailed-fill",
+              "title": "Open tickets on the fly:",
+              "desc": "Support requests generate a ticket in your helpdesk without any manual entry."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Keep systems in step:",
+              "desc": "Bookings and payments update your scheduling and finance tools in real time."
+            }
+          ]
+        },
+                {
+          "type": "image",
+          "src": "/image/aug24(3).webp",
+          "alt": "Building a no-code chat journey in Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What These Journeys Cost in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Interactive forms do not carry a separate line-item price of their own — they ride inside WhatsApp conversations, and the conversation category is what sets the rate. In practice the cost sits alongside the template or session that delivers the form, billed in INR with 18% GST on top. Because Meta sets and periodically revises the rate card, the sensible approach is to judge cost per completed outcome rather than per message."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "What triggers the form",
+            "Typical use",
+            "Where it sits on cost"
+          ],
+          "rows": [
+            [
+              "Marketing conversation",
+              "A promotional broadcast that opens a form",
+              "Premium per-conversation rate"
+            ],
+            [
+              "Utility conversation",
+              "An order, booking or account update",
+              "Lower per-conversation rate"
+            ],
+            [
+              "Service window reply",
+              "A free-form response within 24 hours",
+              "No conversation charge"
+            ]
+          ]
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "Rates change, so ask for the current card:",
+              "desc": "The exact per-conversation price depends on category and country, and Meta revises it over time — ask Ojiva AI for the live rate card before you plan volumes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "heading": "Building These Journeys Without Writing Code",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Not long ago, building anything like this meant wrestling with APIs, endpoints and backend code. That has changed. With a no-code chatbot flow builder you assemble screens visually, connect them to your systems and publish — no development team required. One point worth clearing up for Indian businesses: these journeys run on Meta's own template review, so they do not need DLT registration. DLT and TRAI rules apply to SMS, not to WhatsApp."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-hammer",
+              "title": "Design screens visually:",
+              "desc": "Drag fields, dropdowns and buttons into place in a <a href=\"/whatsapp-chatbot/\">no-code builder</a> without writing a single line of code."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Connect your tools:",
+              "desc": "Wire responses to your CRM, payment gateway and helpdesk through ready-made integrations."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Trigger at scale:",
+              "desc": "Launch the same form to a segmented, opted-in audience as a broadcast campaign."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For the record on why messaging rules differ by channel, the <a href=\"https://www.trai.gov.in/\" target=\"_blank\" rel=\"noopener noreferrer\">TRAI</a> framework governs SMS through DLT registration, while WhatsApp is verified separately through Meta."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug24(2).webp",
+          "alt": "Building a no-code chat journey in Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Where Businesses Put These Journeys to Work",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The same format stretches across almost every industry, which is why the strongest use cases for business look so different from one sector to the next. A handful of the most common:"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "Guided product selection:",
+              "desc": "E-commerce brands walk shoppers to the right product through a few preference questions."
+            },
+            {
+              "icon": "bi-hospital-fill",
+              "title": "Healthcare and services:",
+              "desc": "Clinics and salons handle bookings, intake and reminders in one thread."
+            },
+            {
+              "icon": "bi-bank2",
+              "title": "Banking and insurance:",
+              "desc": "Lenders and insurers collect eligibility details and generate quotes conversationally."
+            },
+            {
+              "icon": "bi-mortarboard-fill",
+              "title": "Education enquiries:",
+              "desc": "Institutes automate course questions, counselling requests and admission steps."
+            },
+            {
+              "icon": "bi-airplane-fill",
+              "title": "Travel and hospitality:",
+              "desc": "Operators help travellers choose destinations, dates and packages inside chat."
+            },
+            {
+              "icon": "bi-star-fill",
+              "title": "Feedback and reviews:",
+              "desc": "Teams gather ratings and survey answers with far higher response rates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Start Guiding Customers Inside the Chat",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The shift is straightforward once it clicks: instead of pushing customers out to forms and pages that quietly leak conversions, you guide them through the whole journey in the place they already spend their day. Fewer steps, a familiar setting, clean data landing in your systems — that is the entire argument, and it holds across sales, support and onboarding."
+        },
+        {
+          "type": "p",
+          "html": "When you are ready to build one, Ojiva AI handles it end to end as an official Meta Business Solution Provider — journey design, the <a href=\"/whatsapp/\">WhatsApp Business API</a>, a <a href=\"/whatsapp-chatbot/\">WhatsApp chatbot</a>, CRM integrations and broadcasts in one place. Explore the platform or <a href=\"/book-demo/\">book a free demo</a> and we will map your first customer journey on the call."
+        },
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 24 August</em>"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions About Interactive Chat Forms",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is a WhatsApp Flow and how does it work?",
+              "a": "<p>It is an interactive, multi-step form that runs inside a WhatsApp chat. A customer opens it from an entry point like an ad or a button, works through screens of fields, dropdowns and buttons, and their answers sync to your systems in real time — all without leaving the conversation.</p>"
+            },
+            {
+              "q": "Can you build one without any coding?",
+              "a": "<p>Yes. A no-code builder lets you assemble screens, add fields and buttons, connect your CRM and publish — no development team needed. Ojiva AI sets the whole thing up for you as an official Meta Business Solution Provider.</p>"
+            },
+            {
+              "q": "Do these journeys need DLT registration in India?",
+              "a": "<p>No. DLT registration under TRAI rules applies to SMS. Messages on WhatsApp are verified through Meta's own template and business review process instead, so a chat-based form does not require DLT.</p>"
+            },
+            {
+              "q": "Is the data customers share actually encrypted?",
+              "a": "<p>Yes. When a journey exchanges data with your endpoint, Meta requires an uploaded, signed public key and encrypts the request and response payloads. Sensitive details are protected in transit rather than sent in the clear.</p>"
+            },
+            {
+              "q": "How much do they cost in India?",
+              "a": "<p>There is no separate charge for the form itself — cost follows the WhatsApp conversation that carries it, billed per conversation in INR with 18% GST. Marketing conversations sit at the premium rate; utility ones are lower. Ask Ojiva AI for the current rate card before planning volumes.</p>"
+            },
+            {
+              "q": "How are these different from Google Forms?",
+              "a": "<p>A Google Form lives on an external page the customer has to open in a browser and then return from. A chat-based form runs inside the conversation itself, so there is no redirect and no waiting for a page to load, and completion tends to hold up better as a result.</p>"
+            },
+            {
+              "q": "Can responses connect to my CRM?",
+              "a": "<p>Yes. Answers can push straight into your CRM, helpdesk, scheduling tool or spreadsheet the moment they are submitted, so leads and bookings appear automatically without manual entry.</p>"
+            },
+            {
+              "q": "Which industries and business sizes can use them?",
+              "a": "<p>Almost any — e-commerce, healthcare, education, banking, insurance, travel, real estate and support teams all use them. Small businesses benefit as much as large ones, since a no-code setup needs no technical team or heavy infrastructure.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
