@@ -1,62 +1,20 @@
 {
-  "slug": "whatsapp-flows-guide",
+  "slug": "whatsapp-templates-for-travel-agencies",
   "toc": [
-    {
-      "id": "introduction",
-      "label": "Introduction"
-    },
-    {
-      "id": "what-are",
-      "label": "What In-Chat Forms Do"
-    },
-    {
-      "id": "components",
-      "label": "Interactive Components"
-    },
-    {
-      "id": "how-it-works",
-      "label": "How the Journey Runs"
-    },
-    {
-      "id": "lead-qualification",
-      "label": "Qualifying Leads"
-    },
-    {
-      "id": "booking",
-      "label": "Booking in Chat"
-    },
-    {
-      "id": "completion",
-      "label": "Lifting Form Completion"
-    },
-    {
-      "id": "security",
-      "label": "Keeping Data Secure"
-    },
-    {
-      "id": "crm",
-      "label": "Connecting Your CRM"
-    },
-    {
-      "id": "pricing",
-      "label": "Cost in India"
-    },
-    {
-      "id": "build",
-      "label": "Building Without Code"
-    },
-    {
-      "id": "use-cases",
-      "label": "Where Businesses Use Them"
-    },
-    {
-      "id": "conclusion",
-      "label": "Conclusion"
-    },
-    {
-      "id": "faq",
-      "label": "FAQ"
-    }
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-are", "label": "What Counts as a Template" },
+    { "id": "booking", "label": "Booking Confirmations" },
+    { "id": "offers", "label": "Promotional Offers" },
+    { "id": "upsell", "label": "Add-On Messages" },
+    { "id": "reminders", "label": "Flight Reminders" },
+    { "id": "retarget", "label": "Reviving Cold Enquiries" },
+    { "id": "feedback", "label": "Post-Trip Feedback" },
+    { "id": "referral", "label": "Referral Messages" },
+    { "id": "best-practices", "label": "Staying Compliant" },
+    { "id": "pricing", "label": "Cost in India" },
+    { "id": "build", "label": "Creating One Without Code" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
   ],
   "sections": [
     {
@@ -65,496 +23,470 @@
       "blocks": [
         {
           "type": "p",
-          "html": "<strong>WhatsApp Flows let a business turn an ordinary chat into a guided, multi-step form customers choose options, enter details and finish a task like booking, registration or an application without ever leaving the conversation.</strong> For years the pattern was the same: a customer taps a link, gets thrown onto an external landing page or a long web form, and quietly abandons it halfway. Every redirect and every extra field is another chance to lose them. Keeping the whole exchange inside the chat window strips that friction out, and it is why so many teams are rebuilding their sign-up and booking journeys this way."
+          "html": "<strong>WhatsApp templates for travel agencies turn a booking confirmation, a flight reminder or a limited-time package deal into a message that reaches a traveller even when there is no open conversation to reply inside — and Meta only allows that once the template is approved.</strong> Travel runs on time-sensitive updates and seasonal offers, which makes it one of the few industries that genuinely needs all three template categories working together: routine booking updates, promotional packages, and account or payment verification."
         },
         {
           "type": "p",
-          "html": "This guide walks through what these interactive forms are, the components that make them work, how a full journey runs end to end, what they cost in India, and how to build one without touching code. Everything below assumes your number is already live on the <a href=\"/whatsapp/\">WhatsApp Business API</a> — and Ojiva AI is an official Meta Business Solution Provider for India that sets up and manages these journeys on your behalf."
+          "html": "This guide walks through the templates a travel agency actually needs — booking confirmations, reminders, offers, upsells, retargeting, feedback and referrals — with real examples for each, plus what they cost in India and how to get them live without a developer. If your number isn't set up yet, start with our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide first; for the full rules on how Meta classifies templates, see our <a href=\"/blogs/whatsapp-template-message-types-guide/\">WhatsApp template message types</a> guide. Ojiva AI is an official Meta Business Solution Provider that submits and manages these templates for travel businesses across India."
         },
         {
           "type": "image",
-          "src": "/image/aug24(1).webp",
-          "alt": "WhatsApp Flows explained by Ojiva AI"
+          "src": "/image/aug31(1).webp",
+          "alt": "WhatsApp templates for travel agencies explained by Ojiva AI"
         }
       ]
     },
     {
       "id": "what-are",
-      "heading": "What In-Chat Forms Do That Landing Pages Cannot",
+      "heading": "What Makes a Travel Message a WhatsApp Template",
       "blocks": [
         {
           "type": "p",
-          "html": "An in-chat form is exactly what it sounds like: a structured, screen-like experience that opens inside the chat instead of sending the customer somewhere else. Where a plain conversation is back-and-forth text, WhatsApp forms present clean fields, dropdowns and buttons that feel closer to a lightweight app. The customer stays in a place they already trust and use every day, which is the whole reason completion holds up so well."
+          "html": "Not every message a travel agency sends needs approval — replies inside an open conversation window go out freely. A template is different: it is the pre-written format a business submits to Meta so it can reach a traveller who hasn't messaged first, whether that's a confirmed booking, a departure reminder or a seasonal discount."
         },
         {
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-window-stack",
-              "title": "Everything stays in one place:",
-              "desc": "Customers finish sign-ups, bookings and applications inside the chat, with no jump to an external page."
+              "icon": "bi-airplane-engines-fill",
+              "title": "Built for time-sensitive travel:",
+              "desc": "Flights, check-ins and limited offers all depend on reaching someone before a deadline passes, which is exactly what templates are for."
             },
             {
-              "icon": "bi-ui-radios",
-              "title": "Structured over free text:",
-              "desc": "Guided screens replace long typed answers, so people move faster and hand you cleaner data."
+              "icon": "bi-tags-fill",
+              "title": "Sorted by category:",
+              "desc": "Meta files every travel template as Utility, Marketing or Authentication, and the category decides both how strict review is and what it costs."
             },
             {
-              "icon": "bi-shield-check",
-              "title": "Familiar and trusted:",
-              "desc": "The experience runs where daily conversations already happen, which lowers hesitation at the point of action."
+              "icon": "bi-person-check-fill",
+              "title": "Personalized with variables:",
+              "desc": "Traveller name, booking reference and destination slot into the same approved format for every recipient."
             },
             {
-              "icon": "bi-people-fill",
-              "title": "Built for conversational commerce:",
-              "desc": "From product selection to customer onboarding, the same format carries a person smoothly from interest to a completed action."
+              "icon": "bi-graph-up-arrow",
+              "title": "Judged on quality over time:",
+              "desc": "Templates that get blocked or ignored too often can affect how reliably a travel number reaches customers later."
             }
           ]
         },
         {
           "type": "p",
-          "html": "Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/flows/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform documentation</a> details how these interactive forms are defined and published."
-        }
-      ]
-    },
-    {
-      "id": "components",
-      "heading": "The Interactive Components Behind Each Screen",
-      "blocks": [
-        {
-          "type": "p",
-          "html": "Each screen is assembled from a small set of interactive message components, and knowing what is on offer helps you design a journey that feels effortless. These are the building blocks that turn a static message into something a customer can actually act on."
-        },
-        {
-          "type": "icon-list",
-          "items": [
-            {
-              "icon": "bi-input-cursor-text",
-              "title": "Text and number inputs:",
-              "desc": "Capture names, addresses and other details with fields that check the format as the customer types."
-            },
-            {
-              "icon": "bi-menu-button-wide-fill",
-              "title": "Dropdowns and multi-select:",
-              "desc": "Let people choose from a defined list so answers stay consistent and easy to route."
-            },
-            {
-              "icon": "bi-calendar-date-fill",
-              "title": "Date and time pickers:",
-              "desc": "Offer calendar and slot selectors that make scheduling a single tap rather than a typed guess."
-            },
-            {
-              "icon": "bi-check2-square",
-              "title": "Buttons and confirmation screens:",
-              "desc": "Move customers forward with clear choices and show a summary before anything is submitted."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "how-it-works",
-      "heading": "How a Guided Conversation Runs End to End",
-      "blocks": [
-        {
-          "type": "p",
-          "html": "A complete journey follows a predictable path from the first tap to the final action. Because it runs on the WhatsApp Business Platform and connects to your automation behind the scenes, the customer sees one smooth conversation while the work happens quietly in the background. These conversational customer journeys are what replace the old scatter of forms and follow-up calls."
-        },
-        {
-          "type": "icon-list",
-          "items": [
-            {
-              "icon": "bi-1-circle-fill",
-              "title": "The customer starts the chat:",
-              "desc": "An entry point — a click-to-WhatsApp ad, a QR code, a website widget or a broadcast — opens the conversation."
-            },
-            {
-              "icon": "bi-2-circle-fill",
-              "title": "The chatbot serves the right screen:",
-              "desc": "A WhatsApp chatbot reads the intent and opens the matching interactive form inside the same window."
-            },
-            {
-              "icon": "bi-3-circle-fill",
-              "title": "The customer works through the steps:",
-              "desc": "They pick options and fill fields, with later screens adapting to earlier answers through conditional logic."
-            },
-            {
-              "icon": "bi-4-circle-fill",
-              "title": "Responses are processed in real time:",
-              "desc": "Submitted details sync to your connected systems the moment the customer finishes."
-            },
-            {
-              "icon": "bi-5-circle-fill",
-              "title": "Follow-up actions fire automatically:",
-              "desc": "Confirmations, lead routing and nurture sequences trigger without anyone lifting a finger."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lead-qualification",
-      "heading": "Qualifying Leads Before They Reach Sales",
-      "blocks": [
-        {
-          "type": "p",
-          "html": "One of the highest-value uses is sorting real prospects from noise before a salesperson is ever involved. A short guided sequence gathers the details that decide priority, so your team spends its time on people who are genuinely ready to buy. Think of it as lead generation and screening rolled into a single conversation — WhatsApp lead qualification automation doing the first pass for you."
-        },
-        {
-          "type": "icon-list",
-          "items": [
-            {
-              "icon": "bi-funnel-fill",
-              "title": "Capture intent up front:",
-              "desc": "Ask for requirement, budget and timeline so every enquiry arrives already scored."
-            },
-            {
-              "icon": "bi-sort-down",
-              "title": "Route by answer:",
-              "desc": "Send enterprise enquiries to one team and smaller orders to another, automatically."
-            },
-            {
-              "icon": "bi-clock-fill",
-              "title": "Cut manual screening:",
-              "desc": "Reps skip the qualifying call and open each conversation already knowing what the customer needs."
-            }
-          ]
+          "html": "Meta's own <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview\" target=\"_blank\" rel=\"noopener noreferrer\">template fundamentals documentation</a> covers exactly how these formats are submitted and reviewed."
         }
       ]
     },
     {
       "id": "booking",
-      "heading": "Letting Customers Book Appointments in Chat",
+      "heading": "Booking Confirmations and Reminders",
       "blocks": [
         {
           "type": "p",
-          "html": "For any business that runs on scheduled time — clinics, salons, consultants, service teams — appointment booking automation removes the phone tag entirely. The customer picks a date, a slot and a service in a few taps, and the booking lands in your calendar without a single email. Building a booking journey is mostly a matter of wiring the calendar screen to your scheduling tool."
+          "html": "This is the highest-volume category for any travel business, and it sits squarely under Utility since it carries information the traveller already expects. A whatsapp booking reminder template works best when it states the booking plainly and leaves no promotional language in the same message."
         },
         {
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-calendar2-week-fill",
-              "title": "Show real availability:",
-              "desc": "Present open dates and time slots so customers only ever pick what you can actually honour."
+              "icon": "bi-check2-circle",
+              "title": "Booking confirmed:",
+              "desc": "Confirms the trip, dates and reference number the moment payment clears."
             },
             {
-              "icon": "bi-person-lines-fill",
-              "title": "Collect the essentials:",
-              "desc": "Gather contact details and service type alongside the slot, all in the same short sequence."
+              "icon": "bi-clock-fill",
+              "title": "Check-in or departure reminder:",
+              "desc": "Nudges the traveller a set number of hours or days before travel."
             },
             {
-              "icon": "bi-bell-fill",
-              "title": "Confirm and remind:",
-              "desc": "Fire an instant confirmation and a later reminder to cut down on no-shows."
+              "icon": "bi-receipt-cutoff",
+              "title": "Payment or balance due:",
+              "desc": "Flags an outstanding amount tied to an existing booking."
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Itinerary update:",
+              "desc": "Shares a changed gate, slot or pickup time as soon as it is confirmed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A typical confirmation reads close to: \"Hi {{1}}, your booking for {{2}} is confirmed. Reference: {{3}}. Travel date: {{4}}.\" Kept this plain, it clears review quickly because there is nothing promotional riding along."
+        }
+      ]
+    },
+    {
+      "id": "offers",
+      "heading": "Promotional Offers and Package Deals",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Anything with a discount, a seasonal push or a destination promotion belongs under Marketing, and whatsapp travel agency marketing templates are where agencies get the most creative room — at the cost of a stricter opt-in requirement and the highest per-message rate."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-percent",
+              "title": "Seasonal or festival discount:",
+              "desc": "A time-boxed offer tied to a travel season or holiday."
+            },
+            {
+              "icon": "bi-globe-asia-australia",
+              "title": "New destination launch:",
+              "desc": "Introduces a newly added route or package to past travellers."
+            },
+            {
+              "icon": "bi-cart-x-fill",
+              "title": "Abandoned enquiry recovery:",
+              "desc": "Follows up on a quote or itinerary a traveller never confirmed."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Group or family package:",
+              "desc": "Promotes a bundled rate for group and family travel."
+            },
+            {
+              "icon": "bi-calendar-event-fill",
+              "title": "Early-bird booking window:",
+              "desc": "Rewards travellers who book a set number of days ahead."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The best practices for whatsapp marketing templates apply here without exception: keep opt-in evidence on file, lead with the specific offer rather than a generic greeting, and never fold a promotion into what should be a booking confirmation."
+        }
+      ]
+    },
+    {
+      "id": "upsell",
+      "heading": "Add-On and Upgrade Messages",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Once a trip is booked, a narrow window opens to offer something extra — a room upgrade, an airport transfer, a local excursion. These moments matter most for whatsapp templates for hotels bundled inside a larger trip, and they still count as Marketing whenever an incentive is attached, even though they're tied to an existing booking."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-star-fill",
+              "title": "Room or seat upgrade:",
+              "desc": "Offers a better room category or seat class at a discounted add-on rate."
+            },
+            {
+              "icon": "bi-car-front-fill",
+              "title": "Airport transfer:",
+              "desc": "Suggests a pickup or drop service tied to the confirmed travel dates."
+            },
+            {
+              "icon": "bi-umbrella-fill",
+              "title": "Excursion or activity add-on:",
+              "desc": "Promotes a local tour or activity available at the destination."
+            },
+            {
+              "icon": "bi-heart-fill",
+              "title": "Romantic or special-occasion package:",
+              "desc": "Targets anniversaries or honeymoons flagged at the time of booking."
             }
           ]
         }
       ]
     },
     {
-      "id": "completion",
-      "heading": "Why Guided Journeys Lift Form Completion",
+      "id": "reminders",
+      "heading": "Flight and Departure Reminders",
       "blocks": [
         {
           "type": "p",
-          "html": "Drop-off is almost always a friction problem. Every redirect, every page load and every empty field gives a customer a reason to quit. Keeping the journey inside the chat removes those moments, which is why the WhatsApp form completion rate tends to hold up far better than on a traditional web form. The table below shows where the difference comes from — not with invented numbers, but with the experience itself."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "What the customer hits",
-            "Traditional web form",
-            "In-chat guided form"
-          ],
-          "rows": [
-            [
-              "Getting started",
-              "Tap a link, wait for a new page to load",
-              "The form opens instantly in the current chat"
-            ],
-            [
-              "Leaving the app",
-              "Redirected out to a browser tab",
-              "Never leaves the conversation"
-            ],
-            [
-              "Filling details",
-              "One long page of empty fields",
-              "Short, one-question-at-a-time screens"
-            ],
-            [
-              "Trust at the moment of action",
-              "An unfamiliar page or domain",
-              "The messaging app they already use daily"
-            ],
-            [
-              "After submitting",
-              "Often no clear confirmation",
-              "Instant in-chat confirmation and next step"
-            ]
-          ]
-        },
-        {
-          "type": "p",
-          "html": "The takeaway is simple: fewer steps in a familiar setting mean more people reach the end. Treat that as a WhatsApp marketing advantage, not just a form tweak."
-        }
-      ]
-    },
-    {
-      "id": "security",
-      "heading": "How Encryption Protects the Data Customers Share",
-      "blocks": [
-        {
-          "type": "p",
-          "html": "When a journey needs to talk to your own systems in real time — checking availability, pulling a quote — the data moving between the customer and your endpoint is encrypted, not sent in the clear. This is where WhatsApp Business encryption matters. Meta requires you to generate a key pair and upload the public key, which Meta then signs, and the request and response payloads are encrypted between the app and your server. It is a genuine security model, and worth understanding rather than glossing over."
+          "html": "Travel is one of the few industries where a missed message has an immediate, visible cost — a missed check-in window or a forgotten document. This is where whatsapp automation for travel agencies pays off most directly, since these reminders stay in Utility and carry no promotional content, just a deadline."
         },
         {
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-key-fill",
-              "title": "A signed key pair:",
-              "desc": "You generate keys and upload the public one, which Meta signs before any encrypted exchange begins."
+              "icon": "bi-alarm-fill",
+              "title": "Check-in opens reminder:",
+              "desc": "Lets travellers know exactly when online check-in becomes available."
             },
             {
-              "icon": "bi-lock-fill",
-              "title": "Encrypted payloads:",
-              "desc": "Incoming requests are decrypted on your endpoint and responses re-encrypted before they return to the customer."
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Document reminder:",
+              "desc": "Flags a passport, visa or ID requirement ahead of departure."
             },
             {
-              "icon": "bi-shield-lock-fill",
-              "title": "Sensitive data stays protected:",
-              "desc": "The model exists specifically so details like contact and payment information are not exposed in transit."
+              "icon": "bi-airplane-fill",
+              "title": "Departure countdown:",
+              "desc": "Sends a final reminder with gate, terminal or pickup details close to travel time."
             }
           ]
-        },
-        {
-          "type": "p",
-          "html": "The exact contract is laid out in Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/flows/guides/implementingyourflowendpoint\" target=\"_blank\" rel=\"noopener noreferrer\">endpoint implementation documentation</a>, which covers key upload, request signing and payload encryption in full."
         }
       ]
     },
     {
-      "id": "crm",
-      "heading": "Syncing Every Response With Your CRM",
+      "id": "retarget",
+      "heading": "Reviving Cold Enquiries",
       "blocks": [
         {
           "type": "p",
-          "html": "A finished form is only useful if the data lands where your team already works. With WhatsApp CRM integration, every answer moves straight into your customer records, ticketing tool or spreadsheet the instant it is submitted — no copy-paste, no lag. This is what turns a pleasant chat experience into real WhatsApp automation and clean customer onboarding."
+          "html": "A quote that goes unanswered isn't a lost lead — it's a chance for whatsapp templates to retarget travel customers, provided the follow-up respects the same opt-in and category rules as any other Marketing message."
         },
         {
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-diagram-3-fill",
-              "title": "Push leads into your CRM:",
-              "desc": "New enquiries appear as records automatically, tagged and ready for follow-up."
+              "icon": "bi-arrow-counterclockwise",
+              "title": "Quote follow-up:",
+              "desc": "Reopens a conversation around a specific itinerary the traveller priced out."
             },
             {
-              "icon": "bi-ticket-detailed-fill",
-              "title": "Open tickets on the fly:",
-              "desc": "Support requests generate a ticket in your helpdesk without any manual entry."
+              "icon": "bi-hourglass-split",
+              "title": "Limited-availability nudge:",
+              "desc": "Flags that a previously quoted date or rate is close to selling out."
             },
             {
-              "icon": "bi-arrow-repeat",
-              "title": "Keep systems in step:",
-              "desc": "Bookings and payments update your scheduling and finance tools in real time."
+              "icon": "bi-gift-fill",
+              "title": "Win-back incentive:",
+              "desc": "Offers a small, specific incentive to travellers who went quiet after enquiring."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "feedback",
+      "heading": "Post-Trip Feedback Requests",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A feedback request is one of the simplest whatsapp templates for tourism industry use, since a plain, no-incentive ask tied to a completed trip usually qualifies as Utility — the moment a discount is attached for leaving a review, it shifts into Marketing."
         },
-                {
-          "type": "image",
-          "src": "/image/aug24(3).webp",
-          "alt": "Building a no-code chat journey in Ojiva AI"
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-star-half",
+              "title": "Trip rating request:",
+              "desc": "Asks for a quick star rating right after the traveller returns."
+            },
+            {
+              "icon": "bi-chat-square-text-fill",
+              "title": "Open feedback request:",
+              "desc": "Invites a longer comment on what worked and what didn't."
+            },
+            {
+              "icon": "bi-share-fill",
+              "title": "Review platform nudge:",
+              "desc": "Points a satisfied traveller toward a public review site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "referral",
+      "heading": "Referral and Loyalty Messages",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A whatsapp template for referral programs in travel rewards past travellers for bringing in new ones, and because it always carries an incentive, it sits under Marketing regardless of how it's worded."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-people-fill",
+              "title": "Refer-a-friend offer:",
+              "desc": "Gives an existing traveller a reason to share a referral code."
+            },
+            {
+              "icon": "bi-award-fill",
+              "title": "Loyalty tier update:",
+              "desc": "Notifies a frequent traveller they've reached a new tier or perk level."
+            },
+            {
+              "icon": "bi-ticket-perforated-fill",
+              "title": "Anniversary or milestone reward:",
+              "desc": "Marks a booking anniversary with a small, specific incentive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "heading": "Formatting Choices That Keep Travel Templates Compliant",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A few habits repeat across every travel template that clears review without a fight."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-check2-circle",
+              "title": "Match category to content, always:",
+              "desc": "An add-on with a discount is Marketing, even if it looks like a routine booking update."
+            },
+            {
+              "icon": "bi-braces-asterisk",
+              "title": "Keep variables specific:",
+              "desc": "A booking reference or date variable draws far less scrutiny than an open-ended text field."
+            },
+            {
+              "icon": "bi-clipboard-check-fill",
+              "title": "Document opt-in for every promotional list:",
+              "desc": "Marketing templates sent to past travellers move faster with consent on record."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Watch destination-specific claims:",
+              "desc": "Visa, safety or entry-requirement claims should point to an official source rather than be asserted outright."
+            }
+          ]
         }
       ]
     },
     {
       "id": "pricing",
-      "heading": "What These Journeys Cost in India",
+      "heading": "What Travel Templates Cost in India",
       "blocks": [
         {
           "type": "p",
-          "html": "Interactive forms do not carry a separate line-item price of their own — they ride inside WhatsApp conversations, and the conversation category is what sets the rate. In practice the cost sits alongside the template or session that delivers the form, billed in INR with 18% GST on top. Because Meta sets and periodically revises the rate card, the sensible approach is to judge cost per completed outcome rather than per message."
+          "html": "Meta bills templates per message delivered, following the platform's 2025 shift away from the older conversation-based pricing model. For a travel agency, that mostly plays out as a high volume of low-cost Utility reminders alongside a smaller number of higher-cost Marketing sends around peak booking season."
         },
         {
           "type": "table",
           "headers": [
-            "What triggers the form",
-            "Typical use",
-            "Where it sits on cost"
+            "Message Type",
+            "Typical Category",
+            "Where It Sits on Cost"
           ],
           "rows": [
             [
-              "Marketing conversation",
-              "A promotional broadcast that opens a form",
-              "Premium per-conversation rate"
+              "Booking confirmation, check-in or document reminder",
+              "Utility",
+              "Lower rate, volume discounts available"
             ],
             [
-              "Utility conversation",
-              "An order, booking or account update",
-              "Lower per-conversation rate"
+              "Seasonal offer, upsell or referral",
+              "Marketing",
+              "Highest per-message rate"
             ],
             [
-              "Service window reply",
-              "A free-form response within 24 hours",
-              "No conversation charge"
+              "Login or payment verification",
+              "Authentication",
+              "Lower rate, volume discounts available"
             ]
           ]
         },
         {
-          "type": "icon-list",
-          "items": [
-            {
-              "icon": "bi-receipt",
-              "title": "Rates change, so ask for the current card:",
-              "desc": "The exact per-conversation price depends on category and country, and Meta revises it over time — ask Ojiva AI for the live rate card before you plan volumes."
-            }
-          ]
+          "type": "p",
+          "html": "For the current rate card and how GST applies in India, check Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">official pricing documentation</a> or ask Ojiva AI directly — rates get revised periodically, so treat any fixed number quoted elsewhere as a starting point."
         }
       ]
     },
     {
       "id": "build",
-      "heading": "Building These Journeys Without Writing Code",
+      "heading": "Creating Travel Templates Without Code",
       "blocks": [
         {
           "type": "p",
-          "html": "Not long ago, building anything like this meant wrestling with APIs, endpoints and backend code. That has changed. With a no-code chatbot flow builder you assemble screens visually, connect them to your systems and publish — no development team required. One point worth clearing up for Indian businesses: these journeys run on Meta's own template review, so they do not need DLT registration. DLT and TRAI rules apply to SMS, not to WhatsApp."
+          "html": "Submitting a travel template is a dashboard task once your number is live on the API. Getting whatsapp message templates travel industry-ready mostly comes down to five steps."
         },
         {
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-hammer",
-              "title": "Design screens visually:",
-              "desc": "Drag fields, dropdowns and buttons into place in a <a href=\"/whatsapp-chatbot/\">no-code builder</a> without writing a single line of code."
+              "icon": "bi-pencil-square",
+              "title": "Draft from a real booking scenario:",
+              "desc": "Write the body around an actual confirmation, reminder or offer instead of a generic placeholder."
             },
             {
-              "icon": "bi-plug-fill",
-              "title": "Connect your tools:",
-              "desc": "Wire responses to your CRM, payment gateway and helpdesk through ready-made integrations."
+              "icon": "bi-tags",
+              "title": "Pick the category honestly:",
+              "desc": "Route anything promotional to Marketing even if it started as a booking follow-up."
             },
             {
-              "icon": "bi-megaphone-fill",
-              "title": "Trigger at scale:",
-              "desc": "Launch the same form to a segmented, opted-in audience as a broadcast campaign."
+              "icon": "bi-braces",
+              "title": "Add booking-specific variables:",
+              "desc": "Insert placeholders for traveller name, reference number, destination and dates."
+            },
+            {
+              "icon": "bi-send-check-fill",
+              "title": "Submit and track status:",
+              "desc": "Watch for Pending, Approved or Rejected status directly in the dashboard."
+            },
+            {
+              "icon": "bi-calendar2-range",
+              "title": "Time submissions around peak season:",
+              "desc": "Submit seasonal offers with enough lead time before the travel window they target."
             }
           ]
         },
         {
           "type": "p",
-          "html": "For the record on why messaging rules differ by channel, the <a href=\"https://www.trai.gov.in/\" target=\"_blank\" rel=\"noopener noreferrer\">TRAI</a> framework governs SMS through DLT registration, while WhatsApp is verified separately through Meta."
-        },
-        {
-          "type": "image",
-          "src": "/image/aug24(2).webp",
-          "alt": "Building a no-code chat journey in Ojiva AI"
-        }
-      ]
-    },
-    {
-      "id": "use-cases",
-      "heading": "Where Businesses Put These Journeys to Work",
-      "blocks": [
-        {
-          "type": "p",
-          "html": "The same format stretches across almost every industry, which is why the strongest use cases for business look so different from one sector to the next. A handful of the most common:"
-        },
-        {
-          "type": "icon-list",
-          "items": [
-            {
-              "icon": "bi-cart-check-fill",
-              "title": "Guided product selection:",
-              "desc": "E-commerce brands walk shoppers to the right product through a few preference questions."
-            },
-            {
-              "icon": "bi-hospital-fill",
-              "title": "Healthcare and services:",
-              "desc": "Clinics and salons handle bookings, intake and reminders in one thread."
-            },
-            {
-              "icon": "bi-bank2",
-              "title": "Banking and insurance:",
-              "desc": "Lenders and insurers collect eligibility details and generate quotes conversationally."
-            },
-            {
-              "icon": "bi-mortarboard-fill",
-              "title": "Education enquiries:",
-              "desc": "Institutes automate course questions, counselling requests and admission steps."
-            },
-            {
-              "icon": "bi-airplane-fill",
-              "title": "Travel and hospitality:",
-              "desc": "Operators help travellers choose destinations, dates and packages inside chat."
-            },
-            {
-              "icon": "bi-star-fill",
-              "title": "Feedback and reviews:",
-              "desc": "Teams gather ratings and survey answers with far higher response rates."
-            }
-          ]
+          "html": "Ojiva AI's dashboard handles submission and tracking for travel businesses without needing a developer on standby during peak booking periods. Explore the <a href=\"/whatsapp-chatbot/\">no-code builder</a> to see it in context."
         }
       ]
     },
     {
       "id": "conclusion",
-      "heading": "Start Guiding Customers Inside the Chat",
+      "heading": "Send the Right Message for Every Stage of the Trip",
       "blocks": [
         {
           "type": "p",
-          "html": "The shift is straightforward once it clicks: instead of pushing customers out to forms and pages that quietly leak conversions, you guide them through the whole journey in the place they already spend their day. Fewer steps, a familiar setting, clean data landing in your systems — that is the entire argument, and it holds across sales, support and onboarding."
+          "html": "A travel booking moves through distinct stages — enquiry, confirmation, pre-trip, post-trip — and each stage calls for a different template category. Getting that mapping right the first time means fewer rejected submissions and messages that actually reach travellers before their deadlines pass."
         },
         {
           "type": "p",
-          "html": "When you are ready to build one, Ojiva AI handles it end to end as an official Meta Business Solution Provider — journey design, the <a href=\"/whatsapp/\">WhatsApp Business API</a>, a <a href=\"/whatsapp-chatbot/\">WhatsApp chatbot</a>, CRM integrations and broadcasts in one place. Explore the platform or <a href=\"/book-demo/\">book a free demo</a> and we will map your first customer journey on the call."
+          "html": "For the full rules on how Meta categorizes and reviews every template, our <a href=\"/blogs/whatsapp-template-message-types-guide/\">WhatsApp template message types guide</a> covers that in depth, and our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide covers getting your number set up in the first place. When you're ready to put these templates to work, Ojiva AI handles submission and management end to end as an official Meta Business Solution Provider — <a href=\"/book-demo/\">book a free demo</a> and we'll map your travel messaging calendar on the call."
         },
         {
           "type": "p",
-          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 24 August</em>"
+          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 31 August</em>"
         }
       ]
     },
     {
       "id": "faq",
-      "heading": "Frequently Asked Questions About Interactive Chat Forms",
+      "heading": "Frequently Asked Questions About WhatsApp Templates for Travel Agencies",
       "blocks": [
         {
           "type": "accordion",
           "items": [
             {
-              "q": "What is a WhatsApp Flow and how does it work?",
-              "a": "<p>It is an interactive, multi-step form that runs inside a WhatsApp chat. A customer opens it from an entry point like an ad or a button, works through screens of fields, dropdowns and buttons, and their answers sync to your systems in real time — all without leaving the conversation.</p>"
+              "q": "What WhatsApp templates does a travel agency actually need?",
+              "a": "<p>At minimum: booking confirmations, check-in or departure reminders, and a payment reminder under Utility, plus seasonal offers or referral messages under Marketing if the agency runs promotions.</p>"
             },
             {
-              "q": "Can you build one without any coding?",
-              "a": "<p>Yes. A no-code builder lets you assemble screens, add fields and buttons, connect your CRM and publish — no development team needed. Ojiva AI sets the whole thing up for you as an official Meta Business Solution Provider.</p>"
+              "q": "Are WhatsApp templates free for travel agencies?",
+              "a": "<p>The template format itself has no separate fee, but every delivered message is billed per message based on its category, and most agencies also pay their BSP a platform fee.</p>"
             },
             {
-              "q": "Do these journeys need DLT registration in India?",
-              "a": "<p>No. DLT registration under TRAI rules applies to SMS. Messages on WhatsApp are verified through Meta's own template and business review process instead, so a chat-based form does not require DLT.</p>"
+              "q": "Can a travel agency edit an approved template?",
+              "a": "<p>No. Editing the body of an approved template requires resubmitting it for review; only certain variable values can change between sends without a new approval.</p>"
             },
             {
-              "q": "Is the data customers share actually encrypted?",
-              "a": "<p>Yes. When a journey exchanges data with your endpoint, Meta requires an uploaded, signed public key and encrypts the request and response payloads. Sensitive details are protected in transit rather than sent in the clear.</p>"
+              "q": "How long does approval take for a travel promotion template?",
+              "a": "<p>Meta does not publish a fixed timeline, so submitting seasonal offers well ahead of the travel window they target is safer than submitting close to launch.</p>"
             },
             {
-              "q": "How much do they cost in India?",
-              "a": "<p>There is no separate charge for the form itself — cost follows the WhatsApp conversation that carries it, billed per conversation in INR with 18% GST. Marketing conversations sit at the premium rate; utility ones are lower. Ask Ojiva AI for the current rate card before planning volumes.</p>"
+              "q": "Can flight reminder templates include a discount?",
+              "a": "<p>Not without moving the template into the Marketing category — a reminder with any incentive attached is treated as promotional, not Utility.</p>"
             },
             {
-              "q": "How are these different from Google Forms?",
-              "a": "<p>A Google Form lives on an external page the customer has to open in a browser and then return from. A chat-based form runs inside the conversation itself, so there is no redirect and no waiting for a page to load, and completion tends to hold up better as a result.</p>"
+              "q": "Is WhatsApp marketing effective for travel agencies?",
+              "a": "<p>It performs well specifically because travel messaging is time-sensitive and personal — booking references, dates and destinations give travel templates more relevance than generic broadcast marketing.</p>"
             },
             {
-              "q": "Can responses connect to my CRM?",
-              "a": "<p>Yes. Answers can push straight into your CRM, helpdesk, scheduling tool or spreadsheet the moment they are submitted, so leads and bookings appear automatically without manual entry.</p>"
+              "q": "Do referral messages need opt-in consent?",
+              "a": "<p>Yes. Referral and loyalty messages fall under Marketing, so the same opt-in and consent record-keeping applies as any other promotional template.</p>"
             },
             {
-              "q": "Which industries and business sizes can use them?",
-              "a": "<p>Almost any — e-commerce, healthcare, education, banking, insurance, travel, real estate and support teams all use them. Small businesses benefit as much as large ones, since a no-code setup needs no technical team or heavy infrastructure.</p>"
+              "q": "Can one template serve both booking and promotional purposes?",
+              "a": "<p>No. Mixing a booking update with a promotional offer in the same template usually gets it classified as Marketing or rejected outright — keep the two separate.</p>"
             }
           ]
         }

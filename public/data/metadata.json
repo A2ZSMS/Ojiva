@@ -376,12 +376,23 @@
   {
     "id": 36,
     "title": "WhatsApp Flows Guide: Benefits, Uses & Examples",
-    "componentKey": "WhatsappFlowsGuide",
+    "componentKey": "Aug24",
     "slug": "whatsapp-flows-guide",
     "category": "WhatsApp API",
     "date": "2026-08-24",
     "description": "Discover what WhatsApp Flows are, how they work, real use cases, pricing in India and how to build one with no code — a complete guide from Ojiva AI.",
     "image": "/image/aug24(1).webp",
     "keywords": "WhatsApp Flows, WhatsApp in-chat forms, interactive message components, conversational customer journeys, WhatsApp lead qualification automation, appointment booking automation, WhatsApp form completion rate, WhatsApp Business encryption, WhatsApp CRM integration, no-code chatbot flow builder, WhatsApp Business Platform, WhatsApp forms, WhatsApp chatbot, in-chat forms, customer onboarding, conversational commerce, WhatsApp marketing"
+  },
+  {
+    "id": 37,
+    "title": "WhatsApp Templates for Travel Agencies: Examples & Guide",
+    "componentKey": "Aug30",
+    "slug": "whatsapp-templates-for-travel-agencies",
+    "category": "WhatsApp API",
+    "date": "2026-08-30",
+    "description": "WhatsApp templates for travel agencies: real booking, reminder and offer message examples, approval tips and India pricing guidance from Ojiva AI.",
+    "image": "/image/aug30(1).webp",
+    "keywords": "WhatsApp templates for travel agencies, WhatsApp hotel booking confirmation message, WhatsApp booking reminder template, WhatsApp travel agency marketing, WhatsApp templates for tourism industry, WhatsApp automation for travel agencies, WhatsApp templates for hotels, WhatsApp message templates travel industry, WhatsApp templates for flight reminders, WhatsApp template for referral programs, WhatsApp templates to retarget travel customers, best WhatsApp templates for Indian travel agencies, WhatsApp templates, travel agency, booking confirmation, WhatsApp API, tourism marketing, hotel booking"
   }
 ]

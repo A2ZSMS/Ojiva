@@ -46,8 +46,8 @@ import blog_whatsapp_template_message_types from "../../../public/data/blogs/202
 import blog_Aug17 from "../../../public/data/blogs/2026/08/Aug17.json";
 import blog_Aug19 from "../../../public/data/blogs/2026/08/Aug19.json";
 import blog_whatsapp_flows_guide from "../../../public/data/blogs/2026/08/Aug24.json";
+import blog_whatsapp_templates_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug30.json";
 
-// slug → parsed JSON content. Every blog renders via BlogLayout + BlogRenderer.
 const BlogJson = {
   "rcs-vs-sms-key-differences-and-which-is-better-for-business":
     blog_rcs_vs_sms_key_differences_and_which_is_better_for_business,
@@ -105,6 +105,8 @@ const BlogJson = {
   "rcs-messaging-for-real-estate": blog_Aug17,
   "rcs-messaging-provider-hyderabad": blog_Aug19,
   "whatsapp-flows-guide": blog_whatsapp_flows_guide,
+  "whatsapp-templates-for-travel-agencies":
+    blog_whatsapp_templates_for_travel_agencies,
 };
 
 // ── Date formatter ───────────────────────────────────────
