@@ -1,0 +1,416 @@
+{
+  "slug": "whatsapp-flows-guide",
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "what-are-flows", "label": "What Are WhatsApp Flows" },
+    { "id": "how-it-works", "label": "How a Flow Works Inside a Chat" },
+    { "id": "benefits", "label": "Benefits Over a Regular Chat" },
+    { "id": "use-cases", "label": "Real Use Cases" },
+    { "id": "no-code-builder", "label": "Building One Without Code" },
+    { "id": "security", "label": "Data & Encryption" },
+    { "id": "best-practices", "label": "Getting a Higher Completion Rate" },
+    { "id": "crm-integration", "label": "Connecting Flows to Your CRM" },
+    { "id": "pricing", "label": "Pricing in India" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQ" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "WhatsApp Flows are structured, in-chat forms — screens with text fields, dropdowns, date pickers and checkboxes — that open directly inside a WhatsApp conversation instead of sending a customer off to a website. A lead qualification form, an appointment booking screen or a feedback survey all become a native part of the chat, so people finish them without ever leaving the app. This guide covers what WhatsApp Flows actually are, how one runs inside a conversation, the benefits over free-form chat, real use cases businesses run in India, how to build one with no code, what it costs, and how to connect the data straight into a CRM. If you're still comparing this to plain message templates first, see our <a href=\"/blogs/whatsapp-template-message-types/\">WhatsApp template message types guide</a>. Everything below assumes you're building on the <a href=\"/whatsapp/\">WhatsApp Business API</a> — we are an official Meta Business Solution Provider for India."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug24(1).webp",
+          "alt": "WhatsApp Flows benefits, uses and examples guide by Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "what-are-flows",
+      "heading": "What Are WhatsApp Flows, Exactly?",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A WhatsApp Flow is a set of structured screens, built with Meta's own Flow JSON format, that opens as a native form on top of the chat when a customer taps a button or a template CTA. It behaves like a short in-app form — not a link, not a redirect — so it loads instantly and keeps the customer inside the conversation from the first tap to the final submit."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-ui-checks-grid",
+              "title": "Native form components:",
+              "desc": "Text inputs, radio buttons, dropdowns, date pickers, checkboxes and an embedded terms-and-conditions footer, all rendered by WhatsApp itself."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Multi-screen journeys:",
+              "desc": "A single Flow can chain several screens together — for example, service selection, then a time slot, then contact confirmation — with logic branching between them."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Triggered from a template or a chatbot reply:",
+              "desc": "A Flow opens from a message template's call-to-action button, or from an interactive reply your WhatsApp chatbot sends mid-conversation."
+            },
+            {
+              "icon": "bi-cloud-arrow-up-fill",
+              "title": "Submits straight to your systems:",
+              "desc": "Completed answers post to your endpoint or platform in real time, ready to route into a CRM, booking calendar or support queue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How a Flow Actually Runs Inside a Conversation",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "From the customer's side, a Flow feels like one extra tap, not a separate app. Here is what happens end to end once your business decides to use one."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "The trigger arrives:",
+              "desc": "A customer receives a template message or a chatbot prompt with a button such as \"Book Appointment\" or \"Get a Quote.\""
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "The Flow opens in-chat:",
+              "desc": "Tapping the button opens the form as a sheet over the conversation — no browser, no app switch, no page load."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "The customer fills each screen:",
+              "desc": "They move through the fields at their own pace; validation and required fields work exactly as they would on a website form."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Data submits on completion:",
+              "desc": "The final \"Submit\" sends the structured answers back through the WhatsApp Business Platform to your endpoint."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "The conversation continues naturally:",
+              "desc": "The chat resumes below the Flow, so a confirmation message or the next automated step follows immediately."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/aug24(2).webp",
+          "alt": "Step-by-step diagram of how a WhatsApp Flow opens and submits inside a chat"
+        }
+      ]
+    },
+    {
+      "id": "benefits",
+      "heading": "Why Use a Flow Instead of a Regular Chat Exchange",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Asking for the same information one message at a time works, but it is slow and easy to abandon halfway. Structuring it as a Flow changes the outcome in a few concrete ways."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "Higher form completion rate:",
+              "desc": "Customers finish a two-minute in-chat form far more often than they follow an outbound link to a website, especially on mobile data."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Fewer back-and-forth messages:",
+              "desc": "One Flow replaces five or six separate chatbot questions, cutting the conversation length your agents or bot have to manage."
+            },
+            {
+              "icon": "bi-check-circle-fill",
+              "title": "Cleaner, structured data:",
+              "desc": "Answers arrive as defined fields — not free text you have to parse — so they're ready to route without manual cleanup."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "No app-switching drop-off:",
+              "desc": "Every step happens inside WhatsApp, removing the moment a customer closes the browser tab and never comes back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Real WhatsApp Flows Use Cases Businesses Run Today",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Flows work best wherever a business currently sends a customer to a form, a booking page or a survey link. A few patterns come up again and again across industries in India."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Lead qualification:",
+              "desc": "Ask budget, requirement and timeline in one Flow right after a customer messages in, so sales only calls back people who fit."
+            },
+            {
+              "icon": "bi-calendar2-check-fill",
+              "title": "Appointment booking:",
+              "desc": "Let a customer pick a service, a date and a time slot in-chat, with the confirmation sent back the moment they submit."
+            },
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order and delivery details:",
+              "desc": "Collect a shipping address, a preferred delivery window or a size selection right after checkout, without a separate form link."
+            },
+            {
+              "icon": "bi-star-fill",
+              "title": "Feedback and NPS surveys:",
+              "desc": "A short, structured survey immediately after a purchase or a support ticket closes, with far better response rates than an email link."
+            },
+            {
+              "icon": "bi-person-plus-fill",
+              "title": "Sign-up and onboarding:",
+              "desc": "Capture the details needed to open an account or start a subscription in one guided sequence instead of a multi-page website form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no-code-builder",
+      "heading": "How to Build a WhatsApp Flow With No Code",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta's Flow JSON format is what actually runs the form, but you don't need to write it by hand. A no-code Flow builder — the one built into the Ojiva AI platform — lets you assemble the same screens visually."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-layout-text-window-reverse",
+              "title": "Drag in screens and fields:",
+              "desc": "Add text inputs, dropdowns, radio choices and date pickers from a visual editor, in the order you want customers to see them."
+            },
+            {
+              "icon": "bi-signpost-split-fill",
+              "title": "Set branching logic:",
+              "desc": "Show or skip a screen based on an earlier answer, so a single Flow adapts to different customer paths."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "Preview before you publish:",
+              "desc": "Test the exact in-chat experience on your own number before attaching the Flow to a live template or chatbot reply."
+            },
+            {
+              "icon": "bi-send-check-fill",
+              "title": "Attach it to a trigger:",
+              "desc": "Link the finished Flow to a template button or a chatbot step, and it goes live without touching a line of JSON."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "Data Handling and WhatsApp Business Encryption",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Because Flows often collect names, phone numbers and sometimes order or payment-adjacent details, businesses reasonably ask how that data is protected in transit."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Encrypted in transit:",
+              "desc": "Flow submissions travel over the same encrypted connection as the rest of the WhatsApp Business Platform, and can be configured with an additional data-exchange encryption layer for sensitive fields."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "You control where it lands:",
+              "desc": "Answers post to the endpoint or CRM you configure — WhatsApp does not retain the submitted data on your behalf beyond delivering it."
+            },
+            {
+              "icon": "bi-file-earmark-lock2-fill",
+              "title": "Consent stays explicit:",
+              "desc": "A Flow only opens after a customer has messaged in or opted in, keeping data collection tied to an active, consenting conversation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "heading": "Design Choices That Raise Your Completion Rate",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A Flow that is too long or asks for the wrong thing first gets abandoned just like a website form does. A few habits consistently improve completion."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-list-ol",
+              "title": "Keep it to 3–5 screens:",
+              "desc": "Ask only what you need to act on the lead — extra fields can always be collected later in the conversation or on a call."
+            },
+            {
+              "icon": "bi-sort-numeric-down",
+              "title": "Ask easy questions first:",
+              "desc": "Lead with a simple choice like a service or category before asking for contact details, so people are already invested by the time it matters."
+            },
+            {
+              "icon": "bi-chat-left-text-fill",
+              "title": "Set the expectation in the trigger message:",
+              "desc": "Tell the customer what the form is for and roughly how long it takes before they tap the button, so there's no surprise mid-flow."
+            },
+            {
+              "icon": "bi-arrow-return-left",
+              "title": "Confirm immediately after submit:",
+              "desc": "Send a same-second confirmation message so the customer knows their answers actually went through."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crm-integration",
+      "heading": "Connecting Flow Submissions to Your CRM",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A Flow is only as useful as what happens to the data after submission. On the Ojiva AI platform, completed Flows can push straight into your existing systems instead of sitting in a chat log."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Auto-create or update a CRM record:",
+              "desc": "Map each Flow field to a contact or deal property, so a submission becomes a lead in your CRM the moment it lands."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Route to the right team instantly:",
+              "desc": "Trigger an internal notification or assign the conversation to sales, support or operations based on the answers given."
+            },
+            {
+              "icon": "bi-robot",
+              "title": "Continue the chatbot flow:",
+              "desc": "Use the submitted answers to personalise the next automated message, instead of asking the customer to repeat themselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What WhatsApp Flows Cost in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There is no separate per-form fee from Meta for using Flows — a Flow submission is delivered as part of the same conversation-based pricing that already applies to your WhatsApp Business API usage. What you pay for is the platform that lets you build, trigger and route them."
+        },
+        {
+          "type": "table",
+          "headers": ["Cost Component", "What It Covers", "How It's Billed"],
+          "rows": [
+            [
+              "Platform subscription",
+              "No-code Flow builder, chatbot, CRM routing, analytics",
+              "Monthly or annual plan, in INR"
+            ],
+            [
+              "Meta conversation charges",
+              "The template or chatbot message that opens the Flow",
+              "Per conversation, by category, set by Meta"
+            ],
+            [
+              "Flow submission",
+              "Delivery of the completed form data to your endpoint",
+              "No additional Meta fee"
+            ],
+            [
+              "Taxes",
+              "GST on platform and Meta charges",
+              "18%, with a GST invoice on every payment"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Turn Your Next Form Into a WhatsApp Flow",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The pattern is simple once you see it: anywhere your business currently sends a customer to a link — a booking page, a lead form, a feedback survey — a WhatsApp Flow keeps that same job inside the chat, finishes faster and hands you cleaner data. Start with one high-traffic form, keep it short, and connect it to your CRM so every submission turns into a follow-up automatically."
+        },
+        {
+          "type": "p",
+          "html": "Ojiva AI's no-code Flow builder is part of the same platform as your <a href=\"/whatsapp-chatbot/\">WhatsApp chatbot</a> and <a href=\"/whatsapp/\">WhatsApp Business API</a> setup, so a Flow you build today can trigger from an existing automation this week. <a href=\"/book-demo/\">Book a free demo</a> and we'll map your first Flow on the call."
+        },
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath, Founder, Ojiva AI — an official Meta WhatsApp Business Solution Provider · Reviewed by the Ojiva AI onboarding team · Published 24 August</em>"
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions About WhatsApp Flows",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is a WhatsApp Flow?",
+              "a": "<p>A WhatsApp Flow is a structured, multi-screen form — with text fields, dropdowns, date pickers and checkboxes — that opens directly inside a WhatsApp conversation, so a customer can complete it without leaving the chat or visiting a website.</p>"
+            },
+            {
+              "q": "How do customers open a Flow?",
+              "a": "<p>A Flow opens when a customer taps a call-to-action button on a message template or an interactive chatbot reply. It appears as a form sheet over the conversation and the chat resumes underneath once it's submitted.</p>"
+            },
+            {
+              "q": "Do I need to know how to code to build a WhatsApp Flow?",
+              "a": "<p>No. While Flows run on Meta's Flow JSON format under the hood, a no-code builder like the one on the Ojiva AI platform lets you assemble screens, fields and branching logic visually, then publish without writing any JSON.</p>"
+            },
+            {
+              "q": "Is WhatsApp Flow data secure?",
+              "a": "<p>Flow submissions travel over the same encrypted WhatsApp Business Platform connection as the rest of your messaging, and can use an additional data-exchange encryption layer for sensitive fields. The data is delivered only to the endpoint or CRM you configure.</p>"
+            },
+            {
+              "q": "What are the most common WhatsApp Flows use cases?",
+              "a": "<p>Lead qualification, appointment booking, order and delivery details, post-purchase feedback surveys, and account sign-up are the most common uses, since each replaces a website form or link with an in-chat equivalent.</p>"
+            },
+            {
+              "q": "Does using WhatsApp Flows cost extra?",
+              "a": "<p>Meta does not charge a separate per-form fee for Flow submissions. The template or chatbot message that opens the Flow is billed at the normal per-conversation rate, and your provider's platform fee covers the Flow builder itself.</p>"
+            },
+            {
+              "q": "Can Flow submissions go straight into my CRM?",
+              "a": "<p>Yes. On the Ojiva AI platform, each Flow field can be mapped to a CRM property, so a completed submission creates or updates a contact automatically instead of sitting in a chat log.</p>"
+            },
+            {
+              "q": "How many screens should a WhatsApp Flow have?",
+              "a": "<p>Most high-completion Flows stay to three to five screens, asking only what's needed to qualify a lead or confirm a booking. Anything extra can be collected later in the conversation once the customer is already engaged.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
