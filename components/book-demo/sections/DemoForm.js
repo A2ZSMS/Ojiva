@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
+import { validateLead, scoreLead } from '@/lib/leadQuality';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -194,6 +195,21 @@ export default function DemoForm() {
     if (!isValidEmail(form.email)) { setErr('Please enter a valid email address.'); return; }
     if (form.company.trim().length < 2) { setErr('Please enter your company name.'); return; }
     if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) { setErr('Please enter a valid 10-digit Indian mobile number.'); return; }
+
+    const check = validateLead({
+      name: form.name, email: form.email, company: form.company, message: msg,
+    });
+    if (!check.ok) {
+      console.warn('[LeadQuality] rejected:', check.reason);
+      setErr(check.reason);
+      return;
+    }
+    const quality = scoreLead({
+      name: form.name, email: form.email, company: form.company,
+      service: channels.join(', '), message: msg, volume,
+    });
+    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
+
     setSt('loading'); setErr('');
     try {
       sendWhatsApp(form.name, form.phone, 'book-demo');
@@ -207,8 +223,8 @@ export default function DemoForm() {
         email:   form.email,
         company: form.company,
         service: channels.join(', ') || 'Not specified',
-        source:  'book-demo',
-        message: msg,
+        source:  `book-demo${quality.sourceSuffix}`,
+        message: `${quality.remarkPrefix}${msg}`,
       });
       const fd = new FormData();
       fd.append('access_key',           ACCESS_KEY);

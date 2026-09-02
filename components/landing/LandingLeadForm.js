@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
+import { validateLead, scoreLead } from '@/lib/leadQuality';
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
@@ -197,6 +198,21 @@ export default function LandingLeadForm({
     }
 
     if (Object.values(errs).some(Boolean) || volErr) return;
+
+    const check = validateLead({
+      name: form.name, email: form.email, company: form.company, message: form.message,
+    });
+    if (!check.ok) {
+      console.warn('[LeadQuality] rejected:', check.reason);
+      setApiError(check.reason);
+      return;
+    }
+    const quality = scoreLead({
+      name: form.name, email: form.email, company: form.company,
+      service: form.service, message: form.message, volume,
+    });
+    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
+
     setSubmitting(true); setApiError('');
 
     const payload = {
@@ -223,8 +239,8 @@ export default function LandingLeadForm({
         email:   payload.email,
         company: payload.company,
         service: payload.service || 'Not specified',
-        source:  source,
-        message: payload.message,
+        source:  `${source}${quality.sourceSuffix}`,
+        message: `${quality.remarkPrefix}${payload.message}`,
       });
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {

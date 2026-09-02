@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
+import { validateLead } from '@/lib/leadQuality';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 import { motion, AnimatePresence } from 'framer-motion';
@@ -82,6 +83,16 @@ function TicketForm() {
     if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
     if (!form.subject.trim()) { setErrorMsg('Please add a subject.'); return; }
     if (!form.message.trim()) { setErrorMsg('Please describe your issue.'); return; }
+
+    const check = validateLead({
+      name: form.name, email: form.email, company: form.company, message: form.message,
+    });
+    if (!check.ok) {
+      console.warn('[LeadQuality] rejected:', check.reason);
+      setErrorMsg(check.reason);
+      return;
+    }
+
     setErrorMsg('');
     setLoading(true);
     const tid = `OJV-${Math.floor(10000 + Math.random() * 90000)}`;
