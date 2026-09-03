@@ -7,6 +7,16 @@ import Link from 'next/link';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
+import { validateLead, scoreLead } from '@/lib/leadQuality';
+
+const VOLUME_OPTIONS = [
+  { value: '',        label: 'Select monthly message volume' },
+  { value: '<10k',    label: 'Less than 10,000 / month' },
+  { value: '10-100k', label: '10,000 – 100,000 / month' },
+  { value: '100k-1m', label: '100,000 – 1 million / month' },
+  { value: '1m+',     label: '1 million+ / month' },
+  { value: 'unsure',  label: 'Not sure yet' },
+];
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
@@ -99,7 +109,7 @@ export default function ContactForm() {
   const [selected, setSelected] = useState([]);
 
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', company: '', industry: '', message: '',
+    name: '', email: '', phone: '', company: '', industry: '', volume: '', message: '',
   });
 
   function handleChange(e) {
@@ -120,6 +130,21 @@ export default function ContactForm() {
     if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
     if (selected.length === 0) { setErrorMsg('Please select at least one service.'); return; }
     if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
+
+    const check = validateLead({
+      name: form.name, email: form.email, company: form.company, message: form.message,
+    });
+    if (!check.ok) {
+      console.warn('[LeadQuality] rejected:', check.reason);
+      setErrorMsg(check.reason);
+      return;
+    }
+    const quality = scoreLead({
+      name: form.name, email: form.email, company: form.company,
+      service: selected.join(', '), message: form.message, volume: form.volume,
+    });
+    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
+
     setStatus('loading'); setErrorMsg('');
     try {
       sendWhatsApp(form.name, form.phone, 'contact-us');
@@ -133,8 +158,8 @@ export default function ContactForm() {
         email:   form.email,
         company: form.company,
         service: selected.join(', ') || 'Not specified',
-        source:  'contact-us',
-        message: form.message,
+        source:  `contact-us${quality.sourceSuffix}`,
+        message: `${quality.remarkPrefix}${form.message}`,
       });
       const fd = new FormData(e.target);
       fd.append('access_key', ACCESS_KEY);
@@ -292,6 +317,19 @@ export default function ContactForm() {
                       <option value="">Select industry</option>
                       {INDUSTRIES.map(ind => (
                         <option key={ind} value={ind}>{ind}</option>
+                      ))}
+                    </select>
+                  </Field>
+                </div>
+
+                {/* Monthly message volume */}
+                <div className="col-12 col-md-6">
+                  <Field label="Monthly message volume" optional>
+                    <select name="volume" className="cfn-select"
+                      value={form.volume} onChange={handleChange}
+                    >
+                      {VOLUME_OPTIONS.map(o => (
+                        <option key={o.value} value={o.value}>{o.label}</option>
                       ))}
                     </select>
                   </Field>
