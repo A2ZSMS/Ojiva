@@ -13,45 +13,37 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ── TeleCRM (inline per project convention; matches ContactForm/DemoForm/LandingLeadForm) ──
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source, message }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
   if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
   if (p.length !== 10 || !/^[6-9]/.test(p)) return;
   const fields = {
-    name:    String(name || '').trim() || 'Unknown',
-    phone:   p,
-    email:   String(email || '').trim().toLowerCase(),
+    name:  String(name || '').trim() || 'Unknown',
+    phone: p,
+    email: String(email || '').trim().toLowerCase(),
   };
-  if (company) {
-    const v = String(company).trim();
-    fields.companyName  = v;
-    fields.company_name = v;
-    fields.company      = v;
-  }
-  if (service) {
-    const v = String(service).trim();
-    fields.serviceInterested  = v;
-    fields.service_interested = v;
-    fields.service            = v;
-  }
-  if (source) {
-    const v = String(source).trim();
-    fields.source = v;
-    fields.Source = v;
-  }
-  if (message) {
-    const v = String(message).trim();
-    fields.remark = v;
-    fields.Remark = v;
-  }
+  const put = (val, keys) => { if (val === undefined || val === null || val === '') return; const v = typeof val === 'number' ? val : String(val).trim(); if (v === '' && v !== 0) return; keys.forEach(k => { fields[k] = v; }); };
+  put(company,       ['companyName', 'company_name', 'company', 'Company Name']);
+  put(service,       ['serviceInterested', 'service_interested', 'service', 'Service Interested']);
+  put(source,        ['source', 'Source']);
+  put(message,       ['remark', 'Remark']);
+  put(volume,        ['monthlyVolume', 'monthly_volume', 'monthly customer messaging volume']);
+  put(industry,      ['Industry', 'industry']);
+  put(companySize,   ['companySize', 'company_size', 'Company Size']);
+  put(preferredTime, ['preferredTime', 'preferred_time', 'Preferred Time']);
+  put(subject,       ['Subject', 'subject']);
+  put(priority,      ['Priority', 'priority']);
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
     body: JSON.stringify({ fields }),
   }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
 }
+
+// Support ticket priority string → number (1=highest, 4=lowest)
+const SUPPORT_PRIORITY_TO_NUM = { urgent: 1, high: 2, medium: 3, low: 4 };
 
 const SLA_PLANS = [
   { plan: 'Starter',    icon: '🌱', color: '#64748b', response: '24 hrs',  uptime: '99.5%',  channels: 'Email only',           onboarding: 'Self-serve', engineer: 'Shared pool', highlight: false },
@@ -116,13 +108,15 @@ function TicketForm() {
       sendWhatsApp(form.name, form.phone, 'support-page');
       if (!TEST_MODE_WHATSAPP_ONLY) {
         fireTeleCRM({
-          name:    form.name,
-          phone:   form.phone,
-          email:   form.email,
-          company: form.company,
-          service: `Support Ticket [${form.priority.toUpperCase()}]`,
-          source:  'support-page',
-          message: form.message,
+          name:     form.name,
+          phone:    form.phone,
+          email:    form.email,
+          company:  form.company,
+          service:  `Support Ticket [${form.priority.toUpperCase()}]`,
+          source:   'support-page',
+          message:  form.message,
+          subject:  form.subject,
+          priority: SUPPORT_PRIORITY_TO_NUM[form.priority] ?? 3,
         });
         await Promise.allSettled([
           fetch('https://api.web3forms.com/submit', {

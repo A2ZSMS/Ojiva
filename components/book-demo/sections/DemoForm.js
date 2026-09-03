@@ -12,45 +12,47 @@ const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source, message }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
   if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
   if (p.length !== 10 || !/^[6-9]/.test(p)) return;
   const fields = {
-    name:    String(name || '').trim() || 'Unknown',
-    phone:   p,
-    email:   String(email || '').trim().toLowerCase(),
+    name:  String(name || '').trim() || 'Unknown',
+    phone: p,
+    email: String(email || '').trim().toLowerCase(),
   };
-  if (company) {
-    const v = String(company).trim();
-    fields.companyName  = v;
-    fields.company_name = v;
-    fields.company      = v;
-  }
-  if (service) {
-    const v = String(service).trim();
-    fields.serviceInterested  = v;
-    fields.service_interested = v;
-    fields.service            = v;
-  }
-  if (source) {
-    const v = String(source).trim();
-    fields.source = v;
-    fields.Source = v;
-  }
-  if (message) {
-    const v = String(message).trim();
-    fields.remark = v;
-    fields.Remark = v;
-  }
+  const put = (val, keys) => { if (val === undefined || val === null || val === '') return; const v = typeof val === 'number' ? val : String(val).trim(); if (v === '' && v !== 0) return; keys.forEach(k => { fields[k] = v; }); };
+  put(company,       ['companyName', 'company_name', 'company', 'Company Name']);
+  put(service,       ['serviceInterested', 'service_interested', 'service', 'Service Interested']);
+  put(source,        ['source', 'Source']);
+  put(message,       ['remark', 'Remark']);
+  put(volume,        ['monthlyVolume', 'monthly_volume', 'monthly customer messaging volume']);
+  put(industry,      ['Industry', 'industry']);
+  put(companySize,   ['companySize', 'company_size', 'Company Size']);
+  put(preferredTime, ['preferredTime', 'preferred_time', 'Preferred Time']);
+  put(subject,       ['Subject', 'subject']);
+  put(priority,      ['Priority', 'priority']);
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
     body: JSON.stringify({ fields }),
   }).then(r => r.text()).then(t => console.log('[TeleCRM] status OK, response:', t)).catch(e => console.error('[TeleCRM] error:', e));
 }
+
+// Map form values → TeleCRM dropdown option labels
+const DEMO_SIZE_TO_LABEL = {
+  '1-50':     '1-50 employees',
+  '51-200':   '51-200 employees',
+  '201-1000': '201-1000 employees',
+  '1001+':    '1000+ employees',
+};
+const DEMO_TIME_TO_LABEL = {
+  morning:   'Morning (9 AM - 12 PM)',
+  afternoon: 'Afternoon (12 - 5 PM)',
+  evening:   'Evening (5 - 8 PM)',
+};
 
 /* ── Data ──────────────────────────────────────────── */
 const CHANNELS = [
@@ -217,14 +219,23 @@ export default function DemoForm() {
         router.push('/thank-you');
         return;
       }
+      // Multi-service handling: first selected channel goes to Service Interested;
+      // full list prepended to Remark so sales sees everything.
+      const channelLabels = channels.map(v => CHANNELS.find(c => c.value === v)?.label || v);
+      const primaryService = channelLabels[0] || 'Book Demo';
+      const extras         = channelLabels.slice(1);
+      const extrasPrefix   = extras.length ? `[Also interested in: ${extras.join(', ')}] ` : '';
       fireTeleCRM({
-        name:    form.name,
-        phone:   form.phone,
-        email:   form.email,
-        company: form.company,
-        service: channels.join(', ') || 'Not specified',
-        source:  `book-demo${quality.sourceSuffix}`,
-        message: `${quality.remarkPrefix}${msg}`,
+        name:          form.name,
+        phone:         form.phone,
+        email:         form.email,
+        company:       form.company,
+        service:       primaryService,
+        source:        `book-demo${quality.sourceSuffix}`,
+        message:       `${quality.remarkPrefix}${extrasPrefix}${msg}`,
+        volume:        volume,
+        companySize:   DEMO_SIZE_TO_LABEL[size] || size,
+        preferredTime: DEMO_TIME_TO_LABEL[time] || time,
       });
       const fd = new FormData();
       fd.append('access_key',           ACCESS_KEY);

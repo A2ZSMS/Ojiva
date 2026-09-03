@@ -22,43 +22,31 @@ const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source, message }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
   if (p.length === 11 && p.startsWith('0'))   p = p.slice(1);
-  console.log('[TeleCRM] phone in:', phone, '→ cleaned:', p);
-  if (p.length !== 10 || !/^[6-9]/.test(p)) { console.warn('[TeleCRM] invalid phone, skipped'); return; }
-  // Send both camelCase AND snake_case variants so it works regardless of
-  // whether the TeleCRM workspace uses `companyName` or `company_name` etc.
-  // TeleCRM silently ignores unknown keys.
+  if (p.length !== 10 || !/^[6-9]/.test(p)) return;
+  // Multi-variant keys — TeleCRM silently ignores unknown ones, so we send
+  // camelCase + snake_case + Title Case for every field to match whichever
+  // naming convention the workspace's API uses.
   const fields = {
-    name:    String(name || '').trim() || 'Unknown',
-    phone:   p,
-    email:   String(email || '').trim().toLowerCase(),
+    name:  String(name || '').trim() || 'Unknown',
+    phone: p,
+    email: String(email || '').trim().toLowerCase(),
   };
-  if (company) {
-    const v = String(company).trim();
-    fields.companyName  = v;
-    fields.company_name = v;
-    fields.company      = v;
-  }
-  if (service) {
-    const v = String(service).trim();
-    fields.serviceInterested  = v;
-    fields.service_interested = v;
-    fields.service            = v;
-  }
-  if (source) {
-    const v = String(source).trim();
-    fields.source = v;
-    fields.Source = v;
-  }
-  if (message) {
-    const v = String(message).trim();
-    fields.remark = v;
-    fields.Remark = v;
-  }
+  const put = (val, keys) => { if (val === undefined || val === null || val === '') return; const v = typeof val === 'number' ? val : String(val).trim(); if (v === '' && v !== 0) return; keys.forEach(k => { fields[k] = v; }); };
+  put(company,       ['companyName', 'company_name', 'company', 'Company Name']);
+  put(service,       ['serviceInterested', 'service_interested', 'service', 'Service Interested']);
+  put(source,        ['source', 'Source']);
+  put(message,       ['remark', 'Remark']);
+  put(volume,        ['monthlyVolume', 'monthly_volume', 'monthly customer messaging volume']);
+  put(industry,      ['Industry', 'industry']);
+  put(companySize,   ['companySize', 'company_size', 'Company Size']);
+  put(preferredTime, ['preferredTime', 'preferred_time', 'Preferred Time']);
+  put(subject,       ['Subject', 'subject']);
+  put(priority,      ['Priority', 'priority']);
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
@@ -152,14 +140,23 @@ export default function ContactForm() {
         router.push('/thank-you');
         return;
       }
+      // Multi-service handling: first selected service goes to Service Interested
+      // dropdown (which only accepts one value); the full list is prepended to
+      // the Remark so sales sees everything.
+      const serviceLabels = selected.map(id => SERVICES.find(s => s.id === id)?.label || id);
+      const primaryService = serviceLabels[0] || 'General Enquiry';
+      const extras         = serviceLabels.slice(1);
+      const extrasPrefix   = extras.length ? `[Also interested in: ${extras.join(', ')}] ` : '';
       fireTeleCRM({
-        name:    form.name,
-        phone:   form.phone,
-        email:   form.email,
-        company: form.company,
-        service: selected.join(', ') || 'Not specified',
-        source:  `contact-us${quality.sourceSuffix}`,
-        message: `${quality.remarkPrefix}${form.message}`,
+        name:     form.name,
+        phone:    form.phone,
+        email:    form.email,
+        company:  form.company,
+        service:  primaryService,
+        source:   `contact-us${quality.sourceSuffix}`,
+        message:  `${quality.remarkPrefix}${extrasPrefix}${form.message}`,
+        volume:   form.volume,
+        industry: form.industry,
       });
       const fd = new FormData(e.target);
       fd.append('access_key', ACCESS_KEY);
