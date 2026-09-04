@@ -65,9 +65,13 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setMenuOpen(false);
-    setServicesOpen(false);
-    setSolutionsOpen(false);
+    const frame = window.requestAnimationFrame(() => {
+      setMenuOpen(false);
+      setServicesOpen(false);
+      setSolutionsOpen(false);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
 
   const isServiceActive  = SERVICE_LINKS.some(s => pathname === s.href);
@@ -118,7 +122,7 @@ export default function Navbar() {
         {/* Logo — white when homepage hero is in view, coloured otherwise */}
         <Link className="navbar-brand" href="/" aria-label="Ojiva AI Home">
           <Image
-            src={isHome && !scrolled ? '/ojiva-logo-white.webp' : '/ojiva-logo-optimized.webp'}
+            src={isHome && !scrolled && !menuOpen ? '/ojiva-logo-white.webp' : '/ojiva-logo-optimized.webp'}
             alt="Ojiva AI — India's #1 AI Communication Platform for Bulk SMS, WhatsApp Business API, RCS & Voice"
             width={180}
             height={106}

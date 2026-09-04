@@ -60,10 +60,10 @@ const FEED = [
 ];
 
 const TRUST_PILLS = [
-  { icon: '🔐', label: 'AES-256 Encrypted' },
-  { icon: '✅', label: 'DLT Registered'    },
-  { icon: '⚡', label: '48-Hr Go-Live'     },
-  { icon: '🇮🇳', label: 'India Support'    },
+  { icon: 'bi-shield-lock-fill', label: 'AES-256 Encrypted' },
+  { icon: 'bi-check-circle-fill', label: 'DLT Registered' },
+  { icon: 'bi-lightning-charge-fill', label: '48-Hr Go-Live' },
+  { icon: 'bi-headset', label: 'India Support' },
 ];
 
 const AVATARS = [
@@ -93,7 +93,15 @@ export default function Hero() {
   const [isDesktop, setIsDesktop] = useState(false);
   const { isSlow } = useNetwork();
   useEffect(() => {
-    setIsDesktop(window.matchMedia('(min-width: 992px)').matches);
+    const media = window.matchMedia('(min-width: 992px)');
+    const syncDesktop = () => setIsDesktop(media.matches);
+    const frame = window.requestAnimationFrame(syncDesktop);
+    media.addEventListener('change', syncDesktop);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      media.removeEventListener('change', syncDesktop);
+    };
   }, []);
 
   return (
@@ -105,11 +113,6 @@ export default function Hero() {
       )}
       <div className="hs-bg-overlay" aria-hidden="true" />
       <div className="hs-grid-bg"   aria-hidden="true" />
-
-      {/* Colour orbs */}
-      <div className="hs-orb hs-orb--blue"   aria-hidden="true" />
-      <div className="hs-orb hs-orb--purple" aria-hidden="true" />
-      <div className="hs-orb hs-orb--green"  aria-hidden="true" />
 
       <div className="container" style={{ position: 'relative', zIndex: 3 }}>
         <div className="row align-items-center g-4 g-xl-5" style={{ paddingTop: '60px', paddingBottom: '80px' }}>
@@ -142,7 +145,7 @@ export default function Hero() {
             <motion.div className="hs-trust-pills" {...fade(0.20)}>
               {TRUST_PILLS.map(p => (
                 <span key={p.label} className="hs-trust-pill">
-                  <span className="hs-trust-pill-icon">{p.icon}</span>
+                  <i className={`bi ${p.icon} hs-trust-pill-icon`} aria-hidden="true" />
                   {p.label}
                 </span>
               ))}
@@ -151,7 +154,7 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div className="hs-actions" {...fade(0.26)}>
               <Link href="/contact" className="btn-hs-primary">
-                Get Started Free <ArrowRight />
+                Talk to Sales <ArrowRight />
               </Link>
               <Link href="/book-demo" className="btn-hs-outline">
                 <span className="hs-play-icon">▶</span> Book a Demo

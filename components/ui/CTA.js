@@ -68,7 +68,7 @@ export default function CTA({
               <p className="cta-trust">
                 <span>✓ Free 14-day trial</span>
                 <span>✓ No credit card required</span>
-                <span>✓ Live in under 10 minutes</span>
+                <span>✓ Standard setup in 48 hours</span>
               </p>
             </FadeUp>
           </div>

@@ -153,8 +153,8 @@ export default function ContactForm() {
         email:    form.email,
         company:  form.company,
         service:  primaryService,
-        source:   `contact-us${quality.sourceSuffix}`,
-        message:  `${quality.remarkPrefix}${extrasPrefix}${form.message}`,
+        source:   'contact-us',
+        message:  `${extrasPrefix}${form.message}`,
         volume:   form.volume,
         industry: form.industry,
       });

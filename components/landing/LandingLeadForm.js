@@ -228,8 +228,8 @@ export default function LandingLeadForm({
         email:   payload.email,
         company: payload.company,
         service: payload.service || 'General Enquiry',
-        source:  `${source}${quality.sourceSuffix}`,
-        message: `${quality.remarkPrefix}${payload.message}`,
+        source:  source,
+        message: payload.message,
         volume:  volume,
       });
       const [w, m] = await Promise.allSettled([

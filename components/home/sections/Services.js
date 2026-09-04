@@ -69,7 +69,7 @@ export default function Services() {
           <SectionHeading
             tag="Powerful Messaging Solutions"
             title="Everything You Need to Grow Your Business"
-            subtitle="From WhatsApp automation to bulk messaging — powerful communication tools trusted by 10,000+ businesses across India."
+            subtitle="From WhatsApp automation to bulk messaging — powerful communication tools trusted by 500+ businesses across India."
             center
           />
         </BlurReveal>

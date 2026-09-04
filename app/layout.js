@@ -89,6 +89,12 @@ export const metadata = {
   }),
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#060c18',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${ebGaramond.variable}`} suppressHydrationWarning>
@@ -128,6 +134,7 @@ export default function RootLayout({ children }) {
         </noscript>
 
         {/* Theme color for mobile browsers */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#060c18" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

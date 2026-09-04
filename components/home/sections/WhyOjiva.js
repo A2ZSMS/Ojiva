@@ -14,8 +14,8 @@ import {
 const WHY = [
   {
     icon: RiFlashlightLine,
-    title: 'Live in Under 10 Minutes',
-    desc: 'Pre-built connectors, guided onboarding, and a sandbox environment mean you go live the same day.',
+    title: 'Go Live in 48 Hours',
+    desc: 'Guided onboarding, template support, and standard setup workflows help teams launch quickly without guessing through compliance steps.',
     color: '#1B48E0',
   },
   {
@@ -39,13 +39,13 @@ const WHY = [
   {
     icon: RiShieldLine,
     title: 'Enterprise-Grade Compliance',
-    desc: 'SOC 2, GDPR, DPDP Act, DLT registered, end-to-end encryption — built for regulated industries.',
+    desc: 'AES-256 encryption, DLT registration support, DPDP-aware operations, and SOC 2-aligned controls for regulated industries.',
     color: '#dc2626',
   },
   {
     icon: RiTeamLine,
     title: '24/7 Dedicated Success Team',
-    desc: 'Every enterprise client gets a named solutions architect, quarterly business reviews, and priority support.',
+    desc: 'Named account support, implementation guidance, and priority escalation paths keep campaigns moving after launch.',
     color: '#d97706',
   },
 ];
@@ -63,7 +63,7 @@ export default function WhyOjiva() {
               to Slow Down
             </h2>
             <TextReveal
-              text="We've obsessed over every detail so you don't have to. Ojiva AI is the communication backbone trusted by startups and Fortune 500s — from day one to enterprise scale."
+              text="We've obsessed over every detail so you don't have to. Ojiva AI is the communication backbone trusted by growing businesses and enterprise teams across India."
               className="section-subtitle mb-4"
             />
             <MagneticButton className="magnetic-btn-wrap">
