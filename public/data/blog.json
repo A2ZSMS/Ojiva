@@ -1,5 +1,16 @@
 [
-    {
+  {
+    "id": 39,
+    "title": "Google RCS Business Messaging: Verified Texting",
+    "componentKey": "Sep03",
+    "slug": "google-rcs-business-messaging",
+    "category": "RCS Messaging",
+    "date": "2026-09-03",
+    "description": "Google RCS Business Messaging explained — verified sender badges, rich cards and automatic SMS fallback. See how Ojiva AI sets it up for your business.",
+    "image": "/image/sep04(1).webp",
+    "keywords": "Google RCS Business Messaging, RCS business messaging platform, verified business sender, rich media messaging, message carousels and quick replies, RCS chatbot automation, RCS agent verification process, RCS messaging API integration, branded business texting, conversational messaging platform, RCS use cases across industries, RCS messaging, rich media, verified sender, quick reply buttons, message carousels, chatbot automation, delivery analytics, SMS fallback"
+  },  
+  {
     "id": 38,
     "title": "Best Bulk SMS Service Provider Bangalore",
     "componentKey": "Aug31",

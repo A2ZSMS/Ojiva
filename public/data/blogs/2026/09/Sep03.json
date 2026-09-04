@@ -1,0 +1,545 @@
+{
+  "slug": "google-rcs-business-messaging",
+  "metaTitle": "Google RCS Business Messaging: Verified Texting | Ojiva AI",
+  "metaDescription": "Google RCS Business Messaging explained — verified sender badges, rich cards and automatic SMS fallback. See how Ojiva AI sets it up for your business.",
+  "h1": "Google RCS Business Messaging: How Verified Business Texting Works",
+  "primaryKeyword": "Google RCS Business Messaging",
+  "keywords": {
+    "secondary": [
+      "RCS business messaging platform",
+      "verified business sender",
+      "rich media messaging",
+      "message carousels and quick replies",
+      "RCS chatbot automation",
+      "RCS agent verification process",
+      "RCS messaging API integration",
+      "branded business texting",
+      "conversational messaging platform",
+      "RCS use cases across industries"
+    ],
+    "shortTail": [
+      "RCS messaging",
+      "rich media",
+      "verified sender",
+      "quick reply buttons",
+      "message carousels",
+      "chatbot automation",
+      "delivery analytics",
+      "SMS fallback"
+    ],
+    "longTail": [
+      "what is Google RCS Business Messaging",
+      "how does Google RCS Business Messaging work",
+      "how to get verified as a Google RCS sender",
+      "is Google RCS Business Messaging secure for OTP",
+      "how much does RCS business messaging cost",
+      "can businesses reach iPhone users with RCS",
+      "does RCS automatically fall back to SMS",
+      "difference between RCS and WhatsApp Business API",
+      "how to integrate RCS messaging into a CRM",
+      "how to launch an RCS campaign without a developer team",
+      "which phones and carriers support Google RCS Business Messaging"
+    ]
+  },
+  "toc": [
+    { "id": "introduction", "label": "Introduction" },
+    { "id": "how-it-works", "label": "How It Works" },
+    { "id": "rich-media-features", "label": "Rich Cards & Carousels" },
+    { "id": "verified-sender-setup", "label": "Getting Verified" },
+    { "id": "use-cases", "label": "Industry Use Cases" },
+    { "id": "device-network-support", "label": "Device & Network Support" },
+    { "id": "chatbot-automation", "label": "Chatbot Automation" },
+    { "id": "api-integration", "label": "CRM & API Integration" },
+    { "id": "pricing", "label": "What It Costs" },
+    { "id": "getting-started", "label": "Getting Started" },
+    { "id": "why-ojiva", "label": "Why Ojiva AI" },
+    { "id": "conclusion", "label": "Conclusion" },
+    { "id": "faq", "label": "FAQs" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Google RCS Business Messaging replaces the plain-text alert from an unknown number with a branded, interactive message that lands inside the same app a customer already uses to text friends.</strong> Built on Google's RCS infrastructure and the GSMA's Universal Profile standard, it lets a verified business send rich cards, carousels and tappable buttons without asking anyone to install a new app."
+        },
+        {
+          "type": "p",
+          "html": "This guide covers how it actually works, what a verified sender profile gets you, real cost components, and where it fits next to the SMS and WhatsApp channels you're probably already running. Ojiva AI sets up and manages it on the same dashboard as <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/sms/\">SMS</a> — <a href=\"/book-demo/\">book a free demo</a> to see it running on your own audience."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep04(1).webp",
+          "alt": "Verified Google RCS Business Messaging rich card with quick reply buttons — Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How the Message Actually Reaches a Customer's Phone",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every send follows the same path, whether it's a single confirmation or a broadcast to a full contact list: a verified business profile sits behind the message, a rich card carries the actual content, and a customer's tap or reply feeds straight back into the conversation."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verified business sender:",
+              "desc": "your name, logo and a trust badge replace an anonymous number once the profile clears review."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Rich card composition:",
+              "desc": "images, short video and text sit inside one card instead of behind a link the customer has to open separately."
+            },
+            {
+              "icon": "bi-toggles2",
+              "title": "Quick reply buttons:",
+              "desc": "a tap answers, confirms or requests more detail without the customer typing anything."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery and read tracking:",
+              "desc": "sent, delivered, read and tapped are all visible per message, not estimated after the fact."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rich-media-features",
+      "heading": "What a Rich Card and Carousel Actually Look Like",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Message carousels and quick replies are what separate this channel from a plain text alert — a customer can swipe through several product cards or plans in one thread instead of getting five separate messages or a single outbound link."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-images",
+              "title": "Swipeable carousels:",
+              "desc": "multiple products, offers or steps in one scrollable card set."
+            },
+            {
+              "icon": "bi-play-btn-fill",
+              "title": "Video and audio:",
+              "desc": "a short clip plays inline instead of routing to an external page."
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Location and map cards:",
+              "desc": "a store, branch or delivery stop shown with a tap-to-navigate action."
+            },
+            {
+              "icon": "bi-hand-index-thumb-fill",
+              "title": "Suggested actions:",
+              "desc": "call, open a link, or share location — all as a single tap, not a typed reply."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verified-sender-setup",
+      "heading": "Getting Approved as a Verified Sender",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The badge next to your business name isn't automatic — it comes from an agent verification process that Google reviews before a single message goes out. Getting the submission right the first time avoids most of the back-and-forth that slows new senders down."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Submit the business profile:",
+              "desc": "name, logo, category and identity documents go through your RCS provider to Google's Business Messages console."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Brand review:",
+              "desc": "Google checks the submission against the registered business before approving verified sender status."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Sandbox testing:",
+              "desc": "preview cards, carousels and buttons on real devices before anything reaches a customer."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Go live:",
+              "desc": "the verified name and logo start appearing the moment approval clears."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Ojiva AI handles this submission and review process directly, so a marketing team isn't left interpreting a rejection notice on its own."
+        },
+          {
+            "type": "image",
+            "src": "/image/sep04(2).webp",
+            "alt": "Verified Google RCS Business Messaging rich card with quick reply buttons — Ojiva AI"
+          }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Where It Actually Moves the Needle Across Industries",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The same rich card format serves very different jobs depending on the industry — what stays constant is that a verified, interactive message consistently earns more attention than a plain line of text."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Retail and D2C:",
+              "desc": "product carousels, cart-recovery nudges and order-tracking cards that keep a buyer inside one thread."
+            },
+            {
+              "icon": "bi-bank",
+              "title": "Banking and lending:",
+              "desc": "verified statements and fraud alerts that are harder to spoof than an unlabeled number."
+            },
+            {
+              "icon": "bi-heart-pulse-fill",
+              "title": "Healthcare:",
+              "desc": "appointment reminders with a one-tap reschedule button instead of a phone call."
+            },
+            {
+              "icon": "bi-airplane-fill",
+              "title": "Travel and hospitality:",
+              "desc": "boarding passes and booking confirmations with a map card attached."
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Logistics:",
+              "desc": "live delivery-tracking cards that update without a separate app."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "device-network-support",
+      "heading": "Which Phones and Carriers Actually Support It",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS runs on Android 5.0 and above through Google Messages or a carrier's own messaging app, and Apple added native support starting with iOS 18 — so a growing share of iPhone users can now receive verified business messages too. In India, coverage runs through Jio, Airtel and Vi at the network level, and a message simply drops to standard SMS whenever a device, carrier or connection doesn't support the richer format, so reach never actually shrinks."
+        },
+        {
+          "type": "p",
+          "html": "For a full side-by-side against SMS and WhatsApp, see our <a href=\"/blogs/rcs-business-messaging-india/\">complete RCS Business Messaging guide</a>."
+        }
+      ]
+    },
+    {
+      "id": "chatbot-automation",
+      "heading": "Automating First Responses With a Chatbot",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Layering RCS chatbot automation on top of a verified sender turns a broadcast channel into an actual support line — a customer gets a first answer immediately, and a person only steps in once the conversation needs judgment a bot can't apply."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-robot",
+              "title": "Instant first response:",
+              "desc": "pricing, availability and status questions get answered without waiting on an agent."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Human handoff:",
+              "desc": "a conversation escalates to your team the moment it needs a real decision."
+            },
+            {
+              "icon": "bi-cursor-fill",
+              "title": "Self-serve actions:",
+              "desc": "a customer can book, reschedule or track an order without leaving the thread."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Coverage outside office hours:",
+              "desc": "an enquiry that arrives at night still gets an immediate first reply."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-integration",
+      "heading": "Connecting It to a CRM Without Custom Engineering",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A channel that doesn't talk to the systems a team already runs on just becomes another inbox to check. RCS messaging API integration is what keeps every reply, tap and delivery event logged against the right customer record instead of sitting in a separate tool."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cpu-fill",
+              "title": "One API for the channel:",
+              "desc": "rich messages and the automatic SMS fallback both run through the same integration point."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "CRM and helpdesk sync:",
+              "desc": "delivery and reply events push into the tools a support or sales team already uses."
+            },
+            {
+              "icon": "bi-code-slash",
+              "title": "Webhooks for real-time events:",
+              "desc": "know the moment a card is opened, a button is tapped, or a reply comes in."
+            },
+            {
+              "icon": "bi-terminal-fill",
+              "title": "Sandbox environment:",
+              "desc": "test a template on real devices before it reaches a live contact list."
+            }
+          ]
+        },
+          {
+            "type": "image",
+            "src": "/image/sep04(3).webp",
+            "alt": "Verified Google RCS Business Messaging rich card with quick reply buttons — Ojiva AI"
+          }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "What It Actually Costs to Run",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There's no single flat rate for this channel, and a provider quoting one number without context is skipping the details that actually matter. Billing usually breaks into a handful of components, each worth asking about directly."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Cost Component",
+            "What It Covers",
+            "How It's Usually Billed"
+          ],
+          "rows": [
+            [
+              "<b>Rich message fee</b>",
+              "Delivery of cards, carousels and quick-reply messages",
+              "Per delivered message"
+            ],
+            [
+              "<b>Platform access</b>",
+              "Campaign builder, unified inbox and analytics",
+              "Monthly or annual subscription"
+            ],
+            [
+              "<b>Verification and setup</b>",
+              "Brand review and sender profile approval",
+              "Usually one-time, included at onboarding"
+            ],
+            [
+              "<b>SMS fallback</b>",
+              "Sends that drop to standard SMS on unsupported devices",
+              "Billed at standard SMS rates"
+            ],
+            [
+              "<b>Taxes</b>",
+              "GST applied to subscription and per-message charges",
+              "Added to every invoice"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Ask any provider — Ojiva AI included — for an actual rate card against your expected volume rather than a rough estimate; carrier and platform pricing both shift over time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map it against your numbers directly."
+        }
+      ]
+    },
+    {
+      "id": "getting-started",
+      "heading": "Launching a Campaign Without a Developer Team",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most businesses go from signup to a first live send in a short sequence of dashboard steps, once verification and fallback templates are in place."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Share business and brand details:",
+              "desc": "these feed the verified sender review."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Register fallback templates:",
+              "desc": "so devices without RCS still receive a compliant SMS instead of nothing."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Build the first rich card:",
+              "desc": "no code required for a standard card or carousel."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Test across real devices:",
+              "desc": "confirm the card and its SMS fallback both read cleanly."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Launch and track:",
+              "desc": "delivery, reads and taps are visible from the first send."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Businesses Run RCS Through Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Sending one branded card is the easy part — running it as a dependable channel next to everything else a team already sends is where a provider actually earns its place."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "One dashboard, every channel:",
+              "desc": "<a href=\"/rcs/\">RCS</a>, <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/sms/\">SMS</a> with automatic fallback between them."
+            },
+            {
+              "icon": "bi-cash-coin",
+              "title": "Straightforward pricing:",
+              "desc": "a real rate card once your volume is known, not a vague quote."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verification handled end to end:",
+              "desc": "Ojiva AI manages the sender review directly rather than leaving it to a self-serve form."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support that responds when a campaign is live:",
+              "desc": "not just during setup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Treat It as One Channel, Not a Replacement",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Google RCS Business Messaging earns its place next to SMS and WhatsApp rather than instead of either — SMS still guarantees delivery when data or RCS support isn't there, and WhatsApp still covers customers who live inside that app. What changes is that the messages that do go out over RCS look, and perform, like they came from a real business."
+        },
+        {
+          "type": "p",
+          "html": "If you're comparing this against your other channels in more depth, our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> and <a href=\"/blogs/best-whatsapp-bsp-india/\">guide to choosing a WhatsApp BSP</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll set up your first verified sender profile on the call."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath</em>"
+        },
+        {
+          "type": "p",
+          "html": "<strong>Sources:</strong> <a href=\"https://www.gsma.com/solutions-and-impact/technologies/networks/rcs/\" target=\"_blank\" rel=\"noopener noreferrer\">GSMA — RCS</a>, <a href=\"https://rcsforbusiness.google/\" target=\"_blank\" rel=\"noopener noreferrer\">Google — RCS for Business</a>, <a href=\"https://developers.google.com/business-communications/rcs-business-messaging\" target=\"_blank\" rel=\"noopener noreferrer\">Google RCS Business Messaging developer documentation</a>."
+        }
+      ]
+    },
+    {
+      "id": "related-blogs",
+      "heading": "Related Reads",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "RCS Business Messaging: Guide for Indian Businesses",
+              "href": "/blogs/rcs-business-messaging-india/"
+            },
+            {
+              "title": "How to Choose a WhatsApp BSP in India: Checklist",
+              "href": "/blogs/best-whatsapp-bsp-india/"
+            },
+            {
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
+            },
+            {
+              "title": "WhatsApp Template Message Types: Categories & Examples",
+              "href": "/blogs/whatsapp-template-message-types-guide/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is Google RCS Business Messaging?",
+              "a": "<p>It's the business layer built on Google's RCS infrastructure and the GSMA's Universal Profile standard. A verified business sends branded rich cards, carousels and quick-reply buttons directly inside a customer's default messaging app, with no separate app to install.</p>"
+            },
+            {
+              "q": "How does Google RCS Business Messaging work for customer communication?",
+              "a": "<p>A verified sender profile sits behind every message, a rich card carries the images, text and buttons, and a customer's tap or reply feeds straight back into the same thread — including handoff to a chatbot or a live agent when needed.</p>"
+            },
+            {
+              "q": "How do I get verified as a Google RCS sender?",
+              "a": "<p>You submit business details, a logo and identity documents through an RCS provider to Google's Business Messages console, Google reviews the submission, and you test in a sandbox before going live. Ojiva AI runs this process directly with clients rather than leaving it as a self-serve form.</p>"
+            },
+            {
+              "q": "Is Google RCS Business Messaging secure enough for OTPs and payments?",
+              "a": "<p>Business messages are secured in transit and carry a verified sender identity, though they aren't end-to-end encrypted the way personal RCS chats are. For OTPs and payment prompts, that verified branding is what makes a code trustworthy at a glance, and every send falls back to SMS if a device can't receive the rich version.</p>"
+            },
+            {
+              "q": "How much does RCS business messaging cost?",
+              "a": "<p>Pricing usually combines a platform subscription with a per-message fee for rich cards, plus SMS fallback billed separately and applicable GST. There's no single flat rate — ask any provider for an actual rate card against your expected volume.</p>"
+            },
+            {
+              "q": "Can businesses reach iPhone users with RCS?",
+              "a": "<p>Yes. Apple added native RCS support starting with iOS 18, so verified business messages now reach a growing share of iPhone users, with automatic SMS fallback covering any device that isn't ready yet.</p>"
+            },
+            {
+              "q": "Does RCS automatically fall back to SMS?",
+              "a": "<p>Yes — whenever a device, carrier or connection doesn't support the richer format, the same message drops to standard SMS automatically, so delivery isn't lost.</p>"
+            },
+            {
+              "q": "What's the difference between RCS and WhatsApp Business API?",
+              "a": "<p>RCS runs inside a phone's native messaging app with no install required, while WhatsApp only reaches customers who already have the app. The two overlap heavily on features — rich media, buttons, verified branding — and most businesses run both rather than picking one. Our <a href=\"/blogs/rcs-business-messaging-india/\">full comparison guide</a> covers this in more detail.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
