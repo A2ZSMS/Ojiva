@@ -49,6 +49,7 @@ import blog_whatsapp_flows_guide from "../../../public/data/blogs/2026/08/whatsa
 import blog_whatsapp_templates_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug30.json";
 import blog_best_bulk_sms_service_provider_bangalore from "../../../public/data/blogs/2026/08/Aug31.json";
 import blog_google_rcs_business_messaging from "../../../public/data/blogs/2026/09/Sep03.json";
+import blog_whatsapp_vs_whatsapp_business_vs_api from "../../../public/data/blogs/2026/09/Sep08.json";
 
 const BlogJson = {
   "rcs-vs-sms-key-differences-and-which-is-better-for-business":
@@ -112,6 +113,8 @@ const BlogJson = {
   "best-bulk-sms-service-provider-bangalore":
     blog_best_bulk_sms_service_provider_bangalore,
   "google-rcs-business-messaging": blog_google_rcs_business_messaging,
+  "whatsapp-vs-whatsapp-business-vs-api":
+    blog_whatsapp_vs_whatsapp_business_vs_api,
 };
 
 // ── Date formatter ───────────────────────────────────────
