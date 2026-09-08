@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
 import { validateLead } from '@/lib/leadQuality';
+import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,7 +14,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ── TeleCRM (inline per project convention; matches ContactForm/DemoForm/LandingLeadForm) ──
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority, utmSource, utmMedium, utmCampaign }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
@@ -35,6 +36,9 @@ function fireTeleCRM({ name, phone, email, company, service, source, message, vo
   put(preferredTime, ['preferredTime', 'preferred_time', 'Preferred Time']);
   put(subject,       ['Subject', 'subject']);
   put(priority,      ['Priority', 'priority']);
+  put(utmSource,     ['utmSource',   'utm_source',   'UTM Source']);
+  put(utmMedium,     ['utmMedium',   'utm_medium',   'UTM Medium']);
+  put(utmCampaign,   ['utmCampaign', 'utm_campaign', 'UTM Campaign']);
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
@@ -107,17 +111,22 @@ function TicketForm() {
     try {
       sendWhatsApp(form.name, form.phone, 'support-page');
       if (!TEST_MODE_WHATSAPP_ONLY) {
+        const attr = getAttribution();
         fireTeleCRM({
-          name:     form.name,
-          phone:    form.phone,
-          email:    form.email,
-          company:  form.company,
-          service:  `Support Ticket [${form.priority.toUpperCase()}]`,
-          source:   'support-page',
-          message:  form.message,
-          subject:  form.subject,
-          priority: SUPPORT_PRIORITY_TO_NUM[form.priority] ?? 3,
+          name:        form.name,
+          phone:       form.phone,
+          email:       form.email,
+          company:     form.company,
+          service:     `Support Ticket [${form.priority.toUpperCase()}]`,
+          source:      'support-page',
+          message:     form.message,
+          subject:     form.subject,
+          priority:    SUPPORT_PRIORITY_TO_NUM[form.priority] ?? 3,
+          utmSource:   attr.utm_source,
+          utmMedium:   attr.utm_medium,
+          utmCampaign: attr.utm_campaign,
         });
+        fireOpenAiLeadCreated();
         await Promise.allSettled([
           fetch('https://api.web3forms.com/submit', {
             method:  'POST',

@@ -9,6 +9,7 @@
  *  ✅  Google Tag Manager (GTM)        — GTM-TJ8ZDFS2  (inline in layout.js <head>)
  *  ✅  Google Search Console           — vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI
  *  ✅  Meta Pixel                      — 1051828620576144
+ *  ✅  OpenAI Ads Pixel                 — 4DoGQbov6wt75SWWt5HFTF
  *
  * ⚠️  DO NOT REMOVE OR COMMENT OUT these scripts — they track all site traffic.
  *     If you think there are duplicate hits, check inside GTM container first.
@@ -16,12 +17,14 @@
  */
 
 import Script from 'next/script';
+import AttributionCapture from './AttributionCapture';
 
 /* ── Config — only edit values here ─────────────────────── */
 const GA_MEASUREMENT_ID           = 'G-FYZX6KFBEL';
 const GTM_CONTAINER_ID            = 'GTM-TJ8ZDFS2';
 const SEARCH_CONSOLE_VERIFICATION = 'vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI';
 const META_PIXEL_ID               = '1051828620576144';
+const OPENAI_ADS_PIXEL_ID         = '4DoGQbov6wt75SWWt5HFTF';
 /* ─────────────────────────────────────────────────────── */
 
 /**
@@ -31,6 +34,9 @@ const META_PIXEL_ID               = '1051828620576144';
 export default function Analytics() {
   return (
     <>
+      {/* ── UTM / click-ID capture (client-only) ── */}
+      <AttributionCapture />
+
       {/* ── Google Analytics 4 ── */}
       <Script
         id="ga4-script"
@@ -79,6 +85,25 @@ export default function Analytics() {
           alt=""
         />
       </noscript>
+
+      {/* ── OpenAI Ads Pixel ── */}
+      <Script
+        id="openai-ads-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.oaiq = window.oaiq || function () {
+              (window.oaiq.q = window.oaiq.q || []).push(arguments);
+            };
+            oaiq("init", { pixelId: "${OPENAI_ADS_PIXEL_ID}" });
+          `,
+        }}
+      />
+      <Script
+        id="openai-ads-sdk"
+        strategy="afterInteractive"
+        src="https://bzrcdn.openai.com/sdk/oaiq.min.js"
+      />
     </>
   );
 }

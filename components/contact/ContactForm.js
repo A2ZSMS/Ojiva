@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
 import { sendWhatsApp } from '@/lib/whatsapp';
 import { validateLead, scoreLead } from '@/lib/leadQuality';
+import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const VOLUME_OPTIONS = [
   { value: '',        label: 'Select monthly message volume' },
@@ -22,7 +23,7 @@ const MAKE_HOOK  = MAKE_HOOK_SERVICE;
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
 const TELECRM_API   = 'https://next-api.telecrm.in/enterprise/6a3cfd845aaa3fd96c26da19/autoupdatelead';
-function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority }) {
+function fireTeleCRM({ name, phone, email, company, service, source, message, volume, industry, companySize, preferredTime, subject, priority, utmSource, utmMedium, utmCampaign }) {
   let p = String(phone || '').replace(/\D/g, '');
   if (p.length === 13 && p.startsWith('091')) p = p.slice(3);
   if (p.length === 12 && p.startsWith('91'))  p = p.slice(2);
@@ -47,6 +48,9 @@ function fireTeleCRM({ name, phone, email, company, service, source, message, vo
   put(preferredTime, ['preferredTime', 'preferred_time', 'Preferred Time']);
   put(subject,       ['Subject', 'subject']);
   put(priority,      ['Priority', 'priority']);
+  put(utmSource,     ['utmSource',   'utm_source',   'UTM Source']);
+  put(utmMedium,     ['utmMedium',   'utm_medium',   'UTM Medium']);
+  put(utmCampaign,   ['utmCampaign', 'utm_campaign', 'UTM Campaign']);
   fetch(TELECRM_API, {
     method: 'POST', keepalive: true,
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${TELECRM_TOKEN}` },
@@ -147,17 +151,22 @@ export default function ContactForm() {
       const primaryService = serviceLabels[0] || 'General Enquiry';
       const extras         = serviceLabels.slice(1);
       const extrasPrefix   = extras.length ? `[Also interested in: ${extras.join(', ')}] ` : '';
+      const attr = getAttribution();
       fireTeleCRM({
-        name:     form.name,
-        phone:    form.phone,
-        email:    form.email,
-        company:  form.company,
-        service:  primaryService,
-        source:   'contact-us',
-        message:  `${extrasPrefix}${form.message}`,
-        volume:   form.volume,
-        industry: form.industry,
+        name:        form.name,
+        phone:       form.phone,
+        email:       form.email,
+        company:     form.company,
+        service:     primaryService,
+        source:      'contact-us',
+        message:     `${extrasPrefix}${form.message}`,
+        volume:      form.volume,
+        industry:    form.industry,
+        utmSource:   attr.utm_source,
+        utmMedium:   attr.utm_medium,
+        utmCampaign: attr.utm_campaign,
       });
+      fireOpenAiLeadCreated();
       const fd = new FormData(e.target);
       fd.append('access_key', ACCESS_KEY);
       fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
