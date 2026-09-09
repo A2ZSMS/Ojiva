@@ -90,6 +90,34 @@ for (const file of contentFiles) {
   }
 }
 
+// ── Alt-text reuse across DIFFERENT image files ──────────
+// One alt string on two or more distinct images is the copy-paste
+// fingerprint that left 32 images mislabelled in Sep 2026 (voice images
+// captioned "RCS", DLT images captioned "WhatsApp pricing"). The same
+// image file used in two posts legitimately shares one alt — that's fine.
+// Warn only, so drafts and quick fixes never block a build.
+{
+  const srcsByAlt = new Map();
+  for (const { file, content } of contentBySlug.values()) {
+    for (const section of content.sections || []) {
+      for (const block of section.blocks || []) {
+        if (block.type !== "image" || !block.alt) continue;
+        const key = block.alt.trim().toLowerCase();
+        if (!srcsByAlt.has(key)) srcsByAlt.set(key, new Map());
+        srcsByAlt.get(key).set(block.src, file.replace(ROOT + "/", ""));
+      }
+    }
+  }
+  for (const [alt, srcs] of srcsByAlt) {
+    if (srcs.size < 2) continue;
+    console.warn(
+      c.grey(`  ⚠ alt text reused on ${srcs.size} different images — each image should describe itself:\n` +
+        `      "${alt.slice(0, 70)}${alt.length > 70 ? "…" : ""}"\n` +
+        [...srcs].map(([src, f]) => `      ${src}  (${f})`).join("\n")),
+    );
+  }
+}
+
 // ── Validate each published blog ─────────────────────────
 for (const blog of blogs) {
   const tag = `"${blog.title}" (${blog.slug})`;
