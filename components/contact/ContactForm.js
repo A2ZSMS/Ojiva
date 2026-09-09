@@ -5,9 +5,8 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
-import { validateLead, scoreLead } from '@/lib/leadQuality';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { validateLead } from '@/lib/leadQuality';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const VOLUME_OPTIONS = [
@@ -137,19 +136,9 @@ export default function ContactForm() {
       setErrorMsg(check.reason);
       return;
     }
-    const quality = scoreLead({
-      name: form.name, email: form.email, company: form.company,
-      service: selected.join(', '), message: form.message, volume: form.volume,
-    });
-    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
 
     setStatus('loading'); setErrorMsg('');
     try {
-      sendWhatsApp(form.name, form.phone, 'contact-us');
-      if (TEST_MODE_WHATSAPP_ONLY) {
-        router.push('/thank-you');
-        return;
-      }
       // Multi-service handling: first selected service goes to Service Interested
       // dropdown (which only accepts one value); the full list is prepended to
       // the Remark so sales sees everything.

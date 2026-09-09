@@ -1,0 +1,55 @@
+.page { --wa-green: #4752a3; --wa-ink: #202b45; --wa-muted: #556176; --wa-line: #dce0eb; }
+.hero { background: #f3f4fa; }
+.preview { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 70px; background: #f3f4fa; padding: 46px 60px; border-radius: 16px; }
+.preview h3 { font-size: 30px; line-height: 1.3; margin: 18px 0; }
+.preview p, .flow { color: var(--wa-muted); font-size: 14px; line-height: 1.8; }
+.flow { padding-left: 20px; margin: 24px 0; }
+.flow li { padding: 6px 0; }
+.phone { max-width: 345px; width: 100%; justify-self: center; background: white; padding: 20px; border-radius: 24px; border: 1px solid #dce0eb; box-shadow: 0 15px 35px #26315312; }
+.sender { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.sender > span { background: #eeeff8; color: #4752a3; border-radius: 50%; padding: 10px; font-size: 12px; }
+.sender strong { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.sender strong svg { color: #4752a3; }
+.sender small { color: var(--wa-muted); font-size: 10px; }
+.card { border: 1px solid #dce0eb; border-radius: 12px; overflow: hidden; }
+.art { background: #e6e8f3; padding: 25px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; color: #4752a3; }
+.art svg { width: 52px; height: 52px; }
+.art span { font-size: 9px; }
+.card h4 { font-family: inherit; font-size: 17px; padding: 18px 18px 0; margin: 0; }
+.card p { padding: 12px 18px 18px; margin: 0; font-size: 12px; }
+.card button { border: 0; border-top: 1px solid #dce0eb; background: white; color: #4752a3; width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 12px; }
+.card button:hover { background: #f0f1f8; }
+.phone .result { font-size: 12px; min-height: 64px; padding: 14px 0 0; margin: 0; }
+.phone .note { font-size: 10px; margin: 12px 0 0; }
+.formatSwitch { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; }
+.formatSwitch > span { width: 100%; font-size: 9px; color: var(--wa-muted); letter-spacing: .7px; }
+.formatSwitch button { border: 1px solid #dce0eb; background: #fff; color: var(--wa-muted); border-radius: 6px; padding: 7px 10px; font-size: 10px; cursor: pointer; }
+.formatSwitch em { display: block; font-style: normal; font-size: 8px; opacity: .75; margin-top: 2px; }
+.formatSwitch .selectedFormat { background: #e6e8f3; border-color: #aeb4d3; color: #3f478e; font-weight: 600; }
+.carouselWrap { min-width: 0; }
+.carouselIntro { display: flex; flex-direction: column; gap: 3px; margin: 0 0 12px; }
+.carouselIntro strong { font-size: 12px; color: var(--wa-ink); }
+.carouselIntro span { font-size: 10px; color: var(--wa-muted); }
+.carousel { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 8px; scrollbar-width: thin; }
+.carouselCard { flex: 0 0 206px; scroll-snap-align: start; border: 1px solid #dce0eb; border-radius: 12px; overflow: hidden; background: #fff; }
+.carouselArt { height: 102px; display: grid; place-items: center; background: #e6e8f3; color: #4752a3; }
+.carouselArt img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.carouselArt svg { width: 38px; height: 38px; }
+.carouselCard h4 { font-family: inherit; font-size: 14px; line-height: 1.35; padding: 13px 13px 0; margin: 0; }
+.cardPosition { padding: 10px 13px 0; font-size: 8px; letter-spacing: .6px; color: #556176; }
+.carouselCard p { font-size: 11px; line-height: 1.55; padding: 7px 13px 13px; margin: 0; min-height: 52px; }
+.carouselCard button { border: 0; border-top: 1px solid #dce0eb; background: #f5f6fa; color: #4752a3; width: 100%; min-height: 40px; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 10px; cursor: pointer; }
+.carouselHint { margin: 8px 0 0; font-size: 10px; color: var(--wa-muted); }
+.coverage { padding-top: 0; }
+@media(max-width:800px) { .preview { gap: 30px; padding: 30px; grid-template-columns: 1fr; } }
+@media(max-width:540px) { .preview { padding: 25px 18px; } .preview h3 { font-size: 25px; } .phone { padding: 16px; } .carouselCard { flex-basis: 190px; } }
+
+.art:has(img) { padding: 0; }
+.art img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.heroProduct { display: flex; align-items: center; gap: 18px; background: white; border: 1px solid #dce0eb; border-radius: 12px; padding: 12px; max-width: 475px; color: #202b45; }
+.heroProduct > img { width: 135px; height: 110px; object-fit: cover; border-radius: 7px; }
+.heroProduct > span { min-width: 0; }
+.heroProduct small { display: block; font-size: 8px; color: #556176; }
+.heroProduct strong { display: block; font-size: 13px; line-height: 1.6; margin: 7px 0; }
+.heroProduct > span > span { font-size: 10px; color: #4752a3; display: flex; align-items: center; gap: 5px; }
+@media(max-width:540px) { .heroProduct { gap: 12px; } .heroProduct > img { width: 105px; height: 105px; } .heroProduct strong { font-size: 12px; } }

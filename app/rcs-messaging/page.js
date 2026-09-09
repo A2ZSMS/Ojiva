@@ -2,9 +2,9 @@ import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib
 import RcsMessagingLanding from '@/components/landing/RcsMessagingLanding';
 
 export const metadata = buildMetadata({
-  title: 'RCS Messaging India — Rich Cards, 3× Higher CTR',
+  title: 'RCS Business Messaging — Demo & Pricing',
   description:
-    "India's best RCS messaging platform. Google-verified brand, rich cards & interactive buttons. 94% read rate, 3× higher CTR. Try free.",
+    'Explore branded RCS messages, rich cards and interactive replies with Ojiva AI. Get a use-case demo, audience compatibility guidance and pricing.',
   path: '/rcs-messaging',
   canonicalPath: '/rcs',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata = buildMetadata({
 const rcsMessagingService = serviceSchema({
   name: 'RCS Business Messaging India',
   description:
-    'Upgrade from SMS to RCS — Google-verified brand identity, rich cards, interactive buttons, carousels, and real-time read receipts. 3× higher CTR than SMS. DLT compliant.',
+    'RCS business messaging with branded conversations, rich cards and interactive actions. Explore onboarding, audience compatibility and API integration.',
   url: '/rcs-messaging/',
   keywords: ['RCS messaging India', 'RCS Business Messaging', 'Google RCS', 'RCS API India'],
 });
@@ -39,30 +39,12 @@ const rcsBreadcrumb = breadcrumbSchema([
 ]);
 
 const RCS_FAQS = [
-  {
-    q: 'What is RCS messaging?',
-    a: 'RCS (Rich Communication Services) is the next generation of SMS. It delivers rich multimedia messages — including images, videos, carousels, interactive buttons, and suggested replies — directly inside the native Android messaging app. No app download required by your customers.',
-  },
-  {
-    q: 'Which devices and networks support RCS in India?',
-    a: 'RCS works on Android devices using Google Messages (the default messaging app on most Android phones). With 1 billion+ Android RCS users worldwide and rapid expansion by Indian telecom operators, RCS coverage is growing rapidly across India.',
-  },
-  {
-    q: 'How is RCS different from regular SMS?',
-    a: 'SMS is plain text with no branding, images, or interactivity. RCS delivers a full multimedia experience — verified business name and logo, rich media content, interactive CTA buttons, product carousels, real-time read receipts, and suggested replies. It achieves 94% read rates vs 45% for SMS and 3× higher click-through rates.',
-  },
-  {
-    q: 'Do my customers need to install a separate app to receive RCS?',
-    a: 'No. RCS messages are delivered natively through Google Messages, which is pre-installed on most Android devices. Your customers receive rich branded messages without downloading any additional app — making it far easier to adopt than WhatsApp or other messaging apps.',
-  },
-  {
-    q: 'Is RCS more expensive than SMS?',
-    a: 'RCS pricing is competitive with SMS and the higher engagement rates — 94% read rate, 3× CTR — make it significantly more cost-effective per conversion. Contact our team for a tailored pricing plan based on your monthly message volume.',
-  },
-  {
-    q: 'How long does RCS sender verification take?',
-    a: 'Google RCS sender verification typically takes 3–7 business days for brand approval. Once verified, your business name, logo, and verified tick appear on every message you send. Ojiva AI manages the entire verification process and supports you end-to-end.',
-  },
+  { q: 'What is RCS Business Messaging?', a: 'RCS lets businesses send branded, interactive messages with media, rich cards and suggested actions or replies in supported messaging apps. It gives customers more context and an easier way to take the next step.' },
+  { q: 'How is it different from SMS?', a: 'SMS is primarily a text message. RCS can combine business branding, media and interactive choices in the conversation. RCS requires audience compatibility checks; it should not be assumed to reach every SMS recipient.' },
+  { q: 'Will every customer receive an RCS message?', a: 'No. Availability depends on the device, messaging app, network and business messaging support. We’ll review audience compatibility and discuss the fallback approach for customers who cannot receive RCS.' },
+  { q: 'Do customers need a separate app?', a: 'Customers receive RCS in a supported messaging app. They do not need to install your business’s own app, but their existing device and messaging setup must support RCS Business Messaging.' },
+  { q: 'Can I connect RCS to my software?', a: 'Share your CRM, website or application and the workflow you want to build. We’ll review API integration, chatbot requirements and how customer responses should reach your team or software.' },
+  { q: 'What affects pricing and launch timing?', a: 'Pricing depends on usage, features and integration needs. Launch timing also depends on brand verification, approvals and testing. We’ll explain the requirements and applicable charges for your proposed setup.' },
 ];
 
 export default function RcsMessagingPage() {

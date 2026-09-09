@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useId, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
-import { validateLead, scoreLead } from '@/lib/leadQuality';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
+import { validateLead } from '@/lib/leadQuality';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
@@ -94,12 +93,13 @@ const REQUIRED  = ['name', 'email', 'phone', 'company', 'service'];
 const EMPTY_ERR = { name:'', email:'', phone:'', company:'', service:'', agree:'' };
 
 /* ─── Countdown ─────────────────────────────────────────────── */
-function useCountdown() {
+function useCountdown(enabled = true) {
   const [secs, setSecs] = useState(23 * 3600 + 44 * 60 + 6);
   useEffect(() => {
+    if (!enabled) return;
     const t = setInterval(() => setSecs(s => (s > 0 ? s - 1 : 0)), 1000);
     return () => clearInterval(t);
-  }, []);
+  }, [enabled]);
   const h = String(Math.floor(secs / 3600)).padStart(2, '0');
   const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
   const s = String(secs % 60).padStart(2, '0');
@@ -107,12 +107,13 @@ function useCountdown() {
 }
 
 /* ─── Activity feed ─────────────────────────────────────────── */
-function useActivity() {
+function useActivity(enabled = true) {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
+    if (!enabled) return;
     const t = setInterval(() => setIdx(i => (i + 1) % ACTIVITY.length), 6000);
     return () => clearInterval(t);
-  }, []);
+  }, [enabled]);
   return ACTIVITY[idx];
 }
 
@@ -153,10 +154,18 @@ export default function LandingLeadForm({
   agreeBrand    = 'Ojiva AI',
   makeHook      = MAKE_HOOK,
   accentColor   = null,  /* When set, overrides the default green of the countdown bar + submit button */
+  compact       = false,
+  introLabel    = 'YOUR BUSINESS. YOUR WALKTHROUGH.',
+  nextStepText  = 'Our team contacts you to discuss your use case and arrange your demo.',
+  formLabel     = 'Request a WhatsApp Business API demo',
 }) {
   const router    = useRouter();
-  const countdown = useCountdown();
-  const activity  = useActivity();
+  const countdown = useCountdown(!compact);
+  const activity  = useActivity(!compact);
+  const formId = useId();
+  const formRef = useRef(null);
+  const inFlight = useRef(false);
+  const fieldError = useCallback((key, value) => RULES[key](value), []);
 
   const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'', agree:false });
   const [volume,       setVolume]       = useState('');
@@ -174,16 +183,17 @@ export default function LandingLeadForm({
   const handleChange = useCallback((k) => (e) => {
     const val = k === 'agree' ? e.target.checked : e.target.value;
     setForm(p => ({ ...p, [k]: val }));
-    if (touched[k] && RULES[k]) setErrors(p => ({ ...p, [k]: RULES[k](val) }));
-  }, [touched]);
+    if (touched[k] && RULES[k]) setErrors(p => ({ ...p, [k]: fieldError(k, val) }));
+  }, [touched, fieldError]);
 
   const handleBlur = useCallback((k) => () => {
     setTouched(p => ({ ...p, [k]: true }));
-    if (RULES[k]) setErrors(p => ({ ...p, [k]: RULES[k](form[k]) }));
-  }, [form]);
+    if (RULES[k]) setErrors(p => ({ ...p, [k]: fieldError(k, form[k]) }));
+  }, [form, fieldError]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (inFlight.current) return;
     setTouched({ name:true, email:true, phone:true, company:true, service:true, agree:true });
     const errs = validateAll(form);
     setErrors(errs);
@@ -196,7 +206,18 @@ export default function LandingLeadForm({
       setVolumeErr(volErr);
     }
 
-    if (Object.values(errs).some(Boolean) || volErr) return;
+    if (Object.values(errs).some(Boolean) || volErr) {
+      if (compact) {
+        const firstError = Object.keys(errs).find(key => errs[key]) || (volErr ? 'monthly_volume' : undefined);
+        const input = formRef.current?.elements.namedItem(firstError);
+        if (input) {
+          const details = input.closest('details');
+          if (details) details.open = true;
+          input.focus();
+        }
+      }
+      return;
+    }
 
     const check = validateLead({
       name: form.name, email: form.email, company: form.company, message: form.message,
@@ -206,12 +227,8 @@ export default function LandingLeadForm({
       setApiError(check.reason);
       return;
     }
-    const quality = scoreLead({
-      name: form.name, email: form.email, company: form.company,
-      service: form.service, message: form.message, volume,
-    });
-    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
 
+    inFlight.current = true;
     setSubmitting(true); setApiError('');
 
     const payload = {
@@ -227,11 +244,6 @@ export default function LandingLeadForm({
     };
 
     try {
-      sendWhatsApp(payload.name, payload.phone, source);
-      if (TEST_MODE_WHATSAPP_ONLY) {
-        router.push(thankYouUrl);
-        return;
-      }
       const attr = getAttribution();
       fireTeleCRM({
         name:        payload.name,
@@ -252,22 +264,26 @@ export default function LandingLeadForm({
         landingUrl:  attr._first_landing_url,
         referrerUrl: attr._first_referrer,
       });
-      fireOpenAiLeadCreated();
+      if (!compact) fireOpenAiLeadCreated();
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', {
           method:  'POST',
+          ...(compact ? { signal: AbortSignal.timeout(15000) } : {}),
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body:    JSON.stringify({ access_key: WEB3_KEY, subject: `Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload }),
         }).then(r => r.json()),
-        fetch(makeHook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
+        fetch(makeHook, { method: 'POST', ...(compact ? { signal: AbortSignal.timeout(15000) } : {}), headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }),
       ]);
       if ((w.status === 'fulfilled' && w.value?.success) || (m.status === 'fulfilled' && m.value?.ok)) {
+        if (compact) fireOpenAiLeadCreated();
         router.push(thankYouUrl);
       } else {
+        inFlight.current = false;
         setApiError('Something went wrong. Please try again or call us.');
         setSubmitting(false);
       }
     } catch {
+      inFlight.current = false;
       setApiError('Network error. Please try again.');
       setSubmitting(false);
     }
@@ -275,6 +291,53 @@ export default function LandingLeadForm({
 
   const isErr = k => !!touched[k] && !!errors[k];
   const isOk  = k => !!touched[k] && !errors[k] && !!form[k];
+
+  if (compact) {
+    const input = (key, label, type, placeholder, autoComplete) => (
+      <div className="wa-field">
+        <label htmlFor={`${formId}-${key}`}>{label}<span aria-hidden="true"> *</span></label>
+        <input id={`${formId}-${key}`} name={key} type={type} placeholder={placeholder}
+          autoComplete={autoComplete} required disabled={submitting}
+          value={form[key]} onChange={handleChange(key)} onBlur={handleBlur(key)}
+          aria-invalid={isErr(key)} aria-describedby={isErr(key) ? `${formId}-${key}-error` : undefined} />
+        {isErr(key) && <span id={`${formId}-${key}-error`} className="wa-error">{errors[key]}</span>}
+      </div>
+    );
+    return (
+      <form ref={formRef} className="wa-enquiry" onSubmit={handleSubmit} noValidate aria-label={formLabel} aria-busy={submitting}>
+        <div className="wa-form-intro"><span>{introLabel}</span><h2>{title}</h2><p>{subtitle}</p></div>
+        <div className="wa-field-row">
+          {input('name', 'Your name', 'text', 'Full name', 'name')}
+          {input('phone', 'Business phone', 'tel', '10-digit mobile number', 'tel-national')}
+        </div>
+        <div className={volumeOptions ? 'wa-field-row' : 'wa-field-stack'}>
+          {input('email', 'Email address', 'email', 'you@company.com', 'email')}
+          {input('company', 'Company name', 'text', 'Your business name', 'organization')}
+        </div>
+        <div className={volumeOptions ? 'wa-field-row' : undefined}>
+        <div className="wa-field"><label htmlFor={`${formId}-service`}>{serviceLabel} <span aria-hidden="true">*</span></label>
+          <select id={`${formId}-service`} name="service" required disabled={submitting} value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')} aria-invalid={isErr('service')} aria-describedby={isErr('service') ? `${formId}-service-error` : undefined}>
+            {services.map(service => <option key={service.value} value={service.value}>{service.label}</option>)}
+          </select>
+          {isErr('service') && <span id={`${formId}-service-error`} className="wa-error">{errors.service}</span>}
+        </div>
+        {volumeOptions && <div className="wa-field"><label htmlFor={`${formId}-volume`}>{volumeLabel} <span aria-hidden="true">*</span></label>
+          <select id={`${formId}-volume`} name="monthly_volume" required disabled={submitting} value={volume} onChange={event => { setVolume(event.target.value); if (volumeTouched) setVolumeErr(event.target.value ? '' : 'Please select monthly volume.'); }} onBlur={() => { setVolumeTouched(true); setVolumeErr(volume ? '' : 'Please select monthly volume.'); }} aria-invalid={volumeTouched && !!volumeErr} aria-describedby={volumeTouched && volumeErr ? `${formId}-volume-error` : undefined}>
+            {volumeOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
+          </select>{volumeTouched && volumeErr && <span className="wa-error" id={`${formId}-volume-error`}>{volumeErr}</span>}
+        </div>}
+        </div>
+        <details className="wa-extra"><summary>Add your requirements <span>(optional)</span></summary>
+          <div className="wa-field"><label htmlFor={`${formId}-message`}>Anything we should know?</label><textarea id={`${formId}-message`} name="message" rows={2} disabled={submitting} value={form.message} onChange={handleChange('message')} placeholder="Your use case, team size or monthly volume" /></div>
+        </details>
+        <label className="wa-consent"><input name="agree" type="checkbox" required checked={form.agree} onChange={handleChange('agree')} onBlur={handleBlur('agree')} disabled={submitting} aria-invalid={isErr('agree')} aria-describedby={isErr('agree') ? `${formId}-agree-error` : undefined} /><span>I agree to the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms</a>, and to be contacted by Ojiva AI.</span></label>
+        {isErr('agree') && <span id={`${formId}-agree-error`} className="wa-error">{errors.agree}</span>}
+        <button type="submit" className="wa-submit" disabled={submitting}>{submitting ? 'Sending your request…' : submitLabel}</button>
+        {apiError && <p className="wa-error" role="alert">{apiError} <a href="tel:+918431086185">Call our team</a>.</p>}
+        <p className="wa-next-step">What happens next? {nextStepText}</p>
+      </form>
+    );
+  }
 
   return (
     <div className="llf-card">

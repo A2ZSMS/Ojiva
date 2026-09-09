@@ -4,9 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
-import { validateLead, scoreLead } from '@/lib/leadQuality';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { validateLead } from '@/lib/leadQuality';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
@@ -216,19 +215,9 @@ export default function DemoForm() {
       setErr(check.reason);
       return;
     }
-    const quality = scoreLead({
-      name: form.name, email: form.email, company: form.company,
-      service: channels.join(', '), message: msg, volume,
-    });
-    console.log('[LeadQuality] score:', quality.score, 'tier:', quality.tier);
 
     setSt('loading'); setErr('');
     try {
-      sendWhatsApp(form.name, form.phone, 'book-demo');
-      if (TEST_MODE_WHATSAPP_ONLY) {
-        router.push('/thank-you');
-        return;
-      }
       // Multi-service handling: first selected channel goes to Service Interested;
       // full list prepended to Remark so sales sees everything.
       const channelLabels = channels.map(v => CHANNELS.find(c => c.value === v)?.label || v);

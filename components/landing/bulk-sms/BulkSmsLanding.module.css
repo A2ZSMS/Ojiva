@@ -1,0 +1,65 @@
+.page { --wa-ink: #182d47; --wa-muted: #536277; --wa-green: #2557a0; --wa-line: #dbe3ee; }
+.hero { background: #f2f6fb; }
+.heroGrid { align-items: center; gap: 65px; }
+.page .heroGrid h1 { font-size: 49px; }
+.heroNote { display: flex; align-items: flex-start; gap: 13px; border-top: 1px solid #d4dfed; padding-top: 24px; max-width: 450px; }
+.heroNote > svg { width: 24px; height: 24px; flex-shrink: 0; color: var(--wa-green); }
+.heroNote strong { font-size: 13px; }
+.heroNote p { color: var(--wa-muted); font-size: 12px; line-height: 1.7; margin: 6px 0 0; }
+.examplePanel { display: grid; grid-template-columns: 1.1fr 1fr; gap: 75px; align-items: center; padding: 50px 65px; background: #f1f5fa; border-radius: 18px; }
+.examplePanel h3 { font-size: 31px; line-height: 1.25; margin: 18px 0; }
+.examplePanel > div > p { font-size: 14px; line-height: 1.85; color: var(--wa-muted); }
+.useLabel { font-size: 12px; line-height: 1.8; font-weight: 500; color: var(--wa-green); margin: 24px 0; }
+.examplePanel .outcome { border-top: 1px solid #d4dfed; padding-top: 22px; font-size: 13px; }
+.smsPhone { background: #fff; border: 5px solid #fff; border-radius: 22px; box-shadow: 0 15px 35px #203b5912; max-width: 340px; width: 100%; justify-self: center; overflow: hidden; }
+.phoneHeader { display: flex; gap: 13px; padding: 22px 20px; align-items: center; }
+.phoneHeader > svg { width: 34px; height: 34px; color: var(--wa-green); background: #edf3fb; padding: 7px; border-radius: 9px; }
+.phoneHeader strong, .phoneHeader span { display: block; }
+.phoneHeader strong { font-size: 13px; }
+.phoneHeader span { font-size: 10px; color: var(--wa-muted); margin-top: 2px; }
+.messageArea { background: #f6f8fb; min-height: 295px; padding: 25px 17px; }
+.messageArea > span { display: block; font-size: 9px; letter-spacing: .6px; color: var(--wa-muted); text-align: center; }
+.messageBubble { background: #e1eaf8; font-size: 14px; line-height: 1.8; padding: 18px; border-radius: 12px 12px 12px 2px; margin: 25px 0 18px; }
+.messageBubble small { display: block; text-align: right; font-size: 9px; color: var(--wa-muted); margin-top: 10px; }
+.messageArea > p { font-size: 10px; text-align: center; color: var(--wa-muted); }
+.phoneFoot { font-size: 10px; line-height: 1.7; color: var(--wa-muted); padding: 17px; text-align: center; }
+.page .workflowSection { padding-top: 0; }
+.integrationSection { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; align-items: center; padding-top: 0; }
+.integrationSection > div > p { color: var(--wa-muted); font-size: 15px; line-height: 1.85; }
+.integrationOptions article { display: flex; gap: 18px; padding: 30px 0; border-bottom: 1px solid var(--wa-line); }
+.integrationOptions article > svg { color: var(--wa-green); width: 26px; height: 26px; flex-shrink: 0; }
+.integrationOptions h3 { font-size: 19px; margin-bottom: 12px; }
+.integrationOptions p { color: var(--wa-muted); font-size: 14px; line-height: 1.8; margin: 0; }
+.setupSection { background: #182f4e; }
+.setupSection > div > div > span { color: #bbd4f7; }
+.setupSection > div > div > a { background: #e0ecff; color: #173f77; }
+.finalSection { background: #eef4fc; }
+.page :global(.wa-enquiry) { gap: 13px; }
+.page :global(.wa-field-row) { align-items: end; }
+@media(max-width:1100px) { .heroGrid { gap: 30px; } .page .heroGrid h1 { font-size: 40px; } .examplePanel { padding: 35px; gap: 40px; } }
+@media(max-width:800px) { .page .heroGrid h1 { font-size: 45px; } .examplePanel { grid-template-columns: 1fr; gap: 28px; } .integrationSection { gap: 30px; } }
+@media(max-width:540px) { .page .heroGrid h1 { font-size: 35px; } .heroNote { margin-top: 22px; padding-top: 20px; } .examplePanel { padding: 26px 18px; border-radius: 12px; } .examplePanel h3 { font-size: 25px; } .integrationSection { grid-template-columns: 1fr; padding-top: 0; } .integrationOptions article { padding: 24px 0; } .messageBubble { font-size: 13px; } }
+@media(max-width:360px) { .page .heroGrid h1 { font-size: 30px; } .examplePanel { padding: 24px 14px; } }
+
+.serviceStrip { max-width: 1120px; margin: auto; padding: 32px 24px 0; }
+.serviceStrip > span { font-size: 10px; letter-spacing: 1.3px; color: var(--wa-muted); }
+.serviceStrip > div { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 14px; border-top: 1px solid var(--wa-line); }
+.serviceStrip a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 12px 16px 0; font-size: 12px; border-bottom: 1px solid var(--wa-line); color: var(--wa-ink); }
+.serviceStrip a svg { flex-shrink: 0; color: var(--wa-green); }
+.page .smsTabs { display: grid; grid-template-columns: repeat(4, 1fr); }
+.page .smsTabs button { justify-content: center; min-width: 0; }
+.platformSection { padding-top: 0; scroll-margin-top: 90px; }
+.platformGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.platformGrid article { scroll-margin-top: 100px; background: #f1f5fa; border: 1px solid var(--wa-line); border-radius: 18px; padding: 36px; }
+.platformGrid article:nth-child(2) { background: #f5f3ed; }
+.platformNumber { display: block; font-size: 10px; color: var(--wa-muted); letter-spacing: 1.2px; }
+.platformIcon { margin-top: 26px; width: 30px; height: 30px; color: var(--wa-green); }
+.platformGrid h3 { font-size: 28px; margin: 18px 0 12px; }
+.platformGrid p, .platformGrid li { font-size: 14px; line-height: 1.85; color: var(--wa-muted); }
+.platformGrid h4 { font-size: 13px; margin: 24px 0 10px; }
+.platformGrid ul { padding-left: 18px; margin-bottom: 24px; }
+.connectionDiagram { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 82px; margin-top: 26px; border-block: 1px solid #d4dfed; font-size: 11px; }
+.connectionDiagram strong { background: white; border: 1px solid #d4dfed; border-radius: 8px; padding: 10px; font-weight: 500; }
+.connectionDiagram svg { color: var(--wa-green); flex-shrink: 0; }
+@media(max-width:800px) { .page .smsTabs { grid-template-columns: repeat(2, 1fr); } .platformGrid article { padding: 26px; } }
+@media(max-width:540px) { .serviceStrip > div { grid-template-columns: repeat(2, 1fr); } .serviceStrip a { font-size: 11px; } .platformGrid { grid-template-columns: 1fr; } .platformGrid h3 { font-size: 25px; } .page .smsTabs button { font-size: 11px; padding: 13px 8px; } }

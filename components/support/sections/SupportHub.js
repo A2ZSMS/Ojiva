@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_WHATSAPP_ONLY } from '@/lib/formConfig';
-import { sendWhatsApp } from '@/lib/whatsapp';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
 import { validateLead } from '@/lib/leadQuality';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
@@ -115,8 +114,7 @@ function TicketForm() {
       submitted_at: new Date().toISOString(),
     };
     try {
-      sendWhatsApp(form.name, form.phone, 'support-page');
-      if (!TEST_MODE_WHATSAPP_ONLY) {
+      {
         const attr = getAttribution();
         fireTeleCRM({
           name:        form.name,
@@ -290,7 +288,7 @@ export default function SupportHub() {
               <div className="row g-5 align-items-start">
                 <div className="col-12 col-lg-4">
                   <h3 className="sp-ticket-side-title">Submit a Support Ticket</h3>
-                  <p className="sp-ticket-side-desc">Describe your issue and we'll assign an engineer from the right team within minutes.</p>
+                  <p className="sp-ticket-side-desc">Describe your issue and we&apos;ll assign an engineer from the right team within minutes.</p>
                   <ul className="sp-ticket-side-list">
                     <li>⚡ Average first reply: <strong>47 minutes</strong></li>
                     <li>✅ Resolution rate: <strong>97.4%</strong></li>

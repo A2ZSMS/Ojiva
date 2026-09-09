@@ -1,29 +1,40 @@
-import Header from './whatsapp-api/Header';
-import Hero from './rcs-messaging/Hero';
-import StatsBar from './rcs-messaging/StatsBar';
-import Comparison from './rcs-messaging/Comparison';
-import Features from './rcs-messaging/Features';
-import UseCases from './rcs-messaging/UseCases';
-import HowItWorks from './rcs-messaging/HowItWorks';
-import Testimonials from './rcs-messaging/Testimonials';
-import FAQ from './rcs-messaging/FAQ';
-import FinalCTA from './rcs-messaging/FinalCTA';
-import Footer from './whatsapp-api/Footer';
-
+import Image from 'next/image';
+import { LuArrowUpRight, LuArrowRight, LuCheck, LuImage, LuMousePointerClick, LuBadgeCheck, LuChevronDown, LuPhone } from 'react-icons/lu';
+import LandingLeadForm from './LandingLeadForm';
+import EnquirySteps from './EnquirySteps';
+import MobileEnquiryBar from './whatsapp-api/MobileEnquiryBar';
+import SupportChat from './whatsapp-api/SupportChat';
+import RcsPreview from './rcs-messaging/RcsPreview';
+import base from './whatsapp-api/WhatsAppLanding.module.css';
+import styles from './rcs-messaging/RcsLanding.module.css';
+const services = [
+  { value: '', label: 'Choose what you need' },
+  { value: 'rcs-bulk', label: 'RCS Bulk Messaging' },
+  { value: 'rcs-chatbot', label: 'RCS AI Chatbot' },
+  { value: 'rcs-chatbot-combo', label: 'RCS + Chatbot Combo' },
+  { value: 'rcs-api', label: 'RCS API Integration' },
+  { value: 'other', label: 'Help me choose' },
+];
 export default function RcsMessagingLanding({ faqs }) {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <StatsBar />
-      <Comparison />
-      <Features />
-      <UseCases />
-      <HowItWorks />
-      <Testimonials />
-      <FAQ faqs={faqs} />
-      <FinalCTA />
-      <Footer />
-    </>
-  );
+  return <div className={`${base.page} ${styles.page}`} id="rcs-top">
+    <header className={base.header}><div className={base.headerInner}><a href="#rcs-top" aria-label="Ojiva AI, back to top"><Image src="/ojiva-logo-optimized.webp" alt="Ojiva AI" width={112} height={33} priority /></a><nav aria-label="RCS landing page navigation"><a href="#rcs-examples">See how RCS works</a><a href="#rcs-setup">Demo & pricing</a></nav><a href="#lead-form" className={base.headerCta}>Get RCS demo <LuArrowUpRight aria-hidden="true" /></a></div></header>
+    <section className={`${base.hero} ${styles.hero}`} aria-labelledby="rcs-title"><div className={base.heroGrid}><div className={base.heroCopy}><span className={base.eyebrow}><span className={base.statusDot} /> RCS BUSINESS MESSAGING</span><h1 id="rcs-title">Show more.<br /><span>Make the next<br />step a tap.</span></h1><p className={base.heroDescription}>Send branded messages with images, product cards and useful buttons. Help customers explore an offer, track an order or confirm a booking in a supported messaging app.</p><a href="#rcs-examples" className={base.heroAction}><LuMousePointerClick aria-hidden="true" /> Try an example message <LuArrowRight aria-hidden="true" /></a><ul className={base.heroBenefits}><li><LuCheck aria-hidden="true" /> Branded sender</li><li><LuCheck aria-hidden="true" /> Rich cards</li><li><LuCheck aria-hidden="true" /> Actions & replies</li></ul><a href="#rcs-examples" className={styles.heroProduct}><Image src="/rcs-weekender-example.webp" alt="Canvas weekender bag in an example RCS product message" width={180} height={120} priority /><span><small>EXAMPLE RCS PRODUCT CARD</small><strong>A product they can see.<br />An action they can take.</strong><span>Explore the interactive message <LuArrowRight aria-hidden="true" /></span></span></a></div>
+    <div className={base.formPanel} id="lead-form"><LandingLeadForm compact source="rcs-messaging" formLabel="Request an RCS messaging demo" introLabel="MESSAGE DEMO + SETUP + PRICING" title="See RCS for your business." subtitle="Tell us your use case. Get a relevant message demo, coverage guidance and pricing." submitLabel="Get My RCS Demo & Pricing →" thankYouUrl="/thank-you" services={services} serviceLabel="What would you like to do?" /></div></div><div className={base.heroFoot}><span>Useful messages with a clear next step.</span><div><span>Product discovery</span><span>Order updates</span><span>Booking reminders</span></div></div></section>
+    <section className={base.section} id="rcs-examples" aria-labelledby="rcs-examples-title"><div className={base.sectionIntro}><span className={base.eyebrow}>SEE WHAT YOUR CUSTOMER RECEIVES</span><h2 id="rcs-examples-title">A message they can<br />do something with.</h2><p>Choose a use case and try the message button. These examples show how content and a useful action work together.</p></div><RcsPreview /></section>
+    <section className={`${base.section} ${styles.coverage}`} aria-labelledby="rcs-benefits-title"><div className={base.benefitsHeading}><div><span className={base.eyebrow}>WHY USE RCS?</span><h2 id="rcs-benefits-title">More context.<br />An easier response.</h2></div><p>Use rich messaging when a picture, a choice or an action helps explain the next step.</p></div><div className={base.benefitGrid}>
+      <article><span className={base.benefitIcon}><LuBadgeCheck aria-hidden="true" /></span><h3>Help customers recognise you.</h3><p>Use your business identity in the conversation. We’ll explain brand verification and launch requirements for your setup.</p></article>
+      <article><span className={base.benefitIcon}><LuImage aria-hidden="true" /></span><h3>Show what a text cannot.</h3><p>Combine media, a description and an action in a rich card. Explore carousels when customers need to compare options.</p></article>
+      <article><span className={base.benefitIcon}><LuMousePointerClick aria-hidden="true" /></span><h3>Turn a question into a choice.</h3><p>Offer suggested replies or actions to continue a conversation, open a page or move to the next step in your workflow.</p></article>
+    </div></section>
+    <section className={`${base.section} ${base.connectionsSection}`} aria-labelledby="rcs-coverage-title"><div><span className={base.eyebrow}>PLAN FOR YOUR ACTUAL AUDIENCE</span><h2 id="rcs-coverage-title">Check reach.<br />Then plan the message.</h2><p>RCS Business Messaging availability depends on the customer’s device, messaging app and network. We’ll discuss audience compatibility and what should happen when RCS isn’t available.</p><a href="#lead-form" className={base.textLink}>Discuss my audience & integration <LuArrowUpRight aria-hidden="true" /></a></div><ol className={base.connectionFlow}><li><LuBadgeCheck aria-hidden="true" /><div><h3>Review your brand setup</h3><p>Prepare your business profile and review verification requirements.</p></div></li><li><LuImage aria-hidden="true" /><div><h3>Build a useful message</h3><p>Choose the content, customer action and any API or chatbot connection.</p></div></li><li><LuCheck aria-hidden="true" /><div><h3>Check the full journey</h3><p>Test supported devices, responses and the fallback approach before launch.</p></div></li></ol></section>
+    <EnquirySteps id="rcs-setup" title="See the message before you plan the campaign." description="Bring an offer, an update or a customer question. We’ll show you how it could work as an RCS conversation."
+      steps={[
+        ['Tell us what customers should do next.', 'Explore a product, respond to a reminder or ask for help. Start with your business goal.'],
+        ['Walk through a relevant RCS example.', 'Review your message content, buttons, audience support and integration requirements.'],
+        ['Get setup guidance and pricing.', 'Understand brand onboarding, expected usage and applicable platform or messaging charges.'],
+      ]} benefits={['A demo matched to your use case', 'Brand and audience compatibility guidance', 'Setup and pricing explained']} cta="Get My RCS Demo & Pricing" />
+    <section className={`${base.section} ${base.faqSection}`} aria-labelledby="rcs-faq-title"><div><span className={base.eyebrow}>BEFORE YOUR FIRST CAMPAIGN</span><h2 id="rcs-faq-title">Your RCS questions,<br />answered.</h2><p>Understand the message experience,<br />coverage and setup.</p></div><div className={base.faqList}>{faqs.map(({q,a})=><details key={q}><summary>{q}<LuChevronDown aria-hidden="true" /></summary><p>{a}</p></details>)}</div></section>
+    <section className={base.finalSection}><div><span className={base.eyebrow}>START WITH YOUR CUSTOMER’S NEXT STEP</span><h2>See what your message could do.</h2><p>Get a relevant RCS demo, setup guidance and pricing for your business.</p></div><a className={base.primaryCta} href="#lead-form">Get My RCS Demo & Pricing <LuArrowUpRight aria-hidden="true" /></a></section>
+    <footer className={base.footer}><div><Image src="/ojiva-logo-optimized.webp" alt="Ojiva AI" width={94} height={28} loading="lazy" /><span>© {new Date().getFullYear()} Ojiva AI</span></div><nav aria-label="Contact and legal"><a href="tel:+918431086185"><LuPhone aria-hidden="true" /> Talk to our team</a><SupportChat /><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></footer><MobileEnquiryBar label="Get RCS demo & pricing ↗" />
+  </div>;
 }
