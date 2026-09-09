@@ -31,8 +31,8 @@
         },
         {
           "type": "image",
-          "src": "/image/aug07(3).webp",
-          "alt": "WhatsApp template message for a travel agency with destination quick-reply buttons — Ojiva AI"
+          "src": "/image/aug30(1).webp",
+          "alt": "WhatsApp templates for travel agencies — Travel Buddy chat with exclusive deals and View Packages and Contact Support buttons"
         }
       ]
     },
@@ -155,6 +155,11 @@
         {
           "type": "p",
           "html": "The best practices for whatsapp marketing templates apply here without exception: keep opt-in evidence on file, lead with the specific offer rather than a generic greeting, and never fold a promotion into what should be a booking confirmation."
+        },
+        {
+          "type": "image",
+          "src": "/image/aug30(2).webp",
+          "alt": "Travel agency WhatsApp marketing — WanderWay Travels sponsored ad and Travel Talk offer message with Message Us and View Offers"
         }
       ]
     },
@@ -489,6 +494,11 @@
               "a": "<p>No. Mixing a booking update with a promotional offer in the same template usually gets it classified as Marketing or rejected outright — keep the two separate.</p>"
             }
           ]
+        },
+        {
+          "type": "image",
+          "src": "/image/aug30(3).webp",
+          "alt": "Travel agency WhatsApp FAQ replies — vacation planning, destinations, availability, visa support and 24/7 assistance"
         }
       ]
     }
