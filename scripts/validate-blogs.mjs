@@ -64,9 +64,30 @@ function walkJsonFiles(dir) {
 }
 const contentFiles = walkJsonFiles(resolve(ROOT, "public/data/blogs"));
 const contentBySlug = new Map();
+const registeredSlugs = new Set(blogs.map((b) => b.slug));
 for (const file of contentFiles) {
   const content = JSON.parse(readFileSync(file, "utf8"));
-  if (content.slug) contentBySlug.set(content.slug, { file, content });
+  if (!content.slug) continue;
+  const rel = file.replace(ROOT + "/", "");
+  const dup = contentBySlug.get(content.slug);
+  if (dup) {
+    // Two content files claiming one slug means one of them is silently
+    // unreachable — this is exactly how a content/slug swap hid from the
+    // validator in Sep 2026 (Aug24.json vs whatsapp-flows-guide.json).
+    errors.push(
+      `duplicate internal slug "${content.slug}" in two content files\n` +
+        `    ${dup.file.replace(ROOT + "/", "")}\n    ${rel}`,
+    );
+    continue;
+  }
+  contentBySlug.set(content.slug, { file, content });
+  if (!registeredSlugs.has(content.slug)) {
+    // Warning only (not a build failure) so unpublished drafts are allowed —
+    // but make it loud, because an orphaned file is usually a mistake.
+    console.warn(
+      c.grey(`  ⚠ ${rel} has slug "${content.slug}" but no entry in blog.json — it is not rendered anywhere.`),
+    );
+  }
 }
 
 // ── Validate each published blog ─────────────────────────
