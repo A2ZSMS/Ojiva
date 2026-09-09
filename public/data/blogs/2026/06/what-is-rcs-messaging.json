@@ -41,7 +41,7 @@
             { "icon": "bi-arrow-repeat", "title": "Automatic SMS fallback:", "desc": "When a device or network can't receive RCS, the message falls back to SMS — so your campaign still reaches 100% of your list, rich or plain." }
           ]
         },
-        { "type": "image", "src": "/image/jun4(1).webp", "alt": "What is RCS messaging explained for Indian businesses 2026" }
+        { "type": "image", "src": "/image/jun4(1).webp", "alt": "What is RCS messaging? A 2026 guide for Indian businesses — rich product carousel with View Collection buttons" }
       ]
     },
     {
@@ -118,7 +118,7 @@
             { "icon": "bi-hospital-fill", "title": "Healthcare:", "desc": "Appointment reminders, report-ready alerts and refill prompts with quick replies to confirm or reschedule." }
           ]
         },
-        { "type": "image", "src": "/image/jun4(2).webp", "alt": "What is RCS messaging explained for Indian businesses 2026" }
+        { "type": "image", "src": "/image/jun4(2).webp", "alt": "Key features of RCS for businesses — rich interactive messaging, verified sender, better engagement, actionable and measurable" }
       ]
     },
     {
@@ -192,7 +192,7 @@
             { "icon": "bi-lightbulb-fill", "title": "Tip:", "desc": "Combine types in one journey — a carousel for discovery, a conversational message for support, a basic RCS message to confirm." }
           ]
         },
-        { "type": "image", "src": "/image/jun4(3).webp", "alt": "What is RCS messaging explained for Indian businesses 2026" }
+        { "type": "image", "src": "/image/jun4(3).webp", "alt": "RCS business messaging examples — airline boarding pass with QR code and a fashion brand carousel" }
       ]
     },
     {

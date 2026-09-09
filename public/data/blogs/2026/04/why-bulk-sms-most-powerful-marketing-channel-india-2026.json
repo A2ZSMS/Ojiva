@@ -22,7 +22,7 @@
         { "type": "p", "html": "In 2026, with over 1.2 billion mobile subscribers across India, bulk SMS remains the single most powerful marketing and communication channel available to businesses of every size. While social media algorithms throttle organic reach and email inboxes overflow with unread newsletters, an SMS lands directly in the customer's pocket no algorithm, no spam filter, no app required. The numbers speak for themselves: bulk SMS commands a 98% open rate, compared to just 20% for email marketing. Nine out of ten SMS messages are read within three minutes of delivery, making it the only channel that can reliably deliver time-critical information to a mass audience in near real time. For Indian businesses competing in a noisy digital landscape, this is not just an advantage it is a decisive edge." },
         { "type": "p", "html": "The Indian SMS ecosystem has evolved dramatically in recent years. The Telecom Regulatory Authority of India (TRAI) introduced the Distributed Ledger Technology (DLT) framework to eliminate spam and protect consumers, bringing structure and accountability to commercial messaging. Simultaneously, advances in cloud infrastructure and AI have transformed bulk SMS from a simple broadcast tool into an intelligent, personalised communication engine. Businesses can now segment audiences, schedule campaigns by AI-optimised send times, insert dynamic variables like customer names and order IDs, and track delivery and engagement in real time through unified dashboards. The era of one-size-fits-all SMS blasts is over; the era of AI-powered, DLT-compliant, outcome-driven SMS is firmly here." },
         { "type": "p", "html": "Ojiva AI is India's leading bulk SMS platform, purpose-built for this new era of intelligent mobile messaging. Whether you are a healthcare provider sending appointment reminders, a bank delivering OTP alerts, an e-commerce brand running a flash sale, or an educational institution notifying parents about exam schedules, Ojiva AI gives you the tools to send faster, smarter, and more compliant SMS campaigns at scale. This comprehensive guide covers everything you need to know about bulk SMS marketing in India in 2026 from types and DLT compliance to pricing, best practices, and how to choose the right provider for your business." },
-        { "type": "image", "src": "/image/bulksms(1).webp", "alt": "Best Bulk SMS Service Provider India 2026" }
+        { "type": "image", "src": "/image/bulksms(1).webp", "alt": "Bulk SMS service provider in India — 3D phone with a chat bubble, email and location icons" }
       ]
     },
     {
@@ -69,7 +69,7 @@
             { "icon": "bi-check-circle-fill", "title": "Service Implicit SMS", "desc": "Businesses with existing customer relationships insurance companies, banks, subscription services can send service messages to their customers without explicit consent, as long as the message content relates to the existing relationship. Policy renewal reminders, EMI payment alerts, and account statement notifications fall under this category and are delivered to DND numbers as long as the template is correctly registered and the sender header matches the registered entity." }
           ]
         },
-        { "type": "image", "src": "/image/bulksms(2).webp", "alt": "Best Bulk SMS Service Provider India 2026" }
+        { "type": "image", "src": "/image/bulksms(2).webp", "alt": "Benefits of bulk SMS service: instant delivery, 98% open rates, automation, wide reach, scalable, cost-effective, API, delivery reports" }
       ]
     },
     {
@@ -111,7 +111,7 @@
             { "icon": "bi-check-circle-fill", "title": "Education Admission & Fee Reminders", "desc": "Educational institutions send bulk SMS for admission application deadlines, counselling round schedules, seat allotment notifications, and fee payment reminders. These are high-stakes communications where delivery failure can mean a student misses an admission deadline making delivery reliability non-negotiable. Ojiva AI's education sector clients benefit from dedicated transactional routes with guaranteed delivery and real-time delivery confirmation reports that administrators can use to identify and re-engage students who have not received critical messages." }
           ]
         },
-        { "type": "image", "src": "/image/bulksms(3).webp", "alt": "Best Bulk SMS Service Provider India 2026" }
+        { "type": "image", "src": "/image/bulksms(3).webp", "alt": "Bulk SMS use cases — OTP and verification, transactional alerts, promotional campaigns, customer engagement, with sample SMS on a phone" }
       ]
     },
     {

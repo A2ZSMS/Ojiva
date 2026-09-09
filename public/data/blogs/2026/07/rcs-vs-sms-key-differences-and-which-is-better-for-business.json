@@ -77,7 +77,7 @@
           { "icon": "bi-send-check-fill", "title": "Predictable delivery:", "desc": "consistent performance regardless of the recipient's data connectivity." },
           { "icon": "bi-wifi-off", "title": "Works with zero data:", "desc": "no Wi-Fi or mobile data needed at either end." }
         ]},
-        { "type": "image", "src": "/image/jul31(2).webp", "alt": "RCS messaging features for enterprises — rich cards, carousels and read receipts" }
+        { "type": "image", "src": "/image/jul31(2).webp", "alt": "SMS vs RCS business messaging feature comparison — branded sender, rich cards, read receipts, location, analytics" }
       ]
     },
     {
@@ -137,7 +137,7 @@
           { "icon": "bi-calendar2-check", "title": "Appointment reminders:", "desc": "cuts down no-shows without needing a smartphone on the recipient's end." },
           { "icon": "bi-megaphone-fill", "title": "Bulk promotional campaigns:", "desc": "discount codes and offers sent to a full customer list at once." }
         ]},
-        { "type": "image", "src": "/image/jul31(3).webp", "alt": "RCS messaging features for enterprises — rich cards, carousels and read receipts" }
+        { "type": "image", "src": "/image/jul31(3).webp", "alt": "SMS vs RCS key differences — plain text 160-character SMS versus rich media, verified branding and quick replies in RCS" }
       ]
     },
     {
