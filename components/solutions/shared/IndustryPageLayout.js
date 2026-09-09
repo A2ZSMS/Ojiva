@@ -561,7 +561,7 @@ export default function IndustryPageLayout({ industry }) {
             >
               <div className="ind-lp-comp-left">
                 <div className="ind-lp-comp-icon-wrap" style={{ background: `${color}15`, color }}>
-                  <i className="bi bi-shield-check-fill" aria-hidden="true" />
+                  <i className="bi bi-shield-fill-check" aria-hidden="true" />
                 </div>
                 <div className="ind-lp-comp-badges">
                   <span className="ind-lp-comp-badge" style={{ color, borderColor: `${color}30` }}>

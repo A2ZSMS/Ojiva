@@ -46,7 +46,7 @@ export default function WhatsAppApiLanding() {
         </div>
         <div className={styles.heroFoot}><span>Built for the way your business talks.</span><div><span>Sales enquiries</span><span>Customer support</span><span>Order updates</span><span>Appointment reminders</span></div></div>
       </section>
-      <section className={`${styles.section} ${styles.demoSection}`} id="how-it-works" aria-labelledby="demo-title"><div className={styles.sectionIntro}><span className={styles.eyebrow}>SEE WHAT YOUR CUSTOMERS EXPERIENCE</span><h2 id="demo-title">A question comes in.<br />Here’s what happens next.</h2><p>Choose a situation. See how a conversation can move from a customer’s question to a useful next step.</p></div><ConversationDemo /></section>
+      <section className={styles.section} id="how-it-works" aria-labelledby="demo-title"><div className={styles.sectionIntro}><span className={styles.eyebrow}>SEE WHAT YOUR CUSTOMERS EXPERIENCE</span><h2 id="demo-title">A question comes in.<br />Here’s what happens next.</h2><p>Choose a situation. See how a conversation can move from a customer’s question to a useful next step.</p></div><ConversationDemo /></section>
       <section className={`${styles.section} ${styles.benefitsSection}`} aria-labelledby="benefits-title">
         <div className={styles.benefitsHeading}><div><span className={styles.eyebrow}>A BETTER DAY FOR YOUR TEAM</span><h2 id="benefits-title">Fewer repetitive tasks.<br />More time for customers.</h2></div><p>Keep the everyday work moving, so your team can focus on conversations that need a person.</p></div>
         <div className={styles.benefitGrid}>

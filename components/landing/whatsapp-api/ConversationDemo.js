@@ -21,7 +21,7 @@ export default function ConversationDemo() {
     document.getElementById(`wa-tab-${scenarios[next].id}`)?.focus();
   }
   return (
-    <div className={styles.demo}>
+    <div>
       <div className={styles.tabs} role="tablist" aria-label="Explore a WhatsApp use case" onKeyDown={navigate}>{scenarios.map((item, index) => <button key={item.id} id={`wa-tab-${item.id}`} type="button" role="tab" aria-selected={selected === index} aria-controls="wa-demo-panel" tabIndex={selected === index ? 0 : -1} onClick={() => choose(index)}><item.icon aria-hidden="true" />{item.label}</button>)}</div>
       <div className={styles.demoGrid} id="wa-demo-panel" role="tabpanel" aria-labelledby={`wa-tab-${scenario.id}`}>
         <div className={styles.demoCopy}><span className={styles.eyebrow}>{scenario.tag}</span><h3>{scenario.title}</h3><p>{scenario.description}</p><ol className={styles.flowSteps}>{scenario.steps.map((step, index) => <li key={step}><span>{index + 1}</span>{step}</li>)}</ol><a href="#lead-form" className={styles.textLink}>Show me this for my business <LuArrowRight aria-hidden="true" /></a></div>
