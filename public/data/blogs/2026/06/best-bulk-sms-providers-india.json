@@ -34,7 +34,7 @@
       "blocks": [
         { "type": "p", "html": "A bulk SMS service provider gives businesses a single platform — a dashboard plus an API — to send thousands of text messages at the same time, track them in real time, and stay compliant with Indian telecom rules. Instead of sending one message at a time, you upload your contacts or trigger messages from your app, and the provider routes them to customers across Jio, Airtel, Vi and BSNL in seconds." },
         { "type": "p", "html": "The right provider does more than \"send texts.\" It manages sender ID (header) and template registration on the DLT platform, applies DND filtering, routes messages through reliable operator connections to maximise delivery, and reports back on what was delivered, read and acted on. That combination — speed, compliance and visibility — is what separates a dependable bulk SMS service provider in India from a cheap gateway that quietly drops messages." },
-        { "type": "image", "src": "/image/jun3(1).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun3(1).webp", "alt": "Best bulk SMS gateway providers in India for OTP, alerts and promotions — OTP and order-tracking SMS on a phone" }
       ]
     },
     {
@@ -95,7 +95,7 @@
             { "icon": "bi-exclamation-triangle-fill", "title": "[Ojiva: insert one verified proof point here — e.g. your real average delivery rate or messages sent per month.]", "desc": "Use a number you can prove; an unverifiable stat undercuts the E-E-A-T this page relies on." }
           ]
         },
-        { "type": "image", "src": "/image/jun3(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun3(2).webp", "alt": "Smart bulk SMS for every business — verification code, order confirmation and sale alert messages" }
       ]
     },
     {
@@ -155,7 +155,7 @@
             { "icon": "bi-bar-chart-fill", "title": "Measurable results:", "desc": "Real-time delivery reports let you see what landed and refine the next campaign instead of guessing." }
           ]
         },
-        { "type": "image", "src": "/image/jun3(3).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun3(3).webp", "alt": "Bulk SMS use cases for Indian businesses: promotions, alerts, OTP, reminders, delivery updates, customer engagement" }
       ]
     },
     {

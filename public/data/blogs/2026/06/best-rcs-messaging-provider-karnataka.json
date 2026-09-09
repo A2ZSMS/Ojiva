@@ -27,7 +27,7 @@
       "heading": null,
       "blocks": [
         { "type": "p", "html": "<strong>RCS Business Messaging (Rich Communication Services)</strong> is the upgrade to SMS that turns a plain text into a branded, interactive message — your verified business name and logo, images, product carousels and tappable buttons, delivered right inside the customer's native Android Messages app with no extra app to install. For a Karnataka business choosing an RCS provider in 2026, the decision comes down to seven things: <strong>verified sender setup, rich-media and carousel support, reliable delivery across Jio, Airtel and Vi, automatic SMS fallback, transparent INR pricing, DPDP-aligned data handling, and India-based support.</strong> This guide explains what RCS is, why brands across Bengaluru, Mysuru, Mangaluru and Hubballi are switching, the use cases that actually convert, and how to launch — and shows where Ojiva AI fits. If you want the national picture first, see <a href='/blogs/rcs-messaging-future-business-communication-india/'>RCS Business Messaging in India</a>." },
-        { "type": "image", "src": "/image/jun15(1).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun15(1).webp", "alt": "Best RCS messaging provider in Karnataka — Google Messages business chat entry points for buying and support" }
       ]
     },
     {
@@ -131,7 +131,7 @@
             { "icon": "bi-geo-alt-fill", "title": "Local-first:", "desc": "Whether you serve Bengaluru, Mysuru, Mangaluru or Hubballi, RCS reaches customers in the inbox they already check." }
           ]
         },
-        { "type": "image", "src": "/image/jun15(2).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun15(2).webp", "alt": "RCS business messaging demo — verified sender chat with Yes I Want and Details Please replies and rich service cards" }
       ]
     },
     {
@@ -216,7 +216,7 @@
           ]
         },
         { "type": "p", "html": "We won't claim to be the only RCS provider for every business — the right fit depends on your volume and use case. But for Karnataka brands that want verified, rich, reliable messaging with local support, Ojiva AI is built to deliver. <a href='/book-demo/'>Book a demo</a> and see it on your own use case." },
-        { "type": "image", "src": "/image/jun15(3).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun15(3).webp", "alt": "RCS use cases on three phones: package shipped with map, party supplies add-ons, airline boarding pass with QR code" }
       ]
     },
     {

@@ -23,7 +23,7 @@
         { "type": "p", "html": "Rich Communication Services, commonly known as RCS, is the next-generation messaging standard that is rapidly replacing traditional SMS as the go-to channel for business-to-consumer communication. Unlike the plain-text limitations of SMS, which has remained virtually unchanged since the early 1990s, RCS brings a suite of advanced features to the default messaging app on Android smartphones. These features include high-resolution images and videos, interactive buttons, carousels, suggested replies, read receipts, verified sender branding, and real-time two-way conversations — all delivered natively through the device built-in messaging application, with no separate app download required from the customer." },
         { "type": "p", "html": "India represents one of the most strategically significant markets for RCS adoption in the entire world. The country has over 550 million Android smartphone users, making it the single largest Android user base on the planet. India's three major telecom carriers — Reliance Jio, Bharti Airtel, and Vodafone Idea (Vi) have all integrated Google's Jibe RCS infrastructure, which means that RCS messages can be delivered natively to hundreds of millions of Indian consumers without requiring any additional configuration on the recipient's side. The rapid expansion of 4G and 5G network coverage across urban and semi-urban India further accelerates the viability of RCS as a mass-market channel. Businesses that are still relying solely on SMS in 2026 are leaving an extraordinary amount of engagement, conversion, and customer experience quality on the table." },
         { "type": "p", "html": "For Indian businesses whether you run an e-commerce platform, a bank, a healthcare provider, a logistics company, or a retail brand RCS offers a transformational upgrade in how you communicate with your customers at every stage of their journey. From promotional campaigns that look as polished as a mobile website, to transactional alerts that let customers take immediate action without leaving their messaging app, to conversational experiences powered by AI chatbots, RCS unlocks engagement rates and conversion metrics that SMS simply cannot match. Ojiva AI is India's leading intelligent communications platform, providing businesses with seamless access to RCS Business Messaging through a powerful API and campaign management suite that integrates with your existing CRM, marketing automation, and customer support systems." },
-        { "type": "image", "src": "/image/rcs(1).webp", "alt": "RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform" }
+        { "type": "image", "src": "/image/rcs(1).webp", "alt": "RCS messaging for India — rich card with Book Now and Learn More buttons on a customer's phone" }
       ]
     },
     {
@@ -81,7 +81,7 @@
             ["Conversational Message", "A fully interactive conversational exchange powered by an AI chatbot, an IVR-to-chat workflow, or a live human agent, using RCS as the messaging channel throughout the interaction. Supports persistent session state, conversation context carryover between multiple turns, and hybrid AI-to-human handoff with no loss of conversation history during the escalation.", "Customer support automation and self-service flows, insurance claim filing and status checking, loan application assistance, product recommendation engines, lead qualification for high-value B2C products, and any high-engagement service scenario requiring multiple back-and-forth exchanges", "Free-text input and natural language understanding, suggested replies, CTA buttons, session persistence, human agent handoff with full context transfer"]
           ]
         },
-        { "type": "image", "src": "/image/rcs(2).webp", "alt": "RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform" }
+        { "type": "image", "src": "/image/rcs(2).webp", "alt": "RCS commerce journey: rich product discovery, in-chat browsing, secure checkout, instant confirmation, back to conversation" }
       ]
     },
     {
@@ -137,7 +137,7 @@
             { "icon": "bi-check-circle-fill", "title": "Loyalty Program Engagement and Rewards Redemption:", "desc": "Brands with loyalty programs can use RCS to send personalized tier-status updates, points balance notifications, tier achievement congratulations, exclusive member-only offer reveals, and expiring rewards alerts all with the brand's full visual identity displayed in the message through the verified sender profile. Unlike email-based loyalty communications that are frequently overlooked in crowded promotional inboxes, RCS loyalty messages land in the customer's primary messaging app alongside personal conversations, carrying the implicit priority and urgency of direct messaging. This translates into significantly higher points redemption rates, stronger tier upgrade engagement, and better long-term retention for loyalty program participants." }
           ]
         },
-        { "type": "image", "src": "/image/rcs(3).webp", "alt": "RCS Messaging for Indian Businesses 2026 - Ojiva AI Platform" }
+        { "type": "image", "src": "/image/rcs(3).webp", "alt": "RCS compliance in India — three requirements: sender registration, content guidelines, new launches and promos" }
       ]
     },
     {

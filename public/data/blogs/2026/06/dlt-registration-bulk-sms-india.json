@@ -46,7 +46,7 @@
             { "icon": "bi-diagram-3-fill", "title": "One ledger, all operators:", "desc": "Jio, Airtel, Vi and BSNL share the same DLT backbone, so you register once and it applies network-wide." }
           ]
         },
-        { "type": "image", "src": "/image/jun12(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun12(2).webp", "alt": "DLT registration for bulk SMS — five steps: entity, header, template, consent template and PE-TM chain registration" }
       ]
     },
     {
@@ -183,7 +183,7 @@
             { "icon": "bi-bar-chart-line-fill", "title": "Live delivery reports:", "desc": "Real-time DLRs show what landed and what bounced, so issues are caught in minutes, not campaigns." }
           ]
         },
-        { "type": "image", "src": "/image/jun12(3).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun12(3).webp", "alt": "Why DLT? Prevents spam, verifies businesses and templates, improves delivery, builds trust, complies with TRAI" }
       ]
     },
     {

@@ -23,7 +23,7 @@
         { "type": "p", "html": "AI-powered communication automation refers to the use of artificial intelligence, machine learning, and natural language processing (NLP) to handle customer-facing communication tasks — responding to queries, qualifying leads, sending personalised messages, routing conversations, collecting feedback, and much more — without human intervention, 24 hours a day, 7 days a week, 365 days a year. Unlike simple rule-based chatbots that follow fixed decision trees, modern AI communication systems understand context, sentiment, and intent. They learn from every interaction, improve continuously over time, and handle increasingly complex conversations without requiring a single human to intervene." },
         { "type": "p", "html": "India is uniquely positioned to benefit from this revolution. With 1.2 billion mobile users, 600 million active internet users, explosive smartphone adoption across Tier 2 and Tier 3 cities, and a business landscape where customer expectations have already leapfrogged traditional infrastructure, AI communication automation is not just an efficiency tool — it is a competitive necessity. The businesses that deploy AI communication automation today will compound their advantage quarter after quarter, while those that delay risk being left behind by competitors who respond faster, serve better, and spend less doing it." },
         { "type": "p", "html": "The data is compelling and consistent across geographies and industries. According to the Nasscom AI Adoption Report 2025, Indian businesses deploying AI communication automation report an average <strong>60% reduction in customer service costs</strong>, <strong>3x faster response times</strong>, and a <strong>42% improvement in customer satisfaction (CSAT) scores</strong> within just six months of deployment. These are not marginal improvements — they are transformational shifts that redefine what is possible for businesses of every size. Whether you are running a D2C brand in Bengaluru, an NBFC in Mumbai, a hospital network in Chennai, or a real estate firm in Hyderabad, AI communication automation delivers measurable, compounding returns from day one of deployment." },
-        { "type": "image", "src": "/image/ai(1).webp", "alt": "AI-Powered Business Communication Automation India 2026 — Ojiva AI" }
+        { "type": "image", "src": "/image/ai(1).webp", "alt": "AI-powered business communication automation — humanoid robot using a tablet with AI, analytics and search icons" }
       ]
     },
     {
@@ -109,7 +109,7 @@
             { "icon": "bi-check-circle-fill", "title": "Feedback and Review Collection:", "desc": "AI-triggered post-interaction survey sequences collect NPS, CSAT, and product reviews automatically — achieving 5–10× higher response rates than traditional email surveys because they are delivered via WhatsApp at the right moment in the customer journey with a frictionless one-tap rating experience." }
           ]
         },
-        { "type": "image", "src": "/image/ai(2).webp", "alt": "AI-Powered Business Communication Automation India 2026 — Ojiva AI" }
+        { "type": "image", "src": "/image/ai(2).webp", "alt": "Six ways AI improves customer communication: always available, quick answers, personalised, multilingual, consistent, high volume" }
       ]
     },
     {
@@ -174,7 +174,7 @@
           ]
         },
         { "type": "html", "content": "<div class=\"p-4 bg-light border rounded mb-4 mt-4\"><h4 class=\"fw-bold mb-3\">ROI Calculation Example: 100-Agent Customer Support Team</h4><p class=\"mb-2\">A company with 100 customer support agents handles 50,000 monthly interactions at an average fully loaded cost of ₹120 per interaction. Monthly cost: <strong>₹60,00,000.</strong></p><p class=\"mb-2\">After deploying Ojiva AI automation, 80% of interactions are handled by AI at ₹5 each, with 20% escalated to human agents at ₹120 each:</p><p class=\"mb-2\">(40,000 × ₹5) + (10,000 × ₹120) = ₹2,00,000 + ₹12,00,000 = <strong>₹14,00,000/month</strong></p><p class=\"mb-0 fw-semibold text-success\">Monthly savings: ₹46,00,000 — a 77% cost reduction. Annual savings: ₹5.52 crore. Platform investment payback in under 3 weeks.</p></div>" },
-        { "type": "image", "src": "/image/ai(3).webp", "alt": "AI-Powered Business Communication Automation India 2026 — Ojiva AI" }
+        { "type": "image", "src": "/image/ai(3).webp", "alt": "AI in business process automation — streamline operations, better decisions, efficiency, cost reduction, accuracy" }
       ]
     },
     {

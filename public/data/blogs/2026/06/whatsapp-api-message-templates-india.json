@@ -27,7 +27,7 @@
       "heading": null,
       "blocks": [
         { "type": "p", "html": "<strong>A WhatsApp API message template</strong> is a pre-approved message format that lets your business send proactive WhatsApp messages — order updates, OTPs, payment reminders, appointment confirmations and offers — to opted-in customers, even when they aren't actively chatting. You write the message once with placeholders like <strong>{{1}}</strong>, get it approved by Meta, and reuse it for thousands of customers with CTA buttons like Pay Now, Track Order or Call. For Indian businesses in 2026, templates are the difference between fast, consistent, compliant messaging and slow manual follow-ups that lose leads. This guide covers how templates work, the 24-hour rule, the three categories (Utility, Authentication, Marketing), naming and approval rules, why templates get rejected, and a copy-paste library you can customise and submit. New to the API itself? Start with <a href='/blogs/whatsapp-business-app-vs-api/'>WhatsApp Business App vs API</a>." },
-        { "type": "image", "src": "/image/jun17(1).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun17(1).webp", "alt": "WhatsApp API message templates for Indian businesses — CRM trigger sends a delivery message with Love it and Didn't like it buttons" }
       ]
     },
     {
@@ -108,7 +108,7 @@
         { "type": "p", "html": "<strong>Header:</strong> Payment Reminder" },
         { "type": "p", "html": "<strong>Body:</strong> Hi {{1}}, your payment of ₹{{2}} is due on {{3}}. Tap below to pay now." },
         { "type": "p", "html": "<strong>Buttons:</strong> Pay Now | Call Support" },
-        { "type": "image", "src": "/image/jun17(2).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun17(2).webp", "alt": "Create WhatsApp template message — payment reminder editor with {{1}} {{2}} {{3}} variables and a live preview" }
       ]
     },
     {
@@ -209,7 +209,7 @@
             { "icon": "bi-box-arrow-right", "title": "Easy opt-out + DPDP:", "desc": "Offer \"Reply STOP to opt out\", and handle data with consent records and AES-256 encryption." }
           ]
         },
-        { "type": "image", "src": "/image/jun17(3).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun17(3).webp", "alt": "WhatsApp template lifecycle: customer opt-in, drafting, approval, automation triggers, 24-hour rule, analytics" }
       ]
     },
     {

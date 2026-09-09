@@ -27,7 +27,7 @@
       "heading": "How It Works in 2026: Per-Message, Not Per-Conversation",
       "blocks": [
         { "type": "p", "html": "The first thing to understand is that WhatsApp Business API pricing is now per-message, not per-conversation. Until mid-2025, Meta charged per 24-hour &ldquo;conversation&rdquo; regardless of how many messages you sent inside it. That model is gone. In 2026 you pay for each template message delivered, priced by message category and by the recipient's country code&mdash;not your business location. That last detail matters: if you message a customer in Mumbai, you pay India's rate even if your company is registered abroad. And because India is one of the cheapest WhatsApp markets in the world, adoption here is booming across fintech, e-commerce, logistics, and BFSI." },
-        { "type": "image", "src": "/image/jun2(1).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun2(1).webp", "alt": "WhatsApp Business API pricing in India 2026 — woman in a purple blazer messaging on her phone" }
       ]
     },
     {
@@ -82,7 +82,7 @@
           ]
         },
         { "type": "html", "content": "<div class='mt-4 p-4 bg-light rounded'><h4 class='text-primary mb-3'>Want pricing without the surprises?</h4><p class='mb-3'>Ojiva AI offers WhatsApp Business API with transparent, pass-through pricing&mdash;Meta's rates without surprise markups&mdash;plus broadcasts, automation, and a shared team inbox.</p><div class='d-flex gap-3'><a href='https://www.ojiva.ai/whatsapp/' class='btn btn-primary'>Explore WhatsApp API</a><a href='https://www.ojiva.ai/contact/' class='btn btn-outline-primary'>Get a Price Quote</a></div></div>" },
-        { "type": "image", "src": "/image/jun2(2).webp", "alt": "WhatsApp Business API Pricing in India 2026" }
+        { "type": "image", "src": "/image/jun2(2).webp", "alt": "WhatsApp API pricing 2026 explained — message delivered, marketing and secure and reliable conversation cards" }
       ]
     },
     {

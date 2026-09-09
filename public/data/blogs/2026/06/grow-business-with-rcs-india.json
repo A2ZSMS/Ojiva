@@ -30,7 +30,7 @@
       "heading": null,
       "blocks": [
         { "type": "p", "html": "<strong>Growing your business with RCS</strong> means using Rich Communication Services — branded, interactive messages in the customer's native inbox — to lift engagement and conversions beyond what plain SMS can do. With verified sender profiles, product carousels, rich media and one-tap action buttons, RCS turns notifications into a measurable revenue channel. This guide is the growth playbook: where RCS moves the needle, the use cases and industries that benefit most, how to build an RCS strategy, the best practices that convert, and the metrics that prove ROI. New to the channel itself? Start with our <a href='/blogs/rcs-messaging-future-business-communication-india/'>RCS Business Messaging in India</a> guide; if you're in Karnataka, see <a href='/blogs/best-rcs-messaging-provider-karnataka/'>Best RCS Messaging Provider in Karnataka</a>." },
-        { "type": "image", "src": "/image/jun19(1).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun19(1).webp", "alt": "How to grow your business with RCS messaging in India — Style Haven shipping update with Track Order button" }
       ]
     },
     {
@@ -63,7 +63,7 @@
             { "icon": "bi-shield-check", "title": "Verified trust:", "desc": "A recognised, verified sender reduces spam blocks and gets more messages read." }
           ]
         },
-        { "type": "image", "src": "/image/rcs(1).webp", "alt": "Grow your business with RCS messaging in India — Ojiva AI" }
+        { "type": "image", "src": "/image/rcs(1).webp", "alt": "RCS messaging for India — rich card with Book Now and Learn More buttons on a customer's phone" }
       ]
     },
     {
@@ -131,7 +131,7 @@
             { "icon": "bi-arrow-repeat", "title": "Use both:", "desc": "Lead with RCS for engagement and fall back to <a href='/sms/'>SMS</a> for guaranteed delivery — best reach and best experience together." }
           ]
         },
-        { "type": "image", "src": "/image/jun19(2).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun19(2).webp", "alt": "RCS campaign analytics dashboard — verified sender, delivery rate, open rate and conversion metrics on screen" }
       ]
     },
     {
@@ -149,7 +149,7 @@
             { "icon": "bi-5-circle-fill", "title": "Optimise and scale:", "desc": "Test copy, visuals and timing, then roll out across more use cases and segments." }
           ]
         },
-        { "type": "image", "src": "/image/rcs(2).webp", "alt": "RCS growth strategy steps for Indian businesses — Ojiva AI" }
+        { "type": "image", "src": "/image/rcs(2).webp", "alt": "RCS commerce journey: rich product discovery, in-chat browsing, secure checkout, instant confirmation, back to conversation" }
       ]
     },
     {
@@ -231,7 +231,7 @@
             { "icon": "bi-arrow-repeat", "title": "Win-back journeys:", "desc": "Re-engage lapsed customers with a relevant offer and a one-tap reply." }
           ]
         },
-        { "type": "image", "src": "/image/jun19(3).webp", "alt": "Best RCS Messaging Provider in Karnataka" }
+        { "type": "image", "src": "/image/jun19(3).webp", "alt": "Which RCS template to choose — text, rich card and rich carousel with button limits, Super Burger examples" }
       ]
     },
     {
