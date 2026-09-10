@@ -2,8 +2,9 @@
 
 import { useState, useCallback, useEffect, useId, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
 import { validateLead } from '@/lib/leadQuality';
+import { sendLeadSms } from '@/lib/sms';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const TELECRM_TOKEN = '9a518e10-1d74-485d-ac8e-479f37d5c4bf1782817303004:3abb1a1f-2527-49e0-a4a9-ec7361c2b4a6';
@@ -245,6 +246,24 @@ export default function LandingLeadForm({
 
     try {
       const attr = getAttribution();
+      // ── Welcome SMS ────────────────────────────────────────────────
+      // Posts to the same-origin PHP proxy (public/api/send-sms.php);
+      // the gateway API key stays on the server, never in this bundle.
+      const smsResult = await sendLeadSms({ name: payload.name, phone: payload.phone });
+      if (TEST_MODE_SMS_ONLY) {
+        // ⚠️ TESTING: only the SMS fires. Flip TEST_MODE_SMS_ONLY to false
+        // in lib/formConfig.js to restore TeleCRM + pixel + Web3Forms + Make.
+        console.warn('[SMS test]', smsResult);  // warn, not info: the production build strips console.info
+        if (smsResult.ok) {
+          router.push(thankYouUrl);
+        } else {
+          inFlight.current = false;
+          setSubmitting(false);
+          setApiError(`Test SMS failed: ${smsResult.error}. See the console and the Network tab.`);
+        }
+        return;
+      }
+      if (!smsResult.ok) console.warn('[SMS] not sent:', smsResult.error);
       fireTeleCRM({
         name:        payload.name,
         phone:       payload.phone,

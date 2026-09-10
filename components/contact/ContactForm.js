@@ -5,8 +5,9 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE } from '@/lib/formConfig';
+import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
 import { validateLead } from '@/lib/leadQuality';
+import { sendLeadSms } from '@/lib/sms';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const VOLUME_OPTIONS = [
@@ -147,6 +148,23 @@ export default function ContactForm() {
       const extras         = serviceLabels.slice(1);
       const extrasPrefix   = extras.length ? `[Also interested in: ${extras.join(', ')}] ` : '';
       const attr = getAttribution();
+      // ── Welcome SMS ────────────────────────────────────────────────
+      // Posts to the same-origin PHP proxy (public/api/send-sms.php);
+      // the gateway API key stays on the server, never in this bundle.
+      const smsResult = await sendLeadSms({ name: form.name, phone: form.phone });
+      if (TEST_MODE_SMS_ONLY) {
+        // ⚠️ TESTING: only the SMS fires. Flip TEST_MODE_SMS_ONLY to false
+        // in lib/formConfig.js to restore TeleCRM + pixel + Web3Forms + Make.
+        console.warn('[SMS test]', smsResult);  // warn, not info: the production build strips console.info
+        if (smsResult.ok) {
+          router.push('/thank-you');
+        } else {
+          setStatus('error');
+          setErrorMsg(`Test SMS failed: ${smsResult.error}. See the console and the Network tab.`);
+        }
+        return;
+      }
+      if (!smsResult.ok) console.warn('[SMS] not sent:', smsResult.error);
       fireTeleCRM({
         name:        form.name,
         phone:       form.phone,
