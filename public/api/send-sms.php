@@ -49,7 +49,7 @@ $body = [
     ]],
 ];
 
-if (($_GET['dry'] ?? '') === '1') out(200, ['ok' => true, 'dry_run' => true, 'payload' => $body]);
+if (($_GET['dry'] ?? '') === '1') out(200, ['ok' => true, 'dry_run' => true, 'mobile' => '91' . $p, 'payload' => $body]);
 
 // Cap abuse: this endpoint is public. 10 per IP per hour, 300 per day.
 $f = @fopen(sys_get_temp_dir() . '/ojiva_sms.json', 'c+');
