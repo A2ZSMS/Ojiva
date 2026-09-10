@@ -11,7 +11,7 @@ header('Cache-Control: no-store');
 
 const URL = 'https://nexus.ojiva.ai/sms/api/send-campaign';
 const KEY = 'PmmVgxVrl6KX5FKXg_3EbjuHH6nt-vh-qRv54KSM6DE';
-const MSG = "Hi Hi {#alp#}, \n\nThank you for your enquiry with Ojiva AI.\n\nWe provide Bulk SMS, WhatsApp API, RCS, Voice Calls & AI Chatbot solutions. Our team will contact you within 30 minutes to understand your requirements and assist you.";
+const MSG = "Hi {#alp#}, \n\nThank you for your enquiry with Ojiva AI.\n\nWe provide Bulk SMS, WhatsApp API, RCS, Voice Calls & AI Chatbot solutions. Our team will contact you within 30 minutes to understand your requirements and assist you.";
 
 function out($code, $data) { http_response_code($code); exit(json_encode($data)); }
 
