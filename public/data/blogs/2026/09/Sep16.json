@@ -1,0 +1,625 @@
+{
+  "slug": "rcs-business-messaging-travel-tourism",
+  "metaTitle": "RCS Business Messaging for Travel & Tourism | Ojiva AI",
+  "metaDescription": "See how RCS Business Messaging for travel & tourism helps travel agencies and OTAs drive in-chat bookings, live trip updates, and campaigns that convert.",
+  "h1": "RCS Business Messaging for Travel & Tourism",
+  "primaryKeyword": "RCS Business Messaging for travel & tourism",
+  "keywords": {
+    "secondary": [
+      "rich messaging for travel brands",
+      "interactive trip planning",
+      "in-chat flight and hotel booking",
+      "real-time travel updates",
+      "destination marketing campaigns",
+      "travel loyalty engagement",
+      "automated travel disruption support",
+      "verified sender for tourism",
+      "conversational booking journeys",
+      "RCS for travel agencies"
+    ],
+    "shortTail": [
+      "RCS messaging",
+      "travel messaging",
+      "rich cards",
+      "booking confirmations",
+      "flight status updates",
+      "travel chatbot",
+      "verified business messaging"
+    ],
+    "longTail": [
+      "how RCS messaging works for travel companies",
+      "RCS vs SMS for travel booking notifications",
+      "RCS vs WhatsApp for travel agencies",
+      "book flights and hotels inside a chat message",
+      "is DLT registration required for RCS in India",
+      "which mobile carriers support RCS in India",
+      "send automated flight delay notifications to customers",
+      "how to get a verified sender for travel messaging",
+      "improve booking conversion with rich messaging",
+      "RCS itinerary and check-in reminders for travelers",
+      "recover abandoned travel bookings with rich cards",
+      "rich media campaigns for tourism boards"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "rich-messaging-fit",
+      "label": "Why Rich Messaging Fits"
+    },
+    {
+      "id": "interactive-planning",
+      "label": "Interactive Trip Planning"
+    },
+    {
+      "id": "in-chat-booking",
+      "label": "In-Chat Booking"
+    },
+    {
+      "id": "travel-updates",
+      "label": "Real-Time Travel Updates"
+    },
+    {
+      "id": "destination-marketing",
+      "label": "Destination Marketing"
+    },
+    {
+      "id": "loyalty-engagement",
+      "label": "Loyalty & Repeat Trips"
+    },
+    {
+      "id": "disruption-support",
+      "label": "Disruption Support"
+    },
+    {
+      "id": "verified-sender",
+      "label": "Verified Sender Trust"
+    },
+    {
+      "id": "booking-journeys",
+      "label": "Conversational Journeys"
+    },
+    {
+      "id": "india-getting-started",
+      "label": "India Readiness & Setup"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Travel is one of the most visual and time-sensitive things a person ever buys — yet most agencies and online travel platforms still confirm trips and chase enquiries with plain text nobody looks forward to opening.</strong> Rich messaging changes that: a verified, branded conversation with photos, carousels and tap-to-act buttons that arrives inside the traveler's default messaging app, with no extra download in the way."
+        },
+        {
+          "type": "p",
+          "html": "This guide walks through how tour operators, online travel platforms and hospitality teams put RCS messaging to work across the whole journey — from the first enquiry to post-trip loyalty — and why travel messaging built on rich cards handles booking confirmations, flight status updates and last-minute changes without a single grainy SMS. Ojiva AI runs it on the same dashboard as <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/sms/\">SMS</a>, so <a href=\"/book-demo/\">book a free demo</a> to see it mapped against your own booking flow."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep16(1).webp",
+          "alt": "RCS rich card from a travel brand showing destination photos and a Book Now button inside a phone's messaging app"
+        }
+      ]
+    },
+    {
+      "id": "rich-messaging-fit",
+      "heading": "Why Rich Messaging Fits the Way Travel Brands Sell",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Travel decisions are made on feeling — a beach at sunset, a room with a view, a fare that won't last. Plain text can convey none of that, which is why so much travel outreach underperforms the product it is selling. Rich messaging for travel brands closes that gap by putting the trip itself in front of the traveler, not just a description of it."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-images",
+              "title": "The product is finally visible:",
+              "desc": "rich cards for travel brands carry destination photos, room galleries and short clips inside the thread itself, instead of a link the traveler has to trust and tap away to see."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "A named sender, not an unknown number:",
+              "desc": "the agency or brand name and logo sit on every message, so an enquiry follow-up reads as the company the traveler actually contacted rather than a suspicious cold text."
+            },
+            {
+              "icon": "bi-hand-index-thumb-fill",
+              "title": "One tap does the work:",
+              "desc": "suggested actions such as 'View Packages' or 'Talk to an Agent' move a traveler forward without dialling a number or hunting through email."
+            },
+            {
+              "icon": "bi-arrow-down-circle-fill",
+              "title": "Nothing goes undelivered:",
+              "desc": "wherever a device or network can't show the rich format, the message drops to a standard SMS automatically, so reach never shrinks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interactive-planning",
+      "heading": "Turning Inspiration Into Interactive Trip Planning",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The gap between 'I might travel' and 'I've booked' is where most enquiries die. Interactive trip planning keeps that conversation alive by letting a traveler shape the trip inside the chat instead of waiting on a callback."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-map-fill",
+              "title": "Destination carousels:",
+              "desc": "swipeable cards of places, hotels or itineraries let a traveler browse options the way they would in an app, all inside one message."
+            },
+            {
+              "icon": "bi-chat-square-heart-fill",
+              "title": "Preferences captured in replies:",
+              "desc": "suggested replies like 'Beach', 'Mountains' or 'Budget under Rs 30k' let the traveler narrow choices, so the next card is already tailored."
+            },
+            {
+              "icon": "bi-collection-fill",
+              "title": "Curated itineraries on demand:",
+              "desc": "a travel chatbot can assemble a day-by-day plan from the traveler's answers and send it back as a clean, scannable card set."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Saved for later, nudged when it matters:",
+              "desc": "a plan a traveler didn't act on can be revived with a single relevant follow-up rather than a repeat cold enquiry."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/sep16(2).webp",
+          "alt": "RCS destination carousel from a travel agency showing swipeable hotel cards with a View Packages button"
+        }
+      ]
+    },
+    {
+      "id": "in-chat-booking",
+      "heading": "In-Chat Flight and Hotel Booking Without the Extra Tabs",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every extra screen between wanting to book and booking is a chance to lose the sale. In-chat flight and hotel booking collapses that path, so a traveler can go from browsing to confirmed in the same thread."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-airplane-fill",
+              "title": "Fare and route in a single card:",
+              "desc": "flight options with times, price and a 'Select' action replace the back-and-forth of a phone quote."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Room selection with photos and price:",
+              "desc": "a hotel card shows the exact room, rate and a 'Reserve' button, so the traveler books the room they can actually see."
+            },
+            {
+              "icon": "bi-credit-card-2-front-fill",
+              "title": "A clean handoff to payment:",
+              "desc": "the booking action opens straight into a secure payment or agent flow, keeping the momentum instead of emailing a link."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Instant booking confirmations:",
+              "desc": "once paid, a confirmation card with the reference, dates and details lands in the same conversation, easy to find again later."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-updates",
+      "heading": "Keeping Travelers Informed With Real-Time Travel Updates",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Once a trip is booked, silence is the enemy. Real-time travel updates turn the anxious hours before and during a trip into a calm, guided experience — and cut the support calls a delay usually triggers."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bell-fill",
+              "title": "Live flight status updates:",
+              "desc": "gate changes, delays and boarding reminders arrive as clear cards, not a wall of text the traveler has to decode."
+            },
+            {
+              "icon": "bi-signpost-2-fill",
+              "title": "Itinerary and check-in reminders:",
+              "desc": "a nudge to web check-in, a pickup time or the next leg of the trip keeps the traveler a step ahead."
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Location and logistics in the card:",
+              "desc": "a map pin for the hotel or a pickup point answers 'where do I go' without a separate search."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Two-way from the same thread:",
+              "desc": "a traveler can reply to rebook, ask a question or reach a human, all without leaving the conversation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "destination-marketing",
+      "heading": "Destination Marketing Campaigns That Get Opened",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Promotional SMS blasts mostly get skimmed and deleted. Destination marketing campaigns over rich messaging earn attention because they look like the trip they are selling, not like spam."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-camera-video-fill",
+              "title": "Video and image-led offers:",
+              "desc": "a short clip of a place or a seasonal package does more selling in three seconds than a paragraph of text."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Time-boxed deals with a redeem action:",
+              "desc": "a visible offer and a one-tap 'Book Now' convert interest on the spot rather than sending the traveler off to find a code."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Segmented sends that feel personal:",
+              "desc": "past destinations, budgets or trip types let a brand send an offer a traveler is actually likely to want."
+            },
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "Results you can see from the first send:",
+              "desc": "delivery, reads and taps are visible per campaign, so a marketing team optimizes instead of guessing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loyalty-engagement",
+      "heading": "Driving Repeat Trips Through Travel Loyalty Engagement",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The cheapest booking is the one from a traveler who already trusts you. Travel loyalty engagement uses the same verified thread to bring past guests back instead of paying to acquire them again."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-award-fill",
+              "title": "Points and tier updates in context:",
+              "desc": "a loyalty card shows current status and what the next reward unlocks, right where the traveler already talks to the brand."
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "Member-only offers:",
+              "desc": "early access to a sale or a returning-guest rate feels like a benefit, not a broadcast."
+            },
+            {
+              "icon": "bi-stars",
+              "title": "Post-trip feedback made easy:",
+              "desc": "a quick rating or survey card after a trip gathers reviews without a separate email nobody opens."
+            },
+            {
+              "icon": "bi-calendar-heart-fill",
+              "title": "Timely re-engagement:",
+              "desc": "the anniversary of a past trip or a seasonal reminder is a natural, welcome reason to reach out again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "disruption-support",
+      "heading": "Handling Delays and Disruptions With Automated Travel Support",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Disruptions are where travel brands earn or lose loyalty. Automated travel disruption support meets the traveler in the moment a plan breaks, with clear options instead of a busy helpline."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Proactive disruption alerts:",
+              "desc": "a delay or cancellation triggers a card with the traveler's specific options before they even call."
+            },
+            {
+              "icon": "bi-arrow-left-right",
+              "title": "Self-serve rebooking:",
+              "desc": "suggested actions let a traveler pick an alternative flight, room or slot inside the chat, easing pressure on support."
+            },
+            {
+              "icon": "bi-life-preserver",
+              "title": "A fast path to a human when needed:",
+              "desc": "for anything automation can't solve, one tap hands the conversation to a live agent with the context already attached."
+            },
+            {
+              "icon": "bi-suitcase-lg-fill",
+              "title": "Issue tracking in one thread:",
+              "desc": "lost baggage or a refund status stays in the same conversation, so the traveler isn't repeating themselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verified-sender",
+      "heading": "Why a Verified Sender for Tourism Builds Instant Trust",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Travelers are primed to expect scams — fake booking texts and fare-refund fraud are common. A verified sender for tourism removes that doubt before a word is read."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-shield-check",
+              "title": "A verified name and logo:",
+              "desc": "the brand's identity is confirmed on the message itself, so a traveler knows the update is genuine."
+            },
+            {
+              "icon": "bi-lock-fill",
+              "title": "Confidence around payments and changes:",
+              "desc": "a booking or payment prompt from a verified sender is far less likely to be second-guessed or ignored."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "Higher open and action rates:",
+              "desc": "verified business messaging consistently earns more attention than an anonymous promotional SMS."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Fewer messages lost to suspicion:",
+              "desc": "a genuine 'your gate has changed' alert actually gets read instead of being dismissed as a scam."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/sep16(3).webp",
+          "alt": "RCS flight booking card showing fare options with a Select button next to an instant booking confirmation"
+        }
+      ]
+    },
+    {
+      "id": "booking-journeys",
+      "heading": "Building End-to-End Conversational Booking Journeys",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The real payoff isn't a single clever message — it is stitching them into one continuous thread that carries a traveler from first spark to a trip they would take again."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Discover:",
+              "desc": "a destination campaign or an enquiry reply opens the conversation with rich, browsable options."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Decide:",
+              "desc": "interactive cards and suggested replies narrow choices and answer questions in the moment."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Book:",
+              "desc": "fare and room cards move straight to payment, with a confirmation that stays easy to find."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Travel and return:",
+              "desc": "updates, support and loyalty keep the same thread useful long after the trip ends."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Each of those steps can be wired to the booking engine, CRM or property system a team already runs, so a suggested action creates a real task or reservation rather than just opening a link. Our <a href=\"/blogs/google-rcs-business-messaging/\">Google RCS Business Messaging guide</a> covers how that connection is typically set up, and the underlying standard is maintained by the <a href=\"https://www.gsma.com/about-us/regions/asia-pacific/whats-new/global-operators-google-and-the-gsma-align-behind-adoption-of-rich-communications-services/\" target=\"_blank\" rel=\"noopener\">GSMA</a> across carriers and devices."
+        }
+      ]
+    },
+    {
+      "id": "india-getting-started",
+      "heading": "Getting Started With RCS for Travel Agencies and Tour Operators in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The infrastructure is already in place. Jio, Airtel and Vi all support RCS at the network level, and Apple has enabled it on iPhones since iOS 18, so a campaign reaches both Android and iPhone travelers. Where a specific device or network can't render the rich format, the message falls back to standard SMS, so nationwide reach holds."
+        },
+        {
+          "type": "p",
+          "html": "Setup is a dashboard workflow, not a developer project — and, importantly, it does not use the same registration path as SMS."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Get verified as a sender:",
+              "desc": "submit the travel brand's name, logo and category so the verified badge appears on the very first message."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Build the first rich card:",
+              "desc": "a destination carousel or a booking-confirmation card, with the suggested action mapped to your booking system."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Set the SMS fallback:",
+              "desc": "so a traveler on an unsupported device still gets a usable message rather than nothing."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Launch and measure:",
+              "desc": "watch delivery, reads and taps from the first send instead of guessing from callbacks."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "On consent, travel campaigns should follow the same DPDP Act principles a team already applies to SMS and WhatsApp — clear opt-in at capture, an easy opt-out, and no using a traveler's number beyond what they agreed to. Ojiva AI handles the verification and setup directly, and you can read the wider context in our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide for Indian businesses</a> or in Google's <a href=\"https://developers.google.com/business-communications/rcs-business-messaging\" target=\"_blank\" rel=\"noopener\">RCS for Business documentation</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Travel and Tourism Teams Run Rich Messaging Through Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Sending one branded card is easy. Running rich messaging as a dependable channel next to everything else a travel team already sends is where it either becomes a growth lever or just another inbox to babysit."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "One dashboard, every channel:",
+              "desc": "<a href=\"/rcs/\">RCS</a>, <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/sms/\">SMS</a> with automatic fallback between them."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verification managed start to finish:",
+              "desc": "Ojiva AI manages the sender review directly instead of leaving a team to decode a rejection notice on its own."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Built to connect to your booking stack:",
+              "desc": "suggested actions route into the CRM, booking engine or property system you already use."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support that answers once a campaign is live:",
+              "desc": "not only during setup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "The Short Version: One Thread From Enquiry to Repeat Trip",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Travel sells on trust and timing, and both live or die in the first message a traveler receives. A verified, visual, tap-to-act conversation makes the trip easy to picture, easy to book and easy to change — from the first enquiry through to the loyalty offer that brings them back."
+        },
+        {
+          "type": "p",
+          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp for travel agencies guide</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map a rich-messaging journey onto your own booking flow."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath &middot; Published 16 September</em>"
+        }
+     
+      ]
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "RCS Business Messaging: Guide for Indian Businesses",
+              "href": "/blogs/rcs-business-messaging-india/"
+            },
+            {
+              "title": "Google RCS Business Messaging: Verified Texting",
+              "href": "/blogs/google-rcs-business-messaging/"
+            },
+            {
+              "title": "WhatsApp Business API for Travel Agencies",
+              "href": "/blogs/whatsapp-business-api-for-travel-agencies/"
+            },
+            {
+              "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",
+              "href": "/blogs/whatsapp-vs-whatsapp-business-vs-api/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How does RCS messaging work for a travel company?",
+              "a": "<p>It upgrades ordinary text into a branded, app-like conversation inside the traveler's default messaging app — carrying photos, carousels, tappable buttons and a verified sender name. A travel brand connects through a provider like Ojiva AI, gets its sender verified, and can then send booking confirmations, itinerary and check-in reminders and rich offers, all with automatic SMS fallback wherever the rich format isn't supported.</p>"
+            },
+            {
+              "q": "What's the difference between RCS and SMS for travel booking notifications?",
+              "a": "<p>A standard SMS is plain text with no branding, images or buttons. For travel booking notifications, RCS adds the brand's verified name and logo, shows the fare, room or itinerary as a rich card, and lets the traveler act in one tap. When a device or network can't display the rich version, it simply falls back to SMS, so nothing is lost.</p>"
+            },
+            {
+              "q": "How is RCS different from WhatsApp for a travel agency?",
+              "a": "<p>Both offer verified, rich, two-way messaging. The practical difference is reach: WhatsApp only lands with travelers who have the app and have opted in, while RCS runs through the phone's native messaging app on supported networks. Many travel agencies use both together and let the system pick whichever will reach a given traveler, rather than choosing one.</p>"
+            },
+            {
+              "q": "Can travelers book flights and hotels inside a chat message?",
+              "a": "<p>Yes. A rich card can present fare options or room choices with photos and price, and a suggested action opens straight into a secure payment or agent flow — so a traveler goes from browsing to a confirmed booking in one thread. The same mechanism lets a brand recover an abandoned booking by resending the exact option the traveler left behind.</p>"
+            },
+            {
+              "q": "Do travel businesses need DLT registration to send RCS in India?",
+              "a": "<p>No — DLT registration is a TRAI mechanism specific to SMS. RCS uses a different path: the travel brand is onboarded and verified as a sender through Google's RCS for Business process via the provider, which is what produces the verified badge. Consent and opt-out still matter and should follow DPDP Act principles, but the SMS DLT registration itself does not apply to RCS.</p>"
+            },
+            {
+              "q": "Which mobile carriers and devices support RCS across India?",
+              "a": "<p>Jio, Airtel and Vi all support RCS at the network level, and Apple has enabled it on iPhones since iOS 18, so campaigns can reach both Android and iPhone travelers. Support depends on the traveler's device and network rather than their city, and any message that can't be delivered as a rich card drops to SMS, so reach stays national.</p>"
+            },
+            {
+              "q": "How can a travel brand send automated flight delay and check-in updates?",
+              "a": "<p>Connect the messaging channel to the booking or operations system, so a status change — a delay, a gate move, or a check-in window opening — triggers a rich card to the affected travelers automatically. Because it's two-way, a traveler can reply to rebook or reach an agent from the same thread, which cuts the call volume a disruption usually creates.</p>"
+            },
+            {
+              "q": "How do we get a travel brand verified, and what results can we expect?",
+              "a": "<p>Verification means submitting the business name, logo and category through the provider so the verified sender badge appears from the first message; Ojiva AI manages that review directly. Brands generally see stronger opens and actions than plain SMS because the messages are branded, visual and tappable — which is why rich media campaigns are increasingly used by tour operators, online travel platforms and tourism boards to lift booking conversion.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
