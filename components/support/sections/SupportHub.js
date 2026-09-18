@@ -117,11 +117,15 @@ function TicketForm() {
     try {
       {
         const attr = getAttribution();
-        // ── Welcome SMS ────────────────────────────────────────────────
-        // Posts to the same-origin PHP proxy (public/api/send-sms.php);
-        // the gateway API key stays on the server, never in this bundle.
-        const smsResult = await sendLeadSms({ name: form.name, phone: form.phone });
+        // ── Welcome SMS — fire-and-forget ──────────────────────────────
+        // Do NOT await this: awaiting the SMS blocked TeleCRM for up to
+        // 20s if the gateway was slow, which lost real leads when users
+        // tabbed away before the lead pipeline started. keepalive:true
+        // on the fetch keeps it alive across the /thank-you redirect.
+        const smsPromise = sendLeadSms({ name: form.name, phone: form.phone });
+        smsPromise.then(r => { if (!r.ok) console.warn('[SMS] not sent:', r.error); });
         if (TEST_MODE_SMS_ONLY) {
+          const smsResult = await smsPromise;
           // ⚠️ TESTING ONLY — set TEST_MODE_SMS_ONLY = false in lib/formConfig.js
           // to restore TeleCRM + OpenAI pixel + Web3Forms + Make.com.
           // Deliberately does NOT redirect to the thank-you page: that page view
@@ -133,7 +137,6 @@ function TicketForm() {
           setLoading(false);
           return;
         }
-        if (!smsResult.ok) console.warn('[SMS] not sent:', smsResult.error);
         fireTeleCRM({
           name:        form.name,
           phone:       form.phone,

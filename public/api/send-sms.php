@@ -72,6 +72,7 @@ curl_setopt_array($ch, [
     CURLOPT_HTTPHEADER     => ['Content-Type: application/json', 'X-API-Key: ' . KEY],
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT        => 20,
+    CURLOPT_CONNECTTIMEOUT => 5,
 ]);
 $res  = curl_exec($ch);
 $code = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
