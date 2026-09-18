@@ -1,5 +1,16 @@
 [
   {
+  "id": 44,
+  "title": "SMS API in India: Complete Enterprise Guide",
+  "componentKey": "Sep18",
+  "slug": "sms-api-in-india",
+  "category": "Bulk SMS",
+  "date": "2026-09-18",
+  "description": "Learn how an SMS API in India works DLT routing, sender IDs, OTP delivery, DLR tracking, HTTP vs SMPP, pricing and integration best practices for scale.",
+  "image": "/image/sep18(1).webp",
+  "keywords": "SMS API in India, how programmatic SMS works, bulk SMS platform, bulk SMS gateway, types of business SMS, DLT registration for SMS, SMS integration for websites and apps, sending a message request, SMS delivery reports (DLR), SMS delivery failure reasons, improve SMS delivery rate, SMS pricing in India, SMS use cases by industry, SMS vs WhatsApp vs RCS, SMS provider in India, business messaging platform, SMS API, SMS gateway, OTP SMS, transactional SMS, promotional SMS, sender ID, DLT scrubbing, delivery rate, TRAI compliance, REST API"
+},
+  {
   "id": 43,
   "title": "RCS Business Messaging for Travel & Tourism",
   "componentKey": "Sep16",

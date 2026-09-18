@@ -1,0 +1,812 @@
+{
+  "slug": "sms-api-in-india",
+  "metaTitle": "SMS API in India: Complete Enterprise Guide | Ojiva AI",
+  "metaDescription": "Learn how an SMS API in India works — DLT routing, sender IDs, OTP delivery, DLR tracking, HTTP vs SMPP, pricing and integration best practices for scale.",
+  "h1": "SMS API in India: Complete Enterprise Guide",
+  "primaryKeyword": "SMS API in India",
+  "keywords": {
+    "secondary": [
+      "how programmatic SMS works",
+      "bulk SMS platform",
+      "bulk SMS gateway",
+      "types of business SMS",
+      "DLT registration for SMS",
+      "SMS integration for websites and apps",
+      "sending a message request",
+      "SMS delivery reports (DLR)",
+      "SMS delivery failure reasons",
+      "improve SMS delivery rate",
+      "SMS pricing in India",
+      "SMS use cases by industry",
+      "SMS vs WhatsApp vs RCS",
+      "SMS provider in India",
+      "business messaging platform"
+    ],
+    "shortTail": [
+      "SMS API",
+      "SMS gateway",
+      "OTP SMS",
+      "transactional SMS",
+      "promotional SMS",
+      "sender ID",
+      "DLT scrubbing",
+      "delivery rate",
+      "TRAI compliance",
+      "REST API"
+    ],
+    "longTail": [
+      "what is an SMS API and how does it work",
+      "difference between an SMS API and an SMS gateway",
+      "is DLT registration mandatory for sending SMS in india",
+      "how to integrate an SMS API with a website or CRM",
+      "why do OTP SMS messages get delayed",
+      "what do DLR delivery status codes mean",
+      "difference between transactional and promotional SMS",
+      "how to send an SMS using an API request",
+      "how to improve SMS delivery rates",
+      "how much does an SMS API cost in india",
+      "SMS API vs WhatsApp API for business",
+      "how to choose the best SMS provider in india"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How It Works"
+    },
+    {
+      "id": "vs-bulk-platform",
+      "label": "vs Bulk SMS Platform"
+    },
+    {
+      "id": "vs-gateway",
+      "label": "vs Messaging Gateway"
+    },
+    {
+      "id": "message-types",
+      "label": "Message Types"
+    },
+    {
+      "id": "dlt-compliance",
+      "label": "DLT & Compliance"
+    },
+    {
+      "id": "integration",
+      "label": "Integration Guide"
+    },
+    {
+      "id": "send-example",
+      "label": "Send Request Example"
+    },
+    {
+      "id": "delivery-reports",
+      "label": "Delivery Reports"
+    },
+    {
+      "id": "delivery-failure",
+      "label": "Delivery Failures"
+    },
+    {
+      "id": "improve-delivery",
+      "label": "Improving Delivery"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing in India"
+    },
+    {
+      "id": "use-cases",
+      "label": "Industry Use Cases"
+    },
+    {
+      "id": "channel-comparison",
+      "label": "Text vs WhatsApp vs RCS"
+    },
+    {
+      "id": "choosing-provider",
+      "label": "Choosing a Provider"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Almost every login, payment and delivery in India is confirmed by a short text message — yet very few teams know what happens between the moment their software fires a request and the moment that message lights up a customer's phone.</strong> That gap is exactly where one-time passwords arrive late, transaction alerts fail on a single operator, and reminders quietly vanish into a template mismatch."
+        },
+        {
+          "type": "p",
+          "html": "At its simplest, an SMS API is a small piece of integration that lets your website, app, CRM or backend send and receive text messages automatically, with nobody logging in to a dashboard to type them. A customer places an order and the confirmation goes out on its own; someone signs in and a one-time code is on its way in seconds. This enterprise guide walks through how that pipe actually behaves across Indian telecom networks — from DLT scrubbing and sender IDs to delivery reports, failure handling, pricing and the everyday choices that decide whether messages land. Ojiva AI runs it on the same dashboard as <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/rcs/\">RCS</a>, so you can <a href=\"/book-demo/\">book a free demo</a> and see it mapped onto your own flows."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep18(1).webp",
+          "alt": "How an SMS request travels from a business application through Indian telecom infrastructure to a mobile phone"
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How Programmatic Text Messaging Moves Across Indian Networks",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "From the outside the flow looks instant, but a request passes through several systems before it reaches a handset. Understanding that path is what separates a team that guesses at message routing from one that fixes deliverability at the right layer."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "Request and authentication:",
+              "desc": "your application calls the endpoint with an API key; the platform checks credentials, the sender ID and the traffic type before anything moves."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Template and header validation:",
+              "desc": "the content is matched against your registered template and the approved sender ID, because unregistered content is stopped here."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "DLT scrubbing:",
+              "desc": "operators verify the message against the registered template on the DLT platform; even small wording changes can trip a rejection at this stage."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Operator routing:",
+              "desc": "cleared traffic passes into the carrier's message centre, where queueing, filtering and throughput allocation decide timing during busy periods."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "Handset delivery and acknowledgement:",
+              "desc": "the network delivers to the device and returns an acknowledgement, which becomes the delivery report your system reads back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vs-bulk-platform",
+      "heading": "Direct Integration vs a Bulk SMS Platform",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A bulk SMS platform is the dashboard you log in to, upload a contact list, and press send. Direct integration removes that manual step: your own software triggers each message the instant an event happens, so a shipped order, a failed payment or a new signup fires its own text without anyone touching a screen."
+        },
+        {
+          "type": "p",
+          "html": "Most growing businesses use both — the dashboard for occasional campaigns run by a marketing team, and the programmatic path for anything that has to happen automatically, at volume, and in real time. The moment reliability and timing start to matter, event-driven sending is what keeps message flow consistent."
+        }
+      ]
+    },
+    {
+      "id": "vs-gateway",
+      "heading": "Where a Messaging Gateway Fits In",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "These two terms get mixed up constantly, but they are not the same thing. The interface your developers integrate with is one layer; the SMS gateway underneath is the infrastructure that actually moves traffic between your systems and the telecom operators. Two providers can offer an identical-looking interface while the routing behind it performs completely differently."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-signpost-split-fill",
+              "title": "Routing quality:",
+              "desc": "whether traffic runs over stable direct operator connections or cheaper, unreliable paths."
+            },
+            {
+              "icon": "bi-speedometer2",
+              "title": "Throughput handling:",
+              "desc": "how many messages per second the route sustains before a peak-hour queue builds up."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Retry and failover:",
+              "desc": "what happens automatically when a first attempt or a single operator route fails."
+            },
+            {
+              "icon": "bi-clipboard-check-fill",
+              "title": "Delivery accuracy:",
+              "desc": "whether the status returned to you reflects the real handset result rather than an inflated number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "message-types",
+      "heading": "Types of Business Text Messages You Can Send",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Indian regulation treats different kinds of traffic differently, and each type maps to a registered template and a specific sender ID category. Getting the category right is the difference between a message that clears and one that is filtered."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "OTP:",
+              "desc": "time-sensitive one-time codes for login and payment verification, where every second of latency matters."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Transactional:",
+              "desc": "confirmations tied to an action a customer took — an order placed, a payment received, a booking made."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Promotional:",
+              "desc": "offers, discounts and campaign messages, which use a numeric sender ID and respect subscriber preferences."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Alerts:",
+              "desc": "critical, event-driven notices such as a fraud warning or a service outage that a customer needs immediately."
+            },
+            {
+              "icon": "bi-info-circle-fill",
+              "title": "Notifications:",
+              "desc": "routine service updates like shipment tracking, appointment reminders and account activity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dlt-compliance",
+      "heading": "DLT Registration and TRAI Compliance",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Sending business text messages in India is not open by default — it runs through a blockchain-based registration system operators maintain under TRAI's commercial communication rules. Every legitimate sender registers before a single message goes out, and the registration is what makes DLT scrubbing possible later in the flow."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building-fill-check",
+              "title": "Entity registration:",
+              "desc": "the business itself is verified and given a principal-entity identity on the DLT platform."
+            },
+            {
+              "icon": "bi-fonts",
+              "title": "Header (sender ID):",
+              "desc": "OTP, transactional and service messages use a six-character alphanumeric sender ID, while promotional traffic uses a numeric one."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Content templates:",
+              "desc": "the exact message format is registered in advance, and wording that drifts from it can be rejected before operator routing."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Consent:",
+              "desc": "subscriber consent is captured and recorded so recipients get only what they agreed to receive."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Because the template match is strict, a message that leaves your application successfully can still be blocked at the DLT layer if the content no longer lines up with what was approved. Keeping templates in sync is an ongoing operational job, not a one-time setup. TRAI publishes the current sender obligations on its official <a href=\"https://trai.gov.in/advice-to-senders\" target=\"_blank\" rel=\"noopener\">Advice to Senders</a> page. Note that this registration path is specific to text messaging — it does not govern channels like WhatsApp, which use their own verification systems."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep18(2).webp",
+          "alt": "DLT registration and sender ID template scrubbing for business SMS compliance in India"
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "heading": "Connecting Messaging to Your Website or Application",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most teams integrate over a REST API because it drops cleanly into web apps, mobile backends and CRMs with a simple HTTP call. High-volume aggregators sometimes use a persistent SMPP connection instead, which carries far more traffic with less overhead but is heavier to implement. For the vast majority of businesses, the REST path is more than enough until volumes reach carrier scale."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "Get your credentials:",
+              "desc": "generate an API key and note your registered sender ID and approved template IDs."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Call the send endpoint:",
+              "desc": "post the recipient number, sender ID, template ID and message body from your application."
+            },
+            {
+              "icon": "bi-arrow-return-left",
+              "title": "Handle the webhook:",
+              "desc": "receive delivery reports on a callback URL so your system knows the real outcome, not just that the request was accepted."
+            },
+            {
+              "icon": "bi-shield-fill-plus",
+              "title": "Add retries and fallback:",
+              "desc": "queue a retry for a soft failure, and route to WhatsApp or voice when a critical code has to get through."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "send-example",
+      "heading": "A Simple Send Request, Step by Step",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A basic send is a single authenticated HTTP request. The example below shows the shape of a typical call — an endpoint, an authorization header carrying your API key, and a small JSON body with the sender, recipient, template reference and message text."
+        },
+        {
+          "type": "p",
+          "html": "<pre><code>curl -X POST https://api.ojiva.ai/v1/sms/send \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"sender\": \"OJIVAI\",\n        \"to\": \"91XXXXXXXXXX\",\n        \"template_id\": \"YOUR_DLT_TEMPLATE_ID\",\n        \"message\": \"Your OTP is 4321. Valid for ten minutes.\"\n      }'</code></pre>"
+        },
+        {
+          "type": "p",
+          "html": "The <em>sender</em> is your registered header, <em>to</em> is the recipient in international format, <em>template_id</em> ties the content to your approved DLT template, and <em>message</em> must match that template. One thing to remember: a success response here means the platform accepted the request — not that the message reached the phone. Actual delivery is confirmed separately through the delivery report."
+        }
+      ]
+    },
+    {
+      "id": "delivery-reports",
+      "heading": "How Delivery Reports and DLR Statuses Work",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A delivery report, or DLR, is the callback that tells you what actually happened to a message after the operator processed it. Reading these correctly is essential for OTP flows, financial alerts and anything where you need proof a customer was reached. The GSMA describes the underlying acknowledgement mechanism in its official <a href=\"https://www.gsma.com/newsroom/wp-content/uploads/NG.111-v1.0.pdf\" target=\"_blank\" rel=\"noopener\">SMS Evolution (NG.111)</a> document."
+        },
+        {
+          "type": "table",
+          "caption": "Common DLR statuses and how to respond",
+          "headers": ["Status", "What it means", "Common cause", "What to do"],
+          "rows": [
+            [
+              "Delivered",
+              "The message reached the handset",
+              "Normal successful delivery",
+              "No action needed"
+            ],
+            [
+              "Failed",
+              "The operator could not deliver it",
+              "Invalid number or route error",
+              "Validate the number and retry on a stable route"
+            ],
+            [
+              "Expired",
+              "It timed out in the queue",
+              "Handset unreachable within the validity window",
+              "Retry later or fall back to another channel"
+            ],
+            [
+              "Rejected",
+              "It was blocked before delivery",
+              "Template mismatch or sender ID issue",
+              "Fix the template or sender registration"
+            ],
+            [
+              "Undelivered",
+              "Delivery was attempted but not completed",
+              "Device off or network congestion",
+              "Retry, then fall back if it is time-critical"
+            ],
+            [
+              "Pending",
+              "No final status yet",
+              "Report still in transit",
+              "Wait for the final callback before deciding"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Be wary of any setup that reports near-perfect delivery with no failures — accurate reporting always includes some of the statuses above, and hidden failures are usually a sign of a low-quality route."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep18(3).webp",
+          "alt": "SMS delivery report DLR status flow from API request to handset acknowledgement"
+        }
+      ]
+    },
+    {
+      "id": "delivery-failure",
+      "heading": "What Causes Messages to Fail Before They Arrive",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most delivery failures have nothing to do with the code that sent the message. They come from the telecom layer, and they cluster around a handful of recurring causes worth knowing before they hit you in production."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Template mismatch:",
+              "desc": "content that has drifted from the registered template is rejected during DLT scrubbing."
+            },
+            {
+              "icon": "bi-person-x-fill",
+              "title": "Blocked or invalid numbers:",
+              "desc": "disconnected numbers, or promotional traffic sent to a subscriber who opted out."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Operator congestion:",
+              "desc": "during festival sales or ticket launches, carrier queues back up and timing suffers."
+            },
+            {
+              "icon": "bi-signpost-2-fill",
+              "title": "Grey routes:",
+              "desc": "cheap, non-compliant paths that drop traffic silently and inflate reported delivery."
+            },
+            {
+              "icon": "bi-type",
+              "title": "Encoding and length:",
+              "desc": "regional-language content uses Unicode, which shortens the per-part limit and can split a message unexpectedly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "improve-delivery",
+      "heading": "Practical Ways to Lift Your Delivery Rate",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A strong delivery rate is built, not bought. These are the levers that consistently move it in the right direction — and most of them cost nothing beyond attention."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-check2-circle",
+              "title": "Insist on direct routes:",
+              "desc": "compliant operator connectivity beats the lowest per-message price every single time."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Keep templates in sync:",
+              "desc": "update your registered content whenever wording changes, so nothing is rejected after a deploy."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Use the right category:",
+              "desc": "match the sender ID and traffic type to the message so it takes the correct path."
+            },
+            {
+              "icon": "bi-diagram-2-fill",
+              "title": "Build fallback in:",
+              "desc": "route a critical code to WhatsApp or voice when text is delayed, so authentication never stalls."
+            },
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "Monitor per operator:",
+              "desc": "delivery behaviour differs across Jio, Airtel, Vi and BSNL, so watch each rather than an average."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "How Message Pricing Works for Indian Businesses",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Per-message cost is only part of the picture, and the cheapest quote is often the most expensive once failures are counted. A few factors move the real price you pay."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tags-fill",
+              "title": "Message category:",
+              "desc": "transactional, OTP and promotional traffic are typically priced on different bands."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Volume:",
+              "desc": "higher committed volumes usually bring the per-message rate down."
+            },
+            {
+              "icon": "bi-signpost-split-fill",
+              "title": "Route quality:",
+              "desc": "stable direct routes cost more than grey routes, but they actually deliver."
+            },
+            {
+              "icon": "bi-type",
+              "title": "Encoding:",
+              "desc": "Unicode for regional languages fits fewer characters per part, which can raise the effective cost of a longer message."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The most useful way to compare providers is not the headline rate but the cost of a <em>delivered</em> message on a compliant route. If you'd like current India rates mapped to your traffic mix, <a href=\"/book-demo/\">book a free demo</a> and we'll walk through it against your own volumes."
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "Industry Use Cases Across Sectors",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The same integration serves very different businesses. What changes is the trigger and the template — the pipe underneath stays identical."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-house-door-fill",
+              "title": "Real estate:",
+              "desc": "instant lead responses, site-visit reminders and price-drop alerts to interested buyers."
+            },
+            {
+              "icon": "bi-mortarboard-fill",
+              "title": "Education:",
+              "desc": "fee reminders, exam and result notifications, and attendance updates to parents."
+            },
+            {
+              "icon": "bi-heart-pulse-fill",
+              "title": "Healthcare:",
+              "desc": "appointment reminders, report-ready alerts and prescription refill nudges."
+            },
+            {
+              "icon": "bi-bank",
+              "title": "Finance:",
+              "desc": "transaction alerts, OTP verification and payment-due reminders that have to arrive on time."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "E-commerce:",
+              "desc": "order confirmations, shipment tracking and abandoned-cart recovery."
+            },
+            {
+              "icon": "bi-airplane-fill",
+              "title": "Travel:",
+              "desc": "booking confirmations, check-in windows and live status updates."
+            },
+            {
+              "icon": "bi-cloud-fill",
+              "title": "SaaS:",
+              "desc": "sign-up verification, usage alerts and two-factor login codes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channel-comparison",
+      "heading": "Text, WhatsApp and RCS Side by Side",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Text is not the only channel, and the smartest setups combine it with richer options rather than picking one. Here is how the three compare at a glance for business messaging."
+        },
+        {
+          "type": "table",
+          "caption": "How the three business messaging channels compare",
+          "headers": [
+            "Channel",
+            "Needs internet",
+            "Rich media & buttons",
+            "Verified sender",
+            "Best for"
+          ],
+          "rows": [
+            [
+              "Text",
+              "No",
+              "No",
+              "Sender ID only",
+              "OTPs, alerts, universal reach"
+            ],
+            [
+              "WhatsApp",
+              "Yes",
+              "Yes",
+              "Verified business",
+              "Conversations and support"
+            ],
+            [
+              "RCS",
+              "Yes, with fallback",
+              "Yes",
+              "Verified brand",
+              "Branded, visual campaigns"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Because plain text needs no internet and reaches any handset, it stays the dependable floor beneath everything else — which is why many teams run it alongside <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/rcs/\">RCS</a> and let the system fall back to it when a richer channel can't land."
+        }
+      ]
+    },
+    {
+      "id": "choosing-provider",
+      "heading": "How to Choose a Messaging Provider in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most providers claim similar features, so the decision comes down to what happens under load and under scrutiny. These are the questions that separate a dependable partner from a cheap one."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-signpost-split-fill",
+              "title": "Route quality:",
+              "desc": "ask whether traffic runs on direct operator routes, and how grey routes are avoided."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Registration support:",
+              "desc": "check that they help with entity, header and template registration rather than leaving you to it."
+            },
+            {
+              "icon": "bi-clipboard-data-fill",
+              "title": "Reporting accuracy:",
+              "desc": "confirm delivery reports reflect real handset outcomes, with per-operator visibility."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Multichannel fallback:",
+              "desc": "look for WhatsApp and voice on the same platform so critical messages have a backup path."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support after launch:",
+              "desc": "make sure help is there once campaigns are live, not only during onboarding."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Businesses Run Their Messaging Through Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Sending a single message is easy. Running text as a dependable channel next to everything else you send — with clean reporting, compliant routing and a fallback when it matters — is where it becomes a growth lever instead of a support headache."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "One dashboard, every channel:",
+              "desc": "<a href=\"/sms/\">text</a>, <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/rcs/\">RCS</a> with automatic fallback between them."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Registration handled with you:",
+              "desc": "Ojiva AI helps set up entity, sender ID and templates so traffic clears instead of getting rejected."
+            },
+            {
+              "icon": "bi-clipboard-data-fill",
+              "title": "Reporting you can trust:",
+              "desc": "accurate delivery reports and per-operator analytics rather than inflated numbers."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Built to connect to your stack:",
+              "desc": "the API drops into the CRM, storefront or backend you already run."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support that stays:",
+              "desc": "help that answers once you're live, not only while you're setting up."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "If you're weighing this against your current setup, <a href=\"/book-demo/\">book a free demo</a> and we'll map a reliable messaging flow onto your own volumes. Ojiva AI — conversations that convert."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath &middot; Published 18 September</em>"
+        }
+      ]
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "DLT Registration in India: A Step-by-Step Guide",
+              "href": "/blogs/dlt-registration-india/"
+            },
+            {
+              "title": "OTP Verification for Indian Apps",
+              "href": "/blogs/otp-verification-in-india/"
+            },
+            {
+              "title": "WhatsApp Business API: Guide for Indian Businesses",
+              "href": "/blogs/whatsapp-business-api-in-india/"
+            },
+            {
+              "title": "RCS Business Messaging: Guide for Indian Businesses",
+              "href": "/blogs/rcs-business-messaging-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is an SMS API and how does it work?",
+              "a": "<p>It is an integration that lets your website, app or backend send and receive text messages automatically. Your software calls a secure endpoint with the recipient, sender ID, template and message; the platform validates and scrubs the content against your registered template, the operator routes it, and a delivery report comes back confirming the outcome.</p>"
+            },
+            {
+              "q": "What is the difference between an SMS API and an SMS gateway?",
+              "a": "<p>The interface is what your developers integrate with to trigger messages. The gateway is the infrastructure underneath that routes traffic to the operators. Two providers can offer an identical-looking interface while their routing quality — and therefore your delivery — is completely different.</p>"
+            },
+            {
+              "q": "Is DLT registration mandatory for sending SMS in India?",
+              "a": "<p>Yes. Under TRAI's commercial communication rules, every business must register its entity, sender ID (header) and content templates on a DLT platform before sending. This registration is what allows the operator to verify your message against an approved template during delivery.</p>"
+            },
+            {
+              "q": "Why do OTP messages get delayed, and how do you fix it?",
+              "a": "<p>Delays usually come from operator congestion at peak times, DLT processing, a poor-quality route, or throughput overload rather than your code. The fixes are a stable direct route, correct template and category, per-operator monitoring, and a WhatsApp or voice fallback for time-critical codes.</p>"
+            },
+            {
+              "q": "What do the DLR delivery status codes mean?",
+              "a": "<p>A delivery report tells you the real outcome: Delivered means it reached the handset; Failed, Rejected and Undelivered mean it did not, for different reasons; Expired means it timed out; and Pending means the final status has not arrived yet. Accurate reporting always includes some non-delivered statuses.</p>"
+            },
+            {
+              "q": "How do I integrate messaging with my website or CRM?",
+              "a": "<p>Most teams use a REST endpoint: generate an API key, call the send endpoint with the recipient, sender ID and template ID, and set a webhook URL to receive delivery reports. Add retries for soft failures and a fallback channel for critical messages. High-volume aggregators may use SMPP instead.</p>"
+            },
+            {
+              "q": "What is the difference between transactional and promotional SMS?",
+              "a": "<p>Transactional traffic is tied to an action a customer took — an order, a payment, a login — and uses a six-character alphanumeric sender ID. Promotional traffic is marketing content, uses a numeric sender ID, and must respect subscriber preferences. Each maps to a different registered template.</p>"
+            },
+            {
+              "q": "SMS API vs WhatsApp API — which should a business use?",
+              "a": "<p>Text reaches any handset with no internet, so it stays the dependable floor for OTPs and alerts. WhatsApp adds rich, two-way conversations for customers who use the app. Most businesses run both on one platform and let the system pick, or fall back to text, so a message always gets through.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

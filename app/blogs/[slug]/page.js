@@ -53,6 +53,7 @@ import blog_google_rcs_business_messaging from "../../../public/data/blogs/2026/
 import blog_whatsapp_vs_whatsapp_business_vs_api from "../../../public/data/blogs/2026/09/Sep08.json";
 import blog_rcs_real_estate_retail_lead_conversion from "../../../public/data/blogs/2026/09/Sep10.json";
 import blog_rcs_business_messaging_travel_tourism from "../../../public/data/blogs/2026/09/Sep16.json";
+import blog_sms_api_in_india from "../../../public/data/blogs/2026/09/Sep18.json";
 
 
 const BlogJson = {
@@ -125,6 +126,8 @@ const BlogJson = {
     blog_rcs_real_estate_retail_lead_conversion,
   "rcs-business-messaging-travel-tourism":
     blog_rcs_business_messaging_travel_tourism,
+  "sms-api-in-india":
+    blog_sms_api_in_india,
 };
 
 // ── Date formatter ───────────────────────────────────────
