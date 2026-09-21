@@ -471,5 +471,16 @@
     "description": "Learn how an SMS API in India works DLT routing, sender IDs, OTP delivery, DLR tracking, HTTP vs SMPP, pricing and integration best practices for scale.",
     "image": "/image/sep18(1).webp",
     "keywords": "SMS API in India, how programmatic SMS works, bulk SMS platform, bulk SMS gateway, types of business SMS, DLT registration for SMS, SMS integration for websites and apps, sending a message request, SMS delivery reports (DLR), SMS delivery failure reasons, improve SMS delivery rate, SMS pricing in India, SMS use cases by industry, SMS vs WhatsApp vs RCS, SMS provider in India, business messaging platform, SMS API, SMS gateway, OTP SMS, transactional SMS, promotional SMS, sender ID, DLT scrubbing, delivery rate, TRAI compliance, REST API"
+  },
+  {
+    "id": 45,
+    "title": "WhatsApp Business API pricing update October 2026",
+    "componentKey": "Sep21",
+    "slug": "whatsapp-business-api-pricing-update",
+    "category": "WhatsApp API",
+    "date": "2026-09-21",
+    "description": "WhatsApp Business API pricing update October 2026: service and utility messages turn chargeable. See the free tier, rates and how to cut costs with Ojiva AI.",
+    "image": "/image/sep21(1).webp",
+    "keywords": "WhatsApp Business API pricing update October 2026, 24-hour customer service window, WhatsApp service message pricing, free-form business replies, free service message allowance, WhatsApp utility message charges, free entry point conversations, WhatsApp message rate card, high-volume support messaging, WhatsApp chatbot message cost, reduce WhatsApp messaging costs, WhatsApp API budgeting, WhatsApp pricing, WhatsApp API cost, WhatsApp message charges, WhatsApp Business pricing"
   }
 ]

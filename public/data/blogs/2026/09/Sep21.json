@@ -1,0 +1,547 @@
+{
+  "slug": "whatsapp-business-api-pricing-update",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "what-changes",
+      "label": "What Is Changing"
+    },
+    {
+      "id": "service-message",
+      "label": "How Service Replies Bill"
+    },
+    {
+      "id": "window",
+      "label": "The Reply Window's Role"
+    },
+    {
+      "id": "free-tier",
+      "label": "The Free Message Allowance"
+    },
+    {
+      "id": "utility",
+      "label": "Templates That Now Cost More"
+    },
+    {
+      "id": "stays-free",
+      "label": "What Stays Free"
+    },
+    {
+      "id": "rate-card",
+      "label": "Reading the Rate Card"
+    },
+    {
+      "id": "who-feels",
+      "label": "Who Feels It Most"
+    },
+    {
+      "id": "chatbot",
+      "label": "Automated Reply Costs"
+    },
+    {
+      "id": "checklist",
+      "label": "How to Prepare"
+    },
+    {
+      "id": "budgeting",
+      "label": "Rethinking Cost Planning"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>From October 1, the free-form replies a business sends inside an open customer chat — and the transactional templates sent alongside them — move into WhatsApp's per-message billing model, closing the era when every reply inside the service window reached the customer at no cost.</strong> For teams that have leaned on that window as a no-charge space for support, order queries and automated replies, this is the largest shift in WhatsApp pricing in more than a year, and it reshapes how a conversation-heavy operation should budget."
+        },
+        {
+          "type": "p",
+          "html": "This guide sets out precisely what changes, what stays free, how the new monthly allowance is counted, and the concrete steps to take before the switch. Everything below assumes your number already runs on the <a href=\"/whatsapp/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business API</a> — Ojiva AI is an official Meta Business Solution Provider that handles billing setup, message categories and cost monitoring for the businesses it onboards."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep21(1).webp",
+          "alt": "WhatsApp message pricing changes explained by Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "what-changes",
+      "heading": "What Is Changing Inside the Customer Conversation Window",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Until now, the <strong>24-hour customer service window</strong> — the period that opens each time a customer messages a business — has doubled as a free zone: any reply a team sent inside it, and many transactional templates too, reached the customer without a Meta messaging fee. That is the part that changes. The window itself stays exactly as it is; what shifts is that the business replies flowing through it start to carry WhatsApp message charges once a monthly allowance is used."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Free-form replies become billable:",
+              "desc": "Messages an agent or bot sends inside an open window are charged once the monthly allowance runs out."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "In-window transactional templates get charged:",
+              "desc": "Utility templates sent while the window is open are no longer exempt from a Meta fee."
+            },
+            {
+              "icon": "bi-arrow-down-circle-fill",
+              "title": "Incoming messages stay free:",
+              "desc": "Anything a customer sends to a business still costs nothing to receive."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "The window keeps its role:",
+              "desc": "It still decides when a business may send free-form replies — only the pricing attached to them changes."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Message or window",
+            "Before the change",
+            "After the change"
+          ],
+          "rows": [
+            ["Customer message to a business", "Free", "Free"],
+            [
+              "Free-form business reply",
+              "Free",
+              "Chargeable after the monthly allowance"
+            ],
+            [
+              "Transactional template inside the window",
+              "Free of a Meta fee",
+              "Chargeable"
+            ],
+            [
+              "Transactional template outside the window",
+              "Chargeable",
+              "Chargeable"
+            ],
+            ["Promotional template", "Chargeable", "Chargeable"],
+            ["Identity or code template", "Chargeable", "Chargeable"],
+            ["Eligible ad-click free window", "Free treatment", "Unchanged"]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "In short, the categories a business already paid for are untouched. The new cost sits on the everyday back-and-forth of a live conversation."
+        }
+      ]
+    },
+    {
+      "id": "service-message",
+      "heading": "Understanding How a Service Reply Is Billed",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A service message is any non-template message a business sends while a customer's window is open — a human agent typing back, or a third-party bot answering a question. It is the workhorse of live support, and it is exactly what <strong>WhatsApp service message pricing</strong> now applies to. The customer has to message first, which opens or refreshes the window; the reply that follows is the service message."
+        },
+        {
+          "type": "p",
+          "html": "A short exchange makes it concrete. A customer asks whether an order has shipped — that inbound message is free and opens the window. The agent replies that it left the warehouse today — that reply is a service message. Under the old model that reply cost nothing; going forward it draws against the monthly free allowance and is billed once the allowance is spent."
+        }
+      ]
+    },
+    {
+      "id": "window",
+      "heading": "Why the Reply Window Still Sets the Rules",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "It is worth being clear that the window is not disappearing. Every time a customer sends a message, the window opens or refreshes, and during that period a team, a chatbot or an automated flow can keep sending <strong>free-form business replies</strong> without needing a pre-approved template. That permission is unchanged."
+        },
+        {
+          "type": "p",
+          "html": "What has to change is the mental model. The window is a permission rule, not a free pass. Treating every message inside it as costless is the assumption that will quietly inflate a bill after the switch — the right way to read it now is 'I am allowed to reply freely here,' not 'every reply here is free.'"
+        }
+      ]
+    },
+    {
+      "id": "free-tier",
+      "heading": "How the Monthly Free Message Allowance Works",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta is softening the change with a <strong>free service message allowance</strong>: each business phone number receives 1,000 free service messages every month, and charges only begin from the 1,001st. It is a genuine cushion for a low-volume number, and close to a rounding error for a busy support line."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-hash",
+              "title": "Counted per phone number:",
+              "desc": "The 1,000 free messages belong to each number separately, not to the account as a whole."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Group sends count per recipient:",
+              "desc": "A one-to-one delivery uses one message; a group send uses one for every recipient it reaches."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "No rollover between months:",
+              "desc": "Unused messages do not carry forward — the count resets to the full allowance at the start of each month."
+            },
+            {
+              "icon": "bi-calendar-month-fill",
+              "title": "Resets on a monthly cycle:",
+              "desc": "Every number starts fresh each month, so planning is done month by month, not annually."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Meta documents the mechanics on its <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform pricing page</a>, which is the source worth checking whenever the figures are refreshed."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep21(2).webp",
+          "alt": "How the WhatsApp free message allowance works, by Ojiva AI"
+        }
+      ]
+    },
+    {
+      "id": "utility",
+      "heading": "Why Transactional Templates Now Cost Money Mid-Chat",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The update is not only about live replies. <strong>WhatsApp utility message charges</strong> also return for transactional templates sent inside an open window — the order-and-account updates that were briefly exempt when sent during a live conversation. Sent outside the window, these were always billed; the change simply removes the in-window exemption, so the trigger for the charge becomes delivery rather than timing."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmations:",
+              "desc": "Confirm what was bought and when it will arrive."
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Shipping and delivery updates:",
+              "desc": "Share tracking status and an expected delivery window."
+            },
+            {
+              "icon": "bi-cash-coin",
+              "title": "Payment confirmations:",
+              "desc": "Acknowledge a completed or pending transaction on the account."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Booking and appointment reminders:",
+              "desc": "Confirm a slot and offer the option to reschedule."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Account and transaction alerts:",
+              "desc": "Notify of activity, a change or a status update on the account."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "None of these disappear or become harder to send — they simply move onto the meter whether the window is open or not."
+        }
+      ]
+    },
+    {
+      "id": "stays-free",
+      "heading": "What Businesses Still Send at No Cost",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The update does not turn every interaction into a paid one, and it helps to know exactly where the free ground still sits. Alongside the monthly allowance, <strong>free entry point conversations</strong> remain one of the most valuable exemptions on the platform."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-inbox-fill",
+              "title": "Every inbound customer message:",
+              "desc": "Receiving messages from customers is free and always opens or refreshes the window."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "The ad-click free window:",
+              "desc": "A conversation that begins from a Click-to-WhatsApp ad or a Facebook Page button keeps its free treatment for 72 hours when a business replies in time."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "The service window itself:",
+              "desc": "The permission to send free-form replies inside an open window does not go away."
+            },
+            {
+              "icon": "bi-x-circle-fill",
+              "title": "Undelivered messages:",
+              "desc": "Charging is tied to delivery, so a message that fails to reach the customer should not carry an ordinary billable result."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Taken together, these mean a well-run, ad-led funnel can still move a meaningful share of its conversations without a per-message cost."
+        }
+      ]
+    },
+    {
+      "id": "rate-card",
+      "heading": "Reading the Updated Per-Message Rate Card",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There is no single global price for a chargeable reply. The <strong>WhatsApp message rate card</strong> sets the cost by the recipient's country and the message category, and a service message is billed at the same rate as a utility message in that market. The reference below shows how the categories now sit against one another — which is where WhatsApp Business pricing gets specific."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Message category",
+            "Draws on the free allowance?",
+            "Eligible for volume discounts?",
+            "When it is billed"
+          ],
+          "rows": [
+            [
+              "Service (free-form reply)",
+              "Yes",
+              "No",
+              "After the monthly allowance"
+            ],
+            [
+              "Utility (transactional template)",
+              "No",
+              "Yes",
+              "On delivery, in or out of the window"
+            ],
+            ["Authentication (codes)", "No", "Yes", "On delivery"],
+            ["Marketing (promotions)", "No", "No", "On delivery"]
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Two details catch teams out. Service messages do not qualify for the volume-tier discounts that utility and authentication traffic can earn, so a high reply count is billed at the standard market rate throughout. And new standalone markets have been added to the rate card, which can move a sender out of an older regional grouping and onto a market-specific rate. For current country figures, including how billing applies in India, check Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages\" target=\"_blank\" rel=\"noopener noreferrer\">service and utility pricing update notice</a> or ask Ojiva AI for the live rate on your markets."
+        }
+      ]
+    },
+    {
+      "id": "who-feels",
+      "heading": "Which Businesses See the Biggest Cost Shift",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The change lands unevenly. Operations built on <strong>high-volume support messaging</strong> — where a single query can take several replies to resolve — feel it first, because it is the reply count, not the conversation count, that now matters. Three profiles stand out."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-headset",
+              "title": "Customer support teams:",
+              "desc": "Every resolution that takes several back-and-forth replies now consumes allowance and, past it, budget — so replies-per-resolution becomes a number worth watching."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "E-commerce and D2C:",
+              "desc": "Order questions, delivery help and post-purchase support generate large volumes of both service replies and utility updates."
+            },
+            {
+              "icon": "bi-robot",
+              "title": "Automated messaging users:",
+              "desc": "Bots can fire many short, fragmented replies quickly, which adds up faster once each outbound message can carry a cost."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For these businesses the practical question changes from 'how many conversations did we have' to 'how efficiently did we resolve each one' — which is also where WhatsApp API cost is won or lost."
+        }
+      ]
+    },
+    {
+      "id": "chatbot",
+      "heading": "What Automated Replies Now Add to the Bill",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "For anyone running automation, <strong>WhatsApp chatbot message cost</strong> deserves a closer look, because pricing follows the message and its category, not the sender. A free-form reply from a third-party bot inside an open window is a service message, billed the same way a human agent's reply would be."
+        },
+        {
+          "type": "p",
+          "html": "One distinction matters here. Meta's own in-platform AI agent is a separate category, billed on a token basis that bundles the AI processing and the delivery into a single charge — it is not priced like an ordinary service message. If a bot is answering, knowing which of the two it is changes the cost model entirely."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-scissors",
+              "title": "Avoid fragmented replies:",
+              "desc": "Five one-line messages cost more than a single, complete answer that carries the same information."
+            },
+            {
+              "icon": "bi-chat-square-text-fill",
+              "title": "Design for one clear response:",
+              "desc": "A well-formed reply that resolves the question in one message is cheaper and reads better than a burst of fragments."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "The goal is not to make conversations feel clipped, but to stop paying for filler — an acknowledgement, a 'one moment', a stray 'thanks' — that a tighter flow would never have sent."
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "heading": "How to Get Ready Before the Change Lands",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There is time to prepare, and a short list of moves that meaningfully <strong>reduce WhatsApp messaging costs</strong> before the switch rather than after the first surprising invoice."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "Confirm a payment method is on file:",
+              "desc": "A valid payment method must be set up before the change, or chargeable messages can stop being delivered once billing begins — the single most important box to tick."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Measure replies, not just conversations:",
+              "desc": "Start counting how many outbound messages each conversation actually takes, since that is the new cost driver."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Separate your message categories:",
+              "desc": "Reporting that splits service, utility, marketing and authentication traffic makes forecasting far more accurate."
+            },
+            {
+              "icon": "bi-robot",
+              "title": "Review automated response design:",
+              "desc": "Trim acknowledgements and fragmented answers from bot flows without cutting genuine service quality."
+            },
+            {
+              "icon": "bi-calculator-fill",
+              "title": "Update the budget forecast:",
+              "desc": "Model cost per resolved conversation, not raw volume, and re-check it against the new rates for your markets."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Handled early, most of these are quiet housekeeping. Left to the deadline, they become a scramble."
+        }
+      ]
+    },
+    {
+      "id": "budgeting",
+      "heading": "Rethinking How You Plan Messaging Spend",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The wider lesson is a change in how <strong>WhatsApp API budgeting</strong> should work. It is no longer useful to treat the channel as a flat subscription or a fixed price per conversation; the real cost now tracks the number of delivered business messages, their category, the destination country and the platform used around WhatsApp. The most reliable planning figure is cost per resolved conversation — messaging spend divided by the conversations it successfully closes — because it rewards efficiency instead of raw volume, and it keeps spend anchored to the value the channel returns."
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Plan for the Change, Don't Scramble for It",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "This update is less a shock than a nudge toward discipline. The businesses that come through it well are not the ones sending fewer useful messages — they are the ones that stopped treating the reply window as free, tightened their automated flows, and started measuring the cost of resolving a conversation rather than the count of conversations. The tools and the free allowance are there; the work is in using them deliberately."
+        },
+        {
+          "type": "p",
+          "html": "If your number is not live yet, our <a href=\"/blogs/whatsapp-business-api-setup/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business API setup guide</a> covers what needs to be in place first, and our <a href=\"/blogs/best-whatsapp-bsp-india/\" target=\"_blank\" rel=\"noopener noreferrer\">guide to choosing a WhatsApp BSP in India</a> is worth reading if billing transparency matters to your decision. When you are ready, Ojiva AI handles billing setup, category mapping and cost monitoring end to end as an official Meta Business Solution Provider — <a href=\"/book-demo/\" target=\"_blank\" rel=\"noopener noreferrer\">book a free demo</a> and we will map your messaging costs on the call."
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions About the WhatsApp Pricing Change",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Are WhatsApp service messages free once the update takes effect?",
+              "a": "<p>Not entirely. After the change, a business is charged for the free-form replies it sends inside an open customer chat, but only once its monthly free allowance is used up. Every business number gets a fixed number of free service messages each month before charges begin.</p>"
+            },
+            {
+              "q": "How much does a WhatsApp service message cost?",
+              "a": "<p>There is no single global figure. A service message is billed at the same rate as a utility message in the recipient's country, so the cost depends entirely on the market. Unlike utility and authentication traffic, service messages do not qualify for volume-based discounts.</p>"
+            },
+            {
+              "q": "What happens if a payment method is not added before the change?",
+              "a": "<p>Message delivery can be paused. A business — or its provider — needs a valid payment method on file before the switch, otherwise chargeable messages may stop going out once billing begins. Ojiva AI confirms this is in place for every number it manages ahead of the date.</p>"
+            },
+            {
+              "q": "Does the WhatsApp service message rate vary by country?",
+              "a": "<p>Yes. Pricing is set by the recipient's country, so the same reply can cost very different amounts in different markets. New standalone markets have also been added to the rate card, which can move rates for senders previously grouped under a regional rate.</p>"
+            },
+            {
+              "q": "Is the WhatsApp 24-hour customer service window going away?",
+              "a": "<p>No. The window still opens whenever a customer messages a business and still governs when free-form replies are allowed. What changes is the price of those replies, not the permission to send them.</p>"
+            },
+            {
+              "q": "Are WhatsApp utility templates still free inside the reply window?",
+              "a": "<p>No. Transactional templates such as order and delivery updates, which were exempt from a Meta fee when sent inside an open window, become chargeable after the update. Templates sent outside the window were already billed.</p>"
+            },
+            {
+              "q": "Will AI chatbot replies be charged on WhatsApp?",
+              "a": "<p>Billing is based on the message and its category, not on whether a human or a bot sent it. A free-form reply from a third-party chatbot inside an open window is treated as a service message. Meta's own AI agent is billed separately, on a token basis rather than a flat per-message rate.</p>"
+            },
+            {
+              "q": "How many free WhatsApp service messages are included each month?",
+              "a": "<p>Every business phone number receives 1,000 free service messages a month, counted per number. The allowance resets each month and unused messages do not carry over, so a support-heavy number can exhaust it well before month end.</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "related",
+      "blocks": [
+        {
+          "type": "related-posts",
+          "items": [
+            {
+              "title": "WhatsApp Template Message Categories, Explained",
+              "href": "/blogs/whatsapp-templates-for-travel-agencies/",
+              "category": "WhatsApp Business API"
+            },
+            {
+              "title": "How to Set Up the WhatsApp Business API",
+              "href": "/blogs/whatsapp-business-api-setup/",
+              "category": "WhatsApp Business API"
+            },
+            {
+              "title": "Choosing a WhatsApp BSP in India",
+              "href": "/blogs/best-whatsapp-bsp-india/",
+              "category": "WhatsApp Business API"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
