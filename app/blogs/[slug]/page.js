@@ -55,7 +55,7 @@ import blog_rcs_real_estate_retail_lead_conversion from "../../../public/data/bl
 import blog_rcs_business_messaging_travel_tourism from "../../../public/data/blogs/2026/09/Sep16.json";
 import blog_sms_api_in_india from "../../../public/data/blogs/2026/09/Sep18.json";
 import blog_whatsapp_business_api_pricing_update from "../../../public/data/blogs/2026/09/Sep21.json";
-
+import blog_whatsapp_business_api_provider_in_kerala from "../../../public/data/blogs/2026/09/Sep23.json";
 
 const BlogJson = {
   "rcs-vs-sms-key-differences-and-which-is-better-for-business":
@@ -130,7 +130,9 @@ const BlogJson = {
   "sms-api-in-india":
     blog_sms_api_in_india,
   "whatsapp-business-api-pricing-update":
-    blog_whatsapp_business_api_pricing_update
+    blog_whatsapp_business_api_pricing_update,
+  "whatsapp-business-api-provider-in-kerala":
+    blog_whatsapp_business_api_provider_in_kerala,
 };
 
 // ── Date formatter ───────────────────────────────────────

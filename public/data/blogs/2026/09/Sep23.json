@@ -1,0 +1,667 @@
+{
+  "slug": "whatsapp-business-api-provider-in-kerala",
+  "metaTitle": "WhatsApp Business API Provider in Kerala | Ojiva AI",
+  "metaDescription": "Ojiva AI is a WhatsApp Business API provider in Kerala, an official Meta partner. Run a shared inbox, chatbots and broadcasts with clear per-message pricing.",
+  "h1": "WhatsApp Business API Provider in Kerala",
+  "primaryKeyword": "WhatsApp Business API Provider in Kerala",
+  "keywords": {
+    "secondary": [
+      "business messaging for Kerala brands",
+      "shared WhatsApp team inbox",
+      "WhatsApp broadcasting for businesses",
+      "WhatsApp chatbot automation",
+      "WhatsApp chat commerce",
+      "Click-to-WhatsApp ads for lead generation",
+      "CRM and ecommerce integration",
+      "Malayalam customer communication",
+      "verified WhatsApp business identity",
+      "WhatsApp Business API pricing",
+      "WhatsApp Business API setup in India"
+    ],
+    "shortTail": [
+      "WhatsApp Business API",
+      "WhatsApp API provider",
+      "WhatsApp chatbot",
+      "WhatsApp broadcasting",
+      "WhatsApp marketing",
+      "team inbox",
+      "business messaging",
+      "WhatsApp automation",
+      "WhatsApp catalog",
+      "per-message pricing"
+    ],
+    "longTail": [
+      "how the WhatsApp Business API works for a Kerala business",
+      "how much the WhatsApp Business API costs for a small business",
+      "WhatsApp Business API approval requirements",
+      "how to message customers in Malayalam on WhatsApp",
+      "WhatsApp Business API for hotels and travel agencies in Kerala",
+      "connect the WhatsApp Business API with a CRM and online store",
+      "is WhatsApp Business API billed per message or per conversation",
+      "is DLT registration required for WhatsApp business messages in India",
+      "how to get the green verified tick on WhatsApp Business",
+      "set up WhatsApp broadcasting for a Kerala business",
+      "recover leads from Click-to-WhatsApp ads",
+      "WhatsApp catalog and in-chat payments"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "why-api-fits",
+      "label": "Why It Fits Kerala Brands"
+    },
+    {
+      "id": "team-inbox",
+      "label": "Shared Team Inbox"
+    },
+    {
+      "id": "broadcasting",
+      "label": "WhatsApp Broadcasting"
+    },
+    {
+      "id": "chatbot",
+      "label": "Chatbot Automation"
+    },
+    {
+      "id": "chat-commerce",
+      "label": "Chat Commerce"
+    },
+    {
+      "id": "ctwa-ads",
+      "label": "Click-to-WhatsApp Ads"
+    },
+    {
+      "id": "integration",
+      "label": "CRM & Ecommerce"
+    },
+    {
+      "id": "malayalam",
+      "label": "Malayalam Support"
+    },
+    {
+      "id": "verified-identity",
+      "label": "Verified Business Badge"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing Explained"
+    },
+    {
+      "id": "getting-started",
+      "label": "Setup & Approval"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>From a homestay in Wayanad to a jewellery showroom in Thrissur, customers here open WhatsApp before they open anything else &mdash; yet most small teams still juggle those chats on a single phone that never stops buzzing.</strong> The WhatsApp Business API changes the maths: one verified number, a shared inbox for the whole team, automated replies that never sleep, and broadcasts that land in the app people actually check."
+        },
+        {
+          "type": "p",
+          "html": "This guide walks a growing business through everything the platform can do &mdash; a shared team inbox, WhatsApp broadcasting, chatbot automation, in-chat commerce, ads that start a conversation, and the CRM links that tie it together &mdash; plus what it costs and how to get approved. Ojiva AI runs all of it on one dashboard alongside <a href=\"/sms/\">Bulk SMS</a> and <a href=\"/rcs/\">RCS</a>, so <a href=\"/book-demo/\">book a free demo</a> and we'll map it against how your own team already handles enquiries."
+        },
+        {
+          "type": "image",
+          "src": "/image/sep23(1).webp",
+          "alt": "Ojiva AI WhatsApp Business API dashboard showing a shared team inbox for a Kerala business"
+        }
+      ]
+    },
+    {
+      "id": "why-api-fits",
+      "heading": "Why Business Messaging Fits the Way Kerala Brands Sell",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "This is a mobile-first, multilingual market where a quick, trusted reply often decides the sale. The regular WhatsApp app was never built for that once enquiries climb into the hundreds &mdash; there is no way to share a number safely, no automation, and no reporting. Business messaging built on the API closes that gap without asking customers to learn anything new."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-people-fill",
+              "title": "One number, the whole team:",
+              "desc": "instead of a personal phone passed around the shop, every agent works the same verified line from their own screen."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Built for two languages:",
+              "desc": "a reply in Malayalam or English sits naturally in the same thread, so the conversation feels local from the first line."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Automation that holds at volume:",
+              "desc": "routine questions get answered the moment they arrive, whether it is one enquiry or a thousand."
+            },
+            {
+              "icon": "bi-graph-up-arrow",
+              "title": "Reach that isn't flagged:",
+              "desc": "a verified business number keeps campaigns landing instead of being buried as spam."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team-inbox",
+      "heading": "Handling Every Enquiry From One Shared WhatsApp Team Inbox",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "When two staff members share one phone, chats get missed, answered twice, or lost when someone goes home. A shared team inbox puts every conversation in one place the whole team can see, so nothing slips through and no customer waits."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-inbox-fill",
+              "title": "Every chat in one view:",
+              "desc": "sales, support and follow-up conversations flow into a single inbox the team works together."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Assign and route:",
+              "desc": "a chat goes to the right agent or department, so it is always clear who owns it."
+            },
+            {
+              "icon": "bi-sticky-fill",
+              "title": "Notes and tags travel with the customer:",
+              "desc": "context stays attached, so the next person isn't starting the conversation from scratch."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Quick replies for daily questions:",
+              "desc": "saved answers for price, hours or location cut response time without sounding like a bot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "broadcasting",
+      "heading": "Reaching Thousands at Once With WhatsApp Broadcasting for Businesses",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A sale, a new arrival or a festival offer is only useful if people see it in time. WhatsApp broadcasting sends a personalised message to a whole list at once, from your single verified number, and lands where customers actually look rather than in an ignored inbox."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "One-to-many, still personal:",
+              "desc": "a single broadcast can greet each customer by name and detail, not as a faceless blast."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Segmented lists:",
+              "desc": "send an offer only to the customers it suits &mdash; by location, past purchase or interest."
+            },
+            {
+              "icon": "bi-image-fill",
+              "title": "Media that does the selling:",
+              "desc": "images, PDFs and tap buttons make an offer easy to act on in the moment."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Delivered, not dumped:",
+              "desc": "a verified sender and approved templates keep your WhatsApp marketing out of the spam bin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chatbot",
+      "heading": "Answering Round the Clock With WhatsApp Chatbot Automation",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most enquiries arrive after the shutters are down &mdash; evenings, Sundays, the middle of a wedding season rush. A WhatsApp chatbot answers the common ones instantly, so a customer never waits until morning and a lead is never lost to silence."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-robot",
+              "title": "Instant first response:",
+              "desc": "hours, price, address and availability answered the second they are asked."
+            },
+            {
+              "icon": "bi-diagram-2-fill",
+              "title": "Guided flows:",
+              "desc": "the bot can qualify a lead, book a slot or take an order without pulling in an agent."
+            },
+            {
+              "icon": "bi-arrow-left-right",
+              "title": "Clean handoff to a human:",
+              "desc": "anything it can't handle passes to an agent with the full thread already attached."
+            },
+            {
+              "icon": "bi-moon-stars-fill",
+              "title": "Working after hours:",
+              "desc": "WhatsApp automation keeps capturing enquiries long after the shop is closed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chat-commerce",
+      "heading": "Turning Conversations Into Orders With WhatsApp Chat Commerce",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every extra app or link between wanting something and buying it is a chance to lose the sale. Chat commerce keeps the whole journey in one thread, so a customer browses, orders and pays without ever leaving the conversation."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-grid-fill",
+              "title": "A catalog inside the chat:",
+              "desc": "customers browse products from your WhatsApp catalog without tapping away to a website."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Order in the same window:",
+              "desc": "items are added and the order is placed right where the questions were being asked."
+            },
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "Pay without leaving:",
+              "desc": "a payment link or flow closes the sale on the spot, while interest is still high."
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Updates that reassure:",
+              "desc": "order and delivery confirmations arrive where the customer will actually see them."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/sep23(2).webp",
+          "alt": "WhatsApp chat commerce showing a product catalog and payment inside a customer conversation"
+        }
+      ]
+    },
+    {
+      "id": "ctwa-ads",
+      "heading": "Turning Ad Clicks Into Leads With Click-to-WhatsApp Ads",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A form is where an interested lead often goes cold. Click-to-WhatsApp ads on Facebook and Instagram open a real conversation instead, so the moment someone taps the ad they are already talking to your business &mdash; and a message that starts this way carries a free reply window, so a fast first response costs nothing."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-facebook",
+              "title": "From ad to conversation:",
+              "desc": "the click opens a WhatsApp chat, not a landing page the lead has to fill in and trust."
+            },
+            {
+              "icon": "bi-lightning-fill",
+              "title": "Answered instantly:",
+              "desc": "automation greets the lead and captures their details before interest cools."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Qualified and routed:",
+              "desc": "the enquiry is sorted and handed to the right agent automatically."
+            },
+            {
+              "icon": "bi-clipboard-check-fill",
+              "title": "Nothing lost:",
+              "desc": "every lead is logged, so follow-up doesn't depend on someone remembering to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "heading": "Wiring the Channel Into Your CRM and Ecommerce Stack",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A messaging channel that sits in its own corner just creates more manual work. The real gain comes when it connects to the systems a business already runs, so conversations, records and orders stay in sync on their own."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-plug-fill",
+              "title": "Two-way with your CRM:",
+              "desc": "leads and chats sync automatically, so customer records update without anyone retyping them."
+            },
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "Connected to your store:",
+              "desc": "WooCommerce, Shopify, Zoho or a custom store can trigger order, payment and delivery messages."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Automated workflows:",
+              "desc": "an abandoned cart, a confirmed payment or a new booking each fires exactly the right message."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "One view of the customer:",
+              "desc": "conversations sit beside orders and history instead of living in a separate silo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malayalam",
+      "heading": "Reaching Customers in Their Own Words With Malayalam Support",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A message in a customer's own language reads as a neighbour, not a distant call centre. Malayalam customer communication is one of the quiet advantages a local brand has over a national competitor, and the API is built to use it."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-translate",
+              "title": "Malayalam or English, same thread:",
+              "desc": "reply in whichever language the customer opened with, with no awkward switch."
+            },
+            {
+              "icon": "bi-chat-heart-fill",
+              "title": "Templates in the local language:",
+              "desc": "approved broadcast and alert templates can be written in Malayalam, not just English."
+            },
+            {
+              "icon": "bi-mic-fill",
+              "title": "Voice notes handled too:",
+              "desc": "many customers would rather speak than type, and the thread carries it either way."
+            },
+            {
+              "icon": "bi-emoji-smile-fill",
+              "title": "Trust from familiarity:",
+              "desc": "speaking the way customers speak turns a first enquiry into a relationship faster."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verified-identity",
+      "heading": "Building Trust With a Verified WhatsApp Business Identity",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Fake booking texts and refund scams have made people wary of unknown numbers. A verified business identity removes that doubt before a single word is read, which is why a verified sender consistently earns more attention than an anonymous SMS."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "The green verified badge:",
+              "desc": "your business name and logo are confirmed by Meta, so a customer knows the message is really you."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Safer for offers and payments:",
+              "desc": "a prompt from a verified sender is far less likely to be doubted or ignored."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "A complete business profile:",
+              "desc": "address, hours and website sit on the profile customers can open and check."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "More opens, more replies:",
+              "desc": "a recognised, verified name simply gets acted on more often than a random number."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/sep23(3).webp",
+          "alt": "Verified WhatsApp Business profile with a green badge and business details for a Kerala brand"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "How WhatsApp Business API Pricing Actually Works",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There are only two parts to the cost, and understanding them prevents nasty surprises. The first is Meta's own messaging charge; the second is the platform fee from your provider. Meta bills per delivered message rather than by the old 24-hour conversation, and what you pay tracks how much you send."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cash-stack",
+              "title": "Two parts to the cost:",
+              "desc": "Meta's per-message charge plus your provider's platform fee &mdash; nothing hidden beyond that."
+            },
+            {
+              "icon": "bi-envelope-paper-fill",
+              "title": "Charged per template, by category:",
+              "desc": "marketing, utility and authentication templates are each priced differently."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Replies are usually free:",
+              "desc": "answering a customer who messaged first, inside the service window, generally carries no charge."
+            },
+            {
+              "icon": "bi-calculator-fill",
+              "title": "Volume shapes the bill:",
+              "desc": "per-message pricing means the cost follows your sending, not a flat per-conversation rate."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Because the exact rate depends on the message category and the customer's country, the honest answer to \"what will it cost\" is a short calculation against your real volumes rather than a headline number. The official breakdown lives in <a href=\"https://developers.facebook.com/docs/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's WhatsApp Business Platform pricing documentation</a>, and Ojiva AI will size it against your own campaigns during setup."
+        }
+      ]
+    },
+    {
+      "id": "getting-started",
+      "heading": "Getting Set Up: Approval, Templates and the DLT Question",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Getting live is a dashboard workflow, not a developer project. You need a verified Meta Business account, a phone number that isn't currently active on the consumer WhatsApp or Business app, a display name, and a set of message templates for Meta to review before your first send."
+        },
+        {
+          "type": "p",
+          "html": "It is also worth clearing up the most common mix-up in India, because it trips up almost every business coming from text campaigns: WhatsApp does not use the SMS registration path."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Verify the business:",
+              "desc": "a Meta Business account and a dedicated number get the process moving."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Get the name and templates approved:",
+              "desc": "Meta reviews your display name and message templates before anything goes out."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Set consent and opt-out:",
+              "desc": "follow DPDP Act principles &mdash; a clear opt-in at capture and an easy way out."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Go live and measure:",
+              "desc": "broadcasts, automations and reporting all run from the first day."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "To settle the question directly: DLT registration is a TRAI mechanism specific to SMS, and it does not apply to WhatsApp. The API uses Meta's own Business verification and template-review system instead, which is what produces your verified badge. Consent still matters and should follow DPDP Act principles, but the SMS DLT process is a separate track. Ojiva AI handles the verification and template review for you, and the specifics are set out in <a href=\"https://developers.facebook.com/docs/whatsapp\" target=\"_blank\" rel=\"noopener\">Meta's WhatsApp Business Platform documentation</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Growing Teams Run WhatsApp Through Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Sending one verified message is easy. Running WhatsApp as a dependable channel next to everything else a team already sends is where it either becomes a growth lever or just another inbox to babysit."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "One dashboard, every channel:",
+              "desc": "<a href=\"/whatsapp/\">WhatsApp</a>, <a href=\"/rcs/\">RCS</a> and <a href=\"/sms/\">SMS</a> managed from a single place."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Approval managed end to end:",
+              "desc": "Ojiva AI handles Business verification and template review directly, not with a rejection notice to decode alone."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Connected to your stack:",
+              "desc": "CRM, store and workflows wired in, so a chat creates a real record or order."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support after go-live:",
+              "desc": "help when a campaign is running, not only during onboarding."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "The Short Version: One Verified Number, Every Conversation",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A verified number, a shared inbox, automation that never sleeps and campaigns that actually get seen &mdash; that is the difference between chasing enquiries on a personal phone and running a channel that grows with the business. Add local-language replies and a clean link to the systems you already use, and WhatsApp stops being a side task and becomes the front door."
+        },
+        {
+          "type": "p",
+          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/whatsapp-business-api-pricing/\">WhatsApp Business API pricing guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp vs Business vs API comparison</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map it onto how your own team already handles customers."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<em>By Ananth Prasath &middot; Published 23 September</em>"
+        }
+      ]
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp Business API Pricing for Indian Businesses",
+              "href": "/blogs/whatsapp-business-api-pricing/"
+            },
+            {
+              "title": "WhatsApp Flows: In-Chat Forms and Journeys",
+              "href": "/blogs/whatsapp-flows/"
+            },
+            {
+              "title": "WhatsApp Business API for Travel Agencies",
+              "href": "/blogs/whatsapp-business-api-for-travel-agencies/"
+            },
+            {
+              "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",
+              "href": "/blogs/whatsapp-vs-whatsapp-business-vs-api/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How does the WhatsApp Business API work for a business in Kerala?",
+              "a": "<p>It upgrades an ordinary WhatsApp number into a multi-agent, automated channel. A provider like Ojiva AI onboards the business, gets it verified and its templates approved, and then you run a shared inbox, broadcasts, a chatbot and integrations from one dashboard &mdash; all on the app your customers already use every day.</p>"
+            },
+            {
+              "q": "How much does the WhatsApp Business API cost for a small business?",
+              "a": "<p>There are two parts: Meta's per-message charge, which varies by message category, and the platform fee from your provider. There is no per-conversation fee &mdash; you pay for what you send &mdash; and replies to a customer who messaged first are generally free within the service window. The right figure comes from a quick calculation against your real volumes.</p>"
+            },
+            {
+              "q": "What do you need to get approved for the WhatsApp Business API?",
+              "a": "<p>A verified Meta Business account, a phone number not currently active on the consumer WhatsApp or Business app, a display name, and message templates for Meta's review. A provider handles most of the paperwork and the review process, so the business isn't left decoding Meta's requirements alone.</p>"
+            },
+            {
+              "q": "Can a business message customers in Malayalam on WhatsApp?",
+              "a": "<p>Yes. Replies and approved templates can be written in Malayalam, English or both, in the same thread. It is a practical way to serve customers who are more comfortable in the local language, and it tends to lift both trust and response rates.</p>"
+            },
+            {
+              "q": "How can hotels and travel agencies in Kerala use the WhatsApp Business API?",
+              "a": "<p>They can manage booking enquiries, send confirmations and check-in reminders, and let a chatbot answer routine questions around the clock, with complex requests passed to a human through the shared inbox. For a tourism business fielding enquiries at all hours, that combination of instant answers and a clean handoff is the main draw.</p>"
+            },
+            {
+              "q": "Does the WhatsApp Business API connect with a CRM or online store?",
+              "a": "<p>Yes. It integrates with CRMs and stores such as WooCommerce, Shopify and Zoho, so leads sync automatically, records update themselves, and events like a new order or an abandoned cart can trigger the right message without manual work.</p>"
+            },
+            {
+              "q": "Is the WhatsApp Business API billed per message or per conversation?",
+              "a": "<p>Per message. Meta now charges when a template message is delivered rather than by the old 24-hour conversation, with rates set by category &mdash; marketing, utility or authentication. Non-template replies sent within an open customer service window are generally free, so answering an existing customer usually carries no charge.</p>"
+            },
+            {
+              "q": "Is DLT registration needed to send WhatsApp business messages in India?",
+              "a": "<p>No. DLT registration is a TRAI process specific to SMS. WhatsApp uses Meta's own Business verification and template-review system instead, so the SMS DLT track does not apply. Consent and opt-out still matter and should follow DPDP Act principles, but that is separate from DLT.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
