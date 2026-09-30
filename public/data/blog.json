@@ -1,5 +1,16 @@
 [
   {
+  "id": 48,
+  "title": "Upgrade Bulk SMS to RCS in India: Step-by-Step",
+  "componentKey": "Sep30",
+  "slug": "upgrade-bulk-sms-to-rcs-india",
+  "category": "RCS",
+  "date": "2026-09-30",
+  "description": "Upgrade bulk SMS to RCS in India without a rebuild: keep your list and DLT setup, add a verified sender and rich cards. Steps, checks and a free demo.",
+  "image": "/image/sep30(1).webp",
+  "keywords": "upgrade bulk SMS to RCS, bulk SMS to RCS migration, migrate SMS to RCS, RCS messaging India, RCS Business Messaging, RCS SMS fallback, RCS verified sender, RCS rich cards, RCS brand verification, RCS vs bulk SMS, RCS campaign setup, bulk SMS, RCS messaging, business messaging, DLT, CPaaS India, rich cards, verified sender, customer engagement, read receipts, opt-in"
+},
+  {
   "id": 47,
   "title": "RCS vs WhatsApp Business API in India",
   "componentKey": "Sep25",

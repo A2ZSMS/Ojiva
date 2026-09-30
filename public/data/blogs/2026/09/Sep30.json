@@ -1,0 +1,491 @@
+{
+ "slug": "upgrade-bulk-sms-to-rcs-india",
+ "metaTitle": "Upgrade Bulk SMS to RCS in India: Step-by-Step | Ojiva AI",
+ "metaDescription": "Upgrade bulk SMS to RCS in India without a rebuild: keep your list and DLT setup, add a verified sender and rich cards. Steps, checks and a free demo.",
+ "h1": "How to Upgrade Bulk SMS to RCS Messaging in India",
+ "primaryKeyword": "upgrade bulk SMS to RCS",
+ "keywords": {
+  "secondary": [
+   "bulk SMS to RCS migration",
+   "migrate SMS to RCS",
+   "RCS messaging India",
+   "RCS Business Messaging",
+   "RCS SMS fallback",
+   "RCS verified sender",
+   "RCS rich cards",
+   "RCS brand verification",
+   "RCS vs bulk SMS",
+   "RCS campaign setup"
+  ],
+  "shortTail": [
+   "bulk SMS",
+   "RCS messaging",
+   "business messaging",
+   "DLT",
+   "CPaaS India",
+   "rich cards",
+   "verified sender",
+   "customer engagement",
+   "read receipts",
+   "opt-in"
+  ],
+  "longTail": [
+   "how to move from bulk SMS to RCS in India",
+   "do I need DLT registration for RCS",
+   "will customers without RCS still get my message",
+   "how to convert SMS templates into RCS rich cards",
+   "how long does RCS brand verification take",
+   "is RCS more expensive than bulk SMS",
+   "can I keep sending OTPs on SMS after moving to RCS",
+   "how to measure RCS campaign results against SMS",
+   "what is the difference between bulk SMS and RCS",
+   "how to migrate promotional SMS campaigns to RCS"
+  ]
+ },
+ "toc": [
+  {
+   "id": "introduction",
+   "label": "Introduction"
+  },
+  {
+   "id": "move-to-rcs",
+   "label": "Migration Plan"
+  },
+  {
+   "id": "customers-without-rcs",
+   "label": "Fallback and Reach"
+  },
+  {
+   "id": "dlt-registration",
+   "label": "DLT and Compliance"
+  },
+  {
+   "id": "brand-verification",
+   "label": "Brand Verification"
+  },
+  {
+   "id": "rich-cards",
+   "label": "Rich Cards"
+  },
+  {
+   "id": "keep-otp-on-sms",
+   "label": "OTPs and Priorities"
+  },
+  {
+   "id": "measure-results",
+   "label": "Measuring Results"
+  },
+  {
+   "id": "cost",
+   "label": "Cost"
+  },
+  {
+   "id": "why-ojiva",
+   "label": "Why Ojiva AI"
+  },
+  {
+   "id": "conclusion",
+   "label": "Conclusion"
+  },
+  {
+   "id": "faq",
+   "label": "FAQs"
+  }
+ ],
+ "sections": [
+  {
+   "id": "introduction",
+   "heading": null,
+   "blocks": [
+    {
+     "type": "p",
+     "html": "<strong>To upgrade bulk SMS to RCS in India, you keep your contact list, your DLT registration and an SMS safety net, and add a verified sender with rich cards on top.</strong> Your audience doesn't change. What changes is what each message can show and what a customer can do with it. RCS Business Messaging replaces a line of plain text with a branded card inside the phone's own messaging app, and drops back to SMS wherever RCS isn't available."
+    },
+    {
+     "type": "p",
+     "html": "This guide covers the whole move: the plan, the compliance checks, sender verification, rebuilding your templates and measuring the result. If you send appointment reminders, offers or payment nudges today, most of it applies directly. Ojiva AI, a CPaaS India provider and Meta Business Partner, runs RCS, WhatsApp and bulk SMS from one dashboard &mdash; <a href=\"/book-demo/\">book a free demo</a> to see it against your own campaigns."
+    },
+    {
+     "type": "image",
+     "src": "/image/sep30(1).webp",
+     "alt": "Ojiva AI dashboard showing a bulk SMS campaign being upgraded to an RCS rich card with SMS fallback"
+    }
+   ]
+  },
+  {
+   "id": "move-to-rcs",
+   "heading": "How to Move From Bulk SMS to RCS in India",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "A bulk SMS to RCS migration is a short project, and most of it happens on a provider dashboard rather than in code. The seven steps below run in order, and the aim is to upgrade bulk SMS to RCS one campaign at a time rather than overnight. Treat the first campaign as a pilot so you can migrate SMS to RCS without putting your whole sending program at risk."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-1-circle-fill",
+       "title": "Audit what you send today:",
+       "desc": "list every recurring message &mdash; offers, reminders, order updates, payment nudges, lead follow-ups &mdash; with its template and rough volume. Rank them by how much an image or a button would help the customer act."
+      },
+      {
+       "icon": "bi-2-circle-fill",
+       "title": "Check your DLT and consent records:",
+       "desc": "your sender ID, approved templates and opt-in logs matter even more now, because the SMS fallback runs on them."
+      },
+      {
+       "icon": "bi-3-circle-fill",
+       "title": "Submit the brand for RCS verification:",
+       "desc": "give your provider the business name, logo, category and a named contact, so the sender profile can be reviewed."
+      },
+      {
+       "icon": "bi-4-circle-fill",
+       "title": "Rebuild your best templates as cards:",
+       "desc": "one goal per card, one clear image, a short headline and only the buttons that matter."
+      },
+      {
+       "icon": "bi-5-circle-fill",
+       "title": "Switch on fallback and test on mixed phones:",
+       "desc": "send to Android and iPhone, RCS and non-RCS, and read the plain-text version as a customer would."
+      },
+      {
+       "icon": "bi-6-circle-fill",
+       "title": "Connect taps to your CRM or order system:",
+       "desc": "route replies and button taps through the API so a tap creates a task, booking or order."
+      },
+      {
+       "icon": "bi-7-circle-fill",
+       "title": "Pilot, compare and scale:",
+       "desc": "run the first RCS campaign setup on a slice of one campaign, keep the SMS version as a control, and move more volume across once the numbers justify it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "customers-without-rcs",
+   "heading": "Will Customers Without RCS Still Get My Message?",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Yes. When a device, app or connection can't display RCS, the message drops to standard SMS automatically instead of failing. This RCS SMS fallback is why you don't have to sort your list by handset before sending. RCS runs on Android 5.0 and above through Google Messages or a carrier's own app, and on iPhone from iOS 18 onward."
+    },
+    {
+     "type": "p",
+     "html": "For RCS messaging India-wide, Jio, Airtel and Vi all support the standard at network level, so what a customer actually sees depends on their phone and their data connection at that moment."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-arrow-repeat",
+       "title": "Fallback is automatic:",
+       "desc": "the same message arrives as plain SMS where the rich version can't be shown."
+      },
+      {
+       "icon": "bi-bar-chart-steps",
+       "title": "Ask for the split:",
+       "desc": "request a delivery report showing how many sends went out as RCS and how many fell back, so you know how far a campaign really reached in the richer format."
+      },
+      {
+       "icon": "bi-chat-square-text-fill",
+       "title": "Write the plain version well:",
+       "desc": "many customers will still read the text-only message, so it has to make sense without the image or the buttons."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dlt-registration",
+   "heading": "Do I Need DLT Registration for RCS?",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Yes &mdash; keep it. The fallback is still an SMS, so your DLT sender ID and approved templates need to stay valid for as long as you use it. Commercial messaging in India sits under TRAI's framework, and moving to a richer channel doesn't remove those obligations. Our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">DLT registration guide</a> covers the checklist for the SMS side."
+    },
+    {
+     "type": "p",
+     "html": "RCS templates and brand approvals follow their own review process, and the steps for a given business category can change as platforms and operators update them. Ask your provider how approval works for your category instead of assuming it mirrors SMS. Consent works as it does on every channel: under the DPDP Act, capture a clear opt-in when you collect a number, make opting out easy, and don't reuse contacts beyond what the customer agreed to."
+    }
+   ]
+  },
+  {
+   "id": "brand-verification",
+   "heading": "How Long Does RCS Brand Verification Take?",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "There is no fixed timeline, because Google and the carriers review each sender and may contact your named brand representative directly. Once approved, the verification checkmark appears next to your business name in Google Messages. Google's guide to <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/launch/brand-verification\" target=\"_blank\" rel=\"noopener noreferrer\">RCS for Business brand verification</a> lists what the submission needs."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-hourglass-split",
+       "title": "Start early:",
+       "desc": "begin the RCS brand verification before the campaign deadline, not after the templates are ready."
+      },
+      {
+       "icon": "bi-person-badge-fill",
+       "title": "Name a real person:",
+       "desc": "the contact should be an individual employee with authority over the brand, not a shared inbox or a distribution list."
+      },
+      {
+       "icon": "bi-card-checklist",
+       "title": "Keep details consistent:",
+       "desc": "the business name, logo and category should match what customers already see on your website and existing messages."
+      },
+      {
+       "icon": "bi-patch-check-fill",
+       "title": "Let your provider handle follow-ups:",
+       "desc": "an RCS verified sender only goes live once the review clears, so a slow reply to a reviewer's question can hold up a launch."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rich-cards",
+   "heading": "How to Convert SMS Templates Into RCS Rich Cards",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "The easiest way to design RCS rich cards is to take a template you already send and ask what the customer should do next, because that question drives customer engagement more than any visual choice. Each card can carry up to four suggested actions &mdash; reply, call, open a link or share a location &mdash; though two or three usually work better than a crowded row."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-tag-fill",
+       "title": "Offer or sale text:",
+       "desc": "a product card with the image, the price and a \"Shop Now\" button, or a carousel of three products in place of one link."
+      },
+      {
+       "icon": "bi-calendar-check-fill",
+       "title": "Appointment reminder:",
+       "desc": "a card showing date, time and place with \"Confirm\" and \"Reschedule\" buttons, so nobody has to call the front desk, and read receipts show the reminder was seen."
+      },
+      {
+       "icon": "bi-box-seam-fill",
+       "title": "Order or delivery update:",
+       "desc": "a status card with a tracking action instead of a long URL the customer has to copy."
+      },
+      {
+       "icon": "bi-house-door-fill",
+       "title": "Lead follow-up:",
+       "desc": "a card with the project or product image and a \"Book a visit\" button. See how this works in our guide to <a href=\"/blogs/rcs-real-estate-retail-lead-conversion/\">RCS for real estate and retail</a>."
+      },
+      {
+       "icon": "bi-credit-card-fill",
+       "title": "Payment or renewal reminder:",
+       "desc": "a card that states the amount and due date, with a \"Pay Now\" link one tap away."
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "src": "/image/sep30(2).webp",
+     "alt": "Plain SMS reminder text rebuilt as an RCS rich card with image, headline and Confirm and Reschedule buttons"
+    }
+   ]
+  },
+  {
+   "id": "keep-otp-on-sms",
+   "heading": "Can I Keep Sending OTPs on SMS After Moving to RCS?",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Yes, and for most teams that is the sensible starting point. One-time passwords and two-factor codes are short, time-critical and gain little from images, so they can stay on SMS while your team learns RCS messaging. The messages that benefit first are the ones where a customer is meant to do something afterwards."
+    },
+    {
+     "type": "p",
+     "html": "That is also the order in which to upgrade bulk SMS to RCS: start with your best-performing offer or reminder, confirm the opt-in covers promotional use, and leave critical codes where they are until the RCS setup has proven itself. Our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> covers where each channel fits."
+    }
+   ]
+  },
+  {
+   "id": "measure-results",
+   "heading": "How to Measure RCS Campaign Results Against SMS",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "A rich card looks better, but the test that matters for any RCS messaging program is whether customers act more often. Set up the comparison before the first campaign goes out, not after."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-people-fill",
+       "title": "Run RCS vs bulk SMS as a controlled test:",
+       "desc": "send the same offer as RCS to one group and as plain SMS to another of similar size and history."
+      },
+      {
+       "icon": "bi-eye-fill",
+       "title": "Use read receipts alongside delivery:",
+       "desc": "delivered tells you the message arrived; read receipts show whether it was opened."
+      },
+      {
+       "icon": "bi-hand-index-thumb-fill",
+       "title": "Track taps, replies and bookings:",
+       "desc": "these show real customer engagement, which opens alone can't."
+      },
+      {
+       "icon": "bi-arrow-repeat",
+       "title": "Watch the fallback share:",
+       "desc": "if much of a campaign falls back to SMS, the audience's device mix is limiting your gains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cost",
+   "heading": "Is RCS More Expensive Than Bulk SMS?",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Per message, usually yes, because you pay for rich-media delivery on top of the carrier fee, and fallback sends are billed as standard SMS. There is no single flat rate. Providers bill per message, per conversation or on volume tiers, and rates move with carrier and platform pricing."
+    },
+    {
+     "type": "p",
+     "html": "The fairer comparison is cost per result: what you pay for each booking, sale or confirmed appointment, not for each message. Ask for a live rate card, and see our <a href=\"/blogs/google-rcs-business-messaging/\">RCS pricing breakdown</a> for the components worth asking about."
+    }
+   ]
+  },
+  {
+   "id": "why-ojiva",
+   "heading": "Running the Move With Ojiva AI",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Sending one branded card is easy. Running RCS as a dependable channel next to the SMS you already send is where many teams choosing a CPaaS India platform either save effort or add one more tool to manage."
+    },
+    {
+     "type": "icon-list",
+     "items": [
+      {
+       "icon": "bi-diagram-3-fill",
+       "title": "One dashboard, every channel:",
+       "desc": "<a href=\"/rcs/\">RCS</a>, <a href=\"/whatsapp/\">WhatsApp</a> and <a href=\"/sms/\">bulk SMS</a> with automatic fallback between them and customer engagement tracked in one place."
+      },
+      {
+       "icon": "bi-patch-check-fill",
+       "title": "Verification handled for you:",
+       "desc": "Ojiva AI manages the sender submission and follows up with reviewers, so your team isn't left decoding a rejection notice."
+      },
+      {
+       "icon": "bi-shield-lock-fill",
+       "title": "Your DLT setup carries over:",
+       "desc": "existing sender IDs and templates keep working for the fallback. If you are still choosing a provider in the city, see our guide to the <a href=\"/blogs/best-bulk-sms-service-provider-bangalore/\">best bulk SMS service provider in Bangalore</a>, written for Bengaluru businesses."
+      },
+      {
+       "icon": "bi-headset",
+       "title": "Support after go-live:",
+       "desc": "help while a campaign is running, not only during onboarding."
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "src": "/image/sep30(3).webp",
+     "alt": "Ojiva AI unified dashboard for RCS, WhatsApp and bulk SMS business messaging in India"
+    }
+   ]
+  },
+  {
+   "id": "conclusion",
+   "heading": "The Short Version",
+   "blocks": [
+    {
+     "type": "p",
+     "html": "Bulk SMS gave your business reach; RCS gives that reach a face, an image and a button. Because your contact list, consent records and DLT setup carry over, the work is mostly choosing the right templates and getting the verified sender approved."
+    },
+    {
+     "type": "p",
+     "html": "Pick one campaign, verify one sender, keep SMS as the fallback, and <a href=\"/book-demo/\">book a free demo</a> so Ojiva AI can map the plan to your own volumes. That is the lowest-risk way to upgrade bulk SMS to RCS."
+    }
+   ]
+  },
+  {
+   "id": "author",
+   "heading": null,
+   "blocks": [
+    {
+     "type": "p",
+     "html": "<em>By Ananth Prasath &middot; SEO &amp; Social Media Manager, Ojiva AI &middot; Published 30 September</em>"
+    },
+    {
+     "type": "p",
+     "html": "<em>Ananth manages content strategy, SEO and social media at Ojiva AI, a Bengaluru-based CPaaS India company and Meta Business Partner offering WhatsApp Business API, RCS, Bulk SMS and AI Voice for Indian businesses.</em>"
+    },
+    {
+     "type": "p",
+     "html": "<strong>Sources:</strong> <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/launch/brand-verification\" target=\"_blank\" rel=\"noopener noreferrer\">Google &mdash; RCS for Business brand verification</a>, <a href=\"https://rcsforbusiness.google/\" target=\"_blank\" rel=\"noopener noreferrer\">Google &mdash; RCS for Business</a>, <a href=\"https://www.gsma.com/solutions-and-impact/technologies/networks/rcs/\" target=\"_blank\" rel=\"noopener noreferrer\">GSMA &mdash; RCS</a>."
+    }
+   ]
+  },
+  {
+   "id": "related-blogs",
+   "heading": "Related Reads",
+   "blocks": [
+    {
+     "type": "related",
+     "items": [
+      {
+       "title": "RCS Business Messaging: Guide for Indian Businesses",
+       "href": "/blogs/rcs-business-messaging-india/"
+      },
+      {
+       "title": "Google RCS Business Messaging: Verified Texting",
+       "href": "/blogs/google-rcs-business-messaging/"
+      },
+      {
+       "title": "DLT Registration for Bulk SMS in India",
+       "href": "/blogs/dlt-registration-bulk-sms-india/"
+      },
+      {
+       "title": "How Real Estate and Retail Brands in India Are Using RCS to Convert Leads Faster",
+       "href": "/blogs/rcs-real-estate-retail-lead-conversion/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "faq",
+   "heading": "Frequently Asked Questions",
+   "blocks": [
+    {
+     "type": "accordion",
+     "items": [
+      {
+       "q": "What Is the Difference Between Bulk SMS and RCS?",
+       "a": "<p>Bulk SMS sends plain text from a registered sender ID to any phone. RCS sends a branded message with a verified name, images, carousels and tappable buttons inside the phone's native messaging app, and falls back to SMS where it can't display. The audience and consent rules stay the same; the message format and reporting are what change.</p>"
+      },
+      {
+       "q": "How to Migrate Promotional SMS Campaigns to RCS?",
+       "a": "<p>Start with your best-performing offer. Rebuild it as a single card with one image and two or three buttons, keep the SMS version as a control group, and confirm your opt-in covers promotional use. Run it on a slice of the list, compare taps and bookings against SMS, then move more volume across.</p>"
+      },
+      {
+       "q": "Does RCS work on iPhone in India?",
+       "a": "<p>Apple added native RCS support from iOS 18, so verified business messages can now reach iPhone users where their carrier supports it. Support still varies by device and carrier, and any phone that can't show RCS receives the message as standard SMS through the automatic fallback.</p>"
+      },
+      {
+       "q": "Is RCS business messaging end-to-end encrypted?",
+       "a": "<p>No. Business messages over RCS are encrypted in transit but not end-to-end, on both Android and iPhone. Keep sensitive personal or financial details out of a card, and send only what the customer needs to take the next step.</p>"
+      },
+      {
+       "q": "Do I need a fresh opt-in to send RCS messages?",
+       "a": "<p>A new channel is not a new permission. Follow the same DPDP Act principles you use for SMS: clear consent at the point of capture, an easy opt-out, and no use of a number beyond what the customer agreed to. If your existing opt-in only covered transactional SMS, promotional RCS needs its own consent.</p>"
+      },
+      {
+       "q": "Do I need a developer to launch RCS?",
+       "a": "<p>Usually not. Brand verification, rich card design and fallback setup are dashboard workflows with a provider. A developer helps only if you want taps and replies to flow into a CRM or order system through the API, and even that is typically a configuration step.</p>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
