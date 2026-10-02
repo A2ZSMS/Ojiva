@@ -515,5 +515,16 @@
     "description": "Upgrade bulk SMS to RCS in India without a rebuild: keep your list and DLT setup, add a verified sender and rich cards. Steps, checks and a free demo.",
     "image": "/image/sep30(1).webp",
     "keywords": "upgrade bulk SMS to RCS, bulk SMS to RCS migration, migrate SMS to RCS, RCS messaging India, RCS Business Messaging, RCS SMS fallback, RCS verified sender, RCS rich cards, RCS brand verification, RCS vs bulk SMS, RCS campaign setup, bulk SMS, RCS messaging, business messaging, DLT, CPaaS India, rich cards, verified sender, customer engagement, read receipts, opt-in"
+  },
+  {
+    "id": 49,
+    "title": "Top Bulk SMS Service Providers in India",
+    "componentKey": "Oct02",
+    "slug": "top-bulk-sms-service-providers-india",
+    "category": "Bulk SMS",
+    "date": "2026-10-02",
+    "description": "Compare the best bulk SMS service providers in India on compliance, delivery, pricing and API. A buyer's guide for startups and SMBs, plus a free demo.",
+    "image": "/image/oct02(1).webp",
+    "keywords": "best bulk SMS service providers in India, top bulk SMS service providers in India, bulk SMS comparison India, promotional SMS in India, transactional SMS and OTP SMS, TRAI guidelines for bulk SMS India, DLT registration for SMS, bulk SMS rates in India, SMS gateway and API integration, SMS delivery reporting, bulk SMS for business in India, bulk SMS, SMS API, OTP SMS, DLT, sender ID, promotional SMS, transactional SMS, SMS gateway, DND, SMS marketing"
   }
 ]
