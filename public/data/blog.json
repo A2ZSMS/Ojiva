@@ -1,5 +1,16 @@
 [
   {
+  "id": 50,
+  "title": "How to Set Up RCS Business Messaging in India",
+  "componentKey": "Oct07",
+  "slug": "how-to-set-up-rcs-for-business-india",
+  "category": "RCS Messaging",
+  "date": "2026-10-07",
+  "description": "Set up RCS Business Messaging in India step by step: agent registration, API integration, rich cards, sender verification, testing and launch. Free demo.",
+  "image": "/image/oct07(1).webp",
+  "keywords": "how to set up RCS for business in India, RCS messaging for business, RCS agent registration, RCS API integration, RCS rich cards and carousels, RCS sender verification, RCS vs SMS for business, RCS messaging pricing in India, how to register an RCS agent in India, RCS business messaging India, RCS launch approval, RCS, RCS messaging, rich communication services, rich cards, RCS agent, RCS API, sender verification, SMS fallback, Google Messages, business messaging"
+},
+  {
   "id": 49,
   "title": "Top Bulk SMS Service Providers in India",
   "componentKey": "Oct02",

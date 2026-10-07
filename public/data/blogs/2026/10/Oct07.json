@@ -1,0 +1,640 @@
+{
+  "slug": "how-to-set-up-rcs-for-business-india",
+  "metaTitle": "How to Set Up RCS for Business in India | Ojiva AI",
+  "metaDescription": "Set up RCS Business Messaging in India step by step: agent registration, API integration, rich cards, sender verification, testing and launch. Free demo.",
+  "h1": "How to Set Up RCS Business Messaging in India",
+  "primaryKeyword": "how to set up RCS for business in India",
+  "keywords": {
+    "secondary": [
+      "RCS messaging for business",
+      "RCS agent registration",
+      "RCS API integration",
+      "RCS rich cards and carousels",
+      "RCS sender verification",
+      "RCS vs SMS for business",
+      "RCS messaging pricing in India",
+      "how to register an RCS agent in India",
+      "RCS business messaging India",
+      "RCS launch approval"
+    ],
+    "shortTail": [
+      "RCS",
+      "RCS messaging",
+      "rich communication services",
+      "rich cards",
+      "RCS agent",
+      "RCS API",
+      "sender verification",
+      "SMS fallback",
+      "Google Messages",
+      "business messaging"
+    ],
+    "longTail": [
+      "how do I register an RCS agent for my business in India",
+      "what documents are needed for RCS sender verification",
+      "how long does RCS agent approval take",
+      "is RCS available on all Android phones in India",
+      "what is the difference between RCS and SMS for business",
+      "can I use RCS and WhatsApp together for customer messaging",
+      "how much does RCS business messaging cost in India",
+      "do I need an RCS API provider to send RCS messages",
+      "how to design RCS rich cards and carousels",
+      "how to integrate the RCS API with a CRM"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "before-you-begin",
+      "label": "Before You Begin"
+    },
+    {
+      "id": "agent-registration",
+      "label": "Agent Registration"
+    },
+    {
+      "id": "api-integration",
+      "label": "API Integration"
+    },
+    {
+      "id": "rich-cards",
+      "label": "Rich Cards & Carousels"
+    },
+    {
+      "id": "sender-verification",
+      "label": "Sender Verification"
+    },
+    {
+      "id": "testing-launch",
+      "label": "Testing & Launch"
+    },
+    {
+      "id": "rcs-vs-sms",
+      "label": "RCS vs SMS"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing in INR"
+    },
+    {
+      "id": "consent",
+      "label": "Consent & Compliance"
+    },
+    {
+      "id": "choose-provider",
+      "label": "Choosing a Provider"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Getting RCS live for your business takes six stages: preparing your brand details, creating an agent, connecting the API, designing rich messages, completing verification and passing launch approval.</strong> Most delays come from skipped preparation rather than the technology, so this guide follows the order a first launch actually moves in."
+        },
+        {
+          "type": "p",
+          "html": "It is written for Indian startups and SMBs that want branded, interactive messages in the default Android inbox. Ojiva AI runs <a href=\"/rcs/\">RCS Business Messaging</a> alongside Bulk SMS, WhatsApp and voice on one platform, so if you want a launch plan for your own use case, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct07(1).webp",
+          "alt": "RCS agent setup flow showing registration, verification and launch stages for Indian businesses"
+        }
+      ]
+    },
+    {
+      "id": "before-you-begin",
+      "heading": "RCS Messaging for Business: What to Have Ready Before You Start",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS, short for rich communication services, replaces plain text with a verified sender profile, images, buttons and cards inside the default messaging app. Every launch is reviewed, so the quickest route is to gather your inputs first. Google's launch guidance asks for agent details, testing, opt-out handling and a preview video before you can submit, so treat those as the start of your checklist."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building-fill",
+              "title": "Business and brand details:",
+              "desc": "legal name, website, logo and a clear description of what your agent will do for customers."
+            },
+            {
+              "icon": "bi-person-badge-fill",
+              "title": "An authorised brand contact:",
+              "desc": "someone with the authority to approve use of your brand when the verification email arrives."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "RCS-enabled test devices:",
+              "desc": "not every Android phone receives RCS by default, so switch it on in the messaging app before testing."
+            },
+            {
+              "icon": "bi-bullseye",
+              "title": "One defined use case:",
+              "desc": "alerts, offers, support or onboarding. A focused use case makes the agent description and the review simpler."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Customers read these messages in Google Messages and other RCS-capable apps, so also decide early which team will own the replies. An RCS provider can host the API and the reporting, but your own team still needs to answer the conversations your messages start."
+        }
+      ]
+    },
+    {
+      "id": "agent-registration",
+      "heading": "RCS Agent Registration: Create Your Branded Business Agent",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An agent is the branded sender profile customers see: your name, your logo and your verified identity. Registration is where you define it. Google's setup flow has you identify the agent's region, billing category and use case, then <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/get-started/first-agent\" target=\"_blank\" rel=\"noopener\">create the agent</a> with the brand it represents and an agent name. If you are working out how to register an RCS agent for your business in India, this is the step where the answer starts."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-card-text",
+              "title": "Agent name and brand:",
+              "desc": "choose a name customers already recognise, because it appears at the top of every conversation."
+            },
+            {
+              "icon": "bi-image-fill",
+              "title": "Logo and hero image:",
+              "desc": "the logo is shown as a rounded square, so check that yours still reads well when cropped."
+            },
+            {
+              "icon": "bi-clipboard-check-fill",
+              "title": "Use case and billing category:",
+              "desc": "pick the options that match how you will really use the agent, because it is set up and billed under them."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "Contact details and policy links:",
+              "desc": "add accurate information so customers and reviewers can confirm who you are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "api-integration",
+      "heading": "RCS API Integration: Connect Your CRM, App and Store",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Once the agent exists, the RCS API is how your systems send messages and receive replies. Your developers send requests to deliver text, media, rich cards and suggestions, and receive customer replies and delivery events through a webhook. A clean RCS API integration therefore decides how well your automation works later."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-code-slash",
+              "title": "Documented endpoints:",
+              "desc": "clear sending, status and error documentation lets a developer test within hours rather than days."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "Webhooks for replies and status:",
+              "desc": "delivery events and customer replies arrive in your own system instead of being polled for."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "CRM and store triggers:",
+              "desc": "an order, a form submission or a pipeline stage change can fire the right message on its own."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "A plan for unreachable numbers:",
+              "desc": "check whether a number can receive RCS and decide what happens when it cannot, such as an SMS fallback."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct07(2).webp",
+          "alt": "RCS API connected to a CRM and ecommerce store to trigger automated customer messages"
+        },
+        {
+          "type": "p",
+          "html": "If your team already sends messages through an API, much of the groundwork carries over. Ojiva AI also supports <a href=\"/whatsapp/\">WhatsApp Business API</a> automation, so one trigger design can serve more than one channel."
+        }
+      ]
+    },
+    {
+      "id": "rich-cards",
+      "heading": "RCS Rich Cards and Carousels: Design Messages People Act On",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "This is where RCS stops looking like SMS. A <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards\" target=\"_blank\" rel=\"noopener\">rich card</a> can combine media, a title, a description and suggested replies or actions, and a carousel lets you show up to ten vertical cards in a single message. Google's design guidance also recommends testing on your target devices, because screen size and device capabilities affect how cards render."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-card-image",
+              "title": "Single rich cards:",
+              "desc": "pair one image with a short title, a clear line of text and the next step."
+            },
+            {
+              "icon": "bi-collection-fill",
+              "title": "Carousels:",
+              "desc": "show products, plans or properties side by side, within the ten-card limit."
+            },
+            {
+              "icon": "bi-hand-index-thumb-fill",
+              "title": "Suggested replies:",
+              "desc": "give customers one-tap answers, and keep each one short because replies are limited to 25 characters."
+            },
+            {
+              "icon": "bi-cursor-fill",
+              "title": "Suggested actions:",
+              "desc": "let people open a link or call you in a single tap, and keep only the actions that genuinely help."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct07(3).webp",
+          "alt": "RCS rich card and carousel examples with suggested replies in Google Messages for business campaigns"
+        },
+        {
+          "type": "p",
+          "html": "Plan RCS campaigns around one clear action per card, whether that is a booking, a payment or a reply. The app also displays the destination address inside an Open a URL action, so make sure the button label and the visible link do not feel repetitive or cluttered."
+        }
+      ]
+    },
+    {
+      "id": "sender-verification",
+      "heading": "RCS Sender Verification: Prove the Brand Behind the Agent",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Verification is what turns an unknown sender into a trusted one. An <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/launch/brand-verification\" target=\"_blank\" rel=\"noopener\">authorised brand representative</a> confirms your agent information and your right to manage the agent on the brand's behalf, and Google's guidance requires this before the first launch. After launch, Google Messages shows a verification checkmark next to the agent's name."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-clipboard-check-fill",
+              "title": "Submit information once:",
+              "desc": "verification details are provided once per agent, however many carriers you later launch on."
+            },
+            {
+              "icon": "bi-envelope-check-fill",
+              "title": "Brand contact approval:",
+              "desc": "after you request launch, your brand contact is emailed by Google or the carrier and must approve the use of the brand."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Supporting documents:",
+              "desc": "keep proof of your business identity and your authority to act for the brand ready, since requirements vary by route and carrier."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "A visible trust signal:",
+              "desc": "the checkmark helps customers recognise genuine messages from your brand."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Use the same brand name, logo and website everywhere. Consistency between your agent details and your public presence makes the brand contact's job easier and keeps the review straightforward."
+        }
+      ]
+    },
+    {
+      "id": "testing-launch",
+      "heading": "Testing and Launch: From Tester Devices to Live RCS Campaigns",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Until launch, your agent can only message invited test devices. Add each device's number in the console, accept the tester request on the phone and send a first message to confirm everything works. Treat testing as a rehearsal: send every card, carousel and reply path you plan to use and check them on more than one handset."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-play-circle-fill",
+              "title": "Test on real handsets:",
+              "desc": "invite devices, accept the request and run every message path before you apply."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Complete pre-launch tasks:",
+              "desc": "agent information, opt-out handling and a preview video are needed before you can submit a launch request."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Pick your launch carriers:",
+              "desc": "some carriers manage verification and approval themselves and need a direct agreement with you."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Plan buffer time:",
+              "desc": "review times depend on the carriers you choose and how complete your information is, so avoid fixed promises."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "How long RCS agent approval takes depends on those choices, so build slack into any go-live date you share internally. Google's <a href=\"https://developers.google.com/business-communications/rcs-business-messaging/guides/launch/launch-approval\" target=\"_blank\" rel=\"noopener\">launch approval guide</a> explains that approval can come from Google, carriers or both, and that launching on Google-managed carriers in a country requires a prior launch on at least one carrier-managed network there. Read it alongside your provider's advice."
+        }
+      ]
+    },
+    {
+      "id": "rcs-vs-sms",
+      "heading": "RCS vs SMS: Choosing the Right Channel for Each Message",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The two channels complement each other. SMS reaches almost any phone and suits OTPs and critical alerts, while RCS adds a verified sender, images, buttons and carousels for customers whose devices support it. The practical question is which channel fits each message, not which one wins."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-text-fill",
+              "title": "Use SMS for:",
+              "desc": "OTPs, payment alerts and any message that must reach every handset."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Use RCS for:",
+              "desc": "offers, catalogues, booking flows and support journeys where visuals and buttons help the customer act."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Combine them:",
+              "desc": "keep SMS as the safety net for numbers that cannot receive RCS, and remember those messages still follow SMS template rules."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "Add WhatsApp where it fits:",
+              "desc": "RCS vs WhatsApp is a pairing rather than a contest, since WhatsApp needs opt-in and approved templates under Meta's rules while RCS lands in the default inbox."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "To move an existing list across, read our guide to <a href=\"/blogs/upgrade-bulk-sms-to-rcs-india/\">upgrading Bulk SMS to RCS</a>. If the SMS side still needs paperwork, our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">DLT registration guide</a> covers every step."
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "RCS Messaging Pricing in INR: What Shapes the Cost",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS messaging pricing in India is quoted per message in rupees and varies by provider, carrier route and message type. Because rates and carrier terms change, ask for a written quote instead of relying on a figure from a blog post, including this one. What RCS costs for your own volume is best worked out from monthly sends by use case."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tags-fill",
+              "title": "Message type and category:",
+              "desc": "basic text and richer interactive messages may be priced differently, and the agent's billing category applies."
+            },
+            {
+              "icon": "bi-stack",
+              "title": "Volume slabs:",
+              "desc": "larger monthly volumes usually reduce the per-message rate."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Carrier route:",
+              "desc": "rates and terms can differ by operator and launch route, so confirm which networks your quote covers."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "What is included:",
+              "desc": "agent setup, verification support, API access, reporting and fallback should be listed in writing, not assumed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Add the SMS fallback and any support tier to your cost model, then compare providers on the total rather than the headline rate. Share your monthly volume by use case with your provider so the quote reflects what you will actually send."
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "heading": "Consent, TRAI Rules and the DPDP Act: Staying Compliant",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS messaging still needs permission, however rich the message looks. Google requires opt-out handling before launch, and India's rules on commercial communication and personal data apply to how you collect numbers and message people. This is practical guidance rather than legal advice, so confirm your own obligations with a qualified professional."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-journal-check",
+              "title": "Capture clear consent:",
+              "desc": "tell customers what they will receive when you collect their number."
+            },
+            {
+              "icon": "bi-person-x-fill",
+              "title": "Build in opt-out:",
+              "desc": "make stopping messages easy and honour it everywhere, including your SMS fallback."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "Check the commercial communication rules:",
+              "desc": "ask your provider how TRAI's rules apply to each channel you use, rather than assuming one setup covers all."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Keep lists clean:",
+              "desc": "remove numbers that bounce or never engage so your reports stay meaningful."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For the official position, see <a href=\"https://www.trai.gov.in/\" target=\"_blank\" rel=\"noopener\">TRAI's website</a> and <a href=\"https://www.meity.gov.in/\" target=\"_blank\" rel=\"noopener\">MeitY's website</a>. DLT registration applies to SMS, so if you keep SMS as a fallback, keep your approved templates current as well."
+        }
+      ]
+    },
+    {
+      "id": "choose-provider",
+      "heading": "How to Choose an RCS Provider Without Guesswork",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Because carrier-managed launches can require direct agreements, many businesses go through a provider that already holds the integrations, onboarding experience and reporting. Judge a provider on how much of the setup it handles for you, not on price alone."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-people-fill",
+              "title": "Onboarding that guides you:",
+              "desc": "help with agent details, verification information and carrier selection, not just a link to the console."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Reporting you can read:",
+              "desc": "delivery, read and reply data per campaign, so problems can be diagnosed instead of guessed at."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Fallback and multi-channel support:",
+              "desc": "SMS fallback and WhatsApp on the same account avoid a second vendor."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Reachable support:",
+              "desc": "a named contact for the day a launch review stalls."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Teams Choose Ojiva AI for Rich Communication Services",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru-based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Whether your team sits in Bangalore or elsewhere in India, the checks above are the ones to put to us in a demo."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Setup guidance:",
+              "desc": "walk through agent details, verification information and launch requests with someone who knows the process."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "API and workflow triggers:",
+              "desc": "connect orders, forms and CRM stages so messages fire automatically."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "One account, several channels:",
+              "desc": "RCS messaging, Bulk SMS, WhatsApp and AI voice managed together instead of in separate tools."
+            },
+            {
+              "icon": "bi-person-badge-fill",
+              "title": "A named contact:",
+              "desc": "a person who knows your setup while the first launch is still new."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "The Short Version: Verify First, Test Properly, Then Scale",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A first launch goes smoothly when the order is right. Gather your brand details, create the agent, connect the API, design cards worth tapping, complete verification and test on real devices before you request approval. Add consent discipline and an SMS fallback, and the rest is steady improvement of your RCS campaigns."
+        },
+        {
+          "type": "p",
+          "html": "Ojiva AI would like to be on your shortlist. <a href=\"/book-demo/\">Book a free demo</a> and we will map your use case, verification inputs and launch plan, or explore our <a href=\"/rcs/\">RCS services</a>. Done well, the channel makes every message look like it comes from a business customers already trust."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            },
+            {
+              "title": "Best Bulk SMS Service Provider in Bangalore",
+              "href": "/blogs/best-bulk-sms-service-provider-bangalore/"
+            },
+            {
+              "title": "How to Upgrade Bulk SMS to RCS Messaging in India",
+              "href": "/blogs/upgrade-bulk-sms-to-rcs-india/"
+            },
+            {
+              "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",
+              "href": "/blogs/whatsapp-vs-whatsapp-business-vs-api/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How do I register an RCS agent for my business in India?",
+              "a": "<p>Create an agent in Google's developer console, usually through a provider, by choosing the region, billing category and use case, then adding your brand, agent name, logo and contact details. Next, invite test devices, complete the pre-launch tasks and submit a launch request so verification and carrier approval can begin. Ojiva AI can walk you through each stage, and you can <a href=\"/book-demo/\">book a demo</a> to start.</p>"
+            },
+            {
+              "q": "What documents are needed for RCS sender verification?",
+              "a": "<p>Requirements vary by provider, carrier and launch route, so confirm the exact list before you apply. In general, keep proof of your business identity and of your authority to act for the brand ready, along with accurate agent details and an authorised brand contact who can approve the request when the verification email arrives. Your provider can confirm what each carrier asks for.</p>"
+            },
+            {
+              "q": "How long does RCS agent approval take?",
+              "a": "<p>There is no single timeline. Approval can involve Google, carriers or both, and carrier-managed launches may need a direct agreement first, so timing depends on the networks you select and how complete your launch information is. Avoid promising a go-live date until your provider confirms the carrier route, and keep buffer time in your plan.</p>"
+            },
+            {
+              "q": "Is RCS business messaging available on all Android phones in India?",
+              "a": "<p>Not automatically. RCS needs an RCS-enabled messaging app such as Google Messages, and Google notes that not every Android device receives RCS by default, so some users may need to switch it on. Carrier support also affects reach. Check whether a number can receive RCS before sending, and plan an SMS fallback for those who cannot.</p>"
+            },
+            {
+              "q": "What is the difference between RCS and SMS for business?",
+              "a": "<p>SMS is plain text that reaches almost any handset, which suits OTPs and critical alerts. RCS adds a verified sender profile, images, rich cards, carousels and tap-to-reply buttons, but only reaches users whose devices and apps support it. Most businesses use both, with SMS as the fallback for numbers that cannot receive RCS.</p>"
+            },
+            {
+              "q": "Can I use RCS and WhatsApp together for customer messaging?",
+              "a": "<p>Yes. They are separate channels with separate rules. WhatsApp requires opt-in and approved templates under Meta's policies, while RCS runs through your verified agent in the default inbox. Many teams give each channel the messages it suits best and manage both from one dashboard. DLT registration is an SMS requirement and does not apply to WhatsApp.</p>"
+            },
+            {
+              "q": "How much does RCS business messaging cost in India?",
+              "a": "<p>RCS is priced per message in rupees, and the rate depends on your provider, carrier route, message type and volume. Rates and carrier terms change, so ask for a written quote that lists what is included, such as setup help, API access, reporting and SMS fallback. Share your monthly volume by use case to get an accurate figure.</p>"
+            },
+            {
+              "q": "Do I need an RCS API provider to send RCS messages?",
+              "a": "<p>In practice, most businesses do. Carrier-managed launches can require a direct agreement with the carrier, and the integration, verification and reporting work is substantial. A provider that already holds those relationships and offers an API shortens the path. If you work with one, check how much onboarding help it includes before you commit.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

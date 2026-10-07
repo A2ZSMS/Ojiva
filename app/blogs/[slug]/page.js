@@ -59,6 +59,7 @@ import blog_whatsapp_business_api_provider_in_kerala from "../../../public/data/
 import blog_rcs_vs_whatsapp_business_api_india from "../../../public/data/blogs/2026/09/Sep25.json";
 import blog_upgrade_bulk_sms_to_rcs_india from "../../../public/data/blogs/2026/09/Sep30.json";
 import blog_top_bulk_sms_service_providers_india from "../../../public/data/blogs/2026/10/Oct02.json";
+import blog_how_to_set_up_rcs_for_business_india from "../../../public/data/blogs/2026/10/Oct07.json";
 
 const BlogJson = {
   "rcs-vs-sms-key-differences-and-which-is-better-for-business":
@@ -142,6 +143,8 @@ const BlogJson = {
     blog_upgrade_bulk_sms_to_rcs_india,
   "top-bulk-sms-service-providers-india":
     blog_top_bulk_sms_service_providers_india,
+  "how-to-set-up-rcs-for-business-india":
+    blog_how_to_set_up_rcs_for_business_india,
 };
 
 // ── Date formatter ───────────────────────────────────────
