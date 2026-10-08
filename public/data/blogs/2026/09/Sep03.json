@@ -240,7 +240,7 @@
         },
         {
           "type": "p",
-          "html": "For a full side-by-side against SMS and WhatsApp, see our <a href=\"/blogs/rcs-business-messaging-india/\">complete RCS Business Messaging guide</a>."
+          "html": "For a full side-by-side against SMS and WhatsApp, see our <a href=\"/blogs/what-is-rcs-messaging/\">complete RCS Business Messaging guide</a>."
         }
       ]
     },
@@ -453,7 +453,7 @@
         },
         {
           "type": "p",
-          "html": "If you're comparing this against your other channels in more depth, our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> and <a href=\"/blogs/best-whatsapp-bsp-india/\">guide to choosing a WhatsApp BSP</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll set up your first verified sender profile on the call."
+          "html": "If you're comparing this against your other channels in more depth, our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> and <a href=\"/blogs/best-whatsapp-bsp-india/\">guide to choosing a WhatsApp BSP</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll set up your first verified sender profile on the call."
         }
       ]
     },
@@ -479,8 +479,8 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Business Messaging: Guide for Indian Businesses",
-              "href": "/blogs/rcs-business-messaging-india/"
+              "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+              "href": "/blogs/what-is-rcs-messaging/"
             },
             {
               "title": "How to Choose a WhatsApp BSP in India: Checklist",
@@ -535,7 +535,7 @@
             },
             {
               "q": "What's the difference between RCS and WhatsApp Business API?",
-              "a": "<p>RCS runs inside a phone's native messaging app with no install required, while WhatsApp only reaches customers who already have the app. The two overlap heavily on features — rich media, buttons, verified branding — and most businesses run both rather than picking one. Our <a href=\"/blogs/rcs-business-messaging-india/\">full comparison guide</a> covers this in more detail.</p>"
+              "a": "<p>RCS runs inside a phone's native messaging app with no install required, while WhatsApp only reaches customers who already have the app. The two overlap heavily on features — rich media, buttons, verified branding — and most businesses run both rather than picking one. Our <a href=\"/blogs/what-is-rcs-messaging/\">full comparison guide</a> covers this in more detail.</p>"
             }
           ]
         }

@@ -122,7 +122,7 @@
       "id": "rcs-ecommerce",
       "heading": "RCS Messaging for E-commerce and Retail Businesses",
       "blocks": [
-        { "type": "p", "html": "For <a href=\"/retail-ecommerce/\">retail and e-commerce</a> teams, RCS turns routine order updates into a channel that can also sell." },
+        { "type": "p", "html": "For <a href=\"/solutions/ecommerce-retail/\">retail and e-commerce</a> teams, RCS turns routine order updates into a channel that can also sell." },
         {
           "type": "icon-list",
           "items": [

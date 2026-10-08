@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
+import { srcSetFor } from '@/lib/imageSrcSet';
 
 /* ── Constants ─────────────────────────────────────────── */
 const CATEGORIES = ['All', 'Bulk SMS', 'WhatsApp API', 'RCS Messaging', 'Voice Call', 'AI & Automation'];
@@ -23,7 +24,10 @@ const DEFAULT_STYLE = { color: '#4f46e5', bg: 'rgba(79,70,229,0.10)', dot: '#818
 
 /* ── Utilities ─────────────────────────────────────────── */
 const getCatStyle = (cat) => CAT_STYLE[cat] ?? DEFAULT_STYLE;
-const formatDate  = (str) => new Date(str).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+// timeZone UTC: dates are plain YYYY-MM-DD, so render that exact day everywhere.
+// Without it a visitor west of UTC sees the previous day, which no longer matches
+// the pre-rendered HTML and triggers a hydration error.
+const formatDate  = (str) => new Date(str).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const truncate    = (str, n) => str.length > n ? str.slice(0, n) + '…' : str;
 
 /* ── Category Badge ─────────────────────────────────────── */
@@ -48,6 +52,8 @@ function FeaturedCard({ blog }) {
         <div className="blg-featured__img-col">
           <img
             src={blog.image || '/og-image.jpg'}
+            srcSet={srcSetFor(blog.image)}
+            sizes="(max-width: 991px) 100vw, 560px"
             alt={blog.title}
             className="blg-featured__img"
             loading="eager"
@@ -86,6 +92,8 @@ function BlogCard({ blog }) {
         <div className="blg-card__img-wrap">
           <img
             src={blog.image || '/og-image.jpg'}
+            srcSet={srcSetFor(blog.image)}
+            sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 400px"
             alt={blog.title}
             className="blg-card__img"
             loading="lazy"
@@ -133,8 +141,8 @@ function SkeletonCard() {
 
 /* ── Pagination ─────────────────────────────────────────── */
 function Pagination({ current, total, onChange }) {
-  if (total <= 1) return null;
-
+  // Hooks must run on every render, so the early return comes after useMemo
+  // (it used to come first, which breaks when a category has a single page).
   const pages = useMemo(() => {
     const r = [];
     for (let i = 1; i <= total; i++) {
@@ -143,6 +151,8 @@ function Pagination({ current, total, onChange }) {
     }
     return r;
   }, [current, total]);
+
+  if (total <= 1) return null;
 
   return (
     <div className="blg-pagination" role="navigation" aria-label="Blog pagination">
@@ -191,19 +201,54 @@ function Pagination({ current, total, onChange }) {
   );
 }
 
+/* ── All articles by topic (crawlable index of every post) ── */
+function ArticleIndex({ blogs }) {
+  const groups = useMemo(() => {
+    const order = CATEGORIES.filter(c => c !== 'All');
+    const map = new Map(order.map(c => [c, []]));
+    for (const b of blogs) {
+      if (!map.has(b.category)) map.set(b.category, []);
+      map.get(b.category).push(b);
+    }
+    return [...map].filter(([, posts]) => posts.length > 0);
+  }, [blogs]);
+  if (!groups.length) return null;
+  return (
+    <nav className="mt-5 pt-5 border-top" aria-labelledby="blog-index-h2">
+      <h2 id="blog-index-h2" className="h4 fw-bold mb-4">All articles by topic</h2>
+      <div className="row g-4">
+        {groups.map(([cat, posts]) => {
+          const cs = getCatStyle(cat);
+          return (
+            <div className="col-md-6 col-lg-4" key={cat}>
+              <h3 className="h6 fw-bold mb-3" style={{ color: cs.color }}>
+                {cat} <span className="text-muted fw-normal">({posts.length})</span>
+              </h3>
+              <ul className="list-unstyled mb-0">
+                {posts.map(b => (
+                  <li key={b.slug} className="mb-2" style={{ fontSize: '0.92rem', lineHeight: 1.4 }}>
+                    <Link href={`/blogs/${b.slug}`} className="text-reset">{b.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
 /* ── Main Export ────────────────────────────────────────── */
-export default function BlogList() {
-  const [blogsData, setBlogsData]               = useState([]);
-  const [loading, setLoading]                   = useState(true);
+// initialBlogs comes from blog.json at build time (see app/blogs/page.js), so
+// the post cards are real <a> links in the static HTML. Do NOT switch back to
+// a client-side fetch: the list then only exists after JavaScript runs, and
+// Google saw 0 links from /blogs/ to any post (SEO audit, Oct 2026).
+export default function BlogList({ initialBlogs = [] }) {
+  const blogsData = initialBlogs;
+  const loading   = false;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage]           = useState(1);
-
-  useEffect(() => {
-    fetch('/data/blog.json')
-      .then(r => r.json())
-      .then(data => { setBlogsData(data); setLoading(false); })
-      .catch(() => setLoading(false));
-  }, []);
 
   const filteredBlogs = useMemo(() =>
     selectedCategory === 'All' ? blogsData : blogsData.filter(b => b.category === selectedCategory),
@@ -338,6 +383,11 @@ export default function BlogList() {
 
           {/* Pagination */}
           <Pagination current={currentPage} total={totalPages} onChange={handlePage} />
+
+          {/* All articles by topic — a plain, always-rendered link to every post.
+              The grid above paginates with buttons (not links), so without this
+              index only the first 10 posts would be reachable from /blogs/. */}
+          <ArticleIndex blogs={blogsData} />
 
         </div>
       </section>

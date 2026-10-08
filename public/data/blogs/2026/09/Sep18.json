@@ -746,20 +746,16 @@
           "type": "related",
           "items": [
             {
-              "title": "DLT Registration in India: A Step-by-Step Guide",
-              "href": "/blogs/dlt-registration-india/"
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
             },
             {
-              "title": "OTP Verification for Indian Apps",
-              "href": "/blogs/otp-verification-in-india/"
+              "title": "WhatsApp Business API vs Regular WhatsApp for Indian Businesses",
+              "href": "/blogs/whatsapp-business-api-vs-regular-whatsapp-indian-businesses/"
             },
             {
-              "title": "WhatsApp Business API: Guide for Indian Businesses",
-              "href": "/blogs/whatsapp-business-api-in-india/"
-            },
-            {
-              "title": "RCS Business Messaging: Guide for Indian Businesses",
-              "href": "/blogs/rcs-business-messaging-india/"
+              "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+              "href": "/blogs/what-is-rcs-messaging/"
             }
           ]
         }

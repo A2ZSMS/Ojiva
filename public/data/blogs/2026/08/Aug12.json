@@ -205,7 +205,7 @@
               "desc": "Only message people who have clearly agreed to hear from you — a consent checkbox at signup or checkout is the safest route."
             },
             {
-              "icon": "bi-traffic-light-fill",
+              "icon": "bi-stoplights-fill",
               "title": "Watch your quality rating:",
               "desc": "Meta grades each number green, yellow or red based on how customers react. Staying green keeps your limits climbing."
             },

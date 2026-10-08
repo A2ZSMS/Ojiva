@@ -153,6 +153,7 @@ function formatDate(dateStr) {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+    timeZone: 'UTC', // YYYY-MM-DD → that exact day, whatever machine builds the site
   });
 }
 
@@ -180,7 +181,7 @@ export async function generateMetadata({ params }) {
       siteName: 'Ojiva AI',
       type: 'article',
       publishedTime: blog.date,
-      modifiedTime: blog.date,
+      modifiedTime: blog.updated || blog.date,
       authors: ['https://www.ojiva.ai'],
       section: blog.category || 'Business Communication',
       tags: blog.keywords ? blog.keywords.split(',').map(k => k.trim()) : [],
@@ -226,7 +227,7 @@ function blogPostingSchema(blog) {
     image: absImage,
     url: `https://www.ojiva.ai/blogs/${blog.slug}/`,
     datePublished: blog.date,
-    dateModified: blog.date,
+    dateModified: blog.updated || blog.date,   // set "updated" in blog.json when a post is meaningfully revised
     author: {
       '@type': 'Organization',
       name: 'Ojiva AI',
@@ -238,7 +239,7 @@ function blogPostingSchema(blog) {
       url: 'https://www.ojiva.ai/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.ojiva.ai/OJIVA%20AI%20MAIN%20LOGO%20WHITE%20PNG.png',
+        url: 'https://www.ojiva.ai/ojiva-logo-optimized.png',
       },
     },
     mainEntityOfPage: {

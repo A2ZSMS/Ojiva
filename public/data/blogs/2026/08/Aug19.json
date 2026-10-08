@@ -661,20 +661,16 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Messaging Provider in India: What to Check Before You Commit",
-              "href": "/rcs-messaging-provider-in-india/"
+              "title": "RCS Messaging Provider in India",
+              "href": "/blogs/rcs-messaging-provider-in-india/"
             },
             {
-              "title": "WhatsApp Business API in Hyderabad: A Practical Guide",
-              "href": "/whatsapp-business-api-hyderabad/"
+              "title": "Best WhatsApp Business API Provider in Hyderabad",
+              "href": "/blogs/best-whatsapp-business-api-provider-hyderabad/"
             },
             {
-              "title": "RCS vs SMS: Which Channel Fits Your Next Campaign?",
-              "href": "/rcs-vs-sms/"
-            },
-            {
-              "title": "Verified Business Messaging: Building Trust From the First Message",
-              "href": "/verified-business-messaging/"
+              "title": "RCS vs SMS: Key Differences & Which is Better for Business",
+              "href": "/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/"
             }
           ]
         }

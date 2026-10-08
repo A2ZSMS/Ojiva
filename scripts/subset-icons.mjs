@@ -9,8 +9,12 @@
  *      (shared font-family / smoothing setup).
  *   3. `.bi-NAME::before { content: "\fXXX" }` rules for the icons actually used.
  *
- * The original CSS is preserved as `bootstrap-icons.min.css.original` (backup)
- * the first time this script runs.
+ * Source of truth: scripts/vendor/bootstrap-icons-1.11.3.min.css — the full
+ * icon list (2,050 icons) matching the woff2 in public/icons/fonts, with the
+ * site's @font-face (font-display:swap, absolute /icons/fonts path). Runs on
+ * every build (package.json prebuild), so icons added in new blog posts are
+ * always included. Before Oct 2026 it relied on an uncommitted backup file and
+ * a regex that skipped digit-first names, and 85 icons rendered blank.
  *
  * The woff2 font file is NOT modified — dropping only the CSS rules is enough
  * to prevent the browser from ever asking for unused glyphs.
@@ -25,7 +29,7 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, "..");
 
 const CSS_PATH = path.join(ROOT, "public/icons/bootstrap-icons.min.css");
-const BACKUP_PATH = CSS_PATH + ".original";
+const SOURCE_PATH = path.join(ROOT, "scripts/vendor/bootstrap-icons-1.11.3.min.css");
 
 // Directories to scan for `bi-*` usages.
 const SCAN_DIRS = ["components", "app", "lib", "public/data"];
@@ -36,7 +40,7 @@ const DATA_EXTS = new Set([".json"]);
 
 // Regex: `bi-` followed by lowercase letter, then lowercase/digit/hyphen.
 // We deliberately require the class prefix `bi-` (bootstrap icons naming).
-const BI_RE = /bi-[a-z][a-z0-9-]*/g;
+const BI_RE = /bi-[a-z0-9][a-z0-9-]*/g;  // icon names can start with a digit (bi-1-circle)
 
 // Names that are NOT icons but might match the pattern (e.g. `bi-directional`
 // in prose or a CSS variable). We prune anything that isn't in the CSS map
@@ -119,17 +123,9 @@ async function main() {
   const originalRaw = await fs.readFile(CSS_PATH, "utf8");
   const originalSize = Buffer.byteLength(originalRaw, "utf8");
 
-  // Backup once.
-  try {
-    await fs.access(BACKUP_PATH);
-  } catch {
-    await fs.writeFile(BACKUP_PATH, originalRaw);
-    console.log(`Backup created: ${path.relative(ROOT, BACKUP_PATH)}`);
-  }
-
-  // Always parse the ORIGINAL (backup) so re-running the script never
-  // subsets an already-subsetted file (data loss risk).
-  const sourceRaw = await fs.readFile(BACKUP_PATH, "utf8");
+  // Always subset from the full vendored list, never from the output file,
+  // so re-running can only ever add icons that are used.
+  const sourceRaw = await fs.readFile(SOURCE_PATH, "utf8");
   const parsed = parseCss(sourceRaw);
 
   if (!parsed.fontFace) throw new Error("Could not find @font-face rule in source CSS.");

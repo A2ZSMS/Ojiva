@@ -579,7 +579,7 @@
         },
         {
           "type": "p",
-          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/whatsapp-business-api-pricing/\">WhatsApp Business API pricing guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp vs Business vs API comparison</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map it onto how your own team already handles customers."
+          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/whatsapp-business-api-pricing-india/\">WhatsApp Business API pricing guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp vs Business vs API comparison</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map it onto how your own team already handles customers."
         }
       ]
     },
@@ -601,12 +601,12 @@
           "type": "related",
           "items": [
             {
-              "title": "WhatsApp Business API Pricing for Indian Businesses",
-              "href": "/blogs/whatsapp-business-api-pricing/"
+              "title": "WhatsApp Business API Pricing in India: Cost Breakdown",
+              "href": "/blogs/whatsapp-business-api-pricing-india/"
             },
             {
-              "title": "WhatsApp Flows: In-Chat Forms and Journeys",
-              "href": "/blogs/whatsapp-flows/"
+              "title": "WhatsApp Flows Guide: Benefits, Uses & Examples",
+              "href": "/blogs/whatsapp-flows-guide/"
             },
             {
               "title": "WhatsApp Business API for Travel Agencies",

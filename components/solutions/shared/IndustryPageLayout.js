@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { srcSetFor } from '@/lib/imageSrcSet';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CTA from '@/components/ui/CTA';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -54,8 +55,8 @@ function ChannelMockup({ channel, use, indColor }) {
           </div>
         </div>
         <div className="ind-lp-mock-chat">
-          <div className="ind-lp-bubble ind-lp-bubble--in">Hi! I'd like more info about your services.</div>
-          <div className="ind-lp-bubble ind-lp-bubble--out">Sure! Here's our complete brochure 📄</div>
+          <div className="ind-lp-bubble ind-lp-bubble--in">Hi! I&apos;d like more info about your services.</div>
+          <div className="ind-lp-bubble ind-lp-bubble--out">Sure! Here&apos;s our complete brochure 📄</div>
           <div className="ind-lp-bubble ind-lp-bubble--out" style={{ opacity: 0.85 }}>Tap below to schedule a call 👇</div>
           <button className="ind-lp-wa-btn" style={{ color: meta.color, borderColor: `${meta.color}40` }}>
             📅 &nbsp;Schedule a Call
@@ -464,6 +465,8 @@ export default function IndustryPageLayout({ industry }) {
                     >
                       <img
                         src={`/solutions/${imgPrefix}${idx + 1}.webp`}
+                        srcSet={srcSetFor(`/solutions/${imgPrefix}${idx + 1}.webp`)}
+                        sizes="(max-width: 991px) 100vw, 600px"
                         alt={`${name} ${cf.label} — ${cf.use}`}
                         className="ind-lp-feat-img"
                         loading={idx === 0 ? 'eager' : 'lazy'}

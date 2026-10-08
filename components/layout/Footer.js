@@ -9,6 +9,7 @@ const PLATFORM_LINKS = [
   { href: '/voice', label: 'Bulk Voice Call & IVR' },
   { href: '/otp', label: 'OTP & 2FA' },
   { href: '/platform', label: 'One Platform Portal' },
+  { href: '/website-development', label: 'Website Development' },
 ];
 
 const COMPANY_LINKS = [

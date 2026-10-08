@@ -42,7 +42,7 @@ export default function RCSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rcsBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(RCS_FAQS)) }} />
       <RcsPageContent faqs={RCS_FAQS} />
-      <RelatedGuides category="RCS Messaging" />
+      <RelatedGuides limit={6} slugs={["what-is-rcs-messaging", "how-to-set-up-rcs-for-business-india", "rcs-vs-sms-key-differences-and-which-is-better-for-business", "grow-business-with-rcs-india", "rcs-marketing-automation-high-converting-campaigns", "best-rcs-message-service-provider-in-india"]} />
     </>
   );
 }

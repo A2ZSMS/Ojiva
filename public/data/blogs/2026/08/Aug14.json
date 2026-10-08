@@ -284,7 +284,7 @@
               "desc": "Placeholders with no sample value confuse reviewers; add a realistic example for each and the format usually clears."
             },
             {
-              "icon": "bi-type-uppercase",
+              "icon": "bi-alphabet-uppercase",
               "title": "Spammy language or shortened links:",
               "desc": "Excess capitals, aggressive wording and URL shorteners trip filters — clean copy and full-domain links fix most of these."
             },

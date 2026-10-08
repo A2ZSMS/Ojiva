@@ -28,7 +28,9 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
   const imports = {
     react,
     'next/navigation': { useRouter: () => ({ push: url => calls.push({ kind: 'redirect', url }) }) },
-    '@/lib/formConfig': { WEB3_ACCESS_KEY: 'mock-key', MAKE_HOOK_LANDING: 'https://mock.invalid/make', THANK_YOU_LANDING: '/whatsapp-api-service/thank-you' },
+    '@/lib/formConfig': { WEB3_ACCESS_KEY: 'mock-key', MAKE_HOOK_LANDING: 'https://mock.invalid/make', THANK_YOU_LANDING: '/whatsapp-api-service/thank-you', TEST_MODE_SMS_ONLY: false },
+    // Welcome SMS (added Sep 2026): mocked, never sends.
+    '@/lib/sms': { sendLeadSms: async ({ phone }) => { calls.push({ kind: 'sms', phone }); return { ok: true, mobile: `91${phone}` }; } },
     '@/lib/leadQuality': qualityModule.exports,
     '@/lib/attribution': { getAttribution: () => ({ utm_source: 'google', utm_medium: 'cpc', utm_campaign: 'wa-demo', gclid: 'mock-click', _first_landing_url: 'https://example.com/whatsapp-api-service/' }), fireOpenAiLeadCreated: () => calls.push({ kind: 'conversion' }) },
   };
@@ -53,7 +55,7 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
       assert.equal(calls.length, 0, 'Missing or invalid email must block every outbound integration');
     }
     const { calls } = await submit({ compact });
-    for (const kind of ['crm', 'web3', 'make', 'conversion', 'redirect']) assert.equal(calls.filter(c => c.kind === kind).length, 1, `${kind} must remain connected`);
+    for (const kind of ['sms', 'crm', 'web3', 'make', 'conversion', 'redirect']) assert.equal(calls.filter(c => c.kind === kind).length, 1, `${kind} must remain connected`);
     const crm = calls.find(c => c.kind === 'crm').payload.fields;
     assert.equal(crm.email, 'maya@example.com');
     assert.equal(crm.utm_source, 'google');

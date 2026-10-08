@@ -6,11 +6,15 @@ import blogs from '@/public/data/blog.json';
 import NotFoundFinder from './not-found-finder';
 import styles from './not-found.module.css';
 
-export const metadata = buildMetadata({
-  title: '404 — Page Not Found',
-  description: 'That page does not exist. Search Ojiva AI, jump to a suggested page, or talk to our team.',
-  path: '/404',
-});
+export const metadata = {
+  ...buildMetadata({
+    title: '404 — Page Not Found',
+    description: 'That page does not exist. Search Ojiva AI, jump to a suggested page, or talk to our team.',
+    path: '/404',
+  }),
+  // The server already answers 404; noindex makes sure a soft-404 is never indexed.
+  robots: { index: false, follow: true },
+};
 
 /**
  * Human-labelled index of every static route. Blogs are appended from

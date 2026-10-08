@@ -15,6 +15,12 @@
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^ojiva\.ai$ [NC]
   RewriteRule ^(.*)$ https://www.ojiva.ai/$1 [R=301,L]
+
+  # /index.html (and /<dir>/index.html) duplicate their folder URL → 301 to it.
+  # THE_REQUEST = the browser's original request line, so the server's own
+  # internal "/ → index.html" lookup never matches (no redirect loop).
+  RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?]
+  RewriteRule ^(.*/)?index\.html$ https://www.ojiva.ai/$1 [R=301,L]
 </IfModule>
 
 # ── Compression (LiteSpeed honours mod_deflate; Brotli auto on LSWS) ──────────
@@ -24,6 +30,14 @@
 
 # ── Cache-Control ─────────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
+  # Security headers (next.config.js headers() is a no-op for static export,
+  # so they must be set here). HSTS deliberately omits includeSubDomains so an
+  # HTTP-only subdomain can never be locked out.
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
   # Content-hashed Next.js build output → 1 year, immutable (safe: filename changes on rebuild)
   <If "%{REQUEST_URI} =~ m#^/_next/static/#">
     Header set Cache-Control "public, max-age=31536000, immutable"

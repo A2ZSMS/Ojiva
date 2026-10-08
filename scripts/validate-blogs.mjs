@@ -163,6 +163,71 @@ for (const blog of blogs) {
   }
 }
 
+// ── Internal links inside post content ───────────────────
+// A link to a /blogs/ slug that isn't registered is a 404 for readers and a
+// leak of link equity — 9 of these shipped in Sep 2026 before anyone noticed.
+// Error for dead /blogs/ links; warn for other internal paths with no route.
+{
+  const appRoutes = new Set();
+  (function walk(dir, base) {
+    for (const entry of readdirSync(dir)) {
+      const full = join(dir, entry);
+      if (!statSync(full).isDirectory()) continue;
+      if (entry.startsWith("(") || entry.startsWith("[") || entry.startsWith("_")) continue;
+      const route = `${base}/${entry}`;
+      if (existsSync(join(full, "page.js"))) appRoutes.add(`${route}/`);
+      walk(full, route);
+    }
+  })(resolve(ROOT, "app"), "");
+  for (const { file, content } of contentBySlug.values()) {
+    if (!registeredSlugs.has(content.slug)) continue;
+    const raw = readFileSync(file, "utf8");
+    const hrefs = new Set();
+    for (const m of raw.matchAll(/href(?:\\)?"\s*:\s*"([^"]+)"|href=\\"([^"\\]+)\\"/g)) hrefs.add(m[1] || m[2]);
+    for (let href of hrefs) {
+      href = href.replace(/^https?:\/\/(www\.)?ojiva\.ai/, "");
+      if (!href.startsWith("/") || href.startsWith("//")) continue;
+      const path = href.split("#")[0].split("?")[0];
+      if (!path || /\.[a-z0-9]+$/i.test(path)) continue;
+      const norm = path.endsWith("/") ? path : `${path}/`;
+      const rel = file.replace(ROOT + "/", "");
+      const blog = norm.match(/^\/blogs\/([^/]+)\/$/);
+      if (blog) {
+        if (!registeredSlugs.has(blog[1])) {
+          errors.push(`${rel}\n    links to "${path}" — no blog post has slug "${blog[1]}"`);
+        }
+      } else if (norm !== "/" && norm !== "/blogs/" && !appRoutes.has(norm)) {
+        console.warn(c.grey(`  ⚠ ${rel} links to "${path}" — no page exists at that path.`));
+      }
+    }
+  }
+}
+
+// ── Unbalanced HTML inside post content ──────────────────
+// An unclosed tag (e.g. "<em>By …" with no </em>) makes the browser carry the
+// tag into every later element; React's tree then no longer matches and the
+// whole post re-renders client-side (hydration error #418, Oct 2026).
+{
+  const TAGS = ["em", "strong", "b", "i", "u", "a", "span", "code", "pre", "p", "div", "ul", "ol", "li", "table", "tr", "td", "th", "blockquote", "h2", "h3", "h4"];
+  for (const { file, content } of contentBySlug.values()) {
+    if (!registeredSlugs.has(content.slug)) continue;
+    const rel = file.replace(ROOT + "/", "");
+    (function scan(node, path) {
+      if (typeof node === "string") {
+        if (!node.includes("<")) return;
+        for (const t of TAGS) {
+          const open = (node.match(new RegExp(`<${t}(\\s[^>]*)?>`, "gi")) || []).length;
+          const close = (node.match(new RegExp(`</${t}>`, "gi")) || []).length;
+          if (open !== close) {
+            errors.push(`${rel}\n    unbalanced <${t}> (${open} open, ${close} close) at ${path}: "${node.slice(0, 70)}…"`);
+          }
+        }
+      } else if (Array.isArray(node)) node.forEach((v, i) => scan(v, `${path}[${i}]`));
+      else if (node && typeof node === "object") for (const [k, v] of Object.entries(node)) scan(v, `${path}.${k}`);
+    })(content, "");
+  }
+}
+
 // ── Report ────────────────────────────────────────────────
 console.log("");
 if (errors.length === 0) {

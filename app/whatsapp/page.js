@@ -38,7 +38,7 @@ export default function WhatsAppPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(waBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(WHATSAPP_FAQS)) }} />
       <WhatsappPageContent faqs={WHATSAPP_FAQS} />
-      <RelatedGuides category="WhatsApp API" />
+      <RelatedGuides limit={6} slugs={["best-whatsapp-business-api-provider-in-india", "whatsapp-business-api-pricing-india", "whatsapp-business-api-setup", "whatsapp-template-message-types", "whatsapp-business-app-vs-api", "best-whatsapp-bsp-india"]} />
     </>
   );
 }

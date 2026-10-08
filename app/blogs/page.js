@@ -32,7 +32,7 @@ const blogCollectionSchema = {
     url: 'https://www.ojiva.ai',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.ojiva.ai/OJIVA%20AI%20MAIN%20LOGO%20WHITE%20PNG.png',
+      url: 'https://www.ojiva.ai/ojiva-logo-optimized.png',
     },
   },
   mainEntity: {
@@ -51,7 +51,7 @@ export default function BlogsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionSchema) }} />
-      <BlogList />
+      <BlogList initialBlogs={blogsData} />
     </>
   );
 }

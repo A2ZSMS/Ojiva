@@ -565,20 +565,12 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Messaging Provider in India: What to Check Before You Commit",
-              "href": "/rcs-messaging-provider-in-india/"
+              "title": "RCS Messaging Provider in India",
+              "href": "/blogs/rcs-messaging-provider-in-india/"
             },
             {
-              "title": "WhatsApp Business API for Real Estate: Nurture Buyers at Scale",
-              "href": "/whatsapp-for-real-estate/"
-            },
-            {
-              "title": "SMS Marketing for Property Developers: Reach Every Buyer",
-              "href": "/sms-for-real-estate/"
-            },
-            {
-              "title": "Verified Business Messaging: Building Buyer Trust From the First Alert",
-              "href": "/verified-business-messaging/"
+              "title": "WhatsApp Business API for Real Estate",
+              "href": "/blogs/whatsapp-business-api-for-real-estate/"
             }
           ]
         }

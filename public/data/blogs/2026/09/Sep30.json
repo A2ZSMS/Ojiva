@@ -300,7 +300,7 @@
     },
     {
      "type": "p",
-     "html": "That is also the order in which to upgrade bulk SMS to RCS: start with your best-performing offer or reminder, confirm the opt-in covers promotional use, and leave critical codes where they are until the RCS setup has proven itself. Our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> covers where each channel fits."
+     "html": "That is also the order in which to upgrade bulk SMS to RCS: start with your best-performing offer or reminder, confirm the opt-in covers promotional use, and leave critical codes where they are until the RCS setup has proven itself. Our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> covers where each channel fits."
     }
    ]
   },
@@ -433,8 +433,8 @@
      "type": "related",
      "items": [
       {
-       "title": "RCS Business Messaging: Guide for Indian Businesses",
-       "href": "/blogs/rcs-business-messaging-india/"
+       "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+       "href": "/blogs/what-is-rcs-messaging/"
       },
       {
        "title": "Google RCS Business Messaging: Verified Texting",

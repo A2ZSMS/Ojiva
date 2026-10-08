@@ -489,7 +489,7 @@
         },
         {
           "type": "p",
-          "html": "If you are weighing this against your current setup, our <a href=\"/blogs/whatsapp-business-api-pricing/\">WhatsApp Business API pricing guide</a> and <a href=\"/blogs/rcs-business-messaging/\">RCS business messaging explainer</a> cover the decisions most teams make at the same time. <a href=\"/book-demo/\">Book a free demo</a> and we will map both channels onto how your own team already handles customers."
+          "html": "If you are weighing this against your current setup, our <a href=\"/blogs/whatsapp-business-api-pricing-india/\">WhatsApp Business API pricing guide</a> and <a href=\"/blogs/what-is-rcs-messaging/\">RCS business messaging explainer</a> cover the decisions most teams make at the same time. <a href=\"/book-demo/\">Book a free demo</a> and we will map both channels onto how your own team already handles customers."
         }
       ]
     },
@@ -511,16 +511,16 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Business Messaging Explained for Indian Brands",
-              "href": "/blogs/rcs-business-messaging/"
+              "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+              "href": "/blogs/what-is-rcs-messaging/"
             },
             {
-              "title": "WhatsApp Business API Pricing for Indian Businesses",
-              "href": "/blogs/whatsapp-business-api-pricing/"
+              "title": "WhatsApp Business API Pricing in India: Cost Breakdown",
+              "href": "/blogs/whatsapp-business-api-pricing-india/"
             },
             {
-              "title": "RCS vs SMS: Which Channel Wins for Alerts",
-              "href": "/blogs/rcs-vs-sms/"
+              "title": "RCS vs SMS: Key Differences & Which is Better for Business",
+              "href": "/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/"
             },
             {
               "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",

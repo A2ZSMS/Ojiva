@@ -1,22 +1,16 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { srcSetFor } from '@/lib/imageSrcSet';
+import blogsData from '@/public/data/blog.json';
 import { BLOG_CATEGORIES as CAT_COLOR, DEFAULT_CATEGORY_COLOR } from '@/lib/blogCategories';
 
 const formatDate = (str) =>
-  new Date(str).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  new Date(str).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
+// Server component: the 5 newest posts are rendered into the homepage HTML at
+// build time. It used to fetch /data/blog.json in the browser, so the HTML
+// Google received linked to 0 posts (SEO audit, Oct 2026).
 export default function BlogPreview() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch('/data/blog.json')
-      .then(r => r.json())
-      .then(data => setPosts(data.slice(0, 5)))
-      .catch(() => {});
-  }, []);
-
+  const posts = blogsData.slice(0, 5);
   if (posts.length === 0) return null;
 
   const [featured, ...rest] = posts;
@@ -47,6 +41,8 @@ export default function BlogPreview() {
             <div className="hp-blog-featured-img">
               <img
                 src={featured.image || '/og-image.jpg'}
+                srcSet={srcSetFor(featured.image)}
+                sizes="(max-width: 991px) 100vw, 640px"
                 alt={featured.title}
                 loading="eager"
                 decoding="async"
@@ -90,6 +86,8 @@ export default function BlogPreview() {
                   <div className="hp-blog-thumb-img">
                     <img
                       src={post.image || '/og-image.jpg'}
+                      srcSet={srcSetFor(post.image)}
+                      sizes="(max-width: 767px) 50vw, 300px"
                       alt={post.title}
                       loading="lazy"
                       decoding="async"

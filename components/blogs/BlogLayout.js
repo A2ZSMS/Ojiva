@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import blogsData from "../../public/data/blog.json";
+import { srcSetFor } from "@/lib/imageSrcSet";
 
 // ── Ojiva AI official social profiles ──
 const SOCIAL_LINKS = {
@@ -19,12 +20,29 @@ const BlogLayout = ({ slug, title, category, toc = [], children }) => {
   const [activeId, setActiveId] = useState(firstId);
   const [copied, setCopied] = useState(false);
 
+  // Related posts: 2 newest in the category + the next 5 posts after this one
+  // in a circular walk of the category (then of all posts if the category is
+  // small). The old "7 newest in category" rule meant older posts were never
+  // linked from anywhere — 10 posts had zero internal links (SEO audit, Oct
+  // 2026). The circular window guarantees every post is linked from the posts
+  // just before it, so nothing is orphaned as new posts are added.
   const relatedBlogs = React.useMemo(() => {
-    return blogsData
-      .filter(
-        (entry) => entry.category === category && entry.slug !== slug,
-      )
-      .slice(0, 7);
+    const LIMIT = 7;
+    const picked = [];
+    const add = (b) => {
+      if (b && b.slug !== slug && !picked.some((p) => p.slug === b.slug)) picked.push(b);
+    };
+    const walk = (list, n) => {
+      const i = list.findIndex((b) => b.slug === slug);
+      for (let k = 1; k < list.length && picked.length < n; k++) {
+        add(list[((i < 0 ? -1 : i) + k + list.length) % list.length]);
+      }
+    };
+    const sameCat = blogsData.filter((b) => b.category === category);
+    sameCat.slice(0, 2).forEach(add);   // keep fresh posts visible
+    walk(sameCat, LIMIT);               // neighbours in the category
+    walk(blogsData, LIMIT);             // top up from all posts if needed
+    return picked.slice(0, LIMIT);
   }, [category, slug]);
 
   const handleCopyLink = () => {
@@ -317,6 +335,8 @@ const BlogLayout = ({ slug, title, category, toc = [], children }) => {
                       width="100%"
                       height="auto"
                       src={relatedBlogs[0].image}
+                      srcSet={srcSetFor(relatedBlogs[0].image)}
+                      sizes="(max-width: 991px) 100vw, 320px"
                       alt={relatedBlogs[0].title}
                     />
                     <span className="d-block fw-semibold lh-sm">
@@ -338,6 +358,8 @@ const BlogLayout = ({ slug, title, category, toc = [], children }) => {
                         loading="lazy"
                         decoding="async"
                         src={blog.image}
+                        srcSet={srcSetFor(blog.image)}
+                        sizes="64px"
                         alt={blog.title}
                         width="64"
                         height="64"

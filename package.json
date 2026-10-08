@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/trim-bootstrap.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/validate-blogs.mjs",
+    "prebuild": "node scripts/validate-blogs.mjs && node scripts/subset-icons.mjs && node scripts/trim-bootstrap.mjs",
     "build": "next build",
-    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt && find out -name '*.map' -type f -delete",
+    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt && find out -name '*.map' -type f -delete && node scripts/image-variants.mjs",
     "start": "next start",
     "lint": "eslint",
     "validate:blogs": "node scripts/validate-blogs.mjs",
@@ -24,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "next-sitemap": "^4.2.3",
-    "postcss": "^8.5.8"
+    "postcss": "^8.5.8",
+    "sharp": "^0.34.5"
   }
 }

@@ -362,7 +362,7 @@
         },
         {
           "type": "p",
-          "html": "If you're comparing this against your current setup, our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp tier comparison</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map RCS lead conversion against your current funnel."
+          "html": "If you're comparing this against your current setup, our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp tier comparison</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map RCS lead conversion against your current funnel."
         }
       ]
     },
@@ -385,8 +385,8 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Business Messaging: Guide for Indian Businesses",
-              "href": "/blogs/rcs-business-messaging-india/"
+              "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+              "href": "/blogs/what-is-rcs-messaging/"
             },
             {
               "title": "Google RCS Business Messaging: Verified Texting",

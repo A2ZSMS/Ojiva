@@ -112,19 +112,25 @@ module.exports = {
     const priority = rule ? rule.priority : 0.7;
     const changefreq = rule ? rule.changefreq : 'weekly';
 
-    // Inject real lastmod for blog posts
+    // lastmod only where we know a real date. Blog posts use `updated` (set it
+    // when you meaningfully revise a post) or their publish date; /blogs/ uses
+    // the newest post. Static pages get none: stamping every page with the
+    // build time on each deploy taught Google to ignore lastmod (SEO audit).
     let lastmod;
-    if (p.startsWith('/blogs/') && p !== '/blogs/') {
+    const postDate = (bp) => bp.updated || bp.date;
+    if (p === '/blogs/') {
+      lastmod = blogPosts.map(postDate).filter(Boolean).sort().pop();
+    } else if (p.startsWith('/blogs/')) {
       const slug = p.replace('/blogs/', '').replace(/\/$/, '');
       const post = blogPosts.find(bp => bp.slug === slug);
-      if (post && post.date) lastmod = post.date;
+      if (post) lastmod = postDate(post);
     }
 
     return {
       loc: p,
       changefreq,
       priority,
-      lastmod: lastmod || (config.autoLastmod ? new Date().toISOString() : undefined),
+      lastmod,
       alternateRefs: config.alternateRefs || [],
     };
   },

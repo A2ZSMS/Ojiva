@@ -487,7 +487,7 @@
         },
         {
           "type": "p",
-          "html": "On consent, travel campaigns should follow the same DPDP Act principles a team already applies to SMS and WhatsApp — clear opt-in at capture, an easy opt-out, and no using a traveler's number beyond what they agreed to. Ojiva AI handles the verification and setup directly, and you can read the wider context in our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide for Indian businesses</a> or in Google's <a href=\"https://developers.google.com/business-communications/rcs-business-messaging\" target=\"_blank\" rel=\"noopener\">RCS for Business documentation</a>."
+          "html": "On consent, travel campaigns should follow the same DPDP Act principles a team already applies to SMS and WhatsApp — clear opt-in at capture, an easy opt-out, and no using a traveler's number beyond what they agreed to. Ojiva AI handles the verification and setup directly, and you can read the wider context in our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide for Indian businesses</a> or in Google's <a href=\"https://developers.google.com/business-communications/rcs-business-messaging\" target=\"_blank\" rel=\"noopener\">RCS for Business documentation</a>."
         }
       ]
     },
@@ -536,7 +536,7 @@
         },
         {
           "type": "p",
-          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/rcs-business-messaging-india/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp for travel agencies guide</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map a rich-messaging journey onto your own booking flow."
+          "html": "If you're weighing this against your current setup, our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp for travel agencies guide</a> cover the decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map a rich-messaging journey onto your own booking flow."
         }
       ]
     },
@@ -559,8 +559,8 @@
           "type": "related",
           "items": [
             {
-              "title": "RCS Business Messaging: Guide for Indian Businesses",
-              "href": "/blogs/rcs-business-messaging-india/"
+              "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+              "href": "/blogs/what-is-rcs-messaging/"
             },
             {
               "title": "Google RCS Business Messaging: Verified Texting",

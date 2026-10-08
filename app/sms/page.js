@@ -42,7 +42,7 @@ export default function SMSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(smsBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(SMS_FAQS)) }} />
       <SmsPageContent faqs={SMS_FAQS} />
-      <RelatedGuides category="Bulk SMS" />
+      <RelatedGuides limit={6} slugs={["bulk-sms-in-india", "dlt-registration-bulk-sms-india", "sms-api-in-india", "best-bulk-sms-providers-india", "best-bulk-sms-service-provider-bangalore", "why-bulk-sms-most-powerful-marketing-channel-india-2026"]} />
     </>
   );
 }

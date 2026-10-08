@@ -34,7 +34,7 @@ export default function WhatsAppChatbotPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(chatbotBreadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(CHATBOT_FAQS)) }} />
       <ChatbotPageClient faqs={CHATBOT_FAQS} />
-      <RelatedGuides slugs={["ai-powered-business-communication-automation-india-2026", "whatsapp-business-app-vs-api", "whatsapp-api-message-templates-india"]} />
+      <RelatedGuides slugs={["best-whatsapp-chatbot-for-business-in-india", "best-whatsapp-chatbot-service-provider-in-bangalore", "ai-powered-business-communication-automation-india-2026"]} />
     </>
   );
 }
