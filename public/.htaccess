@@ -21,6 +21,16 @@
   # internal "/ → index.html" lookup never matches (no redirect loop).
   RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?]
   RewriteRule ^(.*/)?index\.html$ https://www.ojiva.ai/$1 [R=301,L]
+
+  # Duplicate blog posts merged Oct 2026 (SEO: they competed for the same
+  # searches). Each old URL 301s to the post that now covers the topic, passing
+  # its ranking signals. Never reuse these slugs for new posts.
+  RewriteRule ^blogs/top-bulk-sms-service-providers-india/?$ https://www.ojiva.ai/blogs/best-bulk-sms-providers-india/ [R=301,L]
+  RewriteRule ^blogs/best-whatsapp-business-cloud-api-service-provider-in-bangalore/?$ https://www.ojiva.ai/blogs/best-whatsapp-api-service-provider-in-bangalore/ [R=301,L]
+  RewriteRule ^blogs/rcs-messaging-provider-in-india/?$ https://www.ojiva.ai/blogs/best-rcs-message-service-provider-in-india/ [R=301,L]
+  RewriteRule ^blogs/best-rcs-messaging-provider-karnataka/?$ https://www.ojiva.ai/blogs/rcs-messaging-provider-karnataka-guide/ [R=301,L]
+  RewriteRule ^blogs/whatsapp-vs-whatsapp-business-vs-api/?$ https://www.ojiva.ai/blogs/whatsapp-business-app-vs-api/ [R=301,L]
+  RewriteRule ^blogs/whatsapp-template-message-types-guide/?$ https://www.ojiva.ai/blogs/whatsapp-template-message-types/ [R=301,L]
 </IfModule>
 
 # ── Compression (LiteSpeed honours mod_deflate; Brotli auto on LSWS) ──────────

@@ -19,12 +19,10 @@ import blog_whatsapp_business_api_for_real_estate from '../../../public/data/blo
 import blog_best_whatsapp_chatbot_for_business_in_india from '../../../public/data/blogs/2026/07/best-whatsapp-chatbot-for-business-in-india.json';
 import blog_rcs_marketing_automation_high_converting_campaigns from '../../../public/data/blogs/2026/07/rcs-marketing-automation-high-converting-campaigns.json';
 import blog_best_whatsapp_api_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-whatsapp-api-service-provider-in-bangalore.json';
-import blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore from '../../../public/data/blogs/2026/07/best-whatsapp-business-cloud-api-service-provider-in-bangalore.json';
 import blog_best_bulk_sms_service_provider_in_karnataka from '../../../public/data/blogs/2026/07/best-bulk-sms-service-provider-in-karnataka.json';
 import blog_best_rcs_message_service_provider_in_india from '../../../public/data/blogs/2026/07/best-rcs-message-service-provider-in-india.json';
 import blog_grow_business_with_rcs_india from '../../../public/data/blogs/2026/06/grow-business-with-rcs-india.json';
 import blog_whatsapp_api_message_templates_india from '../../../public/data/blogs/2026/06/whatsapp-api-message-templates-india.json';
-import blog_best_rcs_messaging_provider_karnataka from '../../../public/data/blogs/2026/06/best-rcs-messaging-provider-karnataka.json';
 import blog_best_whatsapp_bsp_india from '../../../public/data/blogs/2026/06/best-whatsapp-bsp-india.json';
 import blog_dlt_registration_bulk_sms_india from '../../../public/data/blogs/2026/06/dlt-registration-bulk-sms-india.json';
 import blog_whatsapp_business_app_vs_api from '../../../public/data/blogs/2026/06/whatsapp-business-app-vs-api.json';
@@ -40,17 +38,14 @@ import blog_bulk_voice_call_ivr_automation_guide_india_2026 from '../../../publi
 import blog_ai_powered_business_communication_automation_india_2026 from '../../../public/data/blogs/2026/04/ai-powered-business-communication-automation-india-2026.json';
 import blog_Aug05 from "../../../public/data/blogs/2026/08/Aug05.json";
 import blog_whatsapp_business_api_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug07.json";
-import blog_Aug10 from "../../../public/data/blogs/2026/08/Aug10.json";
 import blog_whatsapp_business_api_setup from "../../../public/data/blogs/2026/08/Aug12.json";
 import blog_whatsapp_template_message_types from "../../../public/data/blogs/2026/08/Aug14.json";
 import blog_Aug17 from "../../../public/data/blogs/2026/08/Aug17.json";
 import blog_Aug19 from "../../../public/data/blogs/2026/08/Aug19.json";
 import blog_whatsapp_flows_guide from "../../../public/data/blogs/2026/08/whatsapp-flows-guide.json";
 import blog_whatsapp_templates_for_travel_agencies from "../../../public/data/blogs/2026/08/Aug24.json";
-import blog_whatsapp_template_message_types_guide from "../../../public/data/blogs/2026/08/Aug30.json";
 import blog_best_bulk_sms_service_provider_bangalore from "../../../public/data/blogs/2026/08/Aug31.json";
 import blog_google_rcs_business_messaging from "../../../public/data/blogs/2026/09/Sep03.json";
-import blog_whatsapp_vs_whatsapp_business_vs_api from "../../../public/data/blogs/2026/09/Sep08.json";
 import blog_rcs_real_estate_retail_lead_conversion from "../../../public/data/blogs/2026/09/Sep10.json";
 import blog_rcs_business_messaging_travel_tourism from "../../../public/data/blogs/2026/09/Sep16.json";
 import blog_sms_api_in_india from "../../../public/data/blogs/2026/09/Sep18.json";
@@ -58,7 +53,6 @@ import blog_whatsapp_business_api_pricing_update from "../../../public/data/blog
 import blog_whatsapp_business_api_provider_in_kerala from "../../../public/data/blogs/2026/09/Sep23.json";
 import blog_rcs_vs_whatsapp_business_api_india from "../../../public/data/blogs/2026/09/Sep25.json";
 import blog_upgrade_bulk_sms_to_rcs_india from "../../../public/data/blogs/2026/09/Sep30.json";
-import blog_top_bulk_sms_service_providers_india from "../../../public/data/blogs/2026/10/Oct02.json";
 import blog_how_to_set_up_rcs_for_business_india from "../../../public/data/blogs/2026/10/Oct07.json";
 
 const BlogJson = {
@@ -78,8 +72,6 @@ const BlogJson = {
     blog_rcs_marketing_automation_high_converting_campaigns,
   "best-whatsapp-api-service-provider-in-bangalore":
     blog_best_whatsapp_api_service_provider_in_bangalore,
-  "best-whatsapp-business-cloud-api-service-provider-in-bangalore":
-    blog_best_whatsapp_business_cloud_api_service_provider_in_bangalore,
   "best-bulk-sms-service-provider-in-karnataka":
     blog_best_bulk_sms_service_provider_in_karnataka,
   "best-rcs-message-service-provider-in-india":
@@ -87,8 +79,6 @@ const BlogJson = {
   "grow-business-with-rcs-india": blog_grow_business_with_rcs_india,
   "whatsapp-api-message-templates-india":
     blog_whatsapp_api_message_templates_india,
-  "best-rcs-messaging-provider-karnataka":
-    blog_best_rcs_messaging_provider_karnataka,
   "best-whatsapp-bsp-india": blog_best_whatsapp_bsp_india,
   "dlt-registration-bulk-sms-india": blog_dlt_registration_bulk_sms_india,
   "whatsapp-business-app-vs-api": blog_whatsapp_business_app_vs_api,
@@ -112,7 +102,6 @@ const BlogJson = {
   "best-whatsapp-business-api-provider-hyderabad": blog_Aug05,
   "whatsapp-business-api-for-travel-agencies":
     blog_whatsapp_business_api_for_travel_agencies,
-  "rcs-messaging-provider-in-india": blog_Aug10,
   "whatsapp-business-api-setup": blog_whatsapp_business_api_setup,
   "whatsapp-template-message-types": blog_whatsapp_template_message_types,
   "rcs-messaging-for-real-estate": blog_Aug17,
@@ -120,13 +109,9 @@ const BlogJson = {
   "whatsapp-flows-guide": blog_whatsapp_flows_guide,
   "whatsapp-templates-for-travel-agencies":
     blog_whatsapp_templates_for_travel_agencies,
-  "whatsapp-template-message-types-guide":
-    blog_whatsapp_template_message_types_guide,
   "best-bulk-sms-service-provider-bangalore":
     blog_best_bulk_sms_service_provider_bangalore,
   "google-rcs-business-messaging": blog_google_rcs_business_messaging,
-  "whatsapp-vs-whatsapp-business-vs-api":
-    blog_whatsapp_vs_whatsapp_business_vs_api,
   "rcs-real-estate-retail-lead-conversion":
     blog_rcs_real_estate_retail_lead_conversion,
   "rcs-business-messaging-travel-tourism":
@@ -141,8 +126,6 @@ const BlogJson = {
     blog_rcs_vs_whatsapp_business_api_india,
   "upgrade-bulk-sms-to-rcs-india":
     blog_upgrade_bulk_sms_to_rcs_india,
-  "top-bulk-sms-service-providers-india":
-    blog_top_bulk_sms_service_providers_india,
   "how-to-set-up-rcs-for-business-india":
     blog_how_to_set_up_rcs_for_business_india,
 };

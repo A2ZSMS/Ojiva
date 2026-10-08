@@ -27,7 +27,7 @@
         },
         {
           "type": "p",
-          "html": "This guide walks through the templates a travel agency actually needs — booking confirmations, reminders, offers, upsells, retargeting, feedback and referrals — with real examples for each, plus what they cost in India and how to get them live without a developer. If your number isn't set up yet, start with our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide first; for the full rules on how Meta classifies templates, see our <a href=\"/blogs/whatsapp-template-message-types-guide/\">WhatsApp template message types</a> guide. Ojiva AI is an official Meta Business Solution Provider that submits and manages these templates for travel businesses across India."
+          "html": "This guide walks through the templates a travel agency actually needs — booking confirmations, reminders, offers, upsells, retargeting, feedback and referrals — with real examples for each, plus what they cost in India and how to get them live without a developer. If your number isn't set up yet, start with our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide first; for the full rules on how Meta classifies templates, see our <a href=\"/blogs/whatsapp-template-message-types/\">WhatsApp template message types</a> guide. Ojiva AI is an official Meta Business Solution Provider that submits and manages these templates for travel businesses across India."
         },
         {
           "type": "image",
@@ -446,7 +446,7 @@
         },
         {
           "type": "p",
-          "html": "For the full rules on how Meta categorizes and reviews every template, our <a href=\"/blogs/whatsapp-template-message-types-guide/\">WhatsApp template message types guide</a> covers that in depth, and our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide covers getting your number set up in the first place. When you're ready to put these templates to work, Ojiva AI handles submission and management end to end as an official Meta Business Solution Provider — <a href=\"/book-demo/\">book a free demo</a> and we'll map your travel messaging calendar on the call."
+          "html": "For the full rules on how Meta categorizes and reviews every template, our <a href=\"/blogs/whatsapp-template-message-types/\">WhatsApp template message types guide</a> covers that in depth, and our <a href=\"/blogs/whatsapp-business-api-for-travel-agencies/\">WhatsApp Business API for travel agencies</a> guide covers getting your number set up in the first place. When you're ready to put these templates to work, Ojiva AI handles submission and management end to end as an official Meta Business Solution Provider — <a href=\"/book-demo/\">book a free demo</a> and we'll map your travel messaging calendar on the call."
         },
         {
           "type": "p",

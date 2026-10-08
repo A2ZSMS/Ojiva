@@ -362,7 +362,7 @@
         },
         {
           "type": "p",
-          "html": "If you're comparing this against your current setup, our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-vs-whatsapp-business-vs-api/\">WhatsApp tier comparison</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map RCS lead conversion against your current funnel."
+          "html": "If you're comparing this against your current setup, our <a href=\"/blogs/what-is-rcs-messaging/\">RCS Business Messaging guide</a> and <a href=\"/blogs/whatsapp-business-app-vs-api/\">WhatsApp tier comparison</a> cover the adjacent decisions most teams make around the same time. <a href=\"/book-demo/\">Book a free demo</a> and we'll map RCS lead conversion against your current funnel."
         }
       ]
     },
@@ -393,12 +393,12 @@
               "href": "/blogs/google-rcs-business-messaging/"
             },
             {
-              "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",
-              "href": "/blogs/whatsapp-vs-whatsapp-business-vs-api/"
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
             },
             {
               "title": "WhatsApp Template Message Types: Categories & Examples",
-              "href": "/blogs/whatsapp-template-message-types-guide/"
+              "href": "/blogs/whatsapp-template-message-types/"
             }
           ]
         }
