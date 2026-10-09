@@ -1,0 +1,549 @@
+{
+  "slug": "types-of-sms-in-india-trai-categories",
+  "metaTitle": "Types of SMS in India: TRAI Categories Explained | Ojiva AI",
+  "metaDescription": "Learn the types of SMS in India: transactional, service and promotional. Compare TRAI rules, DND, timing, DLT, sender ID and templates. Free demo.",
+  "h1": "Types of SMS in India: Transactional, Service and Promotional",
+  "primaryKeyword": "types of SMS in India",
+  "keywords": {
+    "secondary": [
+      "TRAI SMS classification",
+      "transactional vs promotional SMS",
+      "service implicit SMS",
+      "service explicit SMS",
+      "OTP SMS in India",
+      "promotional SMS rules and DND",
+      "DLT registration for SMS",
+      "SMS sender ID and header approval",
+      "SMS template approval process",
+      "bulk SMS service provider in India"
+    ],
+    "shortTail": [
+      "bulk SMS",
+      "transactional SMS",
+      "promotional SMS",
+      "service SMS",
+      "OTP SMS",
+      "DLT",
+      "sender ID",
+      "SMS template",
+      "DND",
+      "TRAI"
+    ],
+    "longTail": [
+      "what is the difference between transactional and promotional SMS in India",
+      "is OTP SMS transactional or service",
+      "can I send promotional messages through a transactional SMS route",
+      "what is a service implicit SMS under TRAI rules",
+      "is DLT registration mandatory for transactional SMS",
+      "what is the difference between service explicit and service implicit SMS",
+      "which SMS type should a startup use for order updates",
+      "how do I get SMS templates approved in Bangalore",
+      "what are the promotional SMS timing rules in India",
+      "how to choose the right SMS type for my business"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "trai-classification",
+      "label": "TRAI Categories"
+    },
+    {
+      "id": "otp-transaction",
+      "label": "OTP & Alerts"
+    },
+    {
+      "id": "service-messages",
+      "label": "Service Messages"
+    },
+    {
+      "id": "promotional-rules",
+      "label": "Promotional Rules"
+    },
+    {
+      "id": "dlt-registration",
+      "label": "DLT Registration"
+    },
+    {
+      "id": "sender-id",
+      "label": "Sender ID & Header"
+    },
+    {
+      "id": "template-approval",
+      "label": "Template Approval"
+    },
+    {
+      "id": "choosing-sms-type",
+      "label": "Choosing the Right Type"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>India&rsquo;s telecom rules sort every business text into three categories, and the category you choose decides who receives the message, when it can go out and whether it is delivered at all.</strong> An OTP sent on a marketing route can vanish for anyone on the Do Not Disturb register, while an offer sent on an alert route can get your sender account blocked."
+        },
+        {
+          "type": "p",
+          "html": "This guide explains how each category works, where implicit and explicit service messages differ, and how entity, header and template steps fit together, so a startup or SMB can set up <a href=\"/sms/\">Bulk SMS</a> correctly the first time. Ojiva AI runs SMS alongside WhatsApp, RCS and voice on one dashboard, so if you want help mapping your own messages, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct09(1).webp",
+          "alt": "Ojiva AI dashboard showing alert, service and marketing SMS campaigns on separate routes for an Indian business"
+        }
+      ]
+    },
+    {
+      "id": "trai-classification",
+      "heading": "TRAI SMS Classification in India: The Three Categories at a Glance",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The regulator groups commercial messages by purpose and by the consent behind them. Transactional messages respond to something the customer has just done. Service messages relate to an existing customer relationship. Promotional messages market something. Each category travels on its own route with its own timing and Do Not Disturb treatment, which is why the table below is worth bookmarking."
+        },
+        {
+          "type": "p",
+          "html": "<div class=\"table-responsive\"><table class=\"table table-bordered table-striped align-middle\"><thead><tr><th scope=\"col\">Feature</th><th scope=\"col\">Transactional</th><th scope=\"col\">Service (implicit)</th><th scope=\"col\">Promotional</th></tr></thead><tbody><tr><th scope=\"row\">Purpose</th><td>Complete a transaction the customer just started</td><td>Inform an existing customer about their relationship with you</td><td>Market, offer or announce something</td></tr><tr><th scope=\"row\">Typical examples</th><td>OTP, payment confirmation, debit alert</td><td>Order shipped, bill reminder, booking confirmation</td><td>Sale announcement, new launch, discount offer</td></tr><tr><th scope=\"row\">Consent basis</th><td>Implied by the customer&rsquo;s own transaction</td><td>Implied by an existing relationship</td><td>Customer preference and consent</td></tr><tr><th scope=\"row\">Reaches DND-registered numbers</th><td>Yes</td><td>Yes</td><td>No</td></tr><tr><th scope=\"row\">Delivery window</th><td>Any time</td><td>Any time</td><td>10 AM to 9 PM</td></tr><tr><th scope=\"row\">Content allowed</th><td>Functional details only</td><td>Informational, never promotional</td><td>Marketing content with an opt-out</td></tr></tbody></table></div>"
+        },
+        {
+          "type": "p",
+          "html": "Treat the table as a starting point, because operators apply the categories strictly and review templates against them. If a message could fit two columns, it usually belongs in the stricter one."
+        }
+      ]
+    },
+    {
+      "id": "otp-transaction",
+      "heading": "OTP and Transaction Alert SMS: Messages That Must Arrive Fast",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Transactional SMS is triggered by a transaction the customer has just started: a login code, a payment confirmation or a bank debit alert. They are time-critical and can reach numbers on the Do Not Disturb register at any hour. In return, the content must stay strictly functional, because a discount line tucked under a code is a quick way to get a template rejected."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "Login and verification codes:",
+              "desc": "OTP SMS needs the fastest path available, because the code expires within minutes."
+            },
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "Payment and banking alerts:",
+              "desc": "debits, credits and confirmations tied to an action the customer just took."
+            },
+            {
+              "icon": "bi-ban",
+              "title": "No marketing content:",
+              "desc": "mixing an offer into an alert breaks the category and puts delivery at risk."
+            },
+            {
+              "icon": "bi-stopwatch-fill",
+              "title": "Priority handling:",
+              "desc": "keep these messages off the queue of a large marketing send so they are never delayed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Fintech apps, marketplaces and SaaS products lean on this category the most. Teams that fire alerts from their own product usually connect through an SMS API with delivery webhooks, so a failed code shows up immediately instead of arriving as a support ticket."
+        }
+      ]
+    },
+    {
+      "id": "service-messages",
+      "heading": "Implicit vs Explicit Service Messages: Where Consent Changes the Rules",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Service SMS sits between alerts and marketing. A service implicit message arises from the customer&rsquo;s own actions or relationship with you and is not promotional, such as an order confirmation, a delivery update or a billing notice. Because the customer benefits from receiving it, it is not blocked for people who have otherwise opted out of commercial messages."
+        },
+        {
+          "type": "p",
+          "html": "Service explicit was the category for messages that needed digitally verified consent. Operators have since been moving those templates under promotional handling, which brings Do Not Disturb filtering and the permitted-hours window with it. If you still see explicit templates on your registration portal, check how your operators currently treat them before you schedule a send."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Order and delivery updates:",
+              "desc": "classic service implicit content, sent because the customer placed the order."
+            },
+            {
+              "icon": "bi-receipt-cutoff",
+              "title": "Billing and account notices:",
+              "desc": "statements, renewal dates and receipts linked to an active relationship."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Booking reminders:",
+              "desc": "confirmations for an appointment or slot the customer made with you."
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Where it goes wrong:",
+              "desc": "adding an offer to an order update turns it into promotional content and the template is rejected."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Implicit consent also has a shelf life. TRAI&rsquo;s amendments state that consent implied by a contract lasts only for the duration of that relationship, and consent given to complete an ongoing transaction is valid for seven days. After that, you need fresh explicit consent. The details are in the regulator&rsquo;s <a href=\"https://cms.trai.gov.in/sites/default/files/2025-02/PR_No.11of2025.pdf\" target=\"_blank\" rel=\"noopener\">official press release on the amended rules</a>."
+        }
+      ]
+    },
+    {
+      "id": "promotional-rules",
+      "heading": "Promotional SMS Rules and DND Compliance: Timing, Consent and Opt-Out",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Promotional SMS carries offers, launches and marketing reminders. They cannot be delivered to numbers on the Do Not Disturb register and are limited to a daytime window of 10 AM to 9 PM, so a campaign scheduled late can simply fail. Operators have adjusted this window before, so confirm the current timing with your provider."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-clock-fill",
+              "title": "Schedule inside the window:",
+              "desc": "start sends after 10 AM and leave room for large lists to finish before 9 PM."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "Filter before you send:",
+              "desc": "scrub lists against the preference register so credits are not spent on messages that cannot be delivered."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Send to people who expect it:",
+              "desc": "consent keeps complaints low and response healthy."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Give a clear opt-out:",
+              "desc": "the amended rules require promotional messages to carry a simple way to stop receiving them."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Teams that get good results from SMS marketing treat the window as a design constraint: one well-timed message with a clear offer usually serves you better than three rushed ones. When plain text stops carrying enough, the same contact list can move to <a href=\"/rcs/\">RCS Business Messaging</a> with rich cards and buttons."
+        }
+      ]
+    },
+    {
+      "id": "dlt-registration",
+      "heading": "DLT Registration for SMS: The Entity Setup Every Sender Needs",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every business that sends commercial SMS in India registers on the telecom operators&rsquo; distributed ledger platform. Registration starts with your business entity, the legal sender of the messages, and ends with linking your chosen provider so each message can be traced from sender to recipient. Messages from an unregistered entity are rejected before they reach a handset."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building-fill",
+              "title": "Entity registration:",
+              "desc": "your legal business details are verified once and you receive a unique entity ID."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Verification documents:",
+              "desc": "business proof and authorised-signatory details are checked, and the exact documents vary by operator."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Provider linking:",
+              "desc": "your sending provider is linked to your entity, and the amended rules limit intermediaries to keep that chain short."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Link whitelisting:",
+              "desc": "URLs, APK links and OTT links in a message must be whitelisted or the traffic is blocked."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct09(2).webp",
+          "alt": "Entity, header and template registration steps for sending business SMS in India"
+        },
+        {
+          "type": "p",
+          "html": "For the portal-by-portal steps, read our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">DLT registration guide for senders in India</a>. This registration applies to SMS only; WhatsApp follows Meta&rsquo;s own business verification and template review instead."
+        }
+      ]
+    },
+    {
+      "id": "sender-id",
+      "heading": "SMS Sender ID and Header Approval: Your Name on Every Message",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A sender ID, formally called a header, is the name recipients see instead of a phone number. Headers are registered against your entity and tied to a message category, so a header approved for alerts cannot be used to push offers. The regulator has also introduced standard suffixes, such as -P, -S, -T and -G, so customers can tell promotional, service, transactional and government messages apart at a glance."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-card-heading",
+              "title": "Pick a recognisable name:",
+              "desc": "a short header linked to your brand builds more trust than an unfamiliar number."
+            },
+            {
+              "icon": "bi-diagram-2-fill",
+              "title": "Match header to category:",
+              "desc": "register separate headers for alerts and for marketing instead of sharing one."
+            },
+            {
+              "icon": "bi-shield-fill-check",
+              "title": "Avoid look-alike names:",
+              "desc": "headers that imitate a bank or a government body are rejected during review."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Plan for review time:",
+              "desc": "approval is not instant, so register headers before a launch date rather than on it."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Once your headers are approved, the route behind them matters as much as the name. Our <a href=\"/sms/\">Bulk SMS services</a> page lists the categories we support and how they are kept apart."
+        }
+      ]
+    },
+    {
+      "id": "template-approval",
+      "heading": "The SMS Template Approval Process: Variables, Categories and Rejections",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A message template is the fixed wording of a message with placeholders for the parts that change, such as a name, an order number or a code. Each template is registered under a category and reviewed before use. At send time, operators compare the real message with the approved wording, and any mismatch causes the message to be dropped quietly."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-braces",
+              "title": "Use variables correctly:",
+              "desc": "mark every changing value as a variable and keep the fixed text exactly as approved."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "Choose the honest category:",
+              "desc": "a template classified as an alert but written like an offer is a leading cause of rejection."
+            },
+            {
+              "icon": "bi-pencil-square",
+              "title": "Keep wording stable:",
+              "desc": "small edits, such as a changed word or an extra space, can break the match."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Learn from rejections:",
+              "desc": "read the reason, fix the single issue and resubmit instead of rewriting the whole message."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Most teams keep a short library of approved templates, one per event, and map each event to the right one in their SMS gateway so nobody edits copy at the last minute. Reusing a proven approved format is faster than drafting a new SMS template for every campaign."
+        }
+      ]
+    },
+    {
+      "id": "choosing-sms-type",
+      "heading": "Choosing the Right SMS Type for Your Business: A Practical Method",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Start with the message, not the route. Ask what triggered it, whether the customer expects it and whether it contains anything promotional. The table below maps common messages to the category that usually fits, so you can classify before you register anything."
+        },
+        {
+          "type": "p",
+          "html": "<div class=\"table-responsive\"><table class=\"table table-bordered table-hover align-middle\"><thead><tr><th scope=\"col\">Your message</th><th scope=\"col\">Usual category</th><th scope=\"col\">Why it fits</th></tr></thead><tbody><tr><td>Login or payment OTP</td><td>Transactional</td><td>Triggered by an action the customer just took and needed within minutes</td></tr><tr><td>Order shipped update</td><td>Service (implicit)</td><td>Arises from a purchase and informs without selling</td></tr><tr><td>Fee or bill reminder</td><td>Service (implicit)</td><td>Tied to an active customer relationship</td></tr><tr><td>Festival sale announcement</td><td>Promotional</td><td>Marketing content, so consent, filtering and timing rules apply</td></tr><tr><td>Order update with a coupon added</td><td>Promotional</td><td>Offer content changes the category of the whole message</td></tr><tr><td>Renewal reminder with an upgrade pitch</td><td>Promotional</td><td>Mixed content follows the stricter category</td></tr></tbody></table></div>"
+        },
+        {
+          "type": "p",
+          "html": "When a message mixes information with an offer, the safe move is to send it as promotional or to split it into two messages. A promotional line disguised as a service update is a common reason traffic gets blocked."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct09(3).webp",
+          "alt": "Flowchart for classifying a business message as an alert, service update or marketing SMS in India"
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cart-fill",
+              "title": "Ecommerce and D2C:",
+              "desc": "order and delivery updates are service, while cart-recovery offers are promotional."
+            },
+            {
+              "icon": "bi-bank",
+              "title": "Banking and fintech:",
+              "desc": "alerts and codes are transactional, while product offers are promotional."
+            },
+            {
+              "icon": "bi-mortarboard-fill",
+              "title": "Education:",
+              "desc": "fee receipts and attendance notices are service, while admission campaigns are promotional."
+            },
+            {
+              "icon": "bi-house-door-fill",
+              "title": "Real estate:",
+              "desc": "site-visit confirmations are service, while new launch announcements are promotional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Teams Run Every SMS Category Through Ojiva AI",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru-based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Teams in Bangalore and across India use it to keep the three categories on separate routes instead of juggling vendors. If you are shortlisting an SMS service provider, here is how the platform maps to the setup above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Registration guidance in onboarding:",
+              "desc": "entity, header and template steps are walked through with you."
+            },
+            {
+              "icon": "bi-signpost-split-fill",
+              "title": "Separate routes by category:",
+              "desc": "alerts, service updates and marketing run apart so one never delays another."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery reports with reasons:",
+              "desc": "see why a message failed and whether the fix is yours."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "One account, more channels:",
+              "desc": "add the <a href=\"/whatsapp/\">WhatsApp Business API</a> or RCS later without a second vendor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "The Short Version: Classify First, Register Next, Then Send",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The three SMS categories exist to protect recipients, and they reward senders who plan. Match each message to its purpose, keep alerts free of marketing, treat service explicit as promotional until your portal says otherwise, and schedule promotions inside the permitted window. Get the entity, header and template right once, and day-to-day sending becomes routine."
+        },
+        {
+          "type": "p",
+          "html": "Ojiva AI can help you map your message types, volumes and registration setup. <a href=\"/book-demo/\">Book a free demo</a> or explore our <a href=\"/blogs/upgrade-bulk-sms-to-rcs-india/\">guide to upgrading from SMS to RCS</a> if rich messaging is next. Whatever you choose, send a small test across different operators before committing volume."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            },
+            {
+              "title": "Best Bulk SMS Service Provider in Bangalore",
+              "href": "/blogs/best-bulk-sms-service-provider-bangalore/"
+            },
+            {
+              "title": "How to Upgrade Bulk SMS to RCS Messaging in India",
+              "href": "/blogs/upgrade-bulk-sms-to-rcs-india/"
+            },
+            {
+              "title": "WhatsApp vs WhatsApp Business vs WhatsApp Business API",
+              "href": "/blogs/whatsapp-vs-whatsapp-business-vs-api/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is the difference between transactional and promotional SMS in India?",
+              "a": "<p>Transactional SMS responds to something the customer just did, such as an OTP or payment alert, and can reach Do Not Disturb numbers at any hour. Promotional SMS carries marketing, is blocked for Do Not Disturb numbers and is limited to 10 AM to 9 PM. Each needs its own approved template and header, and the two cannot share a route.</p>"
+            },
+            {
+              "q": "Is OTP SMS transactional or service?",
+              "a": "<p>Codes are normally registered as transactional because they respond to a login or payment the customer has just started. Some operators handle certain verification flows under service implicit, so register the template under the category your portal approves for it. Either way, keep the message free of any promotional wording.</p>"
+            },
+            {
+              "q": "Can I send promotional messages through a transactional SMS route?",
+              "a": "<p>No. Content on an alert route must be strictly functional, and mixing in an offer is a common reason for template rejection and blocked traffic. If you want to market to the same customers, register a promotional header and template, send within the permitted window and respect the Do Not Disturb register.</p>"
+            },
+            {
+              "q": "What is a service implicit SMS under TRAI rules?",
+              "a": "<p>It is a non-promotional message that arises from the customer&rsquo;s own actions or relationship with you, such as an order update, a bill notice or a booking confirmation. It is not blocked for people who have opted out of marketing. The implied consent lasts only while the relationship or contract is active, so it should not be used to market.</p>"
+            },
+            {
+              "q": "Is DLT registration mandatory for transactional SMS?",
+              "a": "<p>Yes. Registration applies to every commercial SMS in India, including alerts and codes. Operators check each message against your registered entity, header and template, and anything that does not match is rejected. The requirement is specific to SMS, so WhatsApp messages follow Meta&rsquo;s own business verification instead.</p>"
+            },
+            {
+              "q": "What is the difference between service explicit and service implicit SMS?",
+              "a": "<p>Service implicit follows from an existing relationship and needs no separate opt-in. Service explicit relied on digitally verified consent from the customer. Operators have been moving explicit templates under promotional handling, so Do Not Disturb filtering and the 10 AM to 9 PM window can apply. Check how your portal currently classifies them.</p>"
+            },
+            {
+              "q": "Which SMS type should a startup use for order updates?",
+              "a": "<p>Order confirmations, shipping updates and delivery notices usually fit service implicit, because they follow a purchase and inform without selling. Keep codes and payment alerts under transactional. If an update also carries a coupon or upsell, send it as promotional or split it into two messages so the template is approved cleanly.</p>"
+            },
+            {
+              "q": "How do I get SMS templates approved for Bangalore / Bengaluru businesses?",
+              "a": "<p>The process is national rather than city-specific. Register your entity, get a header approved, then submit each template under the right category with variables marked clearly. Businesses in Bangalore or Bengaluru follow the same steps. Ojiva AI guides new senders through them, and our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">registration guide</a> covers each portal screen.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

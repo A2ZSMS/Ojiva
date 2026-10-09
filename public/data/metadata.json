@@ -471,5 +471,16 @@
     "description": "Set up RCS Business Messaging in India step by step: agent registration, API integration, rich cards, sender verification, testing and launch. Free demo.",
     "image": "/image/oct07(1).webp",
     "keywords": "how to set up RCS for business in India, RCS messaging for business, RCS agent registration, RCS API integration, RCS rich cards and carousels, RCS sender verification, RCS vs SMS for business, RCS messaging pricing in India, how to register an RCS agent in India, RCS business messaging India, RCS launch approval, RCS, RCS messaging, rich communication services, rich cards, RCS agent, RCS API, sender verification, SMS fallback, Google Messages, business messaging"
+  },
+  {
+    "id": 51,
+    "title": "Types of SMS in India: Transactional, Service and Promotional",
+    "componentKey": "Oct09",
+    "slug": "types-of-sms-in-india-trai-categories",
+    "category": "Bulk SMS",
+    "date": "2026-10-09",
+    "description": "Learn the types of SMS in India: transactional, service and promotional. Compare TRAI rules, DND, timing, DLT, sender ID and templates. Free demo.",
+    "image": "/image/oct09(1).webp",
+    "keywords": "types of SMS in India, TRAI SMS classification, transactional vs promotional SMS, service implicit SMS, service explicit SMS, OTP SMS in India, promotional SMS rules and DND, DLT registration for SMS, SMS sender ID and header approval, SMS template approval process, bulk SMS service provider in India, bulk SMS, transactional SMS, promotional SMS, service SMS, OTP SMS, DLT, sender ID, SMS template, DND, TRAI"
   }
 ]
