@@ -5,7 +5,7 @@ import RelatedGuides from '@/components/ui/RelatedGuides';
 export const metadata = buildMetadata({
   title: 'WhatsApp Chatbot India — AI-Powered & No-Code Builder',
   description:
-    'Build WhatsApp chatbots with no-code or AI NLP. Automate sales, support & leads 24/7, multi-language. 87% queries auto-resolved. India #1 platform.',
+    'Build WhatsApp chatbots with no-code or AI NLP. Automate sales, support & leads 24/7, multi-language. 87% of queries auto-resolved.',
   path: '/whatsapp-chatbot',
   keywords: [
     'WhatsApp chatbot India', 'WhatsApp AI chatbot', 'WhatsApp automation India',

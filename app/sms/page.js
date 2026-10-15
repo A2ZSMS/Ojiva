@@ -23,7 +23,7 @@ export const metadata = buildMetadata({
   ],
 });
 
-const smsServiceSchema = serviceSchema({ name: 'Bulk SMS Service', description: "India's #1 bulk SMS platform — transactional, promotional, OTP. DLT compliant, 98%+ delivery.", url: '/sms/', keywords: ['bulk SMS India', 'transactional SMS', 'OTP SMS', 'SMS API'] });
+const smsServiceSchema = serviceSchema({ name: 'Bulk SMS Service', description: "Bulk SMS platform for India — transactional, promotional, OTP. DLT compliant, 98%+ delivery.", url: '/sms/', keywords: ['bulk SMS India', 'transactional SMS', 'OTP SMS', 'SMS API'] });
 const smsBreadcrumb = breadcrumbSchema([{ name: 'Home', url: 'https://www.ojiva.ai/' }, { name: 'Bulk SMS', url: 'https://www.ojiva.ai/sms/' }]);
 
 const SMS_FAQS = [

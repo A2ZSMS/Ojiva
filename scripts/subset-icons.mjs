@@ -16,13 +16,18 @@
  * always included. Before Oct 2026 it relied on an uncommitted backup file and
  * a regex that skipped digit-first names, and 85 icons rendered blank.
  *
- * The woff2 font file is NOT modified — dropping only the CSS rules is enough
- * to prevent the browser from ever asking for unused glyphs.
+ * The woff2 font is subset too (speed audit, Oct 2026): the full font was 130 KB
+ * for ~2,050 glyphs while the site uses a small fraction. The full font lives in
+ * scripts/vendor/bootstrap-icons-1.11.3.woff2; the subset is written to
+ * public/icons/fonts/bootstrap-icons.<hash>.woff2 (content-hashed, because
+ * .htaccess caches /icons/ for a year as immutable) and @font-face points at it.
  */
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
+import subsetFont from "subset-font";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,6 +35,8 @@ const ROOT = path.resolve(__dirname, "..");
 
 const CSS_PATH = path.join(ROOT, "public/icons/bootstrap-icons.min.css");
 const SOURCE_PATH = path.join(ROOT, "scripts/vendor/bootstrap-icons-1.11.3.min.css");
+const FONT_SOURCE_PATH = path.join(ROOT, "scripts/vendor/bootstrap-icons-1.11.3.woff2");
+const FONT_DIR = path.join(ROOT, "public/icons/fonts");
 
 // Directories to scan for `bi-*` usages.
 const SCAN_DIRS = ["components", "app", "lib", "public/data"];
@@ -146,9 +153,26 @@ async function main() {
   // Sort kept by name for deterministic output.
   const sortedNames = [...kept.keys()].sort();
 
+  // Subset the font to exactly the glyphs referenced by the kept rules.
+  const glyphs = sortedNames
+    .map((n) => kept.get(n).match(/content:\s*"\\([0-9a-f]+)"/i))
+    .filter(Boolean)
+    .map((m) => String.fromCodePoint(parseInt(m[1], 16)))
+    .join("");
+  const fullFont = await fs.readFile(FONT_SOURCE_PATH);
+  const subset = await subsetFont(fullFont, glyphs, { targetFormat: "woff2" });
+  const hash = createHash("md5").update(subset).digest("hex").slice(0, 10);
+  const fontName = `bootstrap-icons.${hash}.woff2`;
+  // Remove previous subsets, keep the full fonts for anything still linking them.
+  for (const f of await fs.readdir(FONT_DIR)) {
+    if (/^bootstrap-icons\.[0-9a-f]{10}\.woff2$/.test(f) && f !== fontName) await fs.unlink(path.join(FONT_DIR, f));
+  }
+  await fs.writeFile(path.join(FONT_DIR, fontName), subset);
+  const fontFace = `@font-face{font-display:swap;font-family:bootstrap-icons;src:url("/icons/fonts/${fontName}") format("woff2")}`;
+
   const out = [
     parsed.header,
-    parsed.fontFace,
+    fontFace,
     parsed.baseRule,
     ...sortedNames.map((n) => kept.get(n)),
   ]
@@ -170,6 +194,7 @@ async function main() {
   console.log(`Original size        : ${format(originalSize)}`);
   console.log(`New size             : ${format(newSize)}`);
   console.log(`Reduction            : ${(100 * (1 - newSize / originalSize)).toFixed(1)}%`);
+  console.log(`Font                 : ${format(fullFont.length)} → ${format(subset.length)} (${fontName})`);
   console.log("");
 }
 

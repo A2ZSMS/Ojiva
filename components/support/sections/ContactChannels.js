@@ -26,8 +26,8 @@ export default function ContactChannels() {
               className="sp-channel-card"
               target={href.startsWith('http') ? '_blank' : undefined}
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               whileHover={{ y: -6 }}

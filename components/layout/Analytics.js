@@ -6,17 +6,17 @@
  *
  * Current integrations:
  *  ✅  Google Analytics 4  (GA4)       — G-FYZX6KFBEL
- *  ✅  Google Tag Manager (GTM)        — GTM-TJ8ZDFS2  (inline in layout.js <head>)
+ *  ✅  Google Tag Manager (GTM)        — GTM-TJ8ZDFS2  (deferred loader in layout.js <head>)
  *  ✅  Google Search Console           — vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI
  *  ✅  Meta Pixel                      — 1051828620576144
  *  ✅  OpenAI Ads Pixel                 — 4DoGQbov6wt75SWWt5HFTF
  *
  * ⚠️  DO NOT REMOVE OR COMMENT OUT these scripts — they track all site traffic.
- *     If you think there are duplicate hits, check inside GTM container first.
+ *     GA4 is NOT configured inside GTM (only Google Ads + Clarity are) — keep the
+ *     direct GA4 load below or Analytics stops recording.
  * ─────────────────────────────────────────────────────────
  */
 
-import Script from 'next/script';
 import AttributionCapture from './AttributionCapture';
 
 /* ── Config — only edit values here ─────────────────────── */
@@ -28,7 +28,15 @@ const OPENAI_ADS_PIXEL_ID         = '4DoGQbov6wt75SWWt5HFTF';
 /* ─────────────────────────────────────────────────────── */
 
 /**
- * Analytics — renders GA4 + Meta Pixel scripts via Next.js Script (afterInteractive).
+ * Analytics — tracking scripts (speed-optimised, Oct 2026).
+ *
+ * - GA4: config is queued immediately via window.gtag (defined in layout.js),
+ *   and gtag.js is fetched through window.__ojvLoad, so the page view is sent as
+ *   soon as the library arrives.
+ * - Meta Pixel and OpenAI Ads Pixel define their queue stubs immediately, so
+ *   fbq()/oaiq() calls are never lost, but their SDK files are fetched through
+ *   window.__ojvLoad (layout.js): first interaction or 3.5s after load, and
+ *   instantly on thank-you / paid-ad landing pages.
  * Already placed in layout.js <body>. DO NOT delete this component or its usage.
  */
 export default function Analytics() {
@@ -37,38 +45,33 @@ export default function Analytics() {
       {/* ── UTM / click-ID capture (client-only) ── */}
       <AttributionCapture />
 
-      {/* ── Google Analytics 4 ── */}
-      <Script
-        id="ga4-script"
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-      />
-      <Script
+      {/* ── Google Analytics 4 (config queued now, gtag.js deferred) ── */}
+      <script
         id="ga4-init"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer=window.dataLayer||[];
-            function gtag(){dataLayer.push(arguments);}
+            window.gtag=window.gtag||function(){dataLayer.push(arguments);};
             gtag('js',new Date());
             gtag('config','${GA_MEASUREMENT_ID}',{page_path:window.location.pathname});
+            (window.__ojvLoad||function(c){c();})(function(){
+              var s=document.createElement('script');s.async=true;
+              s.src='https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';document.head.appendChild(s);
+            });
           `,
         }}
       />
 
-      {/* ── Meta Pixel ── */}
-      <Script
+      {/* ── Meta Pixel (stub now, SDK deferred) ── */}
+      <script
         id="meta-pixel"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            !function(f,b,e,v,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+            (f.__ojvLoad||function(c){c();})(function(){var t=b.createElement(e);t.async=!0;
+            t.src=v;b.head.appendChild(t);});}(window,document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${META_PIXEL_ID}');
             fbq('track', 'PageView');
@@ -86,23 +89,21 @@ export default function Analytics() {
         />
       </noscript>
 
-      {/* ── OpenAI Ads Pixel ── */}
-      <Script
+      {/* ── OpenAI Ads Pixel (stub now, SDK deferred) ── */}
+      <script
         id="openai-ads-init"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.oaiq = window.oaiq || function () {
               (window.oaiq.q = window.oaiq.q || []).push(arguments);
             };
             oaiq("init", { pixelId: "${OPENAI_ADS_PIXEL_ID}" });
+            (window.__ojvLoad||function(c){c();})(function(){
+              var s=document.createElement('script');s.async=true;
+              s.src='https://bzrcdn.openai.com/sdk/oaiq.min.js';document.head.appendChild(s);
+            });
           `,
         }}
-      />
-      <Script
-        id="openai-ads-sdk"
-        strategy="afterInteractive"
-        src="https://bzrcdn.openai.com/sdk/oaiq.min.js"
       />
     </>
   );

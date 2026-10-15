@@ -72,7 +72,7 @@ export default function Hero() {
                   <div className="a2z-logo-text">A2ZSMS</div>
                   <span className="about-brand-badge about-brand-badge-cyan">Flagship Product</span>
                 </div>
-                <p className="about-brand-desc">India&apos;s #1 Bulk SMS Aggregator</p>
+                <p className="about-brand-desc">DLT-Registered Bulk SMS Aggregator</p>
                 <div className="about-brand-pills about-brand-pills-cyan">
                   <span>Bulk SMS</span>
                   <span>OTP &amp; Alerts</span>

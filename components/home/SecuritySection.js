@@ -57,7 +57,7 @@ const SECURITY_FEATURES = [
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { y: 30 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
@@ -88,8 +88,8 @@ export default function SecuritySection() {
         <div className="text-center mb-5 pb-3">
           <motion.div
             className="d-inline-flex align-items-center gap-2 security-eyebrow mb-3"
-            initial={{ opacity: 0, y: 14 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ y: 14 }}
+            animate={inView ? { y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
             <RiShieldCheckLine size={16} />
@@ -99,8 +99,8 @@ export default function SecuritySection() {
           <motion.h2
             id="security-heading"
             className="section-title"
-            initial={{ opacity: 0, y: 18 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ y: 18 }}
+            animate={inView ? { y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
             Security That Never{' '}
@@ -109,8 +109,8 @@ export default function SecuritySection() {
 
           <motion.p
             className="section-subtitle mx-auto"
-            initial={{ opacity: 0, y: 14 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ y: 14 }}
+            animate={inView ? { y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
             Your data deserves military-grade protection. From encrypted payloads to
@@ -148,8 +148,8 @@ export default function SecuritySection() {
         {/* Trust bar */}
         <motion.div
           className="security-trust-bar mt-5"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ y: 20 }}
+          animate={inView ? { y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <div className="row align-items-center justify-content-center g-4 text-center">

@@ -73,9 +73,10 @@ const AVATARS = [
   { bg: '#fef9c3', color: '#b45309', initials: 'VJ' },
 ];
 
+// Opacity stays 1 so hero copy is visible in the static HTML (SEO + LCP).
 const fade = (delay = 0, y = 20) => ({
-  initial:    { opacity: 0, y },
-  animate:    { opacity: 1, y: 0 },
+  initial:    { y },
+  animate:    { y: 0 },
   transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
@@ -124,14 +125,14 @@ export default function Hero() {
             <motion.div {...fade(0)}>
               <span className="hs-badge">
                 <span className="hs-badge-dot" />
-                India&apos;s #1 AI Communication Platform
+                AI Communication Platform for India
               </span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1 id="hero-heading" className="hs-title" {...rise(0.05)}>
-              Deliver smarter<br />
-              messages{' '}
+              Bulk SMS, WhatsApp<br />
+              &amp; RCS{' '}
               <span className="hs-title-highlight">at scale.</span>
             </motion.h1>
 

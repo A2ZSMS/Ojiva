@@ -69,7 +69,7 @@ export default function LeftPanel() {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
   const anim   = (delay = 0) => ({
-    initial: { opacity: 0, y: 18 },
+    initial: { y: 18 },
     animate: inView ? { opacity: 1, y: 0 } : {},
     transition: { delay, duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   });
@@ -107,8 +107,8 @@ export default function LeftPanel() {
 
         {/* Platform preview card */}
         <motion.div
-          initial={{ opacity: 0, y: 24, scale: 0.97 }}
-          animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          initial={{ y: 24, scale: 0.97 }}
+          animate={inView ? { y: 0, scale: 1 } : {}}
           transition={{ delay: 0.22, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <PreviewCard />

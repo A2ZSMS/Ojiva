@@ -63,8 +63,8 @@ export default function SystemStatus() {
         <div className="row align-items-center g-5">
           <motion.div
             className="col-12 col-lg-5"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -30 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -81,8 +81,8 @@ export default function SystemStatus() {
           </motion.div>
           <motion.div
             className="col-12 col-lg-7"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: 30 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >

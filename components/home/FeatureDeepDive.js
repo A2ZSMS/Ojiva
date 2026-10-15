@@ -193,8 +193,8 @@ export default function FeatureDeepDive() {
         <div className="text-center mb-5">
           <motion.span
             className="section-tag section-tag-centered"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 12 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5 }}
           >
@@ -203,8 +203,8 @@ export default function FeatureDeepDive() {
           <motion.h2
             id="feature-deep-heading"
             className="section-title mt-2"
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 18 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
@@ -212,8 +212,8 @@ export default function FeatureDeepDive() {
           </motion.h2>
           <motion.p
             className="section-subtitle mx-auto"
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 14 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: 0.18 }}
           >

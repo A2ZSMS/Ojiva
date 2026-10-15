@@ -18,15 +18,15 @@ export default function PerksSection() {
   const inView = useInView(ref, { once: true, margin: '-20px' });
   return (
     <motion.div className="dbp-perks" ref={ref}
-      initial={{ opacity: 0, y: 18 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      initial={{ y: 18 }}
+      animate={inView ? { y: 0 } : {}}
       transition={{ delay: 0.35, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
       <p className="dbp-perks-title">What you&apos;ll explore in 30 minutes</p>
       <div className="dbp-perks-grid">
         {DEMO_PERKS.map(({ icon, title, desc }, i) => (
           <motion.div key={title} className="dbp-perk"
-            initial={{ opacity: 0, y: 12 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ y: 12 }}
+            animate={inView ? { y: 0 } : {}}
             transition={{ delay: 0.4 + i * 0.06, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
             <span className="dbp-perk-icon">{icon}</span>
             <div>

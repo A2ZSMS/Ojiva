@@ -77,8 +77,8 @@ const INDUSTRIES = [
 ];
 
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 22 },
-  whileInView: { opacity: 1, y: 0 },
+  initial: { y: 22 },
+  whileInView: { y: 0 },
   viewport: { once: true, margin: '-60px' },
   transition: { duration: 0.52, delay, ease: [0.22, 1, 0.36, 1] },
 });

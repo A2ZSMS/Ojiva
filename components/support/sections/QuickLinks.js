@@ -26,8 +26,8 @@ export default function QuickLinks() {
               href={href}
               className="sp-quick-card"
               style={{ '--ql-color': color }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
               whileHover={{ y: -5, scale: 1.02 }}

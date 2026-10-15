@@ -4,7 +4,7 @@ import { faqSchema } from '@/lib/metadata';
 const HOME_FAQS = [
   {
     q: 'What is Ojiva AI?',
-    a: 'Ojiva AI is India\'s #1 AI-powered communication platform that enables businesses to send Bulk SMS, automate WhatsApp Business API conversations, launch RCS campaigns, and deploy Bulk Voice Call at enterprise scale — all from a single dashboard with end-to-end encryption.',
+    a: 'Ojiva AI is an Indian AI-powered communication platform that enables businesses to send Bulk SMS, automate WhatsApp Business API conversations, launch RCS campaigns, and deploy Bulk Voice Call at enterprise scale — all from a single dashboard with end-to-end encryption.',
   },
   {
     q: 'What services does Ojiva AI offer?',

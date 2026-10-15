@@ -29,7 +29,7 @@ export const metadata = {
     default: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
   },
   description:
-    "India's #1 CPaaS — WhatsApp API, Bulk SMS, RCS & AI Voice. 98% open rates, 99.9% uptime, 48-hr go-live. Trusted by 500+ businesses.",
+    "Indian CPaaS for WhatsApp API, Bulk SMS, RCS & AI Voice. 98% open rates, 99.9% uptime, 48-hr go-live. Trusted by 500+ businesses.",
   keywords: BRAND_KEYWORDS.join(", "),
   metadataBase: new URL("https://www.ojiva.ai"),
   icons: {
@@ -47,7 +47,7 @@ export const metadata = {
     locale: "en_IN",
     type: "website",
     url: "https://www.ojiva.ai/",
-    title: "Ojiva AI — India's #1 AI Communication Platform",
+    title: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
     description:
       "Ojiva AI delivers Bulk SMS, WhatsApp API, RCS Messaging & AI Voice automation at enterprise scale. Trusted by 500+ businesses across India.",
     images: [
@@ -55,13 +55,13 @@ export const metadata = {
         url: "https://www.ojiva.ai/og-image.jpg",
         width: 1200,
         height: 1200,
-        alt: "Ojiva AI — India's #1 AI Communication Platform",
+        alt: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ojiva AI — India's #1 AI Communication Platform",
+    title: "Ojiva AI — Bulk SMS, WhatsApp API & RCS Platform India",
     description:
       "Bulk SMS, WhatsApp API, RCS & AI Voice automation. Enterprise-grade. Trusted by 500+.",
     images: ["https://www.ojiva.ai/og-image.jpg"],
@@ -101,22 +101,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${ebGaramond.variable}`} suppressHydrationWarning>
       <head>
-        {/* ── Google Tag Manager — as high in <head> as possible ── */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TJ8ZDFS2');` }} />
-
-        {/* ── First-paint splash: shows the Ojiva logo before any content, fades on DOM ready ──
-            Shown once per browser session, with no minimum hold and a 1.2s cap. It used
-            to hold 300ms minimum (up to 2.5s) on every page view, delaying Largest
-            Contentful Paint — a Google ranking signal (SEO audit, Oct 2026). */}
-        <style dangerouslySetInnerHTML={{ __html: `#ojiva-splash{position:fixed;inset:0;z-index:2147483647;background:#060d1a;display:flex;align-items:center;justify-content:center;opacity:1;pointer-events:none;transition:opacity .25s ease}#ojiva-splash.is-hiding{opacity:0;pointer-events:none}#ojiva-splash .os-galaxy{position:relative;width:200px;height:200px;display:flex;align-items:center;justify-content:center}#ojiva-splash .os-core{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(0,200,248,.20),transparent 70%)}#ojiva-splash .os-logo{width:62px;height:62px;object-fit:contain}#ojiva-splash .os-orbit{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.09);border-radius:50%}#ojiva-splash .os-o1{width:124px;height:124px;animation:osrot 4.5s linear infinite}#ojiva-splash .os-o2{width:188px;height:188px;animation:osrot 7s linear infinite reverse}#ojiva-splash .os-node{position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}#ojiva-splash .os-node.b{top:auto;bottom:-5px}#ojiva-splash .os-node.l{top:50%;left:-5px;margin-top:-5px;margin-left:0}#ojiva-splash .os-node.r{top:50%;left:auto;right:-5px;margin-top:-5px;margin-left:0}@keyframes osrot{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}@media (prefers-reduced-motion:reduce){#ojiva-splash .os-o1,#ojiva-splash .os-o2{animation:none}}` }} />
-        <script dangerouslySetInnerHTML={{ __html: `(function(){if(['/whatsapp-api-service','/whatsapp-api-service/','/bulk-sms','/bulk-sms/','/rcs-messaging','/rcs-messaging/','/website-development','/website-development/'].includes(window.location.pathname))return;try{if(sessionStorage.getItem('ojv_splash'))return;sessionStorage.setItem('ojv_splash','1');}catch(e){}var s=document.createElement('div');s.id='ojiva-splash';s.innerHTML='<div class="os-galaxy"><div class="os-orbit os-o1"><span class="os-node" style="--c:#25d366"></span><span class="os-node b" style="--c:#3b82f6"></span></div><div class="os-orbit os-o2"><span class="os-node" style="--c:#0ea5e9"></span><span class="os-node b" style="--c:#8b5cf6"></span><span class="os-node l" style="--c:#f59e0b"></span><span class="os-node r" style="--c:#10b981"></span></div><div class="os-core"><img class="os-logo" src="/ojiva-logo-white.webp" alt="Ojiva AI" width="62" height="62"/></div></div>';(document.documentElement||document.body).appendChild(s);var MIN=0,MAX=1200,st=Date.now(),done=false;function hide(){if(done)return;done=true;var w=Math.max(0,MIN-(Date.now()-st));setTimeout(function(){s.className='is-hiding';setTimeout(function(){if(s.parentNode){s.parentNode.removeChild(s);}},300);},w);}if(document.readyState!=='loading'){hide();}else{document.addEventListener('DOMContentLoaded',hide,{once:true});}setTimeout(hide,MAX);})();` }} />
-
-        {/* ── Performance: preload the LCP-critical logo used by the splash ── */}
-        <link rel="preload" href="/ojiva-logo-white.webp" as="image" fetchPriority="high" />
+        {/* ── Deferred third-party loader (speed audit, Oct 2026) ──
+            Tracking + chat scripts (GTM, GA4, Meta, OpenAI, Intercom) competed with the page on load
+            (mobile Lighthouse 30/100). They now load on the visitor's first interaction
+            (scroll, tap, key, mouse move) or 3.5s after the page has loaded, whichever is
+            first. Thank-you pages and paid-ad landing pages load them immediately so no
+            conversion or ad-click session is missed.
+            Queue stubs (dataLayer, gtag, fbq, oaiq) are defined right away, so any event
+            pushed before the real scripts arrive is replayed when they load. */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(w,d){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};var q=[],done=false,p=w.location.pathname,now=p.indexOf('thank-you')>-1||['/whatsapp-api-service','/bulk-sms','/rcs-messaging','/website-development'].indexOf(p.replace(/.$/,function(c){return c==='/'?'':c;}))>-1;w.__ojvLoad=function(f){if(done){f();}else{q.push(f);}};function go(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,go,true);});var f;while((f=q.shift())){try{f();}catch(e){}}}var ev=['scroll','pointerdown','keydown','touchstart','mousemove'];ev.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true,capture:true});});function arm(){setTimeout(go,3500);}if(d.readyState==='complete'){arm();}else{w.addEventListener('load',arm,{once:true});}w.__ojvLoad(function(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-TJ8ZDFS2';d.head.appendChild(j);});if(now)go();})(window,document);` }} />
 
         {/* ── Performance: preconnect & DNS prefetch ── */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://widget.intercom.io" />
         <link rel="dns-prefetch" href="https://api-iam.intercom.io" />
@@ -175,8 +172,9 @@ export default function RootLayout({ children }) {
         {/* All tracking scripts — GA4, GTM, etc. */}
         <Analytics />
 
-        {/* Intercom live chat — widget loads only on first user intent (or idle),
-            so the ~600KB-1MB bundle never blocks initial load for visitors who don't chat */}
+        {/* Intercom live chat — widget loads on first user intent (or after 15s), so the
+            ~300KB bundle never competes with page load. The old 8s idle fallback fired
+            during load on slow phones (speed audit, Oct 2026). */}
         <Script
           id="intercom-widget"
           strategy="lazyOnload"
@@ -184,7 +182,7 @@ export default function RootLayout({ children }) {
             __html: `
               if (!['/whatsapp-api-service','/whatsapp-api-service/','/bulk-sms','/bulk-sms/','/rcs-messaging','/rcs-messaging/','/website-development','/website-development/'].includes(window.location.pathname)) {
               window.intercomSettings = { api_base: "https://api-iam.intercom.io", app_id: "a5mrjdl9" };
-              (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/a5mrjdl9';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};var loaded=false,evts=['mousemove','scroll','touchstart','keydown','click'];function go(){if(loaded)return;loaded=true;evts.forEach(function(e){w.removeEventListener(e,go);});l();}evts.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true});});if('requestIdleCallback' in w){w.requestIdleCallback(go,{timeout:8000});}else{setTimeout(go,6000);}}})();
+              (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/a5mrjdl9';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};var loaded=false,evts=['mousemove','scroll','touchstart','keydown','click'];function go(){if(loaded)return;loaded=true;evts.forEach(function(e){w.removeEventListener(e,go);});l();}evts.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true});});setTimeout(go,15000);}})();
               }
             `,
           }}

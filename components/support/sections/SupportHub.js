@@ -181,8 +181,8 @@ function TicketForm() {
     return (
       <motion.div
         className="sp-ticket-success"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
         transition={{ duration: 0.4 }}
       >
         <div className="sp-ticket-success-icon">✅</div>
@@ -300,8 +300,8 @@ export default function SupportHub() {
           {activeTab === 'ticket' && (
             <motion.div
               key="ticket"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 16 }}
+              animate={{ y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
               className="sp-tab-panel"
@@ -327,8 +327,8 @@ export default function SupportHub() {
           {activeTab === 'sla' && (
             <motion.div
               key="sla"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 16 }}
+              animate={{ y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
               className="sp-tab-panel"
@@ -339,8 +339,8 @@ export default function SupportHub() {
                     key={plan}
                     className={`sp-sla-card${highlight ? ' highlight' : ''}`}
                     style={{ '--sla-color': color }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ y: 20 }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                     whileHover={{ y: -6 }}
                   >

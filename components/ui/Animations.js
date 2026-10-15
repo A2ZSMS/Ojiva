@@ -5,7 +5,7 @@ import {
   useMotionValue, useSpring, useTransform, useMotionTemplate, useScroll,
   AnimatePresence,
 } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import { useNetwork } from '@/hooks/useNetwork';
 
 // All framer-motion hooks kept in module graph to prevent Turbopack HMR errors.
@@ -18,20 +18,45 @@ void useMotionTemplate; void useScroll;
    Easing is the same across all for visual consistency.
 ───────────────────────────────────────────────────────── */
 const EASE = [0.22, 1, 0.36, 1];
+const INSTANT = { duration: 0 };
+
+const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
+/* useReveal — SEO-safe scroll reveal.
+   Content is rendered fully visible in the static HTML (crawlers and LCP never
+   see opacity:0 text). After hydration, only elements that start BELOW the fold
+   are hidden (before the browser paints) and then revealed on scroll, so real
+   visitors still get the entrance animation. Above-the-fold content never hides. */
+function useReveal(margin) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin });
+  const [armed, setArmed] = useState(false);
+  useIsoLayoutEffect(() => {
+    const el = ref.current;
+    if (el && el.getBoundingClientRect().top > window.innerHeight) setArmed(true);
+  }, []);
+  return { ref, show: !armed || inView };
+}
+
+/* Shared motion props: visible by default, hidden only once armed. */
+function revealProps(show, hidden, visible, transition) {
+  return {
+    initial: false,
+    animate: show ? visible : hidden,
+    transition: show ? transition : INSTANT,
+  };
+}
 
 /* FadeUp — primary entrance, used for sections & cards */
 export function FadeUp({ children, delay = 0, className = '' }) {
   const { isSlow } = useNetwork();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-60px' });
+  const { ref, show } = useReveal('-60px');
   if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      {...revealProps(show, { opacity: 0, y: 28 }, { opacity: 1, y: 0 }, { duration: 0.55, delay, ease: EASE })}
     >
       {children}
     </motion.div>
@@ -41,16 +66,13 @@ export function FadeUp({ children, delay = 0, className = '' }) {
 /* FadeIn — opacity only, no movement */
 export function FadeIn({ children, delay = 0, className = '' }) {
   const { isSlow } = useNetwork();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-60px' });
+  const { ref, show } = useReveal('-60px');
   if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.6, delay, ease: EASE }}
+      {...revealProps(show, { opacity: 0 }, { opacity: 1 }, { duration: 0.6, delay, ease: EASE })}
     >
       {children}
     </motion.div>
@@ -60,16 +82,13 @@ export function FadeIn({ children, delay = 0, className = '' }) {
 /* SlideLeft — slides in from left */
 export function SlideLeft({ children, delay = 0, className = '' }) {
   const { isSlow } = useNetwork();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
+  const { ref, show } = useReveal('-80px');
   if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, x: -28 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      {...revealProps(show, { opacity: 0, x: -28 }, { opacity: 1, x: 0 }, { duration: 0.55, delay, ease: EASE })}
     >
       {children}
     </motion.div>
@@ -79,16 +98,13 @@ export function SlideLeft({ children, delay = 0, className = '' }) {
 /* SlideRight — slides in from right */
 export function SlideRight({ children, delay = 0, className = '' }) {
   const { isSlow } = useNetwork();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
+  const { ref, show } = useReveal('-80px');
   if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, x: 28 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      {...revealProps(show, { opacity: 0, x: 28 }, { opacity: 1, x: 0 }, { duration: 0.55, delay, ease: EASE })}
     >
       {children}
     </motion.div>
@@ -98,15 +114,14 @@ export function SlideRight({ children, delay = 0, className = '' }) {
 /* StaggerContainer — wraps a list of StaggerItems */
 export function StaggerContainer({ children, className = '', staggerDelay = 0.08 }) {
   const { isSlow } = useNetwork();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-60px' });
+  const { ref, show } = useReveal('-60px');
   if (isSlow) return <div className={className}>{children}</div>;
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+      initial={false}
+      animate={show ? 'visible' : 'hidden'}
       variants={{ visible: { transition: { staggerChildren: staggerDelay } } }}
     >
       {children}
@@ -114,13 +129,14 @@ export function StaggerContainer({ children, className = '', staggerDelay = 0.08
   );
 }
 
-/* StaggerItem — child of StaggerContainer */
+/* StaggerItem — child of StaggerContainer (inherits initial={false}, so it is
+   visible in the static HTML; hides instantly only when its container arms) */
 export function StaggerItem({ children, className = '' }) {
   return (
     <motion.div
       className={className}
       variants={{
-        hidden:  { opacity: 0, y: 18 },
+        hidden:  { opacity: 0, y: 18, transition: INSTANT },
         visible: { opacity: 1, y: 0, transition: { duration: 0.48, ease: EASE } },
       }}
     >

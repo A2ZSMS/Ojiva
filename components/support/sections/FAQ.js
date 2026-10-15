@@ -87,8 +87,8 @@ export default function FAQ() {
               <motion.div
                 key={f.q}
                 className={`sp-faq-item${openIdx === i ? ' open' : ''}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ y: 10 }}
+                animate={{ y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2, delay: i * 0.03 }}
                 onClick={() => setOpenIdx(openIdx === i ? null : i)}

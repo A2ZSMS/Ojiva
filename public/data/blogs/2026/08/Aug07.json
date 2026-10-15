@@ -58,14 +58,14 @@
             },
             {
               "icon": "bi-diagram-3-fill",
-              "title": "Built on Meta's official infrastructure:",
-              "desc": "Ojiva AI operates as a Meta Business Solution Provider, so the underlying messaging runs on Meta's own Cloud API rather than an unofficial workaround."
+              "title": "Official API, no mid-season bans:",
+              "desc": "Booking confirmations, e-tickets and itinerary changes go out on Meta's official Cloud API through Ojiva AI as a Business Solution Provider, so a traveller's messages are never routed through an unofficial gateway that can be blocked mid-trip."
             }
           ]
         },
         {
           "type": "p",
-          "html": "For the technical specifics, Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform documentation</a> covers how the Cloud API handles messages, templates and business accounts in full."
+          "html": "For the technical specifics, Meta's own <a href=\"https://developers.facebook.com/docs/whatsapp/\" target=\"_blank\" rel=\"noopener noreferrer\">WhatsApp Business Platform documentation</a> explains how templates, media attachments like PDF tickets, and business accounts work on the Cloud API."
         }
       ]
     },
@@ -162,7 +162,7 @@
             },
             {
               "icon": "bi-arrow-repeat",
-              "title": "Sync with Zoho, HubSpot or Salesforce:",
+              "title": "Connect your booking CRM:",
               "desc": "Traveler details and conversation history flow straight into the CRM your sales team already uses."
             },
             {
@@ -252,23 +252,23 @@
           "items": [
             {
               "icon": "bi-patch-check-fill",
-              "title": "Meta verification and BSP standing:",
-              "desc": "Confirm the provider is an authorized Meta Business Solution Provider, not reselling access through an unofficial layer."
+              "title": "Official BSP status:",
+              "desc": "Ask for proof the provider is an authorized Meta BSP. A number banned during peak season means stranded travellers and lost bookings."
             },
             {
               "icon": "bi-graph-up-arrow",
-              "title": "Message deliverability track record:",
+              "title": "Delivery of tickets and alerts:",
               "desc": "Ask for real delivery and read-rate figures from existing travel clients, not just a sales pitch."
             },
             {
               "icon": "bi-headset",
               "title": "Support responsiveness:",
-              "desc": "Find out whether support is a same-day, India-based team or a ticket queue in another time zone."
+              "desc": "Travel problems happen at night and on holidays. Check whether the provider's India-based support answers on weekends and during peak travel months."
             },
             {
               "icon": "bi-cash-coin",
               "title": "Transparent INR pricing:",
-              "desc": "Look for a plain rate card with no hidden per-message markups buried in the fine print."
+              "desc": "Ask for a rate card that shows what a typical booking journey costs (enquiry, quote, confirmation, reminders) with no hidden per-message markups."
             },
             {
               "icon": "bi-diagram-3-fill",
@@ -290,7 +290,7 @@
       "blocks": [
         {
           "type": "p",
-          "html": "Pricing usually confuses people because there are two separate bills. Your provider charges a platform fee for the chatbot, dashboard and support. Meta separately charges for certain categories of conversations, while replies inside the 24-hour customer service window, which covers most day-to-day queries, cost nothing extra. Add 18% GST, billed in INR, and that's the full picture."
+          "html": "For a travel agency, cost follows the booking journey. The platform fee covers the inbox, chatbot and itinerary templates. Meta charges per template conversation, such as a payment reminder or a check-in alert sent days later. When a traveller messages first with a question, your replies within 24 hours are free on Meta's side, and most enquiry chats fall in that window. GST at 18% is added and billed in INR."
         },
         {
           "type": "table",
@@ -298,22 +298,22 @@
           "rows": [
             [
               "Platform subscription",
-              "Chatbot, broadcast, catalog, team inbox, analytics",
+              "Enquiry chatbot, tour package catalog, shared agent inbox, campaign reports",
               "Monthly or annual plan, in INR"
             ],
             [
               "Meta conversation charges",
-              "Marketing, utility and authentication conversations",
+              "Holiday offers, booking confirmations, payment and check-in reminders",
               "Per conversation, by category, set by Meta"
             ],
             [
               "Service window replies",
-              "Business replies within the 24-hour customer service window",
+              "Answering a traveller's enquiry within 24 hours of their message",
               "Free"
             ],
             [
               "Setup & onboarding",
-              "Meta verification, number activation, template approvals",
+              "Business verification, number setup, approval of itinerary and payment templates",
               "Included with Ojiva AI onboarding"
             ],
             [
@@ -358,8 +358,8 @@
             },
             {
               "icon": "bi-patch-check-fill",
-              "title": "Official Solution Provider verification:",
-              "desc": "Ojiva AI operates as a Meta-verified Solution Provider, covered under Meta's own <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Solution Partner documentation</a>."
+              "title": "Meta-verified travel messaging:",
+              "desc": "Travel brands get the same standing as large OTAs: Ojiva AI is a Meta-verified Solution Provider, listed in Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Solution Partner documentation</a>."
             },
             {
               "icon": "bi-check2-square",
@@ -388,12 +388,12 @@
             },
             {
               "icon": "bi-2-circle-fill",
-              "title": "Complete Meta Business Verification:",
-              "desc": "Ojiva AI guides the verification and activates your number on the <a href=\"/whatsapp/\">WhatsApp Business Platform</a>, including the blue tick application."
+              "title": "Verify your agency with Meta:",
+              "desc": "Ojiva AI handles verification for your agency's registered business name and activates your booking number on the <a href=\"/whatsapp/\">WhatsApp Business Platform</a>, including the blue tick application."
             },
             {
               "icon": "bi-3-circle-fill",
-              "title": "Set up chatbot flows and templates:",
+              "title": "Build enquiry flows and itinerary templates:",
               "desc": "Package FAQs, catalog and broadcast segments get configured around how travelers actually ask questions."
             },
             {
@@ -404,7 +404,7 @@
             {
               "icon": "bi-5-circle-fill",
               "title": "Go live and refine:",
-              "desc": "Launch the number, then use analytics to see where the chatbot struggles and adjust those flows over time."
+              "desc": "Go live before your peak season, then review which destinations and questions come up most and tune the package flows around them."
             }
           ]
         },
@@ -446,7 +446,7 @@
           "items": [
             {
               "q": "How much does WhatsApp Business API cost for a travel agency in India?",
-              "a": "<p>There's a platform subscription for the chatbot and dashboard, plus Meta's own charges for certain conversation categories. Replies inside the 24-hour customer service window — most routine queries — are free on Meta's side. 18% GST applies, billed in INR, with a plain rate card shared upfront.</p>"
+              "a": "<p>You pay a monthly platform subscription plus Meta's charge per template conversation, such as booking confirmations or payment reminders. When a traveller writes in first, replies within 24 hours are free on Meta's side. 18% GST is added, billed in INR, and Ojiva AI shares a rate card for a typical booking journey upfront.</p>"
             },
             {
               "q": "What should I look for in the best WhatsApp API provider for a travel business?",

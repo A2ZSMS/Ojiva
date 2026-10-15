@@ -123,7 +123,7 @@ export default function Navbar() {
         <Link className="navbar-brand" href="/" aria-label="Ojiva AI Home">
           <Image
             src={isHome && !scrolled && !menuOpen ? '/ojiva-logo-white.webp' : '/ojiva-logo-optimized.webp'}
-            alt="Ojiva AI — India's #1 AI Communication Platform for Bulk SMS, WhatsApp Business API, RCS & Voice"
+            alt="Ojiva AI — AI Communication Platform for Bulk SMS, WhatsApp Business API, RCS & Voice"
             width={180}
             height={106}
             className="nav-logo"
