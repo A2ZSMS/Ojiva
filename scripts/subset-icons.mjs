@@ -21,6 +21,8 @@
  * scripts/vendor/bootstrap-icons-1.11.3.woff2; the subset is written to
  * public/icons/fonts/bootstrap-icons.<hash>.woff2 (content-hashed, because
  * .htaccess caches /icons/ for a year as immutable) and @font-face points at it.
+ * The full bootstrap-icons.woff/.woff2 stay in public/icons/fonts only for
+ * stylesheets cached before Oct 2026, which still reference them.
  */
 
 import { promises as fs } from "node:fs";
@@ -37,6 +39,11 @@ const CSS_PATH = path.join(ROOT, "public/icons/bootstrap-icons.min.css");
 const SOURCE_PATH = path.join(ROOT, "scripts/vendor/bootstrap-icons-1.11.3.min.css");
 const FONT_SOURCE_PATH = path.join(ROOT, "scripts/vendor/bootstrap-icons-1.11.3.woff2");
 const FONT_DIR = path.join(ROOT, "public/icons/fonts");
+// Content hash of the generated CSS, imported by app/layout.js as ?v=… on the
+// stylesheet URL. /icons/ is cached for a year as immutable (.htaccess), so the
+// URL must change whenever the icon set changes or returning visitors keep a
+// stale stylesheet (blank icons).
+const VERSION_PATH = path.join(ROOT, "lib/icons-version.json");
 
 // Directories to scan for `bi-*` usages.
 const SCAN_DIRS = ["components", "app", "lib", "public/data"];
@@ -163,7 +170,7 @@ async function main() {
   const subset = await subsetFont(fullFont, glyphs, { targetFormat: "woff2" });
   const hash = createHash("md5").update(subset).digest("hex").slice(0, 10);
   const fontName = `bootstrap-icons.${hash}.woff2`;
-  // Remove previous subsets, keep the full fonts for anything still linking them.
+  // Remove previous subsets (the full legacy fonts are never touched).
   for (const f of await fs.readdir(FONT_DIR)) {
     if (/^bootstrap-icons\.[0-9a-f]{10}\.woff2$/.test(f) && f !== fontName) await fs.unlink(path.join(FONT_DIR, f));
   }
@@ -180,6 +187,8 @@ async function main() {
     .join("");
 
   await fs.writeFile(CSS_PATH, out);
+  const cssVersion = createHash("md5").update(out).digest("hex").slice(0, 10);
+  await fs.writeFile(VERSION_PATH, JSON.stringify({ css: cssVersion }) + "\n");
 
   const newSize = Buffer.byteLength(out, "utf8");
 

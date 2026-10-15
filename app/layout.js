@@ -7,6 +7,7 @@ import Script from 'next/script';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
 import LayoutShell from '@/components/layout/LayoutShell';
 import BootstrapClient from './BootstrapClient';
+import iconsVersion from '@/lib/icons-version.json';
 import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
 
 const inter = Inter({
@@ -97,6 +98,9 @@ export const viewport = {
   themeColor: '#060c18',
 };
 
+// Versioned so a changed icon set is never served from a year-long browser cache.
+const ICONS_CSS = `/icons/bootstrap-icons.min.css?v=${iconsVersion.css}`;
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${ebGaramond.variable}`} suppressHydrationWarning>
@@ -123,16 +127,16 @@ export default function RootLayout({ children }) {
             <link> when JS is disabled. Saves ~150-300ms on first paint. */}
         <link
           rel="preload"
-          href="/icons/bootstrap-icons.min.css"
+          href={ICONS_CSS}
           as="style"
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/icons/bootstrap-icons.min.css';document.head.appendChild(l);})();`,
+            __html: `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='${ICONS_CSS}';document.head.appendChild(l);})();`,
           }}
         />
         <noscript>
-          <link rel="stylesheet" href="/icons/bootstrap-icons.min.css" />
+          <link rel="stylesheet" href={ICONS_CSS} />
         </noscript>
 
         {/* Theme color for mobile browsers */}
