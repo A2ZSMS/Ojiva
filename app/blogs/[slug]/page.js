@@ -56,6 +56,8 @@ import blog_upgrade_bulk_sms_to_rcs_india from "../../../public/data/blogs/2026/
 import blog_how_to_set_up_rcs_for_business_india from "../../../public/data/blogs/2026/10/Oct07.json";
 import blog_types_of_sms_in_india_trai_categories from "../../../public/data/blogs/2026/10/Oct09.json";
 import blog_best_bulk_sms_service_provider_in_hyderabad from "../../../public/data/blogs/2026/10/Oct12.json";
+import blog_whatsapp_otp_vs_sms_otp_india from "../../../public/data/blogs/2026/10/Oct 21.json";
+
 
 const BlogJson = {
   "rcs-vs-sms-key-differences-and-which-is-better-for-business":
@@ -118,22 +120,20 @@ const BlogJson = {
     blog_rcs_real_estate_retail_lead_conversion,
   "rcs-business-messaging-travel-tourism":
     blog_rcs_business_messaging_travel_tourism,
-  "sms-api-in-india":
-    blog_sms_api_in_india,
+  "sms-api-in-india": blog_sms_api_in_india,
   "whatsapp-business-api-pricing-update":
     blog_whatsapp_business_api_pricing_update,
   "whatsapp-business-api-provider-in-kerala":
     blog_whatsapp_business_api_provider_in_kerala,
-  "rcs-vs-whatsapp-business-api-india":
-    blog_rcs_vs_whatsapp_business_api_india,
-  "upgrade-bulk-sms-to-rcs-india":
-    blog_upgrade_bulk_sms_to_rcs_india,
+  "rcs-vs-whatsapp-business-api-india": blog_rcs_vs_whatsapp_business_api_india,
+  "upgrade-bulk-sms-to-rcs-india": blog_upgrade_bulk_sms_to_rcs_india,
   "how-to-set-up-rcs-for-business-india":
     blog_how_to_set_up_rcs_for_business_india,
   "types-of-sms-in-india-trai-categories":
     blog_types_of_sms_in_india_trai_categories,
   "best-bulk-sms-service-provider-in-hyderabad":
     blog_best_bulk_sms_service_provider_in_hyderabad,
+  "whatsapp-otp-vs-sms-otp-india": blog_whatsapp_otp_vs_sms_otp_india,
 };
 
 // ── Date formatter ───────────────────────────────────────
