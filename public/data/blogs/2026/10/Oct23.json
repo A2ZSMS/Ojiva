@@ -1,0 +1,556 @@
+{
+  "slug": "dlt-registration-charges-india",
+  "metaTitle": "DLT Registration Charges in India: Fees & Cost | Ojiva AI",
+  "metaDescription": "DLT registration charges in India are set by operators, not TRAI. See the Airtel, Jio, Vi and BSNL fee position, renewal and total cost. Book a free demo.",
+  "h1": "DLT Registration Charges in India: Fees and What You Actually Pay",
+  "primaryKeyword": "DLT registration charges",
+  "keywords": {
+    "secondary": [
+      "DLT registration fees",
+      "DLT registration cost",
+      "DLT charges",
+      "DLT registration free",
+      "DLT registration Jio",
+      "DLT registration Airtel",
+      "DLT registration Vi",
+      "DLT registration BSNL",
+      "DLT registration for SMS",
+      "bulk SMS pricing in India"
+    ],
+    "shortTail": [
+      "DLT registration",
+      "what is DLT",
+      "DLT platform",
+      "DLT SMS",
+      "DLT template",
+      "TRAI DLT",
+      "DLT fees",
+      "DLT cost",
+      "sender ID",
+      "SMS template"
+    ],
+    "longTail": [
+      "how much does DLT registration cost in India",
+      "is DLT registration free in India",
+      "DLT registration charges for Jio, Airtel and Vi",
+      "what is the DLT registration fee per operator",
+      "do I have to pay for DLT template approval",
+      "does the DLT registration fee include GST",
+      "how long is DLT registration valid and does it need renewal",
+      "which DLT portal is cheapest: Jio, Airtel, Vi or BSNL",
+      "can I get DLT registration through my bulk SMS provider",
+      "what documents are needed for DLT registration"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "who-sets-fees",
+      "label": "Who Sets the Fee"
+    },
+    {
+      "id": "operator-fees",
+      "label": "Airtel, Jio, Vi & BSNL"
+    },
+    {
+      "id": "is-it-free",
+      "label": "Is It Free?"
+    },
+    {
+      "id": "what-you-pay",
+      "label": "What You Actually Pay"
+    },
+    {
+      "id": "by-business",
+      "label": "By Business Type"
+    },
+    {
+      "id": "documents-timeline",
+      "label": "Documents & Renewal"
+    },
+    {
+      "id": "avoid-overpaying",
+      "label": "Avoid Overpaying"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>DLT registration charges in India are set by each telecom operator, not by the government: TRAI requires registration but publishes no fee list.</strong> Airtel's own published FAQ lists ₹5,000 plus tax, or ₹5,900 including GST, for one year, and Jio and Vi also describe annual registrations. The costs people forget are annual renewal, GST and the SMS credits you buy once your templates are approved."
+        },
+        {
+          "type": "p",
+          "html": "This guide shows what the official sources say about DLT registration fees on Airtel, Jio, Vi and BSNL, where they stay silent, and what to budget in total, for startups, schools, clinics and retailers across India. We checked the operators' public pages on 23 October 2026. Ojiva AI runs <a href=\"/sms/\">Bulk SMS</a> with guided DLT filing alongside WhatsApp, RCS and voice on one platform. If you want a plan sized to your own sending, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct23(1).webp",
+          "alt": "DLT registration charges in India shown as an operator fee breakdown for Airtel, Jio, Vi and BSNL"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "DLT Registration Charges in India: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "You pay one entity registration fee to the operator whose portal you register on. Your Entity ID then works across operators, so you register once. Here is what the official documents support."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bank",
+              "title": "Who sets the fee:",
+              "desc": "the telecom operator, not TRAI. There is no government price list for DLT registration."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Entity registration on Airtel:",
+              "desc": "₹5,000 plus tax, or ₹5,900 including GST, for a one-year registration certificate, according to Airtel's published FAQ."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "Entity registration on Jio, Vi and BSNL:",
+              "desc": "Jio and Vi describe annual registrations, but their public pages show no amount, and BSNL's code leaves charges to its commercial terms. Confirm the figure at payment."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Renewal:",
+              "desc": "annual on the operators that describe it. Budget for it every year."
+            },
+            {
+              "icon": "bi-cash-stack",
+              "title": "SMS credits:",
+              "desc": "your real running cost. Your SMS provider prices them per message, not the operator."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "First-year registration budget:",
+              "desc": "plan for ₹5,900 including GST, then confirm it on your chosen portal."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want DLT filing handled alongside your sending plan? Talk to Ojiva AI about <a href=\"/sms/\">Bulk SMS services</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "who-sets-fees",
+      "heading": "Who Sets DLT Registration Charges? There Is No Government Price List",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The rules come from TRAI, but the price comes from the operators. That is why you will not find an official fee table on any government page, and why third-party guides quote different numbers."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-journal-text",
+              "title": "What TRAI requires:",
+              "desc": "TRAI's guidance page lists the steps every sender must complete: Principal Entity registration, header assignment, content template registration and, where needed, consent template registration. See the <a href=\"https://trai.gov.in/hi/node/10419\" target=\"_blank\" rel=\"noopener\">TRAI guidance page</a>."
+            },
+            {
+              "icon": "bi-search",
+              "title": "What TRAI does not list:",
+              "desc": "that page gives procedures and no fee amounts. It sends senders to each operator's website and its Code of Practice."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "What operators say:",
+              "desc": "BSNL's Code of Practice says header assignment follows the commercial terms prescribed by BSNL, and that template registrars may charge senders as per their commercials. Read the <a href=\"https://bsnl.co.in/opencms/export/finresult/CoP_Entities_13112024_FINAL.pdf\" target=\"_blank\" rel=\"noopener\">BSNL Code of Practice</a>."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "What to trust:",
+              "desc": "the amount on the operator portal's payment screen, followed by the operator's published FAQ or terms. Treat blog figures, including ours, as a guide to confirm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operator-fees",
+      "heading": "DLT Registration Fees on Airtel, Jio, Vi and BSNL: What Each Operator Publishes",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Only some operators publish an amount, and the documents differ in age and detail. Here is exactly what each one says. Our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">step-by-step DLT guide</a> covers the filing process."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-broadcast",
+              "title": "DLT registration Airtel:",
+              "desc": "the <a href=\"https://www.airtel.in/business/commercial-communication/assets/documents/Help_Modules/FAQs%20-%20Enterprise%20Telemarketers%20who%20want%20to%20send%20commercial%20communication-%20v3%20-%2017-09-2020.pdf\" target=\"_blank\" rel=\"noopener\">Airtel FAQ</a> lists a registration fee of ₹5,000 plus tax for a certificate valid for one year, non-refundable, and ₹5,900 inclusive of GST in its document checklist. The version we read is dated 17 September 2020, so confirm the current amount at payment."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "DLT registration Jio:",
+              "desc": "Jio's <a href=\"https://trueconnect.jio.com/#/home/termsandcondition\" target=\"_blank\" rel=\"noopener\">terms</a> describe annual registration and renewal, say charges are inclusive of all applicable taxes, and promise at least 7 days' notice before renewal charges change. The public pages show no rupee amount."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "DLT registration Vi:",
+              "desc": "Vi's <a href=\"https://www.vilpower.in/faq/\" target=\"_blank\" rel=\"noopener\">FAQ</a> states a one-year validity with a 30-day grace period, and renewal on the terms prevailing then. The public FAQ shows no rupee amount."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "DLT registration BSNL:",
+              "desc": "BSNL's Code of Practice sets out the process, including physical verification by its circle, and leaves charges to its commercial terms. No amount is published there, so check the BSNL portal."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "You only need to register once. Vi's FAQ says a Principal Entity registers once with any access provider to get an Entity ID, and Jio's FAQ says that ID is unique across all providers. Choose the portal with the fastest approval and the support you prefer."
+        }
+      ]
+    },
+    {
+      "id": "is-it-free",
+      "heading": "Is DLT Registration Free? Why Guides Disagree",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "If you search for DLT registration free, you will find both answers. Because operators set their own fees, and fees have changed over time, both can appear in print."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-clock-history",
+              "title": "Older guides:",
+              "desc": "some earlier articles say registration on certain portals was free. They have not kept pace with the operators' current terms."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Operator documents:",
+              "desc": "Airtel's FAQ lists a paid one-year registration, and Jio's terms describe annual registration and renewal fees."
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "Bundled or absorbed fees:",
+              "desc": "some SMS providers include the operator fee or guide the filing at no extra service charge, which is why free DLT registration is still advertised."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "The portal decides:",
+              "desc": "the amount shown at checkout on the operator's own portal is the one that counts, because fees can change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-you-pay",
+      "heading": "What You Actually Pay: DLT Costs Beyond the Registration Fee",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The registration fee is a small, predictable part of the bill. A simple way to budget a year of bulk SMS is: the DLT entity fee (₹5,900 including GST, once confirmed), plus SMS credits (messages multiplied by your per-message rate), plus any service charges from your provider."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Annual renewal:",
+              "desc": "plan for the entity fee again next year. Jio locks a registration until the renewal fee is paid, and Vi allows a 30-day grace period."
+            },
+            {
+              "icon": "bi-percent",
+              "title": "GST:",
+              "desc": "Airtel's ₹5,900 already includes GST, and Jio states its charges include all applicable taxes. Check whether your provider quotes its rates with or without GST."
+            },
+            {
+              "icon": "bi-stack",
+              "title": "SMS credits:",
+              "desc": "rates are quoted in paise per message and move with volume, route and message category, so promotional and transactional traffic are priced separately."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Provider service charges:",
+              "desc": "ask whether DLT filing help, delivery reports and API access are included or charged separately."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Rework time:",
+              "desc": "a rejected template delays your first campaign. Write templates with clear variables and the right category."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Airtel's FAQ also lists a refundable ₹50,000 security deposit, but marks it as applying to telemarketers, which means SMS providers, not businesses registering as Principal Entities. Because rates depend on your plan, a written all-in quote based on your own volumes beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct23(2).webp",
+          "alt": "SMS cost breakdown for India covering DLT entity fee, renewal and per-message credits"
+        }
+      ]
+    },
+    {
+      "id": "by-business",
+      "heading": "DLT Registration Cost for Startups, Schools, Clinics and Retailers",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The entity fee is charged once per business entity, so it does not rise with the size of your campaigns. What changes from one business to the next is how much you send."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Startups:",
+              "desc": "one entity fee, then pay per SMS as you grow. Start with an OTP template and add order and reminder templates later."
+            },
+            {
+              "icon": "bi-mortarboard-fill",
+              "title": "Schools and coaching centres:",
+              "desc": "fee reminders and attendance alerts are mostly transactional, so most of the budget goes to SMS credits during term time."
+            },
+            {
+              "icon": "bi-hospital-fill",
+              "title": "Clinics and diagnostics:",
+              "desc": "appointment reminders and report-ready alerts, kept free of sensitive medical detail."
+            },
+            {
+              "icon": "bi-shop",
+              "title": "Retail and D2C:",
+              "desc": "order updates, OTPs and festive offers, where promotional and transactional traffic are priced differently."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents-timeline",
+      "heading": "Documents, Approval Time and Re-verification to Plan For",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Delays can cost more than the fee itself, because no campaign can go out until your entity, header and template are approved. Get the paperwork ready before you pay."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-card-text",
+              "title": "Documents:",
+              "desc": "Airtel's FAQ lists registration proof of the organisation, identity proof of the authorised signatory, address proof, an authorised signatory letter, the organisation's PAN card and a GST certificate or declaration."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Approval time:",
+              "desc": "Airtel's FAQ says registration takes approximately 7 days. Other operators may differ, so ask your provider for a realistic estimate."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Renewal:",
+              "desc": "set a reminder before the annual renewal date, because an expired registration can interrupt sending."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Re-verification:",
+              "desc": "BSNL's code says headers and templates not re-verified in a quarter are suspended, and templates unused for 30 days can be suspended too. Keep your templates active."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "DLT applies to SMS only. WhatsApp follows Meta's own template review instead, as we explain in <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a>."
+        }
+      ]
+    },
+    {
+      "id": "avoid-overpaying",
+      "heading": "How to Avoid Paying More Than You Need To",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most overspending on DLT comes from a few avoidable habits. Check these before you pay anyone."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-x-circle-fill",
+              "title": "Registering on several portals:",
+              "desc": "Vi's FAQ says one registration with any access provider is enough, so paying again on a second portal only duplicates the cost."
+            },
+            {
+              "icon": "bi-search",
+              "title": "Unitemised quotes:",
+              "desc": "ask any provider to separate the operator fee from its own service charge."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Missed renewals:",
+              "desc": "a lapsed registration can interrupt sending and force a rush filing."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Weak templates:",
+              "desc": "classify every template honestly and use defined variable fields, because the wrong category is a common reason for rejection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps With DLT Setup and Sending Costs",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. The operator's DLT fee goes to the operator, and the rest of your cost depends on how you send. Here is how the platform maps to the checks above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Quotes sized to your volumes:",
+              "desc": "share your monthly volumes by message category and we size the plan together on a demo call."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "SMS, WhatsApp, RCS and voice managed together. WhatsApp needs no DLT, since Meta reviews its templates instead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Budget for One Fee, Then for Sending",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Treat DLT as a single annual line item set by your operator, then spend your attention on what grows with volume: SMS credits, template quality and delivery. Confirm the fee on your chosen portal, register once, keep your renewal date in view and ask every provider to itemise its charges."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own message types, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your volumes, categories and DLT setup together. You can also read about our <a href=\"/sms/\">Bulk SMS services</a>. Once you know who sets the fee and what you actually pay, DLT registration charges stop being a surprise and become a one-line budget item. Conversations that convert start with messages that get delivered."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            },
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "Best Bulk SMS Service Provider in Hyderabad",
+              "href": "/blogs/best-bulk-sms-service-provider-in-hyderabad/"
+            },
+            {
+              "title": "Best Bulk SMS Service Provider in Bangalore",
+              "href": "/blogs/best-bulk-sms-service-provider-bangalore/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How much does DLT registration cost in India?",
+              "a": "<p>Each telecom operator sets its own fee. Airtel's published FAQ lists ₹5,000 plus tax, or ₹5,900 including GST, for a registration valid for one year, and it is non-refundable. Jio and Vi describe annual registrations too, but their public pages do not show an amount, so confirm the figure on the portal's payment screen before you pay.</p>"
+            },
+            {
+              "q": "Is there a government list of DLT registration fees?",
+              "a": "<p>No. TRAI requires entity, header and template registration, but its own guidance page lists the steps and not any amounts. Registration happens on each telecom operator's portal under that operator's Code of Practice, and the operator sets the fee. BSNL's code, for example, says charges follow its commercial terms.</p>"
+            },
+            {
+              "q": "Is DLT registration free in India?",
+              "a": "<p>Not according to the operators' own documents. Airtel's FAQ lists a paid one-year registration, and Jio's terms describe annual registration and renewal fees. Some older guides still say free, and some SMS providers absorb the fee or guide the filing at no extra service charge, which is why free DLT registration is still advertised.</p>"
+            },
+            {
+              "q": "Is the DLT registration fee the same on Jio, Airtel, Vi and BSNL?",
+              "a": "<p>Only Airtel publishes an amount on its help page: ₹5,900 including GST. Many SMS provider guides report the same figure for Jio and Vi, but the operators do not publish an amount on their public pages, and BSNL's code publishes none. Treat those as unconfirmed, and check each portal's payment screen. Since you register once, choose on approval speed and support.</p>"
+            },
+            {
+              "q": "Does the DLT registration fee include GST?",
+              "a": "<p>Airtel's FAQ lists ₹5,000 plus tax and, in its document checklist, ₹5,900 inclusive of GST. Jio's terms state that its charges are inclusive of all applicable taxes. Check whether your SMS provider quotes its per-message rates with or without GST, so you can compare quotes on the same basis.</p>"
+            },
+            {
+              "q": "Do I have to pay for DLT header and template registration?",
+              "a": "<p>Many SMS provider guides report header and template registration as free once your entity is approved. The operators' own documents leave it to them: BSNL's code says header assignment and template registration follow its commercial terms. Confirm on your portal, and write templates carefully, because a rejected template delays your first campaign.</p>"
+            },
+            {
+              "q": "How long is DLT registration valid and does it need renewal?",
+              "a": "<p>Airtel issues a registration certificate for one year. Vi lists a one-year validity with a 30-day grace period, and Jio describes annual renewal, with the registration locked until the renewal fee is paid. Set a reminder before the renewal date, because a lapsed registration can interrupt your sending.</p>"
+            },
+            {
+              "q": "Do I need to register on more than one DLT portal?",
+              "a": "<p>No. Vi's FAQ says a Principal Entity needs to register only once, with any one access provider, to obtain an Entity ID. Jio's FAQ adds that the ID is unique across all access providers and can be used to register with others. Airtel says you may register with several providers using the same PAN, but you do not have to.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
