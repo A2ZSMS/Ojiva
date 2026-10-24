@@ -15,7 +15,7 @@ const SYSTEM_STATUSES = [
   { name: 'Analytics Engine',  status: 'operational', uptime: '99.94%' },
 ];
 
-const statusColor = { operational: '#16a34a', degraded: '#d97706', outage: '#dc2626' };
+const statusColor = { operational: '#166534', degraded: '#92400e', outage: '#b91c1c' };
 const statusLabel = { operational: 'Operational', degraded: 'Degraded', outage: 'Outage' };
 
 /** System status board */
@@ -33,7 +33,7 @@ function StatusBoard() {
       <div className={`sp-status-overall${allOk ? ' ok' : ' warn'}`}>
         <span className={`sp-status-overall-dot${pulse ? ' pulse' : ''}`} />
         <strong>{allOk ? 'All Systems Operational' : 'Partial Degradation'}</strong>
-        <span className="sp-status-ts">Updated: {new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })} IST</span>
+        <span className="sp-status-ts">Service overview</span>
       </div>
       <div className="sp-status-grid">
         {SYSTEM_STATUSES.map(({ name, status, uptime }) => (
@@ -45,7 +45,7 @@ function StatusBoard() {
           >
             <span className="sp-status-name">{name}</span>
             <span className="sp-status-uptime">{uptime}</span>
-            <span className="sp-status-pill" style={{ background: `${statusColor[status]}20`, color: statusColor[status] }}>
+            <span className="sp-status-pill" style={{ background: `${statusColor[status]}14`, color: statusColor[status] }}>
               <span className="sp-status-pill-dot" style={{ background: statusColor[status] }} />
               {statusLabel[status]}
             </span>

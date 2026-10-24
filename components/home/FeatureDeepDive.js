@@ -1,18 +1,6 @@
-'use client';
-
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { SlideLeft, SlideRight, TiltCard3D } from '../ui/Animations';
-
-/* ── Chat conversation data ── */
-const CHAT = [
-  { from: 'ai',   msg: 'Hi Sarah 👋 Your cart is waiting — grab 20% off before midnight!',           time: '9:14 AM' },
-  { from: 'user', msg: 'What items are in my cart?',                                                   time: '9:15 AM' },
-  { from: 'ai',   msg: 'You have the Pro Plan + API Add-on. Total: ₹12,400/mo. Apply the discount?',  time: '9:15 AM' },
-  { from: 'user', msg: 'Yes please!',                                                                  time: '9:16 AM' },
-  { from: 'ai',   msg: '✅ Discount applied! Your subscription is now active. Welcome aboard!',        time: '9:16 AM' },
-];
+import { Reveal, SlideLeft, SlideRight, TiltCard3D } from '../ui/Animations';
+import AnimatedChat from './AnimatedChat';
 
 const LEAD_FIELDS = [
   { label: 'Company Size',  value: '250–500 employees'      },
@@ -21,102 +9,13 @@ const LEAD_FIELDS = [
   { label: 'Routed To',     value: 'Sarah Chen (Enterprise)' },
 ];
 
-/* ── Typing indicator ── */
-function TypingDots() {
-  return (
-    <div className="typing-indicator" aria-label="AI is typing">
-      <span /><span /><span />
-    </div>
-  );
-}
-
-/* ── Animated chat bubbles ── */
-function AnimatedChat() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [showTyping, setShowTyping] = useState(false);
-
-  useEffect(() => {
-    if (!inView) return;
-    let count = 0;
-    function showNext() {
-      if (count >= CHAT.length) return;
-      const next = CHAT[count];
-      /* AI messages show typing indicator first */
-      if (next.from === 'ai') {
-        setShowTyping(true);
-        setTimeout(() => {
-          setShowTyping(false);
-          setVisibleCount((n) => n + 1);
-          count++;
-          setTimeout(showNext, 320);
-        }, 700);
-      } else {
-        setVisibleCount((n) => n + 1);
-        count++;
-        setTimeout(showNext, 380);
-      }
-    }
-    const t = setTimeout(showNext, 300);
-    return () => clearTimeout(t);
-  }, [inView]);
-
-  return (
-    <div ref={ref} className="fdv-chat-panel">
-      {/* Chat header */}
-      <div className="fdv-chat-header">
-        <div className="fdv-chat-avatar">🤖</div>
-        <div>
-          <p className="fdv-chat-name">Ojiva AI Agent</p>
-          <p className="fdv-chat-status"><span className="fdv-online-dot" />Online · Responding instantly</p>
-        </div>
-        <div className="fdv-chat-live-badge">LIVE</div>
-      </div>
-
-      {/* Messages */}
-      <div className="fdv-chat-messages">
-        {CHAT.slice(0, visibleCount).map(({ from, msg, time }, i) => (
-          <motion.div
-            key={i}
-            className={`chat-bubble ${from}`}
-            initial={{ opacity: 0, y: 10, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span>{msg}</span>
-            <span className="bubble-time">{time}</span>
-          </motion.div>
-        ))}
-
-        {showTyping && (
-          <motion.div
-            className="chat-bubble ai typing-bubble"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <TypingDots />
-          </motion.div>
-        )}
-      </div>
-
-      {/* Footer badge */}
-      <div className="fdv-badge">
-        <span>🤖</span> AI Managed This Entire Conversation
-      </div>
-    </div>
-  );
-}
+/* Lead-card parts animate in (with the card as trigger) — see Reveal.css */
+const part = (vars, delay) => ({ variant: 'custom', member: true, delay, vars: { '--rv-ease': 'ease-out', ...vars } });
 
 /* ── Animated lead score card ── */
 function AnimatedLeadCard() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
   return (
-    <div ref={ref} className="lead-score-card-v2">
+    <div className="lead-score-card-v2" data-reveal-group="" data-rv-margin="80">
       {/* Header */}
       <div className="lsc-header">
         <span className="lsc-avatar">👤</span>
@@ -124,65 +23,65 @@ function AnimatedLeadCard() {
           <p className="lsc-name">James Okafor</p>
           <p className="lsc-company">TechFlow Enterprises</p>
         </div>
-        <motion.span
+        <Reveal
+          as="span"
           className="lsc-badge hot"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={inView ? { scale: 1, opacity: 1 } : {}}
-          transition={{ delay: 0.5, duration: 0.4, ease: 'backOut' }}
+          {...part({ '--rv-s': 0.8, '--rv-dur': '0.4s', '--rv-ease': 'cubic-bezier(0.34, 1.56, 0.64, 1)' }, 0.5)}
         >
           🔥 Hot Lead
-        </motion.span>
+        </Reveal>
       </div>
 
       {/* Animated score bar */}
       <div className="lsc-score-row">
         <span>Lead Score</span>
         <div className="lsc-bar-wrap">
-          <motion.div
+          <Reveal
             className="lsc-bar lsc-bar-gradient"
             style={{ transformOrigin: 'left', width: '87%' }}
-            initial={{ scaleX: 0 }}
-            animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ duration: 1.3, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            {...part({ '--rv-o': 1, '--rv-sx': 0, '--rv-dur': '1.3s', '--rv-ease': 'cubic-bezier(0.22, 1, 0.36, 1)' }, 0.3)}
           />
         </div>
-        <motion.span
+        <Reveal
+          as="span"
           className="lsc-score-val"
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.9 }}
+          {...part({ '--rv-dur': '0.3s' }, 0.9)}
         >
           87/100
-        </motion.span>
+        </Reveal>
       </div>
 
       {/* Detail rows — stagger in */}
       {LEAD_FIELDS.map(({ label, value }, i) => (
-        <motion.div
+        <Reveal
           key={label}
           className="lsc-row"
-          initial={{ opacity: 0, x: -12 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.4, delay: 0.55 + i * 0.1, ease: 'easeOut' }}
+          {...part({ '--rv-x': '-12px', '--rv-dur': '0.4s' }, 0.55 + i * 0.1)}
         >
           <span className="lsc-label">{label}</span>
           <span className="lsc-value">{value}</span>
-        </motion.div>
+        </Reveal>
       ))}
 
       {/* Route action pill */}
-      <motion.div
+      <Reveal
         className="lsc-action-row"
-        initial={{ opacity: 0, y: 8 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 1.05, duration: 0.4 }}
+        {...part({ '--rv-y': '8px', '--rv-dur': '0.4s' }, 1.05)}
       >
         <span className="lsc-action-label">⚡ Auto-routed</span>
         <span className="lsc-action-time">0.3s response</span>
-      </motion.div>
+      </Reveal>
     </div>
   );
 }
+
+// Section header: slide up (no fade) on scroll
+const slide = (y, duration, delay = 0) => ({
+  variant: 'custom',
+  margin: 80,
+  delay,
+  vars: { '--rv-y': `${y}px`, '--rv-o': 1, '--rv-dur': `${duration}s`, '--rv-ease': 'ease-out' },
+});
 
 /* ── Main exported component ── */
 export default function FeatureDeepDive() {
@@ -191,34 +90,28 @@ export default function FeatureDeepDive() {
       <div className="container">
         {/* Section header */}
         <div className="text-center mb-5">
-          <motion.span
+          <Reveal
+            as="span"
             className="section-tag section-tag-centered"
-            initial={{ y: 12 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.5 }}
+            {...slide(12, 0.5)}
           >
             Intelligence Layer
-          </motion.span>
-          <motion.h2
+          </Reveal>
+          <Reveal
+            as="h2"
             id="feature-deep-heading"
             className="section-title mt-2"
-            initial={{ y: 18 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.55, delay: 0.1 }}
+            {...slide(18, 0.55, 0.1)}
           >
             AI That Works Across <span className="text-grad">Every Channel</span>
-          </motion.h2>
-          <motion.p
+          </Reveal>
+          <Reveal
+            as="p"
             className="section-subtitle mx-auto"
-            initial={{ y: 14 }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.5, delay: 0.18 }}
+            {...slide(14, 0.5, 0.18)}
           >
             Not just automation — genuine intelligence that shapes every customer touchpoint and closes more deals.
-          </motion.p>
+          </Reveal>
         </div>
 
         {/* ── Row 1: AI Messaging ── */}
@@ -232,7 +125,7 @@ export default function FeatureDeepDive() {
               <span className="text-grad">Perfect Moment</span>
             </h3>
             <p className="section-subtitle mb-4">
-              Our AI analyses each contact&apos;s behaviour to determine the optimal send time, channel, and message — automatically. Campaigns average 40%+ open rates.
+              Personalise messages and choose when and where to reach each customer.
             </p>
             <ul className="feature-deep-list">
               {[
@@ -270,7 +163,7 @@ export default function FeatureDeepDive() {
               <span className="text-grad">Routed Instantly</span>
             </h3>
             <p className="section-subtitle mb-4">
-              Ojiva AI scores every inbound lead in real time — enriching their profile from 40+ data sources and routing them to the right rep before they even click send.
+              Prioritise incoming leads, enrich their profiles, and route them to the right team.
             </p>
             <ul className="feature-deep-list">
               {[

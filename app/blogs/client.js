@@ -15,9 +15,9 @@ const POSTS_PER_PAGE = 9;
 
 const CAT_STYLE = {
   'Bulk SMS':        { color: '#1d4ed8', bg: 'rgba(29,78,216,0.10)',   dot: '#3b82f6', border: 'rgba(29,78,216,0.20)' },
-  'WhatsApp API':    { color: '#15803d', bg: 'rgba(22,163,74,0.10)',   dot: '#22c55e', border: 'rgba(22,163,74,0.20)' },
-  'RCS Messaging':   { color: '#6d28d9', bg: 'rgba(124,58,237,0.10)',  dot: '#a78bfa', border: 'rgba(124,58,237,0.20)' },
-  'Voice Call':      { color: '#b45309', bg: 'rgba(245,158,11,0.10)',  dot: '#f59e0b', border: 'rgba(245,158,11,0.20)' },
+  'WhatsApp API':    { color: '#166534', bg: 'rgba(37,211,102,0.10)',  dot: '#25d366', border: 'rgba(37,211,102,0.24)' },
+  'RCS Messaging':   { color: '#0369a1', bg: 'rgba(14,165,233,0.10)',  dot: '#0ea5e9', border: 'rgba(14,165,233,0.24)' },
+  'Voice Call':      { color: '#6d28d9', bg: 'rgba(139,92,246,0.10)',  dot: '#8b5cf6', border: 'rgba(139,92,246,0.22)' },
   'AI & Automation': { color: '#0e7490', bg: 'rgba(0,200,248,0.10)',   dot: '#22d3ee', border: 'rgba(0,200,248,0.20)' },
 };
 const DEFAULT_STYLE = { color: '#4f46e5', bg: 'rgba(79,70,229,0.10)', dot: '#818cf8', border: 'rgba(79,70,229,0.20)' };

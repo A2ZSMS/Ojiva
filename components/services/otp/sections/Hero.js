@@ -21,7 +21,7 @@ export default function Hero() {
                 🔐 OTP &amp; 2FA Solutions
               </div>
               <h1 id="otp-hero-heading" className="service-hero-title">
-                <span className="sh-accent sh-accent-sms">OTP &amp; 2FA</span>
+                <span className="sh-accent sh-accent-otp">OTP &amp; 2FA</span>
                 <br />Solutions India
               </h1>
               <p className="service-hero-desc">

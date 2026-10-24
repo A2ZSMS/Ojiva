@@ -12,7 +12,7 @@ const industryData = {
     name: 'Travel & Hospitality',
     shortName: 'Travel & Hospitality',
     icon: 'bi-airplane-fill',
-    color: '#0891b2',
+    color: '#0E7490',
     eyebrow: 'Travel & Hospitality Solutions',
     headline: 'Hotel & Travel Guest Messaging on WhatsApp & SMS in India',
     subtitle:

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {
-  RiFlashlightLine, RiBrainLine, RiPuzzleLine, RiBarChart2Line,
-  RiShieldLine, RiTeamLine,
+  RiFlashlightLine, RiShieldLine, RiTeamLine,
 } from 'react-icons/ri';
 import {
   SlideLeft,
@@ -10,43 +9,26 @@ import {
   TextReveal,
   MagneticButton,
 } from '@/components/ui/Animations';
+import { ICON } from '@/lib/colors';
 
 const WHY = [
   {
     icon: RiFlashlightLine,
-    title: 'Go Live in 48 Hours',
-    desc: 'Guided onboarding, template support, and standard setup workflows help teams launch quickly without guessing through compliance steps.',
-    color: '#1B48E0',
-  },
-  {
-    icon: RiBrainLine,
-    title: 'AI That Gets Smarter Daily',
-    desc: 'Models retrain on your own data — every campaign makes the next one more accurate and effective.',
-    color: '#7C3AED',
-  },
-  {
-    icon: RiPuzzleLine,
-    title: 'Works With Your Entire Stack',
-    desc: '200+ native connectors. Anything else connects instantly via our REST API or webhook system.',
-    color: '#FF6D42',
-  },
-  {
-    icon: RiBarChart2Line,
-    title: 'Unified Real-Time Analytics',
-    desc: 'One dashboard across all channels — SMS, WhatsApp, Voice, RCS — with live delivery and conversion data.',
-    color: '#25D366',
+    title: 'Guided Onboarding',
+    desc: 'Get help with channel setup and your first campaign.',
+    color: ICON.fg,
   },
   {
     icon: RiShieldLine,
-    title: 'Enterprise-Grade Compliance',
-    desc: 'AES-256 encryption, DLT registration support, DPDP-aware operations, and SOC 2-aligned controls for regulated industries.',
-    color: '#dc2626',
+    title: 'DLT & Template Guidance',
+    desc: 'Navigate registration and messaging templates with practical support.',
+    color: ICON.fg,
   },
   {
     icon: RiTeamLine,
-    title: '24/7 Dedicated Success Team',
-    desc: 'Named account support, implementation guidance, and priority escalation paths keep campaigns moving after launch.',
-    color: '#d97706',
+    title: 'Support Beyond Launch',
+    desc: 'Get implementation guidance and help resolving campaign issues.',
+    color: ICON.fg,
   },
 ];
 
@@ -63,7 +45,7 @@ export default function WhyOjiva() {
               to Slow Down
             </h2>
             <TextReveal
-              text="We've obsessed over every detail so you don't have to. Ojiva AI is the communication backbone trusted by growing businesses and enterprise teams across India."
+              text="Practical help from your first setup to your next campaign."
               className="section-subtitle mb-4"
             />
             <MagneticButton className="magnetic-btn-wrap">
@@ -75,9 +57,9 @@ export default function WhyOjiva() {
           <div className="col-12 col-lg-7">
             <StaggerContainer className="row g-3" staggerDelay={0.07}>
               {WHY.map(({ icon: Icon, title, desc, color }) => (
-                <StaggerItem key={title} className="col-12 col-sm-6">
+                <StaggerItem key={title} className="col-12">
                   <div className="why-card-v3">
-                    <span className="why-icon-v3" style={{ background: `${color}15`, color }}>
+                    <span className="why-icon-v3" style={{ background: ICON.tile, color }}>
                       <Icon size={22} aria-hidden="true" />
                     </span>
                     <div>

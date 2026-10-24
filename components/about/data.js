@@ -13,12 +13,12 @@ export const TIMELINE = [
 ];
 
 export const VALUES = [
-  { icon: '🚀', bg: 'rgba(27,72,224,0.1)', title: 'Velocity', desc: 'We build, ship, and iterate at the speed modern businesses demand. Our platform evolves every week.' },
-  { icon: '🔒', bg: 'rgba(16,185,129,0.1)', title: 'Trust', desc: 'Security and data integrity are non-negotiable. SOC 2 Type II certified, GDPR compliant, and DLT registered.' },
-  { icon: '🧠', bg: 'rgba(139,92,246,0.1)', title: 'Intelligence', desc: 'Every platform decision is powered by ML models trained on billions of real communication signals.' },
-  { icon: '🤝', bg: 'rgba(249,115,22,0.1)', title: 'Partnership', desc: "We treat every client as a long-term partner. Your success metrics are our team's north star." },
-  { icon: '🌍', bg: 'rgba(0,200,248,0.1)', title: 'Scale', desc: 'Built from the ground up to operate globally — multi-region infrastructure with data residency controls.' },
-  { icon: '⚙️', bg: 'rgba(239,68,68,0.1)', title: 'Reliability', desc: 'Platform interruptions cost businesses. We engineer for five-nines reliability across every component.' },
+  { icon: '🚀', bg: 'rgba(27,72,224,0.08)', title: 'Velocity', desc: 'We build, ship, and iterate at the speed modern businesses demand. Our platform evolves every week.' },
+  { icon: '🔒', bg: 'rgba(27,72,224,0.08)', title: 'Trust', desc: 'Security and data integrity are non-negotiable. SOC 2 Type II certified, GDPR compliant, and DLT registered.' },
+  { icon: '🧠', bg: 'rgba(27,72,224,0.08)', title: 'Intelligence', desc: 'Every platform decision is powered by ML models trained on billions of real communication signals.' },
+  { icon: '🤝', bg: 'rgba(27,72,224,0.08)', title: 'Partnership', desc: "We treat every client as a long-term partner. Your success metrics are our team's north star." },
+  { icon: '🌍', bg: 'rgba(27,72,224,0.08)', title: 'Scale', desc: 'Built from the ground up to operate globally — multi-region infrastructure with data residency controls.' },
+  { icon: '⚙️', bg: 'rgba(27,72,224,0.08)', title: 'Reliability', desc: 'Platform interruptions cost businesses. We engineer for five-nines reliability across every component.' },
 ];
 
 export const INFRA = [

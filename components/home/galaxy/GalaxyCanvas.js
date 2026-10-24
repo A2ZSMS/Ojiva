@@ -63,8 +63,16 @@ export default function GalaxyCanvas() {
 
   /* ── RAF loop — fully stops when off-screen (no idle wakeups) ── */
   useEffect(() => {
-    const animate = () => {
-      angleRef.current += 0.35;
+    const el = wrapRef.current;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = true;
+    let lastFrame = 0;
+    const animate = (now) => {
+      frameRef.current = requestAnimationFrame(animate);
+      if (lastFrame && now - lastFrame < 1000 / 30) return;
+      const elapsed = lastFrame ? Math.min(now - lastFrame, 100) : 1000 / 30;
+      lastFrame = now;
+      angleRef.current += 0.35 * elapsed / (1000 / 60);
       const base = angleRef.current;
       SERVICES.forEach((s, i) => {
         const el = nodesRef.current[i];
@@ -74,22 +82,32 @@ export default function GalaxyCanvas() {
         const y   = Math.sin(rad) * s.radius;
         el.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
       });
-      frameRef.current = requestAnimationFrame(animate);
     };
-    const start = () => { if (!frameRef.current) frameRef.current = requestAnimationFrame(animate); };
-    const stop  = () => { if (frameRef.current) { cancelAnimationFrame(frameRef.current); frameRef.current = null; } };
-
-    const el = wrapRef.current;
-    if (!el || typeof IntersectionObserver === 'undefined') {
-      start(); // fallback: always run
-      return stop;
-    }
-    const obs = new IntersectionObserver(
-      ([entry]) => { entry.isIntersecting ? start() : stop(); },
+    const sync = () => {
+      const running = visible && !document.hidden && !motion.matches;
+      el?.classList.toggle('gx-is-paused', !running);
+      if (running && !frameRef.current) frameRef.current = requestAnimationFrame(animate);
+      if (!running && frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+        frameRef.current = null;
+        lastFrame = 0;
+      }
+    };
+    const obs = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(
+      ([entry]) => { visible = entry.isIntersecting; sync(); },
       { threshold: 0.05 }
     );
-    obs.observe(el);
-    return () => { obs.disconnect(); stop(); };
+    if (el) obs?.observe(el);
+    document.addEventListener('visibilitychange', sync);
+    motion.addEventListener('change', sync);
+    sync();
+    return () => {
+      obs?.disconnect();
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+      document.removeEventListener('visibilitychange', sync);
+      motion.removeEventListener('change', sync);
+    };
   }, []);
 
   /* ── Blast handler ── */
@@ -163,7 +181,10 @@ export default function GalaxyCanvas() {
             key={s.id}
             ref={el => { nodesRef.current[i] = el; }}
             className="gx-node"
-            style={{ '--clr': s.color }}
+            style={{
+              '--clr': s.color,
+              transform: `translate(calc(-50% + ${Math.cos(s.startAngle * Math.PI / 180) * s.radius}px), calc(-50% + ${Math.sin(s.startAngle * Math.PI / 180) * s.radius}px))`,
+            }}
             onMouseEnter={() => setHoveredId(s.id)}
             onMouseLeave={() => setHoveredId(null)}
           >

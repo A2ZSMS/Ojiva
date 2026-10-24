@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 
 const CHANNELS = [
-  { icon: '📧', label: 'Email Support',   value: 'ojiva.tech@gmail.com', href: 'mailto:ojiva.tech@gmail.com',  desc: 'Response within 4 hrs on standard, 1 hr enterprise', badge: 'Always Open',    badgeColor: '#16a34a' },
-  { icon: '💬', label: 'Live Chat',       value: 'In-Platform Chat',     href: '/contact',                      desc: 'Real-time chat with our engineering team',            badge: 'Mon – Sat',      badgeColor: '#2563eb' },
-  { icon: '📞', label: 'Phone Support',   value: '+91 84310 86185',      href: 'tel:+918431086185',             desc: 'Direct line to engineers — enterprise clients only',  badge: '10 AM – 7 PM',  badgeColor: '#d97706' },
+  { icon: '📧', label: 'Email Support',   value: 'ojiva.tech@gmail.com', href: 'mailto:ojiva.tech@gmail.com',  desc: 'Response within 4 hrs on standard, 1 hr enterprise', badge: 'Always Open',    badgeColor: '#166534' },
+  { icon: '💬', label: 'Live Chat',       value: 'In-Platform Chat',     href: '/contact',                      desc: 'Real-time chat with our engineering team',            badge: 'Mon – Sat',      badgeColor: '#1d4ed8' },
+  { icon: '📞', label: 'Phone Support',   value: '+91 84310 86185',      href: 'tel:+918431086185',             desc: 'Direct line to engineers — enterprise clients only',  badge: '10 AM – 7 PM',  badgeColor: '#92400e' },
   { icon: '📚', label: 'Documentation',   value: 'docs.ojiva.ai',        href: 'https://docs.ojiva.ai',         desc: 'Full API reference, guides & tutorials',              badge: '24/7 Self-Serve', badgeColor: '#7c3aed' },
 ];
 
@@ -34,7 +34,7 @@ export default function ContactChannels() {
             >
               <div className="sp-channel-top">
                 <span className="sp-channel-icon">{icon}</span>
-                <span className="sp-channel-badge" style={{ background: `${badgeColor}20`, color: badgeColor }}>{badge}</span>
+                <span className="sp-channel-badge" style={{ background: `${badgeColor}14`, color: badgeColor }}>{badge}</span>
               </div>
               <h3 className="sp-channel-label">{label}</h3>
               <p className="sp-channel-value">{value}</p>

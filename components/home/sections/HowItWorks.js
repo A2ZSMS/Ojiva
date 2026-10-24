@@ -11,25 +11,25 @@ const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Connect in 10 Minutes',
-    desc: 'Plug Ojiva AI into your CRM, messaging apps, and databases using our native connectors or REST API — no engineering sprint required.',
+    desc: 'Connect your CRM and messaging channels using integrations or the API.',
     icon: RiPlugLine,
   },
   {
     step: '02',
     title: 'Build Your First Flow',
-    desc: 'Use the no-code visual builder to set triggers, conditions, and actions — from simple OTP campaigns to complex multi-channel automations.',
+    desc: 'Choose your audience, create messages, and set up your campaign flow.',
     icon: RiFlowChart,
   },
   {
     step: '03',
     title: 'AI Takes Over',
-    desc: 'Our AI continuously analyses performance, adapts message timing, scores leads, and routes conversations to maximise every conversion.',
+    desc: 'Automate replies, follow-ups, and lead routing across your channels.',
     icon: RiBrainLine,
   },
   {
     step: '04',
     title: 'Watch Results Roll In',
-    desc: 'Track every message, call, and lead in real time. Most clients see a 38% lift in conversions within the first 30 days.',
+    desc: 'Review delivery, conversations, and campaign performance in one place.',
     icon: RiRocketLine,
   },
 ];
@@ -40,9 +40,10 @@ export default function HowItWorks() {
       <div className="container">
         <ClipReveal direction="left">
           <SectionHeading
+            id="how-heading"
             tag="Get Started in Minutes"
             title="From Sign-Up to Revenue in 4 Steps"
-            subtitle="We've removed every barrier to AI adoption. Most teams are live — and seeing results — within 48 hours."
+            subtitle="Connect your channels, build a flow, and measure the results."
             center
           />
         </ClipReveal>

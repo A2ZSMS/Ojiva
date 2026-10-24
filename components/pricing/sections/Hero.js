@@ -22,7 +22,7 @@ export default function Hero() {
           <FadeUp delay={0.08}>
             <h1 id="pricing-hero-heading" className="service-hero-title" style={{ maxWidth: '680px', margin: '0 auto 1.25rem' }}>
               Pay as you go or{' '}
-              <span className="sh-accent sh-accent-sms">scale with a plan</span>
+              <span className="text-grad">scale with a plan</span>
             </h1>
           </FadeUp>
           <FadeUp delay={0.16}>

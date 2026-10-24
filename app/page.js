@@ -81,6 +81,7 @@ const homeBreadcrumb = breadcrumbSchema([
 export default function Page() {
   return (
     <>
+      <link rel="preload" as="image" href="/hero-poster.v1.webp" media="(min-width: 992px)" />
       {/* Breadcrumb schema only — FAQ schema is co-located in FaqSchema.js
           alongside the visible accordion (required for valid FAQPage rich results) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumb) }} />

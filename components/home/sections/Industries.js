@@ -1,86 +1,96 @@
-'use client';
-
-import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ICON } from '@/lib/colors';
+import { Reveal } from '@/components/ui/Animations';
 
 /* ── Industry data ────────────────────────────────────────── */
 const INDUSTRIES = [
   {
     icon: 'bi-bank2',
+    href: '/solutions/banking-finance',
     label: 'Banking &\nFinance',
-    bg: '#e8f0fe',
-    color: '#1B48E0',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'OTP, alerts & KYC',
   },
   {
     icon: 'bi-cart3',
+    href: '/solutions/ecommerce-retail',
     label: 'E-commerce',
-    bg: '#fef3c7',
-    color: '#d97706',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Orders & promos',
   },
   {
     icon: 'bi-heart-pulse',
+    href: '/solutions/healthcare',
     label: 'Healthcare',
-    bg: '#fee2e2',
-    color: '#dc2626',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Appointments & reports',
   },
   {
     icon: 'bi-mortarboard',
+    href: '/solutions/education',
     label: 'Education',
-    bg: '#ede9fe',
-    color: '#7c3aed',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Admissions & alerts',
   },
   {
     icon: 'bi-house',
+    href: '/solutions/real-estate',
     label: 'Real Estate',
-    bg: '#d1fae5',
-    color: '#059669',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Lead nurturing',
   },
   {
     icon: 'bi-truck',
+    href: '/solutions/logistics-delivery',
     label: 'Logistics',
-    bg: '#ffedd5',
-    color: '#ea580c',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Delivery tracking',
   },
   {
     icon: 'bi-umbrella',
+    href: '/solutions/insurance',
     label: 'Insurance',
-    bg: '#cffafe',
-    color: '#0891b2',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Renewals & claims',
   },
   {
     icon: 'bi-airplane',
+    href: '/solutions/travel-hospitality',
     label: 'Travel',
-    bg: '#e0f2fe',
-    color: '#0284c7',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Bookings & updates',
   },
   {
     icon: 'bi-bag-heart',
+    href: '/solutions/ecommerce-retail',
     label: 'Retail',
-    bg: '#fce7f3',
-    color: '#db2777',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Offers & loyalty',
   },
   {
     icon: 'bi-three-dots',
+    href: '/solutions',
     label: '& Many More',
-    bg: '#f3f4f6',
-    color: '#6b7280',
+    bg: ICON.tile,
+    color: ICON.fg,
     desc: 'Any business',
   },
 ];
 
+// Slide up (no fade) on scroll; card hover lift lives in Reveal.css (.ind-card)
 const fade = (delay = 0) => ({
-  initial: { y: 22 },
-  whileInView: { y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.52, delay, ease: [0.22, 1, 0.36, 1] },
+  variant: 'custom',
+  delay,
+  vars: { '--rv-y': '22px', '--rv-o': 1, '--rv-dur': '0.52s' },
 });
 
 /* ── Component ────────────────────────────────────────────── */
@@ -90,7 +100,7 @@ export default function Industries() {
       <div className="container">
 
         {/* Header */}
-        <motion.div className="ind-header" {...fade(0)}>
+        <Reveal className="ind-header" {...fade(0)}>
           <span className="ind-tag">FOR EVERY INDUSTRY</span>
           <h2 className="ind-heading">
             Built for<br />
@@ -99,16 +109,17 @@ export default function Industries() {
           <p className="ind-sub">
             From startups to enterprises — if you have customers, Ojiva AI is for you.
           </p>
-        </motion.div>
+        </Reveal>
 
         {/* Industry grid */}
         <div className="ind-grid">
           {INDUSTRIES.map((ind, i) => (
-            <motion.div
+            <Reveal
+              as={Link}
+              href={ind.href}
               key={ind.label}
               className="ind-card"
               {...fade(0.04 * i)}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <div
                 className="ind-icon-wrap"
@@ -125,12 +136,12 @@ export default function Industries() {
                 ))}
               </span>
               <span className="ind-desc">{ind.desc}</span>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
 
         {/* Bottom tagline */}
-        <motion.div className="ind-tagline" {...fade(0.45)}>
+        <Reveal className="ind-tagline" {...fade(0.45)}>
           <span className="ind-check">
             <i className="bi bi-check-circle-fill" />
           </span>
@@ -138,7 +149,7 @@ export default function Industries() {
             Any business. Any industry.&nbsp;
             <strong>Ojiva AI is for you.</strong>
           </span>
-        </motion.div>
+        </Reveal>
 
       </div>
     </section>

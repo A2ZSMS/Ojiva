@@ -23,8 +23,8 @@ export function FeatureValue({ value, highlightColor }) {
 }
 
 export const CHANNEL_ACCENTS = {
-  SMS: '#1B48E0',
-  WhatsApp: '#25D366',
-  RCS: '#FF6D42',
-  Voice: '#a78bfa',
+  SMS: '#1D4ED8',
+  WhatsApp: '#166534',
+  RCS: '#0369A1',
+  Voice: '#6D28D9',
 };

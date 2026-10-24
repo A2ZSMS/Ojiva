@@ -1,0 +1,56 @@
+/* Scroll reveals (components/ui/Animations.js + RevealObserver.js).
+   Nothing here applies until RevealObserver arms an element, so the static
+   HTML always shows final, visible content. */
+
+/* Custom properties inherit — reset them so a nested reveal never picks up
+   its parent's offsets or delay (initial = unset, so the var() fallback applies). */
+[data-reveal] {
+  --rv-x: 0px; --rv-y: 0px; --rv-o: 0;
+  --rv-s: initial; --rv-sx: initial; --rv-dur: initial; --rv-delay: initial; --rv-ease: initial;
+}
+[data-reveal='up']    { --rv-y: 28px; }
+[data-reveal='in']    { --rv-dur: 0.6s; }
+[data-reveal='left']  { --rv-x: -28px; }
+[data-reveal='right'] { --rv-x: 28px; }
+[data-reveal='item']  { --rv-y: 18px; --rv-dur: 0.48s; }
+
+[data-reveal][data-rv='armed'] {
+  opacity: var(--rv-o, 0);
+  transform: translate3d(var(--rv-x, 0), var(--rv-y, 0), 0) scale(var(--rv-sx, var(--rv-s, 1)), var(--rv-s, 1));
+  transition: none;
+}
+
+[data-reveal][data-rv='shown'] {
+  transition:
+    opacity var(--rv-dur, 0.55s) var(--rv-ease, cubic-bezier(0.22, 1, 0.36, 1)) var(--rv-delay, 0s),
+    transform var(--rv-dur, 0.55s) var(--rv-ease, cubic-bezier(0.22, 1, 0.36, 1)) var(--rv-delay, 0s);
+}
+
+/* Load-time entrances (homepage hero) — CSS only, run from first paint.
+   fill-mode backwards: no leftover transform (stacking context) afterwards. */
+@keyframes rv-rise {
+  from { transform: translate3d(0, var(--rv-y, 20px), 0); }
+}
+@keyframes rv-pop {
+  from { opacity: 0; transform: scale(0.92); }
+}
+@keyframes rv-typing-in {
+  from { opacity: 0; transform: translate3d(0, 8px, 0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rv-rise {
+    animation: rv-rise var(--rv-dur, 0.55s) cubic-bezier(0.22, 1, 0.36, 1) var(--rv-delay, 0s) backwards;
+  }
+  .rv-pop {
+    animation: rv-pop 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s backwards;
+  }
+}
+
+/* Hover lifts that framer-motion's whileHover used to do */
+@media (hover: hover) and (pointer: fine) {
+  .ind-card { transition: color 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); }
+  .ind-card:hover { transform: translate3d(0, -4px, 0); }
+  .rv-press { transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1); }
+  .rv-press:hover { transform: scale(1.02); }
+}
+.rv-press:active { transform: scale(0.98); }

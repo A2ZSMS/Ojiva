@@ -15,7 +15,7 @@ const TESTIMONIALS = [
     avatarBg: '#dbeafe',
     avatarColor: '#1d4ed8',
     result: '+38% Conversions',
-    resultColor: '#16a34a',
+    resultColor: '#166534',
     stars: 5,
   },
   {
@@ -37,7 +37,7 @@ const TESTIMONIALS = [
     company: 'Nexora Commerce',
     initials: 'PN',
     avatarBg: '#dcfce7',
-    avatarColor: '#15803d',
+    avatarColor: '#166534',
     result: '12× Campaign Scale',
     resultColor: '#7C3AED',
     stars: 5,
@@ -50,6 +50,7 @@ export default function Testimonials() {
       <div className="container">
         <ParallaxSection speed={0.1}>
           <SectionHeading
+            id="testimonials-heading"
             tag="Customer Stories"
             title="Real Teams. Real Results."
             subtitle="Businesses across India are transforming their growth with Ojiva AI — here's what they say."
@@ -61,8 +62,6 @@ export default function Testimonials() {
           {TESTIMONIALS.map(({ quote, name, role, company, initials, avatarBg, avatarColor, result, resultColor, stars }) => (
             <StaggerItem key={name} className="col-12 col-md-4">
               <div className="ojv-testi-card h-100">
-                {/* Big quote mark */}
-                <div className="ojv-testi-quote-mark" aria-hidden="true">&ldquo;</div>
                 <div className="ojv-testi-top">
                   <div className="ojv-testi-stars">{'★'.repeat(stars)}</div>
                   <div

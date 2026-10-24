@@ -1,8 +1,8 @@
 export const RCS_FEATURES = [
-  { icon: '\u{1F0CF}', title: 'Rich Cards', color: '#8B5CF6', desc: 'Visually stunning card messages with images, titles, descriptions, and action buttons.', points: ['Hero image + body text', 'Up to 4 action buttons', 'Deep link & call actions', 'Native app rendering'] },
-  { icon: '\u{1F3A0}', title: 'Card Carousels', color: '#6D28D9', desc: 'Swipeable horizontal carousels to showcase products — like a mobile storefront.', points: ['Up to 10 cards', 'Individual CTA buttons', 'Product showcase', 'Horizontal scroll UX'] },
-  { icon: '\u{1F4AC}', title: 'Suggested Replies', color: '#7C3AED', desc: 'Guide customers with pre-set reply chips that make interaction effortless.', points: ['Tap-to-reply chips', 'Dynamic quick actions', 'Conversation flows', 'Zero-friction UX'] },
-  { icon: '\u2705', title: 'Verified Sender', color: '#5B21B6', desc: 'Display your brand name, logo, and verified checkmark — eliminating fraud.', points: ['Google-verified brand ID', 'Official brand logo', 'Verified checkmark', 'Anti-phishing protection'] },
+  { icon: '\u{1F0CF}', title: 'Rich Cards', color: '#0369A1', desc: 'Visually stunning card messages with images, titles, descriptions, and action buttons.', points: ['Hero image + body text', 'Up to 4 action buttons', 'Deep link & call actions', 'Native app rendering'] },
+  { icon: '\u{1F3A0}', title: 'Card Carousels', color: '#0369A1', desc: 'Swipeable horizontal carousels to showcase products — like a mobile storefront.', points: ['Up to 10 cards', 'Individual CTA buttons', 'Product showcase', 'Horizontal scroll UX'] },
+  { icon: '\u{1F4AC}', title: 'Suggested Replies', color: '#0369A1', desc: 'Guide customers with pre-set reply chips that make interaction effortless.', points: ['Tap-to-reply chips', 'Dynamic quick actions', 'Conversation flows', 'Zero-friction UX'] },
+  { icon: '\u2705', title: 'Verified Sender', color: '#0369A1', desc: 'Display your brand name, logo, and verified checkmark — eliminating fraud.', points: ['Google-verified brand ID', 'Official brand logo', 'Verified checkmark', 'Anti-phishing protection'] },
 ];
 
 export const INDUSTRIES = [

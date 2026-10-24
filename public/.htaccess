@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Ojiva AI — static export caching + compression for LiteSpeed / Apache hosting.
-# public/_headers (Netlify/Cloudflare format) is a NO-OP on LiteSpeed, so these
-# rules are what actually ship. Copied verbatim into out/ by the static export.
+# These rules are the site's only cache/security headers (the host is LiteSpeed,
+# so Netlify-style _headers files do nothing). Copied into out/ by the build.
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Force HTTPS + www (canonical: https://www.ojiva.ai) ──────────────────────

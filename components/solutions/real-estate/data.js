@@ -12,7 +12,7 @@ const industryData = {
     name: 'Real Estate',
     shortName: 'Real Estate',
     icon: 'bi-houses-fill',
-    color: '#0ea5e9',
+    color: '#0369A1',
     eyebrow: 'Real Estate & Property Solutions',
     headline: 'WhatsApp & SMS for Real Estate Developers & Brokers in India',
     subtitle:

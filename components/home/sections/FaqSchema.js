@@ -4,31 +4,31 @@ import { faqSchema } from '@/lib/metadata';
 const HOME_FAQS = [
   {
     q: 'What is Ojiva AI?',
-    a: 'Ojiva AI is an Indian AI-powered communication platform that enables businesses to send Bulk SMS, automate WhatsApp Business API conversations, launch RCS campaigns, and deploy Bulk Voice Call at enterprise scale — all from a single dashboard with end-to-end encryption.',
+    a: 'Ojiva AI brings SMS, WhatsApp Business API, RCS, and Voice campaigns together in one communication platform.',
   },
   {
     q: 'What services does Ojiva AI offer?',
-    a: 'Ojiva AI offers Bulk SMS Service, WhatsApp Business API integration, RCS Messaging, AI Voice Call automation, OTP & 2FA Solutions, WhatsApp AI Chatbot, SIP Trunking, and workflow automation — all with enterprise-grade AES-256 security.',
+    a: 'Services include Bulk SMS, WhatsApp Business API, RCS, Voice, OTP verification, chatbots, and workflow automation.',
   },
   {
-    q: 'Is Ojiva AI free to try?',
-    a: 'Yes! Ojiva AI offers a free 14-day trial with no credit card required. You can explore all features including Bulk SMS, WhatsApp API, RCS Messaging, and Bulk Voice Call before choosing a paid plan.',
+    q: 'How can I try Ojiva AI?',
+    a: 'Book a demo to explore the platform and ask our team about current trial options.',
   },
   {
     q: 'How much does Ojiva AI cost?',
-    a: 'Ojiva AI offers flexible pay-as-you-go pricing starting from ₹0.15/SMS. Enterprise plans with dedicated support, custom integrations, and volume discounts are available. Contact sales for a custom quote.',
+    a: 'Pricing depends on your channels, message volume, and setup. Contact sales for a quote that fits your requirements.',
   },
   {
     q: 'Does Ojiva AI support WhatsApp Business API?',
-    a: 'Yes, Ojiva AI is an official WhatsApp Business Solution Provider (BSP) offering full WhatsApp Business API integration including bulk messaging, chatbot automation, interactive templates, and 98% open rate delivery across India.',
+    a: 'Yes. Use WhatsApp Business API for campaigns, interactive templates, and automated conversations.',
   },
   {
     q: 'How secure is Ojiva AI?',
-    a: 'Ojiva AI uses AES-256 encryption, TLS 1.3 in transit, 2FA/TOTP authentication, and is SOC 2 Type II aligned. We are GDPR & DPDP Act compliant with 99.9% uptime SLA and ISO 27001 practices.',
+    a: 'Security features include encryption, two-factor authentication, and role-based access. Our team can discuss your specific security and compliance requirements.',
   },
   {
     q: 'Where is Ojiva AI based?',
-    a: 'Ojiva AI is headquartered in Bengaluru, Karnataka, India (Sahakara Nagar). We serve 500+ businesses across India and globally, with support available in English and Hindi.',
+    a: 'Ojiva AI is based in Sahakara Nagar, Bengaluru, Karnataka, India.',
   },
 ];
 

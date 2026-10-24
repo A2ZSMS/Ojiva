@@ -1,0 +1,18 @@
+/* ═══════════════════════════════════════
+   CARD SPOTLIGHT — cursor glow + lit border on [data-spot] cards
+═══════════════════════════════════════ */
+.spot-glow {
+  position: absolute; inset: 0; z-index: 0;
+  border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity .35s ease;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(96,165,250,0.16), transparent 45%);
+}
+.spot-glow::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), rgba(147,197,253,0.75), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.spot-group.is-live [data-spot]:hover .spot-glow { opacity: 1; }
+[data-spot] > :not(.spot-glow) { position: relative; z-index: 1; }

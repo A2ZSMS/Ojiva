@@ -5,6 +5,10 @@
 ══════════════════════════════════════════════════════════════ */
 
 /* ── Base section ── */
+.gx-is-paused *, .gx-is-paused *::before, .gx-is-paused *::after {
+  animation-play-state: paused !important;
+}
+
 .gx-hero {
   position: relative;
   min-height: 100vh;

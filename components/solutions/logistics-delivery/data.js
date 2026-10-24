@@ -12,7 +12,7 @@ const industryData = {
     name: 'Logistics & Delivery',
     shortName: 'Logistics & Delivery',
     icon: 'bi-truck',
-    color: '#f59e0b',
+    color: '#B45309',
     eyebrow: 'Logistics & Last-Mile Delivery Solutions',
     headline: 'Shipment Tracking & Delivery OTP for Logistics in India',
     subtitle:

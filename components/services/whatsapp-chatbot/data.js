@@ -7,19 +7,19 @@ export const METRICS = [
 ];
 
 export const BOT_FEATURES = [
-  { icon: '🧠', title: 'AI-Powered NLP', color: '#7C3AED', desc: 'Understand intent with NLP. Our AI learns from every conversation.', points: ['Intent recognition', 'Entity extraction', 'Sentiment analysis', 'Self-learning'] },
-  { icon: '🔧', title: 'No-Code Builder', color: '#1B48E0', desc: 'Design complex flows with drag-and-drop. No developers needed.', points: ['Visual editor', 'Conditional branching', 'Quick reply menus', 'A/B testing'] },
-  { icon: '🎯', title: 'Lead Qualification', color: '#25D366', desc: 'Auto qualify, score, and route leads — inside WhatsApp.', points: ['Lead scoring', 'CRM integration', 'Smart routing', 'Follow-up triggers'] },
-  { icon: '🌍', title: 'Multi-Language', color: '#FF6D42', desc: 'Engage in 20+ languages with auto-detection.', points: ['20+ languages', 'Auto-detection', 'Hindi, Tamil +', 'Regional routing'] },
+  { icon: '🧠', title: 'AI-Powered NLP', color: '#047857', desc: 'Understand intent with NLP. Our AI learns from every conversation.', points: ['Intent recognition', 'Entity extraction', 'Sentiment analysis', 'Self-learning'] },
+  { icon: '🔧', title: 'No-Code Builder', color: '#047857', desc: 'Design complex flows with drag-and-drop. No developers needed.', points: ['Visual editor', 'Conditional branching', 'Quick reply menus', 'A/B testing'] },
+  { icon: '🎯', title: 'Lead Qualification', color: '#047857', desc: 'Auto qualify, score, and route leads — inside WhatsApp.', points: ['Lead scoring', 'CRM integration', 'Smart routing', 'Follow-up triggers'] },
+  { icon: '🌍', title: 'Multi-Language', color: '#047857', desc: 'Engage in 20+ languages with auto-detection.', points: ['20+ languages', 'Auto-detection', 'Hindi, Tamil +', 'Regional routing'] },
 ];
 
 export const USE_CASES = [
-  { icon: '🛒', title: 'E-Commerce', desc: 'Cart recovery, order updates, product upsells.', color: '#25D366', points: ['Cart recovery (30%+)', 'Order tracking', 'AI recommendations', 'Reorder flows'] },
-  { icon: '🏥', title: 'Healthcare', desc: 'Appointments, reminders, lab reports, queries.', color: '#0EA5E9', points: ['Appointment booking', 'Lab reports', 'Symptom checker', 'Consultations'] },
-  { icon: '🏦', title: 'Banking', desc: 'Balance checks, loans, KYC & fraud alerts.', color: '#7C3AED', points: ['Balance & statements', 'Loan tracking', 'KYC collection', 'Fraud alerts'] },
-  { icon: '🎓', title: 'Education', desc: 'Admissions, results, fees & parent engagement.', color: '#F59E0B', points: ['Admission enquiries', 'Fee reminders', 'Exam results', 'Parent comms'] },
-  { icon: '🏠', title: 'Real Estate', desc: 'Qualify leads, schedule visits, share brochures.', color: '#EF4444', points: ['Lead qualification', 'Site visit booking', 'Brochure sharing', 'EMI calculator'] },
-  { icon: '✈️', title: 'Travel', desc: 'Bookings, itineraries, check-in & concierge.', color: '#1B48E0', points: ['Booking confirms', 'Itinerary sharing', 'Check-in reminders', 'Feedback'] },
+  { icon: '🛒', title: 'E-Commerce', desc: 'Cart recovery, order updates, product upsells.', color: '#047857', points: ['Cart recovery (30%+)', 'Order tracking', 'AI recommendations', 'Reorder flows'] },
+  { icon: '🏥', title: 'Healthcare', desc: 'Appointments, reminders, lab reports, queries.', color: '#047857', points: ['Appointment booking', 'Lab reports', 'Symptom checker', 'Consultations'] },
+  { icon: '🏦', title: 'Banking', desc: 'Balance checks, loans, KYC & fraud alerts.', color: '#047857', points: ['Balance & statements', 'Loan tracking', 'KYC collection', 'Fraud alerts'] },
+  { icon: '🎓', title: 'Education', desc: 'Admissions, results, fees & parent engagement.', color: '#047857', points: ['Admission enquiries', 'Fee reminders', 'Exam results', 'Parent comms'] },
+  { icon: '🏠', title: 'Real Estate', desc: 'Qualify leads, schedule visits, share brochures.', color: '#047857', points: ['Lead qualification', 'Site visit booking', 'Brochure sharing', 'EMI calculator'] },
+  { icon: '✈️', title: 'Travel', desc: 'Bookings, itineraries, check-in & concierge.', color: '#047857', points: ['Booking confirms', 'Itinerary sharing', 'Check-in reminders', 'Feedback'] },
 ];
 
 export const HOW_STEPS = [

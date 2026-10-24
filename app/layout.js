@@ -6,9 +6,21 @@ import { Inter, EB_Garamond } from 'next/font/google';
 import Script from 'next/script';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
 import LayoutShell from '@/components/layout/LayoutShell';
+import Footer from '@/components/layout/Footer';
 import BootstrapClient from './BootstrapClient';
+import RevealObserver from '@/components/ui/RevealObserver';
 import iconsVersion from '@/lib/icons-version.json';
 import Analytics, { GTMNoScript, searchConsoleVerification as scMeta } from '@/components/layout/Analytics';
+import { INDUSTRIES } from '@/lib/industries';
+
+// Keep full industry-page copy on the server; the browser only needs menu fields.
+const industryLinks = INDUSTRIES.map(({ slug, icon, shortName, subtitle = '', color }) => ({
+  href: `/solutions/${slug}`,
+  icon,
+  label: shortName,
+  desc: subtitle.replace(/\s+/g, ' ').trim().slice(0, 72) + (subtitle.length > 72 ? '…' : ''),
+  color,
+}));
 
 const inter = Inter({
   subsets: ['latin'],
@@ -115,6 +127,15 @@ export default function RootLayout({ children }) {
             pushed before the real scripts arrive is replayed when they load. */}
         <script dangerouslySetInnerHTML={{ __html: `(function(w,d){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};var q=[],done=false,p=w.location.pathname,now=p.indexOf('thank-you')>-1||['/whatsapp-api-service','/bulk-sms','/rcs-messaging','/website-development'].indexOf(p.replace(/.$/,function(c){return c==='/'?'':c;}))>-1;w.__ojvLoad=function(f){if(done){f();}else{q.push(f);}};function go(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,go,true);});var f;while((f=q.shift())){try{f();}catch(e){}}}var ev=['scroll','pointerdown','keydown','touchstart','mousemove'];ev.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true,capture:true});});function arm(){setTimeout(go,3500);}if(d.readyState==='complete'){arm();}else{w.addEventListener('load',arm,{once:true});}w.__ojvLoad(function(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-TJ8ZDFS2';d.head.appendChild(j);});if(now)go();})(window,document);` }} />
 
+        {/* ── Rupee sign (₹) from a 1 KB Inter subset ──
+            ₹ sits in Inter's "latin-ext" slice, so a single ₹ on a page (homepage
+            chat mockup, SMS/pricing copy) made every visitor download that 83 KB
+            file. These later, same-family faces cover only U+20B9 and repeat next/font's
+            exact weights (Chrome only lets a later face override one with the same
+            weight), so the browser uses them for ₹ instead (speed audit, Oct 2026).
+            Rename the file (v2…) if it ever changes — /fonts is cached for a year. */}
+        <style dangerouslySetInnerHTML={{ __html: [400, 500, 600, 700].map((w) => `@font-face{font-family:Inter;font-style:normal;font-weight:${w};font-display:swap;src:url(/fonts/inter-rupee.v1.woff2) format("woff2");unicode-range:U+20B9}`).join('') }} />
+
         {/* ── Performance: preconnect & DNS prefetch ── */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
@@ -168,10 +189,11 @@ export default function RootLayout({ children }) {
         <a href="#main-content" className="visually-hidden-focusable">
           Skip to main content
         </a>
-        <LayoutShell>
+        <LayoutShell industryLinks={industryLinks} footer={<Footer />}>
           <main id="main-content" style={{ overflowX: 'clip' }}>{children}</main>
         </LayoutShell>
         <BootstrapClient />
+        <RevealObserver />
 
         {/* All tracking scripts — GA4, GTM, etc. */}
         <Analytics />

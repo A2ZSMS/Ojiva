@@ -1,7 +1,3 @@
-'use client';
-
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 import {
   RiShieldKeyholeLine,
   RiLock2Line,
@@ -10,73 +6,71 @@ import {
   RiFingerprint2Line,
   RiShieldCheckLine,
 } from 'react-icons/ri';
+import { CountUp } from '@/components/ui/Premium';
+import { ICON } from '@/lib/colors';
+import { SpotlightGroup } from '@/components/ui/Spotlight';
+import { Reveal } from '@/components/ui/Animations';
 
 const SECURITY_FEATURES = [
   {
     icon: RiShieldKeyholeLine,
     title: 'End-to-End Encryption',
-    desc: 'All data in transit is protected with TLS 1.3 and data at rest is encrypted using industry-standard protocols — ensuring zero exposure at every layer.',
-    color: '#93c5fd',
-    bg: 'rgba(59,130,246,0.22)',
+    desc: 'TLS 1.3 protects data in transit, with encryption for stored data.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
   {
     icon: RiLock2Line,
     title: 'AES-256 Payload Security',
-    desc: 'Static and dynamic API payloads are encrypted with AES-256-bit encryption — the same standard trusted by governments and financial institutions worldwide.',
-    color: '#c4b5fd',
-    bg: 'rgba(139,92,246,0.22)',
+    desc: 'AES-256 encryption helps protect sensitive API payloads.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
   {
     icon: RiUserSettingsLine,
     title: 'User Data Segregation',
-    desc: 'Multi-tenant architecture with strict logical data isolation ensures your customer data is completely segregated — no cross-client data leakage, ever.',
-    color: '#86efac',
-    bg: 'rgba(34,197,94,0.22)',
+    desc: 'Logical tenant isolation keeps customer data separate between accounts.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
   {
     icon: RiDeleteBin6Line,
     title: 'Data Retention & Wiping',
-    desc: 'Configurable data retention policies and certified data wiping procedures to meet your compliance requirements — GDPR, DPDP Act, and custom SLAs.',
-    color: '#fdba74',
-    bg: 'rgba(249,115,22,0.22)',
+    desc: 'Manage retention periods and data removal around your business requirements.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
   {
     icon: RiFingerprint2Line,
     title: '2FA Access Management',
-    desc: 'Two-factor authentication with TOTP, SMS OTP, and biometric support. Role-based access control (RBAC) ensures only authorised personnel access sensitive data.',
-    color: '#fca5a5',
-    bg: 'rgba(239,68,68,0.22)',
+    desc: 'Two-factor authentication and role-based permissions control account access.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
   {
     icon: RiShieldCheckLine,
     title: 'Regulatory Compliance',
-    desc: 'SOC 2 Type II aligned, GDPR, DPDP Act compliant, DLT registered, and ISO 27001 practices — built for regulated industries from day one.',
-    color: '#fde68a',
-    bg: 'rgba(245,158,11,0.22)',
+    desc: 'Controls and operational practices support business compliance requirements.',
+    color: ICON.fgDark,
+    bg: ICON.bgDark,
   },
 ];
 
-const cardVariants = {
-  hidden: { y: 30 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: i * 0.1,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
+// Everything below slides up (no fade) when the section enters the viewport.
+const slide = (y, duration, delay = 0, ease = 'ease-out') => ({
+  variant: 'custom',
+  member: true,
+  delay,
+  vars: { '--rv-y': `${y}px`, '--rv-o': 1, '--rv-dur': `${duration}s`, '--rv-ease': ease },
+});
 
 export default function SecuritySection() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
   return (
     <section
-      ref={ref}
+      data-reveal-group=""
+      data-rv-margin="80"
       className="security-section position-relative overflow-hidden"
+      data-nav-dark
       aria-labelledby="security-heading"
     >
       {/* Subtle background decoration */}
@@ -86,51 +80,43 @@ export default function SecuritySection() {
       <div className="container position-relative" style={{ zIndex: 2 }}>
         {/* Section header */}
         <div className="text-center mb-5 pb-3">
-          <motion.div
+          <Reveal
             className="d-inline-flex align-items-center gap-2 security-eyebrow mb-3"
-            initial={{ y: 14 }}
-            animate={inView ? { y: 0 } : {}}
-            transition={{ duration: 0.5 }}
+            {...slide(14, 0.5)}
           >
             <RiShieldCheckLine size={16} />
             Enterprise-Grade Security
-          </motion.div>
+          </Reveal>
 
-          <motion.h2
+          <Reveal
+            as="h2"
             id="security-heading"
             className="section-title"
-            initial={{ y: 18 }}
-            animate={inView ? { y: 0 } : {}}
-            transition={{ duration: 0.55, delay: 0.1 }}
+            {...slide(18, 0.55, 0.1)}
           >
             Security That Never{' '}
             <span className="text-grad">Compromises</span>
-          </motion.h2>
+          </Reveal>
 
-          <motion.p
+          <Reveal
+            as="p"
             className="section-subtitle mx-auto"
-            initial={{ y: 14 }}
-            animate={inView ? { y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.18 }}
+            {...slide(14, 0.5, 0.18)}
           >
-            Your data deserves military-grade protection. From encrypted payloads to
-            certified data wiping — every layer is built to meet the strictest
-            compliance standards.
-          </motion.p>
+            Encryption, account controls, and data management across your communication workflows.
+          </Reveal>
         </div>
 
         {/* Security feature cards */}
-        <div className="row g-4">
+        <SpotlightGroup className="row g-4">
           {SECURITY_FEATURES.map(({ icon: Icon, title, desc, color, bg }, i) => (
-            <motion.div
+            <Reveal
               key={title}
               className="col-12 col-md-6 col-lg-4"
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
+              {...slide(30, 0.5, i * 0.1, 'cubic-bezier(0.22, 1, 0.36, 1)')}
             >
-              <div className="security-card h-100">
+              <div className="security-card h-100" data-spot>
+                <span className="spot-glow" aria-hidden="true" />
                 <div
                   className="security-card-icon"
                   style={{ background: bg, color }}
@@ -141,16 +127,14 @@ export default function SecuritySection() {
                 <p className="security-card-desc">{desc}</p>
                 <div className="security-card-line" style={{ background: color }} />
               </div>
-            </motion.div>
+            </Reveal>
           ))}
-        </div>
+        </SpotlightGroup>
 
         {/* Trust bar */}
-        <motion.div
+        <Reveal
           className="security-trust-bar mt-5"
-          initial={{ y: 20 }}
-          animate={inView ? { y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          {...slide(20, 0.6, 0.7)}
         >
           <div className="row align-items-center justify-content-center g-4 text-center">
             {[
@@ -162,13 +146,15 @@ export default function SecuritySection() {
             ].map(({ label, sub }) => (
               <div key={label} className="col-6 col-md">
                 <div className="security-trust-item">
-                  <span className="security-trust-value">{label}</span>
+                  <span className="security-trust-value">
+                    {label === '99.9%' ? <CountUp value={99.9} decimals={1} suffix="%" /> : label}
+                  </span>
                   <span className="security-trust-label">{sub}</span>
                 </div>
               </div>
             ))}
           </div>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

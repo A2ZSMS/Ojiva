@@ -1,14 +1,5 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { useNetwork } from '@/hooks/useNetwork';
-
-// Desktop-only visual — loaded lazily so mobile never downloads/hydrates it
-// (the galaxy is hidden with d-none d-lg-flex, so mobile output is unchanged).
-const GalaxyCanvas = dynamic(() => import('@/components/home/galaxy/GalaxyCanvas'));
+import { HeroBgVideo, HeroGalaxy } from './HeroMedia';
 
 /* ── SVG Icons ───────────────────────────────────────────── */
 const SmsIcon = () => (
@@ -73,45 +64,26 @@ const AVATARS = [
   { bg: '#fef9c3', color: '#b45309', initials: 'VJ' },
 ];
 
-// Opacity stays 1 so hero copy is visible in the static HTML (SEO + LCP).
+// CSS-only entrances (Reveal.css .rv-rise): opacity stays 1 so hero copy is
+// visible in the static HTML and paints on first render (SEO + LCP) — only a
+// subtle slide runs, from first paint, with no JavaScript.
 const fade = (delay = 0, y = 20) => ({
-  initial:    { y },
-  animate:    { y: 0 },
-  transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] },
+  style: { '--rv-y': `${y}px`, '--rv-delay': `${delay}s` },
 });
 
-// LCP-safe entrance for the headline: opacity stays 1 so the text paints on
-// first render (fast LCP even before JS hydrates) — only a subtle slide animates.
+// Headline: slightly shorter, smaller slide
 const rise = (delay = 0, y = 14) => ({
-  initial:    { y },
-  animate:    { y: 0 },
-  transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] },
+  style: { '--rv-y': `${y}px`, '--rv-delay': `${delay}s`, '--rv-dur': '0.5s' },
 });
 
 /* ── Component ────────────────────────────────────────────── */
 export default function Hero() {
-  // Only render video on desktop — prevents 10 MB download on mobile/tablet
-  const [isDesktop, setIsDesktop] = useState(false);
-  const { isSlow } = useNetwork();
-  useEffect(() => {
-    const media = window.matchMedia('(min-width: 992px)');
-    const syncDesktop = () => setIsDesktop(media.matches);
-    const frame = window.requestAnimationFrame(syncDesktop);
-    media.addEventListener('change', syncDesktop);
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      media.removeEventListener('change', syncDesktop);
-    };
-  }, []);
-
   return (
-    <section className="hs-section" aria-labelledby="hero-heading">
+    <section className="hs-section" data-nav-dark aria-labelledby="hero-heading">
 
       {/* Background video — desktop only (992px+) */}
-      {isDesktop && !isSlow && (
-        <video className="hs-bg-video" src="/hero-video.mp4" autoPlay muted loop playsInline preload="none" aria-hidden="true" />
-      )}
+      <div className="hs-bg-poster" aria-hidden="true" />
+      <HeroBgVideo />
       <div className="hs-bg-overlay" aria-hidden="true" />
       <div className="hs-grid-bg"   aria-hidden="true" />
 
@@ -122,48 +94,48 @@ export default function Hero() {
           <div className="col-12 col-lg-6">
 
             {/* Badge */}
-            <motion.div {...fade(0)}>
+            <div className="rv-rise" {...fade(0)}>
               <span className="hs-badge">
                 <span className="hs-badge-dot" />
                 AI Communication Platform for India
               </span>
-            </motion.div>
+            </div>
 
             {/* Headline */}
-            <motion.h1 id="hero-heading" className="hs-title" {...rise(0.05)}>
+            <h1 id="hero-heading" className="hs-title rv-rise" {...rise(0.05)}>
               Bulk SMS, WhatsApp<br />
               &amp; RCS{' '}
               <span className="hs-title-highlight">at scale.</span>
-            </motion.h1>
+            </h1>
 
             {/* Subtitle */}
-            <motion.p className="hs-subtitle" {...fade(0.15)}>
+            <p className="hs-subtitle rv-rise" {...fade(0.15)}>
               Send billions of messages across SMS, WhatsApp, RCS &amp; Voice —
               end-to-end encrypted, enterprise compliant, delivered in milliseconds.
-            </motion.p>
+            </p>
 
             {/* Trust feature pills */}
-            <motion.div className="hs-trust-pills" {...fade(0.20)}>
+            <div className="hs-trust-pills rv-rise" {...fade(0.20)}>
               {TRUST_PILLS.map(p => (
                 <span key={p.label} className="hs-trust-pill">
                   <i className={`bi ${p.icon} hs-trust-pill-icon`} aria-hidden="true" />
                   {p.label}
                 </span>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTAs */}
-            <motion.div className="hs-actions" {...fade(0.26)}>
+            <div className="hs-actions rv-rise" {...fade(0.26)}>
               <Link href="/contact" className="btn-hs-primary">
                 Talk to Sales <ArrowRight />
               </Link>
               <Link href="/book-demo" className="btn-hs-outline">
                 <span className="hs-play-icon">▶</span> Book a Demo
               </Link>
-            </motion.div>
+            </div>
 
             {/* Social proof */}
-            <motion.div className="hs-social-proof" {...fade(0.31)}>
+            <div className="hs-social-proof rv-rise" {...fade(0.31)}>
               <div className="hs-avatars">
                 {AVATARS.map((a, i) => (
                   <span
@@ -181,23 +153,20 @@ export default function Hero() {
               <span className="hs-proof-sep" />
               <span className="hs-proof-stars">★★★★★</span>
               <span className="hs-proof-score">4.9 / 5</span>
-            </motion.div>
+            </div>
 
 
           </div>
 
           {/* ══ RIGHT COLUMN — Galaxy (desktop only) ════ */}
-          <motion.div
-            className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.80, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          <div
+            className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center rv-pop"
             style={{ position: 'relative', zIndex: 4 }}
           >
             <div className="hs-galaxy-outer">
-              {isDesktop && !isSlow && <GalaxyCanvas />}
+              <HeroGalaxy />
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

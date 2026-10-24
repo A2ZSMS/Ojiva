@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 
 const QUICK_LINKS = [
-  { icon: '📖', title: 'API Reference',        desc: 'Full REST API docs',              href: 'https://docs.ojiva.ai', color: '#2563eb' },
-  { icon: '🎬', title: 'Video Tutorials',      desc: 'Step-by-step walkthroughs',       href: '/contact',              color: '#7c3aed' },
-  { icon: '🔄', title: 'Changelog',            desc: 'Platform updates & releases',     href: '/contact',              color: '#16a34a' },
-  { icon: '🧩', title: 'Integrations Guide',   desc: 'Connect your tech stack',         href: '/platform',             color: '#d97706' },
-  { icon: '🛡️', title: 'Security Docs',        desc: 'AES-256, GDPR & compliance',     href: '/contact',              color: '#dc2626' },
-  { icon: '🚀', title: 'Quick Start Guide',    desc: 'Live in under 10 minutes',        href: '/contact',              color: '#0891b2' },
+  { icon: '📖', title: 'API Reference',        desc: 'Full REST API docs',              href: 'https://docs.ojiva.ai', color: '#1B48E0' },
+  { icon: '🎬', title: 'Video Tutorials',      desc: 'Step-by-step walkthroughs',       href: '/contact',              color: '#1B48E0' },
+  { icon: '🔄', title: 'Changelog',            desc: 'Platform updates & releases',     href: '/contact',              color: '#1B48E0' },
+  { icon: '🧩', title: 'Integrations Guide',   desc: 'Connect your tech stack',         href: '/platform',             color: '#1B48E0' },
+  { icon: '🛡️', title: 'Security Docs',        desc: 'AES-256, GDPR & compliance',     href: '/contact',              color: '#1B48E0' },
+  { icon: '🚀', title: 'Quick Start Guide',    desc: 'Live in under 10 minutes',        href: '/contact',              color: '#1B48E0' },
 ];
 
 export default function QuickLinks() {

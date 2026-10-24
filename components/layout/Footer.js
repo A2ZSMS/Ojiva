@@ -86,7 +86,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="ojiva-footer" aria-label="Site footer">
+    <footer className="ojiva-footer" data-nav-dark aria-label="Site footer">
       {/* Top glow bar */}
       <div className="footer-top-bar" aria-hidden="true" />
 
@@ -138,13 +138,6 @@ export default function Footer() {
               <span className="footer-trust-badge">⚡ 99.9% Uptime</span>
             </div>
 
-            {/* NAP — must stay byte-identical to the Google Business Profile listing */}
-            <address className="footer-tagline mt-3 mb-0" style={{ fontStyle: 'normal', fontSize: '0.82rem', lineHeight: 1.7 }}>
-              183, 2nd Floor, G Block, Opposite Reliance Trends,<br />
-              Sahakara Nagar, Bengaluru, Karnataka 560092<br />
-              <a href="tel:+918431086185" style={{ color: 'inherit' }}>+91 84310 86185</a> ·{' '}
-              <a href="mailto:info@ojiva.ai" style={{ color: 'inherit' }}>info@ojiva.ai</a>
-            </address>
           </div>
 
           {/* Services links */}
@@ -186,7 +179,7 @@ export default function Footer() {
           {/* Contact block */}
           <div className="footer-nav-col">
             <p className="footer-heading">Contact Us</p>
-            <div className="footer-contact-block">
+            <address className="footer-contact-block" style={{ fontStyle: 'normal' }}>
               <a
                 className="footer-contact-item"
                 href="https://maps.google.com/maps?q=183,+2nd+Floor,+G+Block,+Sahakara+Nagar,+Bengaluru,+Karnataka+560092,+India"
@@ -216,7 +209,7 @@ export default function Footer() {
                   10:00 AM – 7:00 PM IST
                 </span>
               </div>
-            </div>
+            </address>
           </div>
 
         </div>

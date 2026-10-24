@@ -1,20 +1,22 @@
-import dynamic from 'next/dynamic';
+import './HomePremium.css';
 
 // Above-fold — loaded immediately (affect LCP)
 import Hero    from './Hero';
 
-// Below-fold — code-split, loaded only when needed
-const Services             = dynamic(() => import('./sections/Services'));
-const Industries           = dynamic(() => import('./sections/Industries'));
-const SecuritySection      = dynamic(() => import('./SecuritySection'));
-const HowItWorks           = dynamic(() => import('./sections/HowItWorks'));
-const FeatureDeepDive      = dynamic(() => import('./FeatureDeepDive'));
-const PlatformCapabilities = dynamic(() => import('./sections/PlatformCapabilities'));
-const Testimonials         = dynamic(() => import('./sections/Testimonials'));
-const WhyOjiva             = dynamic(() => import('./sections/WhyOjiva'));
-const BlogPreview          = dynamic(() => import('./BlogPreview'));
-const FaqSchema            = dynamic(() => import('./sections/FaqSchema'));
-const CTA                  = dynamic(() => import('@/components/ui/CTA'));
+// Below-fold — server components (no client JS); only small islands inside
+// them (ChannelStory, chat mockup, spotlight, count-up) hydrate
+import Services from './sections/Services';
+import ChannelStory from './sections/ChannelStory';
+import Industries from './sections/Industries';
+import SecuritySection from './SecuritySection';
+import HowItWorks from './sections/HowItWorks';
+import FeatureDeepDive from './FeatureDeepDive';
+import PlatformCapabilities from './sections/PlatformCapabilities';
+import Testimonials from './sections/Testimonials';
+import WhyOjiva from './sections/WhyOjiva';
+import BlogPreview from './BlogPreview';
+import FaqSchema from './sections/FaqSchema';
+import CTA from '@/components/ui/CTA';
 
 /* ─────────────────────────────────────────────────────────
    PAGE COMPONENT
@@ -27,6 +29,9 @@ export default function HomePage() {
 
       {/* ══ 3. CORE SERVICES ═════════════════════════════════ */}
       <Services />
+
+      {/* ══ 3a. ONE MESSAGE, FOUR CHANNELS (scroll story) ══════ */}
+      <ChannelStory />
 
       {/* ══ 3b. INDUSTRIES ═══════════════════════════════════ */}
       <Industries />
@@ -57,12 +62,12 @@ export default function HomePage() {
 
       {/* ══ 11. CTA ═══════════════════════════════════════════ */}
       <CTA
-        title="Ready to 10× Your Messaging Results?"
-        subtitle="Join 500+ companies using Ojiva AI to deliver smarter messages, qualify leads faster, and grow without limits. Free demo — no commitment required."
-        primaryLabel="Book a Free Demo"
-        primaryHref="/contact"
-        secondaryLabel="Explore the Platform"
-        secondaryHref="/platform"
+        title="Ready for Better Conversations?"
+        subtitle="Talk to our team about the right channels for your business."
+        primaryLabel="Book a Demo"
+        primaryHref="/book-demo"
+        secondaryLabel={null}
+        trustItems={[]}
       />
     </>
   );

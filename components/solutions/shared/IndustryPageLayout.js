@@ -22,10 +22,10 @@ const IMG_PREFIX = {
 
 /* ── Channel metadata (icon + brand colour) ── */
 const CHANNEL_META = {
-  sms:      { icon: 'bi-chat-dots-fill',   color: '#1B48E0', bg: 'rgba(27,72,224,0.10)'   },
-  whatsapp: { icon: 'bi-whatsapp',         color: '#25D366', bg: 'rgba(37,211,102,0.10)'  },
-  rcs:      { icon: 'bi-stars',            color: '#FF6D42', bg: 'rgba(255,109,66,0.10)'  },
-  voice:    { icon: 'bi-telephone-fill',   color: '#7C3AED', bg: 'rgba(124,58,237,0.10)'  },
+  sms:      { icon: 'bi-chat-dots-fill',   color: '#1D4ED8', bg: 'rgba(59,130,246,0.10)'   },
+  whatsapp: { icon: 'bi-whatsapp',         color: '#166534', bg: 'rgba(37,211,102,0.10)'  },
+  rcs:      { icon: 'bi-stars',            color: '#0369A1', bg: 'rgba(14,165,233,0.10)'  },
+  voice:    { icon: 'bi-telephone-fill',   color: '#6D28D9', bg: 'rgba(139,92,246,0.10)'  },
 };
 
 /* ── Integration logos for trust bar ── */
@@ -321,7 +321,7 @@ export default function IndustryPageLayout({ industry }) {
               <div key={n} className="ind-lp-trust-logo">
                 <span
                   className="ind-lp-trust-abbr"
-                  style={{ background: `${c}18`, color: c, borderColor: `${c}30` }}
+                  style={{ background: `${c}18`, color: `color-mix(in srgb, ${c} 55%, #000)`, borderColor: `${c}30` }}
                 >
                   {abbr}
                 </span>
@@ -469,7 +469,7 @@ export default function IndustryPageLayout({ industry }) {
                         sizes="(max-width: 991px) 100vw, 600px"
                         alt={`${name} ${cf.label} — ${cf.use}`}
                         className="ind-lp-feat-img"
-                        loading={idx === 0 ? 'eager' : 'lazy'}
+                        loading="lazy"
                         decoding="async"
                         width="600"
                         height="400"

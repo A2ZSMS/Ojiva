@@ -70,7 +70,7 @@ export default function Comparison() {
                     </Link>
                   </td>
                   <td>
-                    <Link href="/contact" className="pricing-cta-outline" style={{ color: '#6366f1', borderColor: 'rgba(99,102,241,0.3)', fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
+                    <Link href="/contact" className="pricing-cta-outline" style={{ color: '#6D28D9', borderColor: 'rgba(109,40,217,0.3)', fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
                       Contact Sales
                     </Link>
                   </td>

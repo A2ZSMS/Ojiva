@@ -1,8 +1,8 @@
 export const SMS_TYPES = [
-  { icon: '📢', title: 'Promotional SMS', color: '#1B48E0', desc: 'Target opted-in customers with flash sales, product launches, and festive offers.', points: ['Flash sales & offers', 'Event announcements', 'Product launches', 'Loyalty rewards'] },
-  { icon: '🔔', title: 'Transactional SMS', color: '#0ea5e9', desc: 'Deliver critical order updates, booking confirmations, and real-time alerts instantly.', points: ['Order & shipment alerts', 'Booking confirmations', 'Payment receipts', 'Appointment reminders'] },
-  { icon: '🔐', title: 'OTP & Verification', color: '#22c55e', desc: 'Ultra-fast, secure OTP delivery in under 3 seconds for login and payment flows.', points: ['Sub-3 second delivery', 'Auto-read OTP (Android)', 'Fallback routing', 'Fraud detection'] },
-  { icon: '↔️', title: 'Two-Way SMS', color: '#f59e0b', desc: 'Run polls, surveys, and capture leads via SMS replies with keyword routing.', points: ['Dedicated long code', 'Keyword auto-response', 'Conversation routing', 'CRM integration'] },
+  { icon: '📢', title: 'Promotional SMS', color: '#1D4ED8', desc: 'Target opted-in customers with flash sales, product launches, and festive offers.', points: ['Flash sales & offers', 'Event announcements', 'Product launches', 'Loyalty rewards'] },
+  { icon: '🔔', title: 'Transactional SMS', color: '#1D4ED8', desc: 'Deliver critical order updates, booking confirmations, and real-time alerts instantly.', points: ['Order & shipment alerts', 'Booking confirmations', 'Payment receipts', 'Appointment reminders'] },
+  { icon: '🔐', title: 'OTP & Verification', color: '#1D4ED8', desc: 'Ultra-fast, secure OTP delivery in under 3 seconds for login and payment flows.', points: ['Sub-3 second delivery', 'Auto-read OTP (Android)', 'Fallback routing', 'Fraud detection'] },
+  { icon: '↔️', title: 'Two-Way SMS', color: '#1D4ED8', desc: 'Run polls, surveys, and capture leads via SMS replies with keyword routing.', points: ['Dedicated long code', 'Keyword auto-response', 'Conversation routing', 'CRM integration'] },
 ];
 
 export const FEATURES = [
@@ -29,17 +29,17 @@ export const METRICS = [
 ];
 
 export const DLT_STATS = [
-  { label: 'Template Status', val: 'APPROVED', color: '#22c55e' },
+  { label: 'Template Status', val: 'APPROVED', color: '#166534' },
   { label: 'Sender Header', val: 'OJIVAI', color: '#1B48E0' },
-  { label: 'PE ID', val: '1234567890123456', color: '#0ea5e9' },
-  { label: 'DLT Operator', val: 'Jio / Airtel / BSNL', color: '#f59e0b' },
-  { label: 'TRAI Compliance', val: '✓ Fully Compliant', color: '#22c55e' },
+  { label: 'PE ID', val: '1234567890123456', color: '#0369A1' },
+  { label: 'DLT Operator', val: 'Jio / Airtel / BSNL', color: '#B45309' },
+  { label: 'TRAI Compliance', val: '✓ Fully Compliant', color: '#166534' },
 ];
 
 /* Used by DltCompliance.js for delivery analytics visual */
 export const DELIVERY_ROUTES = [
   { route: 'Jio', pct: 96, count: '3.2M', color: '#1B48E0' },
-  { route: 'Airtel', pct: 98, count: '2.8M', color: '#0ea5e9' },
-  { route: 'BSNL', pct: 94, count: '1.4M', color: '#22c55e' },
-  { route: 'Vodafone', pct: 97, count: '2.1M', color: '#f59e0b' },
+  { route: 'Airtel', pct: 98, count: '2.8M', color: '#0369A1' },
+  { route: 'BSNL', pct: 94, count: '1.4M', color: '#166534' },
+  { route: 'Vodafone', pct: 97, count: '2.1M', color: '#B45309' },
 ];

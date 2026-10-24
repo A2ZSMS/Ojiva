@@ -3,8 +3,8 @@ export const CHANNELS = [
   {
     id: 'sms',
     icon: '\u{1F4F1}',
-    accent: '#10b981',
-    accentSoft: 'rgba(16,185,129,0.12)',
+    accent: '#1D4ED8',
+    accentSoft: 'rgba(59,130,246,0.12)',
     title: 'Bulk SMS portal',
     tagline: 'Reach every phone in India — instantly.',
     capabilities: ['DLT-approved templates', 'Promotional & transactional', 'OTP & 2-factor SMS', 'Sender ID management', 'Delivery & click reports', 'SMS API + bulk upload'],
@@ -13,8 +13,8 @@ export const CHANNELS = [
   {
     id: 'rcs',
     icon: '✨',
-    accent: '#6366f1',
-    accentSoft: 'rgba(99,102,241,0.12)',
+    accent: '#0369A1',
+    accentSoft: 'rgba(14,165,233,0.12)',
     title: 'RCS portal',
     tagline: 'Branded, interactive messages beyond SMS.',
     capabilities: ['Rich cards & carousels', 'Verified sender branding', 'Suggested reply buttons', 'Images, video & PDFs', 'Read receipts & analytics', 'Auto-fallback to SMS'],
@@ -23,7 +23,7 @@ export const CHANNELS = [
   {
     id: 'whatsapp',
     icon: '\u{1F4AC}',
-    accent: '#25d366',
+    accent: '#166534',
     accentSoft: 'rgba(37,211,102,0.14)',
     title: 'WhatsApp API portal',
     tagline: 'Automate sales & support on WhatsApp.',
@@ -33,8 +33,8 @@ export const CHANNELS = [
   {
     id: 'voice',
     icon: '\u{1F4DE}',
-    accent: '#f59e0b',
-    accentSoft: 'rgba(245,158,11,0.14)',
+    accent: '#6D28D9',
+    accentSoft: 'rgba(139,92,246,0.12)',
     title: 'Bulk Voice Call portal',
     tagline: 'Voice broadcasts & IVR at scale.',
     capabilities: ['Voice broadcast campaigns', 'IVR & smart call flows', 'Voice OTP delivery', 'DTMF input capture', 'Missed-call solutions', 'Call reports & recordings'],
@@ -75,7 +75,7 @@ export const INTEGRATIONS = [
   { icon: '\u{1F4F1}', name: 'Twilio' },
 ];
 
-export const API_CODE = `<span style="color:rgba(255,255,255,0.35)">// Send a message via Ojiva AI in 3 lines</span>
+export const API_CODE = `<span style="color:rgba(255,255,255,0.6)">// Send a message via Ojiva AI in 3 lines</span>
 <span style="color:#7aaeff">const</span> ojiva = <span style="color:#7aaeff">require</span>(<span style="color:#a8ff78">'@ojiva/sdk'</span>);
 <span style="color:#7aaeff">const</span> client = <span style="color:#7aaeff">new</span> ojiva.Client({ apiKey: <span style="color:#a8ff78">'YOUR_KEY'</span> });
 
@@ -87,4 +87,4 @@ export const API_CODE = `<span style="color:rgba(255,255,255,0.35)">// Send a me
 });
 
 console.log(res.messageId);
-<span style="color:rgba(255,255,255,0.35)">// → msg_01HX9K2P3FZ7KR...</span>`;
+<span style="color:rgba(255,255,255,0.6)">// → msg_01HX9K2P3FZ7KR...</span>`;

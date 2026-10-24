@@ -15,13 +15,13 @@ import { FadeUp } from '@/components/ui/Animations';
  */
 
 const ALL_SERVICES = [
-  { href: '/sms',              name: 'Bulk SMS',         desc: 'OTP, transactional & promotional SMS.',                color: '#1B48E0', icon: 'bi-chat-dots-fill' },
-  { href: '/whatsapp',         name: 'WhatsApp API',     desc: 'Official Meta BSP. Chatbots, templates, catalogs.',     color: '#25D366', icon: 'bi-whatsapp' },
-  { href: '/whatsapp-chatbot', name: 'WhatsApp Chatbot', desc: 'AI-powered customer conversations on WhatsApp.',         color: '#128C7E', icon: 'bi-robot' },
-  { href: '/rcs',              name: 'RCS Messaging',    desc: 'Verified sender, rich cards, branded experiences.',      color: '#FF6D42', icon: 'bi-stars' },
-  { href: '/voice',            name: 'Bulk Voice Call',  desc: 'IVR, OBD, AI voice bots in multiple languages.',         color: '#7C3AED', icon: 'bi-telephone-fill' },
-  { href: '/otp',              name: 'OTP & 2FA',        desc: 'Multi-channel OTP via SMS, WhatsApp and Voice.',         color: '#0ea5e9', icon: 'bi-shield-lock-fill' },
-  { href: '/solutions',        name: 'Industry Solutions', desc: 'Messaging playbooks for banking, healthcare, retail & more.', color: '#7c3aed', icon: 'bi-buildings-fill' },
+  { href: '/sms',              name: 'Bulk SMS',         desc: 'OTP, transactional & promotional SMS.',                color: '#1D4ED8', icon: 'bi-chat-dots-fill' },
+  { href: '/whatsapp',         name: 'WhatsApp API',     desc: 'Official Meta BSP. Chatbots, templates, catalogs.',     color: '#166534', icon: 'bi-whatsapp' },
+  { href: '/whatsapp-chatbot', name: 'WhatsApp Chatbot', desc: 'AI-powered customer conversations on WhatsApp.',         color: '#047857', icon: 'bi-robot' },
+  { href: '/rcs',              name: 'RCS Messaging',    desc: 'Verified sender, rich cards, branded experiences.',      color: '#0369A1', icon: 'bi-stars' },
+  { href: '/voice',            name: 'Bulk Voice Call',  desc: 'IVR, OBD, AI voice bots in multiple languages.',         color: '#6D28D9', icon: 'bi-telephone-fill' },
+  { href: '/otp',              name: 'OTP & 2FA',        desc: 'Multi-channel OTP via SMS, WhatsApp and Voice.',         color: '#B45309', icon: 'bi-shield-lock-fill' },
+  { href: '/solutions',        name: 'Industry Solutions', desc: 'Messaging playbooks for banking, healthcare, retail & more.', color: '#1B48E0', icon: 'bi-buildings-fill' },
 ];
 
 export default function RelatedServices({

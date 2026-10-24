@@ -16,7 +16,7 @@ const PLANS = {
       price: '₹0.18',
       unit: 'per SMS',
       highlight: false,
-      color: '#1B48E0',
+      color: '#1D4ED8',
       features: [
         '1 Sender ID',
         'Transactional & Promotional',
@@ -34,7 +34,7 @@ const PLANS = {
       price: '₹0.15',
       unit: 'per SMS',
       highlight: true,
-      color: '#1B48E0',
+      color: '#1D4ED8',
       features: [
         'Everything in Starter',
         'Up to 5 Sender IDs',
@@ -52,7 +52,7 @@ const PLANS = {
       price: 'Custom',
       unit: 'volume pricing',
       highlight: false,
-      color: '#6366f1',
+      color: '#7C3AED',
       features: [
         'Everything in Business',
         'Unlimited Sender IDs',
@@ -72,7 +72,7 @@ const PLANS = {
       price: '₹0.35',
       unit: 'per message',
       highlight: false,
-      color: '#25D366',
+      color: '#166534',
       features: [
         '1 WhatsApp Business Number',
         'Utility & marketing templates',
@@ -90,7 +90,7 @@ const PLANS = {
       price: '₹0.28',
       unit: 'per message',
       highlight: true,
-      color: '#25D366',
+      color: '#166534',
       features: [
         'Everything in Starter',
         'Up to 3 WhatsApp numbers',
@@ -108,7 +108,7 @@ const PLANS = {
       price: 'Custom',
       unit: 'volume pricing',
       highlight: false,
-      color: '#6366f1',
+      color: '#7C3AED',
       features: [
         'Everything in Business',
         'Unlimited WhatsApp numbers',
@@ -128,7 +128,7 @@ const PLANS = {
       price: '₹0.45',
       unit: 'per RCS message',
       highlight: false,
-      color: '#FF6D42',
+      color: '#0369A1',
       features: [
         '1 Google-verified sender',
         'Rich cards & carousels',
@@ -146,7 +146,7 @@ const PLANS = {
       price: '₹0.38',
       unit: 'per RCS message',
       highlight: true,
-      color: '#FF6D42',
+      color: '#0369A1',
       features: [
         'Everything in Starter',
         'Up to 3 verified senders',
@@ -164,7 +164,7 @@ const PLANS = {
       price: 'Custom',
       unit: 'volume pricing',
       highlight: false,
-      color: '#6366f1',
+      color: '#7C3AED',
       features: [
         'Everything in Business',
         'Unlimited verified senders',
@@ -184,7 +184,7 @@ const PLANS = {
       price: '₹0.25',
       unit: 'per minute',
       highlight: false,
-      color: '#a78bfa',
+      color: '#6D28D9',
       features: [
         '1 virtual caller ID',
         'Pre-recorded voice blasts',
@@ -202,7 +202,7 @@ const PLANS = {
       price: '₹0.18',
       unit: 'per minute',
       highlight: true,
-      color: '#a78bfa',
+      color: '#6D28D9',
       features: [
         'Everything in Starter',
         'Up to 5 caller IDs',
@@ -220,7 +220,7 @@ const PLANS = {
       price: 'Custom',
       unit: 'volume pricing',
       highlight: false,
-      color: '#6366f1',
+      color: '#7C3AED',
       features: [
         'Everything in Business',
         'Unlimited caller IDs',

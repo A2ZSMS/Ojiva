@@ -1,8 +1,8 @@
 export const VOICE_TYPES = [
-  { icon: '📞', title: 'Outbound Calling', color: '#F97316', desc: 'Launch massive outbound voice campaigns for lead gen, reminders, surveys, and follow-ups.', points: ['Bulk outbound dialer','Scheduled campaigns','CRM-triggered calls','Agent live transfer'] },
-  { icon: '🎛️', title: 'IVR Systems', color: '#EF4444', desc: 'Multi-level IVR menus with DTMF and voice that route customers to the right department.', points: ['Drag-and-drop builder','Multi-level menus','DTMF + voice input','Real-time routing'] },
-  { icon: '🤖', title: 'AI Voice Bot', color: '#1B48E0', desc: 'NLP-powered AI agents that hold real conversations and resolve queries — 24×7, zero wait.', points: ['Natural language understanding','Multilingual (10+)','Human handoff on demand','Conversation analytics'] },
-  { icon: '📵', title: 'Missed Call Service', color: '#10B981', desc: 'Capture leads and trigger instant callbacks — zero cost to the caller, maximum reach.', points: ['Virtual numbers','Instant callback','Lead capture + CRM','SMS acknowledgement'] },
+  { icon: '📞', title: 'Outbound Calling', color: '#6D28D9', desc: 'Launch massive outbound voice campaigns for lead gen, reminders, surveys, and follow-ups.', points: ['Bulk outbound dialer','Scheduled campaigns','CRM-triggered calls','Agent live transfer'] },
+  { icon: '🎛️', title: 'IVR Systems', color: '#6D28D9', desc: 'Multi-level IVR menus with DTMF and voice that route customers to the right department.', points: ['Drag-and-drop builder','Multi-level menus','DTMF + voice input','Real-time routing'] },
+  { icon: '🤖', title: 'AI Voice Bot', color: '#6D28D9', desc: 'NLP-powered AI agents that hold real conversations and resolve queries — 24×7, zero wait.', points: ['Natural language understanding','Multilingual (10+)','Human handoff on demand','Conversation analytics'] },
+  { icon: '📵', title: 'Missed Call Service', color: '#6D28D9', desc: 'Capture leads and trigger instant callbacks — zero cost to the caller, maximum reach.', points: ['Virtual numbers','Instant callback','Lead capture + CRM','SMS acknowledgement'] },
 ];
 
 export const INDUSTRIES = [
@@ -30,11 +30,11 @@ export const METRICS = [
 ];
 
 export const VOICEBOT_STATS = [
-  { label: 'Languages', val: 'Hi, En, Ta, Te, Kn +', color: '#F97316' },
-  { label: 'Accuracy', val: '95%+ intent match', color: '#22c55e' },
-  { label: 'Avg. Resolution', val: '2:45 mins (bot-only)', color: '#0ea5e9' },
-  { label: 'Escalation Rate', val: '<28% to human', color: '#8B5CF6' },
-  { label: 'Availability', val: '24×7 · 365 days', color: '#F97316' },
+  { label: 'Languages', val: 'Hi, En, Ta, Te, Kn +', color: '#C2410C' },
+  { label: 'Accuracy', val: '95%+ intent match', color: '#166534' },
+  { label: 'Avg. Resolution', val: '2:45 mins (bot-only)', color: '#0369A1' },
+  { label: 'Escalation Rate', val: '<28% to human', color: '#6D28D9' },
+  { label: 'Availability', val: '24×7 · 365 days', color: '#C2410C' },
 ];
 
 export const CAMPAIGN_STATS = [

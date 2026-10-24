@@ -3,10 +3,10 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerGrid, StaggerGridItem } from '@/components/ui/Animations';
 
 const SERVICES = [
-  { href: '/sms', icon: '📱', title: 'Bulk SMS Service', desc: 'DLT compliant SMS with 98% delivery rate.', color: '#1B48E0' },
-  { href: '/whatsapp', icon: '💬', title: 'WhatsApp Business API', desc: 'Official Meta BSP partner. 98% open rate.', color: '#25D366' },
-  { href: '/whatsapp-chatbot', icon: '🤖', title: 'WhatsApp Chatbot', desc: 'AI-powered 24/7 customer automation.', color: '#128C7E' },
-  { href: '/rcs', icon: '✨', title: 'RCS Messaging', desc: 'Rich cards, carousels & verified sender.', color: '#FF6D42' },
+  { href: '/sms', icon: '📱', title: 'Bulk SMS Service', desc: 'DLT compliant SMS with 98% delivery rate.', color: '#1D4ED8' },
+  { href: '/whatsapp', icon: '💬', title: 'WhatsApp Business API', desc: 'Official Meta BSP partner. 98% open rate.', color: '#166534' },
+  { href: '/whatsapp-chatbot', icon: '🤖', title: 'WhatsApp Chatbot', desc: 'AI-powered 24/7 customer automation.', color: '#047857' },
+  { href: '/rcs', icon: '✨', title: 'RCS Messaging', desc: 'Rich cards, carousels & verified sender.', color: '#0369A1' },
 ];
 
 export default function ExploreServices() {

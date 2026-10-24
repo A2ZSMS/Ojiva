@@ -12,7 +12,7 @@ const industryData = {
     name: 'Healthcare',
     shortName: 'Healthcare',
     icon: 'bi-heart-pulse-fill',
-    color: '#16a34a',
+    color: '#166534',
     eyebrow: 'Healthcare Patient Communication',
     headline: 'Patient Communication Platform for Hospitals in India',
     subtitle:

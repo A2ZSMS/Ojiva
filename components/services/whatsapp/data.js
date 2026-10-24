@@ -1,8 +1,8 @@
 export const WA_TYPES = [
-  { icon: '📋', title: 'Template Messages', color: '#25D366', desc: 'Send pre-approved, structured messages for notifications, alerts, and marketing — fully Meta-compliant.', points: ['Order & shipment alerts','Appointment reminders','Payment confirmations','Marketing campaigns'] },
-  { icon: '🎛️', title: 'Interactive Messages', color: '#128C7E', desc: 'Engage customers with buttons, lists, and quick replies that drive action without leaving WhatsApp.', points: ['Reply buttons (up to 3)','List menus (up to 10)','Quick reply flows','CTA URL buttons'] },
-  { icon: '🛍️', title: 'Product Catalogs', color: '#075E54', desc: 'Showcase your product catalogue inside WhatsApp — let customers browse and buy.', points: ['In-chat browsing','Add to cart','Order management','Payment integration'] },
-  { icon: '🤖', title: 'AI Chatbot Flows', color: '#34B7F1', desc: 'Deploy intelligent AI bots that handle FAQs, qualify leads, and escalate to agents seamlessly.', points: ['NLP responses','Lead qualification','Human handoff','Multi-language'] },
+  { icon: '📋', title: 'Template Messages', color: '#166534', desc: 'Send pre-approved, structured messages for notifications, alerts, and marketing — fully Meta-compliant.', points: ['Order & shipment alerts','Appointment reminders','Payment confirmations','Marketing campaigns'] },
+  { icon: '🎛️', title: 'Interactive Messages', color: '#166534', desc: 'Engage customers with buttons, lists, and quick replies that drive action without leaving WhatsApp.', points: ['Reply buttons (up to 3)','List menus (up to 10)','Quick reply flows','CTA URL buttons'] },
+  { icon: '🛍️', title: 'Product Catalogs', color: '#166534', desc: 'Showcase your product catalogue inside WhatsApp — let customers browse and buy.', points: ['In-chat browsing','Add to cart','Order management','Payment integration'] },
+  { icon: '🤖', title: 'AI Chatbot Flows', color: '#166534', desc: 'Deploy intelligent AI bots that handle FAQs, qualify leads, and escalate to agents seamlessly.', points: ['NLP responses','Lead qualification','Human handoff','Multi-language'] },
 ];
 
 export const HOW_STEPS = [
@@ -31,11 +31,11 @@ export const METRICS = [
 ];
 
 export const BSP_STATS = [
-  { label: 'BSP Status', val: '✅ Official Meta BSP', color: '#25D366' },
-  { label: 'Green Tick', val: '✅ Verified', color: '#25D366' },
-  { label: 'Daily Limit', val: '10M messages/day', color: '#128C7E' },
-  { label: 'Quality Rating', val: '🟢 High', color: '#22c55e' },
-  { label: 'Template Approval', val: 'Avg. 2–4 hours', color: '#0ea5e9' },
+  { label: 'BSP Status', val: '✅ Official Meta BSP', color: '#166534' },
+  { label: 'Green Tick', val: '✅ Verified', color: '#166534' },
+  { label: 'Daily Limit', val: '10M messages/day', color: '#0F766E' },
+  { label: 'Quality Rating', val: '🟢 High', color: '#166534' },
+  { label: 'Template Approval', val: 'Avg. 2–4 hours', color: '#0369A1' },
 ];
 
 export const CHATBOT_LOG = [

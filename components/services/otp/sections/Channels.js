@@ -7,7 +7,7 @@ const OTP_CHANNELS = [
   {
     icon: '📱',
     title: 'SMS OTP',
-    color: '#1B48E0',
+    color: '#1D4ED8',
     desc: 'The fastest, most universal channel. Reaches every mobile in India with no app required. Ideal for banking, e-commerce, and high-volume use cases.',
     points: [
       'Sub-3 second delivery via direct telecom routes',
@@ -19,7 +19,7 @@ const OTP_CHANNELS = [
   {
     icon: '💬',
     title: 'WhatsApp OTP',
-    color: '#25D366',
+    color: '#166534',
     desc: 'Higher open rates than SMS. Delivered inside WhatsApp with branded sender name. Perfect for consumer apps, fintech, and e-commerce with WhatsApp-first audiences.',
     points: [
       'Meta-verified delivery with read receipts',
@@ -31,7 +31,7 @@ const OTP_CHANNELS = [
   {
     icon: '🎙️',
     title: 'Voice OTP',
-    color: '#a78bfa',
+    color: '#6D28D9',
     desc: 'For users who cannot read SMS — elderly users, feature phones, or international numbers. A text-to-speech call reads the OTP aloud twice for clarity.',
     points: [
       'AI TTS reads OTP in English, Hindi & regional languages',

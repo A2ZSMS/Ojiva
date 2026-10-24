@@ -12,7 +12,7 @@ const industryData = {
     name: 'E-commerce & Retail',
     shortName: 'E-commerce & Retail',
     icon: 'bi-cart-fill',
-    color: '#FF6D42',
+    color: '#C2410C',
     eyebrow: 'E-commerce & D2C Solutions',
     headline: 'WhatsApp & SMS Marketing for E-commerce & D2C Brands in India',
     subtitle:

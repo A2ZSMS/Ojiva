@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {
-  RiFocusLine, RiFlashlightLine, RiLinksLine, RiShieldLine,
+  RiBarChart2Line, RiFlashlightLine, RiLinksLine,
 } from 'react-icons/ri';
 import SectionHeading from '@/components/ui/SectionHeading';
 import {
@@ -9,43 +9,35 @@ import {
   TiltCard3D,
   ScrollScale,
 } from '@/components/ui/Animations';
+import { ICON } from '@/lib/colors';
 
 const MODULES = [
   {
-    icon: RiFocusLine,
-    tag: 'Lead Intelligence',
-    title: 'Never Miss a Hot Lead Again',
-    desc: 'Score, enrich, and route every inbound lead in milliseconds. Our ML engine evaluates 40+ signals to put the right lead in front of the right rep — automatically.',
-    points: ['Real-time lead scoring', 'CRM enrichment & dedup', 'Smart round-robin routing'],
-    color: 'rgba(139,92,246,0.09)',
-    accentColor: '#7C3AED',
-  },
-  {
     icon: RiFlashlightLine,
-    tag: 'Workflow Automation',
-    title: 'Automate Every Customer Journey',
-    desc: 'Connect SMS, WhatsApp, RCS, and Voice into seamless automated workflows. Drag-and-drop builder — no developer, no delays, no limits.',
-    points: ['Drag-and-drop visual builder', 'Cross-channel automation', 'CRM & API sync'],
-    color: 'rgba(34,197,94,0.09)',
-    accentColor: '#16a34a',
+    tag: 'Automation',
+    title: 'Build Your Customer Journey',
+    desc: 'Connect messages, replies, and follow-ups in one workflow.',
+    points: ['Visual workflow builder', 'Cross-channel campaigns'],
+    color: ICON.bg,
+    accentColor: ICON.fg,
   },
   {
     icon: RiLinksLine,
     tag: 'Integrations',
-    title: '200+ Native Connectors, One API',
-    desc: 'Plug Ojiva AI into your existing stack in minutes — Salesforce, HubSpot, Zoho, Shopify, and 200+ more via our REST API and webhook ecosystem.',
-    points: ['REST API & Webhooks', '200+ native connectors', 'Real-time delivery callbacks'],
-    color: 'rgba(245,158,11,0.09)',
-    accentColor: '#d97706',
+    title: 'Connect Your Existing Tools',
+    desc: 'Keep your CRM and communication channels working together.',
+    points: ['REST API & webhooks', 'Delivery callbacks'],
+    color: ICON.bg,
+    accentColor: ICON.fg,
   },
   {
-    icon: RiShieldLine,
-    tag: 'Security & Compliance',
-    title: 'Enterprise Security You Can Trust',
-    desc: 'AES-256 encryption, DPDP-aware data handling, DLT registration support, and hardened uptime practices for mission-critical operations.',
-    points: ['DPDP-aware operations', 'DLT registration support', 'SOC 2-aligned controls'],
-    color: 'rgba(239,68,68,0.09)',
-    accentColor: '#dc2626',
+    icon: RiBarChart2Line,
+    tag: 'Analytics',
+    title: 'See What Works',
+    desc: 'Review messaging and call activity across your channels.',
+    points: ['Delivery reports', 'Campaign performance'],
+    color: ICON.bg,
+    accentColor: ICON.fg,
   },
 ];
 
@@ -55,18 +47,19 @@ export default function PlatformCapabilities() {
       <div className="container">
         <ScrollScale>
           <SectionHeading
+            id="modules-heading"
             tag="Platform"
-            title="Beyond Messaging — A Complete AI Growth Engine"
-            subtitle="Lead intelligence, visual workflow automation, 200+ native integrations, and enterprise security — all in one platform that grows with you."
+            title="One Platform. A Connected Workflow."
+            subtitle="Build your workflows, connect your tools, and follow your results."
             center
           />
         </ScrollScale>
 
         <StaggerContainer className="row g-4 mt-3" staggerDelay={0.09}>
           {MODULES.map(({ icon: Icon, tag, title, desc, points, color, accentColor }) => (
-            <StaggerItem key={title} className="col-12 col-md-6 col-lg-3">
+            <StaggerItem key={title} className="col-12 col-md-4">
               <TiltCard3D intensity={9} className="module-card-v3 h-100">
-                <div className="module-card-v3-icon" style={{ background: color, color: accentColor }}>
+                <div className="module-card-v3-icon" style={{ background: ICON.tile, color: accentColor }}>
                   <Icon size={28} aria-hidden="true" />
                 </div>
                 <span className="module-tag-v3" style={{ color: accentColor, background: color }}>{tag}</span>
