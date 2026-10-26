@@ -58,6 +58,7 @@ import blog_types_of_sms_in_india_trai_categories from "../../../public/data/blo
 import blog_best_bulk_sms_service_provider_in_hyderabad from "../../../public/data/blogs/2026/10/Oct12.json";
 import blog_whatsapp_otp_vs_sms_otp_india from "../../../public/data/blogs/2026/10/Oct21.json";
 import blog_dlt_registration_charges_india from "../../../public/data/blogs/2026/10/Oct23.json";
+import blog_rcs_messaging_for_ecommerce_d2c_india from "../../../public/data/blogs/2026/10/Oct26.json";
 
 
 const BlogJson = {
@@ -136,6 +137,8 @@ const BlogJson = {
     blog_best_bulk_sms_service_provider_in_hyderabad,
   "whatsapp-otp-vs-sms-otp-india": blog_whatsapp_otp_vs_sms_otp_india,
   "dlt-registration-charges-india": blog_dlt_registration_charges_india,
+  "rcs-messaging-for-ecommerce-d2c-india":
+    blog_rcs_messaging_for_ecommerce_d2c_india,
 };
 
 // ── Date formatter ───────────────────────────────────────

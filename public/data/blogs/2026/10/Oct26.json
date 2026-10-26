@@ -1,0 +1,580 @@
+{
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How RCS Works"
+    },
+    {
+      "id": "product-carousels",
+      "label": "Product Carousels"
+    },
+    {
+      "id": "cart-recovery",
+      "label": "Cart Recovery"
+    },
+    {
+      "id": "order-updates",
+      "label": "Order Updates"
+    },
+    {
+      "id": "sms-fallback-dlt",
+      "label": "SMS Fallback & DLT"
+    },
+    {
+      "id": "channel-choice",
+      "label": "RCS vs SMS vs WhatsApp"
+    },
+    {
+      "id": "budget",
+      "label": "Budgeting"
+    },
+    {
+      "id": "launch-plan",
+      "label": "Launch Plan"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>RCS messaging for ecommerce lets an online store send branded, tappable messages, such as product carousels, cart reminders and order updates, in the customer's default messaging app, with SMS as the safety net for phones that cannot show them.</strong> A plain text link asks the shopper to leave the inbox. A rich card lets them browse, tap and come back to checkout without typing."
+        },
+        {
+          "type": "p",
+          "html": "This guide shows how product carousels, cart recovery and order updates work on RCS, what still applies in India (verified sender, SMS fallback and DLT), and how to start without overspending, for online stores and D2C brands. Ojiva AI runs <a href=\"/rcs/\">RCS Business Messaging</a> alongside <a href=\"/sms/\">Bulk SMS</a> and WhatsApp on one platform. If you want a plan sized to your own orders, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct26(1).webp",
+          "alt": "RCS messaging for ecommerce showing a product carousel, cart reminder and order update on a phone"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "RCS Messaging for Ecommerce: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Use RCS for the messages where a picture and a button change the outcome, and keep SMS underneath as the guaranteed path. Here is what each part does for a store."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-images",
+              "title": "Product carousels:",
+              "desc": "a swipeable row of cards, each with an image, a short description and a button that opens the product page."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Cart recovery:",
+              "desc": "a reminder that shows the product the shopper left behind, with a one-tap button back to checkout."
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Order updates:",
+              "desc": "confirmation, shipping and delivery messages with tracking, call and return buttons."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verified sender:",
+              "desc": "your brand name and logo appear as a verified RCS sender, approved before you can send."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "SMS fallback:",
+              "desc": "customers whose phones cannot receive RCS get a plain SMS version instead."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "marketing messages such as cart reminders go only to customers who agreed to receive them."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want RCS and SMS fallback running on one account? Talk to Ojiva AI about <a href=\"/rcs/\">RCS messaging</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How RCS Business Messaging Works for an Online Store",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS Business Messaging upgrades the text message with media and buttons. A single message can combine text, an image or video, a rich card, and suggested replies and actions, according to Google's RCS Business Messaging documentation. For a store, four building blocks matter."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verified sender profile:",
+              "desc": "your business is registered as an RCS agent, with your name and logo, and approved before live sending."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Rich cards:",
+              "desc": "one card holds media, a title, a description and buttons, so a product can be shown properly."
+            },
+            {
+              "icon": "bi-collection-fill",
+              "title": "Carousels:",
+              "desc": "several cards combined into one swipeable message, ideal for catalogues and collections."
+            },
+            {
+              "icon": "bi-hand-index-thumb-fill",
+              "title": "Suggested replies and actions:",
+              "desc": "buttons that let customers reply in one tap, open a link, call or view a location. Each card supports up to four, with button text up to 25 characters."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Our guide to <a href=\"/blogs/upgrade-bulk-sms-to-rcs-india/\">upgrading bulk SMS to RCS</a> explains what carries over from your SMS setup."
+        }
+      ]
+    },
+    {
+      "id": "product-carousels",
+      "heading": "Product Carousels: Turn the Inbox Into a Shop Window",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A carousel gives a shopper several products at once without opening a browser. It works best when each card has one clear job: show the product and send the customer to the right page."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-image-fill",
+              "title": "One product per card:",
+              "desc": "a clear photo, a short title, and the price or offer in the description."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "A button that goes somewhere specific:",
+              "desc": "send each card to its own product page, not the home page."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Segmented by interest:",
+              "desc": "send menswear to the customers who bought menswear, not the whole list."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "Tested on real phones:",
+              "desc": "preview the carousel on a few handsets, because rendering depends on the device."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Use suggested replies under the carousel to move the conversation on, such as Show more or Talk to us, and not to repeat what the cards already say."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct26(2).webp",
+          "alt": "RCS product carousel for an Indian online store with image cards and shop buttons"
+        }
+      ]
+    },
+    {
+      "id": "cart-recovery",
+      "heading": "Cart Recovery on RCS: Bring Shoppers Back to Checkout",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An abandoned cart is the clearest buying signal you will ever get. An RCS reminder can show exactly what the shopper left behind and put the way back one tap away."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-stopwatch-fill",
+              "title": "Send it while intent is fresh:",
+              "desc": "trigger the reminder from your store after a short wait, not days later."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Show the product left behind:",
+              "desc": "use a rich card with the item's image, name and price."
+            },
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "A Return to cart button:",
+              "desc": "open the checkout link directly, so the shopper does not have to search."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "A reply chip for help:",
+              "desc": "a Need help button lets hesitant buyers ask about size, delivery or returns."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "Stop after purchase:",
+              "desc": "remove the shopper from the sequence the moment the order is placed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Treat cart reminders as marketing. Send them only to customers who agreed to receive them, give an easy opt-out, and apply the same discipline to the SMS fallback, where promotional messages follow DND and timing rules. Classify every template honestly."
+        }
+      ]
+    },
+    {
+      "id": "order-updates",
+      "heading": "Order Updates on RCS: Confirmation, Shipping and Delivery",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Order updates are the messages customers actually want, and they are where RCS removes the most support calls. A button beats a tracking link buried in text."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmation:",
+              "desc": "a card with the item, order number and expected date."
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Shipped:",
+              "desc": "a message with a Track order button that opens the courier page."
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Out for delivery:",
+              "desc": "a short alert with a Call delivery partner button, if you share one."
+            },
+            {
+              "icon": "bi-emoji-smile-fill",
+              "title": "Delivered:",
+              "desc": "quick-reply chips to rate the delivery or report a problem."
+            },
+            {
+              "icon": "bi-arrow-return-left",
+              "title": "Returns and exchanges:",
+              "desc": "reply chips such as Start a return, so customers do not write long messages."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Time-sensitive updates need a plan for when the message is not delivered in time. Google's documentation lets you set a message expiry, and treats an expired message as undelivered, which is your cue to send the fallback."
+        }
+      ]
+    },
+    {
+      "id": "sms-fallback-dlt",
+      "heading": "SMS Fallback and DLT: What Still Applies in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS reach depends on the customer's device, messaging app and network, so every serious setup keeps SMS underneath. In India, that fallback brings the SMS rules with it."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "A separate verified sender:",
+              "desc": "RCS needs its own sender verification, approved by Google and the networks, in addition to anything you registered for SMS."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "DLT for the fallback:",
+              "desc": "your SMS fallback needs your DLT entity, sender ID and approved template. See our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a> for who sets the fee and what to budget."
+            },
+            {
+              "icon": "bi-question-circle-fill",
+              "title": "RCS templates:",
+              "desc": "guides differ on whether RCS templates need their own DLT step. Ask your provider which approvals apply to your account before you plan a launch date."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Expiry and fallback timing:",
+              "desc": "decide how long to wait before the fallback goes out, so a customer does not get both messages at once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channel-choice",
+      "heading": "RCS vs SMS vs WhatsApp for Ecommerce: Which Message Goes Where",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "You do not have to pick one channel. Match each message to the channel that serves it best. For the full comparison, read <a href=\"/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/\">RCS vs SMS: Key Differences</a>."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "OTPs and login codes:",
+              "desc": "SMS first, or WhatsApp with SMS fallback. See <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a>."
+            },
+            {
+              "icon": "bi-images",
+              "title": "Product carousels and offers:",
+              "desc": "RCS, for customers whose phones support it, with SMS fallback."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Cart reminders:",
+              "desc": "RCS for the rich card, SMS underneath, only for opted-in customers."
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Order updates:",
+              "desc": "RCS for tracking buttons, SMS as the guaranteed path, WhatsApp where the customer prefers chat."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support conversations:",
+              "desc": "WhatsApp or RCS replies, depending on where the customer started the chat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "heading": "What RCS Costs for an Online Store: How to Budget Without Guessing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There is no single public rate card for RCS in India. Prices depend on your provider, the message type and your volumes, and richer messages usually cost more than basic ones. Instead of chasing a headline number, make every quote answer the same questions."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tags-fill",
+              "title": "Message type:",
+              "desc": "ask how basic messages, rich cards and carousels are priced separately."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "SMS fallback:",
+              "desc": "ask what you pay when a message falls back to SMS, and whether that SMS rate is quoted with or without GST."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "DLT and operator fees:",
+              "desc": "the DLT fee goes to the operator, not your provider. Confirm it separately."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Service charges:",
+              "desc": "ask whether sender verification, DLT filing help, reports and API access are included or charged separately."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own order volumes beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "launch-plan",
+      "heading": "How to Launch RCS for Your Store: A Simple Plan",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Start with the messages customers already expect, then add the ones that grow revenue. Each step teaches you something before you add the next."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Start with order updates:",
+              "desc": "the easiest win, with tracking and return buttons."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Add cart recovery:",
+              "desc": "one reminder, one button, stopped on purchase."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Add carousels:",
+              "desc": "begin with one collection, such as bestsellers or a seasonal range."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Segment your list:",
+              "desc": "send by purchase history and interest, not to everyone."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Read the reports:",
+              "desc": "check delivery, taps, replies and orders, then keep what works."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct26(3).webp",
+          "alt": "Ojiva AI dashboard showing RCS and SMS fallback delivery reports for an online store"
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps Online Stores Run RCS, SMS and WhatsApp Together",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Here is how that maps to the plan above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "RCS, SMS, WhatsApp and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events and cart events from your store so messages fire automatically."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Start With Order Updates, Then Add Carousels",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS earns its place where a picture and a button change what a customer does: browsing a range, returning to a cart, tracking a parcel. Keep SMS underneath for reach, keep consent clean, and get a written quote that separates RCS, fallback and DLT charges before you commit volume."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own store, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your orders, templates and fallback flow together. You can also explore our <a href=\"/rcs/\">RCS messaging</a> and <a href=\"/sms/\">Bulk SMS</a> services. Done well, RCS messaging for ecommerce turns the default inbox into a shop window, a cart reminder and a tracking page. Conversations that convert start with messages customers actually want."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "How to Upgrade Bulk SMS to RCS Messaging in India",
+              "href": "/blogs/upgrade-bulk-sms-to-rcs-india/"
+            },
+            {
+              "title": "RCS vs SMS: Key Differences & Which is Better for Business",
+              "href": "/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/"
+            },
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is RCS messaging for ecommerce?",
+              "a": "<p>It is the use of RCS Business Messaging by an online store to send branded, interactive messages, such as product carousels, cart reminders and order updates, from a verified sender. Customers see them in their default messaging app with images and tappable buttons. Phones that cannot show RCS receive an SMS fallback instead.</p>"
+            },
+            {
+              "q": "How does cart recovery work on RCS?",
+              "a": "<p>When a shopper leaves items in the cart, your system sends a rich card showing the product with a Return to cart button that opens the checkout link. Suggested replies such as Need help can start a conversation. Send it only to customers who agreed to marketing messages, and stop the sequence once they buy.</p>"
+            },
+            {
+              "q": "Can RCS send order updates?",
+              "a": "<p>Yes. You can send confirmation, shipped and delivered updates as rich messages, with buttons to track the parcel, call support or start a return. Google's RCS documentation also lets you set a message expiry, so a time-sensitive update that is not delivered in time can trigger your fallback message.</p>"
+            },
+            {
+              "q": "What happens if a customer's phone does not support RCS?",
+              "a": "<p>RCS reach depends on the customer's device, messaging app and network. When a phone cannot receive RCS, an SMS fallback delivers a plain-text version instead, so the customer still gets the message. Plan your fallback text carefully, because it cannot carry the carousel or buttons.</p>"
+            },
+            {
+              "q": "Do I need DLT registration for RCS in India?",
+              "a": "<p>Your SMS fallback does, because SMS in India needs your DLT entity, sender ID and approved template. RCS also needs a separate verified sender, approved by Google and the networks. Guides differ on whether RCS templates need their own DLT step, so ask your provider which approvals apply to your account.</p>"
+            },
+            {
+              "q": "How much does RCS messaging cost for an online store?",
+              "a": "<p>There is no single public rate card. Pricing depends on your provider, the message type and your volumes, and richer messages usually cost more than basic ones. Ask for a written quote that separates RCS messages, SMS fallback and any DLT or service charges, so you can compare offers on equal terms.</p>"
+            },
+            {
+              "q": "Can I use RCS and WhatsApp together?",
+              "a": "<p>Yes, and many stores do. Use RCS for rich product and order messages to customers whose phones support it, WhatsApp for conversations with customers who prefer it, and SMS as the universal fallback. Running the channels from one provider keeps reports and consent records in one place.</p>"
+            },
+            {
+              "q": "Do customers need to opt in to receive RCS cart reminders?",
+              "a": "<p>Treat cart reminders as marketing: collect clear consent at checkout, explain what customers will receive and give an easy way to opt out. This also supports the principles of the DPDP Act. This is practical guidance rather than legal advice, so check your own obligations with a qualified professional.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
