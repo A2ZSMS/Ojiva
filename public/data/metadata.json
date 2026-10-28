@@ -526,5 +526,16 @@
     "description": "RCS messaging for ecommerce: send product carousels, cart recovery reminders and order updates with SMS fallback. See how it works in India. Book a free demo.",
     "image": "/image/oct26(1).webp",
     "keywords": "RCS messaging for ecommerce, RCS marketing, RCS campaign, RCS ecommerce, RCS carousel, RCS rich card, abandoned cart recovery, abandoned cart SMS, order confirmation SMS, SMS marketing for ecommerce, cart recovery SMS, RCS messaging, RCS business messaging, RCS SMS, RCS template, RCS API, rich card, suggested replies, SMS fallback, cart recovery, order updates"
+  },
+  {
+    "id": 56,
+    "title": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+    "componentKey": "Oct28",
+    "slug": "whatsapp-cloud-api-india",
+    "category": "WhatsApp API",
+    "date": "2026-10-28",
+    "description": "WhatsApp Cloud API in India: learn what it is, how it differs from the WhatsApp Business API, what you need to start and how Meta charges. Book a free demo.",
+    "image": "/image/oct28(1).webp",
+    "keywords": "WhatsApp Cloud API, WhatsApp Cloud API pricing, WhatsApp Cloud API setup, Meta Cloud API, Meta WhatsApp API, WhatsApp Cloud API India, WhatsApp Business API, WhatsApp Cloud API vs Business API, WhatsApp Business Platform, WhatsApp API provider, WhatsApp API integration, WhatsApp API, Cloud API, WABA, BSP, message template, webhook, access token, business phone number, Meta Business account, On-Premises API"
   }
 ]

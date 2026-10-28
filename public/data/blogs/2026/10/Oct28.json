@@ -1,0 +1,613 @@
+{
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "what-it-is",
+      "label": "What Is It?"
+    },
+    {
+      "id": "cloud-vs-business-api",
+      "label": "Cloud API vs Business API"
+    },
+    {
+      "id": "what-you-need",
+      "label": "What You Need"
+    },
+    {
+      "id": "direct-or-provider",
+      "label": "Direct or Provider?"
+    },
+    {
+      "id": "get-started-steps",
+      "label": "Getting Started"
+    },
+    {
+      "id": "messaging-rules",
+      "label": "Messaging Rules"
+    },
+    {
+      "id": "cost",
+      "label": "Cost"
+    },
+    {
+      "id": "use-cases",
+      "label": "Use Cases"
+    },
+    {
+      "id": "mistakes",
+      "label": "Mistakes to Avoid"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>WhatsApp Cloud API is Meta's own hosted version of the WhatsApp Business API, and since Meta shut down the older self-hosted On-Premises API on 23 October 2025, it is how businesses get API access to WhatsApp.</strong> For an Indian business, that means one clear path: connect to Meta's hosted platform, either directly or through a provider, then build the messages your customers actually want."
+        },
+        {
+          "type": "p",
+          "html": "This guide explains what the Cloud API is, how it differs from the WhatsApp Business API and the WhatsApp Business app, what you need to start in India, and how Meta charges for messages, for startups, SMBs and product teams. Ojiva AI offers the <a href=\"/whatsapp/\">WhatsApp Business API</a> as a Meta Business Partner alongside <a href=\"/sms/\">Bulk SMS</a> and RCS on one platform. If you want a setup sized to your own use case, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct28(1).webp",
+          "alt": "WhatsApp Cloud API in India connecting a business system to customers through Meta's hosted platform"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "WhatsApp Cloud API in India: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The Cloud API lets your systems send and receive WhatsApp messages through Meta's servers, without you hosting anything. Here is what to know before you start."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cloud-check-fill",
+              "title": "What it is:",
+              "desc": "the Meta-hosted way to use the WhatsApp Business API. Meta runs and maintains it."
+            },
+            {
+              "icon": "bi-archive-fill",
+              "title": "What it replaced:",
+              "desc": "Meta's own changelog says the On-Premises API was sunset on 23 October 2025 and is no longer available."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "How you connect:",
+              "desc": "directly to Meta as a developer, or through a Business Solution Provider that handles onboarding and tools."
+            },
+            {
+              "icon": "bi-list-check",
+              "title": "What you need:",
+              "desc": "a Meta business account, a WhatsApp Business Account, a business phone number and approved message templates."
+            },
+            {
+              "icon": "bi-chat-left-text-fill",
+              "title": "What you can send:",
+              "desc": "free-form replies inside the 24-hour customer service window, and approved templates outside it."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "What it costs:",
+              "desc": "access is free according to Meta. You pay per delivered message, set by Meta's rate card, plus any provider fees."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want help choosing between direct access and a provider? Talk to Ojiva AI about the <a href=\"/whatsapp/\">WhatsApp Business API</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "what-it-is",
+      "heading": "What Is the WhatsApp Cloud API?",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The Cloud API is the interface between your software and WhatsApp. Your app calls the API to send a message, and Meta notifies your system through webhooks when a customer replies or something changes in your WhatsApp Business Account. Because Meta hosts it, you do not run servers, containers or WhatsApp software of your own."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cloud-fill",
+              "title": "Hosted by Meta:",
+              "desc": "Meta hosts and maintains the Cloud API, which is why it replaced the self-hosted option."
+            },
+            {
+              "icon": "bi-send-fill",
+              "title": "Messages API:",
+              "desc": "send text, media, interactive and template messages from your own system."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Webhooks:",
+              "desc": "your system is notified when a customer messages you, and when your account changes, so replies and delivery updates reach your software."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Message templates:",
+              "desc": "pre-approved messages that let you start or restart conversations, managed through your WhatsApp Business Account."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-vs-business-api",
+      "heading": "WhatsApp Cloud API vs WhatsApp Business API vs the Business App",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "These names get mixed up, so here is how they relate. Our guide to the <a href=\"/blogs/whatsapp-business-app-vs-api/\">WhatsApp Business app vs the API</a> goes deeper on the app."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cloud-check-fill",
+              "title": "WhatsApp Cloud API:",
+              "desc": "the current, Meta-hosted way to use the WhatsApp Business Platform. This is what providers connect you to."
+            },
+            {
+              "icon": "bi-archive-fill",
+              "title": "On-Premises API:",
+              "desc": "the older self-hosted version, officially sunset by Meta on 23 October 2025. See <a href=\"https://developers.facebook.com/docs/whatsapp/on-premises/changelog\" target=\"_blank\" rel=\"noopener\">Meta's changelog</a>."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "WhatsApp Business app:",
+              "desc": "a free app for small teams chatting from a phone. It is a different product, without the automation and system integrations of the API."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "WhatsApp Business API:",
+              "desc": "the everyday name people use for the business platform. Today, that means the Cloud API."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-you-need",
+      "heading": "What You Need to Get Started in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The setup is mostly about accounts, a phone number and approvals. Meta's developer documentation walks through the technical steps, and your provider can handle most of them for you. See Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started\" target=\"_blank\" rel=\"noopener\">getting started guide</a>."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building-fill",
+              "title": "A Meta business account:",
+              "desc": "your business's identity inside Meta, used to create and manage your WhatsApp Business Account."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "A WhatsApp Business Account:",
+              "desc": "the account that holds your phone numbers, templates and profile."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "A business phone number:",
+              "desc": "a number you control and can verify, which will be the sender for your messages."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Accepted platform terms:",
+              "desc": "Meta requires you to accept the WhatsApp Business Platform Terms of Service on behalf of your business."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Customer opt-in:",
+              "desc": "a clear way to collect consent, such as a checkbox at sign-up or checkout."
+            },
+            {
+              "icon": "bi-chat-square-text-fill",
+              "title": "Message templates:",
+              "desc": "approved templates for any message you start yourself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-or-provider",
+      "heading": "Direct From Meta or Through a Business Solution Provider?",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "You can connect straight to Meta, or work through a Business Solution Provider. Both reach the same Cloud API. The difference is how much you build and run yourself."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-code-slash",
+              "title": "Direct from Meta:",
+              "desc": "suits teams with developers who want full control. You build the sending logic, inbox, campaigns, reporting and support processes yourself."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Through a provider:",
+              "desc": "suits most businesses. You get onboarding, a dashboard, template support, campaigns and help when something fails."
+            },
+            {
+              "icon": "bi-question-circle-fill",
+              "title": "Questions to ask any provider:",
+              "desc": "what is included, who handles templates, how failures are reported, and how fees are itemised."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Channels beyond WhatsApp:",
+              "desc": "ask whether SMS, RCS and voice run on the same account, so you can fall back across channels without a second vendor."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/jul24(3).webp",
+          "alt": "Comparison of connecting to the WhatsApp Cloud API directly from Meta or through a Business Solution Provider"
+        }
+      ]
+    },
+    {
+      "id": "get-started-steps",
+      "heading": "How Businesses Get Started: A Step-by-Step Path",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Whether you do it yourself or with a provider, the path is the same. Meta's setup flow connects your app to a WhatsApp Business Account, adds a phone number and uses a system user token to authorise your calls."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Set up your accounts:",
+              "desc": "create or confirm your Meta business account and your WhatsApp Business Account."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Add and verify a business phone number:",
+              "desc": "choose the number customers will see, and verify it."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Create your templates:",
+              "desc": "write and submit the messages you will start conversations with, using the right category."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Connect your system:",
+              "desc": "authorise your app with a token and set up webhooks to receive replies and status updates."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Send test messages:",
+              "desc": "check templates, buttons and webhooks on real phones before any customer sees them."
+            },
+            {
+              "icon": "bi-6-circle-fill",
+              "title": "Go live with opt-in in place:",
+              "desc": "start with one flow, such as order updates, and watch delivery reports before adding more."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "messaging-rules",
+      "heading": "Messaging Rules to Know: Templates, the 24-Hour Window and Opt-In",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most early problems on the Cloud API come from not understanding when a template is needed. Meta's rule is simple: free-form messages only inside a customer service window, templates for everything else."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-clock-history",
+              "title": "The customer service window:",
+              "desc": "opens when a customer messages you. Inside it, you can send any type of message, including free-form replies, without pre-approval."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Templates outside the window:",
+              "desc": "to message a customer outside the window, use an approved template."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Template categories:",
+              "desc": "marketing for promotions, utility for transactions such as order updates, and authentication for OTPs. See our guide on <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a> for authentication."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Opt-in:",
+              "desc": "message only customers who agreed to hear from you, and give an easy way to opt out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "heading": "WhatsApp Cloud API Cost: What Meta Charges and What Providers May Add",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta states that access to the Cloud API is free, because Meta hosts and maintains it. Your cost is messaging. Meta bills per delivered message, based on the message category and the recipient's country, and publishes its rates on its pricing page. We do not quote rates here, because Meta revises them and your invoice must match the current rate card. Check <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's official pricing page</a> before you plan volumes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "Meta's per-message charge:",
+              "desc": "marketing, utility and authentication templates are billed per delivered message, at rates set by category and country."
+            },
+            {
+              "icon": "bi-calendar-event-fill",
+              "title": "Recent pricing changes:",
+              "desc": "Meta has announced changes to how service messages and utility messages inside the customer service window are charged from 1 October 2026. Confirm the current terms on Meta's page."
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "Free entry point window:",
+              "desc": "when a customer messages you from a Click-to-WhatsApp ad or a Facebook Page call-to-action button, Meta opens a 72-hour window in which delivery is not charged."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Provider charges:",
+              "desc": "ask whether platform fees, onboarding, support and reports are included or billed separately, and whether quotes include GST."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own message volumes by category is the safest way to compare options. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "What Indian Businesses Use the Cloud API For",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Once the connection is live, the same API supports many flows. Start with the one that removes the most manual work."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Order and delivery updates:",
+              "desc": "confirmation, shipping and delivery messages. See how the same flow works on RCS in our guide to <a href=\"/blogs/rcs-messaging-for-ecommerce-d2c-india/\">RCS messaging for e-commerce</a>."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Appointment and payment reminders:",
+              "desc": "timely reminders that cut missed visits and late payments."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "OTP and login codes:",
+              "desc": "authentication templates with copy-code and one-tap buttons."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Lead follow-up from ads:",
+              "desc": "reply quickly to customers who start a chat from a Click-to-WhatsApp ad."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support conversations:",
+              "desc": "a shared inbox and a chatbot for routine questions, with a human handover."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mistakes",
+      "heading": "Common Mistakes to Avoid",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most delays and blocked messages trace back to a few avoidable mistakes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Messaging without consent:",
+              "desc": "sending promotions to people who never opted in leads to complaints and account problems."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Choosing the wrong template category:",
+              "desc": "a mismatch between content and category is a common reason for rejection. Classify honestly."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Ignoring the 24-hour window:",
+              "desc": "a free-form message outside the window will fail. Use an approved template instead."
+            },
+            {
+              "icon": "bi-bell-slash-fill",
+              "title": "Not handling webhooks:",
+              "desc": "if your system ignores delivery and reply events, customers wait and you cannot see failures."
+            },
+            {
+              "icon": "bi-telephone-x-fill",
+              "title": "Moving a number without a plan:",
+              "desc": "ask your provider how to migrate a number already in use, before you start."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps You Get Started With the WhatsApp Cloud API",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering the WhatsApp Business API, Bulk SMS, RCS, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Meta Business Partner:",
+              "desc": "access to the WhatsApp Business Platform through an official partner, so you do not handle every setup detail alone."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "WhatsApp, SMS, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events, forms and CRM stages so messages fire automatically."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Quotes sized to your volumes:",
+              "desc": "share your monthly volumes by message category, and we size the plan together on a demo call."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct28(3).webp",
+          "alt": "Ojiva AI platform connecting the WhatsApp Cloud API with SMS and RCS for an Indian business"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Start With One Flow, Then Scale",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The Cloud API removes the hardest part of using WhatsApp for business: hosting it. What remains is choosing direct access or a provider, getting your accounts, number and templates approved, and starting with one flow your customers will value, such as order updates or OTPs. Keep consent clean and check Meta's pricing page before you commit volume."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own business, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your use case, templates and channels together. You can also explore our <a href=\"/whatsapp/\">WhatsApp Business API</a> and <a href=\"/sms/\">Bulk SMS</a> services. Understood this way, the WhatsApp Cloud API in India is simply Meta's hosted route to WhatsApp for business, and the rest is a plan. Conversations that convert start with messages customers asked for."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
+            },
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "RCS Messaging for E-commerce and D2C",
+              "href": "/blogs/rcs-messaging-for-ecommerce-d2c-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "What is the WhatsApp Cloud API?",
+              "a": "<p>It is Meta's own hosted version of the WhatsApp Business API. Meta runs the servers, and your business or provider connects to them to send messages, receive customer replies through webhooks and manage message templates. Since Meta ended the older On-Premises API, the Cloud API is how businesses access the WhatsApp Business Platform.</p>"
+            },
+            {
+              "q": "Is the WhatsApp Cloud API the same as the WhatsApp Business API?",
+              "a": "<p>Almost. WhatsApp Business API is the general name for the business platform, and the Cloud API is the Meta-hosted way to use it. It is different from the free WhatsApp Business app, which is built for small teams chatting from a phone and does not offer the same automation and integrations.</p>"
+            },
+            {
+              "q": "What happened to the On-Premises API?",
+              "a": "<p>Meta's own changelog states that the On-Premises API was officially sunset on 23 October 2025 and is no longer available, and it tells businesses to use the Cloud API instead. If a provider still talks about self-hosting the API, ask how they connect to Meta today.</p>"
+            },
+            {
+              "q": "Is the WhatsApp Cloud API free?",
+              "a": "<p>Meta states that access to the Cloud API is free, because Meta hosts and maintains it. What you pay for is messaging: Meta bills per delivered message by category and recipient country, and a provider may add platform fees. Check Meta's pricing page for current rates and ask any provider for an itemised quote.</p>"
+            },
+            {
+              "q": "Do I need a Business Solution Provider to use the Cloud API?",
+              "a": "<p>No. Developers can connect directly to Meta, but they must build and maintain the templates, inbox, campaigns and reporting themselves. Most Indian businesses use a provider for onboarding, tools and support. Ask what is included, how templates are handled and how fees are itemised.</p>"
+            },
+            {
+              "q": "Can I use my existing WhatsApp number with the Cloud API?",
+              "a": "<p>It depends. A business phone number must be one you control and can verify. A number already in use on the WhatsApp or WhatsApp Business app may need to be moved, and Meta's options for this change over time. Ask your provider how to migrate an existing number before you start, so you do not lose your chat history.</p>"
+            },
+            {
+              "q": "Can I message customers first on the Cloud API?",
+              "a": "<p>Yes, but only with an approved message template, and only to customers who agreed to hear from you. Free-form messages are allowed only inside the customer service window, which opens when a customer messages you. Templates are categorised as marketing, utility or authentication, and each category has its own rules.</p>"
+            },
+            {
+              "q": "What can I send without a template?",
+              "a": "<p>Meta calls these service messages: free-form replies you send inside the customer service window after a customer messages you. They need no pre-approval. Outside that window you must use an approved template. Plan your flows around this rule, and check Meta's pricing page for how service messages are charged.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
