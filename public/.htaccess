@@ -8,13 +8,26 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # AI chat server files (bundled by the build): never reachable from the web
+  RewriteRule ^_private(/|$) - [F,L]
+
   # Show the branded static 404 page for unknown Hostinger / Apache paths.
   ErrorDocument 404 /404.html
+  # Spam URLs below get 410 Gone; show visitors the same branded page.
+  ErrorDocument 410 /404.html
 
   # Redirect http → https AND bare ojiva.ai → www.ojiva.ai in one 301
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^ojiva\.ai$ [NC]
   RewriteRule ^(.*)$ https://www.ojiva.ai/$1 [R=301,L]
+
+  # Spam links (Oct 2026): other sites link thousands of made-up URLs here,
+  # e.g. /shops/advice/fupqmqdb2oh3kfy and /?u=fc8khxwbxeomla5. 410 Gone tells
+  # Google they never exist, so it drops them faster than a 404. None of these
+  # folders are real pages and the site never uses a "u" query parameter.
+  RewriteRule ^(shops|shopgoods|detail|topic|collected|daily|weekly|library)(/|$) - [G,L]
+  RewriteCond %{QUERY_STRING} (^|&)u= [NC]
+  RewriteRule ^$ - [G,L]
 
   # /index.html (and /<dir>/index.html) duplicate their folder URL → 301 to it.
   # THE_REQUEST = the browser's original request line, so the server's own
@@ -46,6 +59,10 @@
   Header always set Strict-Transport-Security "max-age=31536000"
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
+  # AI chat reference text and admin panel: never in search results
+  <FilesMatch "^ai-knowledge\.txt$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
   # Content-hashed Next.js build output → 1 year, immutable (safe: filename changes on rebuild)

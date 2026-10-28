@@ -7,7 +7,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/validate-blogs.mjs && node scripts/subset-icons.mjs && node scripts/trim-bootstrap.mjs",
     "build": "next build",
-    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt && find out -name '*.map' -type f -delete && node scripts/image-variants.mjs",
+    "postbuild": "next-sitemap && cp out/sitemap-0.xml out/sitemap.xml && cp public/.htaccess out/.htaccess && rm -f out/__next.__PAGE__.txt out/__next._full.txt out/__next._head.txt out/__next._index.txt out/__next._tree.txt out/index.txt && find out -name '*.map' -type f -delete && node scripts/image-variants.mjs && node scripts/build-ai-knowledge.mjs && node scripts/bundle-private.mjs",
     "start": "next start",
     "lint": "eslint",
     "validate:blogs": "node scripts/validate-blogs.mjs",

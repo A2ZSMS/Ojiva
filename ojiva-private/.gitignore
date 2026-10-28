@@ -1,0 +1,7 @@
+# Installed by composer on the server (or uploaded once) — never committed
+vendor/
+# Hold real API keys / passwords — never committed
+ai-config.php
+ai-config.production.php
+# First-time live install (has a password hash) — never committed
+install-production.sql
