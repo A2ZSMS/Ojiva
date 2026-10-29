@@ -1,4 +1,45 @@
 {
+  "slug": "whatsapp-cloud-api-india",
+  "metaTitle": "WhatsApp Cloud API in India: Setup, Pricing & How It Works | Ojiva AI",
+  "metaDescription": "WhatsApp Cloud API in India: learn what it is, how it differs from the WhatsApp Business API, what you need to start and how Meta charges. Book a free demo.",
+  "h1": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+  "primaryKeyword": "WhatsApp Cloud API",
+  "keywords": {
+    "secondary": [
+      "WhatsApp Cloud API pricing",
+      "WhatsApp Cloud API setup",
+      "Meta Cloud API",
+      "Meta WhatsApp API",
+      "WhatsApp Cloud API India",
+      "WhatsApp Cloud API vs Business API",
+      "WhatsApp Business Platform",
+      "WhatsApp API provider",
+      "WhatsApp API integration",
+      "WhatsApp Business API"
+    ],
+    "shortTail": [
+      "WhatsApp API",
+      "Cloud API",
+      "WABA",
+      "BSP",
+      "message template",
+      "webhook",
+      "access token",
+      "business phone number",
+      "Meta Business account",
+      "On-Premises API"
+    ],
+    "longTail": [
+      "what is the WhatsApp Cloud API",
+      "is the WhatsApp Cloud API the same as the WhatsApp Business API",
+      "what happened to the On-Premises API",
+      "is the WhatsApp Cloud API free",
+      "do I need a Business Solution Provider to use the Cloud API",
+      "can I use my existing WhatsApp number with the Cloud API",
+      "can I message customers first on the Cloud API",
+      "what can I send without a template"
+    ]
+  },
   "toc": [
     {
       "id": "introduction",
