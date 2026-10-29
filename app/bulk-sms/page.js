@@ -3,7 +3,7 @@ import { SMS_FAQS as BULK_SMS_FAQS } from '@/components/landing/bulk-sms/data';
 import BulkSmsLanding from '@/components/landing/BulkSmsLanding';
 
 export const metadata = buildMetadata({
-  title: 'Bulk SMS Service India — Demo & Pricing',
+  title: 'Bulk SMS Service Provider in India — Free Demo',
   description:
     'Promotional, transactional, Service Explicit and OTP SMS from Ojiva AI. Explore API integration, SMPP connectivity and our SMS reseller panel. Get pricing.',
   path: '/bulk-sms',

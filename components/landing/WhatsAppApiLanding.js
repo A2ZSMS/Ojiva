@@ -6,6 +6,7 @@ import LandingLeadForm from './LandingLeadForm';
 import ConversationDemo from './whatsapp-api/ConversationDemo';
 import MobileEnquiryBar from './whatsapp-api/MobileEnquiryBar';
 import SupportChat from './whatsapp-api/SupportChat';
+import { TrustStrip, Testimonials, WhatsAppButton } from './LandingTrust';
 import styles from './whatsapp-api/WhatsAppLanding.module.css';
 
 const services = [
@@ -30,19 +31,21 @@ export default function WhatsAppApiLanding() {
       <header className={styles.header}><div className={styles.headerInner}>
         <a href="#whatsapp-top" aria-label="Ojiva AI, back to top"><Image src="/ojiva-logo-optimized.webp" width={112} height={33} alt="Ojiva AI" priority /></a>
         <nav aria-label="Landing page navigation"><a href="#how-it-works">See how it works</a><a href="#questions">FAQs</a></nav>
-        <a className={styles.headerCta} href="#lead-form">Get demo & pricing <LuArrowUpRight aria-hidden="true" /></a>
+        <WhatsAppButton variant="header" source="whatsapp-api-service" message="Hi, I'd like a demo of the WhatsApp Business API." />
+        <a className={styles.headerCta} href="#lead-form">Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a>
       </div></header>
       <section className={styles.hero} aria-labelledby="whatsapp-title">
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}><span className={styles.statusDot} /> WHATSAPP BUSINESS API</span>
-            <h1 id="whatsapp-title">Your next enquiry<br /><span>deserves a reply.</span></h1>
+            <h1 id="whatsapp-title">Official WhatsApp Business API<br /><span>Provider in India</span></h1>
             <p className={styles.heroDescription}>Answer common questions automatically, send timely follow-ups and give your team one shared inbox. Help interested customers take the next step on WhatsApp.</p>
             <a className={styles.heroAction} href="#how-it-works"><LuCirclePlay aria-hidden="true" /> See it in action <LuArrowRight aria-hidden="true" /></a>
             <ul className={styles.heroBenefits}><li><LuCheck aria-hidden="true" /> Automated replies</li><li><LuCheck aria-hidden="true" /> Shared team inbox</li><li><LuCheck aria-hidden="true" /> CRM integration</li></ul>
+            <TrustStrip />
             <WhatsAppJourney />
           </div>
-          <div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="See your WhatsApp workflow." subtitle="Tell us what you need. Get a relevant demo, setup guidance and a clear pricing discussion." introLabel="DEMO + SETUP + PRICING" submitLabel="Get My Demo & Pricing →" services={services} serviceLabel="What would you like to do?" /></div>
+          <div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="See your WhatsApp workflow." subtitle="Tell us what you need. Get a relevant demo, setup guidance and a clear pricing discussion." introLabel="DEMO + SETUP + PRICING" submitLabel="Book a Free Demo →" services={services} serviceLabel="What would you like to do?" /></div>
         </div>
         <div className={styles.heroFoot}><span>Built for the way your business talks.</span><div><span>Sales enquiries</span><span>Customer support</span><span>Order updates</span><span>Appointment reminders</span></div></div>
       </section>
@@ -55,6 +58,7 @@ export default function WhatsAppApiLanding() {
           <article><span className={styles.benefitIcon}><LuWorkflow aria-hidden="true" /></span><h3>Follow up without starting over.</h3><p>Plan reminders and customer updates around the moments that matter to your business.</p><span className={styles.benefitExample}>Appointments, orders and the next check-in.</span></article>
         </div>
       </section>
+      <Testimonials page="whatsapp" />
       <section className={`${styles.section} ${styles.messagesSection}`} aria-labelledby="messages-title">
         <div className={styles.benefitsHeading}><div><span className={styles.eyebrow}>USEFUL BEYOND THE FIRST REPLY</span><h2 id="messages-title">Keep customers informed.<br />Give them a next step.</h2></div><p>Use WhatsApp for the everyday updates customers want to receive, with a clear action in each message.</p></div>
         <div className={styles.messageExamples}>
@@ -75,11 +79,12 @@ export default function WhatsAppApiLanding() {
           ['Review a plan for your business.', 'Get clarity on your number, integrations, platform fees and messaging charges.'],
         ]}
         benefits={['A demo focused on your use case', 'Number and integration guidance', 'Pricing explained before you decide']}
-        cta="Get My Demo & Pricing" />
+        cta="Book a Free Demo" />
       <section className={`${styles.section} ${styles.faqSection}`} id="questions" aria-labelledby="faq-title"><div><span className={styles.eyebrow}>A FEW THINGS YOU MAY BE WONDERING</span><h2 id="faq-title">Good questions.<br />Clear answers.</h2><p>Have a specific requirement?<br />We can talk it through in your demo.</p><a href="#lead-form" className={styles.textLink}>Ask our team <LuArrowUpRight aria-hidden="true" /></a></div><div className={styles.faqList}>{faqs.map(([q, a]) => <details key={q}><summary>{q}<LuChevronDown aria-hidden="true" /></summary><p>{a}</p></details>)}</div></section>
-      <section className={styles.finalSection}><div><span className={styles.eyebrow}>SEE THE WORKFLOW BEFORE YOU DECIDE</span><h2>Start with the conversations you want to improve.</h2><p>Get a demo, setup guidance and pricing matched to your team.</p></div><a href="#lead-form" className={styles.primaryCta}>Get My Demo & Pricing <LuArrowUpRight aria-hidden="true" /></a></section>
+      <section className={styles.finalSection}><div><span className={styles.eyebrow}>SEE THE WORKFLOW BEFORE YOU DECIDE</span><h2>Start with the conversations you want to improve.</h2><p>Get a demo, setup guidance and pricing matched to your team.</p></div><a href="#lead-form" className={styles.primaryCta}>Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a></section>
       <footer className={styles.footer}><div><Image src="/ojiva-logo-optimized.webp" width={94} height={28} alt="Ojiva AI" loading="lazy" /><span>© {new Date().getFullYear()} Ojiva AI</span></div><nav aria-label="Contact and legal"><a href="tel:+918431086185"><LuPhone aria-hidden="true" /> Talk to our team</a><SupportChat /><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></footer>
-      <MobileEnquiryBar />
+      <MobileEnquiryBar label="Book a Free Demo ↗" />
+      <WhatsAppButton source="whatsapp-api-service" message="Hi, I'd like a demo of the WhatsApp Business API." />
     </div>
   );
 }
