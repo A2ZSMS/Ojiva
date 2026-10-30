@@ -1,0 +1,573 @@
+{
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "why-blocked",
+      "label": "Why You Get Blocked"
+    },
+    {
+      "id": "official-route",
+      "label": "The Safe Route"
+    },
+    {
+      "id": "opt-in",
+      "label": "Opt-In"
+    },
+    {
+      "id": "templates",
+      "label": "Templates"
+    },
+    {
+      "id": "limits-caps",
+      "label": "Limits & Caps"
+    },
+    {
+      "id": "checklist",
+      "label": "Safe Sending Checklist"
+    },
+    {
+      "id": "first-campaign",
+      "label": "Your First Campaign"
+    },
+    {
+      "id": "channels-dlt",
+      "label": "WhatsApp, SMS & DLT"
+    },
+    {
+      "id": "cost",
+      "label": "Cost"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>To send bulk WhatsApp messages in India without getting blocked, use the official WhatsApp Business API with approved templates, message only customers who opted in, and send content relevant enough that people do not block you.</strong> Blasting a list from a normal number or an unofficial tool is the fastest way to lose that number, and often the customers behind it."
+        },
+        {
+          "type": "p",
+          "html": "This guide explains why WhatsApp blocks bulk senders, the safe official route, how opt-in and templates work, the limits that stop some messages from delivering, and a checklist for your first campaign, for marketers, D2C brands and SMBs across India. Ojiva AI offers the <a href=\"/whatsapp/\">WhatsApp Business API</a> alongside <a href=\"/sms/\">Bulk SMS</a> and RCS on one platform. If you want a campaign plan sized to your list, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/oct30(1).webp",
+          "alt": "Safe bulk WhatsApp messaging in India using the official WhatsApp Business API with opt-in and approved templates"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "How to Send Bulk WhatsApp Messages Without Getting Blocked: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Bulk sending is allowed on WhatsApp, but only through the official route and only to people who agreed to hear from you. These are the rules that matter most."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Use the official route:",
+              "desc": "the WhatsApp Business Platform, through a provider, not the apps, browser extensions or blaster tools."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Get opt-in first:",
+              "desc": "collect clear consent that names your business and the types of messages, before the first message."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Use approved templates:",
+              "desc": "send promotions as marketing templates, and keep transactional messages in the utility category."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Send relevant messages:",
+              "desc": "segment your list so people get offers they care about, because blocks and reports hurt your quality."
+            },
+            {
+              "icon": "bi-speedometer2",
+              "title": "Respect limits and caps:",
+              "desc": "start with small batches, and expect some marketing messages to be held by Meta's per-user cap."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Make opting out easy:",
+              "desc": "honour every stop request immediately and everywhere."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want a safe setup without the guesswork? Talk to Ojiva AI about the <a href=\"/whatsapp/\">WhatsApp Business API</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-blocked",
+      "heading": "Why WhatsApp Blocks Bulk Senders",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most blocks and bans trace back to the same few causes. Knowing them tells you what to avoid."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-phone-fill",
+              "title": "Bulk sending from the apps:",
+              "desc": "WhatsApp's FAQ says its products are not intended for bulk or automated messaging, which violates its Terms of Service."
+            },
+            {
+              "icon": "bi-bug-fill",
+              "title": "Unofficial tools and modified apps:",
+              "desc": "browser extensions, blaster software and modified versions of WhatsApp bypass the platform's controls, and can get a number restricted or banned."
+            },
+            {
+              "icon": "bi-person-x-fill",
+              "title": "No consent:",
+              "desc": "messaging people who never opted in breaks Meta's policy and prompts blocks and reports."
+            },
+            {
+              "icon": "bi-flag-fill",
+              "title": "Blocks and reports:",
+              "desc": "Meta watches how recipients react, and templates or numbers with poor feedback can be paused or disabled."
+            },
+            {
+              "icon": "bi-chat-square-dots-fill",
+              "title": "Irrelevant or repetitive messages:",
+              "desc": "sending the same offer to everyone, too often, is a reliable way to be blocked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "official-route",
+      "heading": "The Safe Route: WhatsApp Business API, Not Blasters or Extensions",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The WhatsApp Business app is built for small teams chatting by hand. Bulk campaigns belong on the WhatsApp Business Platform, which is built for scale, consent and approved templates. Read our guide to the <a href=\"/blogs/whatsapp-business-app-vs-api/\">WhatsApp Business app vs the API</a> for the full difference."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cloud-check-fill",
+              "title": "The official platform:",
+              "desc": "Meta's hosted Cloud API is how businesses reach the WhatsApp Business Platform. See our guide to the <a href=\"/blogs/whatsapp-cloud-api-india/\">WhatsApp Cloud API in India</a>."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Through a provider:",
+              "desc": "a Business Solution Provider gives you onboarding, templates, campaigns and reports without building them yourself."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "What to avoid:",
+              "desc": "any tool that asks you to scan your normal WhatsApp QR code to send campaigns, or that promises to hide your sending from WhatsApp."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct30(2).webp",
+          "alt": "Comparison of the official WhatsApp Business API with unofficial bulk sender tools and extensions"
+        }
+      ]
+    },
+    {
+      "id": "opt-in",
+      "heading": "Opt-In: The Rule That Protects Your Number",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Opt-in is the single most important rule. Meta's WhatsApp Business Messaging Policy says you may contact only people who gave you their number and agreed to receive messages from you."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-person-check-fill",
+              "title": "A clear yes:",
+              "desc": "the customer actively agrees. Pre-ticked boxes and bundled terms are weak consent."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Your business name:",
+              "desc": "state who will be messaging them."
+            },
+            {
+              "icon": "bi-chat-left-text-fill",
+              "title": "The message types:",
+              "desc": "say what they will receive, for example order updates or offers."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Before the first message:",
+              "desc": "collect it first, outside WhatsApp, such as on your website, at checkout, by SMS, by phone or in store."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "An easy way out:",
+              "desc": "tell people they can opt out at any time, and honour it."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Displaying your WhatsApp number does not count as opt-in. A safe checkbox reads: \"Send me order updates and offers from [Business name] on WhatsApp.\" Meta is also rolling out a setting that lets users control marketing messages from businesses, including opting out and marking offers as interested or not interested. Treat consent under the DPDP Act the same way: a clear purpose, easy withdrawal, and records you can show."
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "heading": "Templates and Categories: Getting Approved the First Time",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "To message customers first, you need approved templates. The category you choose decides the rules and how Meta bills you, and a wrong category is a common reason for rejection."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Marketing:",
+              "desc": "offers, launches, reminders to buy and win-backs. Send these only to opted-in customers."
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Utility:",
+              "desc": "transactional messages tied to something the customer did, such as order and payment updates."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "Authentication:",
+              "desc": "OTPs and verification codes. See <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a>."
+            },
+            {
+              "icon": "bi-pencil-square",
+              "title": "Write for one purpose:",
+              "desc": "one clear message, one clear button, and your business name so customers recognise you."
+            },
+            {
+              "icon": "bi-pause-circle-fill",
+              "title": "Watch template feedback:",
+              "desc": "a template can move from active to paused or disabled when customers react badly to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limits-caps",
+      "heading": "Messaging Limits and Frequency Caps: Why Some Messages Do Not Deliver",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Even with perfect consent, two limits can stop a message. They are separate, and neither means your number is in trouble."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-speedometer2",
+              "title": "Your messaging limit:",
+              "desc": "the number of unique users you can start conversations with in a rolling 24 hours outside a customer service window. It starts low and grows as you send quality messages. Check your current limit in WhatsApp Manager."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Meta's per-user marketing cap:",
+              "desc": "Meta can limit how many marketing templates one person receives from all businesses combined. Meta does not publish a fixed number."
+            },
+            {
+              "icon": "bi-exclamation-circle-fill",
+              "title": "Error 131049:",
+              "desc": "a marketing template was not delivered because the recipient reached that cap. Meta advises waiting at least 24 hours before retrying that user."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "What to do:",
+              "desc": "pace your sends, prioritise your most engaged customers, and do not retry the same user repeatedly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "heading": "Checklist: Send Bulk WhatsApp Campaigns Safely",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Run through this list before every campaign. It protects your number, your quality and your customers' trust."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Segment your list:",
+              "desc": "send each offer only to people likely to want it."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Personalise:",
+              "desc": "use the customer's name and a relevant product or order."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Choose sensible timing:",
+              "desc": "avoid late nights and avoid sending the same customer several campaigns in a day."
+            },
+            {
+              "icon": "bi-broom",
+              "title": "Clean your list:",
+              "desc": "remove numbers that bounce, never engage or asked to stop."
+            },
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Test first:",
+              "desc": "send to a small group, check the template and the buttons, then scale."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "Monitor results:",
+              "desc": "watch delivery, replies and blocks, and pause if blocks rise."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Honour opt-outs at once:",
+              "desc": "remove the customer from every list, not just this campaign."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Plan a fallback:",
+              "desc": "use SMS for customers who cannot receive WhatsApp."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-campaign",
+      "heading": "How to Send Your First Bulk WhatsApp Campaign",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "With the right setup, your first campaign takes a few clear steps. Do them in order."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Get access to the API:",
+              "desc": "set up the WhatsApp Business API through a provider."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Build a consented list:",
+              "desc": "upload only customers who opted in, with proof of consent."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Create and submit a marketing template:",
+              "desc": "choose the right category and wait for approval."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Test on real phones:",
+              "desc": "check the message, the buttons and the opt-out line."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Send a small batch:",
+              "desc": "start with your most engaged customers and watch the signals."
+            },
+            {
+              "icon": "bi-6-circle-fill",
+              "title": "Scale and review:",
+              "desc": "grow the audience gradually, and review blocks and replies after every send."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channels-dlt",
+      "heading": "WhatsApp, SMS and DLT: What Applies to Which Channel",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "DLT registration is a TRAI requirement for SMS only. WhatsApp follows Meta's template approval and opt-in policies. If you add an SMS fallback for customers who cannot receive WhatsApp, that SMS still needs your DLT entity, sender ID and approved template. See our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a>, and read how the same idea works on RCS in <a href=\"/blogs/rcs-messaging-for-ecommerce-d2c-india/\">RCS messaging for e-commerce</a>."
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "heading": "What Bulk WhatsApp Campaigns Cost",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta bills per delivered template message, based on the category and the recipient's country, and marketing templates have their own rate. We do not quote rates here, because Meta revises them and your invoice must match the current rate card. Check <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's official pricing page</a> before you plan a campaign, and ask any provider for an itemised quote that separates Meta's charges from platform fees and any SMS fallback. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps You Send Bulk WhatsApp Messages Safely",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering the WhatsApp Business API, Bulk SMS, RCS, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Official access:",
+              "desc": "the WhatsApp Business API through a Meta Business Partner, not an unofficial tool."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "WhatsApp, SMS, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events, forms and CRM stages so messages fire automatically."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Quotes sized to your list:",
+              "desc": "share your list size and message categories, and we size the plan together on a demo call."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/oct30(3).webp",
+          "alt": "Ojiva AI dashboard for sending approved WhatsApp campaigns with SMS fallback"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Consent, Templates and Patience Protect Your Number",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Bulk WhatsApp messaging works when you treat it as permission-based marketing on the official platform: collect clear opt-in, use approved templates in the right category, segment your list, pace your sends and honour every opt-out. Skip the shortcuts, because the cost of a banned number is far higher than the time saved."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own list, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your consent flow, templates and fallback together. You can also explore our <a href=\"/whatsapp/\">WhatsApp Business API</a> and <a href=\"/sms/\">Bulk SMS</a> services. Follow these rules and you can send bulk WhatsApp messages in India at scale, without losing the number your customers trust. Conversations that convert start with messages people agreed to receive."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+              "href": "/blogs/whatsapp-cloud-api-india/"
+            },
+            {
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
+            },
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Can I send bulk WhatsApp messages from my normal WhatsApp or the Business app?",
+              "a": "<p>Not safely. WhatsApp's own FAQ says its products are not intended for bulk or automated messaging, and that doing so violates its Terms of Service. Using unofficial tools, browser extensions or modified apps for this can get your number restricted or banned. For bulk sending, use the WhatsApp Business Platform through a provider.</p>"
+            },
+            {
+              "q": "Why does WhatsApp block or ban numbers for bulk messaging?",
+              "a": "<p>The usual causes are using the apps or unofficial tools for bulk or automated sending, messaging people who never opted in, and sending messages recipients block or report. WhatsApp and Meta monitor how recipients react, and templates or numbers with poor feedback can be paused, restricted or disabled.</p>"
+            },
+            {
+              "q": "How do I send bulk WhatsApp messages safely in India?",
+              "a": "<p>Use the WhatsApp Business API through a provider, collect clear opt-in before the first message, send only approved templates in the right category, segment your audience, keep a visible opt-out, and start with small batches while you watch delivery and block signals. Keep SMS as a fallback for customers who cannot receive WhatsApp.</p>"
+            },
+            {
+              "q": "Do I need opt-in to send bulk WhatsApp messages?",
+              "a": "<p>Yes. Meta's WhatsApp Business Messaging Policy says you may contact only people who gave you their number and agreed to receive messages from you. The opt-in should name your business and the types of messages, be collected before you send, and tell people they can opt out. Displaying your own WhatsApp number does not count as opt-in.</p>"
+            },
+            {
+              "q": "Is bulk WhatsApp messaging legal in India?",
+              "a": "<p>Sending through the official WhatsApp Business Platform to customers who consented is permitted by WhatsApp's policy. You must still follow Indian law, including the DPDP Act's principles of clear consent, a stated purpose and easy withdrawal. This is practical guidance rather than legal advice, so check your obligations with a qualified professional.</p>"
+            },
+            {
+              "q": "Does bulk WhatsApp messaging need DLT registration?",
+              "a": "<p>No. DLT registration under TRAI's rules applies to SMS. WhatsApp messages follow Meta's template approval and opt-in policies instead. If you add an SMS fallback, that SMS channel still needs your DLT entity, sender ID and approved template.</p>"
+            },
+            {
+              "q": "Why are some of my WhatsApp marketing messages not delivered?",
+              "a": "<p>Two limits can apply. Your messaging limit caps how many unique users you can start conversations with in a rolling 24 hours. Separately, Meta can limit how many marketing templates one person receives from all businesses combined, and Meta advises waiting at least 24 hours before retrying that user. Neither means your number is unhealthy.</p>"
+            },
+            {
+              "q": "What should I do if my WhatsApp number is restricted?",
+              "a": "<p>Stop sending, and review how you collected opt-in, which templates you used and whether any unofficial tool touched the number. Fix the cause before you resume, and follow the appeal steps shown in your WhatsApp or Meta account. Ask your provider to check your quality signals, and avoid retrying the same campaign immediately.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
