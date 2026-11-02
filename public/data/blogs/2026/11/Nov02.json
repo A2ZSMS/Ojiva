@@ -1,0 +1,689 @@
+{
+  "slug": "otp-sms-service-india",
+  "metaTitle": "OTP SMS Service in India: How to Choose One | Ojiva AI",
+  "metaDescription": "OTP SMS service in India: learn how DLT templates work, what affects delivery speed and how to choose a reliable provider. Book a free demo with Ojiva AI.",
+  "h1": "OTP SMS Service in India: DLT Templates, Delivery Speed and How to Choose",
+  "primaryKeyword": "OTP SMS service",
+  "keywords": {
+    "secondary": [
+      "SMS OTP",
+      "OTP SMS service in India",
+      "SMS OTP provider",
+      "OTP SMS API",
+      "transactional SMS service provider",
+      "OTP SMS gateway",
+      "OTP template DLT",
+      "OTP verification SMS",
+      "SMS OTP delivery",
+      "bulk SMS India"
+    ],
+    "shortTail": [
+      "OTP SMS",
+      "OTP message",
+      "OTP API",
+      "SMS gateway",
+      "transactional SMS",
+      "DLT template",
+      "sender ID",
+      "Template ID",
+      "DND",
+      "2FA"
+    ],
+    "longTail": [
+      "how to get DLT approval for an OTP SMS template",
+      "why is my OTP SMS not delivered in India",
+      "how fast should an OTP SMS arrive",
+      "can OTP SMS reach DND numbers",
+      "how to choose an OTP SMS provider in India",
+      "what should an OTP SMS template look like",
+      "do I need DLT registration for OTP SMS",
+      "OTP SMS vs WhatsApp OTP",
+      "how long should an OTP be valid",
+      "what is the best OTP SMS service in India"
+    ]
+  },
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "how-it-works",
+      "label": "How an OTP Travels"
+    },
+    {
+      "id": "dlt-for-otp",
+      "label": "DLT for OTP"
+    },
+    {
+      "id": "template",
+      "label": "A Good OTP Template"
+    },
+    {
+      "id": "delivery-speed",
+      "label": "Delivery Speed"
+    },
+    {
+      "id": "not-delivered",
+      "label": "Why OTPs Fail"
+    },
+    {
+      "id": "security",
+      "label": "Security Rules"
+    },
+    {
+      "id": "fallback",
+      "label": "Fallback Channels"
+    },
+    {
+      "id": "how-to-choose",
+      "label": "How to Choose"
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>An OTP SMS service in India is only as good as its DLT setup and its delivery route: the code must match a registered transactional template, leave through a priority route and reach the handset before it expires.</strong> Most failed OTPs are not network problems. They are template mismatches, wrong categories or a route shared with marketing traffic."
+        },
+        {
+          "type": "p",
+          "html": "This guide explains how an OTP SMS travels, what to register on DLT, what a good OTP template looks like, what affects delivery speed, why OTPs fail, and how to choose a provider, for startups, SMBs and product teams across India. Ojiva AI runs <a href=\"/sms/\">Bulk SMS and OTP services</a> alongside WhatsApp and RCS on one platform. If you want OTP delivery sized to your login volume, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov02(1).webp",
+          "alt": "OTP SMS service in India showing a one-time code delivered to a phone through a DLT-approved template"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "OTP SMS Service in India: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A reliable OTP SMS setup comes down to six things. Get them right and most delivery problems disappear."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Register on DLT:",
+              "desc": "your entity, a sender ID (header) and an OTP template, with the Template ID sent on every message."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "Use the transactional category:",
+              "desc": "OTPs triggered by a user's own action belong there, and transactional SMS can reach DND numbers."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Use a dedicated route:",
+              "desc": "keep OTPs out of the same queue as campaigns, so a large send never delays a login code."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Secure the code:",
+              "desc": "short expiry, single-use, attempt limits and a resend cooldown."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Add a fallback:",
+              "desc": "WhatsApp or voice for users the SMS does not reach in time."
+            },
+            {
+              "icon": "bi-search",
+              "title": "Choose on evidence:",
+              "desc": "per-message delivery reports with reasons, a test account and an itemised quote."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want OTP SMS with guided DLT filing? Talk to Ojiva AI about <a href=\"/sms/\">Bulk SMS and OTP services</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "how-it-works",
+      "heading": "How an OTP SMS Travels: From Your App to the Handset",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Understanding the path shows you where an OTP can fail. Every step has a check, and a failure at any one blocks the message."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Your app requests a code:",
+              "desc": "the user taps Send OTP, and your system generates a code and an expiry."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Your provider's API sends it:",
+              "desc": "the call carries your entity ID, sender ID and the Template ID of your registered OTP template."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "The operator checks it:",
+              "desc": "scrubbing compares the message with your registered template, header and category, and checks your provider is linked to your entity."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "The operator delivers it:",
+              "desc": "if every check passes, the message goes to the handset."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "A delivery report comes back:",
+              "desc": "your provider reports delivered, failed or rejected, ideally with a reason."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "TRAI explains why these registered paths matter in its <a href=\"https://cms.trai.gov.in/sites/default/files/2024-12/PR_No.92of2024.pdf\" target=\"_blank\" rel=\"noopener\">SMS traceability announcement</a>."
+        }
+      ]
+    },
+    {
+      "id": "dlt-for-otp",
+      "heading": "DLT for OTP SMS: Entity, Sender ID and Template",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "DLT is a TRAI requirement for SMS, and OTPs are covered. Our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">step-by-step DLT guide</a> covers the filing, and our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a> explains who sets the fee. For OTP, four pieces matter."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-building-fill",
+              "title": "Entity registration:",
+              "desc": "your business is registered as a Principal Entity, once, with KYC documents."
+            },
+            {
+              "icon": "bi-card-text",
+              "title": "Sender ID (header):",
+              "desc": "a short header linked to your brand. Operators add a category suffix, such as -T for transactional, automatically from your template category, so you do not type it."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "OTP template, transactional category:",
+              "desc": "Airtel's published <a href=\"https://www.airtel.in/business/commercial-communication/assets/documents/Help_Modules/FAQs%20-%20Enterprise%20Telemarketers%20who%20want%20to%20send%20commercial%20communication-%20v3%20-%2017-09-2020.pdf\" target=\"_blank\" rel=\"noopener\">FAQ</a> defines transactional SMS as communication triggered by a transaction the user started, with a banking OTP as its example."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Typed variable tags:",
+              "desc": "TRAI directed that new templates from 14 January 2026 use typed tags, such as a numeric tag for the code, in place of the old generic tag. Confirm the exact tags on your DLT portal."
+            },
+            {
+              "icon": "bi-hash",
+              "title": "Template ID on every message:",
+              "desc": "each approved template gets an ID that must accompany every SMS you send."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "template",
+      "heading": "What a Good OTP SMS Template Looks Like",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A good OTP template is short, names your brand, and does one job. A typical structure is: the code first, your brand name, a validity period and a do-not-share line. For example: \"[numeric tag] is your OTP for [Brand] login. Valid for [numeric tag] minutes. Do not share it with anyone.\" Use the typed tags your DLT portal requires for the variables."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Code first:",
+              "desc": "put the code where the user sees it in the notification preview."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Brand name in the text:",
+              "desc": "so users recognise who is asking, and so the template meets the registration rules."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "A validity period:",
+              "desc": "tell users how long the code lasts, and match it to your real expiry."
+            },
+            {
+              "icon": "bi-shield-exclamation",
+              "title": "A do-not-share line:",
+              "desc": "a clear reminder reduces social-engineering scams."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "No marketing copy:",
+              "desc": "never put offers or links in an OTP template, because the category and routing differ."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "Autofill needs:",
+              "desc": "if your Android app uses automatic OTP autofill, ask your developers what the message format must include, and make sure your registered template allows it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery-speed",
+      "heading": "What Affects OTP Delivery Speed (and What You Can Control)",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An OTP that arrives after it expires is useless. Some delay sits outside your control, but most of what matters is in your setup."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "A dedicated OTP route:",
+              "desc": "a priority path keeps codes moving even while a campaign is running."
+            },
+            {
+              "icon": "bi-layers-fill",
+              "title": "Separate queues:",
+              "desc": "never send OTPs behind a large promotional batch."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "A matching template:",
+              "desc": "an exact match avoids rejection at scrubbing, which is the most avoidable delay."
+            },
+            {
+              "icon": "bi-broadcast",
+              "title": "Operators and networks:",
+              "desc": "delivery depends on the carrier and the handset's coverage, which you cannot change."
+            },
+            {
+              "icon": "bi-stopwatch-fill",
+              "title": "An expiry based on measured speed:",
+              "desc": "test arrival times on several operators at different hours, then set the expiry from real data."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "A resend cooldown:",
+              "desc": "let users resend after a short wait, and invalidate older codes."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov02(2).webp",
+          "alt": "OTP SMS delivery path from app to operator to handset with a dedicated priority route"
+        }
+      ]
+    },
+    {
+      "id": "not-delivered",
+      "heading": "Why OTP SMS Fails in India: A Troubleshooting List",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "When an OTP does not arrive, check these causes in order. Most are configuration issues you can fix."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-card-text",
+              "title": "Sender ID not approved:",
+              "desc": "the header must be registered and approved before use."
+            },
+            {
+              "icon": "bi-file-earmark-x-fill",
+              "title": "Template mismatch:",
+              "desc": "the text you send must match the registered template exactly, apart from the tagged variables."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "Wrong category or Template ID:",
+              "desc": "an OTP under the wrong category, or with another template's ID, can be blocked."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Provider not linked to your entity:",
+              "desc": "your SMS provider must be bound to your entity so messages can be traced to you."
+            },
+            {
+              "icon": "bi-calendar-x-fill",
+              "title": "Lapsed registration:",
+              "desc": "an expired entity can interrupt sending. Set a renewal reminder."
+            },
+            {
+              "icon": "bi-phone-vibrate-fill",
+              "title": "Handset or network:",
+              "desc": "a phone that is off, out of coverage or roaming may receive the code late."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Always read the per-message delivery report. A good provider shows delivered, failed and rejected statuses with a reason, so you can tell whose problem it is."
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "OTP Security Rules That Apply to Every Channel",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Neither SMS nor any other channel is secure on its own. OTP security comes from how you implement it. SMS OTP is exposed to risks such as SIM swap fraud and message interception, so these rules matter."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Short expiry:",
+              "desc": "keep codes short-lived and single-use."
+            },
+            {
+              "icon": "bi-lock-fill",
+              "title": "Attempt limits:",
+              "desc": "block repeated wrong guesses, and lock the flow after a few failures."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Resend discipline:",
+              "desc": "enforce a cooldown and rate-limit requests per number and per device."
+            },
+            {
+              "icon": "bi-file-earmark-lock-fill",
+              "title": "No OTPs in logs:",
+              "desc": "never write codes to application logs or analytics."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Personal data care:",
+              "desc": "treat mobile numbers as personal data under the DPDP Act, collected for a clear purpose and kept only as long as needed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fallback",
+      "heading": "SMS OTP With WhatsApp or Voice Fallback",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "SMS is the universal baseline because it reaches any phone with network coverage. Many teams add a second channel for users the SMS does not reach in time. A WhatsApp-first flow with SMS fallback works for smartphone audiences, and a voice call can serve users who cannot receive text. Our guide to <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a> compares the two on cost, reach and security."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "WhatsApp first, SMS fallback:",
+              "desc": "send on WhatsApp, track delivery, and fall back to SMS if it is not delivered in time."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "Voice as a safety net:",
+              "desc": "a spoken code can reach users when SMS fails."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "A manual switch:",
+              "desc": "show a visible Send via SMS option so users can switch themselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-to-choose",
+      "heading": "How to Choose an OTP SMS Service Provider in India",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Test the things that fail quietly. A low rate means little if codes are rejected at scrubbing or arrive late."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "ask who handles entity, header and template registration, and how corrections are made."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "A dedicated transactional route:",
+              "desc": "ask how OTP traffic is separated from campaigns."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Per-message delivery reports:",
+              "desc": "delivered, failed and rejected statuses with reasons."
+            },
+            {
+              "icon": "bi-code-slash",
+              "title": "A documented API and webhooks:",
+              "desc": "clear endpoints, error codes and delivery events pushed to your system."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "A time-to-handset test:",
+              "desc": "ask for a trial account, and send codes to several operators at different times."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Reachable support:",
+              "desc": "find out whether a named contact exists before you need one."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Fallback channels on the same account:",
+              "desc": "WhatsApp, RCS and voice without a second vendor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": "OTP SMS Pricing: How to Compare Without Guessing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Per-SMS rates are set by each provider, based on route, volume and category, and there is no official price list. The DLT entity fee goes to the operator, not your provider. Ask every provider for the same things so you can compare like with like."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "An all-in per-OTP rate:",
+              "desc": "for a transactional route, stated with or without GST."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "The DLT fee, separately:",
+              "desc": "the operator's registration fee is paid to the operator."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Service charges:",
+              "desc": "ask whether DLT filing help, reports and API access are included or charged separately."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Fallback costs:",
+              "desc": "ask what you pay when a message falls back to another channel."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own OTP volume beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps With OTP SMS",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Here is how that maps to the checks above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, plus priority handling for OTP traffic."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect login and checkout events through our SMS API so codes send automatically."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "SMS, WhatsApp, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov02(3).webp",
+          "alt": "Ojiva AI dashboard showing OTP SMS delivery reports with failure reasons"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Get the Setup Right, Then Measure",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A dependable OTP flow starts with a clean DLT setup, a transactional template that matches exactly, and a route that keeps codes out of campaign queues. Add security rules, a fallback channel and delivery reports with reasons, and test arrival times before you commit volume."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own login traffic, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your volumes, templates and fallback together. You can also read about our <a href=\"/sms/\">Bulk SMS and OTP services</a>. Choose carefully, and your OTP SMS service in India becomes the quiet part of your product that simply works. Conversations that convert start with a login that works."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            },
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            },
+            {
+              "title": "Best Bulk SMS Service Provider in Hyderabad",
+              "href": "/blogs/best-bulk-sms-service-provider-in-hyderabad/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Do I need DLT registration to send OTP SMS in India?",
+              "a": "<p>Yes. Every business sending SMS in India, OTPs included, must register on a DLT platform: your entity, a sender ID (header) and each message template. The OTP text you send must match a registered template, and the Template ID must go with every message. WhatsApp OTPs do not use DLT, but an SMS fallback does.</p>"
+            },
+            {
+              "q": "Which DLT category does an OTP SMS belong to?",
+              "a": "<p>Transactional. Airtel's published FAQ defines transactional SMS as communication triggered by a transaction the user started, with a banking OTP on a purchase as its example. Register your OTP template in that category, with your brand name and a variable for the code, and keep marketing text out of it.</p>"
+            },
+            {
+              "q": "Can OTP SMS reach numbers on the DND register?",
+              "a": "<p>Transactional SMS, which includes OTPs, can reach numbers on the DND register, unlike promotional SMS. That only holds when the template is registered under the transactional category and the message matches it. If you register an OTP under the wrong category, it may not be delivered as expected.</p>"
+            },
+            {
+              "q": "Why is my OTP SMS not delivered in India?",
+              "a": "<p>Common causes are configuration issues: an unapproved sender ID, message text that does not exactly match the registered template, a wrong category or Template ID, a provider not linked to your entity, or an expired registration. Check your provider's per-message delivery report for the reason before you suspect the operator or the handset.</p>"
+            },
+            {
+              "q": "How fast should an OTP SMS arrive?",
+              "a": "<p>No provider can honestly guarantee a fixed time, because delivery also depends on the operator, the network and the handset. What you control is the route and the setup: use a dedicated OTP route, keep OTPs out of campaign queues, and send test codes to several operators at different times to see real arrival times.</p>"
+            },
+            {
+              "q": "How long should an OTP stay valid?",
+              "a": "<p>Keep it short, and base it on measured delivery. Test how long codes actually take to arrive on your route, then set an expiry that gives users a fair window without leaving a code usable for long. Make each code single-use, limit attempts, and add a resend cooldown.</p>"
+            },
+            {
+              "q": "Is SMS OTP secure enough?",
+              "a": "<p>SMS OTP is exposed to risks such as SIM swap fraud and message interception, so no channel is secure on its own. Security comes from how you implement it: short expiry, single-use codes, attempt limits, rate limiting, no OTPs in logs, and a clear do-not-share line in the message.</p>"
+            },
+            {
+              "q": "Should I use WhatsApp OTP instead of SMS OTP?",
+              "a": "<p>Most businesses use both. SMS reaches any phone with network coverage, while WhatsApp OTP is faster to complete for users on WhatsApp with data. A WhatsApp-first flow with SMS as the fallback suits many startups. Our guide on WhatsApp OTP vs SMS OTP compares cost, reach, security and setup.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
