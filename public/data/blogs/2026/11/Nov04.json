@@ -1,0 +1,489 @@
+{
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "why-whatsapp",
+      "label": "Why WhatsApp API"
+    },
+    {
+      "id": "tamil-templates",
+      "label": "Tamil Templates"
+    },
+    {
+      "id": "industries",
+      "label": "Industries Across Tamil Nadu"
+    },
+    {
+      "id": "festivals",
+      "label": "Festival Seasons"
+    },
+    {
+      "id": "how-to-choose",
+      "label": "How to Choose"
+    },
+    {
+      "id": "cost",
+      "label": "Cost"
+    },
+    {
+      "id": "compliance",
+      "label": "Consent & Compliance"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>The best WhatsApp API service provider in Tamil Nadu is the one that gets your templates approved in Tamil and English, keeps you inside Meta's rules and supports your team when something fails, not simply the one with the lowest rate.</strong> Most teams compare price first, then discover the real differences when a template is rejected, a campaign is held back or nobody picks up the phone."
+        },
+        {
+          "type": "p",
+          "html": "This guide is for businesses across Tamil Nadu, from manufacturers in Chennai and Hosur to textile exporters in Tiruppur, engineering firms in Coimbatore, schools, clinics and retailers. It covers Tamil templates, industry use cases, festival-season planning, compliance, pricing and how to compare providers. Ojiva AI offers the <a href=\"/whatsapp/\">WhatsApp Business API</a> as a Meta Business Partner, alongside <a href=\"/sms/\">Bulk SMS</a> and RCS on one platform. If you want a plan sized to your own messages, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov04(1).webp",
+          "alt": "WhatsApp API service provider for Tamil Nadu businesses sending Tamil and English templates"
+        }
+      ]
+    },
+    {
+      "id": "why-whatsapp",
+      "heading": "Why WhatsApp API Fits Tamil Nadu Businesses",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Tamil Nadu's business base is spread across many cities, not one. Chennai, Coimbatore, Madurai, Tiruchirappalli, Salem, Tirunelveli and Erode are all major markets, and the state's customers and dealers expect to be reached in Tamil as well as English. A WhatsApp number that works for all of them is a practical way to cover the whole state."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Many cities, one channel:",
+              "desc": "one verified business number can serve customers in Chennai and in smaller towns alike, without a regional team for each."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Language that customers use:",
+              "desc": "send Tamil and English messages from the same account, matched to each customer's preference."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Manufacturing and trade networks:",
+              "desc": "dealers, distributors and suppliers get order, dispatch and payment updates in the app they already use."
+            },
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Automation that scales:",
+              "desc": "order events, appointment bookings and payment dues can trigger messages without manual work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tamil-templates",
+      "heading": "Tamil WhatsApp Templates: What to Know Before You Submit",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "To message customers first, you need approved templates, and for a Tamil audience that means Tamil templates. Tamil is on Meta's <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/supported-languages\" target=\"_blank\" rel=\"noopener\">list of supported template languages</a>, so you can create templates in Tamil and send them through the API."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "One language per template:",
+              "desc": "each template is created and reviewed in a single language. Your content should match the language you select, so avoid mixing Tamil and English in one template."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "Separate Tamil and English versions:",
+              "desc": "submit both, then send each customer the language they prefer."
+            },
+            {
+              "icon": "bi-ban",
+              "title": "No automatic translation:",
+              "desc": "Meta does not translate your template for you, so have a fluent speaker review the Tamil text before you submit."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Right category in every language:",
+              "desc": "marketing, utility and authentication rules are the same in Tamil. A wrong category is a common reason for rejection."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "If you also serve customers in neighbouring states, Telugu and Kannada are on the same Meta list. Our guide to <a href=\"/blogs/whatsapp-cloud-api-india/\">the WhatsApp Cloud API in India</a> explains how templates fit into the setup."
+        }
+      ]
+    },
+    {
+      "id": "industries",
+      "heading": "Where WhatsApp API Works Best Across Tamil Nadu",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Tamil Nadu's industry is clustered by city, and each cluster has different messaging needs. Use these examples as a starting point and adapt them to your own customers."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-gear-fill",
+              "title": "Chennai, Hosur and Oragadam: automotive and electronics.",
+              "desc": "dealer order updates, service-appointment reminders, parts dispatch alerts and supplier coordination for component makers."
+            },
+            {
+              "icon": "bi-hospital-fill",
+              "title": "Chennai: healthcare and diagnostics.",
+              "desc": "appointment reminders and report-ready alerts, kept free of sensitive medical detail."
+            },
+            {
+              "icon": "bi-scissors",
+              "title": "Tiruppur, Erode and Karur: knitwear and home textiles.",
+              "desc": "buyer sample status, shipment updates and payment reminders for exporters and suppliers."
+            },
+            {
+              "icon": "bi-tools",
+              "title": "Coimbatore: engineering, pumps and machinery.",
+              "desc": "quotation follow-ups, dealer order status and service requests for B2B sellers."
+            },
+            {
+              "icon": "bi-fire",
+              "title": "Sivakasi: printing, matches and fireworks.",
+              "desc": "a highly seasonal, festival-driven business, so plan templates and opt-in well before peak season."
+            },
+            {
+              "icon": "bi-mortarboard-fill",
+              "title": "Madurai, Salem and Tiruchirappalli: education and retail.",
+              "desc": "admission enquiries, fee reminders, order updates and festive offers for opted-in customers."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov04(2).webp",
+          "alt": "WhatsApp API use cases across Tamil Nadu industries including automotive, textiles and engineering"
+        }
+      ]
+    },
+    {
+      "id": "festivals",
+      "heading": "Festival Seasons in Tamil Nadu: Plan Campaigns Without Risking Your Number",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Pongal, Tamil New Year and Deepavali are big selling moments across the state, and they are also when brands send the most WhatsApp messages. That is exactly when mistakes cost the most. Plan early and respect the rules."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-calendar-event-fill",
+              "title": "Submit templates early:",
+              "desc": "festival offers need approved marketing templates, so do not leave approval to the last week."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Build your opt-in list first:",
+              "desc": "message only customers who agreed to hear from you, with your business name and message types stated."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Segment by interest:",
+              "desc": "send each offer to the customers likely to want it, not the whole list."
+            },
+            {
+              "icon": "bi-speedometer2",
+              "title": "Pace your sends:",
+              "desc": "Meta can limit how many marketing messages one person receives from all businesses, so do not send the same customer several offers in a day."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Plan an SMS fallback:",
+              "desc": "customers who cannot receive WhatsApp still get the offer."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Our guide to <a href=\"/blogs/send-bulk-whatsapp-messages-india/\">sending bulk WhatsApp messages in India without getting blocked</a> covers opt-in, templates and limits in detail."
+        }
+      ]
+    },
+    {
+      "id": "how-to-choose",
+      "heading": "How to Choose a WhatsApp API Service Provider in Tamil Nadu",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Test the things that fail quietly. A low rate means little if templates are rejected, messages are held back or support is slow. Whether your team sends from a dashboard or needs the API to fire from your own system, ask every provider the same questions."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Official Meta access:",
+              "desc": "confirm the provider is a Meta partner, so your number and templates are handled through the official platform."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Tamil template support:",
+              "desc": "ask who writes, reviews and resubmits Tamil templates, and how rejections are handled."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery reports with reasons:",
+              "desc": "delivered, failed and read statuses for each message, so you can tell whose fault a failure is."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Itemised pricing:",
+              "desc": "ask for Meta's charges and the provider's own fees listed separately, with or without GST."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support you can reach:",
+              "desc": "check support hours, channels and whether you get a named contact."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Channels beyond WhatsApp:",
+              "desc": "ask whether SMS, RCS and voice run on the same account, so you can fall back without a second vendor."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Consent and data handling:",
+              "desc": "ask how opt-ins are recorded and how personal data is protected under the DPDP Act."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "heading": "WhatsApp API Cost in Tamil Nadu: What Meta Charges and What Providers Add",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta bills per delivered template message, based on the message category and the recipient's country, so the rate is the same in Tamil Nadu as in the rest of India. We do not quote rates here, because Meta revises them and your invoice must match the current rate card. Check <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's official pricing page</a> before you plan volumes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "Meta's charge:",
+              "desc": "marketing, utility and authentication templates are billed per delivered message by category."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Provider charges:",
+              "desc": "ask whether platform fees, onboarding, support and reports are included or billed separately."
+            },
+            {
+              "icon": "bi-percent",
+              "title": "GST:",
+              "desc": "check whether quotes include GST, so you can compare offers on the same basis."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "SMS fallback:",
+              "desc": "if you add an SMS fallback, ask what you pay when a message falls back."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own message volumes beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "heading": "Consent and Compliance: What Applies to WhatsApp",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "WhatsApp has its own rules, separate from SMS. Meta's policy requires opt-in before you message customers first, and the DPDP Act points the same way, with clear consent, a stated purpose and easy withdrawal."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-journal-check",
+              "title": "Opt-in:",
+              "desc": "collect it outside WhatsApp, name your business, say what types of messages customers will get and let them opt out."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "Use the official platform:",
+              "desc": "WhatsApp's FAQ says its apps are not intended for bulk or automated messaging, so use the API, not unofficial tools."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "DLT applies to SMS only:",
+              "desc": "if you add an SMS fallback, that SMS needs your DLT entity, sender ID and approved template. See our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a>."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "This is practical guidance rather than legal advice, so check your own obligations with a qualified professional."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "Why Tamil Nadu Businesses Choose Ojiva AI for the WhatsApp API",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering the WhatsApp Business API, Bulk SMS, RCS, AI voice and OTP on one platform. Onboarding and support are delivered online, so they work the same for a team in Chennai or Coimbatore as anywhere else in India. Here is how the platform maps to the checks above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Official Meta access:",
+              "desc": "the WhatsApp Business API through a Meta Business Partner."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "WhatsApp, SMS, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events, forms and CRM stages so messages fire automatically."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Quotes sized to your volumes:",
+              "desc": "share your monthly volumes by message category, and we size the plan together on a demo call."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov04(3).webp",
+          "alt": "Ojiva AI WhatsApp API dashboard serving businesses in Chennai, Coimbatore and across Tamil Nadu"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Choose on Approvals, Reports and Support",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Choosing a WhatsApp API service provider in Tamil Nadu gets simpler once you stop comparing headline rates and start comparing outcomes. Can the provider get Tamil and English templates approved, keep you within Meta's rules, prove delivery with reports and answer when it matters? Add clean opt-in and early festival planning, and the decision largely makes itself."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own business, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your templates, volumes and fallback channels together. You can also read about our <a href=\"/whatsapp/\">WhatsApp Business API</a> and <a href=\"/sms/\">Bulk SMS</a> services. Weigh these points honestly, and the right WhatsApp API service provider in Tamil Nadu is the one that keeps your messages approved, delivered and trusted. Conversations that convert start with messages customers agreed to receive."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+              "href": "/blogs/whatsapp-cloud-api-india/"
+            },
+            {
+              "title": "How to Send Bulk WhatsApp Messages in India Without Getting Blocked",
+              "href": "/blogs/send-bulk-whatsapp-messages-india/"
+            },
+            {
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
+            },
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How do I choose the best WhatsApp API service provider in Tamil Nadu?",
+              "a": "<p>Look past the rate. Check that the provider is an official Meta partner, helps you get templates approved in both Tamil and English, shows per-message delivery reports with reasons, itemises Meta's charges and its own, and has support you can reach. Run a small test campaign before you commit volume.</p>"
+            },
+            {
+              "q": "Can I send WhatsApp templates in Tamil?",
+              "a": "<p>Yes. Tamil is on Meta's list of supported template languages. Each template is created and reviewed in a single language, and Meta does not translate it for you, so submit separate Tamil and English versions and send each customer the language they prefer.</p>"
+            },
+            {
+              "q": "Do I need a WhatsApp API provider based in Tamil Nadu?",
+              "a": "<p>No. The WhatsApp Business Platform is accessed online, and onboarding, templates and support do not depend on where your provider's office is. What matters is official Meta access, template support in your language, reliable reports and a team you can reach during your business hours.</p>"
+            },
+            {
+              "q": "Does the WhatsApp API cost more in Tamil Nadu than elsewhere in India?",
+              "a": "<p>No. Meta bills per delivered message by message category and the recipient's country, not by state. Check Meta's official pricing page for current rates, and ask any provider for an itemised quote that separates Meta's charges from platform fees and says whether GST is included.</p>"
+            },
+            {
+              "q": "Can manufacturers and exporters use the WhatsApp API for dealers and buyers?",
+              "a": "<p>Yes, for opted-in contacts. Typical uses include order and dispatch updates, payment reminders, quotation follow-ups and sample or shipment status. Use utility templates for transactions and marketing templates only for promotions, and keep a clear way for contacts to opt out.</p>"
+            },
+            {
+              "q": "How should I plan WhatsApp campaigns around Pongal and Deepavali?",
+              "a": "<p>Submit your templates well before the season so approval is not a bottleneck, build your opt-in list early, segment by customer interest, and pace your sends. Meta can limit how many marketing messages one person receives from all businesses, so avoid sending the same customer several offers a day.</p>"
+            },
+            {
+              "q": "Does the WhatsApp API need DLT registration?",
+              "a": "<p>No. DLT registration under TRAI's rules applies to SMS. WhatsApp follows Meta's template approval and opt-in policies. If you add an SMS fallback, that SMS still needs your DLT entity, sender ID and approved template.</p>"
+            },
+            {
+              "q": "Is bulk WhatsApp messaging allowed in India?",
+              "a": "<p>Sending through the official WhatsApp Business Platform to customers who opted in is permitted by WhatsApp's policy. WhatsApp's own FAQ says its apps are not meant for bulk or automated messaging. You must also follow Indian law, including the DPDP Act's principles. This is practical guidance rather than legal advice.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
