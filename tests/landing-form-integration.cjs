@@ -11,49 +11,66 @@ function compile(file) {
     fileName: 'component.jsx', compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
   }).outputText;
 }
-const qualityModule = { exports: {} };
-vm.runInNewContext(compile('lib/leadQuality.js'), { exports: qualityModule.exports, module: qualityModule });
+// Real phone normaliser from lib/sms.js; sendLeadSms itself is mocked below.
+const smsModule = { exports: {} };
+vm.runInNewContext(compile('lib/sms.js'), { exports: smsModule.exports, module: smsModule, require: () => ({ SMS_ENDPOINT: 'https://mock.invalid/sms' }) });
 const componentCode = compile('components/landing/LandingLeadForm.js');
-const valid = { name: 'Maya Rao', phone: '9876543210', email: 'MAYA@EXAMPLE.COM', company: 'Example Business', service: 'whatsapp-api', message: 'Please show us customer follow-up workflows.', agree: true };
+// TeleCRM moved to a shared module (lib/telecrm.js, Oct 2026). Run the real
+// module against the same mocked fetch so the CRM payload is still checked.
+const telecrmCode = compile('lib/telecrm.js');
+const valid = { name: 'Maya Rao', phone: '9876543210', email: 'MAYA@EXAMPLE.COM', company: 'Example Business', service: 'whatsapp-api', message: 'Please show us customer follow-up workflows.' };
 function findForm(node) {
   if (!node || typeof node !== 'object') return null;
   if (node.type === 'form') return node;
   return [node.props?.children].flat(Infinity).map(findForm).find(Boolean);
 }
-async function submit({ email = valid.email, compact = true, fail = false, sms = false, rcs = false, website = false, smsService = 'transactional', volume = '5000-25000' } = {}) {
+async function submit({ email = valid.email, phone = valid.phone, name = valid.name, company = valid.company, compact = true, fail = false, sms = false, rcs = false, website = false, smsService = 'transactional', volume = '5000-25000' } = {}) {
   const calls = [], updates = [];
   let stateIndex = 0;
   const react = { useEffect() {}, useId: () => 'test-form', useCallback: fn => fn, useRef: value => ({ current: value }),
-    useState: initial => { const index = stateIndex++; return [initial && typeof initial === 'object' && 'email' in initial ? { ...valid, email, ...(sms || rcs || website ? { service: smsService } : {}) } : sms && index === 3 ? volume : initial, value => updates.push(value)]; } };
+    useState: initial => { const index = stateIndex++; return [initial && typeof initial === 'object' && 'email' in initial ? { ...valid, email, phone, name, company, ...(sms || rcs || website ? { service: smsService } : {}) } : sms && index === 3 ? volume : initial, value => updates.push(value)]; } };
   const imports = {
     react,
     'next/navigation': { useRouter: () => ({ push: url => calls.push({ kind: 'redirect', url }) }) },
     '@/lib/formConfig': { WEB3_ACCESS_KEY: 'mock-key', MAKE_HOOK_LANDING: 'https://mock.invalid/make', THANK_YOU_LANDING: '/whatsapp-api-service/thank-you', TEST_MODE_SMS_ONLY: false },
     // Welcome SMS (added Sep 2026): mocked, never sends.
-    '@/lib/sms': { sendLeadSms: async ({ phone }) => { calls.push({ kind: 'sms', phone }); return { ok: true, mobile: `91${phone}` }; } },
-    '@/lib/leadQuality': qualityModule.exports,
+    '@/lib/sms': { normalizeIndianMobile: smsModule.exports.normalizeIndianMobile, sendLeadSms: async ({ phone }) => { calls.push({ kind: 'sms', phone }); return { ok: true, mobile: `91${phone}` }; } },
+    '@/lib/formTracking': { trackFormError: (form, fields) => calls.push({ kind: 'formError', form, fields }) },
     '@/lib/attribution': { getAttribution: () => ({ utm_source: 'google', utm_medium: 'cpc', utm_campaign: 'wa-demo', gclid: 'mock-click', _first_landing_url: 'https://example.com/whatsapp-api-service/' }), fireOpenAiLeadCreated: () => calls.push({ kind: 'conversion' }) },
   };
-  const componentModule = { exports: {} };
-  vm.runInNewContext(componentCode, { exports: componentModule.exports, module: componentModule, require: name => imports[name] || require(name),
+  const globals = {
     console: { log() {}, warn() {}, error() {} }, AbortSignal,
     fetch: async (url, options) => {
       const kind = url.includes('telecrm') ? 'crm' : url.includes('web3forms') ? 'web3' : 'make';
       calls.push({ kind, payload: JSON.parse(options.body) });
       return { ok: !fail, json: async () => ({ success: !fail }), text: async () => 'mock' };
     },
-  });
+  };
+  const telecrmModule = { exports: {} };
+  vm.runInNewContext(telecrmCode, { exports: telecrmModule.exports, module: telecrmModule, ...globals });
+  imports['@/lib/telecrm'] = telecrmModule.exports;
+  const componentModule = { exports: {} };
+  vm.runInNewContext(componentCode, { exports: componentModule.exports, module: componentModule, require: name => imports[name] || require(name), ...globals });
   const form = findForm(componentModule.exports.default({ compact, source: sms ? 'bulk-sms' : rcs ? 'rcs-messaging' : website ? 'website-development' : 'whatsapp-api-service', ...(rcs ? {thankYouUrl:'/thank-you'} : {}), ...(sms ? { thankYouUrl: '/thank-you', volumeOptions: [{value:'',label:'Select'},{value:'5000-25000',label:'5,000 – 25,000'}] } : {}) }));
   assert.ok(form, 'Submission handler must be reachable');
   await form.props.onSubmit({ preventDefault() {} });
   return { calls, updates };
 }
+const outbound = calls => calls.filter(c => c.kind !== 'formError');
 (async () => {
   for (const compact of [true, false]) {
-    for (const email of ['', 'invalid-email']) {
-      const { calls } = await submit({ compact, email });
-      assert.equal(calls.length, 0, 'Missing or invalid email must block every outbound integration');
+    for (const { field, ...opts } of [{ field: 'email', email: 'invalid-email' }, { field: 'phone', phone: '12345' }, { field: 'phone', phone: '' }, { field: 'name', name: '' }]) {
+      const { calls } = await submit({ compact, ...opts });
+      assert.equal(outbound(calls).length, 0, `Invalid ${field} must block every outbound integration`);
+      assert.ok(calls.find(c => c.kind === 'formError')?.fields.includes(field), `Invalid ${field} must be reported to GA4`);
     }
+    for (const phone of ['+91 98765 43210', '+919876543210', '09876543210', '98765-43210']) {
+      const { calls } = await submit({ compact, phone });
+      for (const kind of ['web3', 'make']) assert.equal(calls.find(c => c.kind === kind).payload.phone, '9876543210', `${phone} must be accepted and sent as 10 digits`);
+      assert.equal(calls.find(c => c.kind === 'crm').payload.fields.phone, '9876543210');
+    }
+    const minimal = await submit({ compact, email: '', company: '' });
+    for (const kind of ['sms', 'crm', 'web3', 'make', 'conversion', 'redirect']) assert.equal(minimal.calls.filter(c => c.kind === kind).length, 1, `Name + mobile + service alone must submit (${kind})`);
     const { calls } = await submit({ compact });
     for (const kind of ['sms', 'crm', 'web3', 'make', 'conversion', 'redirect']) assert.equal(calls.filter(c => c.kind === kind).length, 1, `${kind} must remain connected`);
     const crm = calls.find(c => c.kind === 'crm').payload.fields;
@@ -70,7 +87,9 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
     assert.equal(calls.find(c => c.kind === 'redirect').url, '/whatsapp-api-service/thank-you');
   }
   for (const compact of [true, false]) {
-    for (const options of [{email:''}, {volume:''}]) assert.equal((await submit({sms:true,compact,...options})).calls.length,0,'SMS email and volume must block incomplete submissions');
+    const noVolume = await submit({sms:true,compact,volume:'',email:''});
+    for (const kind of ['crm','web3','make','redirect']) assert.equal(noVolume.calls.filter(c=>c.kind===kind).length,1,'SMS volume and email are optional');
+    assert.equal('monthly_volume' in noVolume.calls.find(c=>c.kind==='make').payload, false);
     const { calls } = await submit({sms:true,compact});
     for (const kind of ['crm','web3','make','conversion','redirect']) assert.equal(calls.filter(c=>c.kind===kind).length,1);
     for (const kind of ['web3','make']) { const payload=calls.find(c=>c.kind===kind).payload; assert.equal(payload.monthly_volume,'5000-25000'); assert.equal(payload.email,'maya@example.com'); assert.equal(payload.source,'bulk-sms'); assert.equal(payload.service,'transactional'); }
@@ -83,7 +102,7 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
     assert.equal(calls.find(c => c.kind === 'crm').payload.fields.service, smsService);
   }
   for (const smsService of ['rcs-bulk','rcs-chatbot','rcs-chatbot-combo','rcs-api','other']) {
-    assert.equal((await submit({rcs:true,smsService,email:''})).calls.length,0);
+    assert.equal(outbound((await submit({rcs:true,smsService,email:'invalid-email'})).calls).length,0);
     const {calls} = await submit({rcs:true,smsService});
     for (const kind of ['web3','make']) {
       const payload = calls.find(c=>c.kind===kind).payload;
@@ -93,7 +112,7 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
     assert.equal(calls.find(c=>c.kind==='redirect').url,'/thank-you');
   }
   for (const websiteService of ['new-website','website-redesign','landing-page','ecommerce-website','web-application','other']) {
-    assert.equal((await submit({website:true, smsService:websiteService, email:''})).calls.length,0);
+    assert.equal(outbound((await submit({website:true, smsService:websiteService, email:'invalid-email'})).calls).length,0);
     const {calls} = await submit({website:true, smsService:websiteService});
     for (const kind of ['web3','make']) {
       const payload = calls.find(c=>c.kind===kind).payload;
@@ -106,5 +125,5 @@ async function submit({ email = valid.email, compact = true, fail = false, sms =
   const failed = await submit({ fail: true });
   assert.equal(failed.calls.filter(c => c.kind === 'redirect' || c.kind === 'conversion').length, 0, 'Failed compact submission must not claim success');
   assert.ok(failed.updates.includes('Something went wrong. Please try again or call us.'));
-  console.log('PASS: required email and SMS volume, valid WhatsApp/SMS/RCS/website payloads, all 4 integrations, attribution, redirect, conversion and failure handling. All network calls mocked.');
+  console.log('PASS: basic validation (name + mobile + service; email checked only if typed; +91/0 mobiles accepted; GA4 error events), valid WhatsApp/SMS/RCS/website payloads, all 4 integrations, attribution, redirect, conversion and failure handling. All network calls mocked.');
 })().catch(error => { console.error(error.message); process.exitCode = 1; });

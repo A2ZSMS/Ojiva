@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
-import { validateLead } from '@/lib/leadQuality';
-import { sendLeadSms } from '@/lib/sms';
+import { sendLeadSms, normalizeIndianMobile } from '@/lib/sms';
+import { trackFormError } from '@/lib/formTracking';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
@@ -78,22 +78,14 @@ function TicketForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // ── Client-side validation ──
-    if (form.name.trim().length < 2) { setErrorMsg('Please enter your full name (at least 2 characters).'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
-    if (!/^[6-9][0-9]{9}$/.test(form.phone)) { setErrorMsg('Please enter a valid 10-digit Indian mobile number.'); return; }
-    if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
-    if (!form.subject.trim()) { setErrorMsg('Please add a subject.'); return; }
-    if (!form.message.trim()) { setErrorMsg('Please describe your issue.'); return; }
-
-    const check = validateLead({
-      name: form.name, email: form.email, company: form.company, message: form.message,
-    });
-    if (!check.ok) {
-      console.warn('[LeadQuality] rejected:', check.reason);
-      setErrorMsg(check.reason);
-      return;
-    }
+    // ── Basic validation only (company is optional) ──
+    const phone = normalizeIndianMobile(form.phone);
+    const fail = (field, msg) => { trackFormError('support-page', [field]); setErrorMsg(msg); };
+    if (form.name.trim().length < 2) return fail('name', 'Please enter your name.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) return fail('email', 'Please enter a valid email address.');
+    if (!phone) return fail('phone', 'Please enter a 10-digit mobile number.');
+    if (!form.subject.trim()) return fail('subject', 'Please add a subject.');
+    if (!form.message.trim()) return fail('message', 'Please describe your issue.');
 
     setErrorMsg('');
     setLoading(true);
@@ -105,7 +97,7 @@ function TicketForm() {
       redirect:   'false',
       name:       form.name,
       email:      form.email,
-      phone:      form.phone,
+      phone,
       company:    form.company,
       subject_detail: form.subject,
       priority:   form.priority,
@@ -122,7 +114,7 @@ function TicketForm() {
         // 20s if the gateway was slow, which lost real leads when users
         // tabbed away before the lead pipeline started. keepalive:true
         // on the fetch keeps it alive across the /thank-you redirect.
-        const smsPromise = sendLeadSms({ name: form.name, phone: form.phone });
+        const smsPromise = sendLeadSms({ name: form.name, phone });
         smsPromise.then(r => { if (!r.ok) console.warn('[SMS] not sent:', r.error); });
         if (TEST_MODE_SMS_ONLY) {
           const smsResult = await smsPromise;
@@ -139,7 +131,7 @@ function TicketForm() {
         }
         fireTeleCRM({
           name:        form.name,
-          phone:       form.phone,
+          phone,
           email:       form.email,
           company:     form.company,
           service:     `Support Ticket [${form.priority.toUpperCase()}]`,
@@ -218,12 +210,12 @@ function TicketForm() {
       </div>
       <div className="sp-form-row">
         <div className="sp-form-group">
-          <label className="sp-form-label">Phone Number *</label>
-          <input className="sp-form-input" type="tel" placeholder="10-digit mobile number" value={form.phone} onChange={e => set('phone', e.target.value.replace(/\D/g, '').slice(0, 10))} required maxLength={10} inputMode="numeric" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" autoComplete="tel" />
+          <label className="sp-form-label">Mobile Number *</label>
+          <input className="sp-form-input" type="tel" placeholder="10-digit mobile number" value={form.phone} onChange={e => set('phone', e.target.value)} required inputMode="tel" autoComplete="tel" />
         </div>
         <div className="sp-form-group">
-          <label className="sp-form-label">Company Name *</label>
-          <input className="sp-form-input" placeholder="Your company" value={form.company} onChange={e => set('company', e.target.value)} required autoComplete="organization" />
+          <label className="sp-form-label">Company Name (optional)</label>
+          <input className="sp-form-input" placeholder="Your company" value={form.company} onChange={e => set('company', e.target.value)} autoComplete="organization" />
         </div>
       </div>
       <div className="sp-form-row">

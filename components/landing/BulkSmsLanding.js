@@ -6,7 +6,7 @@ import LandingLeadForm from './LandingLeadForm';
 import SupportChat from './whatsapp-api/SupportChat';
 import MobileEnquiryBar from './whatsapp-api/MobileEnquiryBar';
 import SmsExamples from './bulk-sms/SmsExamples';
-import { TrustStrip, Testimonials, WhatsAppButton } from './LandingTrust';
+import { TrustStrip, Testimonials } from './LandingTrust';
 import { SMS_TYPE_OPTIONS, VOLUME_OPTIONS, SMS_FAQS } from './bulk-sms/data';
 import base from './whatsapp-api/WhatsAppLanding.module.css';
 import styles from './bulk-sms/BulkSmsLanding.module.css';
@@ -16,7 +16,6 @@ export default function BulkSmsLanding() {
     <header className={base.header}><div className={base.headerInner}>
       <a href="#sms-top" aria-label="Ojiva AI, back to top"><Image src="/ojiva-logo-optimized.webp" alt="Ojiva AI" width={112} height={33} priority /></a>
       <nav aria-label="SMS landing page navigation"><a href="#sms-examples">Explore SMS types</a><a href="#sms-setup">Setup & pricing</a></nav>
-      <WhatsAppButton variant="header" source="bulk-sms" message="Hi, I'd like a demo and pricing for bulk SMS." />
       <a href="#lead-form" className={base.headerCta}>Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a>
     </div></header>
     <section className={`${base.hero} ${styles.hero}`} aria-labelledby="sms-title"><div className={`${base.heroGrid} ${styles.heroGrid}`}>
@@ -60,6 +59,5 @@ export default function BulkSmsLanding() {
     <section className={`${base.finalSection} ${styles.finalSection}`}><div><span className={base.eyebrow}>LET’S MAKE YOUR NEXT MESSAGE USEFUL.</span><h2>Know your SMS options before you start.</h2><p>Share your use case and volume. Get service guidance and a clear quote.</p></div><a href="#lead-form" className={base.primaryCta}>Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a></section>
     <footer className={base.footer}><div><Image src="/ojiva-logo-optimized.webp" alt="Ojiva AI" width={94} height={28} loading="lazy" /><span>© {new Date().getFullYear()} Ojiva AI</span></div><nav aria-label="Contact and legal"><a href="tel:+918431086185"><LuPhone aria-hidden="true" /> Talk to our team</a><SupportChat /><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></footer>
     <MobileEnquiryBar label="Book a Free Demo ↗" />
-    <WhatsAppButton source="bulk-sms" message="Hi, I'd like a demo and pricing for bulk SMS." />
   </div>;
 }

@@ -9909,46 +9909,6 @@ input:focus, textarea:focus, select:focus {
   color: #374151;
   line-height: 1.55;
 }
-/* WhatsApp instant chat box */
-.ty-wa-box {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.75rem;
-  text-align: left;
-}
-.ty-wa-text { flex: 1; }
-.ty-wa-title {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 0.2rem;
-}
-.ty-wa-desc {
-  font-size: 0.78rem;
-  color: #374151;
-  margin: 0;
-}
-.ty-wa-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: #25d366;
-  color: #0a2e1b;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: opacity 0.2s;
-}
-.ty-wa-btn:hover { opacity: 0.88; color: #0a2e1b; }
 
 /* Explore label */
 .ty-explore-label {
@@ -9996,8 +9956,6 @@ input:focus, textarea:focus, select:focus {
 
 @media (max-width: 640px) {
   .ty-card { padding: 2rem 1.1rem; }
-  .ty-wa-box { flex-wrap: wrap; }
-  .ty-wa-btn { width: 100%; justify-content: center; }
 }
 
 /* ══ RESPONSIVE ══ */
@@ -11239,6 +11197,13 @@ input:focus, textarea:focus, select:focus {
   color: #374151;
 }
 .llf-req { color: #ef4444; }
+.llf-opt { color: #94a3b8; font-weight: 400; }
+
+/* Lead popup (components/ui/lead-popup): Intercom's bubble would cover the
+   popup's submit button, so it is hidden while the popup is open. */
+body.ojv-popup-open .intercom-lightweight-app,
+body.ojv-popup-open .intercom-launcher-frame,
+body.ojv-popup-open .intercom-lightweight-app-launcher { display: none !important; }
 .llf-err {
   font-size: 0.68rem;
   color: #ef4444;

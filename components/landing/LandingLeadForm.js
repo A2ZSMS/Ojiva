@@ -3,8 +3,8 @@
 import { useState, useCallback, useEffect, useId, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { WEB3_ACCESS_KEY, MAKE_HOOK_LANDING, THANK_YOU_LANDING, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
-import { validateLead } from '@/lib/leadQuality';
-import { sendLeadSms } from '@/lib/sms';
+import { sendLeadSms, normalizeIndianMobile } from '@/lib/sms';
+import { trackFormError } from '@/lib/formTracking';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 import { fireTeleCRM } from '@/lib/telecrm';
 
@@ -31,18 +31,14 @@ const ACTIVITY = [
 ];
 
 /* ─── Validators ───────────────────────────────────────────── */
+// Basic checks only: every extra rule here costs real leads. Name, mobile
+// and service are required; email is checked only when typed. The mobile
+// accepts +91 / 0 / spaces and is stored as 10 digits.
 const RULES = {
-  name:    v => !v.trim()  ? 'Required.' : v.trim().length < 2 ? 'Enter full name.' : '',
-  email:   v => !v.trim()  ? 'Required.' : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? 'Invalid email.' : '',
-  phone:   v => {
-    const d = v.replace(/[\s\-().+]/g, '');
-    if (!d)                           return 'Required.';
-    if (!/^[6-9][0-9]{9}$/.test(d)) return 'Enter 10-digit Indian mobile.';
-    return '';
-  },
-  company: v => !v.trim()  ? 'Required.' : v.trim().length < 2 ? 'Enter company name.' : '',
+  name:    v => !v.trim()  ? 'Required.' : v.trim().length < 2 ? 'Enter your name.' : '',
+  email:   v => v.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? 'Check your email, or leave it blank.' : '',
+  phone:   v => !v.trim()  ? 'Required.' : !normalizeIndianMobile(v) ? 'Enter a 10-digit mobile number.' : '',
   service: v => !v         ? 'Please select a service.' : '',
-  agree:   v => !v         ? 'Please agree to continue.' : '',
 };
 
 function validateAll(f) {
@@ -51,8 +47,8 @@ function validateAll(f) {
   return e;
 }
 
-const REQUIRED  = ['name', 'email', 'phone', 'company', 'service'];
-const EMPTY_ERR = { name:'', email:'', phone:'', company:'', service:'', agree:'' };
+const REQUIRED  = ['name', 'phone', 'service'];
+const EMPTY_ERR = { name:'', email:'', phone:'', service:'' };
 
 /* ─── Countdown ─────────────────────────────────────────────── */
 function useCountdown(enabled = true) {
@@ -129,10 +125,8 @@ export default function LandingLeadForm({
   const inFlight = useRef(false);
   const fieldError = useCallback((key, value) => RULES[key](value), []);
 
-  const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'', agree:false });
+  const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'' });
   const [volume,       setVolume]       = useState('');
-  const [volumeErr,    setVolumeErr]    = useState('');
-  const [volumeTouched, setVolumeTouched] = useState(false);
   const [errors,       setErrors]       = useState(EMPTY_ERR);
   const [touched,      setTouched]      = useState({});
   const [submitting,   setSubmitting]   = useState(false);
@@ -143,7 +137,7 @@ export default function LandingLeadForm({
   );
 
   const handleChange = useCallback((k) => (e) => {
-    const val = k === 'agree' ? e.target.checked : e.target.value;
+    const val = e.target.value;
     setForm(p => ({ ...p, [k]: val }));
     if (touched[k] && RULES[k]) setErrors(p => ({ ...p, [k]: fieldError(k, val) }));
   }, [touched, fieldError]);
@@ -156,37 +150,17 @@ export default function LandingLeadForm({
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (inFlight.current) return;
-    setTouched({ name:true, email:true, phone:true, company:true, service:true, agree:true });
+    setTouched({ name:true, email:true, phone:true, service:true });
     const errs = validateAll(form);
     setErrors(errs);
 
-    /* ── Volume dropdown validation (only when volumeOptions provided) ── */
-    let volErr = '';
-    if (volumeOptions) {
-      setVolumeTouched(true);
-      if (!volume) volErr = 'Please select monthly volume.';
-      setVolumeErr(volErr);
-    }
-
-    if (Object.values(errs).some(Boolean) || volErr) {
+    const failed = Object.keys(errs).filter(key => errs[key]);
+    if (failed.length) {
+      trackFormError(source, failed);
       if (compact) {
-        const firstError = Object.keys(errs).find(key => errs[key]) || (volErr ? 'monthly_volume' : undefined);
-        const input = formRef.current?.elements.namedItem(firstError);
-        if (input) {
-          const details = input.closest('details');
-          if (details) details.open = true;
-          input.focus();
-        }
+        const input = formRef.current?.elements.namedItem(failed[0]);
+        if (input) input.focus();
       }
-      return;
-    }
-
-    const check = validateLead({
-      name: form.name, email: form.email, company: form.company, message: form.message,
-    });
-    if (!check.ok) {
-      console.warn('[LeadQuality] rejected:', check.reason);
-      setApiError(check.reason);
       return;
     }
 
@@ -196,11 +170,11 @@ export default function LandingLeadForm({
     const payload = {
       name:    form.name.trim(),
       email:   form.email.trim().toLowerCase(),
-      phone:   form.phone.trim(),
+      phone:   normalizeIndianMobile(form.phone),
       company: form.company.trim(),
       service: form.service,
       message: form.message.trim(),
-      ...(volumeOptions ? { monthly_volume: volume } : {}),
+      ...(volumeOptions && volume ? { monthly_volume: volume } : {}),
       source,
       submitted_at: new Date().toISOString(),
     };
@@ -276,11 +250,12 @@ export default function LandingLeadForm({
   const isOk  = k => !!touched[k] && !errors[k] && !!form[k];
 
   if (compact) {
-    const input = (key, label, type, placeholder, autoComplete) => (
+    const input = (key, label, type, placeholder, autoComplete, required = true) => (
       <div className="wa-field">
-        <label htmlFor={`${formId}-${key}`}>{label}<span aria-hidden="true"> *</span></label>
+        <label htmlFor={`${formId}-${key}`}>{label}<span aria-hidden="true">{required ? ' *' : ' (optional)'}</span></label>
         <input id={`${formId}-${key}`} name={key} type={type} placeholder={placeholder}
-          autoComplete={autoComplete} required disabled={submitting}
+          autoComplete={autoComplete} required={required} disabled={submitting}
+          {...(type === 'tel' ? { inputMode: 'tel' } : {})}
           value={form[key]} onChange={handleChange(key)} onBlur={handleBlur(key)}
           aria-invalid={isErr(key)} aria-describedby={isErr(key) ? `${formId}-${key}-error` : undefined} />
         {isErr(key) && <span id={`${formId}-${key}-error`} className="wa-error">{errors[key]}</span>}
@@ -291,11 +266,11 @@ export default function LandingLeadForm({
         <div className="wa-form-intro"><span>{introLabel}</span><h2>{title}</h2><p>{subtitle}</p></div>
         <div className="wa-field-row">
           {input('name', 'Your name', 'text', 'Full name', 'name')}
-          {input('phone', 'Business phone', 'tel', '10-digit mobile number', 'tel-national')}
+          {input('phone', 'Mobile number', 'tel', '10-digit mobile number', 'tel')}
         </div>
         <div className={volumeOptions ? 'wa-field-row' : 'wa-field-stack'}>
-          {input('email', 'Email address', 'email', 'you@company.com', 'email')}
-          {input('company', 'Company name', 'text', 'Your business name', 'organization')}
+          {input('email', 'Email address', 'email', 'you@company.com', 'email', false)}
+          {input('company', 'Company name', 'text', 'Your business name', 'organization', false)}
         </div>
         <div className={volumeOptions ? 'wa-field-row' : undefined}>
         <div className="wa-field"><label htmlFor={`${formId}-service`}>{serviceLabel} <span aria-hidden="true">*</span></label>
@@ -304,18 +279,17 @@ export default function LandingLeadForm({
           </select>
           {isErr('service') && <span id={`${formId}-service-error`} className="wa-error">{errors.service}</span>}
         </div>
-        {volumeOptions && <div className="wa-field"><label htmlFor={`${formId}-volume`}>{volumeLabel} <span aria-hidden="true">*</span></label>
-          <select id={`${formId}-volume`} name="monthly_volume" required disabled={submitting} value={volume} onChange={event => { setVolume(event.target.value); if (volumeTouched) setVolumeErr(event.target.value ? '' : 'Please select monthly volume.'); }} onBlur={() => { setVolumeTouched(true); setVolumeErr(volume ? '' : 'Please select monthly volume.'); }} aria-invalid={volumeTouched && !!volumeErr} aria-describedby={volumeTouched && volumeErr ? `${formId}-volume-error` : undefined}>
+        {volumeOptions && <div className="wa-field"><label htmlFor={`${formId}-volume`}>{volumeLabel} <span aria-hidden="true">(optional)</span></label>
+          <select id={`${formId}-volume`} name="monthly_volume" disabled={submitting} value={volume} onChange={event => setVolume(event.target.value)}>
             {volumeOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
-          </select>{volumeTouched && volumeErr && <span className="wa-error" id={`${formId}-volume-error`}>{volumeErr}</span>}
+          </select>
         </div>}
         </div>
         <details className="wa-extra"><summary>Add your requirements <span>(optional)</span></summary>
           <div className="wa-field"><label htmlFor={`${formId}-message`}>Anything we should know?</label><textarea id={`${formId}-message`} name="message" rows={2} disabled={submitting} value={form.message} onChange={handleChange('message')} placeholder="Your use case, team size or monthly volume" /></div>
         </details>
-        <label className="wa-consent"><input name="agree" type="checkbox" required checked={form.agree} onChange={handleChange('agree')} onBlur={handleBlur('agree')} disabled={submitting} aria-invalid={isErr('agree')} aria-describedby={isErr('agree') ? `${formId}-agree-error` : undefined} /><span>I agree to the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms</a>, and to be contacted by Ojiva AI.</span></label>
-        {isErr('agree') && <span id={`${formId}-agree-error`} className="wa-error">{errors.agree}</span>}
         <button type="submit" className="wa-submit" disabled={submitting}>{submitting ? 'Sending your request…' : submitLabel}</button>
+        <p className="wa-consent">By submitting, you agree to the <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms</a>, and to be contacted by {agreeBrand}.</p>
         {apiError && <p className="wa-error" role="alert">{apiError} <a href="tel:+918431086185">Call our team</a>.</p>}
         <p className="wa-next-step">What happens next? {nextStepText}</p>
       </form>
@@ -378,7 +352,7 @@ export default function LandingLeadForm({
         {/* Email + Phone */}
         <div className="llf-row">
           <div className="llf-field">
-            <label className="llf-label">Email <span className="llf-req">*</span></label>
+            <label className="llf-label">Email <span className="llf-opt">(optional)</span></label>
             <IField icon="bi-envelope" placeholder="you@company.com" type="email" autoComplete="email"
               disabled={submitting} value={form.email}
               onChange={handleChange('email')} onBlur={handleBlur('email')}
@@ -386,8 +360,8 @@ export default function LandingLeadForm({
             {isErr('email') && <span className="llf-err">{errors.email}</span>}
           </div>
           <div className="llf-field">
-            <label className="llf-label">Phone <span className="llf-req">*</span></label>
-            <IField icon="bi-telephone" placeholder="10-digit Indian mobile" type="tel" autoComplete="tel"
+            <label className="llf-label">Mobile <span className="llf-req">*</span></label>
+            <IField icon="bi-telephone" placeholder="10-digit mobile number" type="tel" autoComplete="tel" inputMode="tel"
               disabled={submitting} value={form.phone}
               onChange={handleChange('phone')} onBlur={handleBlur('phone')}
               error={isErr('phone')} valid={isOk('phone')} />
@@ -398,12 +372,11 @@ export default function LandingLeadForm({
         {/* Company + Service */}
         <div className="llf-row">
           <div className="llf-field">
-            <label className="llf-label">Company Name <span className="llf-req">*</span></label>
+            <label className="llf-label">Company Name <span className="llf-opt">(optional)</span></label>
             <IField icon="bi-building" placeholder="Your Company Name" type="text" autoComplete="organization"
               disabled={submitting} value={form.company}
-              onChange={handleChange('company')} onBlur={handleBlur('company')}
-              error={isErr('company')} valid={isOk('company')} />
-            {isErr('company') && <span className="llf-err">{errors.company}</span>}
+              onChange={handleChange('company')} />
+
           </div>
           <div className="llf-field">
             <label className="llf-label">{serviceLabel} <span className="llf-req">*</span></label>
@@ -419,22 +392,11 @@ export default function LandingLeadForm({
         {/* Monthly Volume (optional — only when volumeOptions prop provided) */}
         {volumeOptions && (
           <div className="llf-field">
-            <label className="llf-label">{volumeLabel} <span className="llf-req">*</span></label>
+            <label className="llf-label">{volumeLabel} <span className="llf-opt">(optional)</span></label>
             <ISelect icon="bi-graph-up-arrow" disabled={submitting}
-              value={volume}
-              onChange={(e) => {
-                setVolume(e.target.value);
-                if (volumeTouched) setVolumeErr(e.target.value ? '' : 'Please select monthly volume.');
-              }}
-              onBlur={() => {
-                setVolumeTouched(true);
-                setVolumeErr(volume ? '' : 'Please select monthly volume.');
-              }}
-              error={volumeTouched && !!volumeErr}
-              valid={volumeTouched && !volumeErr && !!volume}>
+              value={volume} onChange={(e) => setVolume(e.target.value)}>
               {volumeOptions.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
             </ISelect>
-            {volumeTouched && volumeErr && <span className="llf-err">{volumeErr}</span>}
           </div>
         )}
 
@@ -445,27 +407,6 @@ export default function LandingLeadForm({
             placeholder="Tell us about your requirements…"
             rows={2} disabled={submitting}
             value={form.message} onChange={handleChange('message')} />
-        </div>
-
-        {/* Checkbox */}
-        <div className="llf-ck-row">
-          <label className="llf-ck-label">
-            <input type="checkbox" className="llf-ck-input"
-              checked={form.agree} onChange={handleChange('agree')} onBlur={handleBlur('agree')}
-              disabled={submitting} />
-            <span className={`llf-ck-box${form.agree ? ' on' : ''}`}>
-              {form.agree && <i className="bi bi-check-lg" />}
-            </span>
-            <span className="llf-ck-text">
-              I accept the{' '}
-              <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-              {' '}and{' '}
-              <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-              , and agree to be contacted by {agreeBrand}.{' '}
-              <span className="llf-req">*</span>
-            </span>
-          </label>
-          {isErr('agree') && <span className="llf-err">{errors.agree}</span>}
         </div>
 
         {/* Submit */}
@@ -483,6 +424,15 @@ export default function LandingLeadForm({
             ? <><span className="spinner-border spinner-border-sm me-2" role="status" />Submitting…</>
             : submitLabel}
         </button>
+
+        {/* Consent — shown, not a required tick box */}
+        <p className="llf-ck-text">
+          By submitting, you agree to the{' '}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          {' '}and{' '}
+          <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+          , and to be contacted by {agreeBrand}.
+        </p>
 
         {apiError && (
           <div className="llf-api-err">

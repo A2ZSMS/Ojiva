@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
-import { validateLead } from '@/lib/leadQuality';
-import { sendLeadSms } from '@/lib/sms';
+import { sendLeadSms, normalizeIndianMobile } from '@/lib/sms';
+import { trackFormError } from '@/lib/formTracking';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 
 const VOLUME_OPTIONS = [
@@ -103,7 +103,6 @@ export default function ContactForm() {
   const router = useRouter();
   const [status,   setStatus]   = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [agreed,   setAgreed]   = useState(false);
   const [selected, setSelected] = useState([]);
 
   const [form, setForm] = useState({
@@ -120,23 +119,12 @@ export default function ContactForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // ── Client-side validation ──
-    if (form.name.trim().length < 2)  { setErrorMsg('Please enter your full name (at least 2 characters).'); return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) { setErrorMsg('Please enter a valid email address.'); return; }
-    const digits = form.phone.replace(/\D/g, '');
-    if (!/^[6-9][0-9]{9}$/.test(digits)) { setErrorMsg('Please enter a valid 10-digit Indian mobile number.'); return; }
-    if (form.company.trim().length < 2) { setErrorMsg('Please enter your company name.'); return; }
-    if (selected.length === 0) { setErrorMsg('Please select at least one service.'); return; }
-    if (!agreed) { setErrorMsg('Please accept the terms to continue.'); return; }
-
-    const check = validateLead({
-      name: form.name, email: form.email, company: form.company, message: form.message,
-    });
-    if (!check.ok) {
-      console.warn('[LeadQuality] rejected:', check.reason);
-      setErrorMsg(check.reason);
-      return;
-    }
+    // ── Basic validation only: name + mobile required, email checked if typed ──
+    const phone = normalizeIndianMobile(form.phone);
+    const email = form.email.trim();
+    if (form.name.trim().length < 2) { trackFormError('contact-us', ['name']); setErrorMsg('Please enter your name.'); return; }
+    if (!phone) { trackFormError('contact-us', ['phone']); setErrorMsg('Please enter a 10-digit mobile number.'); return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { trackFormError('contact-us', ['email']); setErrorMsg('Please check your email, or leave it blank.'); return; }
 
     setStatus('loading'); setErrorMsg('');
     try {
@@ -153,7 +141,7 @@ export default function ContactForm() {
       // 20s if the gateway was slow, which lost real leads when users
       // tabbed away before the lead pipeline started. keepalive:true
       // on the fetch keeps it alive across the /thank-you redirect.
-      const smsPromise = sendLeadSms({ name: form.name, phone: form.phone });
+      const smsPromise = sendLeadSms({ name: form.name, phone });
       smsPromise.then(r => { if (!r.ok) console.warn('[SMS] not sent:', r.error); });
       if (TEST_MODE_SMS_ONLY) {
         const smsResult = await smsPromise;
@@ -170,8 +158,8 @@ export default function ContactForm() {
       }
       fireTeleCRM({
         name:        form.name,
-        phone:       form.phone,
-        email:       form.email,
+        phone,
+        email,
         company:     form.company,
         service:     primaryService,
         source:      'contact-us',
@@ -190,6 +178,7 @@ export default function ContactForm() {
       });
       fireOpenAiLeadCreated();
       const fd = new FormData(e.target);
+      fd.set('phone', phone);
       fd.append('access_key', ACCESS_KEY);
       fd.append('subject', `Contact: ${form.name} — ${form.company || 'Ojiva AI'}`);
       fd.append('botcheck', '');
@@ -200,8 +189,8 @@ export default function ContactForm() {
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd }).then(r => r.json()),
         fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ source: 'contact-us', name: form.name, email: form.email,
-            phone: form.phone, company: form.company, industry: form.industry,
+          body: JSON.stringify({ source: 'contact-us', name: form.name, email,
+            phone, company: form.company, industry: form.industry,
             services: selected.join(', ') || 'Not specified', message: form.message,
           }),
         }),
@@ -292,36 +281,36 @@ export default function ContactForm() {
                   </Field>
                 </div>
                 <div className="col-12 col-md-6">
-                  <Field label="Company" required>
+                  <Field label="Company" optional>
                     <input name="company" type="text" className="cfn-input"
                       placeholder="Company name"
-                      value={form.company} onChange={handleChange} required autoComplete="organization" />
+                      value={form.company} onChange={handleChange} autoComplete="organization" />
                   </Field>
                 </div>
 
                 {/* Row 2: Email + Phone */}
                 <div className="col-12 col-md-6">
-                  <Field label="Work Email" required>
+                  <Field label="Email" optional>
                     <input name="email" type="email" className="cfn-input"
-                      placeholder="Enter your work email"
-                      value={form.email} onChange={handleChange} required autoComplete="email" />
+                      placeholder="Enter your email"
+                      value={form.email} onChange={handleChange} autoComplete="email" />
                   </Field>
                 </div>
                 <div className="col-12 col-md-6">
-                  <Field label="Phone Number" required>
+                  <Field label="Mobile Number" required>
                     <div className="cfn-phone-wrap">
                       <span className="cfn-phone-prefix">+91</span>
                       <input name="phone" type="tel" className="cfn-phone-input"
                         placeholder="10-digit mobile number"
                         value={form.phone} onChange={handleChange} required
-                        maxLength={10} inputMode="numeric" autoComplete="tel" />
+                        inputMode="tel" autoComplete="tel" />
                     </div>
                   </Field>
                 </div>
 
                 {/* Services chips */}
                 <div className="col-12">
-                  <Field label="Services Interested" required>
+                  <Field label="Services Interested" optional>
                     <div className="cf-chips-row" role="group" aria-label="Select services">
                       {SERVICES.map(({ id, icon, label }) => (
                         <button key={id} type="button"
@@ -372,22 +361,6 @@ export default function ContactForm() {
                   </Field>
                 </div>
 
-                {/* Consent */}
-                <div className="col-12">
-                  <label className={`cf-consent${agreed ? ' checked' : ''}`} htmlFor="cfn-agree">
-                    <input id="cfn-agree" type="checkbox" className="cf-consent-input"
-                      checked={agreed} onChange={e => { setAgreed(e.target.checked); setErrorMsg(''); }} />
-                    <span className="cf-consent-box" aria-hidden="true">{agreed ? '✓' : ''}</span>
-                    <span className="cf-consent-text">
-                      I authorize Ojiva AI to send notifications via SMS/Messages/Promotional/Informational messages and agree to the{' '}
-                      <a href="/terms" className="cf-consent-link">Terms of Service</a>
-                      {' '}and{' '}
-                      <a href="/privacy" className="cf-consent-link">Privacy Policy</a>.{' '}
-                      <span style={{ color: '#dc2626' }}>*</span>
-                    </span>
-                  </label>
-                </div>
-
                 {errorMsg && (
                   <div className="col-12">
                     <motion.div className="cf-error" role="alert"
@@ -405,6 +378,12 @@ export default function ContactForm() {
                       : 'Send Message →'
                     }
                   </button>
+                  <p className="cf-consent-text mt-2 mb-0">
+                    By submitting, you authorize Ojiva AI to send notifications via SMS/Messages/Promotional/Informational messages and agree to the{' '}
+                    <a href="/terms" className="cf-consent-link">Terms of Service</a>
+                    {' '}and{' '}
+                    <a href="/privacy" className="cf-consent-link">Privacy Policy</a>.
+                  </p>
                   <p className="cfn-privacy">
                     We respect your inbox. Our team will reach out with a tailored plan within one business day.
                   </p>

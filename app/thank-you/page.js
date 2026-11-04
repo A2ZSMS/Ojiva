@@ -82,15 +82,6 @@ export default function ThankYouPage() {
               ← Back to Ojiva AI
             </Link>
           </div>
-
-          {/* WhatsApp */}
-          <p style={{ marginTop: '1.5rem', color: 'rgba(148,163,184,0.60)', fontSize: '0.82rem' }}>
-            Need help now?{' '}
-            <a href="https://wa.me/918431086185" target="_blank" rel="noopener noreferrer"
-              style={{ color: '#34d399', textDecoration: 'none', fontWeight: 600 }}>
-              💬 WhatsApp us
-            </a>
-          </p>
         </div>
       </main>
 

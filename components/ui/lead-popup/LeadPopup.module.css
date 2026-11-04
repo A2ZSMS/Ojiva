@@ -1,0 +1,101 @@
+/* Lead popup — desktop: centred modal over a dim backdrop.
+   Touch: a card docked to the bottom of the screen, no backdrop, so the
+   page stays usable. Both are position:fixed (no layout shift). */
+
+.backdrop {
+  position: fixed; inset: 0; z-index: 1090;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+  background: rgba(6, 12, 24, 0.55);
+  animation: lpFade 0.2s ease-out;
+}
+.dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 1090;
+  padding: 0 12px calc(12px + env(safe-area-inset-bottom));
+  animation: lpRise 0.28s ease-out;
+}
+
+.card {
+  position: relative; overflow: hidden auto;
+  width: 100%; max-width: 420px; max-height: calc(100vh - 32px); margin: 0 auto;
+  padding: 28px 26px 16px;
+  background: #ffffff; color: #0f172a;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(6, 12, 24, 0.28);
+  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+}
+.card::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 4px;
+  background: linear-gradient(90deg, #00c8f8 0%, #1B48E0 100%);
+}
+.dock .card {
+  max-width: 480px; max-height: 85vh;
+  padding: 20px 16px 10px;
+  box-shadow: 0 -8px 40px rgba(6, 12, 24, 0.22);
+}
+
+.close {
+  position: absolute; top: 10px; right: 10px;
+  width: 36px; height: 36px; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: transparent; color: #64748b; cursor: pointer;
+}
+.close:hover, .close:focus-visible { background: #f1f5f9; color: #0f172a; }
+
+.eyebrow {
+  display: inline-block; margin-bottom: 10px; padding: 4px 10px;
+  border-radius: 999px; background: rgba(27, 72, 224, 0.08); color: #1B48E0;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.title { margin: 0 34px 6px 0; font-size: 26px; line-height: 1.2; }
+.sub { margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #475569; }
+.dock .eyebrow { margin-bottom: 6px; }
+.dock .title { font-size: 21px; }
+.dock .sub { margin-bottom: 12px; font-size: 13px; }
+
+.row { display: grid; gap: 10px; }
+.dock .row { grid-template-columns: 1fr 1fr; }
+.field { display: grid; gap: 5px; margin-bottom: 10px; min-width: 0; }
+.label { font-size: 12.5px; font-weight: 600; color: #334155; }
+.label span { font-weight: 400; color: #94a3b8; }
+
+.input, .select, .phone {
+  width: 100%; height: 46px;
+  border: 1.5px solid #dbe2ea; border-radius: 10px; background: #ffffff;
+  font-size: 16px; color: #0f172a;
+}
+.input, .select { padding: 0 12px; }
+.phone { display: flex; align-items: center; overflow: hidden; }
+.phone span { padding: 0 8px 0 12px; color: #64748b; font-size: 15px; }
+.phone input { flex: 1; min-width: 0; height: 100%; border: 0; padding: 0 12px 0 0; font-size: 16px; color: #0f172a; background: transparent; }
+.phone input:focus { outline: none; }
+.input:focus, .select:focus, .phone:focus-within { outline: none; border-color: #1B48E0; box-shadow: 0 0 0 3px rgba(27, 72, 224, 0.15); }
+.invalid { border-color: #ef4444; }
+.err { font-size: 12px; color: #dc2626; }
+
+.submit {
+  width: 100%; height: 50px; margin-top: 4px;
+  border: 0; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(135deg, #1B48E0 0%, #2f5cf0 100%); color: #ffffff;
+  font-size: 16px; font-weight: 700;
+  box-shadow: 0 10px 24px rgba(27, 72, 224, 0.3);
+}
+.submit:hover { filter: brightness(1.06); }
+.submit:disabled { opacity: 0.7; cursor: wait; }
+
+.apiError { margin: 10px 0 0; font-size: 13px; color: #dc2626; }
+.apiError a { color: inherit; font-weight: 600; }
+.trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; margin: 12px 0 0; font-size: 12px; color: #475569; }
+.consent { margin: 8px 0 0; font-size: 11px; line-height: 1.5; color: #64748b; text-align: center; }
+.consent a { color: #1B48E0; }
+.noThanks {
+  display: block; margin: 4px auto 0; padding: 8px;
+  border: 0; background: none; cursor: pointer;
+  font-size: 13px; color: #64748b; text-decoration: underline;
+}
+.dock .trust { display: none; }
+
+@keyframes lpFade { from { opacity: 0; } }
+@keyframes lpRise { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .backdrop, .dock { animation: none; }
+}

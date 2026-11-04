@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { WEB3_ACCESS_KEY, MAKE_HOOK_SERVICE, TEST_MODE_SMS_ONLY } from '@/lib/formConfig';
-import { validateLead } from '@/lib/leadQuality';
-import { sendLeadSms } from '@/lib/sms';
+import { sendLeadSms, normalizeIndianMobile } from '@/lib/sms';
+import { trackFormError } from '@/lib/formTracking';
 import { getAttribution, fireOpenAiLeadCreated } from '@/lib/attribution';
 const ACCESS_KEY = WEB3_ACCESS_KEY;
 const MAKE_HOOK  = MAKE_HOOK_SERVICE;
@@ -185,37 +185,26 @@ export default function DemoForm() {
   const [channels, setCh]    = useState([]);
   const [time,     setTime]  = useState('');
   const [msg,      setMsg]   = useState('');
-  const [agreed,   setAgree] = useState(false);
   const [status,   setSt]    = useState('idle');
   const [err,      setErr]   = useState('');
 
   const ch = (e) => setForm(p => ({ ...p, [e.target.name]: e.target.value }));
-  const phoneDigits = form.phone.replace(/\D/g, '');
+  // Basic validation only: name + mobile required, email checked if typed.
+  // Company, size, volume and channels are optional so nobody drops out.
+  const phone = normalizeIndianMobile(form.phone);
+  const email = form.email.trim();
   const s1ok = !!(
     form.name.trim().length >= 2 &&
-    isValidEmail(form.email) &&
-    form.company.trim().length >= 2 &&
-    /^[6-9][0-9]{9}$/.test(phoneDigits)
+    phone &&
+    (!email || isValidEmail(email))
   );
-  const s2ok = !!(size && volume);
-  const ok   = s1ok && s2ok && agreed;
+  const ok   = s1ok;
 
   async function submit(e) {
     e.preventDefault();
-    if (!agreed) { setErr('Please agree to the privacy policy.'); return; }
-    if (form.name.trim().length < 2) { setErr('Please enter your full name (at least 2 characters).'); return; }
-    if (!isValidEmail(form.email)) { setErr('Please enter a valid email address.'); return; }
-    if (form.company.trim().length < 2) { setErr('Please enter your company name.'); return; }
-    if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) { setErr('Please enter a valid 10-digit Indian mobile number.'); return; }
-
-    const check = validateLead({
-      name: form.name, email: form.email, company: form.company, message: msg,
-    });
-    if (!check.ok) {
-      console.warn('[LeadQuality] rejected:', check.reason);
-      setErr(check.reason);
-      return;
-    }
+    if (form.name.trim().length < 2) { trackFormError('book-demo', ['name']); setErr('Please enter your name.'); return; }
+    if (!phone) { trackFormError('book-demo', ['phone']); setErr('Please enter a 10-digit mobile number.'); return; }
+    if (email && !isValidEmail(email)) { trackFormError('book-demo', ['email']); setErr('Please check your email, or leave it blank.'); return; }
 
     setSt('loading'); setErr('');
     try {
@@ -231,7 +220,7 @@ export default function DemoForm() {
       // 20s if the gateway was slow, which lost real leads when users
       // tabbed away before the lead pipeline started. keepalive:true
       // on the fetch keeps it alive across the /thank-you redirect.
-      const smsPromise = sendLeadSms({ name: form.name, phone: form.phone });
+      const smsPromise = sendLeadSms({ name: form.name, phone });
       smsPromise.then(r => { if (!r.ok) console.warn('[SMS] not sent:', r.error); });
       if (TEST_MODE_SMS_ONLY) {
         const smsResult = await smsPromise;
@@ -248,8 +237,8 @@ export default function DemoForm() {
       }
       fireTeleCRM({
         name:          form.name,
-        phone:         form.phone,
-        email:         form.email,
+        phone,
+        email,
         company:       form.company,
         service:       primaryService,
         source:        'book-demo',
@@ -271,15 +260,15 @@ export default function DemoForm() {
       const fd = new FormData();
       fd.append('access_key',           ACCESS_KEY);
       fd.append('name',                 form.name);
-      fd.append('email',                form.email);
-      fd.append('phone',                form.phone);
+      fd.append('email',                email);
+      fd.append('phone',                phone);
       fd.append('company',              form.company);
       fd.append('company_size',         size              || 'Not specified');
       fd.append('monthly_volume',       volume            || 'Not specified');
       fd.append('channels_of_interest', channels.join(', ') || 'Not specified');
       fd.append('preferred_time',       time              || 'Not specified');
       fd.append('message',              msg               || 'No message');
-      fd.append('subject', `Demo — ${form.name} (${form.company})`);
+      fd.append('subject', `Demo — ${form.name}${form.company ? ` (${form.company})` : ''}`);
       fd.append('botcheck', '');
       fd.append('privacy_consent', 'Agreed');
       // Fire Web3Forms and Make.com in parallel — a Web3Forms outage must not
@@ -287,8 +276,8 @@ export default function DemoForm() {
       const [w, m] = await Promise.allSettled([
         fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd }).then(r => r.json()),
         fetch(MAKE_HOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ source: 'book-demo', name: form.name, email: form.email,
-            phone: form.phone, company: form.company,
+          body: JSON.stringify({ source: 'book-demo', name: form.name, email,
+            phone, company: form.company,
             size: size || 'Not specified', volume: volume || 'Not specified',
             channels: channels.join(', ') || 'Not specified',
             time: time || 'Not specified', message: msg || 'No message',
@@ -336,13 +325,13 @@ export default function DemoForm() {
                   <FLInput id="d-name"    name="name"    label="Full Name"    value={form.name}    onChange={ch} required autoComplete="name" />
                 </div>
                 <div className="col-12 col-sm-6">
-                  <FLInput id="d-email"   name="email"   label="Work Email"   value={form.email}   onChange={ch} required type="email" autoComplete="email" />
+                  <FLInput id="d-phone"   name="phone"   label="Mobile Number" value={form.phone}  onChange={ch} type="tel" autoComplete="tel" required />
                 </div>
                 <div className="col-12 col-sm-6">
-                  <FLInput id="d-company" name="company" label="Company Name" value={form.company} onChange={ch} required autoComplete="organization" />
+                  <FLInput id="d-email"   name="email"   label="Email"        value={form.email}   onChange={ch} optional type="email" autoComplete="email" />
                 </div>
                 <div className="col-12 col-sm-6">
-                  <FLInput id="d-phone"   name="phone"   label="Phone Number" value={form.phone}   onChange={ch} type="tel" autoComplete="tel" required />
+                  <FLInput id="d-company" name="company" label="Company Name" value={form.company} onChange={ch} optional autoComplete="organization" />
                 </div>
               </div>
               <button type="button"
@@ -361,20 +350,20 @@ export default function DemoForm() {
               <p className="dbp-step-hint">Help us tailor the demo to your scale.</p>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">🏢 Company size</div>
+                <div className="dbp-field-label">🏢 Company size <span className="dbp-opt">(optional)</span></div>
                 <PillSelector options={SIZES} value={size} onChange={setSize} name="Company size" />
               </div>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">📨 Monthly message volume</div>
+                <div className="dbp-field-label">📨 Monthly message volume <span className="dbp-opt">(optional)</span></div>
                 <PillSelector options={VOLUMES} value={volume} onChange={setVol} name="Monthly volume" />
               </div>
 
               <div className="dbp-nav-row mt-4">
                 <button type="button" className="dbp-back-btn" onClick={() => setStep(1)}>← Back</button>
                 <button type="button"
-                  className={`dbp-next-btn${s2ok ? ' active' : ''}`}
-                  onClick={() => s2ok && setStep(3)} disabled={!s2ok}>
+                  className="dbp-next-btn active"
+                  onClick={() => setStep(3)}>
                   Continue — Channels <span>→</span>
                 </button>
               </div>
@@ -406,15 +395,10 @@ export default function DemoForm() {
                 </label>
               </div>
 
-              <label className={`cf-consent mt-3${agreed ? ' checked' : ''}`} htmlFor="d-agree">
-                <input id="d-agree" type="checkbox" className="cf-consent-input"
-                  checked={agreed} onChange={e => { setAgree(e.target.checked); setErr(''); }} />
-                <span className="cf-consent-box">{agreed ? '✓' : ''}</span>
-                <span className="cf-consent-text">
-                  I agree to receive demo-related communications from Ojiva AI.{' '}
-                  <a href="/privacy" className="cf-consent-link">Privacy Policy</a>
-                </span>
-              </label>
+              <p className="cf-consent-text mt-3 mb-0">
+                By booking, you agree to receive demo-related communications from Ojiva AI.{' '}
+                <a href="/privacy" className="cf-consent-link">Privacy Policy</a>
+              </p>
 
               <AnimatePresence>
                 {err && (

@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Navbar from './Navbar';
 import ChatLauncher from '@/components/ui/ai-chat/ChatLauncher';
+import LeadPopup from '@/components/ui/lead-popup/LeadPopup';
 
 const AD_ROUTES = ['/whatsapp-api-service', '/bulk-sms', '/rcs-messaging', '/website-development'];
 
@@ -21,6 +22,8 @@ export default function LayoutShell({ children, industryLinks, footer }) {
       {children}
       {footer}
       {SHOW_AI_CHAT && <ChatLauncher />}
+      {/* Lead popup: blog + service pages only (its own ALLOWED list) */}
+      <LeadPopup />
     </div>
   );
 }

@@ -60,23 +60,6 @@ export default function ThankYouPage() {
             ))}
           </div>
 
-          {/* Instant WhatsApp chat box */}
-          <div className="ty-wa-box">
-            <i className="bi bi-whatsapp" style={{ color: '#25d366', fontSize: '1.5rem', flexShrink: 0 }} />
-            <div className="ty-wa-text">
-              <p className="ty-wa-title">Need instant help?</p>
-              <p className="ty-wa-desc">Chat with our team on WhatsApp right now.</p>
-            </div>
-            <a
-              href="https://wa.me/918431086185?text=Hi%2C%20I%20just%20submitted%20a%20form%20for%20WhatsApp%20API"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ty-wa-btn"
-            >
-              <i className="bi bi-whatsapp" /> Chat Now
-            </a>
-          </div>
-
           {/* Explore links */}
           <p className="ty-explore-label">Explore while you wait</p>
           <div className="ty-actions">

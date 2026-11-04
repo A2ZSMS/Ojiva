@@ -1,12 +1,9 @@
 'use client';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { SiGoogle, SiMeta, SiWhatsapp } from 'react-icons/si';
+import { SiGoogle, SiMeta } from 'react-icons/si';
 import { LuShieldCheck } from 'react-icons/lu';
 import { CLIENT_LOGOS, GOOGLE_RATING, TESTIMONIALS } from './proof';
 import styles from './whatsapp-api/WhatsAppLanding.module.css';
-
-const WHATSAPP_NUMBER = '918431086185';
 
 // First-screen trust strip: Meta BSP, DLT, then client logos once added.
 export function TrustStrip() {
@@ -35,28 +32,4 @@ export function Testimonials({ page }) {
     </figure>)}</div>
     <p className={styles.reviewsLink}><a href={GOOGLE_RATING.url} target="_blank" rel="noopener noreferrer">Read all {GOOGLE_RATING.count} reviews on Google ↗</a></p>
   </section>;
-}
-
-// WhatsApp chat button. `header` sits next to the header CTA; `float` is
-// fixed bottom-right and hides while the lead form is on screen, so it
-// never covers the form's submit button.
-export function WhatsAppButton({ message, source, variant = 'float' }) {
-  const [formInView, setFormInView] = useState(false);
-  useEffect(() => {
-    const form = document.getElementById('lead-form');
-    if (variant !== 'float' || !form || !('IntersectionObserver' in window)) return;
-    const observer = new IntersectionObserver(([entry]) => setFormInView(entry.isIntersecting));
-    observer.observe(form);
-    return () => observer.disconnect();
-  }, [variant]);
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  function track() {
-    const payload = { event_category: 'landing', event_label: `${source}-${variant}` };
-    if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', payload);
-    else if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: 'whatsapp_click', ...payload });
-  }
-  if (variant === 'float' && formInView) return null;
-  return <a className={variant === 'header' ? styles.whatsappHeader : styles.whatsappFloat} href={href} target="_blank" rel="noopener noreferrer" onClick={track} aria-label="Chat with us on WhatsApp">
-    <SiWhatsapp aria-hidden="true" /><span>{variant === 'header' ? 'WhatsApp' : 'Chat on WhatsApp'}</span>
-  </a>;
 }

@@ -6,7 +6,7 @@ import LandingLeadForm from './LandingLeadForm';
 import ConversationDemo from './whatsapp-api/ConversationDemo';
 import MobileEnquiryBar from './whatsapp-api/MobileEnquiryBar';
 import SupportChat from './whatsapp-api/SupportChat';
-import { TrustStrip, Testimonials, WhatsAppButton } from './LandingTrust';
+import { TrustStrip, Testimonials } from './LandingTrust';
 import styles from './whatsapp-api/WhatsAppLanding.module.css';
 
 const services = [
@@ -31,7 +31,6 @@ export default function WhatsAppApiLanding() {
       <header className={styles.header}><div className={styles.headerInner}>
         <a href="#whatsapp-top" aria-label="Ojiva AI, back to top"><Image src="/ojiva-logo-optimized.webp" width={112} height={33} alt="Ojiva AI" priority /></a>
         <nav aria-label="Landing page navigation"><a href="#how-it-works">See how it works</a><a href="#questions">FAQs</a></nav>
-        <WhatsAppButton variant="header" source="whatsapp-api-service" message="Hi, I'd like a demo of the WhatsApp Business API." />
         <a className={styles.headerCta} href="#lead-form">Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a>
       </div></header>
       <section className={styles.hero} aria-labelledby="whatsapp-title">
@@ -84,7 +83,6 @@ export default function WhatsAppApiLanding() {
       <section className={styles.finalSection}><div><span className={styles.eyebrow}>SEE THE WORKFLOW BEFORE YOU DECIDE</span><h2>Start with the conversations you want to improve.</h2><p>Get a demo, setup guidance and pricing matched to your team.</p></div><a href="#lead-form" className={styles.primaryCta}>Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a></section>
       <footer className={styles.footer}><div><Image src="/ojiva-logo-optimized.webp" width={94} height={28} alt="Ojiva AI" loading="lazy" /><span>© {new Date().getFullYear()} Ojiva AI</span></div><nav aria-label="Contact and legal"><a href="tel:+918431086185"><LuPhone aria-hidden="true" /> Talk to our team</a><SupportChat /><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></footer>
       <MobileEnquiryBar label="Book a Free Demo ↗" />
-      <WhatsAppButton source="whatsapp-api-service" message="Hi, I'd like a demo of the WhatsApp Business API." />
     </div>
   );
 }
