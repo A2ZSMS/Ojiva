@@ -1,9 +1,13 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Navbar from './Navbar';
-import ChatLauncher from '@/components/ui/ai-chat/ChatLauncher';
-import LeadPopup from '@/components/ui/lead-popup/LeadPopup';
+import dynamic from 'next/dynamic';
+
+// Split into their own chunks so the Google Ads landing pages (which show none
+// of these) don't download them. Navbar still server-renders on normal pages.
+const Navbar = dynamic(() => import('./Navbar'));
+const ChatLauncher = dynamic(() => import('@/components/ui/ai-chat/ChatLauncher'), { ssr: false });
+const LeadPopup = dynamic(() => import('@/components/ui/lead-popup/LeadPopup'), { ssr: false });
 
 const AD_ROUTES = ['/whatsapp-api-service', '/bulk-sms', '/rcs-messaging', '/website-development'];
 

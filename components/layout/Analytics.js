@@ -36,7 +36,7 @@ const OPENAI_ADS_PIXEL_ID         = '4DoGQbov6wt75SWWt5HFTF';
  * - Meta Pixel and OpenAI Ads Pixel define their queue stubs immediately, so
  *   fbq()/oaiq() calls are never lost, but their SDK files are fetched through
  *   window.__ojvLoad (layout.js): first interaction or 3.5s after load, and
- *   instantly on thank-you / paid-ad landing pages.
+ *   instantly on thank-you pages (ad landing pages wait too, Nov 2026).
  * Already placed in layout.js <body>. DO NOT delete this component or its usage.
  */
 export default function Analytics() {

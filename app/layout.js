@@ -121,11 +121,14 @@ export default function RootLayout({ children }) {
             Tracking + chat scripts (GTM, GA4, Meta, OpenAI, Intercom) competed with the page on load
             (mobile Lighthouse 30/100). They now load on the visitor's first interaction
             (scroll, tap, key, mouse move) or 3.5s after the page has loaded, whichever is
-            first. Thank-you pages and paid-ad landing pages load them immediately so no
-            conversion or ad-click session is missed.
+            first. Thank-you pages load them immediately so no conversion is missed.
+            Paid-ad landing pages wait like every other page (Nov 2026): loading them at once
+            cost ~1.3 s of mobile blocking time and the Google Ads landing page score. The
+            gclid is still stored before any form submit, because filling a form is an
+            interaction that loads the tags first.
             Queue stubs (dataLayer, gtag, fbq, oaiq) are defined right away, so any event
             pushed before the real scripts arrive is replayed when they load. */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};var q=[],done=false,p=w.location.pathname,now=p.indexOf('thank-you')>-1||['/whatsapp-api-service','/bulk-sms','/rcs-messaging','/website-development'].indexOf(p.replace(/.$/,function(c){return c==='/'?'':c;}))>-1;w.__ojvLoad=function(f){if(done){f();}else{q.push(f);}};function go(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,go,true);});var f;while((f=q.shift())){try{f();}catch(e){}}}var ev=['scroll','pointerdown','keydown','touchstart','mousemove'];ev.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true,capture:true});});function arm(){setTimeout(go,3500);}if(d.readyState==='complete'){arm();}else{w.addEventListener('load',arm,{once:true});}w.__ojvLoad(function(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-TJ8ZDFS2';d.head.appendChild(j);});if(now)go();})(window,document);` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(w,d){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};var q=[],done=false,p=w.location.pathname,now=p.indexOf('thank-you')>-1;w.__ojvLoad=function(f){if(done){f();}else{q.push(f);}};function go(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,go,true);});var f;while((f=q.shift())){try{f();}catch(e){}}}var ev=['scroll','pointerdown','keydown','touchstart','mousemove'];ev.forEach(function(e){w.addEventListener(e,go,{once:true,passive:true,capture:true});});function arm(){setTimeout(go,3500);}if(d.readyState==='complete'){arm();}else{w.addEventListener('load',arm,{once:true});}w.__ojvLoad(function(){var j=d.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-TJ8ZDFS2';d.head.appendChild(j);});if(now)go();})(window,document);` }} />
 
         {/* ── Rupee sign (₹) from a 1 KB Inter subset ──
             ₹ sits in Inter's "latin-ext" slice, so a single ₹ on a page (homepage

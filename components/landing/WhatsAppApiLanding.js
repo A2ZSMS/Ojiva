@@ -3,19 +3,38 @@ import Image from 'next/image';
 import { LuArrowUpRight, LuArrowRight, LuCheck, LuMessageCircle, LuUsers, LuWorkflow, LuChevronDown, LuPhone, LuCirclePlay } from 'react-icons/lu';
 import EnquirySteps from './EnquirySteps';
 import LandingLeadForm from './LandingLeadForm';
-import ConversationDemo from './whatsapp-api/ConversationDemo';
 import MobileEnquiryBar from './whatsapp-api/MobileEnquiryBar';
 import SupportChat from './whatsapp-api/SupportChat';
 import { TrustStrip, Testimonials } from './LandingTrust';
 import styles from './whatsapp-api/WhatsAppLanding.module.css';
+import dynamic from 'next/dynamic';
 
-const services = [
-  { value: '', label: 'Choose what you need' },
-  { value: 'whatsapp-api', label: 'WhatsApp Business API' },
-  { value: 'chatbot', label: 'Automated replies & chatbot' },
-  { value: 'api-chatbot', label: 'API + chatbot + team inbox' },
-  { value: 'bulk-messaging', label: 'Customer updates & campaigns' },
-  { value: 'other', label: 'Help me choose' },
+// Below the fold: its code arrives in a separate chunk.
+const ConversationDemo = dynamic(() => import('./whatsapp-api/ConversationDemo'));
+
+// Monthly WhatsApp message volume. Values are what the CRM and Make receive.
+const volumeOptions = [
+  { value: '', label: 'Select volume' },
+  { value: '<10k', label: 'Under 10,000' },
+  { value: '10k-1L', label: '10,000 – 1 lakh' },
+  { value: '1L-10L', label: '1 lakh – 10 lakh' },
+  { value: '10L+', label: '10 lakh+' },
+];
+// Third item of the sub-headline. Swap to 'Go live in 48 hours' only once that
+// timeline is something the team can promise every customer (Google Ads
+// misrepresentation policy).
+const SETUP_CLAIM = 'Guided setup';
+// Short answers next to the form; the full FAQ stays further down the page.
+const quickSteps = [
+  ['Share your requirement', 'Fill the form. Our team calls you back.'],
+  ['See a demo for your use case', 'Chatbot, shared inbox and follow-ups.'],
+  ['Go live with our help', 'We set up your number, templates and chatbot.'],
+];
+const quickFaqs = [
+  ['Is this the official WhatsApp Business API?', 'Yes. Ojiva AI is an official Meta WhatsApp Business Solution Provider, so you get the API directly through a Meta-approved partner.'],
+  ['Can I use my existing WhatsApp number?', 'Usually, yes. We check how the number is used today and explain the migration or onboarding steps before you decide.'],
+  ['Do I need a developer?', 'No coding is needed to get started. Our team guides the setup and shows your team how to use the chatbot and shared inbox.'],
+  ['How is pricing worked out?', 'It depends on the features, setup and messaging you need. We explain platform fees and WhatsApp charges separately in your proposal.'],
 ];
 const faqs = [
   ['Is this different from the WhatsApp Business app?', 'Yes. The Business API connects WhatsApp to software so you can automate conversations, integrate business tools and manage enquiries with your team. Your customers still message you on WhatsApp.'],
@@ -34,17 +53,28 @@ export default function WhatsAppApiLanding() {
         <a className={styles.headerCta} href="#lead-form">Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a>
       </div></header>
       <section className={styles.hero} aria-labelledby="whatsapp-title">
-        <div className={styles.heroGrid}>
+        <div className={`${styles.heroGrid} ${styles.heroGridWa}`}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}><span className={styles.statusDot} /> WHATSAPP BUSINESS API</span>
             <h1 id="whatsapp-title">Official WhatsApp Business API<br /><span>Provider in India</span></h1>
+            <p className={styles.heroSub}>Meta-verified BSP <span aria-hidden="true">·</span> Chatbot + Shared Inbox <span aria-hidden="true">·</span> {SETUP_CLAIM}</p>
+          </div>
+          <div className={styles.heroExtra}>
             <p className={styles.heroDescription}>Answer common questions automatically, send timely follow-ups and give your team one shared inbox. Help interested customers take the next step on WhatsApp.</p>
             <a className={styles.heroAction} href="#how-it-works"><LuCirclePlay aria-hidden="true" /> See it in action <LuArrowRight aria-hidden="true" /></a>
             <ul className={styles.heroBenefits}><li><LuCheck aria-hidden="true" /> Automated replies</li><li><LuCheck aria-hidden="true" /> Shared team inbox</li><li><LuCheck aria-hidden="true" /> CRM integration</li></ul>
             <TrustStrip />
             <WhatsAppJourney />
           </div>
-          <div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="See your WhatsApp workflow." subtitle="Tell us what you need. Get a relevant demo, setup guidance and a clear pricing discussion." introLabel="DEMO + SETUP + PRICING" submitLabel="Book a Free Demo →" services={services} serviceLabel="What would you like to do?" /></div>
+          <div className={styles.formColumn}>
+            <div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="See your WhatsApp workflow." subtitle="Tell us what you need. Get a relevant demo, setup guidance and a clear pricing discussion." introLabel="DEMO + SETUP + PRICING" submitLabel="Book a Free Demo →" services={null} defaultService="WhatsApp Business API" requireCompany volumeOptions={volumeOptions} volumeLabel="Monthly message volume" /></div>
+            <div className={styles.nearForm}>
+              <h2 className={styles.nearFormTitle}>How it works</h2>
+              <ol className={styles.quickSteps}>{quickSteps.map(([h, t], i) => <li key={h}><span>{i + 1}</span><div><strong>{h}</strong><small>{t}</small></div></li>)}</ol>
+              <h2 className={styles.nearFormTitle}>Quick answers</h2>
+              <div className={styles.quickFaqs}>{quickFaqs.map(([q, a]) => <details key={q}><summary>{q}<LuChevronDown aria-hidden="true" /></summary><p>{a}</p></details>)}</div>
+            </div>
+          </div>
         </div>
         <div className={styles.heroFoot}><span>Built for the way your business talks.</span><div><span>Sales enquiries</span><span>Customer support</span><span>Order updates</span><span>Appointment reminders</span></div></div>
       </section>

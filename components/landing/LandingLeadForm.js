@@ -39,7 +39,22 @@ const RULES = {
   email:   v => v.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? 'Check your email, or leave it blank.' : '',
   phone:   v => !v.trim()  ? 'Required.' : !normalizeIndianMobile(v) ? 'Enter a 10-digit mobile number.' : '',
   service: v => !v         ? 'Please select a service.' : '',
+  company: v => companyError(v),
 };
+
+// Company name (only when a page sets requireCompany). Light check for lead
+// quality: blocks placeholder junk, never real names. Short names like "HP",
+// "3M" or "TVS" pass; so do individuals who type their own name.
+const JUNK_COMPANY = new Set(['na', 'n/a', 'n.a', 'nil', 'none', 'no', 'nothing', 'null', 'test', 'testing', 'abc', 'xyz', 'asdf', 'qwerty', 'company', 'business', 'my company', 'company name', 'no company', 'not applicable', 'dont know', "don't know", '-', '.']);
+function companyError(v) {
+  const t = v.trim().replace(/\s+/g, ' ');
+  if (!t) return 'Required.';
+  if (t.length < 2) return 'Enter your business name.';
+  if (!/\p{L}/u.test(t)) return 'Enter your business name.';         // digits/symbols only
+  if (/^(.)\1+$/i.test(t.replace(/\s/g, ''))) return 'Enter your business name.'; // "aaaa"
+  if (JUNK_COMPANY.has(t.toLowerCase())) return 'Enter your business name, or your own name if you work independently.';
+  return '';
+}
 
 function validateAll(f) {
   const e = {};
@@ -48,7 +63,7 @@ function validateAll(f) {
 }
 
 const REQUIRED  = ['name', 'phone', 'service'];
-const EMPTY_ERR = { name:'', email:'', phone:'', service:'' };
+const EMPTY_ERR = { name:'', email:'', phone:'', service:'', company:'' };
 
 /* ─── Countdown ─────────────────────────────────────────────── */
 function useCountdown(enabled = true) {
@@ -103,7 +118,9 @@ export default function LandingLeadForm({
   submitLabel   = 'Book My Demo & Get Pricing →',
   thankYouUrl   = THANK_YOU,
   spotsLeft     = 3,
-  services      = DEFAULT_SERVICES,
+  services      = DEFAULT_SERVICES,  /* null hides the service question (the page already says what it is) */
+  defaultService = '',               /* service sent to the CRM when the question is hidden */
+  requireCompany = false,            /* company name required + light junk check */
   serviceLabel  = 'Service',
   messageLabel  = 'Message',
   volumeOptions = null,
@@ -123,7 +140,12 @@ export default function LandingLeadForm({
   const formId = useId();
   const formRef = useRef(null);
   const inFlight = useRef(false);
-  const fieldError = useCallback((key, value) => RULES[key](value), []);
+  const askService = Array.isArray(services) && services.length > 0;
+  const fieldError = useCallback((key, value) => {
+    if (key === 'service' && !askService) return '';
+    if (key === 'company' && !requireCompany) return '';
+    return RULES[key](value);
+  }, [askService, requireCompany]);
 
   const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'' });
   const [volume,       setVolume]       = useState('');
@@ -150,8 +172,10 @@ export default function LandingLeadForm({
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (inFlight.current) return;
-    setTouched({ name:true, email:true, phone:true, service:true });
+    setTouched({ name:true, email:true, phone:true, service:true, company:true });
     const errs = validateAll(form);
+    if (!askService) errs.service = '';
+    if (!requireCompany) errs.company = '';
     setErrors(errs);
 
     const failed = Object.keys(errs).filter(key => errs[key]);
@@ -171,10 +195,11 @@ export default function LandingLeadForm({
       name:    form.name.trim(),
       email:   form.email.trim().toLowerCase(),
       phone:   normalizeIndianMobile(form.phone),
-      company: form.company.trim(),
-      service: form.service,
+      company: form.company.trim().replace(/\s+/g, ' '),
+      service: askService ? form.service : defaultService,
       message: form.message.trim(),
-      ...(volumeOptions && volume ? { monthly_volume: volume } : {}),
+      // `volume` is the field the Make scenario reads; `monthly_volume` kept for older mappings.
+      ...(volumeOptions && volume ? { volume, monthly_volume: volume } : {}),
       source,
       submitted_at: new Date().toISOString(),
     };
@@ -268,23 +293,24 @@ export default function LandingLeadForm({
           {input('name', 'Your name', 'text', 'Full name', 'name')}
           {input('phone', 'Mobile number', 'tel', '10-digit mobile number', 'tel')}
         </div>
-        <div className={volumeOptions ? 'wa-field-row' : 'wa-field-stack'}>
+        {askService ? <div className={volumeOptions ? 'wa-field-row' : 'wa-field-stack'}>
           {input('email', 'Email address', 'email', 'you@company.com', 'email', false)}
-          {input('company', 'Company name', 'text', 'Your business name', 'organization', false)}
-        </div>
-        <div className={volumeOptions ? 'wa-field-row' : undefined}>
-        <div className="wa-field"><label htmlFor={`${formId}-service`}>{serviceLabel} <span aria-hidden="true">*</span></label>
+          {input('company', 'Company name', 'text', 'Your business name', 'organization', requireCompany)}
+        </div> : input('company', 'Company name', 'text', 'Your business name', 'organization', requireCompany)}
+        <div className={volumeOptions && askService ? 'wa-field-row' : undefined}>
+        {askService && <div className="wa-field"><label htmlFor={`${formId}-service`}>{serviceLabel} <span aria-hidden="true">*</span></label>
           <select id={`${formId}-service`} name="service" required disabled={submitting} value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')} aria-invalid={isErr('service')} aria-describedby={isErr('service') ? `${formId}-service-error` : undefined}>
             {services.map(service => <option key={service.value} value={service.value}>{service.label}</option>)}
           </select>
           {isErr('service') && <span id={`${formId}-service-error`} className="wa-error">{errors.service}</span>}
-        </div>
+        </div>}
         {volumeOptions && <div className="wa-field"><label htmlFor={`${formId}-volume`}>{volumeLabel} <span aria-hidden="true">(optional)</span></label>
           <select id={`${formId}-volume`} name="monthly_volume" disabled={submitting} value={volume} onChange={event => setVolume(event.target.value)}>
             {volumeOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
           </select>
         </div>}
         </div>
+        {!askService && input('email', 'Email address', 'email', 'you@company.com', 'email', false)}
         <details className="wa-extra"><summary>Add your requirements <span>(optional)</span></summary>
           <div className="wa-field"><label htmlFor={`${formId}-message`}>Anything we should know?</label><textarea id={`${formId}-message`} name="message" rows={2} disabled={submitting} value={form.message} onChange={handleChange('message')} placeholder="Your use case, team size or monthly volume" /></div>
         </details>
@@ -378,7 +404,7 @@ export default function LandingLeadForm({
               onChange={handleChange('company')} />
 
           </div>
-          <div className="llf-field">
+          {askService && <div className="llf-field">
             <label className="llf-label">{serviceLabel} <span className="llf-req">*</span></label>
             <ISelect icon="bi-grid" disabled={submitting}
               value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')}
@@ -386,7 +412,7 @@ export default function LandingLeadForm({
               {services.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
             </ISelect>
             {isErr('service') && <span className="llf-err">{errors.service}</span>}
-          </div>
+          </div>}
         </div>
 
         {/* Monthly Volume (optional — only when volumeOptions prop provided) */}

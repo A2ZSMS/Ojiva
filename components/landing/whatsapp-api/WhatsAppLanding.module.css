@@ -44,6 +44,34 @@
 .heroFoot { max-width: 1176px; padding: 23px 0; margin: auto; border-top: 1px solid #d5ded2; display: flex; gap: 20px; align-items: center; justify-content: space-between; font-size: 12px; }
 .heroFoot > span { color: var(--wa-muted); }
 .heroFoot > div { display: flex; flex-wrap: wrap; gap: 22px; font-weight: 500; }
+/* WhatsApp page hero: headline, form, then the rest. On phones the form comes
+   right after the headline so it is above the fold. */
+.heroGridWa { grid-template-areas: "copy form" "extra form"; row-gap: 0; align-items: start; }
+.heroGridWa .heroCopy { grid-area: copy; align-self: end; }
+.heroGridWa .heroExtra { grid-area: extra; }
+.heroGridWa .formColumn { grid-area: form; align-self: center; }
+.heroSub { font-size: 15px; font-weight: 500; color: var(--wa-ink); margin: 0 0 18px; line-height: 1.6; }
+.heroSub span { color: var(--wa-green); padding: 0 4px; }
+.nearForm { margin-top: 22px; padding: 0 4px; }
+.page .nearFormTitle { font-size: 13px; letter-spacing: .4px; margin: 0 0 12px; color: var(--wa-ink); }
+.quickSteps { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 12px; }
+.quickSteps li { display: flex; gap: 12px; align-items: flex-start; }
+.quickSteps li > span { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--wa-green); color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }
+.quickSteps strong { display: block; font-size: 13px; font-weight: 600; }
+.quickSteps small { display: block; font-size: 12px; color: var(--wa-muted); line-height: 1.5; }
+.quickFaqs details { border-bottom: 1px solid var(--wa-line); }
+.quickFaqs details:first-child { border-top: 1px solid var(--wa-line); }
+.quickFaqs summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 0; font-size: 13px; font-weight: 500; cursor: pointer; min-height: 44px; }
+.quickFaqs summary::-webkit-details-marker { display: none; }
+.quickFaqs summary svg { flex-shrink: 0; transition: transform .15s; }
+.quickFaqs details[open] summary svg { transform: rotate(180deg); }
+.quickFaqs details > p { font-size: 12px; color: var(--wa-muted); line-height: 1.7; margin: 0; padding-bottom: 13px; }
+@media (max-width: 800px) {
+  .heroGridWa { grid-template-areas: "copy" "form" "extra"; row-gap: 26px; }
+  .heroGridWa .heroCopy { align-self: auto; }
+  .heroGridWa .heroCopy h1 { margin-bottom: 12px; }
+  .heroSub { margin: 0; font-size: 14px; }
+}
 .formPanel { border: 1px solid #d6dfd2; border-radius: 16px; background: #fff; padding: 30px; box-shadow: 0 12px 34px #253e2410; }
 .page :global(.wa-enquiry) { display: flex; flex-direction: column; gap: 16px; }
 .page :global(.wa-form-intro > span) { color: var(--wa-green); font-size: 9px; letter-spacing: .8px; font-weight: 600; }
@@ -63,7 +91,7 @@
 .page :global(.wa-extra summary) { font-size: 12px; color: var(--wa-green); min-height: 32px; }
 .page :global(.wa-extra summary span) { color: var(--wa-muted); }
 .page :global(.wa-extra[open] .wa-field) { margin-top: 12px; }
-.page :global(.wa-consent) { display: flex; align-items: flex-start; gap: 9px; font-size: 10px; line-height: 1.7; color: var(--wa-muted); margin: 0; }
+.page :global(.wa-consent) { display: block; font-size: 10px; line-height: 1.7; color: var(--wa-muted); margin: 0; }
 .page :global(.wa-consent input) { appearance: auto; accent-color: var(--wa-green); width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0; }
 .page :global(.wa-consent a) { color: var(--wa-green); text-decoration: underline; }
 .page :global(.wa-submit) { width: 100%; min-height: 51px; border: 0; border-radius: 7px; background: var(--wa-green); color: #fff; font-size: 14px; font-weight: 600; transition: background .15s; }
