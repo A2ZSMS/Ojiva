@@ -1,3 +1,4 @@
+import SwipeHint from '@/components/ui/SwipeHint';
 import {
   RiShieldKeyholeLine,
   RiLock2Line,
@@ -108,7 +109,8 @@ export default function SecuritySection() {
         </div>
 
         {/* Security feature cards */}
-        <SpotlightGroup className="row g-4">
+        {/* Phones: one swipeable row instead of six stacked cards (.m-swipe) */}
+        <SpotlightGroup className="row g-4 m-swipe">
           {SECURITY_FEATURES.map(({ icon: Icon, title, desc, color, bg }, i) => (
             <Reveal
               key={title}
@@ -130,6 +132,7 @@ export default function SecuritySection() {
             </Reveal>
           ))}
         </SpotlightGroup>
+        <SwipeHint dark />
 
         {/* Trust bar */}
         <Reveal

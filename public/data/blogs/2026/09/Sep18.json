@@ -80,7 +80,7 @@
     },
     {
       "id": "send-example",
-      "label": "Send Request Example"
+      "label": "What a Send Needs"
     },
     {
       "id": "delivery-reports",
@@ -153,7 +153,7 @@
             {
               "icon": "bi-key-fill",
               "title": "Request and authentication:",
-              "desc": "your application calls the endpoint with an API key; the platform checks credentials, the sender ID and the traffic type before anything moves."
+              "desc": "your application sends the request; the platform checks your account, the sender ID and the traffic type before anything moves."
             },
             {
               "icon": "bi-file-earmark-check-fill",
@@ -324,19 +324,19 @@
           "type": "icon-list",
           "items": [
             {
-              "icon": "bi-key-fill",
-              "title": "Get your credentials:",
-              "desc": "generate an API key and note your registered sender ID and approved template IDs."
+              "icon": "bi-clipboard-check",
+              "title": "Get your details ready:",
+              "desc": "keep your registered sender ID and approved template IDs ready."
             },
             {
               "icon": "bi-link-45deg",
-              "title": "Call the send endpoint:",
-              "desc": "post the recipient number, sender ID, template ID and message body from your application."
+              "title": "Send the message:",
+              "desc": "your website or CRM sends the recipient number, sender ID, template and message text to the platform."
             },
             {
               "icon": "bi-arrow-return-left",
-              "title": "Handle the webhook:",
-              "desc": "receive delivery reports on a callback URL so your system knows the real outcome, not just that the request was accepted."
+              "title": "Track delivery:",
+              "desc": "delivery reports flow back to your system so you know the real outcome, not just that the message was accepted."
             },
             {
               "icon": "bi-shield-fill-plus",
@@ -349,19 +349,19 @@
     },
     {
       "id": "send-example",
-      "heading": "A Simple Send Request, Step by Step",
+      "heading": "What Every Message Send Needs",
       "blocks": [
         {
           "type": "p",
-          "html": "A basic send is a single authenticated HTTP request. The example below shows the shape of a typical call — an endpoint, an authorization header carrying your API key, and a small JSON body with the sender, recipient, template reference and message text."
+          "html": "Every business text message carries the same four pieces of information, whether it is sent from a dashboard or triggered automatically by your website or CRM."
         },
         {
           "type": "p",
-          "html": "<pre><code>curl -X POST https://api.ojiva.ai/v1/sms/send \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"sender\": \"OJIVAI\",\n        \"to\": \"91XXXXXXXXXX\",\n        \"template_id\": \"YOUR_DLT_TEMPLATE_ID\",\n        \"message\": \"Your OTP is 4321. Valid for ten minutes.\"\n      }'</code></pre>"
+          "html": "The <em>sender</em> is your registered header, the <em>recipient</em> is the customer's mobile number, the <em>template</em> links the content to your approved DLT template, and the <em>message</em> text must match that template exactly. If any one of these is missing or does not match, the message is rejected before it reaches the network."
         },
         {
           "type": "p",
-          "html": "The <em>sender</em> is your registered header, <em>to</em> is the recipient in international format, <em>template_id</em> ties the content to your approved DLT template, and <em>message</em> must match that template. One thing to remember: a success response here means the platform accepted the request — not that the message reached the phone. Actual delivery is confirmed separately through the delivery report."
+          "html": "One thing to remember: when a message is accepted for sending, that only means the platform has taken it — not that it has reached the phone. Actual delivery is confirmed separately through the delivery report, covered in the next section."
         }
       ]
     },
@@ -376,7 +376,12 @@
         {
           "type": "table",
           "caption": "Common DLR statuses and how to respond",
-          "headers": ["Status", "What it means", "Common cause", "What to do"],
+          "headers": [
+            "Status",
+            "What it means",
+            "Common cause",
+            "What to do"
+          ],
           "rows": [
             [
               "Delivered",
@@ -790,7 +795,7 @@
             },
             {
               "q": "How do I integrate messaging with my website or CRM?",
-              "a": "<p>Most teams use a REST endpoint: generate an API key, call the send endpoint with the recipient, sender ID and template ID, and set a webhook URL to receive delivery reports. Add retries for soft failures and a fallback channel for critical messages. High-volume aggregators may use SMPP instead.</p>"
+              "a": "<p>Most teams connect their website or CRM directly to the messaging platform so each event sends the right message with the recipient, sender ID and template, and delivery reports flow back automatically. Add retries for soft failures and a fallback channel for critical messages. High-volume aggregators may use SMPP instead.</p>"
             },
             {
               "q": "What is the difference between transactional and promotional SMS?",

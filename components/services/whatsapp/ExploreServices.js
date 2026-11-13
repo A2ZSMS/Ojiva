@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerGrid, StaggerGridItem } from '@/components/ui/Animations';
@@ -20,7 +21,7 @@ export default function ExploreServices() {
           {SERVICES.map(({ href, icon, title, desc, color }) => (
             <StaggerGridItem key={href} className="col-12 col-sm-6 col-lg-3">
               <Link href={href} className="service-cross-card">
-                <span className="scc-icon" style={{ background: `${color}14`, color }}>{icon}</span>
+                <span className="scc-icon" style={{ background: `${color}14`, color }}><Ico e={icon} /></span>
                 <h3 className="scc-title">{title}</h3>
                 <p className="scc-desc">{desc}</p>
                 <span className="scc-arrow" style={{ color }}>Explore →</span>

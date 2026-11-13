@@ -1,45 +1,105 @@
-/* Lead popup — desktop: centred modal over a dim backdrop.
-   Touch: a card docked to the bottom of the screen, no backdrop, so the
-   page stays usable. Both are position:fixed (no layout shift). */
+/* Lead popup (redesigned Nov 2026).
+   Desktop: centred modal over a dim, blurred backdrop — two panels: a dark
+            brand panel with proof on the left, the form on the right.
+   Touch:   a sheet docked to the bottom of the screen with a drag handle and
+            no backdrop, so the page stays usable; the brand panel is hidden.
+   Both are position:fixed (no layout shift). Motion is switched off by the
+   site-wide "reduce motion" rule in globals.css. */
 
 .backdrop {
   position: fixed; inset: 0; z-index: 1090;
   display: flex; align-items: center; justify-content: center;
   padding: 16px;
-  background: rgba(6, 12, 24, 0.55);
-  animation: lpFade 0.2s ease-out;
+  background: rgba(6, 12, 24, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: lpFade 0.22s ease-out;
 }
 .dock {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 1090;
-  padding: 0 12px calc(12px + env(safe-area-inset-bottom));
-  animation: lpRise 0.28s ease-out;
+  animation: lpRise 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* ── Card ─────────────────────────────────────────────── */
 .card {
-  position: relative; overflow: hidden auto;
-  width: 100%; max-width: 420px; max-height: calc(100vh - 32px); margin: 0 auto;
-  padding: 28px 26px 16px;
+  position: relative;
+  display: grid; grid-template-columns: 300px minmax(0, 1fr);
+  width: 100%; max-width: 820px; max-height: calc(100vh - 32px); margin: 0 auto;
+  overflow: hidden;
   background: #ffffff; color: #0f172a;
-  border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(6, 12, 24, 0.28);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(6, 12, 24, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.06);
   font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
 }
-.card::before {
-  content: ''; position: absolute; inset: 0 0 auto; height: 4px;
-  background: linear-gradient(90deg, #00c8f8 0%, #1B48E0 100%);
-}
+.backdrop .card { animation: lpPop 0.34s cubic-bezier(0.22, 1, 0.36, 1); }
 .dock .card {
-  max-width: 480px; max-height: 85vh;
-  padding: 20px 16px 10px;
-  box-shadow: 0 -8px 40px rgba(6, 12, 24, 0.22);
+  display: block;
+  max-width: 520px; max-height: 88vh;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 -12px 48px rgba(6, 12, 24, 0.28);
+}
+
+/* ── Brand panel (desktop only) ───────────────────────── */
+.brand {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: 18px;
+  padding: 30px 26px 26px;
+  color: #e2e8f0;
+  background:
+    radial-gradient(420px circle at 0% 0%, rgba(0, 200, 248, 0.22), transparent 60%),
+    radial-gradient(380px circle at 100% 100%, rgba(27, 72, 224, 0.42), transparent 62%),
+    #060c18;
+}
+.brand::after {            /* faint grid, like the site's dark sections */
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.brand > * { position: relative; z-index: 1; }
+.brandLogo { width: auto; height: 34px; align-self: flex-start; }
+.brandLead { margin: 0; font-size: 17px; line-height: 1.45; font-weight: 600; color: #ffffff; }
+.points { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.points li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #cbd5e1; }
+.points i {
+  flex: 0 0 30px; height: 30px; display: grid; place-items: center;
+  border-radius: 9px; font-size: 15px; color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.1); border: 1px solid rgba(125, 211, 252, 0.18);
+}
+.review {
+  margin: auto 0 0; padding: 14px 14px 12px;
+  border-radius: 14px; background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.review blockquote { margin: 0 0 8px; font-size: 13px; line-height: 1.55; color: #e2e8f0; }
+.review figcaption { font-size: 12px; color: #94a3b8; }
+.rating {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px; color: #cbd5e1; text-decoration: none;
+}
+.rating:hover, .rating:focus-visible { color: #ffffff; }
+.stars { color: #fbbf24; letter-spacing: 1px; font-size: 13px; }
+.dock .brand { display: none; }
+
+/* ── Form panel ───────────────────────────────────────── */
+.main { position: relative; min-width: 0; padding: 30px 28px 18px; overflow-y: auto; max-height: calc(100vh - 32px); }
+.dock .main { padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); max-height: 88vh; }
+
+.handle { display: none; }
+.dock .handle {
+  display: block; width: 40px; height: 4px; margin: 0 auto 12px;
+  border-radius: 4px; background: #cbd5e1;
 }
 
 .close {
-  position: absolute; top: 10px; right: 10px;
+  position: absolute; top: 12px; right: 12px; z-index: 2;
   width: 36px; height: 36px; display: grid; place-items: center;
   border: 0; border-radius: 50%; background: transparent; color: #64748b; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 .close:hover, .close:focus-visible { background: #f1f5f9; color: #0f172a; }
+.dock .close { top: 14px; right: 10px; }
 
 .eyebrow {
   display: inline-block; margin-bottom: 10px; padding: 4px 10px;
@@ -52,25 +112,52 @@
 .dock .title { font-size: 21px; }
 .dock .sub { margin-bottom: 12px; font-size: 13px; }
 
-.row { display: grid; gap: 10px; }
-.dock .row { grid-template-columns: 1fr 1fr; }
-.field { display: grid; gap: 5px; margin-bottom: 10px; min-width: 0; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.field { display: grid; gap: 6px; margin-bottom: 12px; min-width: 0; }
 .label { font-size: 12.5px; font-weight: 600; color: #334155; }
 .label span { font-weight: 400; color: #94a3b8; }
 
-.input, .select, .phone {
+.input, .phone {
   width: 100%; height: 46px;
-  border: 1.5px solid #dbe2ea; border-radius: 10px; background: #ffffff;
+  border: 1.5px solid #dbe2ea; border-radius: 11px; background: #ffffff;
   font-size: 16px; color: #0f172a;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.input, .select { padding: 0 12px; }
+.input { padding: 0 12px; }
 .phone { display: flex; align-items: center; overflow: hidden; }
 .phone span { padding: 0 8px 0 12px; color: #64748b; font-size: 15px; }
-.phone input { flex: 1; min-width: 0; height: 100%; border: 0; padding: 0 12px 0 0; font-size: 16px; color: #0f172a; background: transparent; }
+.phone input { flex: 1; min-width: 0; height: 100%; border: 0; padding: 0 8px 0 0; font-size: 16px; color: #0f172a; background: transparent; }
 .phone input:focus { outline: none; }
-.input:focus, .select:focus, .phone:focus-within { outline: none; border-color: #1B48E0; box-shadow: 0 0 0 3px rgba(27, 72, 224, 0.15); }
+.input:focus, .phone:focus-within { outline: none; border-color: #1B48E0; box-shadow: 0 0 0 3px rgba(27, 72, 224, 0.15); }
 .invalid { border-color: #ef4444; }
+.valid { border-color: #16a34a; }
+.valid:focus-within { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.16); }
+.phoneOk { margin-right: 10px; font-size: 17px; color: #16a34a; animation: lpTickIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
 .err { font-size: 12px; color: #dc2626; }
+
+/* Chips — service and call-back time */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 38px; padding: 0 13px;
+  border: 1.5px solid #dbe2ea; border-radius: 999px; background: #ffffff;
+  font-size: 13.5px; font-weight: 600; color: #334155; cursor: pointer; white-space: nowrap;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.chip i { font-size: 14px; color: #64748b; transition: color 0.15s ease; }
+.chip:hover { border-color: #93a8f4; }
+.chip:focus-visible { outline: none; border-color: #1B48E0; box-shadow: 0 0 0 3px rgba(27, 72, 224, 0.15); }
+.chip:active { transform: scale(0.97); }
+.chip:disabled { opacity: 0.6; cursor: wait; }
+.chipOn { border-color: #1B48E0; background: rgba(27, 72, 224, 0.08); color: #1B48E0; }
+.chipOn i { color: #1B48E0; }
+/* Phones: one swipeable line per chip group keeps the sheet short */
+.dock .chips {
+  flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 2px 16px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.dock .chips::-webkit-scrollbar { display: none; }
+.dock .chip { flex: 0 0 auto; min-height: 40px; }
 
 .submit {
   width: 100%; height: 50px; margin-top: 4px;
@@ -78,24 +165,54 @@
   background: linear-gradient(135deg, #1B48E0 0%, #2f5cf0 100%); color: #ffffff;
   font-size: 16px; font-weight: 700;
   box-shadow: 0 10px 24px rgba(27, 72, 224, 0.3);
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
-.submit:hover { filter: brightness(1.06); }
+.submit:hover { filter: brightness(1.06); box-shadow: 0 12px 28px rgba(27, 72, 224, 0.36); }
+.submit:active:not(:disabled) { transform: translateY(1px) scale(0.99); }
 .submit:disabled { opacity: 0.7; cursor: wait; }
 
 .apiError { margin: 10px 0 0; font-size: 13px; color: #dc2626; }
 .apiError a { color: inherit; font-weight: 600; }
-.trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; margin: 12px 0 0; font-size: 12px; color: #475569; }
-.consent { margin: 8px 0 0; font-size: 11px; line-height: 1.5; color: #64748b; text-align: center; }
+.trust { display: none; }
+/* Phones: no trust row — the sheet must stay short, and the eyebrow already
+   says "no obligation". */
+.dock .field { margin-bottom: 10px; }
+.dock .consent { margin-top: 8px; }
+.dock .noThanks { padding: 6px 8px; }
+.consent { margin: 10px 0 0; font-size: 11px; line-height: 1.5; color: #64748b; text-align: center; }
 .consent a { color: #1B48E0; }
 .noThanks {
   display: block; margin: 4px auto 0; padding: 8px;
   border: 0; background: none; cursor: pointer;
   font-size: 13px; color: #64748b; text-decoration: underline;
 }
-.dock .trust { display: none; }
 
-@keyframes lpFade { from { opacity: 0; } }
-@keyframes lpRise { from { transform: translateY(100%); } }
+/* ── Thank-you state ──────────────────────────────────── */
+.success { display: grid; justify-items: center; text-align: center; padding: 46px 8px 40px; }
+.success .title { margin: 0 0 6px; }
+.success .sub { margin: 0; max-width: 300px; }
+.tick {
+  width: 68px; height: 68px; margin-bottom: 18px;
+  display: grid; place-items: center; border-radius: 50%;
+  color: #ffffff; background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.35);
+  animation: lpTickIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tick path { stroke-dasharray: 24; stroke-dashoffset: 24; animation: lpDraw 0.4s ease-out 0.2s forwards; }
+
+/* Narrow desktop windows: drop the brand panel rather than squeeze the form */
+@media (max-width: 720px) {
+  .backdrop .card { grid-template-columns: minmax(0, 1fr); max-width: 440px; }
+  .backdrop .brand { display: none; }
+  .backdrop .trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; margin: 10px 0 0; font-size: 12px; color: #475569; }
+}
+
+@keyframes lpFade   { from { opacity: 0; } }
+@keyframes lpRise   { from { transform: translateY(100%); } }
+@keyframes lpPop    { from { opacity: 0; transform: translateY(14px) scale(0.97); } }
+@keyframes lpTickIn { from { opacity: 0; transform: scale(0.4); } }
+@keyframes lpDraw   { to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) {
-  .backdrop, .dock { animation: none; }
+  .backdrop, .dock, .backdrop .card, .phoneOk, .tick { animation: none; }
+  .tick path { animation: none; stroke-dashoffset: 0; }
 }

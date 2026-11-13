@@ -57,7 +57,7 @@ export default function SolutionsHub() {
                 </FadeUp>
                 <FadeUp delay={0.2}>
                   <div className="d-flex flex-wrap gap-3 mb-4">
-                    <Link href="/contact" className="btn-hero-primary">Talk to Sales →</Link>
+                    <Link href="/contact" className="btn-hero-primary">Talk to Sales <span className="btn-arrow" aria-hidden="true">→</span></Link>
                     <Link href="/book-demo" className="btn-hero-outline">Book a Demo</Link>
                   </div>
                 </FadeUp>

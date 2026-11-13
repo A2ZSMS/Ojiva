@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { INTEGRATIONS } from './data';
@@ -19,7 +20,7 @@ export default function Integrations() {
         <StaggerContainer className="integration-grid" staggerDelay={0.05}>
           {INTEGRATIONS.map(({ icon, name }) => (
             <StaggerItem className="integration-item" key={name}>
-              <span className="integration-item-icon" aria-hidden="true">{icon}</span>
+              <span className="integration-item-icon" aria-hidden="true"><Ico e={icon} /></span>
               <span>{name}</span>
             </StaggerItem>
           ))}

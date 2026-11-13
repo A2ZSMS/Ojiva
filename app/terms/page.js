@@ -34,7 +34,7 @@ const SECTIONS = [
     title: '2. Description of Services',
     blocks: [
       { type: 'para', text: 'Ojiva AI provides an AI-powered business communication and automation platform, including but not limited to:' },
-      { type: 'list', items: ['AI Messaging Automation — SMS and WhatsApp campaign management, two-way intelligent messaging, and drip sequence automation', 'AI Voice Automation — Inbound and outbound AI voice agents, IVR replacement, call transcription, and sentiment analysis', 'Lead Intelligence & Routing — AI-powered lead scoring, enrichment, deduplication, and smart routing to CRM or sales teams', 'Workflow Orchestration — No-code automation builder, event-driven trigger execution, and API/webhook orchestration', 'API & Integration Layer — RESTful APIs, SDK libraries, and native connectors to third-party business tools'] },
+      { type: 'list', items: ['AI Messaging Automation — SMS and WhatsApp campaign management, two-way intelligent messaging, and drip sequence automation', 'AI Voice Automation — Inbound and outbound AI voice agents, IVR replacement, call transcription, and sentiment analysis', 'Lead Intelligence & Routing — AI-powered lead scoring, enrichment, deduplication, and smart routing to CRM or sales teams', 'Workflow Orchestration — No-code automation builder, event-driven trigger execution, and API/webhook orchestration', 'API & Integration Layer — integrations and native connectors to third-party business tools'] },
       { type: 'para', text: 'We reserve the right to modify, suspend, or discontinue any feature or component of the Services at any time, with reasonable notice where practicable.' },
     ],
   },

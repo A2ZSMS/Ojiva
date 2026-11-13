@@ -249,7 +249,8 @@
 }
 
 @media (max-width: 575.98px) {
-  .home-shell :is(.section-padding, .security-section) { padding-block: 52px; }
+  /* .ind-section was missing here, so on phones it alone kept the 68px tablet value */
+  .home-shell :is(.section-padding, .ind-section, .security-section) { padding-block: 52px; }
   .home-shell .security-section .mb-5 { margin-bottom: 24px !important; padding-bottom: 0 !important; }
   .home-shell .security-section .row { --bs-gutter-y: 16px; }
   .home-shell :is(.ojv-svc-grid-top, .ojv-svc-grid) { gap: 16px; }

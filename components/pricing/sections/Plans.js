@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useState } from 'react';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -25,7 +26,7 @@ const PLANS = {
         'Email support (48h)',
         'REST API access',
       ],
-      cta: 'Get Started Free',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -43,7 +44,7 @@ const PLANS = {
         'Dedicated account support',
         'Priority routing',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -81,7 +82,7 @@ const PLANS = {
         'Email support (48h)',
         'REST API access',
       ],
-      cta: 'Get Started Free',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -99,7 +100,7 @@ const PLANS = {
         'Dedicated account support',
         'Chatbot builder access',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -137,7 +138,7 @@ const PLANS = {
         'Email support (48h)',
         'REST API access',
       ],
-      cta: 'Get Started Free',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -155,7 +156,7 @@ const PLANS = {
         'Dedicated account support',
         'A/B test campaigns',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -193,7 +194,7 @@ const PLANS = {
         'Email support (48h)',
         'REST API access',
       ],
-      cta: 'Get Started Free',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -211,7 +212,7 @@ const PLANS = {
         'Dedicated account support',
         'Real-time call recordings',
       ],
-      cta: 'Start Free Trial',
+      cta: 'Request Free Trial',
       ctaHref: '/contact',
     },
     {
@@ -262,10 +263,10 @@ export default function Plans() {
                   className={`pricing-tab${activeChannel === ch ? ' pricing-tab-active' : ''}`}
                   style={activeChannel === ch ? { borderColor: CHANNEL_ACCENTS[ch], color: CHANNEL_ACCENTS[ch], background: `${CHANNEL_ACCENTS[ch]}12` } : {}}
                 >
-                  {ch === 'SMS' && '📱 '}
-                  {ch === 'WhatsApp' && '💬 '}
-                  {ch === 'RCS' && '✨ '}
-                  {ch === 'Voice' && '🎙️ '}
+                  {ch === 'SMS' && <><Ico e="📱" />{' '}</>}
+                  {ch === 'WhatsApp' && <><Ico e="💬" />{' '}</>}
+                  {ch === 'RCS' && <><Ico e="✨" />{' '}</>}
+                  {ch === 'Voice' && <><Ico e="🎙" />{' '}</>}
                   {ch}
                 </button>
               ))}
@@ -283,7 +284,7 @@ export default function Plans() {
               >
                 {plan.highlight && (
                   <div className="pricing-popular-badge" style={{ background: accentColor }}>
-                    ⭐ {plan.badge}
+                    <Ico e="⭐" /> {plan.badge}
                   </div>
                 )}
                 {!plan.highlight && (
@@ -314,7 +315,7 @@ export default function Plans() {
                   className={plan.highlight ? 'pricing-cta-primary' : 'pricing-cta-outline'}
                   style={plan.highlight ? { background: accentColor } : { color: accentColor, borderColor: `${accentColor}66` }}
                 >
-                  {plan.cta} →
+                  {plan.cta} <span className="btn-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </StaggerItem>

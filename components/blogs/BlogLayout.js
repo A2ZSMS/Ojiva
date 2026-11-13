@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import blogsData from "../../public/data/blog.json";
 import { srcSetFor } from "@/lib/imageSrcSet";
+import ReadingProgress from "./ReadingProgress";
 
 // ── Ojiva AI official social profiles ──
 const SOCIAL_LINKS = {
@@ -140,6 +141,8 @@ const BlogLayout = ({ slug, title, category, toc = [], children }) => {
           `,
         }}
       />
+      {/* Thin bar at the top of the screen that fills as the post is read */}
+      <ReadingProgress />
       <div className="container para-color py-4">
         <div className="row g-4 g-lg-5">
           {/* ── Main article column ───────────────────── */}

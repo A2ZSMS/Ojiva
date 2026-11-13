@@ -1,5 +1,7 @@
 'use client';
 
+import { AutoCount } from '@/components/ui/Premium';
+import Ico from '@/components/ui/Ico';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
@@ -29,7 +31,7 @@ function PreviewCard() {
           { icon: '🎙️', label: 'AI Voice',  val: '2.3K',  color: '#f59e0b' },
         ].map(({ icon, label, val, color }) => (
           <div key={label} className="dbp-ch-chip" style={{ '--cc': color }}>
-            <span>{icon}</span>
+            <span><Ico e={icon} /></span>
             <div>
               <span className="dbp-ch-val">{val}</span>
               <span className="dbp-ch-label">{label}</span>
@@ -64,8 +66,8 @@ function PreviewCard() {
   );
 }
 
-/* ── Left panel ─────────────────────────────────────── */
-export default function LeftPanel() {
+/* ── Shared reveal animation ──────────────────────── */
+function useReveal() {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
   const anim   = (delay = 0) => ({
@@ -73,19 +75,27 @@ export default function LeftPanel() {
     animate: inView ? { opacity: 1, y: 0 } : {},
     transition: { delay, duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   });
+  return { ref, inView, anim };
+}
+
+/* ── Left panel, top: logo + headline ───────────────
+   The left column is split in two so phones can show the form right after
+   the headline (DemoBooking orders them: hero → form → details). On desktop
+   CSS grid stacks both parts in the dark left column beside the form. */
+export default function LeftPanel() {
+  const { ref, anim } = useReveal();
 
   return (
-    <div className="dbp-left" ref={ref}>
+    <div className="dbp-left dbp-left-hero" ref={ref}>
       {/* Background layers */}
       <div className="dbp-bg-mesh" aria-hidden="true" />
       <div className="dbp-orb dbp-orb-a" aria-hidden="true" />
-      <div className="dbp-orb dbp-orb-b" aria-hidden="true" />
       <div className="dbp-orb dbp-orb-c" aria-hidden="true" />
 
       <div className="dbp-left-inner">
-        {/* Logo */}
+        {/* Logo (hidden on phones — the navbar already shows it) */}
         <motion.div {...anim(0)} className="dbp-logo-wrap">
-          <Image src="/ojiva-logo-white.webp" alt="Ojiva AI — Book a Free Demo" width={130} height={130} loading="eager" />
+          <Image src="/ojiva-wordmark-white.v1.webp" alt="Ojiva AI — Book a Free Demo" width={148} height={45} loading="eager" />
         </motion.div>
 
         {/* Badge */}
@@ -104,7 +114,21 @@ export default function LeftPanel() {
             A personalised walkthrough around your channels, your volume, and your goals.
           </p>
         </motion.div>
+      </div>
+    </div>
+  );
+}
 
+/* ── Left panel, bottom: preview, benefits, proof ─── */
+export function LeftPanelDetails() {
+  const { ref, inView, anim } = useReveal();
+
+  return (
+    <div className="dbp-left dbp-left-more" ref={ref}>
+      <div className="dbp-bg-mesh" aria-hidden="true" />
+      <div className="dbp-orb dbp-orb-b" aria-hidden="true" />
+
+      <div className="dbp-left-inner">
         {/* Platform preview card */}
         <motion.div
           initial={{ y: 24, scale: 0.97 }}
@@ -118,7 +142,7 @@ export default function LeftPanel() {
         <motion.ul {...anim(0.35)} className="dbp-benefits">
           {BENEFITS.map(({ icon, text }, i) => (
             <li key={i} className="dbp-benefit">
-              <span className="dbp-benefit-icon">{icon}</span>
+              <span className="dbp-benefit-icon"><Ico e={icon} /></span>
               <span>{text}</span>
             </li>
           ))}
@@ -132,7 +156,7 @@ export default function LeftPanel() {
             { v: '< 2h', l: 'Response' },
           ].map(({ v, l }) => (
             <div key={l} className="dbp-stat">
-              <span className="dbp-stat-val">{v}</span>
+              <span className="dbp-stat-val"><AutoCount>{v}</AutoCount></span>
               <span className="dbp-stat-lbl">{l}</span>
             </div>
           ))}

@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, SlideLeft, SlideRight } from '@/components/ui/Animations';
@@ -26,7 +27,7 @@ export default function PlatformFeatures() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 voice-btn-primary d-inline-flex">Build Your Voice Bot →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 voice-btn-primary d-inline-flex">Build Your Voice Bot <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideLeft>
           <SlideRight className="service-feature-visual">
             <div className="svc-stat-list">
@@ -37,7 +38,7 @@ export default function PlatformFeatures() {
                 </div>
               ))}
               <div className="svc-stat-highlight voice-highlight">
-                <span className="svc-stat-highlight-icon">💡</span>
+                <span className="svc-stat-highlight-icon"><Ico e="💡" /></span>
                 <p className="svc-stat-highlight-text">60% reduction in call centre costs on average</p>
               </div>
             </div>
@@ -52,11 +53,11 @@ export default function PlatformFeatures() {
               {CAMPAIGN_STATS.map(({ label, val, icon }) => (
                 <div key={label} className="cb-handoff-msg cb-handoff-msg--bot">
                   <div className="cb-handoff-bubble cb-handoff-bubble--bot">
-                    <span>{icon}</span> {label}: <strong style={{ color: '#fdba74' }}>{val}</strong>
+                    <span><Ico e={icon} /></span> {label}: <strong style={{ color: '#fdba74' }}>{val}</strong>
                   </div>
                 </div>
               ))}
-              <div className="cb-handoff-banner">⚡ 500 concurrent calls — zero agents needed</div>
+              <div className="cb-handoff-banner"><Ico e="⚡" /> 500 concurrent calls — zero agents needed</div>
             </div>
           </SlideLeft>
           <SlideRight className="service-feature-text order-lg-2">
@@ -70,7 +71,7 @@ export default function PlatformFeatures() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 voice-btn-primary d-inline-flex">Launch Your Campaign →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 voice-btn-primary d-inline-flex">Launch Your Campaign <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideRight>
         </div>
       </div>

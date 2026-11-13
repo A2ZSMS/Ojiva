@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, ScalePop } from '@/components/ui/Animations';
 import { COMPARISON } from './data';
@@ -19,16 +20,16 @@ export default function ComparisonTable() {
               <thead>
                 <tr>
                   <th>Feature</th>
-                  <th><span className="compare-th-badge compare-th-badge--bot">🤖 AI Chatbot</span></th>
-                  <th><span className="compare-th-badge compare-th-badge--manual">👤 Manual</span></th>
+                  <th><span className="compare-th-badge compare-th-badge--bot"><Ico e="🤖" /> AI Chatbot</span></th>
+                  <th><span className="compare-th-badge compare-th-badge--manual"><Ico e="👤" /> Manual</span></th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARISON.map(({ feature, chatbot, manual, winner }) => (
                   <tr key={feature}>
                     <td className="compare-feature-name">{feature}</td>
-                    <td className={winner === 'bot' ? 'compare-winner' : ''}>{chatbot} {winner === 'bot' && '✅'}</td>
-                    <td className={winner === 'human' ? 'compare-winner' : ''}>{manual} {winner === 'human' && '✅'}</td>
+                    <td className={winner === 'bot' ? 'compare-winner' : ''}>{chatbot} {winner === 'bot' && <Ico e="✅" style={{ color: '#16a34a' }} />}</td>
+                    <td className={winner === 'human' ? 'compare-winner' : ''}>{manual} {winner === 'human' && <Ico e="✅" style={{ color: '#16a34a' }} />}</td>
                   </tr>
                 ))}
               </tbody>

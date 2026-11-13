@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
@@ -14,13 +15,13 @@ const HOW_STEPS = [
     step: '02',
     icon: '⚡',
     title: 'Ojiva Sends OTP Instantly',
-    desc: 'Your server calls our API. We route the OTP via the fastest available channel — SMS, WhatsApp, or Voice — in under 3 seconds.',
+    desc: 'Your system requests an OTP and we route it via the fastest available channel — SMS, WhatsApp, or Voice — in under 3 seconds.',
   },
   {
     step: '03',
     icon: '✅',
     title: 'User Verifies & Proceeds',
-    desc: 'The user enters the OTP. Your app calls our verify endpoint. Session granted — secure and seamless.',
+    desc: 'The user enters the OTP, we confirm it instantly, and they carry on — secure and seamless.',
   },
 ];
 
@@ -33,7 +34,7 @@ export default function HowItWorks() {
             <SectionHeading
               tag="How It Works"
               title="OTP Delivery in 3 Simple Steps"
-              subtitle="From API call to verified user in under 3 seconds. No complex setup required."
+              subtitle="From request to verified user in under 3 seconds. No complex setup required."
               center
             />
           </div>
@@ -43,7 +44,7 @@ export default function HowItWorks() {
             <StaggerItem key={step} className="col-12 col-md-4">
               <div className="how-card">
                 <div className="how-step">{step}</div>
-                <div className="how-icon">{icon}</div>
+                <div className="how-icon"><Ico e={icon} /></div>
                 <h3 className="how-title">{title}</h3>
                 <p className="how-desc">{desc}</p>
                 {i < HOW_STEPS.length - 1 && <div className="how-connector">→</div>}

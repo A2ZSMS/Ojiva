@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -139,7 +140,7 @@ function PillSelector({ options, value, onChange, name, multi = false }) {
             aria-pressed={sel}
             style={sel && color ? { '--pc': color } : {}}
           >
-            {icon && <span className="dp-pill-icon">{icon}</span>}
+            {icon && <span className="dp-pill-icon"><Ico e={icon} /></span>}
             <span className="dp-pill-label">{label}</span>
             {tag && <span className="dp-pill-tag">{tag}</span>}
           </button>
@@ -337,7 +338,7 @@ export default function DemoForm() {
               <button type="button"
                 className={`dbp-next-btn mt-4${s1ok ? ' active' : ''}`}
                 onClick={() => s1ok && setStep(2)} disabled={!s1ok}>
-                Continue — Business Details <span>→</span>
+                Continue — Business Details <span className="btn-arrow" aria-hidden="true">→</span>
               </button>
             </motion.div>
           )}
@@ -350,12 +351,12 @@ export default function DemoForm() {
               <p className="dbp-step-hint">Help us tailor the demo to your scale.</p>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">🏢 Company size <span className="dbp-opt">(optional)</span></div>
+                <div className="dbp-field-label"><Ico e="🏢" /> Company size <span className="dbp-opt">(optional)</span></div>
                 <PillSelector options={SIZES} value={size} onChange={setSize} name="Company size" />
               </div>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">📨 Monthly message volume <span className="dbp-opt">(optional)</span></div>
+                <div className="dbp-field-label"><Ico e="📨" /> Monthly message volume <span className="dbp-opt">(optional)</span></div>
                 <PillSelector options={VOLUMES} value={volume} onChange={setVol} name="Monthly volume" />
               </div>
 
@@ -364,7 +365,7 @@ export default function DemoForm() {
                 <button type="button"
                   className="dbp-next-btn active"
                   onClick={() => setStep(3)}>
-                  Continue — Channels <span>→</span>
+                  Continue — Channels <span className="btn-arrow" aria-hidden="true">→</span>
                 </button>
               </div>
             </motion.div>
@@ -378,12 +379,12 @@ export default function DemoForm() {
               <p className="dbp-step-hint">What do you want to explore in the demo?</p>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">📡 Channels <span className="dbp-opt">(pick all that apply)</span></div>
+                <div className="dbp-field-label"><Ico e="📡" /> Channels <span className="dbp-opt">(pick all that apply)</span></div>
                 <PillSelector options={CHANNELS} value={channels} onChange={setCh} name="Channels" multi />
               </div>
 
               <div className="dbp-field-group">
-                <div className="dbp-field-label">🕐 Preferred time <span className="dbp-opt">(optional)</span></div>
+                <div className="dbp-field-label"><Ico e="🕐" /> Preferred time <span className="dbp-opt">(optional)</span></div>
                 <PillSelector options={TIMES} value={time} onChange={setTime} name="Time preference" />
               </div>
 
@@ -404,7 +405,7 @@ export default function DemoForm() {
                 {err && (
                   <motion.div className="cf-error mt-2" role="alert"
                     initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
-                    ⚠️ {err}
+                    <Ico e="⚠" /> {err}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -417,7 +418,7 @@ export default function DemoForm() {
                   whileTap={ok ? { scale: 0.97 } : {}}>
                   {status === 'loading'
                     ? <><span className="contact-spinner" /> Booking…</>
-                    : <>🚀 Book My Free Demo</>}
+                    : <>Book My Free Demo</>}
                 </motion.button>
               </div>
 

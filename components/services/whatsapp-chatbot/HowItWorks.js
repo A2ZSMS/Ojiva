@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { HOW_STEPS } from './data';
@@ -18,7 +19,7 @@ export default function HowItWorks() {
             <StaggerItem key={step} className="col-12 col-sm-6 col-lg-3">
               <div className="how-card">
                 <div className="how-step cb-how-step">{step}</div>
-                <div className="how-icon">{icon}</div>
+                <div className="how-icon"><Ico e={icon} /></div>
                 <h3 className="how-title">{title}</h3>
                 <p className="how-desc">{desc}</p>
                 {i < HOW_STEPS.length - 1 && <div className="how-connector">→</div>}

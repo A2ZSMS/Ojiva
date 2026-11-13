@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { USE_CASES } from './data';
@@ -18,7 +19,7 @@ export default function UseCases() {
             <StaggerItem key={title} className="col-12 col-sm-6 col-lg-4">
               <div className="chatbot-usecase-card">
                 <div className="chatbot-usecase-icon" style={{ background: `${color}12`, borderColor: `${color}25` }}>
-                  <span>{icon}</span>
+                  <span><Ico e={icon} /></span>
                 </div>
                 <h3 className="chatbot-usecase-title">{title}</h3>
                 <p className="chatbot-usecase-desc">{desc}</p>

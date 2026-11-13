@@ -7,7 +7,7 @@ import SystemStatus from './sections/SystemStatus';
 import ContactChannels from './sections/ContactChannels';
 import SupportHub from './sections/SupportHub';
 import FAQ, { FAQS } from './sections/FAQ';
-import ChatWidget from './sections/ChatWidget';
+import ReducedMotion from '@/components/ui/ReducedMotion';
 
 const SUPPORT_FAQ_SCHEMA = {
   '@context': 'https://schema.org',
@@ -21,7 +21,7 @@ const SUPPORT_FAQ_SCHEMA = {
 
 export default function SupportPage() {
   return (
-    <>
+    <ReducedMotion>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SUPPORT_FAQ_SCHEMA) }} />
       <Hero />
       <QuickLinks />
@@ -37,7 +37,6 @@ export default function SupportPage() {
         secondaryLabel="Explore the Platform"
         secondaryHref="/platform"
       />
-      <ChatWidget />
-    </>
+    </ReducedMotion>
   );
 }

@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { BlurReveal, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { SMS_TYPES } from './data';
@@ -16,7 +17,7 @@ export default function SmsTypes() {
             <StaggerItem key={title} className="col-12 col-sm-6 col-lg-3">
               <div className="service-type-card">
                 <div className="cb-card-accent" style={{ background: `linear-gradient(90deg, ${color}, ${color}88)` }} />
-                <div className="service-type-icon" style={{ background: `${color}12`, borderColor: `${color}30` }}>{icon}</div>
+                <div className="service-type-icon" style={{ background: `${color}12`, borderColor: `${color}30`, color }}><Ico e={icon} /></div>
                 <h3 className="service-type-title">{title}</h3>
                 <p className="service-type-desc">{desc}</p>
                 <ul className="service-type-points">

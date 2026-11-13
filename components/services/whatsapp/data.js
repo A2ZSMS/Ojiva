@@ -8,7 +8,7 @@ export const WA_TYPES = [
 export const HOW_STEPS = [
   { step: '01', icon: '✅', title: 'Get Meta Verified', desc: 'We handle your WABA creation and Meta Business Manager verification end-to-end.' },
   { step: '02', icon: '📋', title: 'Submit Templates', desc: 'Create and submit message templates for Meta approval with our guidance.' },
-  { step: '03', icon: '🔗', title: 'Connect via API', desc: 'Integrate our WhatsApp API into your CRM or app using REST API or SDK.' },
+  { step: '03', icon: '🔗', title: 'Connect via API', desc: 'Integrate our WhatsApp API into your CRM or app — our team helps you connect it.' },
   { step: '04', icon: '📊', title: 'Send & Analyse', desc: 'Launch campaigns, monitor read rates, and optimise with real-time analytics.' },
 ];
 
@@ -31,10 +31,10 @@ export const METRICS = [
 ];
 
 export const BSP_STATS = [
-  { label: 'BSP Status', val: '✅ Official Meta BSP', color: '#166534' },
-  { label: 'Green Tick', val: '✅ Verified', color: '#166534' },
+  { label: 'BSP Status', val: 'Official Meta BSP', color: '#166534' },
+  { label: 'Green Tick', val: 'Verified', color: '#166534' },
   { label: 'Daily Limit', val: '10M messages/day', color: '#0F766E' },
-  { label: 'Quality Rating', val: '🟢 High', color: '#166534' },
+  { label: 'Quality Rating', val: 'High', color: '#166534' },
   { label: 'Template Approval', val: 'Avg. 2–4 hours', color: '#0369A1' },
 ];
 

@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import { Reveal, SlideLeft, SlideRight, TiltCard3D } from '../ui/Animations';
 import AnimatedChat from './AnimatedChat';
@@ -18,7 +19,7 @@ function AnimatedLeadCard() {
     <div className="lead-score-card-v2" data-reveal-group="" data-rv-margin="80">
       {/* Header */}
       <div className="lsc-header">
-        <span className="lsc-avatar">👤</span>
+        <span className="lsc-avatar"><Ico e="👤" /></span>
         <div>
           <p className="lsc-name">James Okafor</p>
           <p className="lsc-company">TechFlow Enterprises</p>
@@ -28,7 +29,7 @@ function AnimatedLeadCard() {
           className="lsc-badge hot"
           {...part({ '--rv-s': 0.8, '--rv-dur': '0.4s', '--rv-ease': 'cubic-bezier(0.34, 1.56, 0.64, 1)' }, 0.5)}
         >
-          🔥 Hot Lead
+          <Ico e="🔥" /> Hot Lead
         </Reveal>
       </div>
 
@@ -68,7 +69,7 @@ function AnimatedLeadCard() {
         className="lsc-action-row"
         {...part({ '--rv-y': '8px', '--rv-dur': '0.4s' }, 1.05)}
       >
-        <span className="lsc-action-label">⚡ Auto-routed</span>
+        <span className="lsc-action-label"><Ico e="⚡" /> Auto-routed</span>
         <span className="lsc-action-time">0.3s response</span>
       </Reveal>
     </div>
@@ -141,7 +142,7 @@ export default function FeatureDeepDive() {
               ))}
             </ul>
             <Link href="/platform" className="btn-ojiva-primary mt-4 d-inline-block">
-              See Messaging Features →
+              See Messaging Features <span className="btn-arrow" aria-hidden="true">→</span>
             </Link>
           </SlideLeft>
 
@@ -179,7 +180,7 @@ export default function FeatureDeepDive() {
               ))}
             </ul>
             <Link href="/platform" className="btn-ojiva-primary mt-4 d-inline-block">
-              See Lead Intelligence →
+              See Lead Intelligence <span className="btn-arrow" aria-hidden="true">→</span>
             </Link>
           </SlideRight>
 

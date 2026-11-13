@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { motion } from 'framer-motion';
 
 const HERO_STATS = [
@@ -9,7 +10,7 @@ const HERO_STATS = [
   { icon: '🏢', val: '500+',    lab: 'Enterprise Clients' },
 ];
 
-const POPULAR_SEARCHES = ['API Key Setup', 'DLT Registration', 'WhatsApp BSP', 'Webhook Guide', 'OTP Delivery'];
+const POPULAR_SEARCHES = ['DLT Registration', 'WhatsApp BSP', 'Sender ID', 'Message Templates', 'OTP Delivery'];
 
 export default function Hero() {
   return (
@@ -39,7 +40,7 @@ export default function Hero() {
           <div className="sp-hero-stats">
             {HERO_STATS.map(({ icon, val, lab }) => (
               <div key={lab} className="sp-hero-stat">
-                <span className="sp-hero-stat-icon">{icon}</span>
+                <span className="sp-hero-stat-icon"><Ico e={icon} /></span>
                 <span className="sp-hero-stat-val">{val}</span>
                 <span className="sp-hero-stat-lab">{lab}</span>
               </div>
@@ -48,7 +49,7 @@ export default function Hero() {
 
           {/* Quick search */}
           <div className="sp-hero-search-wrap">
-            <span className="sp-hero-search-icon">🔍</span>
+            <span className="sp-hero-search-icon"><Ico e="🔍" /></span>
             <input
               className="sp-hero-search"
               placeholder="What do you need help with? e.g. 'setup WhatsApp API'…"

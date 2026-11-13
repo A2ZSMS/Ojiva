@@ -1,5 +1,6 @@
 'use client';
 
+import { AutoCount } from '@/components/ui/Premium';
 import Link from 'next/link';
 import { srcSetFor } from '@/lib/imageSrcSet';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -251,7 +252,7 @@ export default function IndustryPageLayout({ industry }) {
 
               <FadeUp delay={0.26}>
                 <div className="ind-lp-hero-ctas">
-                  <Link href="/contact" className="btn-hero-primary">Get Started →</Link>
+                  <Link href="/contact" className="btn-hero-primary">Get Started <span className="btn-arrow" aria-hidden="true">→</span></Link>
                   <Link href="/book-demo" className="btn-hero-outline ind-lp-demo-btn">Book a Demo</Link>
                 </div>
               </FadeUp>
@@ -351,11 +352,11 @@ export default function IndustryPageLayout({ industry }) {
                 <FadeUp>
                   <div className="ind-lp-intro-stats">
                     <div className="ind-lp-intro-stat" style={{ '--ind-color': color }}>
-                      <span className="ind-lp-intro-stat-num" style={{ color }}>500+</span>
+                      <span className="ind-lp-intro-stat-num" style={{ color }}><AutoCount>500+</AutoCount></span>
                       <span className="ind-lp-intro-stat-label">Businesses Served</span>
                     </div>
                     <div className="ind-lp-intro-stat" style={{ '--ind-color': color }}>
-                      <span className="ind-lp-intro-stat-num" style={{ color }}>48h</span>
+                      <span className="ind-lp-intro-stat-num" style={{ color }}><AutoCount>48h</AutoCount></span>
                       <span className="ind-lp-intro-stat-label">Go-Live Time</span>
                     </div>
                   </div>
@@ -451,7 +452,7 @@ export default function IndustryPageLayout({ industry }) {
                       className="ind-lp-feat-cta"
                       style={{ background: meta.color }}
                     >
-                      Explore {cf.label} →
+                      Explore {cf.label} <span className="btn-arrow" aria-hidden="true">→</span>
                     </Link>
                   </SlideLeft>
                 </div>

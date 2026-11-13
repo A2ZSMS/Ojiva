@@ -10,6 +10,7 @@
  *  ✅  Google Search Console           — vN4OHQQeiL2iCSQ2Q7Jq26BjIL168rxdI9k4RwGcjLI
  *  ✅  Meta Pixel                      — 1051828620576144
  *  ✅  OpenAI Ads Pixel                 — 4DoGQbov6wt75SWWt5HFTF
+ *  ✅  Core Web Vitals → GA4            — WebVitalsReporter.js (LCP/INP/CLS/FCP/TTFB events)
  *
  * ⚠️  DO NOT REMOVE OR COMMENT OUT these scripts — they track all site traffic.
  *     GA4 is NOT configured inside GTM (only Google Ads + Clarity are) — keep the
@@ -18,6 +19,7 @@
  */
 
 import AttributionCapture from './AttributionCapture';
+import WebVitalsReporter from './WebVitalsReporter';
 
 /* ── Config — only edit values here ─────────────────────── */
 const GA_MEASUREMENT_ID           = 'G-FYZX6KFBEL';
@@ -44,6 +46,9 @@ export default function Analytics() {
     <>
       {/* ── UTM / click-ID capture (client-only) ── */}
       <AttributionCapture />
+
+      {/* ── Real-visitor speed scores → GA4 (client-only, deferred) ── */}
+      <WebVitalsReporter />
 
       {/* ── Google Analytics 4 (config queued now, gtag.js deferred) ── */}
       <script

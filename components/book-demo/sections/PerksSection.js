@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -28,7 +29,7 @@ export default function PerksSection() {
             initial={{ y: 12 }}
             animate={inView ? { y: 0 } : {}}
             transition={{ delay: 0.4 + i * 0.06, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
-            <span className="dbp-perk-icon">{icon}</span>
+            <span className="dbp-perk-icon"><Ico e={icon} /></span>
             <div>
               <strong className="dbp-perk-title">{title}</strong>
               <span className="dbp-perk-desc">{desc}</span>

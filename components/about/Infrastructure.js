@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { INFRA } from './data';
@@ -20,7 +21,7 @@ export default function Infrastructure() {
           {INFRA.map(({ icon, title, desc }) => (
             <StaggerItem className="col-12 col-md-6 col-lg-4" key={title}>
               <div className="about-infra-card">
-                <div className="about-infra-icon" aria-hidden="true">{icon}</div>
+                <div className="about-infra-icon" aria-hidden="true"><Ico e={icon} /></div>
                 <h4 className="about-infra-title">{title}</h4>
                 <p className="about-infra-desc">{desc}</p>
               </div>

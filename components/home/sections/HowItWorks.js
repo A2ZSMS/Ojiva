@@ -6,6 +6,7 @@ import {
   ClipReveal,
   RotateIn,
 } from '@/components/ui/Animations';
+import TimelineProgress from './TimelineProgress';
 
 const HOW_IT_WORKS = [
   {
@@ -48,9 +49,11 @@ export default function HowItWorks() {
           />
         </ClipReveal>
 
-        <div className="ojv-timeline mt-5">
-          {/* Connecting line */}
+        {/* Steps light up one by one as the section scrolls into view (TimelineProgress) */}
+        <TimelineProgress className="ojv-timeline mt-5">
+          {/* Connecting line + the solid fill that grows along it on scroll */}
           <div className="ojv-timeline-line" aria-hidden="true" />
+          <div className="ojv-timeline-fill" aria-hidden="true" />
           {HOW_IT_WORKS.map(({ step, title, desc, icon: Icon }, i) => (
             <RotateIn key={step} delay={i * 0.12}>
               <div className="ojv-timeline-step">
@@ -65,7 +68,7 @@ export default function HowItWorks() {
               </div>
             </RotateIn>
           ))}
-        </div>
+        </TimelineProgress>
       </div>
     </section>
   );

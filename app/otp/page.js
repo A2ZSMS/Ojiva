@@ -50,7 +50,7 @@ const OTP_FAQS = [
   },
   {
     q: 'How do I integrate Ojiva AI OTP into my app?',
-    a: 'A single REST API handles OTP generation, multi-channel delivery, and verification. Code samples are available so most integrations can be wired up by a developer in a short session.',
+    a: 'One integration handles OTP generation, multi-channel delivery and verification. Our team helps your developers connect it, and most businesses go live within a day.',
   },
   {
     q: 'Is my customer data secure?',

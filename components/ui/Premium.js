@@ -105,3 +105,23 @@ export function CountUp({ value, decimals = 0, prefix = '', suffix = '', duratio
 
   return <span ref={ref} className="count-up">{format(value)}</span>;
 }
+
+/* AutoCount — CountUp for a stat written as text, e.g. "500+", "98.4%",
+   "<3s", "< 2h", "₹0.15", "3B+". Splits it into a short symbol prefix, one
+   number and a short unit. Anything else ("24/7", "4-in-1", "DLT",
+   "Free 14-day", "10,000+") is shown unchanged, so it is always safe to
+   wrap a stat value in it. */
+export function AutoCount({ children }) {
+  const text = typeof children === 'string' || typeof children === 'number' ? String(children) : null;
+  const m = text && text.match(/^([<>~≈₹$+\s]{0,3})(\d+(?:\.\d+)?)(\s?[A-Za-z%+]{0,3})$/);
+  if (!m) return children;
+  const [, prefix, num, suffix] = m;
+  return (
+    <CountUp
+      value={parseFloat(num)}
+      decimals={(num.split('.')[1] || '').length}
+      prefix={prefix}
+      suffix={suffix}
+    />
+  );
+}

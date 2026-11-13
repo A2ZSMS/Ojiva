@@ -33,7 +33,7 @@
 .content { width: min(100%, 860px); text-align: center; position: relative; z-index: 1; }
 
 .logo { display: inline-flex; margin-bottom: 18px; }
-.logo img { width: 104px; height: auto; object-fit: contain; }
+.logo img { width: 132px; height: auto; object-fit: contain; }
 
 /* Big numerals — a little smaller than before to make room for the finder */
 .code {

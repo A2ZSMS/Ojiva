@@ -81,7 +81,7 @@ export default function NotFound() {
 
       <div className={styles.content}>
         <Link href="/" className={styles.logo} aria-label="Ojiva AI home">
-          <Image src="/ojiva-logo-white.webp" alt="Ojiva AI" width={104} height={42} priority />
+          <Image src="/ojiva-wordmark-white.v1.webp" alt="Ojiva AI" width={132} height={40} priority />
         </Link>
 
         <div className={styles.code} aria-hidden="true"><span>4</span><i>0</i><span>4</span></div>

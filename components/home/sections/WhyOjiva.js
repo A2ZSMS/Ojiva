@@ -50,7 +50,7 @@ export default function WhyOjiva() {
             />
             <MagneticButton className="magnetic-btn-wrap">
               <Link href="/contact" className="btn-ojiva-primary">
-                Book a Free Demo →
+                Book a Free Demo <span className="btn-arrow" aria-hidden="true">→</span>
               </Link>
             </MagneticButton>
           </SlideLeft>

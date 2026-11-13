@@ -189,10 +189,10 @@ export default function Navbar({ industryLinks = [] }) {
         {/* Logo — white when homepage hero is in view, coloured otherwise */}
         <Link className="navbar-brand" href="/" aria-label="Ojiva AI Home">
           <Image
-            src={isHome && (!scrolled || overDark) && !menuOpen ? '/ojiva-logo-white.webp' : '/ojiva-logo-192.v1.webp'}
+            src={isHome && (!scrolled || overDark) && !menuOpen ? '/ojiva-wordmark-white.v1.webp' : '/ojiva-wordmark.v1.webp'}
             alt="Ojiva AI — AI Communication Platform for Bulk SMS, WhatsApp Business API, RCS & Voice"
-            width={180}
-            height={106}
+            width={131}
+            height={40}
             className="nav-logo"
             priority
           />
@@ -403,7 +403,7 @@ export default function Navbar({ industryLinks = [] }) {
           </ul>
 
           <div className="nav-cta-group mt-3 mt-lg-0">
-            <Link href="/book-demo" className="nav-cta">Book a Demo →</Link>
+            <Link href="/book-demo" className="nav-cta">Book a Demo <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
       </div>

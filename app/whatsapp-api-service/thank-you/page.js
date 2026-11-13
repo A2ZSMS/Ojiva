@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,6 +9,7 @@ export const metadata = {
     follow: false,
     googleBot: { index: false, follow: false },
   },
+  alternates: { canonical: 'https://www.ojiva.ai/whatsapp-api-service/thank-you/' },
 };
 
 export default function ThankYouPage() {
@@ -19,10 +21,10 @@ export default function ThankYouPage() {
         <div className="lp-header-inner">
           <Link href="/" aria-label="Ojiva AI Home">
             <Image
-              src="/ojiva-logo-optimized.webp"
+              src="/ojiva-wordmark.v1.webp"
               alt="Ojiva AI"
-              width={110}
-              height={32}
+              width={132}
+              height={40}
               priority
               unoptimized
               style={{ height: 'auto' }}
@@ -37,7 +39,7 @@ export default function ThankYouPage() {
 
           <div className="ty-icon-wrap">
             <div className="ty-icon-ring" />
-            <span className="ty-icon">✅</span>
+            <span className="ty-icon"><Ico e="✅" style={{ color: '#22c55e' }} /></span>
           </div>
 
           <h1 className="ty-h1">You&rsquo;re all set!</h1>

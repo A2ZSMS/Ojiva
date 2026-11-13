@@ -111,7 +111,7 @@ export default function BlogPreview() {
         {/* View all */}
         <div className="text-center mt-5">
           <Link href="/blogs" className="hp-blog-view-all">
-            View All Articles →
+            View All Articles <span className="btn-arrow" aria-hidden="true">→</span>
           </Link>
         </div>
 

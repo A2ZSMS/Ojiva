@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -89,10 +90,10 @@ export default function Footer() {
           <div className="footer-brand-col">
             <Link href="/" className="footer-logo-link" aria-label="Ojiva AI Home">
               <Image
-                src="/ojiva-logo-white.webp"
+                src="/ojiva-wordmark-white.v1.webp"
                 alt="Ojiva AI — AI Communication Platform India (Bulk SMS, WhatsApp Business API, RCS, Voice)"
-                width={65}
-                height={65}
+                width={125}
+                height={38}
                 className="footer-logo"
                 loading="lazy"
               />
@@ -123,9 +124,9 @@ export default function Footer() {
 
             {/* Trust badges */}
             <div className="footer-trust-badges">
-              <span className="footer-trust-badge">🔒 GDPR Compliant</span>
+              <span className="footer-trust-badge"><Ico e="🔒" /> GDPR Compliant</span>
               <span className="footer-trust-badge">🇮🇳 DLT Registered</span>
-              <span className="footer-trust-badge">⚡ 99.9% Uptime</span>
+              <span className="footer-trust-badge"><Ico e="⚡" /> 99.9% Uptime</span>
             </div>
 
           </div>
@@ -176,7 +177,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="footer-contact-icon">📍</span>
+                <span className="footer-contact-icon"><Ico e="📍" /></span>
                 <span>
                   183, 2nd Floor, G Block,<br />
                   Opposite Reliance Trends,<br />
@@ -185,15 +186,15 @@ export default function Footer() {
                 </span>
               </a>
               <a className="footer-contact-item" href="mailto:info@ojiva.ai">
-                <span className="footer-contact-icon">✉️</span>
+                <span className="footer-contact-icon"><Ico e="📧" /></span>
                 <span>info@ojiva.ai</span>
               </a>
               <a className="footer-contact-item" href="tel:+918431086185">
-                <span className="footer-contact-icon">📞</span>
+                <span className="footer-contact-icon"><Ico e="📞" /></span>
                 <span>+91 84310 86185</span>
               </a>
               <div className="footer-hours">
-                <span className="footer-contact-icon">🕑</span>
+                <span className="footer-contact-icon"><Ico e="🕑" /></span>
                 <span>
                   <strong>Mon – Sat</strong><br />
                   10:00 AM – 7:00 PM IST

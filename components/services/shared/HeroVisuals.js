@@ -267,3 +267,71 @@ export function VoiceHeroVisual() {
     </div>
   );
 }
+
+/* ─── OTP Delivery ────────────────────────────────────
+   Replaced the OTP page's code window (Nov 2026): no endpoints, keys or
+   code — just what the customer receives and how each channel performs. */
+export function OtpHeroVisual() {
+  return (
+    <div className="shv-wrap">
+      <div className="shv-panel">
+        <div className="shv-panel-head">
+          <span className="shv-title"><i className="bi bi-shield-lock-fill me-2" style={{color:'#00c8f8'}}/>OTP Delivery</span>
+          <span className="shv-live">Live</span>
+        </div>
+        <div className="shv-panel-body">
+
+          {/* Channel rows — delivery success per channel */}
+          {[
+            { name: 'SMS OTP',      tag: 'SMS',   pct: 99, color: '#4ade80' },
+            { name: 'WhatsApp OTP', tag: 'WA',    pct: 98, color: '#00c8f8' },
+            { name: 'Voice OTP',    tag: 'Voice', pct: 96, color: '#a78bfa' },
+          ].map(({ name, tag, pct, color }) => (
+            <div key={name} className="shv-row">
+              <span className="shv-camp-name">{name}</span>
+              <span className="shv-tag">{tag}</span>
+              <div className="shv-track"><div className="shv-fill" style={{ width: `${pct}%`, background: color }} /></div>
+              <span className="shv-pct" style={{ color }}>{pct}%</span>
+            </div>
+          ))}
+
+          {/* Stats strip */}
+          <div className="shv-stats">
+            {[
+              { n: '<3s',  l: 'Delivery',   c: '#4ade80' },
+              { n: '3',    l: 'Channels',   c: '#60a5fa' },
+              { n: '120s', l: 'Code expiry', c: '#a78bfa' },
+            ].map(({ n, l, c }) => (
+              <div key={l} className="shv-stat">
+                <span className="shv-stat-n" style={{ color: c }}>{n}</span>
+                <span className="shv-stat-l">{l}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* What the customer receives */}
+          <div className="shv-msg">
+            <div className="shv-msg-top">
+              <span className="shv-sender">OJIVAI</span>
+              <span className="shv-ts">Just now</span>
+            </div>
+            <p className="shv-msg-txt"><strong>482910</strong> is your login code. Valid for 2 minutes. Do not share it with anyone.</p>
+          </div>
+
+          {/* Compliance tags */}
+          <div className="shv-tags">
+            {['✓ DLT Compliant', '✓ Auto-fallback', '✓ Encrypted'].map(t => (
+              <span key={t} className="shv-mini-tag">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Floating badge */}
+      <div className="shv-float shv-float--tr">
+        <span className="shv-float-n">2.1s</span>
+        <span className="shv-float-l">Avg delivery</span>
+      </div>
+    </div>
+  );
+}

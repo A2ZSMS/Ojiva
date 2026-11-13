@@ -5,7 +5,6 @@ import Hero from './Hero';
 import SmsTypes from './SmsTypes';
 import Features from './Features';
 import DltCompliance from './DltCompliance';
-import ApiSection from './ApiSection';
 import Industries from './Industries';
 import ExploreServices from './ExploreServices';
 
@@ -16,7 +15,6 @@ export default function SmsPageContent({ faqs }) {
       <SmsTypes />
       <Features />
       <DltCompliance />
-      <ApiSection />
       <Industries />
       <ExploreServices />
       {faqs && <FAQ faqs={faqs} subtitle="Everything you need to know about Ojiva AI Bulk SMS." />}

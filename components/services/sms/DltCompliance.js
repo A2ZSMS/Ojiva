@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import { SlideLeft, SlideRight } from '@/components/ui/Animations';
 import { DLT_STATS, DELIVERY_ROUTES } from './data';
@@ -16,7 +17,7 @@ export default function DltCompliance() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 sms-btn-primary d-inline-flex">Get DLT Help →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 sms-btn-primary d-inline-flex">Get DLT Help <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideLeft>
           <SlideRight className="service-feature-visual">
             <div className="svc-stat-list">
@@ -27,7 +28,7 @@ export default function DltCompliance() {
                 </div>
               ))}
               <div className="svc-stat-highlight sms-highlight">
-                <span className="svc-stat-highlight-icon">🛡️</span>
+                <span className="svc-stat-highlight-icon"><Ico e="🛡" /></span>
                 <p className="svc-stat-highlight-text">Zero blocked messages in last 90 days</p>
               </div>
             </div>
@@ -59,7 +60,7 @@ export default function DltCompliance() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 sms-btn-primary d-inline-flex">See Delivery Proof →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 sms-btn-primary d-inline-flex">See Delivery Proof <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideRight>
         </div>
       </div>

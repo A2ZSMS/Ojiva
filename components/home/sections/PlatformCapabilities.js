@@ -1,3 +1,4 @@
+import SwipeHint from '@/components/ui/SwipeHint';
 import Link from 'next/link';
 import {
   RiBarChart2Line, RiFlashlightLine, RiLinksLine,
@@ -55,7 +56,8 @@ export default function PlatformCapabilities() {
           />
         </ScrollScale>
 
-        <StaggerContainer className="row g-4 mt-3" staggerDelay={0.09}>
+        {/* Phones: one swipeable row (.m-swipe) */}
+        <StaggerContainer className="row g-4 mt-3 m-swipe" staggerDelay={0.09}>
           {MODULES.map(({ icon: Icon, tag, title, desc, points, color, accentColor }) => (
             <StaggerItem key={title} className="col-12 col-md-4">
               <TiltCard3D intensity={9} className="module-card-v3 h-100">
@@ -79,6 +81,7 @@ export default function PlatformCapabilities() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+        <SwipeHint />
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -224,7 +225,7 @@ export default function ContactForm() {
             <h3>Message sent!</h3>
             <p>We&apos;ll get back to you within one business day.</p>
             <Link href="/book-demo" className="btn-ojiva-primary mt-3 d-inline-flex align-items-center gap-2">
-              🚀 Book a Full Demo
+              Book a Full Demo
             </Link>
             <button className="btn-ojiva-ghost mt-2 d-block mx-auto" onClick={() => setStatus('idle')}>
               Send another message
@@ -318,7 +319,7 @@ export default function ContactForm() {
                           onClick={() => toggleService(id)}
                           aria-pressed={selected.includes(id)}
                         >
-                          <span aria-hidden="true">{icon}</span> {label}
+                          <span aria-hidden="true"><Ico e={icon} /></span> {label}
                         </button>
                       ))}
                     </div>
@@ -365,7 +366,7 @@ export default function ContactForm() {
                   <div className="col-12">
                     <motion.div className="cf-error" role="alert"
                       initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}>
-                      ⚠️ {errorMsg}
+                      <Ico e="⚠" /> {errorMsg}
                     </motion.div>
                   </div>
                 )}
@@ -455,7 +456,7 @@ function ContactSidebar() {
         {/* Book demo CTA inside the card */}
         <div className="cf-info-card-footer">
           <Link href="/book-demo" className="btn-ojiva-primary d-block text-center">
-            Book a Free Demo →
+            Book a Free Demo <span className="btn-arrow" aria-hidden="true">→</span>
           </Link>
           <p className="cf-info-card-note">30 min · Free · No commitment</p>
         </div>
@@ -463,9 +464,9 @@ function ContactSidebar() {
 
       {/* ── Trust strip ── */}
       <div className="contact-trust-strip">
-        <div className="contact-trust-item"><span>⚡</span> Response within 24 hrs</div>
-        <div className="contact-trust-item"><span>🔒</span> Your data stays private</div>
-        <div className="contact-trust-item"><span>🤝</span> No commitment required</div>
+        <div className="contact-trust-item"><span><Ico e="⚡" /></span> Response within 24 hrs</div>
+        <div className="contact-trust-item"><span><Ico e="🔒" /></span> Your data stays private</div>
+        <div className="contact-trust-item"><span><Ico e="🤝" /></span> No commitment required</div>
       </div>
 
     </div>

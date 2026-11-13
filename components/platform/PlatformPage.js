@@ -5,7 +5,6 @@ import ChannelPortals from './ChannelPortals';
 import HowItWorks from './HowItWorks';
 import UnifiedTools from './UnifiedTools';
 import Integrations from './Integrations';
-import ApiSection from './ApiSection';
 
 export default function PlatformPageContent() {
   return (
@@ -16,7 +15,6 @@ export default function PlatformPageContent() {
       <UnifiedTools />
       <hr className="gradient-divider" />
       <Integrations />
-      <ApiSection />
 
       <FadeUp>
       <CTA

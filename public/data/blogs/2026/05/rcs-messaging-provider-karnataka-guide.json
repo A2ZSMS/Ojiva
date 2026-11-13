@@ -91,11 +91,10 @@
       "id": "api-integration",
       "heading": "Effortless API Integration for RCS Deployment in Karnataka",
       "blocks": [
-        { "type": "p", "html": "For technical teams in Bengaluru, Mysuru, and other Karnataka engineering hubs, the Ojiva AI RCS API is designed to slot cleanly into existing customer engagement architectures with minimal integration overhead. The API surface mirrors REST conventions developers already know, response payloads are JSON, authentication uses standard bearer tokens, and webhook callbacks provide real-time event delivery for inbound messages, button taps, and delivery status changes." },
+        { "type": "p", "html": "For technical teams in Bengaluru, Mysuru, and other Karnataka engineering hubs, the Ojiva AI RCS API is designed to slot cleanly into existing customer engagement architectures with minimal integration overhead. Your team gets real-time updates for inbound messages, button taps and delivery status changes, and our team helps connect RCS to the systems you already use." },
         {
           "type": "icon-list",
           "items": [
-            { "icon": "bi-check-circle-fill", "title": "Comprehensive Developer Documentation:", "desc": "Code samples in Node.js, Python, Java, PHP, and Go, plus Postman collections that let teams send their first RCS message in under fifteen minutes." },
             { "icon": "bi-check-circle-fill", "title": "Native CRM and Stack Compatibility:", "desc": "Plug into Salesforce, HubSpot, Zoho, Freshworks, Shopify, Magento, custom ERPs, and homegrown product platforms — Ojiva AI ships pre-built connectors for the most common Karnataka enterprise tools." },
             { "icon": "bi-check-circle-fill", "title": "Workflow Automation:", "desc": "Trigger RCS campaigns from pipeline-stage changes, payment-due events, abandoned carts, or any other business event — without writing custom orchestration code." },
             { "icon": "bi-check-circle-fill", "title": "Technical Support Resources:", "desc": "Direct access to integration engineers, a public status page, sandbox environments, and a Karnataka-friendly support window for production launches." }

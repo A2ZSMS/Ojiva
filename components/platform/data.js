@@ -74,17 +74,3 @@ export const INTEGRATIONS = [
   { icon: '\u{1F4BB}', name: 'Webhook' },
   { icon: '\u{1F4F1}', name: 'Twilio' },
 ];
-
-export const API_CODE = `<span style="color:rgba(255,255,255,0.6)">// Send a message via Ojiva AI in 3 lines</span>
-<span style="color:#7aaeff">const</span> ojiva = <span style="color:#7aaeff">require</span>(<span style="color:#a8ff78">'@ojiva/sdk'</span>);
-<span style="color:#7aaeff">const</span> client = <span style="color:#7aaeff">new</span> ojiva.Client({ apiKey: <span style="color:#a8ff78">'YOUR_KEY'</span> });
-
-<span style="color:#7aaeff">const</span> res = <span style="color:#7aaeff">await</span> client.sms.send({
-  to:      <span style="color:#a8ff78">'+91 98765 43210'</span>,
-  message: <span style="color:#a8ff78">'Your OTP is {{otp}}'</span>,
-  vars:    { otp: <span style="color:#ffa56d">482910</span> },
-  sender:  <span style="color:#a8ff78">'OJIVAI'</span>,
-});
-
-console.log(res.messageId);
-<span style="color:rgba(255,255,255,0.6)">// → msg_01HX9K2P3FZ7KR...</span>`;

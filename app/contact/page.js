@@ -1,5 +1,6 @@
 import { buildMetadata, breadcrumbSchema, localBusinessSchema } from '@/lib/metadata';
 import ContactForm from '@/components/contact/ContactForm';
+import ReducedMotion from '@/components/ui/ReducedMotion';
 
 export const metadata = buildMetadata({
   title: 'Contact Ojiva AI — Get Bulk SMS & WhatsApp API Support',
@@ -87,7 +88,7 @@ export default function ContactPage() {
       <section className="section-padding contact-form-bg" aria-labelledby="contact-form-heading">
         <div className="container">
           <h2 className="visually-hidden" id="contact-form-heading">Contact form</h2>
-          <ContactForm />
+          <ReducedMotion><ContactForm /></ReducedMotion>
         </div>
       </section>
     </>

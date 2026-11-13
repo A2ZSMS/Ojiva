@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SlideLeft, SlideRight, ScalePop } from '@/components/ui/Animations';
@@ -21,7 +22,7 @@ export default function NoCodeBuilder() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Try the Builder →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Try the Builder <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideLeft>
           <SlideRight className="service-feature-visual">
             <ScalePop>
@@ -48,7 +49,7 @@ export default function NoCodeBuilder() {
                   <p className="cb-handoff-meta">{from.charAt(0).toUpperCase() + from.slice(1)}</p>
                 </div>
               ))}
-              <div className="cb-handoff-banner">⚡ Full context transferred — Zero repeat</div>
+              <div className="cb-handoff-banner"><Ico e="⚡" /> Full context transferred — Zero repeat</div>
             </div>
           </SlideLeft>
           <SlideRight className="service-feature-text order-lg-2">
@@ -62,7 +63,7 @@ export default function NoCodeBuilder() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">See Handoff in Action →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">See Handoff in Action <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideRight>
         </div>
       </div>
