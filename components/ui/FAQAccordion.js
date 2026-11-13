@@ -41,7 +41,7 @@ export default function FAQAccordion({
               <h2 id={`${id}-heading`} className="faq2-title">{title}</h2>
               <p className="faq2-subtitle">{subtitle}</p>
               <Link href="/contact" className="faq2-cta" style={{ color: accentColor, borderColor: `${accentColor}30`, background: `${accentColor}08` }}>
-                Still have questions? Talk to us →
+                Still have questions? Talk to us <span className="btn-arrow" aria-hidden="true">→</span>
               </Link>
             </div>
           </FadeUp>

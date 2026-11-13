@@ -10,7 +10,6 @@ const SYSTEM_STATUSES = [
   { name: 'RCS Platform',      status: 'operational', uptime: '99.95%' },
   { name: 'Voice AI Engine',   status: 'operational', uptime: '99.99%' },
   { name: 'Dashboard & UI',    status: 'operational', uptime: '100%'   },
-  { name: 'REST API',          status: 'degraded',    uptime: '99.91%' },
   { name: 'Webhooks',          status: 'operational', uptime: '99.96%' },
   { name: 'Analytics Engine',  status: 'operational', uptime: '99.94%' },
 ];
@@ -76,7 +75,7 @@ export default function SystemStatus() {
               Live status for all Ojiva AI services. We update every 60 seconds and notify enterprise clients of any incidents instantly.
             </p>
             <Link href="/contact" className="btn-ojiva-primary mt-3">
-              Subscribe to Alerts →
+              Subscribe to Alerts <span className="btn-arrow" aria-hidden="true">→</span>
             </Link>
           </motion.div>
           <motion.div

@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
@@ -68,7 +69,7 @@ export default function Channels() {
                   className="service-type-icon"
                   style={{ background: `${color}14`, borderColor: `${color}30`, fontSize: '1.8rem', marginBottom: '1rem' }}
                 >
-                  {icon}
+                  <Ico e={icon} />
                 </div>
                 <h3 className="service-type-title">{title}</h3>
                 <p className="service-type-desc">{desc}</p>

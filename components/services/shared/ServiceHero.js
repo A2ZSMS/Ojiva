@@ -1,3 +1,5 @@
+import ArrowLabel from '@/components/ui/ArrowLabel';
+import { AutoCount } from '@/components/ui/Premium';
 import Link from 'next/link';
 import { HeroEntrance, FloatingElement } from '@/components/ui/Animations';
 import {
@@ -69,10 +71,10 @@ export default function ServiceHero({
               <HeroEntrance index={3}>
                 <div className="d-flex flex-wrap gap-3 mb-4">
                   <Link href={ctaPrimary.href} className={`btn-hero-primary ${primaryClass}`}>
-                    {ctaPrimary.label}
+                    <ArrowLabel>{ctaPrimary.label}</ArrowLabel>
                   </Link>
                   <Link href={ctaSecondary.href} className="btn-hero-outline">
-                    {ctaSecondary.label}
+                    <ArrowLabel>{ctaSecondary.label}</ArrowLabel>
                   </Link>
                 </div>
               </HeroEntrance>
@@ -80,7 +82,7 @@ export default function ServiceHero({
                 <div className="service-stats-row">
                   {metrics.map(({ value, label }) => (
                     <div key={label} className="service-stat-item">
-                      <span className="service-stat-value">{value}</span>
+                      <span className="service-stat-value"><AutoCount>{value}</AutoCount></span>
                       <span className="service-stat-label">{label}</span>
                     </div>
                   ))}

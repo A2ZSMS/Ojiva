@@ -1,9 +1,11 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
   title: 'Thank You — Ojiva AI',
   robots: { index: false, follow: false },
+  alternates: { canonical: 'https://www.ojiva.ai/thank-you/' },
 };
 
 export default function ThankYouPage() {
@@ -13,7 +15,7 @@ export default function ThankYouPage() {
       {/* Header */}
       <header style={{ padding: '1rem 2rem', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <Link href="/" aria-label="Ojiva AI Home">
-          <Image src="/ojiva-logo-white.webp" alt="Ojiva AI" width={130} height={38} priority unoptimized style={{ height: 'auto' }} />
+          <Image src="/ojiva-wordmark-white.v1.webp" alt="Ojiva AI" width={132} height={40} priority unoptimized style={{ height: 'auto' }} />
         </Link>
       </header>
 
@@ -36,7 +38,7 @@ export default function ThankYouPage() {
             border: '2px solid rgba(52,211,153,0.40)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '2rem', margin: '0 auto 1.5rem',
-          }}>✅</div>
+          }}><Ico e="✅" style={{ color: '#22c55e' }} /></div>
 
           <h1 style={{ color: '#fff', fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>
             You&rsquo;re all set!
@@ -73,7 +75,7 @@ export default function ThankYouPage() {
               fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none',
               display: 'block',
             }}>
-              Explore Platform →
+              Explore Platform <span className="btn-arrow" aria-hidden="true">→</span>
             </Link>
             <Link href="/" style={{
               color: 'rgba(148,163,184,0.75)', fontSize: '0.85rem',

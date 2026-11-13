@@ -1,3 +1,4 @@
+import SwipeHint from '@/components/ui/SwipeHint';
 import SectionHeading from '@/components/ui/SectionHeading';
 import {
   StaggerContainer,
@@ -58,7 +59,8 @@ export default function Testimonials() {
           />
         </ParallaxSection>
 
-        <StaggerContainer className="row g-4 mt-4" staggerDelay={0.1}>
+        {/* Phones: one swipeable row instead of three stacked cards (.m-swipe) */}
+        <StaggerContainer className="row g-4 mt-4 m-swipe" staggerDelay={0.1}>
           {TESTIMONIALS.map(({ quote, name, role, company, initials, avatarBg, avatarColor, result, resultColor, stars }) => (
             <StaggerItem key={name} className="col-12 col-md-4">
               <div className="ojv-testi-card h-100">
@@ -88,6 +90,7 @@ export default function Testimonials() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+        <SwipeHint />
       </div>
     </section>
   );

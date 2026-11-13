@@ -9,7 +9,7 @@ export default function FinalCTA() {
       <CTA
         title="Start Your Free 14-Day Trial Today"
         subtitle="Full Business plan access. No credit card. No lock-in. Go live in under 10 minutes."
-        primaryLabel="Start Free Trial"
+        primaryLabel="Request Free Trial"
         primaryHref="/contact"
         secondaryLabel="Talk to Sales"
         secondaryHref="/contact"

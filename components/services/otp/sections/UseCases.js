@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
@@ -30,7 +31,7 @@ export default function UseCases() {
           {USE_CASES.map(({ icon, title, desc }) => (
             <StaggerItem key={title} className="col-12 col-sm-6 col-md-4">
               <div className="industry-card">
-                <span className="industry-icon">{icon}</span>
+                <span className="industry-icon"><Ico e={icon} /></span>
                 <h3 className="industry-title">{title}</h3>
                 <p className="industry-use">{desc}</p>
               </div>

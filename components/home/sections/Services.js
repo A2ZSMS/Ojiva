@@ -94,7 +94,7 @@ export default function Services() {
                     </span>
                   )}
                   <span className="ojv-svc-link" style={{ color: ink }}>
-                    Learn more →
+                    Learn more <span className="btn-arrow" aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>
@@ -119,7 +119,7 @@ export default function Services() {
                     </span>
                   )}
                   <span className="ojv-svc-link" style={{ color: ink }}>
-                    Learn more →
+                    Learn more <span className="btn-arrow" aria-hidden="true">→</span>
                   </span>
                 </div>
               </Link>

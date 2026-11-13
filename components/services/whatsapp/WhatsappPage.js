@@ -5,7 +5,6 @@ import Hero from './Hero';
 import MessageTypes from './MessageTypes';
 import PlatformFeatures from './PlatformFeatures';
 import HowItWorks from './HowItWorks';
-import ApiSection from './ApiSection';
 import Industries from './Industries';
 import ExploreServices from './ExploreServices';
 
@@ -16,7 +15,6 @@ export default function WhatsappPageContent({ faqs }) {
       <MessageTypes />
       <PlatformFeatures />
       <HowItWorks />
-      <ApiSection />
       <Industries />
       <ExploreServices />
       {faqs && <FAQ faqs={faqs} subtitle="Everything you need to know about WhatsApp Business API." />}

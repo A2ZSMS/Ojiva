@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { SlideLeft, RotateIn, ScalePop } from '@/components/ui/Animations';
@@ -14,7 +15,7 @@ export default function Comparison() {
               <p className="section-subtitle mt-3">
                 With RCS, your brand messages look like a premium app experience inside the default Android Messages app — without requiring customers to download anything.
               </p>
-              <Link href="/contact" className="btn-ojiva-primary mt-4 rcs-btn-primary d-inline-flex">Switch to RCS →</Link>
+              <Link href="/contact" className="btn-ojiva-primary mt-4 rcs-btn-primary d-inline-flex">Switch to RCS <span className="btn-arrow" aria-hidden="true">→</span></Link>
             </SlideLeft>
           </div>
           <div className="col-12 col-lg-7">
@@ -25,16 +26,16 @@ export default function Comparison() {
                     <thead>
                       <tr>
                         <th>Feature</th>
-                        <th><span className="compare-th-badge compare-th-badge--bot">✨ RCS</span></th>
-                        <th><span className="compare-th-badge compare-th-badge--manual">📱 SMS</span></th>
+                        <th><span className="compare-th-badge compare-th-badge--bot"><Ico e="✨" /> RCS</span></th>
+                        <th><span className="compare-th-badge compare-th-badge--manual"><Ico e="📱" /> SMS</span></th>
                       </tr>
                     </thead>
                     <tbody>
                       {RCS_VS_SMS.map(({ feature, rcs, sms }) => (
                         <tr key={feature}>
                           <td className="compare-feature-name">{feature}</td>
-                          <td className={rcs ? 'compare-winner' : ''}>{rcs ? '✅' : '❌'}</td>
-                          <td className={sms ? 'compare-winner' : ''}>{sms ? '✅' : '❌'}</td>
+                          <td className={rcs ? 'compare-winner' : ''}>{rcs ? <Ico e="✅" style={{ color: '#16a34a' }} /> : <Ico e="❌" style={{ color: '#ef4444' }} />}</td>
+                          <td className={sms ? 'compare-winner' : ''}>{sms ? <Ico e="✅" style={{ color: '#16a34a' }} /> : <Ico e="❌" style={{ color: '#ef4444' }} />}</td>
                         </tr>
                       ))}
                     </tbody>

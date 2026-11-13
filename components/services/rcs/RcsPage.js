@@ -5,7 +5,6 @@ import Hero from './Hero';
 import Capabilities from './Capabilities';
 import Comparison from './Comparison';
 import HowItWorks from './HowItWorks';
-import ApiSection from './ApiSection';
 import Industries from './Industries';
 import ExploreServices from './ExploreServices';
 
@@ -16,7 +15,6 @@ export default function RcsPageContent({ faqs }) {
       <Capabilities />
       <Comparison />
       <HowItWorks />
-      <ApiSection />
       <Industries />
       <ExploreServices />
       {faqs && <FAQ faqs={faqs} subtitle="Everything you need to know about RCS Business Messaging." />}

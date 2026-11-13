@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { FEATURES } from './data';
@@ -21,7 +22,7 @@ export default function UnifiedTools() {
           {FEATURES.map((f) => (
             <StaggerItem key={f.title}>
               <div className="pf-tool-card">
-                <span className="pf-tool-icon" aria-hidden="true">{f.icon}</span>
+                <span className="pf-tool-icon" aria-hidden="true"><Ico e={f.icon} /></span>
                 <h3 className="pf-tool-title">{f.title}</h3>
                 <p className="pf-tool-desc">{f.desc}</p>
               </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -62,8 +63,8 @@ const SLA_PLANS = [
 ];
 
 const TABS = [
-  { id: 'ticket',  label: '🎫 Submit a Ticket' },
-  { id: 'sla',     label: '📋 SLA Plans' },
+  { id: 'ticket',  label: 'Submit a Ticket' },
+  { id: 'sla',     label: 'SLA Plans' },
 ];
 
 /** Ticket submit form */
@@ -177,7 +178,7 @@ function TicketForm() {
         animate={{ scale: 1 }}
         transition={{ duration: 0.4 }}
       >
-        <div className="sp-ticket-success-icon">✅</div>
+        <div className="sp-ticket-success-icon"><Ico e="✅" style={{ color: '#22c55e' }} /></div>
         <h3>Ticket Submitted!</h3>
         <p>Your ticket ID is <strong>{ticketId}</strong></p>
         <p className="sp-ticket-success-sub">We&apos;ll respond to <strong>{form.email}</strong> within the SLA window for your plan.</p>
@@ -226,9 +227,9 @@ function TicketForm() {
         <div className="sp-form-group">
           <label className="sp-form-label">Priority</label>
           <select className="sp-form-input" value={form.priority} onChange={e => set('priority', e.target.value)}>
-            <option value="low">🟢 Low</option>
-            <option value="medium">🟡 Medium</option>
-            <option value="high">🔴 High — Production Down</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High — Production Down</option>
           </select>
         </div>
       </div>
@@ -238,11 +239,11 @@ function TicketForm() {
       </div>
       {errorMsg && (
         <div className="sp-form-error" role="alert" style={{ padding: '10px 14px', background: '#fef2f2', border: '1px solid #fecaca', color: '#dc2626', borderRadius: 8, marginBottom: 12 }}>
-          ⚠️ {errorMsg}
+          <Ico e="⚠" /> {errorMsg}
         </div>
       )}
       <div className="sp-form-footer">
-        <span className="sp-form-note">🔒 Your data is encrypted end-to-end.</span>
+        <span className="sp-form-note"><Ico e="🔒" /> Your data is encrypted end-to-end.</span>
         <motion.button
           type="submit"
           className="btn-ojiva-primary"
@@ -303,10 +304,10 @@ export default function SupportHub() {
                   <h3 className="sp-ticket-side-title">Submit a Support Ticket</h3>
                   <p className="sp-ticket-side-desc">Describe your issue and we&apos;ll assign an engineer from the right team within minutes.</p>
                   <ul className="sp-ticket-side-list">
-                    <li>⚡ Average first reply: <strong>47 minutes</strong></li>
-                    <li>✅ Resolution rate: <strong>97.4%</strong></li>
-                    <li>🔒 All data encrypted end-to-end</li>
-                    <li>📬 Email + in-platform updates</li>
+                    <li><Ico e="⚡" /> Average first reply: <strong>47 minutes</strong></li>
+                    <li><Ico e="✅" /> Resolution rate: <strong>97.4%</strong></li>
+                    <li><Ico e="🔒" /> All data encrypted end-to-end</li>
+                    <li><Ico e="📬" /> Email + in-platform updates</li>
                   </ul>
                 </div>
                 <div className="col-12 col-lg-8">
@@ -337,7 +338,7 @@ export default function SupportHub() {
                     whileHover={{ y: -6 }}
                   >
                     {highlight && <div className="sp-sla-popular">Most Popular</div>}
-                    <div className="sp-sla-icon">{icon}</div>
+                    <div className="sp-sla-icon"><Ico e={icon} /></div>
                     <h3 className="sp-sla-plan">{plan}</h3>
                     <div className="sp-sla-rows">
                       {[
@@ -354,7 +355,7 @@ export default function SupportHub() {
                       ))}
                     </div>
                     <Link href="/contact" className={highlight ? 'btn-ojiva-primary' : 'btn-ojiva-outline'} style={{ marginTop: 'auto', display: 'block', textAlign: 'center' }}>
-                      Get Started →
+                      Get Started <span className="btn-arrow" aria-hidden="true">→</span>
                     </Link>
                   </motion.div>
                 ))}

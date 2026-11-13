@@ -13,6 +13,9 @@ export const metadata = {
       follow: false,
     },
   },
+  // Self-canonical: without this the root layout's default canonical (the
+  // homepage) applies, which contradicts noindex.
+  alternates: { canonical: 'https://www.ojiva.ai/whatsapp-api-service/' },
 };
 
 export default function Page() {

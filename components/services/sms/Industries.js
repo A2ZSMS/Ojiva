@@ -1,10 +1,11 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerGrid, StaggerGridItem } from '@/components/ui/Animations';
 import { INDUSTRIES } from './data';
 
 export default function Industries() {
   return (
-    <section className="py-5" aria-labelledby="sms-industries-heading">
+    <section className="py-5 bg-section" aria-labelledby="sms-industries-heading">
       <div className="container">
         <FadeUp>
           <div className="text-center mb-5">
@@ -15,7 +16,7 @@ export default function Industries() {
           {INDUSTRIES.map(({ icon, title, use }) => (
             <StaggerGridItem key={title} className="col-12 col-sm-6 col-md-4 col-lg-3">
               <div className="industry-card">
-                <span className="industry-icon">{icon}</span>
+                <span className="industry-icon"><Ico e={icon} /></span>
                 <h3 className="industry-title">{title}</h3>
                 <p className="industry-use">{use}</p>
               </div>

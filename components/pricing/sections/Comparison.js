@@ -61,12 +61,12 @@ export default function Comparison() {
                   <td />
                   <td>
                     <Link href="/contact" className="pricing-cta-outline" style={{ color: '#1B48E0', borderColor: 'rgba(27,72,224,0.3)', fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
-                      Get Started
+                      Request Trial
                     </Link>
                   </td>
                   <td className="sla-col-highlight">
                     <Link href="/contact" className="pricing-cta-primary" style={{ background: '#1B48E0', fontSize: '0.8rem', padding: '0.5rem 1rem' }}>
-                      Start Free Trial
+                      Request Free Trial
                     </Link>
                   </td>
                   <td>

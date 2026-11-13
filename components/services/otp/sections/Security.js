@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
@@ -17,7 +18,7 @@ const SECURITY_ITEMS = [
   {
     icon: '🛡️',
     title: 'IP Whitelisting',
-    desc: 'Lock your API key to specific IP addresses. Only your servers can trigger OTP sends — no unauthorized access.',
+    desc: 'Restrict OTP sending to your approved server addresses, so only your own systems can trigger OTPs — no unauthorized access.',
   },
   {
     icon: '📋',
@@ -28,7 +29,7 @@ const SECURITY_ITEMS = [
 
 export default function Security() {
   return (
-    <section className="section-padding" aria-labelledby="otp-security-heading">
+    <section className="section-padding bg-section" aria-labelledby="otp-security-heading">
       <div className="container">
         <FadeUp>
           <div className="text-center mb-5">
@@ -45,7 +46,7 @@ export default function Security() {
             <StaggerItem key={title} className="col-12 col-sm-6 col-lg-3">
               <div className="feature-card">
                 <div className="feature-icon" style={{ background: 'rgba(27,72,224,0.08)' }}>
-                  {icon}
+                  <Ico e={icon} />
                 </div>
                 <h3 className="feature-title">{title}</h3>
                 <p className="feature-desc">{desc}</p>

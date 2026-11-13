@@ -1,9 +1,9 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { motion } from 'framer-motion';
 
 const QUICK_LINKS = [
-  { icon: '📖', title: 'API Reference',        desc: 'Full REST API docs',              href: 'https://docs.ojiva.ai', color: '#1B48E0' },
   { icon: '🎬', title: 'Video Tutorials',      desc: 'Step-by-step walkthroughs',       href: '/contact',              color: '#1B48E0' },
   { icon: '🔄', title: 'Changelog',            desc: 'Platform updates & releases',     href: '/contact',              color: '#1B48E0' },
   { icon: '🧩', title: 'Integrations Guide',   desc: 'Connect your tech stack',         href: '/platform',             color: '#1B48E0' },
@@ -32,7 +32,7 @@ export default function QuickLinks() {
               transition={{ duration: 0.4, delay: i * 0.07 }}
               whileHover={{ y: -5, scale: 1.02 }}
             >
-              <span className="sp-quick-icon">{icon}</span>
+              <span className="sp-quick-icon"><Ico e={icon} /></span>
               <h3 className="sp-quick-title">{title}</h3>
               <p className="sp-quick-desc">{desc}</p>
               <span className="sp-quick-arrow">→</span>

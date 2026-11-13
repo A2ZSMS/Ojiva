@@ -31,6 +31,6 @@ export default function FAQSection({ faqs }) {
   const renderFaqs = (faqs && faqs.length) ? faqs : PRICING_FAQS;
 
   return (
-    <FAQ faqs={renderFaqs} subtitle="Everything you need to know about Ojiva AI billing and plans." />
+    <FAQ faqs={renderFaqs} subtitle="Everything you need to know about Ojiva AI billing and plans." tinted={false} />
   );
 }

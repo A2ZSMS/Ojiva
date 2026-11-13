@@ -97,7 +97,7 @@ const industryData = {
     implementation: [
       { title: 'REST API + webhooks',          body: 'A single REST API handles outbound message creation across SMS, WhatsApp, RCS and Voice. Signed webhooks deliver delivery, read and click events directly into your core banking event bus.' },
       { title: 'Core-banking integration',     body: 'Trigger messages from any event in your core or LOS — transaction posted, OTP requested, EMI due — using the API or no-code workflow builder. Integrations are typically built by the bank\'s tech team in a few sprints.' },
-      { title: 'Sandbox before production',    body: 'Per-environment API keys let teams test full flows in sandbox with isolated webhooks before promoting to production. Templates can be promoted between environments with version tracking.' },
+      { title: 'Sandbox before production',    body: 'Separate test and live environments let teams try full flows safely before going live. Templates can be promoted between environments with version tracking.' },
       { title: 'Compliance-first onboarding',  body: 'Sender ID and template registration support is included as part of onboarding. The Ojiva team helps map your message catalogue onto DLT categories and templates so go-live is not blocked by registration backlogs.' },
     ],
 

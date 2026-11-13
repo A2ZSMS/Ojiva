@@ -1,5 +1,7 @@
 'use client';
 
+import { AutoCount } from '@/components/ui/Premium';
+import Ico from '@/components/ui/Ico';
 import { FadeUp } from '@/components/ui/Animations';
 
 const HERO_STATS = [
@@ -16,7 +18,7 @@ export default function Hero() {
         <div className="service-hero-inner text-center" style={{ paddingBottom: '60px' }}>
           <FadeUp>
             <div className="service-badge" style={{ background: 'rgba(27,72,224,0.12)', color: '#7aaeff', border: '1px solid rgba(27,72,224,0.25)', margin: '0 auto 1.75rem' }}>
-              💳 Simple, Transparent Pricing
+              <Ico e="💳" /> Simple, Transparent Pricing
             </div>
           </FadeUp>
           <FadeUp delay={0.08}>
@@ -34,7 +36,7 @@ export default function Hero() {
             <div className="service-stats-row" style={{ justifyContent: 'center', gap: '2.5rem 3.5rem' }}>
               {HERO_STATS.map(({ value, label }) => (
                 <div key={label} className="service-stat-item" style={{ textAlign: 'center' }}>
-                  <span className="service-stat-value">{value}</span>
+                  <span className="service-stat-value"><AutoCount>{value}</AutoCount></span>
                   <span className="service-stat-label">{label}</span>
                 </div>
               ))}

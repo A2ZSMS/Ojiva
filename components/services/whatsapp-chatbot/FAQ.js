@@ -3,9 +3,11 @@
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 
-export default function FAQ({ faqs, subtitle = 'Everything you need to know about WhatsApp chatbots.' }) {
+// `tinted={false}` drops the grey background — used where the section above
+// is already grey, so neighbouring sections keep alternating.
+export default function FAQ({ faqs, subtitle = 'Everything you need to know about WhatsApp chatbots.', tinted = true }) {
   return (
-    <section className="py-5 bg-section" aria-labelledby="cb-faq">
+    <section className={tinted ? 'py-5 bg-section' : 'py-5'} aria-labelledby="cb-faq">
       <div className="container">
         <FadeUp>
           <div className="text-center mb-5">

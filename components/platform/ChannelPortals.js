@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerContainer, StaggerItem } from '@/components/ui/Animations';
@@ -23,7 +24,7 @@ export default function ChannelPortals() {
             <StaggerItem key={c.id}>
               <div className="pf-portal-card" style={{ '--ch': c.accent, '--ch-soft': c.accentSoft }}>
                 <div className="pf-portal-head">
-                  <span className="pf-portal-icon" aria-hidden="true">{c.icon}</span>
+                  <span className="pf-portal-icon" aria-hidden="true"><Ico e={c.icon} /></span>
                   <div>
                     <h3 className="pf-portal-title">{c.title}</h3>
                     <p className="pf-portal-tagline">{c.tagline}</p>

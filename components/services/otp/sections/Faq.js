@@ -30,6 +30,6 @@ export default function Faq({ faqs }) {
   // fall back to the local copy so the component stays self-contained.
   const renderFaqs = (faqs && faqs.length) ? faqs : OTP_FAQS;
   return (
-    <FAQ faqs={renderFaqs} subtitle="Everything you need to know about OTP delivery, compliance, and pricing." />
+    <FAQ faqs={renderFaqs} subtitle="Everything you need to know about OTP delivery, compliance, and pricing." tinted={false} />
   );
 }

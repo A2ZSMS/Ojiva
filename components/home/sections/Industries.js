@@ -1,3 +1,4 @@
+import SwipeHint from '@/components/ui/SwipeHint';
 import Link from 'next/link';
 import { ICON } from '@/lib/colors';
 import { Reveal } from '@/components/ui/Animations';
@@ -112,7 +113,8 @@ export default function Industries() {
         </Reveal>
 
         {/* Industry grid */}
-        <div className="ind-grid">
+        {/* Phones: one swipeable row of tiles instead of a 5-row grid (.m-swipe-tiles) */}
+        <div className="ind-grid m-swipe-tiles">
           {INDUSTRIES.map((ind, i) => (
             <Reveal
               as={Link}
@@ -139,6 +141,7 @@ export default function Industries() {
             </Reveal>
           ))}
         </div>
+        <SwipeHint />
 
         {/* Bottom tagline */}
         <Reveal className="ind-tagline" {...fade(0.45)}>

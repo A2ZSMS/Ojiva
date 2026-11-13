@@ -2,6 +2,20 @@ import { srcSetFor } from "@/lib/imageSrcSet";
 
 const BLOCK_TAG_RE = /<(p|div|ul|ol|li|table|h[1-6]|blockquote|section|figure|pre|hr|dl|form|details|address|fieldset)\b/i;
 
+// Bold lead-in for an icon-list item, with exactly one separator before the
+// description. Most post JSON already writes the title with a trailing colon
+// ("Official Meta access:"), and the old `{title}:` printed "access::" on
+// ~2,000 items across 50 posts. Rules:
+//   - trailing colons/spaces in the data are dropped, then one colon is added
+//   - titles that already end a sentence (. ? ! , ;) get no colon ("Why?:" → "Why?")
+//   - no description → no colon at all
+const listLabel = (title, desc) => {
+  const text = String(title ?? "").replace(/[\s:]+$/, "");
+  if (!text) return "";
+  if (!String(desc ?? "").trim() || /[.?!,;]$/.test(text)) return text;
+  return `${text}:`;
+};
+
 // Renders a single block based on its `type`.
 // Each block gets a unique key from the caller.
 const renderBlock = (block, blockIdx, sectionId) => {
@@ -46,7 +60,7 @@ const renderBlock = (block, blockIdx, sectionId) => {
                 className={`bi ${item.icon || ""} text-primary me-3 fs-4`}
               ></i>
               <span>
-                <strong>{item.title}:</strong>{" "}
+                <strong>{listLabel(item.title, item.desc)}</strong>{" "}
                 <span
                   dangerouslySetInnerHTML={{ __html: item.desc || "" }}
                 />

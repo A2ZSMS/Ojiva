@@ -20,7 +20,6 @@ export const metadata = buildMetadata({
     'REST API integration platform',
     'enterprise webhook automation',
     'Ojiva platform pricing',
-    'Ojiva API documentation',
     'CRM automation software',
     'sales pipeline automation',
     'conversational AI for sales',

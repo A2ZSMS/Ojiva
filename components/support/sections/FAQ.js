@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,19 +9,15 @@ export const FAQS = [
   { q: 'Do you offer onboarding assistance?',          category: 'account', a: 'Yes. Growth plans include guided onboarding sessions. Enterprise plans include white-glove onboarding with a dedicated engineer assigned to your team from day one.' },
   { q: 'What is your uptime SLA?',                     category: 'all',     a: 'We guarantee 99.5% uptime on Starter, 99.9% on Growth, and 99.99% on Enterprise — all backed by financially binding SLA agreements.' },
   { q: 'Can I upgrade my support plan anytime?',       category: 'billing', a: 'Absolutely. You can upgrade your support tier at any time from your account dashboard. Changes take effect immediately, and billing is prorated.' },
-  { q: 'Is there a self-service knowledge base?',      category: 'all',     a: "Yes — docs.ojiva.ai has a full API reference, integration tutorials, video walkthroughs, and a searchable changelog. It's available 24/7 to all users." },
-  { q: 'How do I get a sandbox API key?',              category: 'api',     a: 'Log into your dashboard, navigate to Settings → Developer → API Keys, and click "Generate Sandbox Key". It activates immediately with full test mode access.' },
   { q: 'Why is my SMS delivery rate lower than usual?', category: 'sms',    a: 'Delivery rates can dip due to DLT template issues, operator filtering, or number blacklisting. Check our status page and review your DLT registration in the dashboard.' },
   { q: 'How do I connect WhatsApp Business API?',      category: 'whatsapp',a: 'As an official Meta BSP, we handle verification. Submit your business details in the dashboard under Services → WhatsApp and our team completes setup within 24–48 hours.' },
   { q: 'How do I change my billing email?',            category: 'billing', a: 'Go to Account → Billing → Billing Contact and update your email. All future invoices will be sent to the new address immediately.' },
-  { q: 'Can I get webhook retry notifications?',       category: 'api',     a: 'Yes. Enable "Webhook Failure Alerts" in Settings → Webhooks. You will receive email and in-platform notifications on any failed delivery or retry attempt.' },
   { q: 'What is a DLT registration?',                  category: 'sms',     a: 'DLT (Distributed Ledger Technology) registration is mandatory in India for sending commercial SMS. Ojiva AI assists with full DLT registration support as part of your onboarding.' },
   { q: 'How do I reset my 2FA authenticator?',         category: 'account', a: 'Open a priority support ticket and our security team will verify your identity and reset 2FA within 30 minutes. Enterprise clients can call the direct support line.' },
 ];
 
 const CATEGORIES = [
   { id: 'all',         label: 'All Topics',   icon: '🔍' },
-  { id: 'api',         label: 'API & Dev',    icon: '🔌' },
   { id: 'billing',     label: 'Billing',      icon: '💳' },
   { id: 'sms',         label: 'SMS & RCS',    icon: '📱' },
   { id: 'whatsapp',    label: 'WhatsApp',     icon: '💬' },
@@ -40,7 +37,7 @@ export default function FAQ() {
   });
 
   return (
-    <section className="section-padding bg-section" aria-labelledby="faq-heading">
+    <section className="section-padding" aria-labelledby="faq-heading">
       <div className="container">
         <div className="text-center mb-4">
           <span className="section-tag">FAQ</span>
@@ -50,10 +47,10 @@ export default function FAQ() {
 
         {/* Search bar */}
         <div className="sp-faq-search-wrap">
-          <span className="sp-faq-search-icon">🔍</span>
+          <span className="sp-faq-search-icon"><Ico e="🔍" /></span>
           <input
             className="sp-faq-search"
-            placeholder="Search questions, e.g. 'API key' or 'billing'…"
+            placeholder="Search questions, e.g. 'DLT' or 'billing'…"
             value={search}
             onChange={e => { setSearch(e.target.value); setOpenIdx(null); }}
           />
@@ -70,7 +67,7 @@ export default function FAQ() {
               className={`sp-faq-cat${active === c.id ? ' active' : ''}`}
               onClick={() => { setActive(c.id); setOpenIdx(null); }}
             >
-              {c.icon} {c.label}
+              <Ico e={c.icon} /> {c.label}
             </button>
           ))}
         </div>

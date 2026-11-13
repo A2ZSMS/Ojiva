@@ -4,6 +4,7 @@
    section. Bubbles reveal one by one once the panel scrolls into view;
    plain CSS transitions, no animation library. */
 
+import Ico from '@/components/ui/Ico';
 import { useEffect, useRef, useState } from 'react';
 
 const EASE = 'cubic-bezier(0.22, 1, 0.36, 1)';
@@ -74,7 +75,7 @@ export default function AnimatedChat() {
     <div ref={ref} className="fdv-chat-panel">
       {/* Chat header */}
       <div className="fdv-chat-header">
-        <div className="fdv-chat-avatar">🤖</div>
+        <div className="fdv-chat-avatar"><Ico e="🤖" /></div>
         <div>
           <p className="fdv-chat-name">Ojiva AI Agent</p>
           <p className="fdv-chat-status"><span className="fdv-online-dot" />Online · Responding instantly</p>
@@ -118,7 +119,7 @@ export default function AnimatedChat() {
 
       {/* Footer badge */}
       <div className="fdv-badge">
-        <span>🤖</span> AI Managed This Entire Conversation
+        <span><Ico e="🤖" /></span> AI Managed This Entire Conversation
       </div>
     </div>
   );

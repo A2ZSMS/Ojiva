@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { StaggerContainer, StaggerItem } from '@/components/ui/Animations';
 import { VALUES } from './data';
@@ -19,7 +20,7 @@ export default function Values() {
             <StaggerItem className="col-12 col-md-6 col-lg-4" key={title}>
               <div className="value-card-v2">
                 <div className="value-icon-box" style={{ background: bg }}>
-                  <span aria-hidden="true">{icon}</span>
+                  <span aria-hidden="true"><Ico e={icon} /></span>
                 </div>
                 <h4>{title}</h4>
                 <p>{desc}</p>

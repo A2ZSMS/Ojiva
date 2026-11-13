@@ -1,3 +1,5 @@
+import { AutoCount } from '@/components/ui/Premium';
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import { HeroEntrance } from '@/components/ui/Animations';
 import { CHANNELS } from './data';
@@ -36,12 +38,12 @@ export default function Hero() {
               </div>
               <div className="platform-hero-stat-divider" />
               <div className="platform-hero-stat">
-                <span className="platform-hero-stat-value">3B+</span>
+                <span className="platform-hero-stat-value"><AutoCount>3B+</AutoCount></span>
                 <span className="platform-hero-stat-label">Messages / month</span>
               </div>
               <div className="platform-hero-stat-divider" />
               <div className="platform-hero-stat">
-                <span className="platform-hero-stat-value">99.9%</span>
+                <span className="platform-hero-stat-value"><AutoCount>99.9%</AutoCount></span>
                 <span className="platform-hero-stat-label">Uptime SLA</span>
               </div>
             </div>
@@ -78,7 +80,7 @@ function PortalMock() {
               className={`pf-dash-nav${c.id === 'whatsapp' ? ' active' : ''}`}
               style={{ '--ch': c.accent, '--ch-soft': c.accentSoft }}
             >
-              <span className="pf-dash-nav-ic">{c.icon}</span>
+              <span className="pf-dash-nav-ic"><Ico e={c.icon} /></span>
               <span className="pf-dash-nav-label">{c.title.replace(' portal', '').replace(' Call', '')}</span>
             </span>
           ))}

@@ -30,7 +30,7 @@ export default function Hero() {
                 Talk to Us
               </Link>
               <Link href="/platform" className="btn-hero-outline">
-                Explore Platform →
+                Explore Platform <span className="btn-arrow" aria-hidden="true">→</span>
               </Link>
             </div>
             </HeroEntrance>
@@ -42,11 +42,11 @@ export default function Hero() {
               <div className="about-brand-card about-brand-ojiva">
                 <div className="about-brand-card-header">
                   <Image
-                    src="/ojiva-logo-192.v1.webp"
+                    src="/ojiva-wordmark.v1.webp"
                     alt="About Ojiva AI — India's leading enterprise AI communication platform headquartered in Bengaluru"
-                    width={130}
-                    height={44}
-                    style={{ width: 'auto', height: '38px', objectFit: 'contain' }}
+                    width={111}
+                    height={34}
+                    style={{ width: 'auto', height: '34px', objectFit: 'contain' }}
                     unoptimized
                     loading="lazy"
                   />

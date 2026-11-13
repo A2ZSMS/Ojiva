@@ -1,5 +1,6 @@
 'use client';
 
+import Ico from '@/components/ui/Ico';
 import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { srcSetFor } from '@/lib/imageSrcSet';
@@ -371,7 +372,7 @@ export default function BlogList({ initialBlogs = [] }) {
                 : !featuredPost && (
                     <div className="col-12">
                       <div className="blg-empty">
-                        <div className="blg-empty__icon">📭</div>
+                        <div className="blg-empty__icon"><Ico e="📭" /></div>
                         <p className="blg-empty__msg">No articles found in this category yet.</p>
                         <button className="blg-empty__btn" onClick={() => handleCategory('All')}>
                           View all articles

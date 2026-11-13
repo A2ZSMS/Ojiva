@@ -12,14 +12,14 @@ export default function FinalCta() {
         'Sub-3 second OTP delivery across all operators',
         '99.9% uptime SLA with multi-operator fallback',
         '100% DLT compliant & TRAI registered',
-        'SMS, WhatsApp & Voice OTP on one API',
-        'Free API key — go live the same day',
+        'SMS, WhatsApp & Voice OTP from one platform',
+        'Free demo — go live the same day',
       ]}
       stats={[{ val: '<3s', lbl: 'OTP Delivery' }, { val: '99.9%', lbl: 'Success Rate' }, { val: 'Same Day', lbl: 'Go-Live' }]}
-      formTitle="Get Free OTP API Access"
+      formTitle="Get Started with OTP"
       formSubtitle="Go live the same day. No credit card required."
       formBadge="DLT Compliant · 99.9% SLA · No lock-in"
-      submitLabel="Get Free API Key →"
+      submitLabel="Get Started Free →"
     />
   );
 }

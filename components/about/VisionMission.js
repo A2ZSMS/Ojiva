@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp } from '@/components/ui/Animations';
 
@@ -17,7 +18,7 @@ export default function VisionMission() {
         <FadeUp>
         <div className="vision-mission-grid">
           <div className="vm-card vm-card-vision">
-            <span className="vm-card-icon" aria-hidden="true">🔭</span>
+            <span className="vm-card-icon" aria-hidden="true"><Ico e="🔭" /></span>
             <span className="vm-card-tag">Vision</span>
             <h3>The future of enterprise communication is autonomous</h3>
             <p>
@@ -27,7 +28,7 @@ export default function VisionMission() {
             </p>
           </div>
           <div className="vm-card vm-card-mission">
-            <span className="vm-card-icon" aria-hidden="true">🎯</span>
+            <span className="vm-card-icon" aria-hidden="true"><Ico e="🎯" /></span>
             <span className="vm-card-tag">Mission</span>
             <h3>Deliver the most capable AI communication engine on the market</h3>
             <p>

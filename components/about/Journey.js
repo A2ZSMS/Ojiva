@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { SlideLeft, SlideRight } from '@/components/ui/Animations';
 import { TIMELINE } from './data';
@@ -42,7 +43,7 @@ export default function Journey() {
                 <div className="timeline-item-v2" key={item.year}>
                   <div className="timeline-left-v2">
                     <div className="timeline-dot-v2">
-                      <span aria-hidden="true">{item.icon}</span>
+                      <span aria-hidden="true"><Ico e={item.icon} /></span>
                     </div>
                     {i < TIMELINE.length - 1 && (
                       <div className="timeline-line-v2" />

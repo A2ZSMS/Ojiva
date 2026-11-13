@@ -1,3 +1,4 @@
+import Ico from '@/components/ui/Ico';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FadeUp, SlideLeft, SlideRight } from '@/components/ui/Animations';
@@ -26,7 +27,7 @@ export default function PlatformFeatures() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Get Green Tick →</Link>
+            <Link href="/contact" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Get Green Tick <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideLeft>
           <SlideRight className="service-feature-visual">
             <div className="svc-stat-list">
@@ -37,7 +38,7 @@ export default function PlatformFeatures() {
                 </div>
               ))}
               <div className="svc-stat-highlight wa-highlight">
-                <span className="svc-stat-highlight-icon">💬</span>
+                <span className="svc-stat-highlight-icon"><Ico e="💬" /></span>
                 <p className="svc-stat-highlight-text">98% average message open rate vs 22% email</p>
               </div>
             </div>
@@ -55,7 +56,7 @@ export default function PlatformFeatures() {
                   <p className="cb-handoff-meta">{from.charAt(0).toUpperCase() + from.slice(1)}</p>
                 </div>
               ))}
-              <div className="cb-handoff-banner">⚡ Resolved in 1 minute — No agent needed</div>
+              <div className="cb-handoff-banner"><Ico e="⚡" /> Resolved in 1 minute — No agent needed</div>
             </div>
           </SlideLeft>
           <SlideRight className="service-feature-text order-lg-2">
@@ -69,7 +70,7 @@ export default function PlatformFeatures() {
                 <li key={pt}><span className="check-icon">✓</span>{pt}</li>
               ))}
             </ul>
-            <Link href="/whatsapp-chatbot" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Build Your Chatbot →</Link>
+            <Link href="/whatsapp-chatbot" className="btn-ojiva-primary mt-4 cb-btn-primary d-inline-flex">Build Your Chatbot <span className="btn-arrow" aria-hidden="true">→</span></Link>
           </SlideRight>
         </div>
       </div>
