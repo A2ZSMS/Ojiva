@@ -1,3 +1,4 @@
+import '@/styles/landing-base.css';
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import WebsiteLanding from '@/components/landing/WebsiteLanding';
 

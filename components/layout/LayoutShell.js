@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import PageFade from './PageFade';
+const PageFade = dynamic(() => import('./PageFade'));
 
 // Split into their own chunks so the Google Ads landing pages (which show none
 // of these) don't download them. Navbar still server-renders on normal pages.

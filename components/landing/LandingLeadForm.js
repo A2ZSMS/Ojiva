@@ -12,6 +12,9 @@ import { fireTeleCRM } from '@/lib/telecrm';
 const WEB3_KEY  = WEB3_ACCESS_KEY;
 const MAKE_HOOK = MAKE_HOOK_LANDING;
 const THANK_YOU = THANK_YOU_LANDING;
+// Hidden spam-trap input. Deliberately meaningless name: words like "website",
+// "url" or "company" get filled by browser autofill and password managers.
+const TRAP_FIELD = 'ojv_hp_note';
 
 const DEFAULT_SERVICES = [
   { value: '',               label: 'Select a service' },
@@ -120,6 +123,7 @@ export default function LandingLeadForm({
   spotsLeft     = 3,
   services      = DEFAULT_SERVICES,  /* null hides the service question (the page already says what it is) */
   defaultService = '',               /* service sent to the CRM when the question is hidden */
+  requireEmail   = false,            /* email required only on pages that opt in */
   requireCompany = false,            /* company name required + light junk check */
   serviceLabel  = 'Service',
   messageLabel  = 'Message',
@@ -144,8 +148,12 @@ export default function LandingLeadForm({
   const fieldError = useCallback((key, value) => {
     if (key === 'service' && !askService) return '';
     if (key === 'company' && !requireCompany) return '';
+    if (key === 'email' && requireEmail) {
+      if (!value.trim()) return 'Required.';
+      return RULES.email(value) ? 'Enter a valid email address.' : '';
+    }
     return RULES[key](value);
-  }, [askService, requireCompany]);
+  }, [askService, requireCompany, requireEmail]);
 
   const [form,         setForm]         = useState({ name:'', email:'', phone:'', company:'', service:'', message:'' });
   const [volume,       setVolume]       = useState('');
@@ -153,6 +161,8 @@ export default function LandingLeadForm({
   const [touched,      setTouched]      = useState({});
   const [submitting,   setSubmitting]   = useState(false);
   const [apiError,     setApiError]     = useState('');
+  const [trapped,      setTrapped]      = useState(false);
+  const hasTrap = source === 'whatsapp-api-service';
 
   const completePct = Math.round(
     (REQUIRED.filter(k => form[k] && !RULES[k](form[k])).length / REQUIRED.length) * 100
@@ -172,10 +182,13 @@ export default function LandingLeadForm({
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (inFlight.current) return;
+    // Spam trap: read the hidden field straight from the DOM (bots often fill
+    // inputs without firing React change events).
     setTouched({ name:true, email:true, phone:true, service:true, company:true });
     const errs = validateAll(form);
     if (!askService) errs.service = '';
     if (!requireCompany) errs.company = '';
+    if (requireEmail) errs.email = fieldError('email', form.email);
     setErrors(errs);
 
     const failed = Object.keys(errs).filter(key => errs[key]);
@@ -187,6 +200,8 @@ export default function LandingLeadForm({
       }
       return;
     }
+
+    const trapValue = hasTrap ? (formRef.current?.elements.namedItem(TRAP_FIELD)?.value || '').trim() : '';
 
     inFlight.current = true;
     setSubmitting(true); setApiError('');
@@ -203,6 +218,24 @@ export default function LandingLeadForm({
       source,
       submitted_at: new Date().toISOString(),
     };
+
+    if (trapValue) {
+      // Likely a bot, but autofill can occasionally fill hidden fields for a
+      // real person. Never drop it silently: email it to the team flagged as
+      // possible spam, skip CRM/SMS/Make, and do not open the thank-you page
+      // (that page view is the Google Ads conversion).
+      try {
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          signal: AbortSignal.timeout(15000),
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ access_key: WEB3_KEY, subject: `[Possible spam] Lead — ojiva.ai/${source}`, from_name: 'Ojiva AI Landing Page', redirect: 'false', ...payload, spam_trap: trapValue.slice(0, 200) }),
+        });
+      } catch { /* nothing else to do */ }
+      setTrapped(true);
+      setSubmitting(false);
+      return;
+    }
 
     try {
       const attr = getAttribution();
@@ -286,17 +319,22 @@ export default function LandingLeadForm({
         {isErr(key) && <span id={`${formId}-${key}-error`} className="wa-error">{errors[key]}</span>}
       </div>
     );
+    if (trapped) return (
+      <div className="wa-enquiry" role="status"><div className="wa-form-intro"><span>{introLabel}</span><h2>Thank you.</h2><p>We have received your details. Our team will contact you soon.</p></div></div>
+    );
     return (
       <form ref={formRef} className="wa-enquiry" onSubmit={handleSubmit} noValidate aria-label={formLabel} aria-busy={submitting}>
+        {hasTrap && <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}><label htmlFor={`${formId}-${TRAP_FIELD}`}>Leave this field empty</label><input id={`${formId}-${TRAP_FIELD}`} type="text" name={TRAP_FIELD} tabIndex={-1} autoComplete="off" data-lpignore="true" data-1p-ignore="true" data-form-type="other" defaultValue="" /></div>}
         <div className="wa-form-intro"><span>{introLabel}</span><h2>{title}</h2><p>{subtitle}</p></div>
         <div className="wa-field-row">
           {input('name', 'Your name', 'text', 'Full name', 'name')}
           {input('phone', 'Mobile number', 'tel', '10-digit mobile number', 'tel')}
         </div>
         {askService ? <div className={volumeOptions ? 'wa-field-row' : 'wa-field-stack'}>
-          {input('email', 'Email address', 'email', 'you@company.com', 'email', false)}
+          {input('email', 'Email address', 'email', 'you@company.com', 'email', requireEmail)}
           {input('company', 'Company name', 'text', 'Your business name', 'organization', requireCompany)}
         </div> : input('company', 'Company name', 'text', 'Your business name', 'organization', requireCompany)}
+        {!askService && requireEmail && input('email', 'Email address', 'email', 'you@company.com', 'email', true)}
         <div className={volumeOptions && askService ? 'wa-field-row' : undefined}>
         {askService && <div className="wa-field"><label htmlFor={`${formId}-service`}>{serviceLabel} <span aria-hidden="true">*</span></label>
           <select id={`${formId}-service`} name="service" required disabled={submitting} value={form.service} onChange={handleChange('service')} onBlur={handleBlur('service')} aria-invalid={isErr('service')} aria-describedby={isErr('service') ? `${formId}-service-error` : undefined}>
@@ -310,7 +348,7 @@ export default function LandingLeadForm({
           </select>
         </div>}
         </div>
-        {!askService && input('email', 'Email address', 'email', 'you@company.com', 'email', false)}
+        {!askService && !requireEmail && input('email', 'Email address', 'email', 'you@company.com', 'email', requireEmail)}
         <details className="wa-extra"><summary>Add your requirements <span>(optional)</span></summary>
           <div className="wa-field"><label htmlFor={`${formId}-message`}>Anything we should know?</label><textarea id={`${formId}-message`} name="message" rows={2} disabled={submitting} value={form.message} onChange={handleChange('message')} placeholder="Your use case, team size or monthly volume" /></div>
         </details>

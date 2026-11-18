@@ -1,3 +1,6 @@
+// The 404 page renders outside app/(site), so it imports the site CSS itself.
+import '@/styles/bootstrap.trimmed.css';
+import '@/styles/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LuHouse, LuMessageCircle } from 'react-icons/lu';

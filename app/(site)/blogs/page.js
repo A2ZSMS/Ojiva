@@ -1,5 +1,5 @@
 import { buildMetadata, breadcrumbSchema } from '@/lib/metadata';
-import blogsData from '../../public/data/blog.json';
+import blogsData from '../../../public/data/blog.json';
 import BlogList from './client';
 
 export const metadata = buildMetadata({

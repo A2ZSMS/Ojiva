@@ -1,7 +1,5 @@
-// Trimmed to the Bootstrap rules the site actually uses (scripts/trim-bootstrap.mjs,
-// regenerated on every dev start and build). Was the full 230 KB stylesheet.
-import '@/styles/bootstrap.trimmed.css';
-import '../styles/globals.css';
+// Site CSS (Bootstrap + globals) is imported by app/(site)/layout.js, not here,
+// so the Google Ads landing pages outside that group skip it. See that file.
 import { Inter, EB_Garamond } from 'next/font/google';
 import Script from 'next/script';
 import { organizationSchema, websiteSchema, softwareAppSchema, BRAND_KEYWORDS } from '@/lib/metadata';
@@ -34,6 +32,10 @@ const ebGaramond = EB_Garamond({
   display: 'swap',
   weight: ['700'],
   variable: '--font-eb-garamond',
+  // Not preloaded: the Google Ads landing pages never use this serif face, so a
+  // preload there only competes with the first paint. Pages that use it still
+  // fetch it as soon as the CSS asks for it (display: swap).
+  preload: false,
 });
 
 

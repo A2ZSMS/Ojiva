@@ -1,3 +1,4 @@
+import '@/styles/landing-base.css';
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import { SMS_FAQS as BULK_SMS_FAQS } from '@/components/landing/bulk-sms/data';
 import BulkSmsLanding from '@/components/landing/BulkSmsLanding';

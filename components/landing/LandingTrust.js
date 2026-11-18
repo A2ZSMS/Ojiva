@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import { SiGoogle, SiMeta } from 'react-icons/si';
 import { LuShieldCheck } from 'react-icons/lu';
@@ -6,11 +5,11 @@ import { CLIENT_LOGOS, GOOGLE_RATING, TESTIMONIALS } from './proof';
 import styles from './whatsapp-api/WhatsAppLanding.module.css';
 
 // First-screen trust strip: Meta BSP, DLT, then client logos once added.
-export function TrustStrip() {
+export function TrustStrip({ messagingOnly = false }) {
   return <div className={styles.trustStrip}>
     <ul className={styles.trustBadges} aria-label="Ojiva AI credentials">
       <li><SiMeta className={styles.metaIcon} aria-hidden="true" /><span><strong>Official Meta BSP</strong><small>WhatsApp Business Solution Provider</small></span></li>
-      <li><LuShieldCheck aria-hidden="true" /><span><strong>DLT registered</strong><small>TRAI-compliant SMS sending</small></span></li>
+      {!messagingOnly && <li><LuShieldCheck aria-hidden="true" /><span><strong>DLT registered</strong><small>TRAI-compliant SMS sending</small></span></li>}
       <li><a className={styles.googleRating} href={GOOGLE_RATING.url} target="_blank" rel="noopener noreferrer"><SiGoogle aria-hidden="true" /><span><strong>{GOOGLE_RATING.rating} ★ on Google</strong><small>{GOOGLE_RATING.count} customer reviews</small></span></a></li>
     </ul>
     {CLIENT_LOGOS.length > 0 && <div className={styles.clientLogos}>

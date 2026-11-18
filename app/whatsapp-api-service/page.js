@@ -1,3 +1,4 @@
+import '@/styles/landing-base.css';
 import WhatsAppApiLanding from '@/components/landing/WhatsAppApiLanding';
 
 // Google Ads landing page — intentionally excluded from organic search

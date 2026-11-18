@@ -1,3 +1,4 @@
+import '@/styles/landing-base.css';
 import { buildMetadata, serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/metadata';
 import RcsMessagingLanding from '@/components/landing/RcsMessagingLanding';
 

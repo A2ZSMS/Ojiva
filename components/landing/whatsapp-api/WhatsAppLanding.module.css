@@ -46,8 +46,8 @@
 .heroFoot > div { display: flex; flex-wrap: wrap; gap: 22px; font-weight: 500; }
 /* WhatsApp page hero: headline, form, then the rest. On phones the form comes
    right after the headline so it is above the fold. */
-.heroGridWa { grid-template-areas: "copy form" "extra form"; row-gap: 0; align-items: start; }
-.heroGridWa .heroCopy { grid-area: copy; align-self: end; }
+.heroGridWa { grid-template-areas: "copy form" "extra form"; grid-template-rows: auto 1fr; row-gap: 0; align-items: start; }
+.heroGridWa .heroCopy { grid-area: copy; align-self: start; }
 .heroGridWa .heroExtra { grid-area: extra; }
 .heroGridWa .formColumn { grid-area: form; align-self: center; }
 .heroSub { font-size: 15px; font-weight: 500; color: var(--wa-ink); margin: 0 0 18px; line-height: 1.6; }
@@ -67,7 +67,7 @@
 .quickFaqs details[open] summary svg { transform: rotate(180deg); }
 .quickFaqs details > p { font-size: 12px; color: var(--wa-muted); line-height: 1.7; margin: 0; padding-bottom: 13px; }
 @media (max-width: 800px) {
-  .heroGridWa { grid-template-areas: "copy" "form" "extra"; row-gap: 26px; }
+  .heroGridWa { grid-template-areas: "copy" "form" "extra"; grid-template-rows: auto; row-gap: 26px; }
   .heroGridWa .heroCopy { align-self: auto; }
   .heroGridWa .heroCopy h1 { margin-bottom: 12px; }
   .heroSub { margin: 0; font-size: 14px; }
@@ -365,3 +365,36 @@
   .trustBadges li { padding: 8px 11px 8px 9px; }
   .trustBadges strong { font-size: 11px; }
 }
+
+/* Supporting photography stays below the main conversion area. */
+.supportingPhoto { display: block; margin-top: 28px; }
+.supportingPhoto img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; }
+
+/* WhatsApp conversion refinements; existing section and form structure retained. */
+.heroProof { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 0 0 18px; font-size: 12px; color: var(--wa-green); }
+.heroProof a { display: inline-flex; align-items: center; gap: 4px; color: var(--wa-green); text-decoration: underline; text-underline-offset: 3px; }
+.heroActions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; margin: 22px 0; }
+.heroActions .heroAction { margin: 0; }
+.authenticationSection { padding-top: 32px; }
+.authenticationSection .sectionIntro { margin-bottom: 0; }
+.authenticationSection .primaryCta { margin-top: 22px; }
+.page :global(.wa-field input:focus-visible), .page :global(.wa-field select:focus-visible), .page :global(.wa-field textarea:focus-visible) { outline: 2px solid var(--wa-green); outline-offset: 2px; }
+@media (max-width: 800px) {
+  .heroGridWa .heroCopy .heroSub { margin-bottom: 10px; }
+  .heroProof { margin-bottom: 0; }
+  .heroActions { margin: 20px 0; }
+}
+@media (max-width: 540px) {
+  .authenticationSection { padding-top: 24px; }
+  .heroActions { gap: 8px 18px; }
+  .heroActions .primaryCta { font-size: 13px; }
+}
+
+.heroGridWa .heroCopy .heroBenefits { margin-bottom: 16px; }
+@media (max-width: 800px) { .heroGridWa .heroCopy .heroBenefits { margin-top: 14px; margin-bottom: 14px; } }
+
+.scopeCta { display: flex; align-items: center; justify-content: space-between; gap: 32px; border-top: 1px solid var(--wa-line); padding-top: 28px; margin-top: 36px; }
+.scopeCta p { max-width: 700px; margin: 0; font-size: 14px; color: var(--wa-muted); line-height: 1.8; }
+.scopeCta strong { color: var(--wa-ink); }
+.scopeCta a { flex-shrink: 0; }
+@media (max-width: 800px) { .scopeCta { flex-direction: column; align-items: flex-start; gap: 18px; } }
