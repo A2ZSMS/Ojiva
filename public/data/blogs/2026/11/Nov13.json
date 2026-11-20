@@ -1,0 +1,631 @@
+{
+  "slug": "abandoned-cart-sms-order-confirmation-sms-india",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "two-jobs",
+      "label": "Two Jobs, Two Rule Sets"
+    },
+    {
+      "id": "order-confirmation",
+      "label": "Order Confirmation SMS"
+    },
+    {
+      "id": "order-templates",
+      "label": "Order SMS Templates"
+    },
+    {
+      "id": "abandoned-cart",
+      "label": "Abandoned Cart SMS"
+    },
+    {
+      "id": "cart-templates",
+      "label": "Cart SMS Templates"
+    },
+    {
+      "id": "dlt-rules",
+      "label": "DLT Rules"
+    },
+    {
+      "id": "consent-timing",
+      "label": "Consent & Timing"
+    },
+    {
+      "id": "channels",
+      "label": "SMS, RCS & WhatsApp"
+    },
+    {
+      "id": "measure",
+      "label": "What to Measure"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Abandoned cart SMS and order confirmation SMS do two different jobs: one brings a shopper back to checkout, the other reassures a buyer who has already paid, and in India they follow different DLT rules.</strong> Treat them as one kind of message and you risk rejected templates, blocked links and customers who stop trusting your texts."
+        },
+        {
+          "type": "p",
+          "html": "This guide shows how to write both, with template structures you can adapt, and explains the rules that decide whether they deliver: category, DLT templates, link whitelisting, DND and timing, and consent, for online stores and D2C brands across India. Ojiva AI runs <a href=\"/sms/\">Bulk SMS</a> with guided DLT filing alongside WhatsApp and RCS on one platform. If you want a plan sized to your order volume, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov13(1).webp",
+          "alt": "Abandoned cart SMS and order confirmation SMS examples on a phone for an Indian online store"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "Abandoned Cart SMS and Order Confirmation SMS: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Keep the two message types separate, register each under the right category, and respect the rules that follow from that choice."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmation SMS:",
+              "desc": "triggered by a completed order, so it is a transactional message. Keep it short, factual and free of offers."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Abandoned cart SMS:",
+              "desc": "triggered by an unfinished purchase and meant to bring the shopper back. Most providers register it as promotional."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Templates must match exactly:",
+              "desc": "register each message on DLT, and send text that matches the approved template."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Links must be whitelisted:",
+              "desc": "a cart or tracking link only works if the URL is registered."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Timing differs:",
+              "desc": "promotional reminders follow DND and the 9 AM to 9 PM window, while transactional alerts are time-sensitive."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent matters:",
+              "desc": "cart reminders are marketing, so send them only to customers who agreed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want both flows running with DLT help included? Talk to Ojiva AI about <a href=\"/sms/\">Bulk SMS services</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "two-jobs",
+      "heading": "Abandoned Cart SMS vs Order Confirmation SMS: Two Jobs, Two Rule Sets",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The simplest way to avoid mistakes is to see how differently the two behave."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-lightning-charge-fill",
+              "title": "Trigger:",
+              "desc": "an order confirmation follows a completed purchase. A cart reminder follows an action the customer did not finish."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "Category:",
+              "desc": "order confirmations are transactional. Cart reminders are usually promotional, especially if they carry an offer."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "DND:",
+              "desc": "transactional SMS can reach numbers on the DND register. Promotional SMS cannot."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Timing:",
+              "desc": "promotional SMS is limited to the 9 AM to 9 PM window, so late cart reminders wait until morning."
+            },
+            {
+              "icon": "bi-bullseye",
+              "title": "Goal:",
+              "desc": "confirmations reduce anxiety and support calls. Cart reminders recover revenue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order-confirmation",
+      "heading": "Order Confirmation SMS: What to Send and When",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An order confirmation is the message customers actually expect. Airtel's published <a href=\"https://www.airtel.in/business/commercial-communication/assets/documents/Help_Modules/FAQs%20-%20Enterprise%20Telemarketers%20who%20want%20to%20send%20commercial%20communication-%20v3%20-%2017-09-2020.pdf\" target=\"_blank\" rel=\"noopener\">FAQ</a> defines transactional SMS as communication triggered by a transaction the user started, and an order confirmation follows that logic. Keep every order message to one purpose, and send them in the order the customer experiences them."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmed:",
+              "desc": "thank the customer, state the order number and the expected delivery date, and give a link to view the order."
+            },
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "Payment received or failed:",
+              "desc": "confirm the payment, or tell the customer the payment failed and how to retry."
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Shipped:",
+              "desc": "say the order is on its way, name the courier if you can, and add the tracking link."
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Out for delivery:",
+              "desc": "a short alert that the parcel arrives today."
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Delivered:",
+              "desc": "confirm delivery and invite the customer to contact you if there is a problem."
+            },
+            {
+              "icon": "bi-arrow-return-left",
+              "title": "Cancellation, refund or return:",
+              "desc": "tell the customer what happened and what to expect next."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "If you verify cash-on-delivery orders with a code, see our guide to <a href=\"/blogs/otp-sms-service-india/\">OTP SMS service in India</a>."
+        }
+      ]
+    },
+    {
+      "id": "order-templates",
+      "heading": "Order Confirmation SMS Templates You Can Adapt",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Write each template exactly as you will send it, with your brand name and a variable for each changing detail. Use the typed variable tags your DLT portal requires, shown here as [order number] and similar placeholders. These are structures to adapt, not text to copy."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Confirmation:",
+              "desc": "\"Thank you for your order [order number] at [Brand]. Expected delivery by [date]. View your order: [link].\""
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Shipped:",
+              "desc": "\"Your [Brand] order [order number] has shipped with [courier]. Track it here: [link].\""
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Out for delivery:",
+              "desc": "\"Your [Brand] order [order number] is out for delivery today.\""
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Delay:",
+              "desc": "\"Your [Brand] order [order number] is delayed. New expected date: [date]. We are sorry for the wait.\""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Notice what is missing: no offers, no upsell, no discount codes. The moment you add marketing text, the message stops being a clean transactional template."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov13(2).webp",
+          "alt": "Order confirmation, shipped and out-for-delivery SMS templates for an Indian online store"
+        }
+      ]
+    },
+    {
+      "id": "abandoned-cart",
+      "heading": "Abandoned Cart SMS: How to Bring Shoppers Back",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An abandoned cart is a strong buying signal, and a short, helpful text can bring the shopper back. The best reminders feel like help, not pressure."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-stopwatch-fill",
+              "title": "Send while intent is fresh:",
+              "desc": "trigger the reminder from your store after a short wait, and test the timing that works for your customers."
+            },
+            {
+              "icon": "bi-person-fill",
+              "title": "Name the item:",
+              "desc": "mention the product the shopper left behind, so the message is clearly about their cart."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "One clear link:",
+              "desc": "send the shopper straight back to their cart, with one call to action."
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "Offer only when it makes sense:",
+              "desc": "if you include a discount, keep it real and keep it time-limited honestly."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "Stop after purchase:",
+              "desc": "cancel the reminder the moment an order is placed."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Respect frequency:",
+              "desc": "keep the sequence short, and never message the same customer repeatedly about the same cart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cart-templates",
+      "heading": "Abandoned Cart SMS Templates You Can Adapt",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Because cart reminders are usually promotional, they use a promotional template and header, and the timing rules apply. Include your brand name and register the link. Again, these are structures to adapt."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-cart-fill",
+              "title": "First reminder:",
+              "desc": "\"Hi [name], you left [product] in your cart at [Brand]. Complete your order: [link].\""
+            },
+            {
+              "icon": "bi-chat-heart-fill",
+              "title": "Helpful nudge:",
+              "desc": "\"[Brand]: your cart is saved. Need help choosing a size or delivery date? Reply or visit [link].\""
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "With an offer:",
+              "desc": "\"[Brand]: finish your order and get [offer] on [product]. Valid till [date]. Shop now: [link].\""
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Last reminder:",
+              "desc": "\"[Brand]: your cart items are still waiting. Complete your order here: [link].\""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Use urgency only when it is true. A message that says stock is low when it is not hurts trust, and invites complaints."
+        }
+      ]
+    },
+    {
+      "id": "dlt-rules",
+      "heading": "DLT Rules for E-commerce SMS: Category, Variables and Links",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "DLT is a TRAI requirement for SMS, and e-commerce messages are covered. Our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">step-by-step DLT guide</a> covers the filing, and our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a> explains who sets the fee. For these two message types, five points matter."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tag-fill",
+              "title": "Classify honestly:",
+              "desc": "register order confirmations as transactional and cart reminders as promotional. The wrong category is a common reason for rejection."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Match the template exactly:",
+              "desc": "the text you send must match the approved template, apart from the tagged variables."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Typed variable tags:",
+              "desc": "guides report that new templates from 14 January 2026 must use typed tags in place of the old generic tag. Confirm the exact tags on your DLT portal."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Whitelist your links:",
+              "desc": "TRAI directed that SMS carrying unregistered URLs be blocked, so register every cart, order and tracking link. See the <a href=\"https://trai.gov.in/sites/default/files/PR_No.67of2024.pdf\" target=\"_blank\" rel=\"noopener\">TRAI press release</a>."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Brand name and Template ID:",
+              "desc": "include your brand name in the text, and send the Template ID with every message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consent-timing",
+      "heading": "Consent, DND and Timing: What Applies to Cart Reminders",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Order confirmations and cart reminders carry different obligations. Treat the reminder as marketing."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "collect clear consent at checkout, say what customers will receive, and keep a record."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "DND:",
+              "desc": "promotional SMS cannot reach numbers on the DND register, so scrub your list."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Timing:",
+              "desc": "promotional SMS is limited to the 9 AM to 9 PM window. Queue late reminders for the next morning."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Opt-out:",
+              "desc": "give an easy way to stop messages, and honour it immediately."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "DPDP Act:",
+              "desc": "treat mobile numbers as personal data. Collect them for a clear purpose and keep them only as long as needed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "This is practical guidance rather than legal advice, so check your own obligations with a qualified professional."
+        }
+      ]
+    },
+    {
+      "id": "channels",
+      "heading": "SMS, RCS and WhatsApp for E-commerce Messages",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "SMS reaches any phone with network coverage, which makes it the baseline for both message types. Add other channels where they help."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-text-fill",
+              "title": "SMS:",
+              "desc": "the guaranteed path for order confirmations and cart reminders."
+            },
+            {
+              "icon": "bi-images",
+              "title": "RCS:",
+              "desc": "rich cards and buttons for customers whose phones support it, with SMS fallback. See our guide to <a href=\"/blogs/rcs-messaging-for-ecommerce-d2c-india/\">RCS messaging for e-commerce</a>."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "WhatsApp:",
+              "desc": "for customers who prefer chat, with opt-in and approved templates. See <a href=\"/blogs/send-bulk-whatsapp-messages-india/\">how to send bulk WhatsApp messages safely</a>."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "OTP:",
+              "desc": "see <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a> for login and COD verification codes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "heading": "What to Measure After You Launch",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Start with order confirmations, add cart reminders, then read the results before you scale."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery reports:",
+              "desc": "delivered, failed and rejected statuses with reasons, so you can fix template problems."
+            },
+            {
+              "icon": "bi-cursor-fill",
+              "title": "Link clicks:",
+              "desc": "how many customers tap the cart or tracking link."
+            },
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "Recovered orders:",
+              "desc": "orders placed after a reminder, compared with a group that got none."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Opt-outs:",
+              "desc": "a rise means your reminders are too frequent or too pushy."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov13(3).webp",
+          "alt": "Ojiva AI dashboard with delivery reports for order confirmation and abandoned cart SMS"
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps Online Stores With Order and Cart SMS",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events and cart events from your store so messages fire automatically."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "SMS, WhatsApp, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Confirm Fast, Remind Gently, Follow the Rules",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Order confirmations build trust, and cart reminders recover revenue. Keep them separate, classify each correctly, register your templates and links, respect DND and timing, and collect real consent. Then measure delivery and recovered orders before you scale."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own store, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your order events, templates and fallback flow together. You can also read about our <a href=\"/sms/\">Bulk SMS services</a>. Done right, abandoned cart SMS and order confirmation SMS become two of the most dependable messages your store sends. Conversations that convert start with messages customers actually want."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "RCS Messaging for E-commerce and D2C",
+              "href": "/blogs/rcs-messaging-for-ecommerce-d2c-india/"
+            },
+            {
+              "title": "OTP SMS Service in India: DLT Templates, Delivery Speed and How to Choose",
+              "href": "/blogs/otp-sms-service-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            },
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Is an abandoned cart SMS promotional or transactional in India?",
+              "a": "<p>Most providers register cart reminders as promotional, because they invite the customer to buy and often carry an offer. Transactional SMS is triggered by a transaction the customer completed, such as a confirmed order. Classify honestly and ask your provider how your operator treats cart reminders, because a wrong category is a common reason for rejection.</p>"
+            },
+            {
+              "q": "Is an order confirmation SMS transactional?",
+              "a": "<p>Yes, in the usual reading. Airtel's published FAQ defines transactional SMS as communication triggered by a transaction the user started, with a banking OTP as its example. An order confirmation follows the same logic. Keep marketing text out of it, and register it as its own template.</p>"
+            },
+            {
+              "q": "Can I send abandoned cart SMS after 9 PM?",
+              "a": "<p>Not if the template is promotional. Promotional SMS in India cannot reach DND-registered numbers and is limited to the 9 AM to 9 PM window, so queue late reminders for the next morning. Transactional messages such as order confirmations follow different timing rules.</p>"
+            },
+            {
+              "q": "Do I need DLT registration to send e-commerce SMS in India?",
+              "a": "<p>Yes. Every business sending SMS in India registers its entity, sender ID and each template on a DLT platform. The message you send must match an approved template, and any link in it must be whitelisted. WhatsApp and RCS follow their own approval rules, but an SMS fallback still needs DLT.</p>"
+            },
+            {
+              "q": "Why is my order SMS template rejected?",
+              "a": "<p>Common causes are the wrong category, unclear variables, marketing text mixed into a transactional template, a missing brand name, or a link that is not whitelisted. Keep each template to one purpose, use the typed variable tags your DLT portal requires, and write the text exactly as you will send it.</p>"
+            },
+            {
+              "q": "Do I need customer consent for abandoned cart SMS?",
+              "a": "<p>Treat cart reminders as marketing. Collect clear consent at checkout, state what customers will receive, give an easy way to opt out, and stop messages once they buy. This also supports the principles of the DPDP Act. This is practical guidance rather than legal advice, so check your own obligations with a qualified professional.</p>"
+            },
+            {
+              "q": "Should I use SMS, RCS or WhatsApp for order updates?",
+              "a": "<p>Use SMS as the guaranteed baseline, because it reaches any phone with network coverage. RCS can add images and buttons for customers whose phones support it, and WhatsApp suits customers who prefer chat. Running them from one provider keeps consent, reports and fallback in one place.</p>"
+            },
+            {
+              "q": "How do I stop abandoned cart SMS after the customer buys?",
+              "a": "<p>Trigger the reminder from your store's cart event, and cancel any queued reminder the moment an order is placed. Check that your system removes the shopper from the sequence for every order, including orders placed from another device. Test this before launch, because a reminder sent after purchase annoys customers.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

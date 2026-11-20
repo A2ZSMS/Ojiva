@@ -1,0 +1,656 @@
+{
+  "slug": "how-to-run-an-rcs-campaign-india",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "formats",
+      "label": "Message Formats"
+    },
+    {
+      "id": "rich-cards",
+      "label": "Rich Cards"
+    },
+    {
+      "id": "carousels",
+      "label": "Carousels"
+    },
+    {
+      "id": "templates",
+      "label": "Templates"
+    },
+    {
+      "id": "steps",
+      "label": "Step by Step"
+    },
+    {
+      "id": "consent-timing",
+      "label": "Consent & Timing"
+    },
+    {
+      "id": "fallback",
+      "label": "SMS Fallback & DLT"
+    },
+    {
+      "id": "measure",
+      "label": "Measure & Mistakes"
+    },
+    {
+      "id": "cost",
+      "label": "Cost"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>To run an RCS campaign, plan one goal and one opted-in audience, choose the right format (a rich card or a carousel), write short copy with a clear button, add an SMS fallback and send a small test before you scale.</strong> The format is the easy part. What decides results is the message design, the audience and the rules you follow."
+        },
+        {
+          "type": "p",
+          "html": "This guide shows how to plan, design and send an RCS campaign in India: the message formats, how to design rich cards and carousels, reusable templates, buttons, consent and timing, SMS fallback, and what to measure. Ojiva AI runs <a href=\"/rcs/\">RCS Business Messaging</a> alongside <a href=\"/sms/\">Bulk SMS</a> and WhatsApp on one platform. If you want a campaign planned around your own list, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov16(1).webp",
+          "alt": "RCS campaign example with a rich card and carousel shown on a phone for an Indian brand"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "How to Run an RCS Campaign: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A good RCS campaign follows the same simple path every time. Here it is in one view."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bullseye",
+              "title": "One goal:",
+              "desc": "decide what a customer should do, such as view a product, book a visit or reply."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "One opted-in audience:",
+              "desc": "send only to customers who agreed to receive marketing messages."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "The right format:",
+              "desc": "a rich card for one offer, a carousel for several options."
+            },
+            {
+              "icon": "bi-hand-index-thumb-fill",
+              "title": "Clear buttons:",
+              "desc": "one primary action, with short button text."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "An SMS fallback:",
+              "desc": "so customers whose phones cannot show RCS still get the message."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "A small test first:",
+              "desc": "send to a small group, read the results, then scale."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want a campaign plan built for your list? Talk to Ojiva AI about <a href=\"/rcs/\">RCS messaging</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "formats",
+      "heading": "RCS Message Formats: Text, Rich Card and Carousel",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS Business Messaging goes beyond plain text. A single message can combine text, an image or video, a rich card, and suggested replies and actions, according to Google's RCS Business Messaging documentation. For campaigns, three formats do most of the work."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-text-fill",
+              "title": "Text with buttons:",
+              "desc": "a short message plus suggested replies, good for quick questions and confirmations."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Standalone rich card:",
+              "desc": "media, a title, a description and buttons in one card, good for a single offer, product or event."
+            },
+            {
+              "icon": "bi-collection-fill",
+              "title": "Carousel:",
+              "desc": "several rich cards in one swipeable message, good for catalogues and collections."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Verified sender:",
+              "desc": "your brand name and logo appear as a verified RCS sender, approved before you can send."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Our guide to <a href=\"/blogs/upgrade-bulk-sms-to-rcs-india/\">upgrading bulk SMS to RCS</a> explains what carries over from your SMS setup, and <a href=\"/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/\">RCS vs SMS</a> compares the two."
+        }
+      ]
+    },
+    {
+      "id": "rich-cards",
+      "heading": "Rich Cards: Design That Gets Taps",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A rich card works when a customer can understand it in a glance. Lead with the image, say one thing, and give one clear next step."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-image-fill",
+              "title": "Lead with the image:",
+              "desc": "use a clear, relevant picture of the product, venue or offer."
+            },
+            {
+              "icon": "bi-type",
+              "title": "A short title:",
+              "desc": "say what the card is about in a few words."
+            },
+            {
+              "icon": "bi-justify-left",
+              "title": "A brief description:",
+              "desc": "one or two lines with the key detail, such as the offer or the date."
+            },
+            {
+              "icon": "bi-cursor-fill",
+              "title": "One primary button:",
+              "desc": "make the main action obvious, such as View product or Book now."
+            },
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Up to four buttons, 25 characters each:",
+              "desc": "Google's documentation sets these limits for suggested replies and actions on a card. Fewer is clearer."
+            },
+            {
+              "icon": "bi-eye-fill",
+              "title": "Test on real phones:",
+              "desc": "preview on a few handsets, because rendering depends on the device."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carousels",
+      "heading": "Carousels: Showing Several Options at Once",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A carousel lets customers browse without leaving the inbox. It works best when the cards are alike in structure, so swiping feels natural."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-collection-fill",
+              "title": "A clear theme:",
+              "desc": "one collection, one occasion or one price band per carousel."
+            },
+            {
+              "icon": "bi-sort-down",
+              "title": "Best card first:",
+              "desc": "put your strongest option at the front, because many customers will not swipe."
+            },
+            {
+              "icon": "bi-layout-three-columns",
+              "title": "Consistent cards:",
+              "desc": "keep the same image style, title length and button across cards."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "A specific link per card:",
+              "desc": "send each card to its own product or page, not the home page."
+            },
+            {
+              "icon": "bi-hand-thumbs-up-fill",
+              "title": "A closing reply chip:",
+              "desc": "add a button such as Show more below the carousel to continue the conversation."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov16(2).webp",
+          "alt": "RCS carousel with product cards and shop buttons designed for an Indian retail campaign"
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "heading": "RCS Templates: Reusable Layouts for Every Campaign",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Here, a template means a reusable message layout that you fill with new content for each campaign. It saves design time and keeps your messages consistent. Some providers also review campaign content before sending, so ask yours what approvals apply. These are structures to adapt, not text to copy."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Launch card:",
+              "desc": "a hero image, the product name, a one-line benefit and a View now button."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Offer card:",
+              "desc": "an image, the offer in the title, the validity date in the description and a Shop now button."
+            },
+            {
+              "icon": "bi-calendar-event-fill",
+              "title": "Event invite:",
+              "desc": "an image, the event name and date, and buttons to Add to calendar and Get directions."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Reminder:",
+              "desc": "short text with a button to confirm, reschedule or call."
+            },
+            {
+              "icon": "bi-chat-square-heart-fill",
+              "title": "Feedback request:",
+              "desc": "a short question with reply chips such as Great, Okay and Needs work."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Win-back:",
+              "desc": "an image of a product the customer viewed, with a button to return."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "heading": "How to Run an RCS Campaign: Step by Step",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Work through these steps in order. Each one reduces risk before the next."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Set one goal:",
+              "desc": "choose the action you want, such as a visit, a purchase or a reply."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Build your audience:",
+              "desc": "list opted-in customers, and segment by interest or past purchase."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Choose the format:",
+              "desc": "a rich card for one offer, a carousel for several."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Write and design:",
+              "desc": "short copy, a strong image and one primary button."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Add your fallback:",
+              "desc": "write a plain-text SMS version that stands on its own."
+            },
+            {
+              "icon": "bi-6-circle-fill",
+              "title": "Test on real phones:",
+              "desc": "check the layout, the buttons and the fallback."
+            },
+            {
+              "icon": "bi-7-circle-fill",
+              "title": "Send a small batch:",
+              "desc": "start with a small group and read the results."
+            },
+            {
+              "icon": "bi-8-circle-fill",
+              "title": "Scale and refine:",
+              "desc": "grow the audience gradually and change one element at a time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consent-timing",
+      "heading": "Audience, Consent and Timing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An RCS campaign is marketing, so consent and relevance come first. They also protect your sender reputation."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "collect clear consent, say what customers will receive and keep a record."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Segment your list:",
+              "desc": "send each offer only to the customers likely to want it."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Opt-out:",
+              "desc": "give an easy way to stop messages, and honour it immediately."
+            },
+            {
+              "icon": "bi-clock-fill",
+              "title": "Timing:",
+              "desc": "avoid late nights, and apply SMS timing rules to your fallback: promotional SMS cannot reach DND numbers and is limited to the 9 AM to 9 PM window."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "DPDP Act:",
+              "desc": "treat mobile numbers as personal data, collected for a clear purpose and kept only as long as needed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "This is practical guidance rather than legal advice, so check your own obligations with a qualified professional."
+        }
+      ]
+    },
+    {
+      "id": "fallback",
+      "heading": "SMS Fallback and DLT for RCS Campaigns",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "RCS reach depends on the customer's device, messaging app and network, so keep SMS underneath. Your fallback brings the SMS rules with it."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "A separate verified sender:",
+              "desc": "RCS needs its own sender verification, in addition to anything you registered for SMS."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "DLT for the fallback:",
+              "desc": "your SMS fallback needs your DLT entity, sender ID and approved template. See our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a>."
+            },
+            {
+              "icon": "bi-question-circle-fill",
+              "title": "RCS content approval:",
+              "desc": "guides differ on whether RCS content needs its own DLT step. Ask your provider which approvals apply."
+            },
+            {
+              "icon": "bi-hourglass-split",
+              "title": "Fallback timing:",
+              "desc": "decide how long to wait before the SMS goes out, so a customer does not get both at once."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For an e-commerce view of the same ideas, read <a href=\"/blogs/rcs-messaging-for-ecommerce-d2c-india/\">RCS messaging for e-commerce</a> and our guide to <a href=\"/blogs/abandoned-cart-sms-order-confirmation-sms-india/\">abandoned cart SMS and order confirmation SMS</a>."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "heading": "What to Measure and Common Mistakes to Avoid",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Read the results after every send, then change one thing at a time. That is how a campaign improves."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery:",
+              "desc": "how many messages were delivered, and how many fell back to SMS."
+            },
+            {
+              "icon": "bi-cursor-fill",
+              "title": "Taps:",
+              "desc": "how many customers tapped each button."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Replies:",
+              "desc": "how many customers answered a suggested reply or wrote back."
+            },
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "Conversions:",
+              "desc": "orders, bookings or visits, compared with a group that got no message."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Opt-outs:",
+              "desc": "a rise means your messages are too frequent or not relevant."
+            },
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Mistakes to avoid:",
+              "desc": "too much text, several competing buttons, a weak fallback, no consent and no test send."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov16(3).webp",
+          "alt": "Ojiva AI dashboard with RCS campaign delivery, tap and fallback reports"
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "heading": "RCS Campaign Cost: How to Budget Without Guessing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "There is no single public rate card for RCS in India. Prices depend on your provider, the message type and your volumes, and richer messages usually cost more than basic ones. Instead of chasing a headline number, make every quote answer the same questions."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tags-fill",
+              "title": "Message type:",
+              "desc": "ask how basic messages, rich cards and carousels are priced separately."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "SMS fallback:",
+              "desc": "ask what you pay when a message falls back to SMS, and whether that rate includes GST."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "DLT and operator fees:",
+              "desc": "the DLT fee goes to the operator, not your provider."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Service charges:",
+              "desc": "ask whether sender verification, reports and API access are included or charged separately."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own volumes beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps You Run RCS Campaigns",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering RCS, Bulk SMS, WhatsApp Business API, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "RCS and SMS fallback on one account:",
+              "desc": "run your campaign and its fallback together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events, forms and CRM stages so campaigns can fire automatically."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Plan Small, Design Clearly, Measure Everything",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A strong RCS campaign starts with one goal and a consented audience, uses a rich card or carousel with one clear button, keeps SMS underneath for reach, and is tested before it scales. Read your reports, change one thing at a time and get a written quote that separates RCS, fallback and DLT charges."
+        },
+        {
+          "type": "p",
+          "html": "To plan your first campaign, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your audience, message formats and fallback flow together. You can also explore our <a href=\"/rcs/\">RCS messaging</a> and <a href=\"/sms/\">Bulk SMS</a> services. Follow these steps, and your next RCS campaign will be easier to plan, safer to send and simpler to improve. Conversations that convert start with messages customers want to open."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "RCS Messaging for E-commerce and D2C",
+              "href": "/blogs/rcs-messaging-for-ecommerce-d2c-india/"
+            },
+            {
+              "title": "How to Upgrade Bulk SMS to RCS Messaging in India",
+              "href": "/blogs/upgrade-bulk-sms-to-rcs-india/"
+            },
+            {
+              "title": "RCS vs SMS: Key Differences & Which is Better for Business",
+              "href": "/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How do I run an RCS campaign?",
+              "a": "<p>Pick one goal and an opted-in audience, choose a format (a standalone rich card or a carousel), write short copy with a clear button, add an SMS fallback, test on real phones, send to a small group first, then scale. Read your delivery and tap reports after every send and change one thing at a time.</p>"
+            },
+            {
+              "q": "What is an RCS rich card?",
+              "a": "<p>A rich card is a single message that combines media, a title, a description and buttons. According to Google's RCS Business Messaging documentation, each card can carry up to four suggested replies or actions, with button text of up to 25 characters. It suits one offer, one product or one event.</p>"
+            },
+            {
+              "q": "What is an RCS carousel?",
+              "a": "<p>A carousel combines several rich cards into one swipeable message, so customers can browse options without leaving the inbox. Use it for catalogues, collections or comparisons, and keep each card's structure consistent. Rendering depends on the customer's device, so test on a few handsets.</p>"
+            },
+            {
+              "q": "What happens if a customer's phone does not support RCS?",
+              "a": "<p>RCS reach depends on the customer's device, messaging app and network. When a phone cannot receive RCS, an SMS fallback delivers a plain-text version instead, so the customer still gets the message. The fallback cannot carry images or buttons, so write it to stand on its own.</p>"
+            },
+            {
+              "q": "Do I need consent to send RCS marketing messages?",
+              "a": "<p>Treat RCS campaigns as marketing: collect clear consent, say what customers will receive, give an easy opt-out and honour it quickly. This also supports the principles of the DPDP Act. This is practical guidance rather than legal advice, so check your own obligations with a qualified professional.</p>"
+            },
+            {
+              "q": "Do I need DLT registration for an RCS campaign?",
+              "a": "<p>Your SMS fallback does, because SMS in India needs your DLT entity, sender ID and approved template. RCS also needs a separate verified sender. Guides differ on whether RCS content needs its own DLT step, so ask your provider which approvals apply to your account before you set a launch date.</p>"
+            },
+            {
+              "q": "How much does an RCS campaign cost?",
+              "a": "<p>There is no single public rate card. Pricing depends on your provider, the message type and your volumes, and richer messages usually cost more than basic ones. Ask for a written quote that separates RCS messages, SMS fallback and any DLT or service charges, so you can compare offers on equal terms.</p>"
+            },
+            {
+              "q": "How do I measure an RCS campaign?",
+              "a": "<p>Track delivery, button taps, replies, conversions and opt-outs, and note how many messages fell back to SMS. Compare a message variant against a control group, and change one element at a time, such as the image or the button text, so you know what drove the result.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
