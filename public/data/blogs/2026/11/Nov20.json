@@ -1,0 +1,583 @@
+{
+  "slug": "dlt-approved-sms-template-examples-india",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "anatomy",
+      "label": "Anatomy of a Template"
+    },
+    {
+      "id": "categories",
+      "label": "Choose the Category"
+    },
+    {
+      "id": "typed-tags",
+      "label": "Typed Variable Tags"
+    },
+    {
+      "id": "otp-templates",
+      "label": "OTP Examples"
+    },
+    {
+      "id": "order-templates",
+      "label": "Order Examples"
+    },
+    {
+      "id": "offer-templates",
+      "label": "Offer Examples"
+    },
+    {
+      "id": "rejections",
+      "label": "Why Templates Fail"
+    },
+    {
+      "id": "checklist",
+      "label": "Pre-Submit Checklist"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>A DLT template is approved when it is one clear message, written exactly as you will send it, with your brand name, the right category and a typed variable tag for every changing value.</strong> Most rejections are not about the idea. They come from vague wording, the wrong category, untagged variables or links that are not registered."
+        },
+        {
+          "type": "p",
+          "html": "This guide shows how to write a DLT-approved SMS template in India, with working structures for OTP, order and offer messages, the typed variable tags you need, the reasons templates get rejected and a checklist to run before you submit. Ojiva AI runs <a href=\"/sms/\">Bulk SMS and OTP services</a> with guided DLT filing alongside WhatsApp and RCS on one platform. If you want your templates reviewed before you submit them, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov20(1).webp",
+          "alt": "DLT-approved SMS template examples for OTP, orders and offers with typed variable tags"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "How to Write a DLT-Approved SMS Template: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Every approved template gets six things right. Check each one before you submit."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bullseye",
+              "title": "One purpose:",
+              "desc": "an OTP, an order update or an offer, never a mix."
+            },
+            {
+              "icon": "bi-tag-fill",
+              "title": "The right category:",
+              "desc": "transactional for OTPs and order confirmations, promotional for offers."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Typed variable tags:",
+              "desc": "every changing value uses the tag that matches its data."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Your brand name:",
+              "desc": "in the text, matching your registered sender ID."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Registered links:",
+              "desc": "any URL is whitelisted before you send."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Exact match:",
+              "desc": "the SMS you send matches the approved template, apart from the tagged values."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want a second pair of eyes on your templates? Talk to Ojiva AI about <a href=\"/sms/\">Bulk SMS and OTP services</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "heading": "Anatomy of a DLT Template: Fixed Text and Variables",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A DLT template is the approved wording of a message, with fixed text and slots for the values that change. The portal compares each message you send with it, so the template and the message must agree. Our <a href=\"/blogs/dlt-registration-bulk-sms-india/\">step-by-step DLT guide</a> covers entity and sender ID registration, and our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a> explains who sets the fee."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Fixed text:",
+              "desc": "the words that never change, such as your brand name and the purpose of the message."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Variables:",
+              "desc": "the values that change per message, such as an OTP, an order ID or a link."
+            },
+            {
+              "icon": "bi-hash",
+              "title": "Template ID:",
+              "desc": "each approved template gets an ID, which must accompany every SMS you send."
+            },
+            {
+              "icon": "bi-card-text",
+              "title": "Sender ID (header):",
+              "desc": "the registered header customers see. Operators add a category suffix, such as -T for transactional, from your template category, so you do not type it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "heading": "Choose the Right Category First",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The category decides the rules your template follows, including timing and DND. Choose it before you write the text, and write the text to fit it."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "Transactional:",
+              "desc": "Airtel's published <a href=\"https://www.airtel.in/business/commercial-communication/assets/documents/Help_Modules/FAQs%20-%20Enterprise%20Telemarketers%20who%20want%20to%20send%20commercial%20communication-%20v3%20-%2017-09-2020.pdf\" target=\"_blank\" rel=\"noopener\">FAQ</a> defines transactional SMS as communication triggered by a transaction the user started, with a banking OTP as its example. OTPs and order confirmations fit here."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Promotional:",
+              "desc": "offers, launches and reminders that invite a purchase. Promotional SMS cannot reach DND numbers and is limited to the 9 AM to 9 PM window."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Service messages:",
+              "desc": "order and delivery updates sit between the two. The service categories have been changing, and guides report that service explicit templates moved to promotional in March 2026. Confirm how your portal treats them."
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Do not misclassify:",
+              "desc": "putting marketing text into a transactional template is a common reason for rejection and can lead to penalties."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typed-tags",
+      "heading": "Typed Variable Tags: What They Are and How to Use Them",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Guides report that TRAI directed new templates created from 14 January 2026 to tag every variable with a data type, replacing the old generic tag. The commonly listed tags are below. Confirm the exact list and rules on your own DLT portal, because platforms can differ in detail."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-123",
+              "title": "{#numeric#}:",
+              "desc": "numbers, such as an OTP, an amount or a validity period."
+            },
+            {
+              "icon": "bi-type",
+              "title": "{#alphanumeric#}:",
+              "desc": "letters and numbers, such as an order ID, a name or a reference number."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "{#url#}:",
+              "desc": "website links, such as a tracking, payment or cart page. The link must be whitelisted."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "{#urlott#}:",
+              "desc": "app or OTT download links."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "{#cbn#}:",
+              "desc": "callback phone numbers."
+            },
+            {
+              "icon": "bi-envelope-fill",
+              "title": "{#email#}:",
+              "desc": "email addresses."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Use the tag that matches the data you will send. An OTP goes in the numeric tag, and only numeric values can be sent in it. If a value does not fit a tag, such as a date with slashes, check your portal's rules or write it in a different form."
+        }
+      ]
+    },
+    {
+      "id": "otp-templates",
+      "heading": "OTP SMS Template Examples (Transactional)",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "An OTP template is short, names your brand and does one job. Register it under the transactional category, and keep offers out of it. Replace [Brand name] with the brand name on your registered sender ID. Our guide to the <a href=\"/blogs/otp-sms-service-india/\">OTP SMS service in India</a> covers delivery and security."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "Login OTP:",
+              "desc": "\"{#numeric#} is your OTP for [Brand name] login. Valid for {#numeric#} minutes. Do not share it with anyone.\""
+            },
+            {
+              "icon": "bi-credit-card-fill",
+              "title": "Payment OTP:",
+              "desc": "\"{#numeric#} is your OTP for payment of Rs.{#numeric#} at [Brand name]. Valid for {#numeric#} minutes. Do not share it.\""
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Delivery OTP:",
+              "desc": "\"{#numeric#} is your [Brand name] delivery code for order {#alphanumeric#}. Share it only with the delivery partner.\""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov20(2).webp",
+          "alt": "OTP, order and offer SMS template structures with DLT typed variable tags"
+        }
+      ]
+    },
+    {
+      "id": "order-templates",
+      "heading": "Order SMS Template Examples (Transactional)",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Order messages confirm something the customer did, so keep them factual. No offers, no upsell. See our guide to <a href=\"/blogs/abandoned-cart-sms-order-confirmation-sms-india/\">abandoned cart SMS and order confirmation SMS</a> for the full lifecycle."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmed:",
+              "desc": "\"Thank you for your order {#alphanumeric#} at [Brand name]. View your order: {#url#}\""
+            },
+            {
+              "icon": "bi-truck",
+              "title": "Shipped:",
+              "desc": "\"Your [Brand name] order {#alphanumeric#} has shipped. Track it here: {#url#}\""
+            },
+            {
+              "icon": "bi-geo-alt-fill",
+              "title": "Out for delivery:",
+              "desc": "\"Your [Brand name] order {#alphanumeric#} is out for delivery today.\""
+            },
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Delivered:",
+              "desc": "\"Your [Brand name] order {#alphanumeric#} has been delivered. Need help? Visit {#url#}\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "offer-templates",
+      "heading": "Offer SMS Template Examples (Promotional)",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Offers and cart reminders are promotional. Use a promotional template and header, scrub against DND, send inside the 9 AM to 9 PM window and keep the offer honest."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-percent",
+              "title": "Discount offer:",
+              "desc": "\"[Brand name]: Get {#numeric#}% off on {#alphanumeric#}. Valid till {#alphanumeric#}. Shop now: {#url#}\""
+            },
+            {
+              "icon": "bi-gift-fill",
+              "title": "Festival offer:",
+              "desc": "\"Happy {#alphanumeric#} from [Brand name]! Enjoy special offers on {#alphanumeric#}. Visit {#url#}\""
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Cart reminder:",
+              "desc": "\"Hi {#alphanumeric#}, you left {#alphanumeric#} in your cart at [Brand name]. Complete your order: {#url#}\""
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Win-back:",
+              "desc": "\"[Brand name]: we miss you, {#alphanumeric#}. See what is new: {#url#}\""
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Check your date format against your portal's rules. If a date does not fit the tag, write it a different way, for example in words."
+        }
+      ]
+    },
+    {
+      "id": "rejections",
+      "heading": "Why DLT Templates Get Rejected",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most rejections have an ordinary cause. Knowing the common ones saves a resubmission."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-tag-fill",
+              "title": "Wrong category:",
+              "desc": "marketing text in a transactional template, or a transactional message registered as promotional."
+            },
+            {
+              "icon": "bi-building-fill",
+              "title": "Missing brand name:",
+              "desc": "recipients cannot tell who is messaging them."
+            },
+            {
+              "icon": "bi-braces",
+              "title": "Untagged or generic variables:",
+              "desc": "new templates need typed tags that match the data."
+            },
+            {
+              "icon": "bi-link-45deg",
+              "title": "Unregistered link:",
+              "desc": "a URL that is not whitelisted can block delivery. See the <a href=\"https://trai.gov.in/sites/default/files/PR_No.67of2024.pdf\" target=\"_blank\" rel=\"noopener\">TRAI press release</a>."
+            },
+            {
+              "icon": "bi-chat-square-dots-fill",
+              "title": "Vague or mixed purpose:",
+              "desc": "a message that tries to confirm, sell and survey at once."
+            },
+            {
+              "icon": "bi-file-earmark-x-fill",
+              "title": "Mismatch at sending:",
+              "desc": "the SMS you send does not match the approved text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "heading": "Checklist: Run This Before You Submit",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Run through this list for every template. It takes two minutes and prevents most resubmissions."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "One purpose, one category:",
+              "desc": "decide first, then write."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Brand name in the text:",
+              "desc": "matching your sender ID."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Typed tag for every variable:",
+              "desc": "numeric for numbers, alphanumeric for IDs and names, url for links."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Links whitelisted:",
+              "desc": "register every URL you will send."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Text exactly as you will send it:",
+              "desc": "including punctuation and spacing."
+            },
+            {
+              "icon": "bi-6-circle-fill",
+              "title": "No marketing in transactional:",
+              "desc": "keep offers out of OTPs and order updates."
+            },
+            {
+              "icon": "bi-7-circle-fill",
+              "title": "Plan the next step:",
+              "desc": "after approval, send a test message and check the delivery report."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Approval time varies by operator, so ask your provider for a realistic estimate."
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps With DLT Templates",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order and login events through our SMS API so messages fire automatically."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "SMS, WhatsApp, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov20(3).webp",
+          "alt": "Ojiva AI dashboard showing approved DLT templates and delivery reports"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Write It Once, Write It Right",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "A good template is simple: one purpose, the right category, your brand name, a typed tag for every variable and a registered link. Write the text exactly as you will send it, run the checklist, then test the delivery report after approval."
+        },
+        {
+          "type": "p",
+          "html": "To have your templates reviewed before you submit them, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your messages, categories and variables together. You can also read about our <a href=\"/sms/\">Bulk SMS and OTP services</a>. Get this right, and every DLT template you register becomes a message that is approved, delivered and trusted. Conversations that convert start with a message that arrives."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "OTP SMS Service in India: DLT Templates, Delivery Speed and How to Choose",
+              "href": "/blogs/otp-sms-service-india/"
+            },
+            {
+              "title": "Abandoned Cart SMS and Order Confirmation SMS: Templates and Rules for Indian E-commerce",
+              "href": "/blogs/abandoned-cart-sms-order-confirmation-sms-india/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            },
+            {
+              "title": "DLT Registration for Bulk SMS in India",
+              "href": "/blogs/dlt-registration-bulk-sms-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "How do I write a DLT-approved SMS template?",
+              "a": "<p>Write the message exactly as you will send it, with fixed text and a typed variable tag for each changing value. Name your brand in the text, keep one purpose per template, register it in the right category and make sure any link is whitelisted. Then submit it on your DLT portal and send only text that matches the approved version.</p>"
+            },
+            {
+              "q": "What are typed variable tags in DLT templates?",
+              "a": "<p>Guides report that TRAI directed new templates created from 14 January 2026 to tag every variable with a data type, replacing the old generic tag. The commonly listed tags are numeric, alphanumeric, url, urlott, cbn and email. Confirm the current list on your own DLT portal, because platforms may differ in detail.</p>"
+            },
+            {
+              "q": "What should an OTP template use for the code?",
+              "a": "<p>Use the numeric tag for the code, because an OTP is a number, and keep the rest of the message fixed: your brand name, a validity period and a do-not-share line. Keep marketing text out of OTP templates, and register the template in the transactional category.</p>"
+            },
+            {
+              "q": "Why was my DLT template rejected?",
+              "a": "<p>Common causes are the wrong category, a missing brand name, generic or untagged variables, marketing text mixed into a transactional template, an unregistered link, or text that does not read as a single clear message. Fix the cause, resubmit and check the reason your portal or provider gives for the rejection.</p>"
+            },
+            {
+              "q": "How long does DLT template approval take?",
+              "a": "<p>It varies by operator and by how clearly the template is written, so no honest provider can promise a fixed time. Delays are most often caused by wrong categories or unclear variables. Ask your provider for a realistic estimate for your first submission.</p>"
+            },
+            {
+              "q": "Can I still use the old generic variable tag?",
+              "a": "<p>Guides report that the generic tag is being phased out for new templates, and that existing templates were given time to move to typed tags. Do not assume your old templates will keep working indefinitely. Check your portal's current rules and update older templates to typed tags.</p>"
+            },
+            {
+              "q": "Do I have to put my brand name in every template?",
+              "a": "<p>Guides say templates should include your brand name, so recipients know who is messaging them, and it helps approval. Use the same brand name as your registered sender ID so the two match. Confirm any specific requirement on your DLT portal.</p>"
+            },
+            {
+              "q": "Can I put a link in a DLT SMS template?",
+              "a": "<p>Yes, but the link must be whitelisted. TRAI directed that SMS carrying unregistered URLs be blocked, so register every cart, tracking or payment link, and use the url tag for it in the template. Use the exact registered domain or short link when you send.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

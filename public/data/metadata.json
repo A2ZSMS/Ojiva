@@ -592,5 +592,16 @@
     "description": "How to run an RCS campaign in India: plan your audience, design rich cards and carousels, add buttons and SMS fallback, and measure results. Book a free demo.",
     "image": "/image/nov16(1).webp",
     "keywords": "RCS campaign, RCS carousel, RCS rich card, RCS template, RCS marketing, RCS campaign examples, RCS campaign India, RCS marketing campaign, RCS message design, RCS business messaging, RCS bulk messaging, RCS messaging, RCS SMS, RCS API, rich card, carousel, suggested replies, suggested actions, SMS fallback, verified sender, RCS agent"
+  },
+  {
+    "id": 62,
+    "title": "DLT-Approved SMS Template Examples for India",
+    "componentKey": "Nov20",
+    "slug": "dlt-approved-sms-template-examples-india",
+    "category": "Bulk SMS",
+    "date": "2026-11-20",
+    "description": "How to write a DLT-approved SMS template in India: structure, typed variable tags, and examples for OTP, orders and offers, plus why templates get rejected.",
+    "image": "/image/nov20(1).webp",
+    "keywords": "DLT template, DLT SMS template, DLT approved template, DLT template examples, DLT template format, DLT template approval, OTP template DLT, DLT template for ecommerce, DLT SMS, SMS template registration, content template, DLT, SMS template, Template ID, variable tag, sender ID, transactional SMS, promotional SMS, TRAI, header, scrubbing"
   }
 ]
