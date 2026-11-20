@@ -5,7 +5,7 @@ import styles from './ServiceVisuals.module.css';
 export function WhatsAppJourney() {
   const [step, setStep] = useState(0);
   const stages = [
-    ['Customer asks', 'Hi, can you help me choose a plan?', LuMessageSquare],
+    ['Customer asks', 'Hi, can you help us set this up?', LuMessageSquare],
     ['Automatic reply', 'Of course. Tell us what your business needs and we’ll guide you.', LuArrowRight],
     ['Team takes over', 'Requirement captured → Your team follows up.', LuUsers],
   ];

@@ -162,7 +162,10 @@ export default function LandingLeadForm({
   const [submitting,   setSubmitting]   = useState(false);
   const [apiError,     setApiError]     = useState('');
   const [trapped,      setTrapped]      = useState(false);
-  const hasTrap = source === 'whatsapp-api-service';
+  // Spam trap switched OFF (Nov 19, 2026): after it went live on Nov 17 the
+  // WhatsApp landing recorded form starts but zero completed leads. Lead flow
+  // matters more than spam filtering; re-enable only after a real-device test.
+  const hasTrap = false;
 
   const completePct = Math.round(
     (REQUIRED.filter(k => form[k] && !RULES[k](form[k])).length / REQUIRED.length) * 100

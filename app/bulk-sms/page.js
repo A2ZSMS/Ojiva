@@ -6,7 +6,7 @@ import BulkSmsLanding from '@/components/landing/BulkSmsLanding';
 export const metadata = buildMetadata({
   title: 'Bulk SMS Service Provider in India — Free Demo',
   description:
-    'Promotional, transactional, Service Explicit and OTP SMS from Ojiva AI. Explore API integration, SMPP connectivity and our SMS reseller panel. Get pricing.',
+    'Promotional, transactional, Service Explicit and OTP SMS from Ojiva AI. Explore API integration, SMPP connectivity and our SMS reseller panel. Book a free demo.',
   path: '/bulk-sms',
   canonicalPath: '/sms',
   keywords: [
@@ -25,7 +25,6 @@ export const metadata = buildMetadata({
     'SMS reseller panel',
     'SMS marketing platform India',
     'enterprise bulk SMS India',
-    'cheap bulk SMS India',
     'bulk SMS software',
     'send bulk SMS India',
   ],

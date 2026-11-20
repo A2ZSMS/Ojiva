@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './WhatsAppLanding.module.css';
 
-export default function MobileEnquiryBar({ label = 'Get demo & pricing ↗' }) {
+export default function MobileEnquiryBar({ label = 'Book a Free Demo ↗' }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const form = document.getElementById('lead-form');

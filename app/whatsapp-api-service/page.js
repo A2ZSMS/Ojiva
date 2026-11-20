@@ -5,7 +5,7 @@ import WhatsAppApiLanding from '@/components/landing/WhatsAppApiLanding';
 export const metadata = {
   title: "Official WhatsApp Business API Provider in India | Ojiva AI",
   description:
-    "Automate WhatsApp replies, follow up with leads and manage conversations in a shared inbox. Get a personalised Ojiva AI demo, setup guidance and pricing.",
+    "Automate WhatsApp replies, follow up with leads and manage conversations in a shared inbox. Get a personalised Ojiva AI demo and setup guidance.",
   robots: {
     index: false,
     follow: false,

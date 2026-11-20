@@ -31,17 +31,16 @@ const quickFaqs = [
   ['Is this the official WhatsApp Business API?', 'Yes. Ojiva AI is an official Meta WhatsApp Business Solution Provider, so you get the API directly through a Meta-approved partner.'],
   ['Can I use my existing WhatsApp number?', 'Usually, yes. We check how the number is used today and explain the migration or onboarding steps before you decide.'],
   ['Do I need a developer?', 'Our team guides onboarding, templates and the shared inbox. Custom CRM, app or OTP integrations may need developer support; we’ll clarify this in your demo.'],
-  ['How is pricing worked out?', 'It depends on the features, setup and messaging you need. We explain platform fees and WhatsApp charges separately in your proposal.'],
+  ['How soon can we start?', 'After your demo we confirm the onboarding steps for your number and business details. The timeline depends on Meta verification and any integration work.'],
 ];
 const faqs = [
   ['What should I have ready for onboarding?', 'Bring your business details, the number you want to use, your current CRM or website platform and the workflow you want to build. Our team reviews your setup and explains the requirements before implementation.'],
-  ['What will my proposal include?', 'We outline the agreed features, onboarding, integration work and applicable platform and messaging charges. Custom development and dependencies are discussed before you decide.'],
+  ['What happens after the demo?', 'We outline the agreed features, onboarding steps and integration work. Custom development and dependencies are discussed before you decide.'],
   ['Is green tick approval guaranteed?', 'We support the application process. Meta makes the final approval decision, so approval is not guaranteed.'],
   ['Do you provide the WhatsApp Cloud API?', "Yes. We onboard you on Meta's official WhatsApp Cloud API as a verified BSP and handle setup, templates and green tick application support."],
   ['Is this different from the WhatsApp Business app?', 'Yes. The Business API connects WhatsApp to software so you can automate conversations, integrate business tools and manage enquiries with your team. Your customers still message you on WhatsApp.'],
-  ['What will you show me in the demo?', 'We’ll discuss your business, walk through relevant messaging and automation workflows, and explain the setup and pricing for your requirements. You can ask about your existing number, CRM and team structure.'],
+  ['What will you show me in the demo?', 'We’ll discuss your business, walk through relevant messaging and automation workflows, and explain the setup for your requirements. You can ask about your existing number, CRM and team structure.'],
   ['Can I use my existing WhatsApp number?', 'Tell us how you currently use your number. We’ll check the available onboarding or migration options for your account before recommending a setup.'],
-  ['How much does it cost?', 'Your quote depends on the platform features, setup, integrations and messaging usage you need. Ask our team to separate platform fees, implementation costs and applicable WhatsApp messaging charges in your proposal.'],
   ['How soon can we start?', 'The timeline depends on your business details, number setup, any required approvals and integrations. We’ll confirm the steps and an estimated timeline after reviewing your requirements.'],
   ['Can I connect my CRM or website?', 'We’ll review your existing tools and the available API or webhook integration options. Share your CRM name and the workflow you want to automate when you request a demo.'],
 ];
@@ -69,7 +68,7 @@ export default function WhatsAppApiLanding() {
             <WhatsAppJourney />
           </div>
           <div className={styles.formColumn}>
-            {/* Anchors used by Google Ads sitelinks — keep these ids. */}<span id="Book-Free-Demo" aria-hidden="true" /><span id="Contact-Us" aria-hidden="true" /><div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="Book your free WhatsApp demo." subtitle="See the chatbot, shared inbox or OTP workflow your business needs. Get setup and integration guidance." introLabel="PERSONALISED DEMO FOR YOUR BUSINESS" nextStepText="Our team calls to understand your requirements and arrange your demo. You review the setup and proposal before deciding." submitLabel="Book a Free Demo →" services={null} defaultService="WhatsApp Business API" requireCompany requireEmail volumeOptions={volumeOptions} volumeLabel="Monthly message volume" /></div>
+            {/* Anchors used by Google Ads sitelinks — keep these ids. */}<span id="Book-Free-Demo" aria-hidden="true" /><span id="WhatsApp-API-Pricing" aria-hidden="true" /><span id="Contact-Us" aria-hidden="true" /><div className={styles.formPanel} id="lead-form"><LandingLeadForm compact source="whatsapp-api-service" title="Book your free WhatsApp demo." subtitle="See the chatbot, shared inbox or OTP workflow your business needs. Get setup and integration guidance." introLabel="PERSONALISED DEMO FOR YOUR BUSINESS" nextStepText="Our team calls to understand your requirements and arrange your demo. You review the setup before deciding." submitLabel="Book a Free Demo →" services={null} defaultService="WhatsApp Business API" requireCompany requireEmail volumeOptions={volumeOptions} volumeLabel="Monthly message volume" /></div>
             <div className={styles.nearForm}>
               <h2 className={styles.nearFormTitle}>How it works</h2>
               <ol className={styles.quickSteps}>{quickSteps.map(([h, t], i) => <li key={h}><span>{i + 1}</span><div><strong>{h}</strong><small>{t}</small></div></li>)}</ol>
@@ -114,7 +113,7 @@ export default function WhatsAppApiLanding() {
         </div>
         <p className={styles.messageNote}>Example messages. We’ll discuss templates, customer opt-in and the right workflow for your use case.</p>
       </section>
-      <section className={`${styles.section} ${styles.connectionsSection}`} aria-labelledby="connections-title">
+      <section className={`${styles.section} ${styles.connectionsSection}`} aria-labelledby="connections-title"><span id="Whatsapp-API-Integration" aria-hidden="true" />
         <div><span className={styles.eyebrow}>CONNECT THE WORK YOU ALREADY DO</span><h2 id="connections-title">Your website. Your CRM.<br />Your customer conversations.</h2><p>Connect the official WhatsApp Cloud API to your website, CRM and apps.</p><a href="#lead-form" className={styles.textLink}>Discuss my integration <LuArrowUpRight aria-hidden="true" /></a>
           <picture className={styles.supportingPhoto}>
             <source media="(max-width: 540px)" srcSet="/image/whatsapp-support-team-v1-480.webp" />
@@ -127,9 +126,9 @@ export default function WhatsAppApiLanding() {
         steps={[
           ['Tell us where conversations get stuck.', 'Share how your team handles enquiries today and what you want to improve.'],
           ['See the customer and team experience.', 'Walk through automated replies, a shared inbox and the handoff to your team.'],
-          ['Review a plan for your business.', 'Get clarity on your number, integrations, platform fees and messaging charges.'],
+          ['Review a plan for your business.', 'Get clarity on your number, integrations and next steps.'],
         ]}
-        benefits={['A demo focused on your use case', 'Number and integration guidance', 'Pricing explained before you decide']}
+        benefits={['A demo focused on your use case', 'Number and integration guidance', 'Clear next steps before you decide']}
         cta="Book a Free Demo" />
       <section className={`${styles.section} ${styles.faqSection}`} id="questions" aria-labelledby="faq-title"><div><span className={styles.eyebrow}>A FEW THINGS YOU MAY BE WONDERING</span><h2 id="faq-title">Good questions.<br />Clear answers.</h2><p>Have a specific requirement?<br />We can talk it through in your demo.</p><a href="#lead-form" className={styles.textLink}>Ask our team <LuArrowUpRight aria-hidden="true" /></a></div><div className={styles.faqList}>{faqs.map(([q, a]) => <details key={q}><summary>{q}<LuChevronDown aria-hidden="true" /></summary><p>{a}</p></details>)}</div></section>
       <section className={styles.finalSection}><div><span className={styles.eyebrow}>SEE THE WORKFLOW BEFORE YOU DECIDE</span><h2>See how WhatsApp can work for your business.</h2><p>Explore your use case, ask your questions and review the next steps with our team.</p></div><a href="#lead-form" className={styles.primaryCta}>Book a Free Demo <LuArrowUpRight aria-hidden="true" /></a></section>
