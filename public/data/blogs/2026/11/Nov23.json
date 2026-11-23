@@ -1,0 +1,671 @@
+{
+  "slug": "whatsapp-business-api-for-healthcare",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "use-cases",
+      "label": "Use Cases"
+    },
+    {
+      "id": "health-information",
+      "label": "Health Information Rule"
+    },
+    {
+      "id": "template-categories",
+      "label": "Template Categories"
+    },
+    {
+      "id": "template-examples",
+      "label": "Template Examples"
+    },
+    {
+      "id": "consent",
+      "label": "Consent & Opt-In"
+    },
+    {
+      "id": "integration",
+      "label": "Connecting Your Systems"
+    },
+    {
+      "id": "fallback",
+      "label": "SMS & Voice Fallback"
+    },
+    {
+      "id": "measure",
+      "label": "What to Measure"
+    },
+    {
+      "id": "cost",
+      "label": "Cost"
+    },
+    {
+      "id": "mistakes",
+      "label": "Mistakes to Avoid"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>WhatsApp Business API for healthcare lets hospitals, clinics and diagnostic labs send appointment reminders, confirmations and follow-ups on the app patients already use, but the rules are stricter than in most industries.</strong> The opportunity is real: fewer phone calls for your front desk and fewer forgotten slots. The risk is real too: health information needs careful handling."
+        },
+        {
+          "type": "p",
+          "html": "This guide explains what hospitals and clinics in India use the WhatsApp API for, the policy that limits health information, how template categories work, template structures you can adapt, consent, integration with your booking system, SMS and voice fallback, and how to budget. Ojiva AI offers the <a href=\"/whatsapp/\">WhatsApp Business API</a> as a Meta Business Partner, and our <a href=\"/solutions/healthcare/\">healthcare solutions page</a> covers SMS, WhatsApp, RCS and voice for providers. If you want a plan for your own patient flows, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov23(1).webp",
+          "alt": "WhatsApp Business API for healthcare sending appointment reminders to patients for an Indian clinic"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "WhatsApp Business API for Healthcare: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Use WhatsApp for scheduling and non-clinical updates, keep clinical information out of messages, and build around consent. Here is the short version."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "What it is good for:",
+              "desc": "appointment confirmations, reminders, rescheduling, billing notices and follow-ups."
+            },
+            {
+              "icon": "bi-shield-lock-fill",
+              "title": "What to keep out:",
+              "desc": "diagnoses, test results and other health details. WhatsApp's policy limits health information."
+            },
+            {
+              "icon": "bi-file-earmark-text-fill",
+              "title": "Templates:",
+              "desc": "appointment messages are generally utility templates, and promotions are marketing."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "collect patient opt-in at registration or booking, and keep a record."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Integration:",
+              "desc": "connect your booking or hospital system so reminders send automatically."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Fallback:",
+              "desc": "SMS or voice for patients who are not on WhatsApp."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want a healthcare messaging plan built around these rules? Talk to Ojiva AI about the <a href=\"/whatsapp/\">WhatsApp Business API</a> or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "use-cases",
+      "heading": "What Hospitals and Clinics Use the WhatsApp API For",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most healthcare use cases are administrative, and they remove a lot of manual work. Start with the one that costs your front desk the most time."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Appointment confirmations and reminders:",
+              "desc": "send a confirmation when a slot is booked and reminders before the visit. Your booking system can trigger them by API or webhook."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Rescheduling:",
+              "desc": "give patients buttons to confirm or reschedule, so fewer calls reach your desk."
+            },
+            {
+              "icon": "bi-file-earmark-medical-fill",
+              "title": "Report-ready alerts:",
+              "desc": "tell patients a report is ready, with a link to a secure portal and no results in the message."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Billing notices:",
+              "desc": "send pending-bill reminders with a secure payment link."
+            },
+            {
+              "icon": "bi-chat-heart-fill",
+              "title": "Post-visit follow-ups:",
+              "desc": "check in after a visit, and invite feedback."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Health camps and wellness invitations:",
+              "desc": "treat these as marketing, sent only to patients who opted in."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "For a form-style booking experience inside chat, see our guide to <a href=\"/blogs/whatsapp-flows-guide/\">WhatsApp Flows</a>."
+        }
+      ]
+    },
+    {
+      "id": "health-information",
+      "heading": "The Rule That Matters Most: Health Information on WhatsApp",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "WhatsApp's own Business Messaging Policy sets the limit. It says not to use WhatsApp for telemedicine, or to send or request any health-related information, if applicable regulations prohibit sending that information to systems that do not meet heightened requirements for health data. Read the <a href=\"https://whatsappbusiness.com/policy/\" target=\"_blank\" rel=\"noopener\">WhatsApp Business Messaging Policy</a> yourself, and check what applies to you."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "Keep clinical details out:",
+              "desc": "no diagnoses, test results, prescriptions or conditions in a message or a template variable."
+            },
+            {
+              "icon": "bi-lock-fill",
+              "title": "Use a secure portal:",
+              "desc": "for reports and records, send a short alert and link to a login-protected page."
+            },
+            {
+              "icon": "bi-camera-video-off-fill",
+              "title": "No telemedicine on WhatsApp:",
+              "desc": "use a dedicated telehealth system for consultations."
+            },
+            {
+              "icon": "bi-person-lines-fill",
+              "title": "Minimise personal data:",
+              "desc": "send only what the message needs, such as the date, time and clinic."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "DPDP Act:",
+              "desc": "treat patient details as personal data, collected for a clear purpose and kept only as long as needed."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "This is practical guidance rather than legal advice, so check your own obligations with a qualified professional."
+        }
+      ]
+    },
+    {
+      "id": "template-categories",
+      "heading": "Template Categories for Healthcare: Utility vs Marketing",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "To message patients first, you need approved templates, and the category you choose decides how they are reviewed and billed. Keep each template to one purpose."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-box-seam-fill",
+              "title": "Utility:",
+              "desc": "informational messages that follow something the patient did, such as appointment confirmations and reminders, report-ready notices and bill reminders."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Marketing:",
+              "desc": "promotions and invitations, such as health camps, package offers and seasonal campaigns. These need their own template and an opt-out."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "Authentication:",
+              "desc": "OTPs for patient-portal login. See <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a>."
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Do not mix them:",
+              "desc": "a reminder that also promotes a package can be reclassified as marketing, which changes review and billing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "template-examples",
+      "heading": "Healthcare Template Structures You Can Adapt",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Write each template for one purpose, with clear variables and no clinical detail. The examples below use Meta's numbered variable style, such as {{1}}. They are structures to adapt, and they must be approved by Meta before use."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Appointment confirmed (utility):",
+              "desc": "\"Hello {{1}}, your appointment with {{2}} at [Hospital] is confirmed for {{3}}. To change it, tap Reschedule.\""
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Reminder (utility):",
+              "desc": "\"Reminder from [Hospital]: your appointment is on {{1}} at {{2}}. Please confirm or reschedule.\" Add Confirm and Reschedule buttons."
+            },
+            {
+              "icon": "bi-file-earmark-medical-fill",
+              "title": "Report ready (utility):",
+              "desc": "\"Hello {{1}}, your report from [Hospital] is ready. View it securely here: {{2}}\" The link opens a login-protected page."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Pending bill (utility):",
+              "desc": "\"Hello {{1}}, your bill for your visit on {{2}} is pending. Pay securely here: {{3}}\""
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Health camp invitation (marketing):",
+              "desc": "\"[Hospital] is holding a health camp on {{1}} at {{2}}. Reply YES to register, or STOP to opt out.\""
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov23(2).webp",
+          "alt": "WhatsApp appointment reminder and report-ready template structures for a hospital with confirm and reschedule buttons"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "heading": "Consent and Opt-In for Patients",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta's policy requires opt-in before you message people first. For healthcare, make it explicit and easy to prove."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Collect it at the right moment:",
+              "desc": "on the registration form, at booking or at the front desk, outside WhatsApp."
+            },
+            {
+              "icon": "bi-chat-left-text-fill",
+              "title": "Say what patients will receive:",
+              "desc": "name your hospital and the message types, such as appointment reminders and bill notices."
+            },
+            {
+              "icon": "bi-journal-text",
+              "title": "Keep a record:",
+              "desc": "store when and how each patient agreed."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Make opting out easy:",
+              "desc": "honour a stop request immediately, across all your lists."
+            },
+            {
+              "icon": "bi-funnel-fill",
+              "title": "Separate marketing consent:",
+              "desc": "ask separately before sending health camp or offer messages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "heading": "Connecting WhatsApp to Your Booking and Hospital Systems",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The API is most useful when it is connected to the system that already holds your appointments. Reminders then send without anyone typing a message."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers from your system:",
+              "desc": "a new booking, a reschedule or a finished report can fire the right template through the API."
+            },
+            {
+              "icon": "bi-alarm-fill",
+              "title": "Scheduled reminders:",
+              "desc": "set reminders relative to the appointment, such as the day before and a short time before the visit."
+            },
+            {
+              "icon": "bi-bell-fill",
+              "title": "Webhooks for replies:",
+              "desc": "when a patient taps Confirm or Reschedule, your system updates the booking."
+            },
+            {
+              "icon": "bi-people-fill",
+              "title": "A shared inbox:",
+              "desc": "let several front-desk staff handle one hospital number, with a clear handover from automation to a person."
+            },
+            {
+              "icon": "bi-cloud-check-fill",
+              "title": "The official platform:",
+              "desc": "see our guide to the <a href=\"/blogs/whatsapp-cloud-api-india/\">WhatsApp Cloud API in India</a>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fallback",
+      "heading": "WhatsApp, SMS and Voice: Reaching Every Patient",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Not every patient uses WhatsApp, and some, including older patients, may prefer a call or a text. Keep a second path so no one misses an appointment."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-text-fill",
+              "title": "SMS fallback:",
+              "desc": "reaches any phone with network coverage. It needs your DLT entity, sender ID and approved template. See <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a>."
+            },
+            {
+              "icon": "bi-telephone-fill",
+              "title": "Voice:",
+              "desc": "a spoken reminder can reach patients who do not read messages."
+            },
+            {
+              "icon": "bi-key-fill",
+              "title": "Portal OTPs:",
+              "desc": "for patient-portal logins, see our guide to the <a href=\"/blogs/otp-sms-service-india/\">OTP SMS service in India</a>."
+            },
+            {
+              "icon": "bi-person-check-fill",
+              "title": "Let patients choose:",
+              "desc": "record each patient's preferred channel at registration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "heading": "What to Measure: Baseline First",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Measure your own results instead of trusting headline numbers from other sites. Start by recording your no-show rate before you launch, then compare it after."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "No-show rate:",
+              "desc": "missed appointments before and after reminders, measured on the same clinics and time period."
+            },
+            {
+              "icon": "bi-check-circle-fill",
+              "title": "Confirmations and reschedules:",
+              "desc": "how many patients tap each button."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Front-desk calls:",
+              "desc": "whether reminder and reschedule calls fall."
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Delivery failures:",
+              "desc": "which messages failed, and why."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Opt-outs:",
+              "desc": "a rise means your messages are too frequent or not relevant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "heading": "Cost: Meta's Charges and What Providers Add",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Meta bills per delivered template message, based on the template category and the recipient's country, and utility and marketing templates are billed differently. We do not quote rates here, because Meta revises them and your invoice must match the current rate card. Check <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's official pricing page</a> before you plan volumes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-receipt",
+              "title": "Meta's charge:",
+              "desc": "billed per delivered template message by category."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Provider charges:",
+              "desc": "ask whether platform fees, onboarding, support and reports are included or billed separately."
+            },
+            {
+              "icon": "bi-percent",
+              "title": "GST:",
+              "desc": "check whether quotes include GST."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "SMS fallback:",
+              "desc": "ask what you pay when a message falls back to SMS."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own appointment volumes beats any rate card you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "mistakes",
+      "heading": "Common Mistakes to Avoid",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most problems come from a handful of avoidable mistakes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-file-earmark-x-fill",
+              "title": "Sending clinical details:",
+              "desc": "keep diagnoses, results and prescriptions out of messages and variables."
+            },
+            {
+              "icon": "bi-tags-fill",
+              "title": "Mixing promotions into reminders:",
+              "desc": "keep utility templates strictly informational."
+            },
+            {
+              "icon": "bi-person-x-fill",
+              "title": "Messaging without consent:",
+              "desc": "collect opt-in first, and record it."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "Using unofficial tools:",
+              "desc": "WhatsApp's apps are not meant for bulk or automated messaging. See <a href=\"/blogs/send-bulk-whatsapp-messages-india/\">how to send bulk WhatsApp messages safely</a>."
+            },
+            {
+              "icon": "bi-bell-slash-fill",
+              "title": "No fallback:",
+              "desc": "patients not on WhatsApp miss reminders."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps Healthcare Providers Use the WhatsApp API",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering the WhatsApp Business API, Bulk SMS, RCS, AI voice and OTP on one platform. Our <a href=\"/solutions/healthcare/\">healthcare solutions page</a> shows how that fits hospitals, clinics and diagnostic labs. Here is how the platform maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Official Meta access:",
+              "desc": "the WhatsApp Business API through a Meta Business Partner."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "WhatsApp, SMS, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect bookings and reports so reminders send automatically."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Quotes sized to your volumes:",
+              "desc": "share your monthly appointment volume and message types, and we size the plan together on a demo call."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov23(3).webp",
+          "alt": "Ojiva AI platform for hospital and clinic WhatsApp reminders with SMS and voice fallback"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Automate the Admin, Protect the Patient",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The WhatsApp API can take a great deal of routine work off your front desk: confirmations, reminders, rescheduling and bill notices. Keep clinical information out of messages, use the right template category, collect clear consent, connect it to your booking system and keep a fallback for patients who are not on WhatsApp. Measure your own no-show rate before and after."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own hospital or clinic, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your appointment flow, templates and fallback channels together. You can also read about our <a href=\"/whatsapp/\">WhatsApp Business API</a> and <a href=\"/sms/\">Bulk SMS</a> services. Handled this way, the WhatsApp Business API for healthcare is a careful, practical way to keep patients informed. Conversations that convert start with messages patients agreed to receive."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+              "href": "/blogs/whatsapp-cloud-api-india/"
+            },
+            {
+              "title": "WhatsApp Business App vs API: Which Do You Need?",
+              "href": "/blogs/whatsapp-business-app-vs-api/"
+            },
+            {
+              "title": "How to Send Bulk WhatsApp Messages in India Without Getting Blocked",
+              "href": "/blogs/send-bulk-whatsapp-messages-india/"
+            },
+            {
+              "title": "OTP SMS Service in India: DLT Templates, Delivery Speed and How to Choose",
+              "href": "/blogs/otp-sms-service-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Can hospitals and clinics use the WhatsApp Business API in India?",
+              "a": "<p>Yes, for non-clinical patient communication such as appointment confirmations, reminders, billing notices and follow-ups, through the WhatsApp Business Platform with approved templates and patient opt-in. WhatsApp's policy limits health information, so keep clinical details out of your messages and check your own regulatory obligations.</p>"
+            },
+            {
+              "q": "Are appointment reminders utility or marketing templates?",
+              "a": "<p>Appointment confirmations and reminders are generally utility templates, because they follow something the patient already did. Utility templates must stay informational. If a reminder also promotes a package or offer, Meta can reclassify it as marketing, which changes how it is reviewed and billed. Keep each template to one purpose.</p>"
+            },
+            {
+              "q": "Can I send lab reports on WhatsApp?",
+              "a": "<p>Sending reports as attachments is risky, because WhatsApp's policy says not to send or request health-related information where regulations require stricter handling than WhatsApp provides. A safer approach is a short \"report ready\" message with a link to a secure, login-protected portal, with no results or diagnosis in the message itself.</p>"
+            },
+            {
+              "q": "Do clinics need patient consent for WhatsApp messages?",
+              "a": "<p>Yes. Meta's policy requires opt-in, and the DPDP Act points the same way with clear consent, a stated purpose and easy withdrawal. Collect consent at registration or booking, say which message types patients will receive, keep a record, and honour opt-outs. This is practical guidance rather than legal advice.</p>"
+            },
+            {
+              "q": "Can WhatsApp be used for telemedicine?",
+              "a": "<p>WhatsApp's policy says not to use it for telemedicine or to send or request health information where applicable regulations prohibit distributing it to systems that do not meet heightened requirements. Use a dedicated telehealth system for consultations, and use WhatsApp for scheduling, reminders and non-clinical updates.</p>"
+            },
+            {
+              "q": "Is the WhatsApp Business API different from the WhatsApp Business app for clinics?",
+              "a": "<p>Yes. The app suits very small clinics chatting from a phone. The API connects to your booking or hospital system, sends approved templates automatically, supports a shared inbox for several staff and keeps records in your own systems. Our guide on the WhatsApp Business app vs the API covers the difference.</p>"
+            },
+            {
+              "q": "Does WhatsApp messaging for patients need DLT registration?",
+              "a": "<p>No. DLT registration under TRAI's rules applies to SMS. WhatsApp follows Meta's template approval and opt-in policies. If you add an SMS fallback for patients who are not on WhatsApp, that SMS still needs your DLT entity, sender ID and approved template.</p>"
+            },
+            {
+              "q": "How much does the WhatsApp API cost for a hospital?",
+              "a": "<p>Meta bills per delivered template message, by category and the recipient's country, and utility and marketing templates are billed differently. Check Meta's official pricing page for current rates, and ask any provider for an itemised quote that separates Meta's charges from platform fees and says whether GST is included.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

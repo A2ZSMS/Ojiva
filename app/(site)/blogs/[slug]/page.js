@@ -66,6 +66,7 @@ import blog_best_whatsapp_api_service_provider_in_tamil_nadu from "../../../../p
 import blog_abandoned_cart_sms_order_confirmation_sms_india from "../../../../public/data/blogs/2026/11/Nov13.json";
 import blog_how_to_run_an_rcs_campaign_india from "../../../../public/data/blogs/2026/11/Nov16.json";
 import blog_dlt_approved_sms_template_examples_india from "../../../../public/data/blogs/2026/11/Nov20.json";
+import blog_whatsapp_business_api_for_healthcare from "../../../../public/data/blogs/2026/11/Nov23.json";
 
 
 const BlogJson = {
@@ -156,6 +157,7 @@ const BlogJson = {
   "how-to-run-an-rcs-campaign-india": blog_how_to_run_an_rcs_campaign_india,
   "dlt-approved-sms-template-examples-india":
     blog_dlt_approved_sms_template_examples_india,
+  "whatsapp-business-api-for-healthcare": blog_whatsapp_business_api_for_healthcare,
 };
 
 // ── Date formatter ───────────────────────────────────────

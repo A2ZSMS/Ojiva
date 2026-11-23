@@ -603,5 +603,16 @@
     "description": "How to write a DLT-approved SMS template in India: structure, typed variable tags, and examples for OTP, orders and offers, plus why templates get rejected.",
     "image": "/image/nov20(1).webp",
     "keywords": "DLT template, DLT SMS template, DLT approved template, DLT template examples, DLT template format, DLT template approval, OTP template DLT, DLT template for ecommerce, DLT SMS, SMS template registration, content template, DLT, SMS template, Template ID, variable tag, sender ID, transactional SMS, promotional SMS, TRAI, header, scrubbing"
+  },
+  {
+    "id": 63,
+    "title": "WhatsApp Business API for Healthcare",
+    "componentKey": "Nov23",
+    "slug": "whatsapp-business-api-for-healthcare",
+    "category": "WhatsApp API",
+    "date": "2026-11-23",
+    "description": "WhatsApp Business API for healthcare in India: appointment reminders, report alerts and follow-ups, with template, consent and privacy rules. Book a free demo.",
+    "image": "/image/nov23(1).webp",
+    "keywords": "WhatsApp Business API for healthcare, WhatsApp API for hospitals, WhatsApp API for clinics, WhatsApp appointment reminders, WhatsApp appointment reminder template, WhatsApp for clinics India, WhatsApp patient communication, WhatsApp report ready alerts, healthcare WhatsApp automation, WhatsApp chatbot for hospitals, WhatsApp Business API India, WhatsApp API, healthcare messaging, appointment reminders, patient follow-up, utility template, opt-in, no-show, HMS integration, Meta Business Partner, DPDP Act"
   }
 ]
