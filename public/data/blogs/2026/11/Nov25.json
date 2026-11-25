@@ -1,0 +1,604 @@
+{
+  "slug": "bulk-sms-vs-whatsapp-marketing-india",
+  "toc": [
+    {
+      "id": "introduction",
+      "label": "Introduction"
+    },
+    {
+      "id": "short-answer",
+      "label": "The Short Answer"
+    },
+    {
+      "id": "side-by-side",
+      "label": "Side by Side"
+    },
+    {
+      "id": "compliance",
+      "label": "Compliance"
+    },
+    {
+      "id": "billing",
+      "label": "How Each Bills"
+    },
+    {
+      "id": "which-to-use",
+      "label": "Which Channel When"
+    },
+    {
+      "id": "audience-fit",
+      "label": "Audience Fit"
+    },
+    {
+      "id": "hybrid",
+      "label": "Use Both"
+    },
+    {
+      "id": "measure",
+      "label": "Compare Fairly"
+    },
+    {
+      "id": "mistakes",
+      "label": "Mistakes to Avoid"
+    },
+    {
+      "id": "why-ojiva",
+      "label": "Why Ojiva AI"
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion"
+    },
+    {
+      "id": "faq",
+      "label": "FAQs"
+    }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": null,
+      "blocks": [
+        {
+          "type": "p",
+          "html": "<strong>Bulk SMS vs WhatsApp marketing is not a contest with one winner: SMS reaches every phone, WhatsApp lets you show and say more, and the right choice depends on the message, the customer and the rules each channel follows.</strong> Most businesses end up using both, with a clear rule for which message goes where."
+        },
+        {
+          "type": "p",
+          "html": "This guide compares the two channels on reach, consent, approvals, format, billing basis, delivery proof and risk, then maps common messages to the right channel, and shows how to combine them. Ojiva AI runs <a href=\"/sms/\">Bulk SMS</a> and the <a href=\"/whatsapp/\">WhatsApp Business API</a> on one platform. If you want a channel plan for your own audience, <a href=\"/book-demo/\">book a free demo</a>."
+        },
+        {
+          "type": "image",
+          "src": "/image/nov25(1).webp",
+          "alt": "Bulk SMS vs WhatsApp marketing compared on two phones for an Indian business"
+        }
+      ]
+    },
+    {
+      "id": "short-answer",
+      "heading": "Bulk SMS vs WhatsApp Marketing: The Short Answer",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Use SMS for reach and simple alerts, WhatsApp for richer, opted-in conversations, and both together when you can. Here is the quick comparison."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-phone-fill",
+              "title": "SMS strength:",
+              "desc": "reaches any phone with network coverage, with no app and no data connection."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "WhatsApp strength:",
+              "desc": "images, buttons and two-way chat for customers who have opted in."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Approvals:",
+              "desc": "SMS needs TRAI DLT. WhatsApp needs Meta template approval. Neither is approval-free."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "WhatsApp requires opt-in before you message first. Promotional SMS has DND and timing rules."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Billing:",
+              "desc": "SMS is priced per message by your provider. WhatsApp is billed by Meta per delivered template, by category and country."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Best together:",
+              "desc": "WhatsApp first for opted-in customers, with SMS as the fallback."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "Want both channels planned around your audience? Talk to Ojiva AI about <a href=\"/sms/\">Bulk SMS</a> and the <a href=\"/whatsapp/\">WhatsApp Business API</a>, or <a href=\"/book-demo/\">book a free demo</a>."
+        }
+      ]
+    },
+    {
+      "id": "side-by-side",
+      "heading": "Bulk SMS vs WhatsApp Marketing: Side by Side",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Compare them one dimension at a time. Each difference changes which messages suit which channel."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-people-fill",
+              "title": "Reach:",
+              "desc": "SMS reaches any phone with coverage. WhatsApp reaches people who have WhatsApp and a data connection."
+            },
+            {
+              "icon": "bi-journal-check",
+              "title": "Consent:",
+              "desc": "WhatsApp requires opt-in before a business messages first. Promotional SMS must respect DND and the 9 AM to 9 PM window."
+            },
+            {
+              "icon": "bi-file-earmark-check-fill",
+              "title": "Approvals:",
+              "desc": "SMS: DLT entity, sender ID and template. WhatsApp: Meta template approval and a verified business account."
+            },
+            {
+              "icon": "bi-card-image",
+              "title": "Format:",
+              "desc": "SMS is plain text. WhatsApp supports images, documents, buttons and interactive messages."
+            },
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Two-way chat:",
+              "desc": "WhatsApp supports a conversation. SMS replies are limited and harder to manage."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Delivery proof:",
+              "desc": "SMS gives a delivery report. WhatsApp reports sent, delivered and read status for each message."
+            },
+            {
+              "icon": "bi-receipt",
+              "title": "Billing basis:",
+              "desc": "SMS is a per-message rate set by your provider. WhatsApp is billed by Meta per delivered template, by category and country."
+            },
+            {
+              "icon": "bi-exclamation-triangle-fill",
+              "title": "Main risk:",
+              "desc": "SMS: template and category rejections, DND blocks. WhatsApp: low quality, blocks and reports, and policy violations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "heading": "Compliance: TRAI DLT for SMS, Meta Rules for WhatsApp",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Each channel has its own rulebook, and they do not overlap. Knowing which applies saves you from rejected templates and blocked messages."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-bank",
+              "title": "SMS: TRAI and DLT:",
+              "desc": "register your entity, sender ID and each template, and send only text that matches the approved template. See our guide to <a href=\"/blogs/dlt-registration-charges-india/\">DLT registration charges in India</a>."
+            },
+            {
+              "icon": "bi-slash-circle-fill",
+              "title": "SMS: DND and timing:",
+              "desc": "promotional SMS cannot reach DND numbers and is limited to the 9 AM to 9 PM window, while transactional messages such as OTPs can reach DND numbers."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "WhatsApp: Meta policy:",
+              "desc": "you may message only people who opted in, and you must start conversations with approved templates. Read the <a href=\"https://whatsappbusiness.com/policy/\" target=\"_blank\" rel=\"noopener\">WhatsApp Business Messaging Policy</a>."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "WhatsApp: use the official platform:",
+              "desc": "WhatsApp's FAQ says its apps are not intended for bulk or automated messaging. See <a href=\"/blogs/send-bulk-whatsapp-messages-india/\">how to send bulk WhatsApp messages safely</a>."
+            },
+            {
+              "icon": "bi-shield-check",
+              "title": "Both: DPDP Act:",
+              "desc": "treat mobile numbers as personal data, collected for a clear purpose, with easy withdrawal."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "This is practical guidance rather than legal advice, so check your own obligations with a qualified professional."
+        }
+      ]
+    },
+    {
+      "id": "billing",
+      "heading": "How Each Channel Bills: Compare Without the Guesswork",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Headline rupee figures for these channels vary widely between websites, and many are out of date, because Meta changed how WhatsApp is billed in July 2025. We do not quote rates here. Instead, compare how each channel bills and ask for itemised quotes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-text-fill",
+              "title": "SMS:",
+              "desc": "your provider sets a per-message rate, based on route, category and volume. Regional-language messages can use more than one segment."
+            },
+            {
+              "icon": "bi-whatsapp",
+              "title": "WhatsApp:",
+              "desc": "Meta bills per delivered template message, based on the template category and the recipient's country. Check <a href=\"https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing\" target=\"_blank\" rel=\"noopener\">Meta's official pricing page</a> for current rates."
+            },
+            {
+              "icon": "bi-calculator-fill",
+              "title": "Cost per outcome:",
+              "desc": "compare orders, bookings or replies per rupee spent, not the price of a single message."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Provider charges:",
+              "desc": "ask both providers whether platform fees, onboarding, support and reports are included, and whether quotes include GST."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "html": "A written, itemised quote based on your own volumes beats any comparison table you find online. Ojiva AI can size one with you on a <a href=\"/book-demo/\">short demo call</a>."
+        }
+      ]
+    },
+    {
+      "id": "which-to-use",
+      "heading": "Which Channel for Which Message",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Match each message to the channel that serves it best. Use this as a starting rule and adjust it with your own results."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-key-fill",
+              "title": "OTPs and login codes:",
+              "desc": "SMS as the baseline, or WhatsApp first with SMS fallback. See <a href=\"/blogs/whatsapp-otp-vs-sms-otp-india/\">WhatsApp OTP vs SMS OTP</a>."
+            },
+            {
+              "icon": "bi-bag-check-fill",
+              "title": "Order confirmations and delivery updates:",
+              "desc": "SMS for the guaranteed path, WhatsApp where customers have opted in and want tracking buttons."
+            },
+            {
+              "icon": "bi-cart-fill",
+              "title": "Abandoned cart reminders:",
+              "desc": "WhatsApp for a richer reminder to opted-in customers, SMS for the rest. See <a href=\"/blogs/abandoned-cart-sms-order-confirmation-sms-india/\">abandoned cart SMS and order confirmation SMS</a>."
+            },
+            {
+              "icon": "bi-megaphone-fill",
+              "title": "Offers and launches:",
+              "desc": "WhatsApp for opted-in customers who want images and buttons, compliant promotional SMS for wider reach."
+            },
+            {
+              "icon": "bi-calendar-check-fill",
+              "title": "Appointment and payment reminders:",
+              "desc": "WhatsApp with confirm and reschedule buttons, SMS as the fallback."
+            },
+            {
+              "icon": "bi-headset",
+              "title": "Support conversations:",
+              "desc": "WhatsApp, because it supports two-way chat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audience-fit",
+      "heading": "Who Should Start With Which Channel",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Your audience should decide where you start. Use what you know about their phones, their data and their habits."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-telephone-fill",
+              "title": "Feature-phone or low-data customers:",
+              "desc": "start with SMS, because WhatsApp cannot reach them reliably."
+            },
+            {
+              "icon": "bi-phone-fill",
+              "title": "Smartphone-first customers, such as D2C shoppers:",
+              "desc": "start with WhatsApp for opted-in customers, with SMS fallback."
+            },
+            {
+              "icon": "bi-diagram-3-fill",
+              "title": "Dealers, distributors and B2B contacts:",
+              "desc": "WhatsApp for order and payment updates once they opt in, SMS for critical alerts."
+            },
+            {
+              "icon": "bi-bank",
+              "title": "Regulated or audit-heavy messages:",
+              "desc": "keep SMS as the guaranteed path, and check your regulator's and partners' requirements."
+            },
+            {
+              "icon": "bi-translate",
+              "title": "Regional-language audiences:",
+              "desc": "both channels support regional languages, but SMS needs Unicode and a registered template in that script."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov25(2).webp",
+          "alt": "Decision guide for choosing between bulk SMS and WhatsApp marketing by audience and message type"
+        }
+      ]
+    },
+    {
+      "id": "hybrid",
+      "heading": "Use Both: A WhatsApp-First Flow With SMS Fallback",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "The strongest setup uses each channel where it is best. WhatsApp handles richer, opted-in messages, and SMS covers everyone else and acts as the safety net."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-1-circle-fill",
+              "title": "Check consent and channel:",
+              "desc": "know which customers opted in to WhatsApp and which did not."
+            },
+            {
+              "icon": "bi-2-circle-fill",
+              "title": "Send on WhatsApp first:",
+              "desc": "for opted-in customers, with an approved template."
+            },
+            {
+              "icon": "bi-3-circle-fill",
+              "title": "Track delivery:",
+              "desc": "watch the delivery status through webhooks."
+            },
+            {
+              "icon": "bi-4-circle-fill",
+              "title": "Fall back to SMS:",
+              "desc": "if the message is not delivered in time, send the SMS version using your DLT-approved template."
+            },
+            {
+              "icon": "bi-5-circle-fill",
+              "title": "Add RCS where it helps:",
+              "desc": "for customers whose phones support it. See <a href=\"/blogs/rcs-messaging-for-ecommerce-d2c-india/\">RCS messaging for e-commerce</a> and <a href=\"/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/\">RCS vs SMS</a>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "heading": "How to Compare SMS and WhatsApp Results Fairly",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Do not trust headline numbers from other websites. Test on your own customers and compare cost per outcome."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-people-fill",
+              "title": "Use comparable audiences:",
+              "desc": "split similar customers between the two channels, with the same offer."
+            },
+            {
+              "icon": "bi-bar-chart-fill",
+              "title": "Track the full funnel:",
+              "desc": "delivery, taps or replies, conversions and opt-outs."
+            },
+            {
+              "icon": "bi-cart-check-fill",
+              "title": "Count outcomes:",
+              "desc": "orders or bookings per rupee spent, with each channel's real cost."
+            },
+            {
+              "icon": "bi-door-open-fill",
+              "title": "Watch opt-outs and blocks:",
+              "desc": "a rise means the messages are too frequent or not relevant."
+            },
+            {
+              "icon": "bi-arrow-repeat",
+              "title": "Repeat the test:",
+              "desc": "run it again with another offer before you decide."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mistakes",
+      "heading": "Common Mistakes to Avoid",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Most problems with either channel come from a short list of avoidable mistakes."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-x-octagon-fill",
+              "title": "Treating them as interchangeable:",
+              "desc": "each has its own approvals, consent rules and message formats."
+            },
+            {
+              "icon": "bi-person-x-fill",
+              "title": "Messaging without consent:",
+              "desc": "WhatsApp needs opt-in, and promotional SMS needs DND scrubbing."
+            },
+            {
+              "icon": "bi-file-earmark-x-fill",
+              "title": "Mixing categories:",
+              "desc": "keep transactional and promotional text apart on SMS, and utility and marketing apart on WhatsApp."
+            },
+            {
+              "icon": "bi-bug-fill",
+              "title": "Using unofficial WhatsApp tools:",
+              "desc": "they risk bans. Use the official API."
+            },
+            {
+              "icon": "bi-bell-slash-fill",
+              "title": "No fallback:",
+              "desc": "customers who are not on WhatsApp miss the message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-ojiva",
+      "heading": "How Ojiva AI Helps You Run Both Channels",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "Ojiva AI is a Bengaluru (Bangalore) based CPaaS company and Meta Business Partner offering Bulk SMS, WhatsApp Business API, RCS, AI voice and OTP on one platform. Here is how that maps to the steps above."
+        },
+        {
+          "type": "icon-list",
+          "items": [
+            {
+              "icon": "bi-chat-dots-fill",
+              "title": "Channels on one account:",
+              "desc": "SMS, WhatsApp, RCS and voice managed together, so you can fall back across channels without a second vendor."
+            },
+            {
+              "icon": "bi-patch-check-fill",
+              "title": "Guided DLT filing:",
+              "desc": "help with entity, header and template registration is part of getting started."
+            },
+            {
+              "icon": "bi-plug-fill",
+              "title": "Triggers and API:",
+              "desc": "connect order events, forms and CRM stages so messages fire automatically."
+            },
+            {
+              "icon": "bi-clock-history",
+              "title": "Reports with reasons:",
+              "desc": "live delivery reports that explain failures, so you can tell which ones are yours to fix."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/image/nov25(3).webp",
+          "alt": "Ojiva AI platform running Bulk SMS and WhatsApp Business API campaigns with fallback"
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion: Match the Channel to the Message",
+      "blocks": [
+        {
+          "type": "p",
+          "html": "SMS gives you reach and a guaranteed path. WhatsApp gives you richer, two-way conversations with customers who opted in. Each has its own approvals and consent rules, and each bills differently. Match each message to the right channel, keep a fallback, and compare cost per outcome on your own customers."
+        },
+        {
+          "type": "p",
+          "html": "To see how this works for your own audience, <a href=\"/book-demo/\">book a free demo</a> with Ojiva AI and we will map your messages, consent flow and fallback together. You can also explore our <a href=\"/whatsapp/\">WhatsApp Business API</a> and <a href=\"/sms/\">Bulk SMS</a> services. In the end, Bulk SMS vs WhatsApp marketing is a question of which message goes where, and the strongest answer is usually both. Conversations that convert start with messages customers agreed to receive."
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "heading": null,
+      "blocks": []
+    },
+    {
+      "id": "related-blogs",
+      "heading": "",
+      "blocks": [
+        {
+          "type": "related",
+          "items": [
+            {
+              "title": "WhatsApp OTP vs SMS OTP for Indian Businesses",
+              "href": "/blogs/whatsapp-otp-vs-sms-otp-india/"
+            },
+            {
+              "title": "How to Send Bulk WhatsApp Messages in India Without Getting Blocked",
+              "href": "/blogs/send-bulk-whatsapp-messages-india/"
+            },
+            {
+              "title": "RCS vs SMS: Key Differences & Which is Better for Business",
+              "href": "/blogs/rcs-vs-sms-key-differences-and-which-is-better-for-business/"
+            },
+            {
+              "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+              "href": "/blogs/dlt-registration-charges-india/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "blocks": [
+        {
+          "type": "accordion",
+          "items": [
+            {
+              "q": "Is bulk SMS or WhatsApp marketing better for my business?",
+              "a": "<p>Neither wins on every measure. SMS reaches any phone with network coverage, with no app or data needed, while WhatsApp supports images, buttons and two-way chat for customers who have opted in. Match the channel to the message and the customer, and consider using both with SMS as the fallback.</p>"
+            },
+            {
+              "q": "Can I use bulk SMS and WhatsApp marketing together?",
+              "a": "<p>Yes, and many businesses do. A common setup is WhatsApp first for opted-in smartphone customers, with SMS as the fallback for customers who are not on WhatsApp or whose message was not delivered. Running both through one provider keeps consent records, reports and fallback in one place.</p>"
+            },
+            {
+              "q": "Does WhatsApp marketing need DLT registration?",
+              "a": "<p>No. DLT registration under TRAI's rules applies to SMS. WhatsApp follows Meta's template approval and opt-in policies. If you add an SMS fallback, that SMS still needs your DLT entity, sender ID and approved template.</p>"
+            },
+            {
+              "q": "Can WhatsApp marketing reach DND numbers?",
+              "a": "<p>DND is a telecom registry that applies to SMS, and promotional SMS cannot reach DND-registered numbers. WhatsApp has no DND registry, but it has its own rule: you may message only people who opted in to hear from you. A customer on DND can still receive WhatsApp messages if they opted in.</p>"
+            },
+            {
+              "q": "Which channel is better for OTPs?",
+              "a": "<p>Use SMS as the baseline, because it reaches any phone. WhatsApp OTPs can be faster to complete for users on WhatsApp with data, with copy-code and autofill buttons. A WhatsApp-first flow with SMS fallback suits many startups. Our guide on WhatsApp OTP vs SMS OTP compares them in detail.</p>"
+            },
+            {
+              "q": "How do I compare SMS and WhatsApp results fairly?",
+              "a": "<p>Send the same offer to comparable audiences, then compare cost per outcome, such as orders or bookings, not cost per message. Track delivery, taps or replies, conversions and opt-outs. Avoid trusting headline statistics from other sites, and benchmark your own customers.</p>"
+            },
+            {
+              "q": "Is WhatsApp marketing legal in India?",
+              "a": "<p>Sending through the official WhatsApp Business Platform to customers who opted in is permitted by WhatsApp's policy. You must also follow Indian law, including the principles of the DPDP Act. WhatsApp's own FAQ says its apps are not meant for bulk or automated messaging, so use the official API. This is practical guidance rather than legal advice.</p>"
+            },
+            {
+              "q": "When should a business choose SMS over WhatsApp?",
+              "a": "<p>Choose SMS when your audience includes feature-phone users or people with little data, when you need to reach customers who have not opted in on WhatsApp through compliant SMS, or when the message is a simple alert such as an OTP or order confirmation. SMS also works as the universal fallback.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
