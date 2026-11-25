@@ -27,7 +27,7 @@ export default function Hero() {
             <HeroEntrance index={2}>
             <div className="platform-hero-ctas">
               <Link href="/book-demo" className="btn-ojiva-primary">Get portal access &rarr;</Link>
-              <Link href="/pricing" className="btn-ojiva-ghost">View pricing</Link>
+              <Link href="/contact" className="btn-ojiva-ghost">Talk to sales</Link>
             </div>
             </HeroEntrance>
             <HeroEntrance index={3}>

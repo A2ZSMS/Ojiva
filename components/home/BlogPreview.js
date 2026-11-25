@@ -89,7 +89,7 @@ export default function BlogPreview() {
                       src={post.image || '/og-image.jpg'}
                       srcSet={srcSetFor(post.image)}
                       sizes="(max-width: 575px) 128px, 200px"
-                      alt=""
+                      alt={post.title}
                       width={1672}
                       height={941}
                       loading="lazy"

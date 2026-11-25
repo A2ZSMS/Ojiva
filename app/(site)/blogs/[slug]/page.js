@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import blogsData from '../../../../public/data/blog.json';
 import meta from '../../../../public/data/metadata.json';
 import { BLOG_CATEGORIES as CAT_COLOR, DEFAULT_CATEGORY_COLOR } from '@/lib/blogCategories';
+import { faqSchema } from '@/lib/metadata';
 
 // ── JSON-driven blog infrastructure ──────────────────────
 import BlogLayout from '@/components/blogs/BlogLayout';
@@ -267,6 +268,24 @@ function blogPostingSchema(blog) {
   };
 }
 
+// ── FAQPage JSON-LD builder ──────────────────────────────
+// Built from the post's own accordion blocks, so the markup always matches
+// the questions and answers a reader sees on the page.
+function blogFaqSchema(content) {
+  const text = (html) => String(html || '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+  const faqs = (content?.sections || [])
+    .flatMap((section) => section.blocks || [])
+    .filter((block) => block.type === 'accordion')
+    .flatMap((block) => block.items || [])
+    .map(({ q, a }) => ({ q: text(q), a: text(a) }))
+    .filter(({ q, a }) => q && a);
+  return faqs.length ? faqSchema(faqs) : null;
+}
+
 // ── BreadcrumbList JSON-LD builder ───────────────────────
 function blogBreadcrumbSchema(blog) {
   return {
@@ -299,11 +318,13 @@ export default async function BlogPost({ params }) {
   }
 
   const catColor = CAT_COLOR[blog.category] || DEFAULT_CATEGORY_COLOR;
+  const faqLd = blogFaqSchema(jsonContent);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema(blog)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogBreadcrumbSchema(blog)) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* ── Dark Hero ─────────────────────────────────── */}
       <section className="blog-post-hero" aria-label="Blog post header">
         {/* Dot grid */}

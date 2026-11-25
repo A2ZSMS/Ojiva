@@ -44,6 +44,10 @@
   RewriteRule ^blogs/best-rcs-messaging-provider-karnataka/?$ https://www.ojiva.ai/blogs/rcs-messaging-provider-karnataka-guide/ [R=301,L]
   RewriteRule ^blogs/whatsapp-vs-whatsapp-business-vs-api/?$ https://www.ojiva.ai/blogs/whatsapp-business-app-vs-api/ [R=301,L]
   RewriteRule ^blogs/whatsapp-template-message-types-guide/?$ https://www.ojiva.ai/blogs/whatsapp-template-message-types/ [R=301,L]
+
+  # Pricing page removed Nov 2026 (pricing is quoted by sales). The old URL was
+  # indexed, so it 301s to the demo page instead of returning a 404.
+  RewriteRule ^pricing/?$ https://www.ojiva.ai/book-demo/ [R=301,L]
 </IfModule>
 
 # ── Compression (LiteSpeed honours mod_deflate; Brotli auto on LSWS) ──────────

@@ -35,7 +35,7 @@ import styles from './CallbackButton.module.css';
 const loadPanel = () => import('./LeadPopupPanel');
 const LeadPopupPanel = dynamic(loadPanel, { ssr: false });
 
-const ALLOWED     = ['/blogs', '/sms', '/whatsapp', '/whatsapp-chatbot', '/rcs', '/voice', '/otp', '/pricing', '/solutions', '/platform'];
+const ALLOWED     = ['/blogs', '/sms', '/whatsapp', '/whatsapp-chatbot', '/rcs', '/voice', '/otp', '/solutions', '/platform'];
 const NO_BUTTON   = ['/contact', '/book-demo', '/support', '/thank-you', '/privacy', '/terms'];
 const SERVICE_FOR = { sms: 'bulk-sms', whatsapp: 'whatsapp-api', 'whatsapp-chatbot': 'whatsapp-chatbot', rcs: 'rcs', voice: 'voice', otp: 'otp' };
 const MIN_DELAY   = 10000;

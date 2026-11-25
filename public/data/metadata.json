@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Why Bulk SMS Is Still India's Most Powerful Marketing Channel",
+    "title": "Why Bulk SMS Is India's Most Powerful Marketing Channel",
     "componentKey": "Apr01",
     "slug": "why-bulk-sms-most-powerful-marketing-channel-india-2026",
     "category": "Bulk SMS",
@@ -78,34 +78,34 @@
   },
   {
     "id": 8,
-    "title": "WhatsApp Business API Pricing in India: Cost Breakdown",
+    "title": "WhatsApp API Pricing in India 2026: Per-Message Rates",
     "componentKey": "Jun02",
     "slug": "whatsapp-business-api-pricing-india",
     "category": "WhatsApp API",
     "date": "2026-06-01",
-    "description": "WhatsApp Business API pricing in India: Meta's per-message rates, GST, BSP markups and hidden fees, with real cost examples to budget.",
+    "description": "WhatsApp Business API price in India for 2026: Meta's per-message rate card, GST, BSP fees and real monthly cost examples for Indian businesses.",
     "image": "/image/jun2(1).webp",
     "keywords": "WhatsApp Business API pricing India, WhatsApp API cost per message, Meta conversation pricing, WhatsApp BSP markup, WhatsApp API GST, WhatsApp marketing cost India, Ojiva AI WhatsApp"
   },
   {
     "id": 9,
-    "title": "Best Bulk SMS Service Providers in India",
+    "title": "Best Bulk SMS Service Provider in India: 2026 Guide",
     "componentKey": "Jun03",
     "slug": "best-bulk-sms-providers-india",
     "category": "Bulk SMS",
     "date": "2026-06-03",
-    "description": "Best bulk SMS service providers in India for promotional, transactional & OTP SMS with high delivery, real INR pricing and DLT compliance.",
+    "description": "How to choose the best bulk SMS service provider in India: 2026 pricing, DLT and TRAI compliance, delivery, API options and SMS vs WhatsApp vs RCS.",
     "image": "/image/jun3(1).webp",
     "keywords": "best bulk SMS service providers India, bulk SMS provider comparison, transactional SMS provider, OTP SMS provider India, DLT compliant bulk SMS, Ojiva AI SMS"
   },
   {
     "id": 10,
-    "title": "What Is RCS Messaging? A Guide for Indian Businesses",
+    "title": "What Is RCS Messaging? Meaning, Cost & How It Works",
     "componentKey": "Jun04",
     "slug": "what-is-rcs-messaging",
     "category": "RCS Messaging",
     "date": "2026-06-04",
-    "description": "What is RCS messaging? A guide for Indian businesses — how RCS works, RCS vs SMS vs WhatsApp, iOS 18 support and how to get started.",
+    "description": "What RCS messaging means and how it works in India: RCS vs SMS vs WhatsApp, cost, supported phones and carriers, and how businesses get started.",
     "image": "/image/jun4(1).webp",
     "keywords": "what is RCS messaging, RCS vs SMS, RCS vs WhatsApp, rich communication services explained, RCS business messaging India, Google RCS, Ojiva AI RCS"
   },
@@ -122,12 +122,12 @@
   },
   {
     "id": 13,
-    "title": "DLT Registration for Bulk SMS in India Guide",
+    "title": "DLT Registration for SMS in India: Process, Fees & Time",
     "componentKey": "Jun12",
     "slug": "dlt-registration-bulk-sms-india",
     "category": "Bulk SMS",
     "date": "2026-06-12",
-    "description": "DLT registration for bulk SMS in India: entity, header & template registration, the ~₹5,900 fee, 3–7 day timeline and scrubbing traps.",
+    "description": "What DLT registration is and how to do it for bulk SMS in India: entity, header and template steps, the ~₹5,900 fee and the 3–7 day timeline.",
     "image": "/image/jun12(1).webp",
     "keywords": "DLT registration for bulk SMS, DLT entity registration, sender ID header registration, content template approval, TRAI DLT rules, DLT registration fee India, Ojiva AI SMS"
   },
@@ -144,12 +144,12 @@
   },
   {
     "id": 16,
-    "title": "WhatsApp API Message Templates for Indian Businesses",
+    "title": "WhatsApp Business API Message Templates: Examples & Rules",
     "componentKey": "Jun17",
     "slug": "whatsapp-api-message-templates-india",
     "category": "WhatsApp API",
     "date": "2026-06-17",
-    "description": "WhatsApp API message templates for Indian businesses: Utility, Authentication & Marketing examples, the 24-hour rule and copy-paste templates.",
+    "description": "WhatsApp Business API message templates with copy-paste examples: Utility, Authentication and Marketing categories, approval rules and rejections.",
     "image": "/image/jun17(1).webp",
     "keywords": "WhatsApp API message templates, WhatsApp template approval, utility authentication marketing templates, 24-hour rule WhatsApp, WhatsApp template examples India, Ojiva AI WhatsApp"
   },
@@ -166,12 +166,12 @@
   },
   {
     "id": 18,
-    "title": "Best RCS Message Service Provider in India",
+    "title": "Best RCS Service Provider in India: Features & 2026 Pricing",
     "componentKey": "Jul09",
     "slug": "best-rcs-message-service-provider-in-india",
     "category": "RCS Messaging",
     "date": "2026-07-09",
-    "description": "Best RCS message service provider in India for verified branding, rich cards & carousels, Jio, Airtel & Vi delivery, SMS fallback and INR pricing.",
+    "description": "What to look for in an RCS message service provider in India: verified sender, rich cards, Jio, Airtel & Vi coverage, SMS fallback and 2026 pricing.",
     "image": "/image/jul9(1).webp",
     "keywords": "best RCS message service provider India, RCS service provider, RCS messaging platform India, Jio Airtel Vi RCS delivery, SMS fallback RCS, Ojiva AI RCS"
   },
@@ -182,7 +182,7 @@
     "slug": "best-bulk-sms-service-provider-in-karnataka",
     "category": "Bulk SMS",
     "date": "2026-07-11",
-    "description": "Best bulk SMS service provider in Karnataka for — Jio, Airtel, Vi & BSNL routes, DLT & TRAI compliance, SMS API, Kannada SMS and INR pricing.",
+    "description": "Bulk SMS service provider in Karnataka: Jio, Airtel, Vi & BSNL routes, DLT & TRAI compliance, SMS API, Kannada SMS and 2026 pricing explained.",
     "image": "/image/jul11(1).webp",
     "keywords": "best bulk SMS service provider Karnataka, bulk SMS Bangalore, DLT registered SMS provider Karnataka, Kannada bulk SMS, SMS API Karnataka, Ojiva AI SMS Karnataka"
   },
@@ -199,7 +199,7 @@
   },
   {
     "id": 22,
-    "title": "RCS Marketing Automation: How to Build High-Converting Campaigns",
+    "title": "RCS Marketing Automation: Build High-Converting Campaigns",
     "componentKey": "Jul17",
     "slug": "rcs-marketing-automation-high-converting-campaigns",
     "category": "RCS Messaging",
@@ -232,7 +232,7 @@
   },
   {
     "id": 25,
-    "title": "Best WhatsApp Business API Provider in India",
+    "title": "Best WhatsApp Business API Provider in India: How to Choose",
     "componentKey": "Jul24",
     "slug": "best-whatsapp-business-api-provider-in-india",
     "category": "WhatsApp API",
@@ -364,12 +364,12 @@
   },
   {
     "id": 38,
-    "title": "Best Bulk SMS Service Provider Bangalore",
+    "title": "Best Bulk SMS Service Provider in Bangalore",
     "componentKey": "Aug31",
     "slug": "best-bulk-sms-service-provider-bangalore",
     "category": "Bulk SMS",
     "date": "2026-08-31",
-    "description": "Ojiva AI is the Best Bulk SMS Service Provider Bangalore, offering promotional, transactional & OTP SMS, DLT compliance and WhatsApp API integration.",
+    "description": "Bulk SMS service provider in Bangalore for promotional, transactional and OTP SMS: DLT compliance, plan tiers, onboarding steps and a buyer checklist.",
     "image": "/image/aug31(1).webp",
     "keywords": "best bulk SMS service provider Bangalore, bulk SMS service provider Bangalore, bulk SMS company Bangalore, SMS marketing service provider Bangalore, transactional SMS provider India, promotional SMS service provider, OTP SMS service Bangalore, DLT registered SMS provider, WhatsApp Business API provider Bangalore, SMS gateway integration API, enterprise bulk SMS solutions, bulk SMS for startups Bangalore, multi channel messaging platform, best bulk SMS service provider in Bangalore for small business, how to choose a bulk SMS service provider in Bangalore, bulk SMS provider in Bangalore with DLT registration support, bulk SMS company in Bangalore with WhatsApp and RCS support, transactional and promotional SMS provider for Bangalore businesses, bulk SMS API integration guide for Bangalore businesses, bulk SMS service provider in Bangalore with support, bulk SMS, SMS marketing, SMS API, SMS gateway, transactional SMS, promotional SMS, OTP SMS, WhatsApp API, DLT registration, SMS provider"
   },
@@ -474,7 +474,7 @@
   },
   {
     "id": 51,
-    "title": "Types of SMS in India: Transactional, Service and Promotional",
+    "title": "Types of SMS in India: Transactional, Service & Promotional",
     "componentKey": "Oct09",
     "slug": "types-of-sms-in-india-trai-categories",
     "category": "Bulk SMS",
@@ -507,18 +507,18 @@
   },
   {
     "id": 54,
-    "title": "DLT Registration Charges in India: Fees and What You Actually Pay",
+    "title": "DLT Registration Charges 2026: Airtel, Jio, Vi & BSNL Fees",
     "componentKey": "Oct23",
     "slug": "dlt-registration-charges-india",
     "category": "Bulk SMS",
     "date": "2026-10-23",
-    "description": "DLT registration charges in India are set by operators, not TRAI. See the Airtel, Jio, Vi and BSNL fee position, renewal and total cost. Book a free demo.",
+    "description": "DLT registration charges in India on Airtel, Jio, Vi and BSNL: who sets the fee, whether it is ever free, renewal and the total you actually pay.",
     "image": "/image/oct23(1).webp",
     "keywords": "DLT registration charges, DLT registration fees, DLT registration cost, DLT charges, DLT registration free, DLT registration Jio, DLT registration Airtel, DLT registration Vi, DLT registration BSNL, DLT registration for SMS, bulk SMS pricing in India, DLT registration, what is DLT, DLT platform, DLT SMS, DLT template, TRAI DLT, DLT fees, DLT cost, sender ID, SMS template"
   },
   {
     "id": 55,
-    "title": "RCS Messaging for E-commerce and D2C: Product Carousels, Cart Recovery and Order Updates",
+    "title": "RCS Messaging for E-commerce & D2C Brands in India",
     "componentKey": "Oct26",
     "slug": "rcs-messaging-for-ecommerce-d2c-india",
     "category": "RCS Messaging",
@@ -529,7 +529,7 @@
   },
   {
     "id": 56,
-    "title": "WhatsApp Cloud API in India: What It Is and How Businesses Get Started",
+    "title": "WhatsApp Cloud API in India: What It Is & How to Start",
     "componentKey": "Oct28",
     "slug": "whatsapp-cloud-api-india",
     "category": "WhatsApp API",
@@ -540,7 +540,7 @@
   },
   {
     "id": 57,
-    "title": "How to Send Bulk WhatsApp Messages in India Without Getting Blocked",
+    "title": "Send Bulk WhatsApp Messages in India Without Getting Blocked",
     "componentKey": "Oct30",
     "slug": "send-bulk-whatsapp-messages-india",
     "category": "WhatsApp API",
@@ -551,7 +551,7 @@
   },
   {
     "id": 58,
-    "title": "OTP SMS Service in India: DLT Templates, Delivery Speed and How to Choose",
+    "title": "OTP SMS Service in India: DLT Templates, Speed & Providers",
     "componentKey": "Nov02",
     "slug": "otp-sms-service-india",
     "category": "Bulk SMS",
@@ -573,7 +573,7 @@
   },
   {
     "id": 60,
-    "title": "Abandoned Cart SMS and Order Confirmation SMS: Templates and Rules for Indian E-commerce",
+    "title": "Abandoned Cart & Order Confirmation SMS Templates India",
     "componentKey": "Nov13",
     "slug": "abandoned-cart-sms-order-confirmation-sms-india",
     "category": "Bulk SMS",
@@ -584,7 +584,7 @@
   },
   {
     "id": 61,
-    "title": "How to Run an RCS Campaign: Rich Cards, Carousels and Templates That Convert",
+    "title": "How to Run an RCS Campaign in India: Cards & Templates",
     "componentKey": "Nov16",
     "slug": "how-to-run-an-rcs-campaign-india",
     "category": "RCS Messaging",

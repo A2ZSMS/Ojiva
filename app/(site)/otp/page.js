@@ -8,7 +8,7 @@ import {
 import RelatedGuides from '@/components/ui/RelatedGuides';
 
 export const metadata = buildMetadata({
-  title: 'OTP SMS India — Fast Delivery via SMS & WhatsApp',
+  title: 'OTP SMS Service Provider in India — SMS, WhatsApp & Voice',
   description:
     'Send OTP in <3 seconds via SMS, WhatsApp or Voice. 99.9% delivery, TRAI DLT compliant, AES-256 encrypted. Trusted by 500+ businesses across India.',
   path: '/otp',

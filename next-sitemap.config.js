@@ -15,7 +15,6 @@ const PATH_RULES = [
   { path: '/whatsapp-chatbot/',     exact: true,  priority: 0.9, changefreq: 'weekly' },
   { path: '/rcs/',                  exact: true,  priority: 0.9, changefreq: 'weekly' },
   { path: '/voice/',                exact: true,  priority: 0.9, changefreq: 'weekly' },
-  { path: '/pricing/',              exact: true,  priority: 0.9, changefreq: 'weekly' },
   { path: '/otp/',                  exact: true,  priority: 0.9, changefreq: 'weekly' },
   { path: '/platform/',             exact: true,  priority: 0.9, changefreq: 'weekly' },
 

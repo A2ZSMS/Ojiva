@@ -29,7 +29,6 @@ export const metadata = {
 const STATIC_ROUTES = [
   { href: '/',                          title: 'Home',                              group: 'Pages' },
   { href: '/platform/',                 title: 'Platform overview',                 group: 'Pages' },
-  { href: '/pricing/',                  title: 'Pricing',                           group: 'Pages' },
   { href: '/about/',                    title: 'About Ojiva AI',                    group: 'Pages' },
   { href: '/contact/',                  title: 'Contact us',                        group: 'Pages' },
   { href: '/book-demo/',                title: 'Book a demo',                       group: 'Pages' },

@@ -20,7 +20,7 @@ const PRICE = /₹|\bRs\.?\s?\d|\bINR\b|\bper (sms|message|msg|month|conversatio
 
 // Most useful first: if the file is ever trimmed, the core pages stay.
 const PAGES = [
-  '/', '/pricing/', '/sms/', '/whatsapp/', '/rcs/', '/voice/', '/otp/', '/whatsapp-chatbot/',
+  '/', '/sms/', '/whatsapp/', '/rcs/', '/voice/', '/otp/', '/whatsapp-chatbot/',
   '/platform/', '/about/', '/solutions/',
   '/solutions/banking-finance/', '/solutions/ecommerce-retail/', '/solutions/healthcare/',
   '/solutions/education/', '/solutions/real-estate/', '/solutions/logistics-delivery/',
